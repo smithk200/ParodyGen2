@@ -20,7 +20,7 @@ Common_EventScript_SetGymTrainers::
 
 VioletCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_ROD
-	settrainerflag TRAINER_ABE
+	settrainerflag TRAINER_TODD_2
 	return
 
 AzaleaTown_Gym_SetGymTrainers::

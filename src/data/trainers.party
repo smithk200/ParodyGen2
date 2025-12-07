@@ -787,15 +787,19 @@ Double Battle: No
 AI: Check Bad Move
 
 Koffing
-Level: 12
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ekans
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Slowpoke
-Level: 13
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Houndour
-Level: 15
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAREN_2 ===
@@ -2320,17 +2324,21 @@ Pikachu
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ABE ===
-Name: Abe
+=== TRAINER_TODD_2 ===
+Name: Todd
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Spearow
-Level: 9
+Cherubi
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Alcremie
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NEAL ===
@@ -5948,11 +5956,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Rattata
-Level: 9
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Rattata
-Level: 11
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_20 ===
@@ -6003,11 +6011,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Rattata
-Level: 9
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Zubat
-Level: 9
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JACLYN ===
@@ -6531,15 +6539,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Elekid
-Level: 11
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Magby
-Level: 11
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Smoochum
-Level: 11
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LEA_AND_PIA ===
@@ -8328,12 +8336,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Pidgey
-Level: 7
+Applin
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Natu
-Level: 7
+Slurpuff
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BILL ===
@@ -10260,31 +10268,40 @@ Victreebel
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FALKNER_1 ===
-Name: Falkner
+=== TRAINER_DAMIAN_1 ===
+Name: Damian
 Class: Leader
-Pic: Leader Falkner
+Pic: Leader Damian
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 Mugshot: Blue
 
-Pidgey
-Level: 8
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Mud Slap
-- Quick Attack
+Applin @ Sitrus Berry
+Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Astonish
+- Withdraw
+- Pounce
 - None
 
-Noctowl @ Sitrus Berry
-Level: 11
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Vanillite @ Choice Scarf
+Level: 12
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Icy Wind
 - Tackle
-- Mud Slap
-- Growl
-- Peck
+- Harden
+- Endure
+
+Munchlax @ Eviolite
+Level: 13
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Dynamax Level: 5
+- Tackle
+- Defense Curl
+- Lick
+- Curse
 
 === TRAINER_CHUCK_1 ===
 Name: Chuck
@@ -10387,10 +10404,10 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Belly Drum
 - Body Slam
 
-=== TRAINER_FALKNER_2 ===
-Name: Falkner
+=== TRAINER_DAMIAN_2 ===
+Name: Damian
 Class: Leader
-Pic: Leader Falkner
+Pic: Leader Damian
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore

@@ -1,4 +1,77 @@
 	.align 2
+DirectSoundWaveData_maraca::
+	.incbin "sound/direct_sound_samples/maraca.bin"
+	.align 2
+DirectSoundWaveData_sd90_classical_shakuhachi_low::
+	.incbin "sound/direct_sound_samples/sd90_classical_shakuhachi_low.bin"
+
+	.align 2
+DirectSoundWaveData_trumpet::
+	.incbin "sound/direct_sound_samples/trumpet.bin"
+
+	.align 2
+DirectSoundWaveData_trumpet_high::
+	.incbin "sound/direct_sound_samples/trumpet_high.bin"
+
+	.align 2
+DirectSoundWaveData_ride_cymbal::
+	.incbin "sound/direct_sound_samples/ride_cymbal.bin"
+
+	.align 2
+DirectSoundWaveData_soprano_sax::
+	.incbin "sound/direct_sound_samples/soprano_sax.bin"
+
+	.align 2
+DirectSoundWaveData_alto_sax_low::
+	.incbin "sound/direct_sound_samples/alto_sax_low.bin"
+
+	.align 2
+DirectSoundWaveData_alto_sax_high::
+	.incbin "sound/direct_sound_samples/alto_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_tenor_sax_low::
+	.incbin "sound/direct_sound_samples/tenor_sax_low.bin"
+
+	.align 2
+DirectSoundWaveData_tenor_sax_high::
+	.incbin "sound/direct_sound_samples/tenor_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_bari_sax_high::
+	.incbin "sound/direct_sound_samples/bari_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_bari_sax_low::
+	.incbin "sound/direct_sound_samples/bari_sax_low.bin"
+	
+	.align 2
+DirectSoundWaveData_fingered_bass::
+	.incbin "sound/direct_sound_samples/fingered_bass.bin"
+
+	.align 2
+DirectSoundWaveData_saw_synth::
+	.incbin "sound/direct_sound_samples/saw_synth.bin"
+
+	.align 2
+DirectSoundWaveData_saw_synth_high::
+	.incbin "sound/direct_sound_samples/saw_synth_high.bin"
+
+	.align 2
+DirectSoundWaveData_steel_drum::
+	.incbin "sound/direct_sound_samples/steel_drum.bin"
+
+	.align 2
+
+DirectSoundWaveData_ep_major_chord::
+	.incbin "sound/direct_sound_samples/ep_major_chord.bin"
+
+	.align 2
+
+DirectSoundWaveData_ep_minor_chord::
+	.incbin "sound/direct_sound_samples/ep_minor_chord.bin"
+
+	.align 2
 DirectSoundWaveData_sc88pro_glockenspiel::
 	.incbin "sound/direct_sound_samples/sc88pro_glockenspiel.bin"
 

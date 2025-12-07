@@ -22,14 +22,14 @@
 #define TRAINER_TREVOR         16
 #define TRAINER_ZEKE         17
 #define TRAINER_ZUKI         18
-#define TRAINER_FALKNER_1         19
+#define TRAINER_DAMIAN_1         19
 #define TRAINER_TODD               20
 #define TRAINER_TOM               21
 #define TRAINER_VERONICA         22
 #define TRAINER_THERESA              23
 #define TRAINER_TIM              24
 #define TRAINER_TIMOTHY              25
-#define TRAINER_FALKNER_2         26
+#define TRAINER_DAMIAN_2         26
 #define TRAINER_SID         27
 #define TRAINER_STANLY         28
 #define TRAINER_REBECCA                     29
@@ -361,7 +361,7 @@
 #define TRAINER_BENJAMIN_3                  355
 #define TRAINER_BENJAMIN_4                  356
 #define TRAINER_BENJAMIN_5                  357
-#define TRAINER_ABE                   358
+#define TRAINER_TODD_2                   358
 #define TRAINER_JASMINE                     359
 #define TRAINER_AL                   360
 #define TRAINER_ALFRED                   361

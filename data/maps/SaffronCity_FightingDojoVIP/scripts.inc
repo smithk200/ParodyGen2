@@ -14,7 +14,7 @@ SaffronCity_FightingDojoVIP_EventScript_Falkner::
 	msgbox SaffronCity_FightingDojoVIP_Text_Falkner_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_FALKNER_2, SaffronCity_FightingDojoVIP_Text_Falkner_RematchDefeat
+	trainerbattle_no_intro TRAINER_DAMIAN_2, SaffronCity_FightingDojoVIP_Text_Falkner_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10

@@ -310,6 +310,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Captain;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Damian;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -647,6 +648,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SWIMMER_M_WATER] =                &gObjectEventGraphicsInfo_SwimmerM,
     [OBJ_EVENT_GFX_SWIMMER_F_WATER] =                &gObjectEventGraphicsInfo_SwimmerF,
     [OBJ_EVENT_GFX_TUBER_M_WATER] =                &gObjectEventGraphicsInfo_TuberM,
+    [OBJ_EVENT_GFX_LEADER_DAMIAN]=                  &gObjectEventGraphicsInfo_Damian,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

@@ -326,11 +326,12 @@
 #define OBJ_EVENT_GFX_TRAIN_MID                319
 #define OBJ_EVENT_GFX_TRAIN_BACK                320
 #define OBJ_EVENT_GFX_LEGENDARY_SHADOW          321
+#define OBJ_EVENT_GFX_LEADER_DAMIAN          322
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        322
+#define NUM_OBJ_EVENT_GFX                        1000
 
 
 // These are dynamic object gfx ids.
@@ -487,6 +488,7 @@
 #define OBJ_EVENT_PAL_TAG_SCIENTIST_F              0x113D
 #define OBJ_EVENT_PAL_TAG_PROTON              0x113E
 #define OBJ_EVENT_PAL_TAG_NPC_5                   0x113F
+#define OBJ_EVENT_PAL_TAG_LEADER_DAMIAN                  0x114A
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

@@ -553,6 +553,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Slowpoke,                  OBJ_EVENT_PAL_TAG_SLOWPOKE},
     {gObjectEventPal_ScientistF,                  OBJ_EVENT_PAL_TAG_SCIENTIST_F},
     {gObjectEventPal_Proton,                  OBJ_EVENT_PAL_TAG_PROTON},
+    {gObjectEventPal_Damian,                  OBJ_EVENT_PAL_TAG_LEADER_DAMIAN},
     
 
 #if OW_FOLLOWERS_POKEBALLS

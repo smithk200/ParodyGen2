@@ -478,7 +478,7 @@ gSongTable::
 	song mus_vs_wild, 0, 0
 	song mus_vs_aqua_magma, 0, 0
 	song mus_vs_trainer, 0, 0
-	song mus_vs_gym_leader, 0, 0
+	song NonPhysical, 0, 0
 	song mus_vs_champion, 0, 0
 	song mus_vs_regi, 0, 0
 	song mus_vs_kyogre_groudon, 0, 0

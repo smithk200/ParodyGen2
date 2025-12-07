@@ -151,7 +151,8 @@
 #define TRAINER_PIC_NURSE 133
 #define TRAINER_PIC_LEADER_TATE 134
 #define TRAINER_PIC_LEADER_LIZA 135
-#define TRAINER_PIC_COUNT                 136
+#define TRAINER_PIC_LEADER_DAMIAN 136
+#define TRAINER_PIC_COUNT                 137
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

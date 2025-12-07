@@ -365,6 +365,8 @@ const u32 gTrainerFrontPic_Giovanni[] = INCBIN_U32("graphics/trainers/front_pics
 const u16 gTrainerPalette_Giovanni[] = INCBIN_U16("graphics/trainers/front_pics/giovanni.gbapal");
 const u32 gTrainerFrontPic_Silver[] = INCBIN_U32("graphics/trainers/front_pics/silver.4bpp.smol");
 const u16 gTrainerPalette_Silver[] = INCBIN_U16("graphics/trainers/front_pics/silver.gbapal");
+const u32 gTrainerFrontPic_LeaderDamian[] = INCBIN_U32("graphics/trainers/front_pics/leader_damian.4bpp.smol");
+const u16 gTrainerPalette_LeaderDamian[] = INCBIN_U16("graphics/trainers/front_pics/leader_damian.gbapal");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
@@ -528,6 +530,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEADER_SABRINA, gTrainerFrontPic_LeaderSabrina, gTrainerPalette_LeaderSabrina),
     TRAINER_SPRITE(TRAINER_PIC_GIOVANNI, gTrainerFrontPic_Giovanni, gTrainerPalette_Giovanni),
     TRAINER_SPRITE(TRAINER_PIC_SILVER, gTrainerFrontPic_Silver, gTrainerPalette_Silver),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_DAMIAN, gTrainerFrontPic_LeaderDamian, gTrainerPalette_LeaderDamian),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
