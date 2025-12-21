@@ -1,6 +1,32 @@
 MahoganyTown_Gym_MapScripts::
 	.byte 0
 
+MahoganyTown_Gym_EventScript_Machine::
+    lock
+    goto_if_set FLAG_SOLVED_MAHOGANY_PUZZLE, MahoganyTown_Gym_EventScript_MachineWantToWarp
+    setflag FLAG_SOLVED_MAHOGANY_PUZZLE
+    clearflag FLAG_HIDE_MAHOGANY_MACHINE
+    msgbox Common_Text_PlayerClearedPuzzle, MSGBOX_DEFAULT
+	closemessage
+    goto MahoganyTown_Gym_EventScript_MachineWantToWarp
+    release
+    end
+
+MahoganyTown_Gym_EventScript_MachineWantToWarp::
+	lock
+	faceplayer
+	msgbox MahoganyTown_Machine_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_Machine_No
+	warp MAP_MAHOGANY_TOWN_GYM2, 2, 5
+	release
+	end
+
+Common_EventScript_Machine_No::
+	msgbox Common_Text_Machine_NoWarp, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
 
 MahoganyTown_Gym_EventScript_Statue::
 	lock
@@ -17,11 +43,11 @@ MahoganyTown_Gym_EventScript_Statue2::
 	end
 
 MahoganyTown_Gym_Text_GymStatue:
-	.string "MAHOGANY TOWN POKéMON GYM$"
+	.string "MAHOGANY TOWN Pokémon Gym$"
 
 MahoganyTown_Gym_Text_GymStatueCertified:
-	.string "MAHOGANY TOWN POKéMON GYM\p"
-	.string "PRYCE'S CERTIFIED TRAINERS:\n"
+	.string "MAHOGANY TOWN Pokémon Gym\p"
+	.string "Clay'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 
@@ -64,16 +90,16 @@ MahoganyTown_Gym_EventScript_Clarissa::
 	msgbox MahoganyTown_Gym_Text_SkierClarissaAfter, MSGBOX_AUTOCLOSE
 	end
 
-MahoganyTown_Gym_EventScript_Pryce::
+MahoganyTown_Gym_EventScript_Clay::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_Pryce_Defeated
-	msgbox MahoganyTown_Gym_Text_PryceIntro, MSGBOX_DEFAULT
+	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_Clay_Defeated
+	msgbox MahoganyTown_Gym_Text_ClayIntro, MSGBOX_DEFAULT
 	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_OlivineCheckCianwood
 	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, MahoganyTown_Gym_EventScript_CianwoodCheckOlivine
-	goto MahoganyTown_Gym_EventScript_Pryce_Battle1
+	goto MahoganyTown_Gym_EventScript_Clay_Battle1
 
-MahoganyTown_Gym_EventScript_PryceVictory::
+MahoganyTown_Gym_EventScript_ClayVictory::
 	message MahoganyTown_Gym_Text_ReceivedBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -92,61 +118,58 @@ MahoganyTown_Gym_EventScript_PryceVictory::
 	end
 
 MahoganyTown_Gym_EventScript_OlivineCheckCianwood::
-	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, MahoganyTown_Gym_EventScript_Pryce_Battle3
-	goto MahoganyTown_Gym_EventScript_Pryce_Battle2
+	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, MahoganyTown_Gym_EventScript_Clay_Battle3
+	goto MahoganyTown_Gym_EventScript_Clay_Battle2
 
 MahoganyTown_Gym_EventScript_CianwoodCheckOlivine::
-	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_Pryce_Battle3
-	goto MahoganyTown_Gym_EventScript_Pryce_Battle2
+	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_Clay_Battle3
+	goto MahoganyTown_Gym_EventScript_Clay_Battle2
 	
-MahoganyTown_Gym_EventScript_Pryce_Battle1::
-	trainerbattle_no_intro TRAINER_PRYCE_1, MahoganyTown_Gym_Text_PryceImpressed
-	goto MahoganyTown_Gym_EventScript_PryceVictory
+MahoganyTown_Gym_EventScript_Clay_Battle1::
+	trainerbattle_no_intro TRAINER_CLAY_1, MahoganyTown_Gym_Text_ClayImpressed
+	goto MahoganyTown_Gym_EventScript_ClayVictory
 
-MahoganyTown_Gym_EventScript_Pryce_Battle2::
-	trainerbattle_no_intro TRAINER_PRYCE_1_2, MahoganyTown_Gym_Text_PryceImpressed
-	goto MahoganyTown_Gym_EventScript_PryceVictory
+MahoganyTown_Gym_EventScript_Clay_Battle2::
+	trainerbattle_no_intro TRAINER_CLAY_1_2, MahoganyTown_Gym_Text_ClayImpressed
+	goto MahoganyTown_Gym_EventScript_ClayVictory
 
-MahoganyTown_Gym_EventScript_Pryce_Battle3::
-	trainerbattle_no_intro TRAINER_PRYCE_1_3, MahoganyTown_Gym_Text_PryceImpressed
-	goto MahoganyTown_Gym_EventScript_PryceVictory
+MahoganyTown_Gym_EventScript_Clay_Battle3::
+	trainerbattle_no_intro TRAINER_CLAY_1_3, MahoganyTown_Gym_Text_ClayImpressed
+	goto MahoganyTown_Gym_EventScript_ClayVictory
 
-MahoganyTown_Gym_EventScript_Pryce_Defeated::
+MahoganyTown_Gym_EventScript_Clay_Defeated::
 	msgbox MahoganyTown_Gym_Text_CherishPokemon, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-MahoganyTown_Gym_Text_PryceIntro:
-    .string "POKéMON have many experiences\n"
-    .string "in their lives, just like we do.\p"
-    .string "I, too, have seen and suffered\n"
-    .string "much in my life.\p"
-    .string "Since I am your elder, let me\n"
-    .string "show you what I mean.\p"
-    .string "I have been with POKéMON since\n"
-    .string "before you were born.\p"
-    .string "I do not lose easily.\p"
-    .string "I, PRYCE--the winter trainer--\n"
-    .string "shall demonstrate my power!$"
+MahoganyTown_Gym_Text_ClayIntro:
+    .string "Ugh, you think you’re ready\n"
+    .string "for this?\p"
+    .string "You think you can handle the cold?\p"
+    .string "Hah.\p"
+    .string "You’re about as prepared for this\n"
+    .string "as my son Orel is for… well, anything.\p"
+    .string "Life’s not about comfort, it’s about enduring…\n"
+    .string "…like my stinkin' dead-end job!\p"
+    .string "Ice is harsh. It doesn’t care about your feelings,\n"
+    .string "your ambitions, or your little dreams.\p"
+    .string "You either survive it, or you don’t.\p"
+    .string "Now, let's get this over with.$"
 
-MahoganyTown_Gym_Text_PryceImpressed:
-    .string "Ah, I am impressed by your\n"
-    .string "prowess.\p"
-    .string "With your strong will, I know you\n"
-    .string "will overcome all life's obstacles.\p"
-    .string "You are worthy of this BADGE!$"
+MahoganyTown_Gym_Text_ClayImpressed:
+    .string "Well then…\n"
+    .string "you little punk.\p"
+    .string "I'll give you this badge, I guess.$"
 
 MahoganyTown_Gym_Text_ReceivedBadge:
-    .string "{PLAYER} received GLACIERBADGE.$"
+    .string "{PLAYER} received Moralbadge.$"
 
 MahoganyTown_Gym_Text_GlacierBadgeSpeech:
-    .string "That BADGE will raise the SPECIAL\n"
-    .string "ATTACK of POKéMON.\p"
-    .string "It also lets your POKéMON use\n"
-    .string "WHIRLPOOL to get across\l"
+    .string "That Badge will allow your Pokémon\n"
+    .string "use Whirlpool to get across\l"
     .string "real whirlpools.\p"
-    .string "And this… This is a gift from me!$"
+    .string "And take this too, I guess…$"
 
 MahoganyTown_Gym_Text_HailSpeech:
     .string "That TM contains HAIL.\p"
@@ -158,56 +181,53 @@ MahoganyTown_Gym_Text_HailSpeech:
 MahoganyTown_Gym_Text_CherishPokemon:
     .string "When the ice and snow melt,\n"
     .string "spring arrives.\p"
-    .string "You and your POKéMON will be\n"
+    .string "You and your Pokémon will be\n"
     .string "together for many years to come.\p"
     .string "Cherish your time together!$"
 
-MahoganyTown_Gym_Text_PryceRematch:
-    .string "Ah, JOHTO CHAMPION!\p"
-    .string "Your skills are indeed\n"
-    .string "remarkable.\p"
-    .string "I am impressed.\p"
-    .string "But even now, there is much to\n"
-    .string "learn from each other.\p"
-    .string "I, PRYCE--the winter trainer--\n"
-    .string "still have a few tricks left.\p"
-    .string "Want to have a rematch with me?$"
+MahoganyTown_Gym_Text_ClayRematch:
+    .string "Okay, little punk.\p"
+    .string "You were only so lucky\n"
+    .string "last time.\p"
+    .string "But I- the great Clay Puppington-\n"
+    .string "will stive to do my very best.\p"
+    .string "Ready? Let's do this.\p"
 
-MahoganyTown_Gym_Text_PryceRematchDefeat:
-    .string "Ah, yet again I'm impressed by\n"
-    .string "your prowess.\p"
-    .string "With your strong will, I know you\n"
-    .string "will overcome all life's obstacles.$"
+MahoganyTown_Gym_Text_ClayRematchDefeat:
+    .string "Well then…\n"
+    .string "Stinkin' dead-end job!\p"
+    .string "AAGH!\n"
+    .string "I CAN'T TAKE IT ANYMORE!$"
 
 MahoganyTown_Gym_Text_Guide:
-    .string "PRYCE is a veteran who has\n"
-    .string "trained POKéMON for some 50 years.\p"
+    .string "Clay is a veteran who has\n"
+    .string "quite strong, solid Pokémon.\p"
     .string "He's got a solid lineup of\n"
-    .string "POKéMON to cover whatever\l"
+    .string "Pokémon to cover whatever\l"
     .string "you bring his way.\p"
-    .string "Fire is a good place to start,\n"
-    .string "but watch out for the rain!$"
+    .string "Make sure you know your\n"
+    .string "matchups before taking him on!$"
 
 MahoganyTown_Gym_Text_GuideWin:
-    .string "PRYCE is something, but you're\n"
+    .string "Clay is something, but you're\n"
     .string "something else!\p"
     .string "That was a hot battle that\n"
     .string "bridged the generation gap!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldSeen:
-    .string "I'll freeze your POKéMON,\n"
+    .string "I'll freeze your Pokémon,\n"
     .string "so you can't do a thing!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldBeaten:
-    .string "Darn. I couldn't do a thing.$"
+    .string "Damn. I couldn't do a thing.$"
 
 MahoganyTown_Gym_Text_BoarderRonaldAfter:
     .string "I think there's a move a\n"
-    .string "POKéMON can use while it's\l"
+    .string "Pokémon can use while it's\l"
     .string "frozen.$"
 
 MahoganyTown_Gym_Text_BoarderBradSeen:
-    .string "This GYM has a slippery floor.\p"
+    .string "This Gym has a rock-solid floor.\p"
     .string "It's fun, isn't it?\p"
     .string "But hey--we're not playing\n"
     .string "games here!$"
@@ -216,40 +236,53 @@ MahoganyTown_Gym_Text_BoarderBradBeaten:
     .string "Do you see how serious we are?$"
 
 MahoganyTown_Gym_Text_BoarderBradAfter:
-    .string "This GYM is great.\n"
-    .string "I love boarding with my\l"
-    .string "POKéMON!$"
+    .string "Wait, this gym's floor is ICY?\p"
+    .string "Who knew?$"
 
 MahoganyTown_Gym_Text_BoarderDouglasSeen:
-    .string "I know PRYCE's secret.$"
+    .string "I know Clay's secret.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasBeaten:
-    .string "OK. I'll tell you PRYCE's secret.$"
+    .string "OK. I'll tell you Clay's secret.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasAfter:
-    .string "The secret behind PRYCE's power…\p"
-    .string "He meditates under a waterfall\n"
-    .string "daily to strengthen his mind\l"
-    .string "and body.$"
+    .string "The secret…\p"
+    .string "He hasn't had sex with his wife\n"
+    .string "in over eleven years!\p"
+    .string "Wait, did I say too much?$"
 
 MahoganyTown_Gym_Text_SkierRoxanneSeen:
-    .string "To get to PRYCE, our GYM LEADER,\n"
-    .string "you need to think before you skate.$"
+    .string "I'm in the mood for a bacon cheeseburger!\n"
+    .string "How much should my bacon be cooked?\l"
+    .string "Who shoul cook my bacon?$"
 
 MahoganyTown_Gym_Text_SkierRoxanneBeaten:
-    .string "I wouldn't lose to you in skiing!$"
+    .string "I want the bacon on my cheeseburger\n"
+    .string "burnt by Josh.$"
 
 MahoganyTown_Gym_Text_SkierRoxanneAfter:
-    .string "If you don't skate with precision,\n"
-    .string "you won't get far in this GYM.$"
+    .string "Josh is the way.\p"
+    .string "Josh is love.\p"
+    .string "Josh is life.$"
 
 MahoganyTown_Gym_Text_SkierClarissaSeen:
-    .string "Check out my parallel turn!$"
+    .string "Clay is a strong Leader.\n"
+    .string "He traveled away from a faraway\l"
+    .string "land just to get here.$" 
 
 MahoganyTown_Gym_Text_SkierClarissaBeaten:
-    .string "No! You made me wipe out!$"
+    .string "Yowch! You're really something else!$"
 
 MahoganyTown_Gym_Text_SkierClarissaAfter:
-    .string "I shouldn't have been bragging\n"
-    .string "about my skiing…$"
+    .string "Did you bring the right Pokémon\n"
+    .string "to take Clay on?$"
 
+Common_Text_PlayerClearedPuzzle:
+    .string "{PLAYER} solved the Gym puzzle!$"
+
+Common_Text_Machine_NoWarp:
+    .string "{PLAYER} did not warp.$"
+
+MahoganyTown_Machine_AskToWarp:
+    .string "Do you want to warp to\n"
+    .string "Gym Leader Clay?$"

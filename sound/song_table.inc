@@ -769,12 +769,12 @@ gSongTable::
 	song mus_dp_credits, 0, 0
 	song mus_dp_slots_unused, 0, 0
 	song mus_pl_fight_area_day, 0, 0
-	song mus_pl_tv_broadcast, 0, 0
+	song megalovania, 0, 0
 	song mus_pl_tv_end, 2, 2
-	song mus_pl_intro, 0, 0
+	song dk_summit, 0, 0
 	song mus_pl_title, 0, 0
 	song mus_pl_distortion_world, 0, 0
-	song mus_pl_b_arcade, 0, 0
+	song low_5, 0, 0
 	song mus_pl_b_hall, 0, 0
 	song mus_pl_b_castle, 0, 0
 	song mus_pl_b_factory, 0, 0

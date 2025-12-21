@@ -105,7 +105,7 @@ CianwoodCity_Text_ChucksWifeBeatChuck:
 	.string "I'll have a nice gift for you.$"
 
 CianwoodCity_Text_ChucksWifeGiveHM:
-	.string "That's CIANWOOD's GYM BADGE!\p"
+	.string "That's Cianwood's Gym Badge!\p"
 	.string "Then you should take this HM.$"
 
 CianwoodCity_Text_ChucksWifeFlySpeech:

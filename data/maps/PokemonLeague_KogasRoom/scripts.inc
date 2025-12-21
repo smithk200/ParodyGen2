@@ -17,14 +17,14 @@ PokemonLeague_KogasRoom_EventScript_Koga::
 	msgbox PokemonLeague_KogasRoom_Text_Before, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_KOGA_1, PokemonLeague_KogasRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_NED_1, PokemonLeague_KogasRoom_Text_Beaten
 	goto PokemonLeague_KogasRoom_EventScript_KogaOnDefeat
 
 PokemonLeague_KogasRoom_EventScript_KogaRematch::
 	msgbox PokemonLeague_KogasRoom_Text_RematchBefore, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_KOGA_2, PokemonLeague_KogasRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_NED_2, PokemonLeague_KogasRoom_Text_Beaten
 	goto PokemonLeague_KogasRoom_EventScript_KogaOnDefeat
 
 PokemonLeague_KogasRoom_EventScript_KogaOnDefeat::
@@ -77,7 +77,7 @@ PokemonLeague_KogasRoom_Text_Before:
 
 PokemonLeague_KogasRoom_Text_Beaten:
     .string "God, why have you forsaken me?\n"
-	.string "Well, neighbor, you really\n"
+	.string "Well, neighbor, you really\l"
     .string "know your stuff!$"
 
 PokemonLeague_KogasRoom_Text_Defeat:

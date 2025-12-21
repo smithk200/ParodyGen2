@@ -36,7 +36,7 @@ BattleScript_FickleBeamDoubled::
 
 BattleScript_Terastallization::
 	@ TODO: no string prints in S/V, but right now this helps with clarity
-	printstring STRINGID_PKMNSTORINGENERGY
+	printstring STRINGID_PKMNTERAS
 	playanimation BS_ATTACKER, B_ANIM_TERA_CHARGE
 	waitanimation
 	applyterastallization
@@ -48,7 +48,7 @@ BattleScript_Terastallization::
 
 BattleScript_TeraFormChange::
 	@ TODO: no string prints in S/V, but right now this helps with clarity
-	printstring STRINGID_PKMNSTORINGENERGY
+	printstring STRINGID_PKMNTERAS
 	handleformchange BS_ATTACKER, 0
 	handleformchange BS_ATTACKER, 1
 	playanimation BS_ATTACKER, B_ANIM_TERA_CHARGE

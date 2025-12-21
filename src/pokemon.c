@@ -5903,23 +5903,34 @@ u16 GetBattleBGM(void)
                 return MUS_HG_VS_CHAMPION;
             if (gSaveBlock2Ptr->optionsMusic == 1)
                 return MUS_DP_VS_CHAMPION;
-            return MUS_VS_CHAMPION;
+            return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
+            if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
+                return MUS_VS_TRAINER;
             if (gSaveBlock2Ptr->optionsMusic == 0)
                 return MUS_HG_VS_RIVAL;
             if (gSaveBlock2Ptr->optionsMusic == 1)
                 return MUS_DP_VS_RIVAL;
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
-            if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
-                return MUS_VS_TRAINER;
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
             if (gSaveBlock2Ptr->optionsMusic == 0)
                 return MUS_HG_VS_GYM_LEADER;
             if (gSaveBlock2Ptr->optionsMusic == 1)
                 return MUS_DP_VS_ELITE_FOUR;
-            return MUS_VS_ELITE_FOUR;
+            else
+            {
+                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_2) \
+                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_3) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_4) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_5))
+                    return MUS_MEGALOVANIA;
+                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2))
+                    return MUS_DK_SUMMIT;
+                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_2))
+                    return MUS_LOW_5;  
+                else
+                    return MUS_VS_ELITE_FOUR;
+            }
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
         case TRAINER_CLASS_PALACE_MAVEN:

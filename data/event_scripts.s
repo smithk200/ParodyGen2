@@ -2207,3 +2207,4 @@ Common_Text_ReceivedMon:
 	.include "data/maps/WhirlIslands_B1F_Inner/scripts.inc"
 	
 	.include "data/maps/Gate_Route40_TrainerHill_Courtyard/scripts.inc"
+	.include "data/maps/MahoganyTownGym2/scripts.inc"

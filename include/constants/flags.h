@@ -109,16 +109,16 @@
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
-#define FLAG_GARBAGEFLAG2           0x5E 
+#define FLAG_GARBAGEFLAG2                   0x5E 
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
-#define FLAG_MET_TEAM_AQUA_HARBOR            0x61
-#define FLAG_TV_EXPLAINED                    0x62
-#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
-#define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
-#define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
-#define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
+#define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x61
+#define FLAG_SOLVED_AZALEA_PUZZLE            0x62
+#define FLAG_SOLVED_GOLDENROD_PUZZLE          0x63  // Used for solving the Gym puzzles.
+#define FLAG_SOLVED_ECRUTEAK_PUZZLE          0x64 //
+#define FLAG_SOLVED_CIANWOOD_PUZZLE             0x65 //
+#define FLAG_SOLVED_MAHOGANY_PUZZLE          0x66 //
+#define FLAG_SOLVED_BLACKTHORN_PUZZLE           0x67 //
 
 #define FLAG_OLD_AMBER_ALTERING_CAVE         0x68 
 
@@ -718,15 +718,15 @@
 #define FLAG_RAN_FROM_BATTLE  0x29F // Unused Flag
 #define FLAG_NAMED_SILVER  0x2A0 // Unused Flag
 #define FLAG_RANDOMIZER    0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
+#define FLAG_RECEIVED_BADGE_5  0x2A2 // Unused Flag
+#define FLAG_RECEIVED_BADGE_6  0x2A3 // Unused Flag
+#define FLAG_RECEIVED_BADGE_7  0x2A4 // Unused Flag
+#define FLAG_HIDE_AZALEA_MACHINE  0x2A5 // Unused Flag
+#define FLAG_HIDE_GOLDENROD_MACHINE  0x2A6 // Unused Flag
+#define FLAG_HIDE_ECRUTEAK_MACHINE  0x2A7 // Unused Flag
+#define FLAG_HIDE_CIANWOOD_MACHINE  0x2A8 // Unused Flag
+#define FLAG_HIDE_MAHOGANY_MACHINE  0x2A9 // Unused Flag
+#define FLAG_HIDE_BLACKTHORN_MACHINE  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag

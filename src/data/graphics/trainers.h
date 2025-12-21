@@ -367,6 +367,8 @@ const u32 gTrainerFrontPic_Silver[] = INCBIN_U32("graphics/trainers/front_pics/s
 const u16 gTrainerPalette_Silver[] = INCBIN_U16("graphics/trainers/front_pics/silver.gbapal");
 const u32 gTrainerFrontPic_LeaderDamian[] = INCBIN_U32("graphics/trainers/front_pics/leader_damian.4bpp.smol");
 const u16 gTrainerPalette_LeaderDamian[] = INCBIN_U16("graphics/trainers/front_pics/leader_damian.gbapal");
+const u32 gTrainerFrontPic_LeaderBrie[] = INCBIN_U32("graphics/trainers/front_pics/leader_brie.4bpp.smol");
+const u16 gTrainerPalette_LeaderBrie[] = INCBIN_U16("graphics/trainers/front_pics/leader_brie.gbapal");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
@@ -380,6 +382,19 @@ const u16 gTrainerBackPalette_Steven[] = INCBIN_U16("graphics/trainers/back_pics
 
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
+
+const u32 gTrainerFrontPic_EliteFourMacy[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_macy.4bpp.smol");
+const u16 gTrainerPalette_EliteFourMacy[] = INCBIN_U16("graphics/trainers/front_pics/elite_four_macy.gbapal");
+const u32 gTrainerFrontPic_EliteFourNed[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_ned.4bpp.smol");
+const u16 gTrainerPalette_EliteFourNed[] = INCBIN_U16("graphics/trainers/front_pics/elite_four_ned.gbapal");
+const u32 gTrainerFrontPic_EliteFourJoy[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_joy.4bpp.smol");
+const u16 gTrainerPalette_EliteFourJoy[] = INCBIN_U16("graphics/trainers/front_pics/elite_four_joy.gbapal");
+const u32 gTrainerFrontPic_EliteFourSans[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sans.4bpp.smol");
+const u16 gTrainerPalette_EliteFourSans[] = INCBIN_U16("graphics/trainers/front_pics/elite_four_sans.gbapal");
+const u32 gTrainerFrontPic_LeaderRickAndMorty[] = INCBIN_U32("graphics/trainers/front_pics/rickandmorty.4bpp.smol");
+const u16 gTrainerPalette_LeaderRickAndMorty[] = INCBIN_U16("graphics/trainers/front_pics/rickandmorty.gbapal");
+const u32 gTrainerFrontPic_LeaderBea[] = INCBIN_U32("graphics/trainers/front_pics/leader_bea.4bpp.smol");
+const u16 gTrainerPalette_LeaderBea[] = INCBIN_U16("graphics/trainers/front_pics/leader_bea.gbapal");
 
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
@@ -531,6 +546,14 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_GIOVANNI, gTrainerFrontPic_Giovanni, gTrainerPalette_Giovanni),
     TRAINER_SPRITE(TRAINER_PIC_SILVER, gTrainerFrontPic_Silver, gTrainerPalette_Silver),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_DAMIAN, gTrainerFrontPic_LeaderDamian, gTrainerPalette_LeaderDamian),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_BRIE, gTrainerFrontPic_LeaderBrie, gTrainerPalette_LeaderBrie),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_MACY, gTrainerFrontPic_EliteFourMacy, gTrainerPalette_EliteFourMacy),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_NED, gTrainerFrontPic_EliteFourNed, gTrainerPalette_EliteFourNed),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_JOY, gTrainerFrontPic_EliteFourJoy, gTrainerPalette_EliteFourJoy),
+    TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_SANS, gTrainerFrontPic_EliteFourSans, gTrainerPalette_EliteFourSans),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_RICK_AND_MORTY, gTrainerFrontPic_LeaderRickAndMorty, gTrainerPalette_LeaderRickAndMorty),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_BEA, gTrainerFrontPic_LeaderBea, gTrainerPalette_LeaderBea),
+       
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

@@ -59,14 +59,14 @@ PokemonLeague_WillsRoom_EventScript_Will::
 	msgbox PokemonLeague_WillsRoom_Text_Before, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_WILL_1, PokemonLeague_WillsRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_MACY_1, PokemonLeague_WillsRoom_Text_Beaten
 	goto PokemonLeague_WillsRoom_EventScript_WillOnDefeat
 
 PokemonLeague_WillsRoom_EventScript_WillRematch::
 	msgbox PokemonLeague_WillsRoom_Text_RematchBefore, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_WILL_2, PokemonLeague_WillsRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_MACY_2, PokemonLeague_WillsRoom_Text_Beaten
 	goto PokemonLeague_WillsRoom_EventScript_WillOnDefeat
 
 PokemonLeague_WillsRoom_EventScript_WillOnDefeat::
@@ -94,37 +94,18 @@ PokemonLeague_WillsRoom_EventScript_WillDefeated::
 	end
 
 PokemonLeague_WillsRoom_Text_Before:
-    .string "Welcome to POKéMON LEAGUE,\n"
-    .string "{PLAYER}.\p"
-    .string "Allow me to introduce myself.\n"
-    .string "I am WILL.\p"
-    .string "I have trained all around the\n"
-    .string "world, making my psychic\l"
-    .string "POKéMON powerful.\p"
-    .string "And, at last, I've been accepted\n"
-    .string "into the ELITE FOUR.\p"
-    .string "I can only keep getting better!\p"
-    .string "Losing is not an option!$"
+    .string "Hi! I'm Macy!\n"
+    .string "I use Flying types.\p"
+	.string "Let's battle!$"
 
 PokemonLeague_WillsRoom_Text_Beaten:
-    .string "I… I can't… believe it…$"
+    .string "Wow, you beat me!$"
 
 PokemonLeague_WillsRoom_Text_Defeat:
-    .string "Even though I was defeated, I\n"
-    .string "won't change my course.\p"
-    .string "I will continue battling until I\n"
-    .string "stand above all trainers!\p"
-    .string "Now, {PLAYER}, move on and\n"
-    .string "experience the true ferocity of\l"
-    .string "the ELITE FOUR.$"
+    .string "Wow, you are strong.\p"
+    .string "But are you strong enough to\n"
+    .string "beat the next guy?\p"
+    .string "You might not stand a chance!$"
 
 PokemonLeague_WillsRoom_Text_RematchBefore:
-    .string "WILL: Ah, welcome back.\p"
-    .string "I have foreseen this encounter.\p"
-    .string "My psychic POKéMON and I have\n"
-    .string "evolved,\l"
-    .string "developing new tactics.\p"
-    .string "Prepare yourself for a battle of\n"
-    .string "enhanced strategy and might.\p"
-    .string "Let us see if your foresight\n"
-    .string "matches mine.$"
+    .string "Macy: Let's do this again!$"

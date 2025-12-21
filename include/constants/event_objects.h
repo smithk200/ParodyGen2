@@ -326,7 +326,18 @@
 #define OBJ_EVENT_GFX_TRAIN_MID                319
 #define OBJ_EVENT_GFX_TRAIN_BACK                320
 #define OBJ_EVENT_GFX_LEGENDARY_SHADOW          321
-#define OBJ_EVENT_GFX_LEADER_DAMIAN          322
+#define OBJ_EVENT_GFX_LEADER_DAMIAN            322
+#define OBJ_EVENT_GFX_MACHINE                  323
+#define OBJ_EVENT_GFX_LEADER_RICK                      324
+#define OBJ_EVENT_GFX_LEADER_MORTY                      325
+#define OBJ_EVENT_GFX_LEADER_BEA                      326
+#define OBJ_EVENT_GFX_LEADER_MATT                      327
+#define OBJ_EVENT_GFX_LEADER_BRIE                      328
+#define OBJ_EVENT_GFX_LEADER_CLAY                      329
+#define OBJ_EVENT_GFX_ELITE_FOUR_JOY                      330
+#define OBJ_EVENT_GFX_ELITE_FOUR_MACY                      331
+#define OBJ_EVENT_GFX_ELITE_FOUR_NED                      332
+#define OBJ_EVENT_GFX_ELITE_FOUR_SANS                      333
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -489,6 +500,11 @@
 #define OBJ_EVENT_PAL_TAG_PROTON              0x113E
 #define OBJ_EVENT_PAL_TAG_NPC_5                   0x113F
 #define OBJ_EVENT_PAL_TAG_LEADER_DAMIAN                  0x114A
+#define OBJ_EVENT_PAL_TAG_LEADER_BRIE                  0x114B
+#define OBJ_EVENT_PAL_TAG_LEADER_RICK                  0x114C
+#define OBJ_EVENT_PAL_TAG_LEADER_MORTY                  0x114D
+#define OBJ_EVENT_PAL_TAG_LEADER_BEA                  0x114E
+#define OBJ_EVENT_PAL_TAG_LEADER_MATT                  0x114F
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
@@ -524,6 +540,15 @@
 #define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1169
 // Gen VIII
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
+
+
+#define OBJ_EVENT_PAL_TAG_LEADER_CLAY                  0x116B
+#define OBJ_EVENT_PAL_TAG_ELITE_FOUR_MACY              0x116C
+#define OBJ_EVENT_PAL_TAG_ELITE_FOUR_NED              0x116D
+#define OBJ_EVENT_PAL_TAG_ELITE_FOUR_JOY              0x116E
+#define OBJ_EVENT_PAL_TAG_ELITE_FOUR_SANS             0x116F
+
+
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

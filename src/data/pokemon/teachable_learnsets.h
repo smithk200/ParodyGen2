@@ -5787,6 +5787,7 @@ static const u16 sJolteonTeachableLearnset[] = {
     MOVE_FACADE,
     MOVE_FLASH,
     MOVE_HYPER_BEAM,
+    MOVE_ICE_BEAM,
     MOVE_IRON_TAIL,
     MOVE_LIGHT_SCREEN,
     MOVE_PROTECT,

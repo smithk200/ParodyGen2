@@ -416,7 +416,7 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 12),
     },
     {
-        .trainerId = TRAINER_KAREN_1,
+        .trainerId = TRAINER_SANS_1,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(2),
         .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 26),
@@ -497,7 +497,7 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 3),
     },
     {
-        .trainerId = TRAINER_WILL_2,
+        .trainerId = TRAINER_MACY_2,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(5),
         .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 38),
@@ -668,7 +668,7 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 8),
     },
     {
-        .trainerId = TRAINER_CHUCK_1_3,
+        .trainerId = TRAINER_BEA_1_3,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(5),
         .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 51),
@@ -704,7 +704,7 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 5),
     },
     {
-        .trainerId = TRAINER_WHITNEY_1,
+        .trainerId = TRAINER_NORMAN_1,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(2),
         .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 55),

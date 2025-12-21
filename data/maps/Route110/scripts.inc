@@ -226,7 +226,7 @@ Route110_EventScript_BenjaminRematch::
 	end
 
 Route110_EventScript_Jasmine::
-	trainerbattle_single TRAINER_JASMINE, Route110_Text_JasmineIntro, Route110_Text_JasmineDefeated
+	trainerbattle_single TRAINER_MATT, Route110_Text_JasmineIntro, Route110_Text_JasmineDefeated
 	msgbox Route110_Text_JasminePostBattle, MSGBOX_AUTOCLOSE
 	end
 

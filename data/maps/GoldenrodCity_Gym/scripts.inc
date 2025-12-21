@@ -43,13 +43,21 @@ GoldenrodCity_Gym_EventScript_Gym_Guy_After::
 GoldenrodCity_Gym_EventScript_Whitney::
 	lock
 	faceplayer
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 3, GoldenrodCity_Gym_EventScript_WhitneyCrying
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 4, GoldenrodCity_Gym_EventScript_WhitneyBadge
-	goto_if_set FLAG_DEFEATED_GOLDENROD_CITY_GYM, GoldenrodCity_Gym_EventScript_WhitneyDefeated
-	msgbox GoldenrodCity_Gym_Text_WhitneyBefore, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WHITNEY_1, GoldenrodCity_Gym_Text_WhitneyShouldntBeSoSerious
-	msgbox GoldenrodCity_Gym_Text_WhitneyYouMeanie, MSGBOX_DEFAULT
-	setvar VAR_GOLDENROD_CITY_STATE, 3
+	goto_if_set FLAG_DEFEATED_GOLDENROD_CITY_GYM, GoldenrodCity_Gym_EventScript_NormanPostBattle
+	msgbox GoldenrodCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_NORMAN_1, GoldenrodCity_Gym_Text_NormanLostBattle
+	message GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	msgbox GoldenrodCity_Gym_Text_WhitneyPlainBadge, MSGBOX_DEFAULT
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_DEFEATED_GOLDENROD_CITY_GYM
+	addvar VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 3
+	call Common_EventScript_SetGymTrainers
+	giveitem ITEM_TM_FACADE
+	msgbox GoldenrodCity_Gym_Text_NormanFacade, MSGBOX_DEFAULT
+	setvar VAR_GOLDENROD_CITY_STATE, 5
 	closemessage
 	release
 	end
@@ -58,6 +66,14 @@ GoldenrodCity_Gym_EventScript_WhitneyCrying::
 	lock
 	faceplayer
 	msgbox GoldenrodCity_Gym_Text_WhitneyYouMeanie, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_Gym_EventScript_NormanPostBattle::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_Gym_Text_NormanCongratulatesYou, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -76,8 +92,7 @@ GoldenrodCity_Gym_EventScript_WhitneyBadge::
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
-	giveitem ITEM_TM_ATTRACT
-	msgbox GoldenrodCity_Gym_Text_WhitneyAttract, MSGBOX_DEFAULT
+	giveitem ITEM_TM_FACADE
 	setvar VAR_GOLDENROD_CITY_STATE, 5
 	closemessage
 	release
@@ -124,19 +139,25 @@ GoldenrodCity_Gym_Text_GymStatueCertified:
 	.string "WHITNEY'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
-GoldenrodCity_Gym_Text_WhitneyBefore:
-    .string "Hi! I'm WHITNEY!\p"
-    .string "Everyone was into POKéMON, so I got\n"
-    .string "into it too!\p"
-    .string "POKéMON are super-cute!\p"
-    .string "You want to battle? I'm warning\n"
-    .string "you- I'm good!$"
+GoldenrodCity_Gym_Text_NormanIntro:
+    .string "Hello, {PLAYER}.\p"
+    .string "As you can see, Johto got new Gym\n"
+    .string "Leaders. Whitney was too immature\l"
+	.string "for the role.\p"
+	.string "So I, Norman, have taken her place.\p"
+	.string "Makes me wonder who's in the Gym in\n"
+	.string "my beloved Petalburg City…\p"
+    .string "Anyways, it's now time for\n"
+    .string "you to face me in battle.\p"
+	.string "Who says the Normal type\n"
+	.string "has to be boring?\p"
+	.string "{PLAYER}! Get ready!\n"
+	.string "I expect nothing but the best from you!$"
 
-GoldenrodCity_Gym_Text_WhitneyShouldntBeSoSerious:
-    .string "Sob…\p"
-    .string "…Waaaaaaah! You're mean!\p"
-    .string "You shouldn't be so serious! You…\n"
-    .string "you child, you!$"
+GoldenrodCity_Gym_Text_NormanLostBattle:
+    .string "Well played…\p"
+    .string "{PLAYER}, it is an honor to\n"
+    .string "confer on you the Genericbadge!$"
 
 GoldenrodCity_Gym_Text_WhitneyYouMeanie:
     .string "Waaaaah!\p"
@@ -150,20 +171,23 @@ GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "PLAINBADGE.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
-    .string "{PLAYER} received PLAINBADGE.$"
+    .string "{PLAYER} received Genericbadge.$"
 
 GoldenrodCity_Gym_Text_WhitneyPlainBadge:
-    .string "PLAINBADGE lets your POKéMON use\n"
-    .string "STRENGTH outside of battle.\p"
-    .string "It also boosts your POKéMON's\n"
-	.string "DEFENSE.\p"
-    .string "Oh, you can have this too!$"
+    .string "The Genericbadge lets your\n"
+    .string "Pokémon use Strength\l"
+	.string "outside of battle.\n"
+    .string "It also boosts your Pokémon's\n"
+	.string "Defense.\p"
+    .string "{PLAYER}, please take this as well.\n"
+	.string "You've earned it.$"
 
-GoldenrodCity_Gym_Text_WhitneyAttract:
-    .string "It's ATTRACT! It makes full use of a\n"
-    .string "POKéMON's charm.\p"
-    .string "Isn't it just perfect for a cutie\n"
-    .string "like me?$"
+GoldenrodCity_Gym_Text_NormanFacade:
+    .string "This is the TM Facade.\p"
+	.string "It doubles in power if your\n"
+	.string "Pokémon is burned, poisoned,\l"
+	.string "or paralyzed. Try to put it\l"
+	.string "to good use!$"
 
 GoldenrodCity_Gym_Text_WhitneyGoodCry:
     .string "Ah, that was a good cry!$"
@@ -246,4 +270,9 @@ GoldenrodCity_Gym_Text_GymGuide:
 GoldenrodCity_Gym_Text_GymGuideWin:
     .string "You won? Great! I was busy admiring\n"
     .string "the ladies here.$"
+
+GoldenrodCity_Gym_Text_NormanCongratulatesYou:
+	.string "Well done, {PLAYER}!\p"
+	.string "Go and show the other Leaders\n"
+	.string "what you're made of!$"
 

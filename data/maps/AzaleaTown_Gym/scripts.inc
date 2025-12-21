@@ -535,7 +535,7 @@ AzaleaTown_Gym_EventScript_Bugsy::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_AZALEA_TOWN_GYM, AzaleaTown_Gym_EventScript_Bugsy_Defeated
 	msgbox AzaleaTown_Gym_Text_BugsyIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_BUGSY_1, AzaleaTown_Gym_Text_BugsyBeaten
+	trainerbattle_no_intro TRAINER_BRIE_1, AzaleaTown_Gym_Text_BugsyBeaten
 	message AzaleaTown_Gym_Text_ReceivedHiveBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -667,32 +667,20 @@ AzaleaTown_Gym_EventScript_Statue2::
 	end
 
 AzaleaTown_Gym_Text_GymStatue:
-	.string "AZALEA POKéMON GYM$"
+	.string "AZALEA Pokémon GYM$"
 
 AzaleaTown_Gym_Text_GymStatueCertified:
-	.string "AZALEA TOWN POKéMON GYM\p"
-	.string "BUGSY'S CERTIFIED TRAINERS:\n"
+	.string "AZALEA TOWN Pokémon GYM\p"
+	.string "Brie'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 AzaleaTown_Gym_Text_BugsyIntro:
-	.string "I'm BUGSY!\p"
-	.string "I never lose when it comes\n"
-	.string "to bug POKéMON.\p"
-	.string "My research is going to make me the\n"
-	.string "authority on bug POKéMON!\p"
-	.string "For example, did you know\n"
-	.string "that the move CUT is\l"
-	.string "actually a BUG-type move?\p"
-	.string "Let me demonstrate all I've\n"
-	.string "learned from my studies.$"
+	.string "Hi! I'm Brie!\p"
+	.string "I love Fairy Pokémon!\p"
+	.string "Let's go!$"
 
 AzaleaTown_Gym_Text_BugsyBeaten:
-	.string "Whoa, amazing! You're an\n"
-	.string "expert on POKéMON!\p"
-	.string "My research isn't complete\n"
-	.string "yet.\p"
-	.string "OK, you win. Take this\n"
-	.string "BADGE.$"
+	.string "Well, you beat me!$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
 	.string "{PLAYER} received HIVEBADGE.$"
@@ -700,10 +688,10 @@ AzaleaTown_Gym_Text_ReceivedHiveBadge:
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
 	.string "Do you know the benefits\n"
 	.string "of HIVEBADGE?\p"
-	.string "If you have it, POKéMON up\n"
+	.string "If you have it, Pokémon up\n"
 	.string "to L30 will obey you,\l"
 	.string "even traded ones.\p"
-	.string "POKéMON that know CUT will be able\n"
+	.string "Pokémon that know CUT will be able\n"
 	.string "to use it outside of battle too.\p"
 	.string "Here, I also want you to\n"
 	.string "have this.$"
@@ -718,7 +706,7 @@ AzaleaTown_Gym_Text_FuryCutterSpeech:
 	.string "I discovered it!$"
 
 AzaleaTown_Gym_Text_BugsyAdvice:
-	.string "Bug POKéMON are deep. There are\n"
+	.string "Bug Pokémon are deep. There are\n"
 	.string "many mysteries to be explored.\p"
 	.string "Study your favorites thoroughly.$"
 
@@ -735,18 +723,18 @@ AzaleaTown_Gym_Text_BugsyRematchDefeat:
 	.string "My research must not be complete...$"
 
 AzaleaTown_Gym_Text_BugCatcherBennySeen:
-	.string "Bug POKéMON evolve young. So they\n"
+	.string "Bug Pokémon evolve young. So they\n"
 	.string "get stronger that much faster.$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyBeaten:
 	.string "Just evolving isn't enough!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyAfter:
-	.string "POKéMON become stronger\n"
+	.string "Pokémon become stronger\n"
 	.string "if they evolve. Really!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlSeen:
-	.string "Bug POKéMON are cool and tough!\n"
+	.string "Bug Pokémon are cool and tough!\n"
 	.string "I'll prove it to you!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlBeaten:
@@ -754,13 +742,13 @@ AzaleaTown_Gym_Text_BugCatcherAlBeaten:
 
 AzaleaTown_Gym_Text_BugCatcherAlAfter:
 	.string "They're so cool, but most girls\n"
-	.string "don't like bug POKéMON.\p"
+	.string "don't like bug Pokémon.\p"
 	.string "I don't know why…$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshSeen:
 	.string "You saved all the SLOWPOKE?\n"
 	.string "Whew, you're mighty!\p"
-	.string "But my grown-up POKéMON are\n"
+	.string "But my grown-up Pokémon are\n"
 	.string "pretty tough too!$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshBeaten:
@@ -780,14 +768,14 @@ AzaleaTown_Gym_Text_TwinsAmyMay1Beaten:
 
 AzaleaTown_Gym_Text_TwinsAmyMay1After:
 	.string "AMY: You're really strong!\p"
-	.string "But BUGSY's even stronger!\n"
+	.string "But Brie's even stronger!\n"
 	.string "His SCYTHER's CUT almost\l"
 	.string "always makes critical hits!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen:
 	.string "MAY: You want to see the\n"
 	.string "LEADER? Good luck!\p"
-	.string "BUGSY is so strong!\n"
+	.string "Brie is so strong!\n"
 	.string "His SCYTHER's CUT always\l"
 	.string "seems to crit!$"
 
@@ -796,23 +784,23 @@ AzaleaTown_Gym_Text_TwinsAmyMay2Beaten:
 	.string "goodness!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2After:
-	.string "MAY: Our bug POKéMON lost!\n"
+	.string "MAY: Our bug Pokémon lost!\n"
 	.string "Oh, what a shame.\p"
-	.string "BUGSY's won't lose though!\p"
+	.string "Brie's won't lose though!\p"
 	.string "His PINECO makes short work\n"
-	.string "of ROCK-type POKéMON!$"
+	.string "of ROCK-type Pokémon!$"
 
 AzaleaTown_Gym_Text_GymGuide:
 	.string "Yo, challenger!\p"
-	.string "BUGSY's young, but his knowledge\n"
-	.string "of bug POKéMON is for real.\p"
+	.string "Brie's young, but her knowledge\n"
+	.string "of Fairy Pokémon is for real.\p"
 	.string "It's going to be tough\n"
 	.string "without my advice.\p"
-	.string "Let's see… BUGSY's bagworm POKéMON\n"
-	.string "knows a move that covers its\l"
-	.string "ROCK-type weakness.\p"
-	.string "He's also developed a new verison\n"
-	.string "of CUT that is BUG-type.\p"
+	.string "Let's see… Brie's salamander Pokémon\n"
+	.string "can do something called\l"
+	.string "Terrastalize.\p"
+	.string "She's also got a Pokémon\n"
+	.string "that knows Wish and Substitute.\p"
 	.string "Oh, and don't forget about those\n"
 	.string "nasty critical hits! Good luck!$"
 
@@ -820,4 +808,4 @@ AzaleaTown_Gym_Text_GymGuideWin:
 	.string "Well done! That was a great\n"
 	.string "clash of talented young trainers.\p"
 	.string "With people like you, the\n"
-	.string "future of POKéMON is bright!$"
+	.string "future of Pokémon is bright!$"

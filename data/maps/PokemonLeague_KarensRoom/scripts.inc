@@ -17,14 +17,14 @@ PokemonLeague_KarensRoom_EventScript_Karen::
 	msgbox PokemonLeague_KarensRoom_Text_Before, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_KAREN_1, PokemonLeague_KarensRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_SANS_1, PokemonLeague_KarensRoom_Text_Beaten
 	goto PokemonLeague_KarensRoom_EventScript_KarenOnDefeat
 
 PokemonLeague_KarensRoom_EventScript_KarenRematch::
 	msgbox PokemonLeague_KarensRoom_Text_RematchBefore, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_KAREN_2, PokemonLeague_KarensRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_SANS_2, PokemonLeague_KarensRoom_Text_Beaten
 	goto PokemonLeague_KarensRoom_EventScript_KarenOnDefeat
 
 PokemonLeague_KarensRoom_EventScript_KarenOnDefeat::
@@ -52,42 +52,42 @@ PokemonLeague_KarensRoom_EventScript_KarenDefeated::
 	end
 
 PokemonLeague_KarensRoom_Text_RematchBefore:
-    .string "KAREN: Ah, it's you again.\p"
-    .string "I trust you haven't forgotten\n"
-    .string "my belief:\p"
-    .string "True strength arises from trust\n"
-    .string "in one's POKéMON.\p"
-    .string "Since our last encounter, my\n"
-    .string "bond with my POKéMON has\l"
-    .string "deepened further.\p"
-    .string "Are you ready to face a team\n"
-    .string "united by an unbreakable bond?\p"
-    .string "Show me the power of the bond\n"
-    .string "with your POKéMON.$"
+    .string "Sans: Oh, it's you again.\p"
+    .string "Guess you couldn't get enough of\n"
+    .string "the ol' Sans, huh?\p"
+    .string "Well, I've got nothing to lose.\p"
+    .string "Except my money, that is.\p"
+    .string "heh heh heh heh…$"
 
 PokemonLeague_KarensRoom_Text_Before:
-    .string "I am KAREN of the ELITE FOUR.\p"
-    .string "You're {PLAYER}? How amusing.\p"
-    .string "I love DARK-type POKéMON.\p"
-    .string "I find their wild, tough image\n"
-    .string "to be so appealing. And they're\l"
-    .string "so strong.\p"
-    .string "Think you can take them?\n"
-    .string "Just try to entertain me.\p"
-    .string "Let's go.$"
+    .string "heh heh heh heh…\p"
+	.string "I'm Sans.\p"
+	.string "You might have thought you’d be\n"
+	.string "breezing through, but you’re in for a\l"
+	.string "little surprise.\p"
+	.string "See, I'm not just your average\n"
+	.string "Elite Four member.\p"
+	.string "I’ve got a bone to pick with you.\p"
+	.string "I use Dark-type Pokémon, like\n"
+	.string "Karen did before me.\p"
+	.string "Unlike hers, though, mine are\n"
+	.string "nightmarishly good at getting\l"
+	.string "under your skin.\p"
+	.string "Alright.\n"
+	.string "It's too late now, kid.\p"
+	.string "Do you wanna have a bad time?$"
 
 PokemonLeague_KarensRoom_Text_Beaten:
-    .string "Well, aren't you good. I like that\n"
-    .string "in a trainer.$"
+    .string "Well, kid!\n"
+    .string "You're really something else!$"
 
 PokemonLeague_KarensRoom_Text_Defeat:
-    .string "Strong POKéMON.\p"
-    .string "Weak POKéMON.\p"
-    .string "That is only the selfish\n"
-    .string "perception of people.\p"
-    .string "Truly skilled trainers should\n"
-    .string "try to win with their favorites.\p"
-    .string "I like your style. You understand\n"
-    .string "what's important.\p"
-    .string "Go on--the CHAMPION is waiting.$"
+    .string "heh heh heh heh…\p"
+    .string "You just don't give up, huh?\p"
+    .string "So I advise you…\n"
+    .string "Lance is tough. Like really tough.\p"
+    .string "Heal up reall well before\n"
+    .string "going to Lance's room.\p"
+	.string "No, I mean it.\p"
+	.string "Otherwise you'll be in for a bad time.$"
 

@@ -17,14 +17,14 @@ PokemonLeague_BrunosRoom_EventScript_Bruno::
 	msgbox PokemonLeague_BrunosRoom_Text_Before, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_BRUNO_1, PokemonLeague_BrunosRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_JOY_1, PokemonLeague_BrunosRoom_Text_Beaten
 	goto PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat
 
 PokemonLeague_BrunosRoom_EventScript_BrunoRematch::
 	msgbox PokemonLeague_BrunosRoom_Text_RematchBefore, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_BRUNO_2, PokemonLeague_BrunosRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_JOY_2, PokemonLeague_BrunosRoom_Text_Beaten
 	goto PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat
 
 PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat::
@@ -52,34 +52,35 @@ PokemonLeague_BrunosRoom_EventScript_BrunoDefeated::
 	end
 
 PokemonLeague_BrunosRoom_Text_RematchBefore:
-    .string "BRUNO: Welcome back, young\n"
-    .string "warrior.\p"
-    .string "Through rigorous training, we have\n"
-    .string "grown stronger.\p"
-    .string "My rock-hard will is even more firm\n"
-    .string "and unyielding.\p"
-    .string "Are you prepared to face an even\n"
-    .string "greater challenge?\p"
-    .string "Show me the results of your\n"
-    .string "training.\p"
-    .string "Hoo hah!$"
+    .string "Joy: Hi! Welcome back!\p"
+    .string "My Pokémon have gotten stronger last\n"
+    .string "time since we met.\p"
+    .string "Ready to see the power of\n"
+    .string "my new and improved cute Pokémon?\p"
+    .string "Let's go!$"
 
 PokemonLeague_BrunosRoom_Text_Before:
-    .string "I am BRUNO of the ELITE FOUR.\p"
-    .string "I always train to the extreme be-\n"
-    .string "cause I believe in our potential.\p"
-    .string "That is how we became strong.\p"
-    .string "Can you withstand our power?\p"
-    .string "Hm? I see no fear in you. You look\n"
-    .string "determined. Perfect for battle!\p"
-    .string "Ready, {PLAYER}? You will bow down\n"
-    .string "to our overwhelming power!\p"
-    .string "Hoo hah!$"
+    .string "Hi! I'm Joy!\n"
+    .string "I'm a member of the Elite Four!\p"
+    .string "I've been part of the Elite Four for\n"
+    .string "four years running!\p"
+	.string "You know why?\p"
+	.string "It's because I use Electric\n"
+	.string "type Pokémon!\p"
+	.string "Also, I asked the Pokémon League\n"
+	.string "to install permanent rain in my room!\p"
+    .string "You wanna see the skills I've had\n"
+    .string "that kept me up here for the\l"
+	.string "past four years?\p"
+    .string "I bet you do!\p"
+    .string "Ready, {PLAYER}? My Jolteon\n"
+    .string "and my other cute Pokémon will take\l"
+	.string "you down!$"
 
 PokemonLeague_BrunosRoom_Text_Beaten:
-    .string "Why? How could we lose?$"
+    .string "I lost? Oh, okay.$"
 
 PokemonLeague_BrunosRoom_Text_Defeat:
-    .string "Having lost, I have no right to\n"
-    .string "say anything…\p"
-    .string "Go face your next challenge!$"
+    .string "Go on to the next room!\p"
+    .string "Though there's a spooky scary\n"
+	.string "skeleton in there…$"

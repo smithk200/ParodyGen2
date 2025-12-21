@@ -8760,6 +8760,16 @@
       "secondary_tileset": "gTileset_WhirlIslands",
       "border_filepath": "data/layouts/WhirlIslands_B1F_Inner/border.bin",
       "blockdata_filepath": "data/layouts/WhirlIslands_B1F_Inner/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAHOGANY_TOWN_GYM2",
+      "name": "MahoganyTownGym2_Layout",
+      "width": 5,
+      "height": 8,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/MahoganyTownGym2/border.bin",
+      "blockdata_filepath": "data/layouts/MahoganyTownGym2/map.bin"
     }
   ]
 }

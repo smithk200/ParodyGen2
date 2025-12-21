@@ -33,8 +33,8 @@ voicegroup297:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 255, 255, 0, 99 @distortion
 	voice_directsound 60, 0, DirectSoundWaveData_unused_guitar_separates_power_chord, 255, 165, 154, 165 @harmonics TODO
 	voice_directsound 60, 0, DirectSoundWaveData_trinity_30303_mega_bass, 255, 255, 0, 99 @acoustic bass
-	voice_directsound 60, 0, DirectSoundWaveData_fingered_bass, 255, 255, 0, 99 @finger bass
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 253, 0, 188 @picked bass
+	voice_directsound 60, 0, DirectSoundWaveData_dp_fretlessbass_d1_16, 255, 255, 255, 0 @finger bass
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 255, 0 @picked bass
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 253, 0, 188 @fretless bass
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 253, 0, 188 @slap bass 1
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 253, 0, 188 @slap bass 2

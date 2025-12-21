@@ -10,14 +10,14 @@ u32 GetCurrentLevelCap(void)
     static const u32 sLevelCapFlagMap[][2] =
     {
         {FLAG_BADGE01_GET, 13},
-        {FLAG_BADGE02_GET, 16},
-        {FLAG_BADGE03_GET, 21},
-        {FLAG_BADGE04_GET, 25},
-        {FLAG_BADGE05_GET, 38},
-        {FLAG_BADGE06_GET, 38},
-        {FLAG_BADGE07_GET, 38},
-        {FLAG_BADGE08_GET, 45},
-        {FLAG_IS_CHAMPION, 56},
+        {FLAG_BADGE02_GET, 22},
+        {FLAG_BADGE03_GET, 27},
+        {FLAG_BADGE04_GET, 38},
+        {FLAG_RECEIVED_BADGE_5, 44}, //using different flags to make the level cap more fair
+        {FLAG_RECEIVED_BADGE_6, 48},
+        {FLAG_RECEIVED_BADGE_7, 52},
+        {FLAG_BADGE08_GET, 54},
+        {FLAG_IS_CHAMPION, 70},
     };
 
     u32 i;
@@ -74,6 +74,10 @@ u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
     }
     else if (B_EXP_CAP_TYPE == EXP_CAP_SOFT)
     {
+        if (gSaveBlock2Ptr->optionsDifficulty == OPTIONS_DIFFICULTY_EASY)
+        {
+            expValue = (expValue / EASY_DIFFICULTY_MULTIPLIER);
+        }
         levelDifference = level - currentLevelCap;
         if (levelDifference > ARRAY_COUNT(sExpScalingDown) - 1)
             return expValue / sExpScalingDown[ARRAY_COUNT(sExpScalingDown) - 1];

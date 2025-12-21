@@ -29,7 +29,7 @@ SaffronCity_FightingDojoVIP_EventScript_Bugsy::
 	msgbox SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_BUGSY_2, SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat
+	trainerbattle_no_intro TRAINER_BRIE_2, SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
@@ -44,7 +44,7 @@ SaffronCity_FightingDojoVIP_EventScript_Whitney::
 	msgbox SaffronCity_FightingDojoVIP_Text_Whitney_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_WHITNEY_2, SaffronCity_FightingDojoVIP_Text_Whitney_RematchDefeat
+	trainerbattle_no_intro TRAINER_NORMAN_2, SaffronCity_FightingDojoVIP_Text_Whitney_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
@@ -74,7 +74,7 @@ SaffronCity_FightingDojoVIP_EventScript_Chuck::
 	msgbox SaffronCity_FightingDojoVIP_Text_Chuck_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_CHUCK_2, SaffronCity_FightingDojoVIP_Text_Chuck_RematchDefeat
+	trainerbattle_no_intro TRAINER_BEA_2, SaffronCity_FightingDojoVIP_Text_Chuck_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
@@ -89,7 +89,7 @@ SaffronCity_FightingDojoVIP_EventScript_Jasmine::
 	msgbox SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_JASMINE_2, SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat
+	trainerbattle_no_intro TRAINER_MATT_2, SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
@@ -104,7 +104,7 @@ SaffronCity_FightingDojoVIP_EventScript_Pryce::
 	msgbox SaffronCity_FightingDojoVIP_Text_Pryce_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_PRYCE_2, SaffronCity_FightingDojoVIP_Text_Pryce_RematchDefeat
+	trainerbattle_no_intro TRAINER_CLAY_2, SaffronCity_FightingDojoVIP_Text_Pryce_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10

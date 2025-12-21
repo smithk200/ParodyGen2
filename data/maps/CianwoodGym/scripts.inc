@@ -35,22 +35,21 @@ CianwoodGym_EventScript_Chuck::
 	goto_if_set FLAG_VISITED_VERMILION_CITY, CianwoodGym_EventScript_ChuckGotoDojo
 	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_Chuck_Defeated
 	msgbox CianwoodGym_Text_ChuckIntro1, MSGBOX_DEFAULT
-	applymovement LOCALID_CIANWOOD_CHUCK, CianwoodGym_Movement_ChuckLeft
-	waitmovement 0
-	message CianwoodGym_Text_ChuckIntro2
-	applymovement LOCALID_CIANWOOD_CHUCK_ROCK_LEFT, Movement_SmashRock
-	playse SE_M_ROCK_THROW
-	waitmovement 0
-
-	delay 20
-
-	applymovement LOCALID_CIANWOOD_CHUCK, CianwoodGym_Movement_ChuckRight
-	waitmovement 0
-	applymovement LOCALID_CIANWOOD_CHUCK_ROCK_RIGHT, Movement_SmashRock
-	playse SE_M_ROCK_THROW
-	waitmovement 0
 	waitmessage
 	turnobject LOCALID_CIANWOOD_CHUCK, DIR_SOUTH
+	msgbox CianwoodGym_Text_ChuckIntro3, MSGBOX_DEFAULT
+	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, CianwoodGym_EventScript_OlivineCheckMahog
+	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_MahogCheckOlivine
+	goto CianwoodGym_EventScript_Chuck_Battle1
+
+CianwoodGym_EventScript_Bea::
+	lock
+	faceplayer
+	goto_if_unset FLAG_HIDE_DOJO_CHUCK, CianwoodGym_EventScript_ChuckAtDojo
+	goto_if_set FLAG_VISITED_VERMILION_CITY, CianwoodGym_EventScript_ChuckGotoDojo
+	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_Chuck_Defeated
+	msgbox CianwoodGym_Text_ChuckIntro1, MSGBOX_DEFAULT
+	closemessage
 	msgbox CianwoodGym_Text_ChuckIntro3, MSGBOX_DEFAULT
 	goto_if_set FLAG_DEFEATED_OLIVINE_CITY_GYM, CianwoodGym_EventScript_OlivineCheckMahog
 	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_MahogCheckOlivine
@@ -106,15 +105,18 @@ CianwoodGym_EventScript_MahogCheckOlivine::
 	goto CianwoodGym_EventScript_Chuck_Battle2
 	
 CianwoodGym_EventScript_Chuck_Battle1::
-	trainerbattle_no_intro TRAINER_CHUCK_1, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_BEA_1, CianwoodGym_Text_ChuckIntro2
+	setflag FLAG_RECEIVED_BADGE_5
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Battle2::
-	trainerbattle_no_intro TRAINER_CHUCK_1_2, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_BEA_1_2, CianwoodGym_Text_ChuckIntro2
+	setflag FLAG_RECEIVED_BADGE_6
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Battle3::
-	trainerbattle_no_intro TRAINER_CHUCK_1_3, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_BEA_1_3, CianwoodGym_Text_ChuckIntro2
+	setflag FLAG_RECEIVED_BADGE_7
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Defeated::
@@ -132,17 +134,17 @@ CianwoodGym_Movement_ChuckRight:
 	step_end
 
 CianwoodGym_Text_ChuckIntro1:
-	.string "WAHAHAH!\p"
-	.string "So you've come this far!\p"
-	.string "Let me tell you, I'm tough!\p"
-	.string "My POKéMON will crush stones and\n"
-	.string "shatter bones!\p"
-	.string "Watch this!$"
+	.string "Welcome, challenger.\p"
+	.string "So you made it.\p"
+	.string "I'm Bea. I've trained every day\n"
+	.string "to be the best Gym Leader I can be.\p"
+	.string "I even transferred to Johto to\n"
+	.string "hone my fighting skills better.$"
 
 CianwoodGym_Text_ChuckIntro2:
-	.string "CHUCK: Urggh!\n"
-	.string "…\p"
-	.string "Oooarrgh!$"
+	.string "You really commanded a great team\n"
+	.string "out there!\p"
+	.string "You're worthy of the Kickbox Badge!$"
 
 CianwoodGym_Text_ChuckIntro3:
 	.string "There! Scared now, are you?\p"
@@ -157,10 +159,10 @@ CianwoodGym_Text_ChuckLoss:
 	.string "You're worthy of STORMBADGE!$"
 
 CianwoodGym_Text_GetStormBadge:
-	.string "{PLAYER} received STORMBADGE.$"
+	.string "{PLAYER} received Kickboxbadge.$"
 
 CianwoodGym_Text_ChuckBadgeSpeech:
-	.string "STORMBADGE makes all POKéMON up to\n"
+	.string "Kickboxbadge makes all POKéMON up to\n"
 	.string "L70 obey, even traded ones.\p"
 	.string "It also lets your POKéMON use FLY\n"
 	.string "when you're not in a battle.\p"
@@ -172,10 +174,10 @@ CianwoodGym_Text_ChuckTMSpeech:
 	.string "damage. Just don't get hit first!$"
 
 CianwoodGym_Text_ChuckAfter:
-	.string "WAHAHAH! I enjoyed battling you!\p"
-	.string "But a loss is a loss!\p"
-	.string "From now on, I'm going to train\n"
-	.string "24 hours a day!$"
+	.string "Well then!\p"
+	.string "I enjoyed battling you.\p"
+	.string "I'm going to train even harder.\p"
+	.string "Perhaps I could even train in Hoenn!$"
 
 CianwoodGym_Text_ChuckRematch:
 	.string "WAHAHAH! JOHTO CHAMPION!\p"

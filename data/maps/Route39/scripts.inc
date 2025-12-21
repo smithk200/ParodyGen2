@@ -293,7 +293,7 @@ Route39_Text_PokefanFRuthAfter:
 	.string "I bet they're just adorable!$"
 
 Route39_EventScript_Norman::
-	trainerbattle_single TRAINER_NORMAN, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
+	trainerbattle_single TRAINER_NORMAN_FORMER, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
 	msgbox Route39_Text_PsychicNormanAfter, MSGBOX_AUTOCLOSE
 	end
 

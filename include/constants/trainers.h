@@ -152,7 +152,14 @@
 #define TRAINER_PIC_LEADER_TATE 134
 #define TRAINER_PIC_LEADER_LIZA 135
 #define TRAINER_PIC_LEADER_DAMIAN 136
-#define TRAINER_PIC_COUNT                 137
+#define TRAINER_PIC_LEADER_BEA 137
+#define TRAINER_PIC_LEADER_BRIE 138
+#define TRAINER_PIC_LEADER_RICK_AND_MORTY 139
+#define TRAINER_PIC_ELITE_FOUR_NED 140
+#define TRAINER_PIC_ELITE_FOUR_JOY 141
+#define TRAINER_PIC_ELITE_FOUR_MACY 142
+#define TRAINER_PIC_ELITE_FOUR_SANS 143
+#define TRAINER_PIC_COUNT                 145
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

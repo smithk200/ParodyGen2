@@ -15150,7 +15150,7 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
     if (CheckBagHasItem(ITEM_EXP_CHARM, 1)) //is also for other exp boosting Powers if/when implemented
         *expAmount = (*expAmount * 150) / 100;
     if (gSaveBlock2Ptr->optionsDifficulty == OPTIONS_DIFFICULTY_EASY)
-        *expAmount = (*expAmount * 2);
+        *expAmount = (*expAmount * EASY_DIFFICULTY_MULTIPLIER);
 
     if (B_SCALED_EXP >= GEN_5 && B_SCALED_EXP != GEN_6)
     {

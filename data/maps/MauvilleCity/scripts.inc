@@ -53,9 +53,7 @@ MauvilleCity_EventScript_GameCornerSign::
 MauvilleCity_EventScript_SchoolKidM::
 	lock
 	faceplayer
-	goto_if_set FLAG_TV_EXPLAINED, MauvilleCity_EventScript_TVExplained
-	msgbox MauvilleCity_Text_ExplainTV, MSGBOX_DEFAULT
-	setflag FLAG_TV_EXPLAINED
+	msgbox MauvilleCity_EventScript_TVExplained, MSGBOX_DEFAULT
 	release
 	end
 
