@@ -334,7 +334,7 @@
 #define OBJ_EVENT_GFX_LEADER_MATT                      327
 #define OBJ_EVENT_GFX_LEADER_BRIE                      328
 #define OBJ_EVENT_GFX_LEADER_CLAY                      329
-#define OBJ_EVENT_GFX_ELITE_FOUR_JOY                      330
+#define OBJ_EVENT_GFX_JOY                      330
 #define OBJ_EVENT_GFX_ELITE_FOUR_MACY                      331
 #define OBJ_EVENT_GFX_ELITE_FOUR_NED                      332
 #define OBJ_EVENT_GFX_ELITE_FOUR_SANS                      333
@@ -547,6 +547,10 @@
 #define OBJ_EVENT_PAL_TAG_ELITE_FOUR_NED              0x116D
 #define OBJ_EVENT_PAL_TAG_ELITE_FOUR_JOY              0x116E
 #define OBJ_EVENT_PAL_TAG_ELITE_FOUR_SANS             0x116F
+#define OBJ_EVENT_PAL_TAG_NPC_WHITE              0x1170
+#define OBJ_EVENT_PAL_TAG_NPC_GREEN              0x1171
+#define OBJ_EVENT_PAL_TAG_NPC_BLUE              0x1172
+#define OBJ_EVENT_PAL_TAG_NPC_PINK             0x1173
 
 
 #endif //OW_FOLLOWERS_POKEBALLS

@@ -555,6 +555,15 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Proton,                  OBJ_EVENT_PAL_TAG_PROTON},
     {gObjectEventPal_Damian,                  OBJ_EVENT_PAL_TAG_LEADER_DAMIAN},
     {gObjectEventPal_Bea,                  OBJ_EVENT_PAL_TAG_LEADER_BEA},
+    {gObjectEventPal_Brie,                  OBJ_EVENT_PAL_TAG_LEADER_BRIE},
+    {gObjectEventPal_Joy,                  OBJ_EVENT_PAL_TAG_ELITE_FOUR_JOY},
+
+    {gObjectEventPal_White,                  OBJ_EVENT_PAL_TAG_NPC_WHITE},
+    {gObjectEventPal_Green,                  OBJ_EVENT_PAL_TAG_NPC_GREEN},
+    {gObjectEventPal_Blue,                  OBJ_EVENT_PAL_TAG_NPC_BLUE},
+    {gObjectEventPal_Pink,                  OBJ_EVENT_PAL_TAG_NPC_PINK},
+    {gObjectEventPal_Ned,                  OBJ_EVENT_PAL_TAG_ELITE_FOUR_NED},
+    {gObjectEventPal_Macy,                  OBJ_EVENT_PAL_TAG_ELITE_FOUR_MACY},
     
 
 #if OW_FOLLOWERS_POKEBALLS
