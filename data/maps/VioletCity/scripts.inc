@@ -406,7 +406,7 @@ VioletCity_Text_LiquidJustice:
 VioletCity_Text_EarlAsksIfYouBeatFalkner:
 	.string "Hello!\n"
 	.string "You are trainer?\p"
-	.string "Battle GYM LEADER,\n"
+	.string "Battle Gym Leader,\n"
 	.string "win you did?$"
 
 VioletCity_Text_VeryNiceIndeed:
@@ -435,11 +435,10 @@ VioletCity_Text_Boy:
 	.string "you might learn something new!$"
 
 VioletCity_Text_Gramps:
-	.string "FALKNER, from the VIOLET\n"
-	.string "Pokémon GYM, is a fine trainer!\p"
-	.string "He inherited his father's gym\n"
-	.string "and has done a great job with\l"
-	.string "it.$"
+	.string "Damian, from the Violet\n"
+	.string "Pokémon Gym, is a street thug.\p"
+	.string "Hmph!\p"
+	.string "It smells like marijuana in there.$"
 
 VioletCity_Text_Youngster:
 	.string "I saw a wiggly tree up ahead!\p"
@@ -447,20 +446,21 @@ VioletCity_Text_Youngster:
 	.string "and dances! Cool!$"
 
 VioletCity_Text_Sign:
-	.string "VIOLET CITY\p"
-	.string "The City of Nostalgic Scents$"
+	.string "Violet City\p"
+	.string "The City of Purple\n"
+	.string "And Nothing Else.$"
 
 VioletCity_Text_GymSign:
-	.string "VIOLET CITY Pokémon GYM\p"
-	.string "LEADER: FALKNER, The Elegant\n"
-	.string "Master of Flying Pokémon$"
+	.string "Violet City Pokémon Gym\p"
+	.string "Leader: Damian, The Kitchen\n"
+	.string "Master of Johto$"
 
 VioletCity_Text_SproutTowerSign:
-	.string "SPROUT TOWER\p"
+	.string "Sprout Tower\p"
 	.string "Experience the Way of Pokémon$"
 
 VioletCity_Text_EarlsAcademySign:
-	.string "EARL'S Pokémon ACADEMY$"
+	.string "Earl's Pokémon Academy$"
 
 VioletCity_Text_Pichu:
 	.string "PICHU: Chuuuu!$"
@@ -475,7 +475,7 @@ VioletCity_Text_Elm_Call:
 	.string "ELM: Hello, {PLAYER}? We\n"
 	.string "discovered something about the EGG!\p"
 	.string "My assistant is at the Pokémon\n"
-	.string "CENTER in VIOLET CITY.\p"
+	.string "Center in Violet City.\p"
 	.string "Could you talk to him?$"
 
 VioletCity_Text_Kimono_Girl1:

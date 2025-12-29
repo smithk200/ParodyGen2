@@ -111,8 +111,8 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsTerrain = FALSE;
     gSaveBlock2Ptr->optionsRunType = 0;
     gSaveBlock2Ptr->optionsDifficulty = OPTIONS_DIFFICULTY_NORMAL;
-    gSaveBlock2Ptr->optionsFont = 1;
-    gSaveBlock2Ptr->optionsMusic = 2;
+    gSaveBlock2Ptr->optionsFont = OPTIONS_FONT_FIRE_RED;
+    gSaveBlock2Ptr->optionsMusic = OPTIONS_MUSIC_CUSTOM;
                
 }
 

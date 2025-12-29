@@ -352,34 +352,35 @@ EcruteakCity_Text_Gramps3:
 	.string "A rainbow-colored Pokémon descended\n"
 	.string "from the sky and resurrected them…\p"
 	.string "It's a legend that has been passed\n"
-	.string "down by ECRUTEAK GYM LEADERS.\p"
+	.string "down by Ecruteak Gym Leaders.\p"
 	.string "Me?\p"
 	.string "I was a trainer way back when.\n"
 	.string "Hohoho!$"
 
 EcruteakCity_Text_SageGym:
-	.string "Gym Leader MORTY is not here right\n"
+	.string "Gym Leader Morty is not here right\n"
 	.string "now. You may find him at the\l"
-	.string "BURNED TOWER.$"
+	.string "Burned Tower.$"
 
 EcruteakCity_Text_Sign:
-	.string "ECRUTEAK CITY\n"
-	.string "A Historical City\p"
-	.string "Where the Past Meets the Present$"
+	.string "Ecruteak City\p"
+	.string "“What the fuck does\n"
+	.string "our name mean?”$"
 
 EcruteakCity_Text_TinTowerSign:
-	.string "TIN TOWER\p"
+	.string "Tin Tower\p"
 	.string "A legendary Pokémon is said to\n"
 	.string "roost here.$"
 
 EcruteakCity_Text_OfficeSign:
-	.string "Barrier Station to TIN TOWER\p"
+	.string "Barrier Station to Tin Tower\p"
 	.string "No Tresspassing by the Unworthy.$"
 
 EcruteakCity_Text_GymSign:
-	.string "ECRUTEAK CITY Pokémon GYM\n"
-	.string "LEADER: MORTY\p"
-	.string "The Mystic Seer of the Future$"
+	.string "Ecruteak City Pokémon Gym\n"
+	.string "Leaders: Rick and Morty\p"
+	.string "One's a scientist.\n"
+	.string "The other's a wimp.$"
 
 EcruteakCity_Text_DanceTheaterSign:
 	.string "ECRUTEAK DANCE THEATER$"

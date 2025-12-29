@@ -5881,43 +5881,45 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_TEAM_ROCKET:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_ROCKET;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_GALACTIC;
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_ROCKETA:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_ROCKET;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_GALACTIC_BOSS;
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_GYM_LEADER;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_GYM_LEADER;
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_CHAMPION;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_CHAMPION;
             return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
             if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
                 return MUS_VS_TRAINER;
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_RIVAL;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_CUSTOM)
+                return MUS_HG_VS_RIVAL;
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_RIVAL;
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_GYM_LEADER;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_ELITE_FOUR;
             else
             {
@@ -5942,18 +5944,18 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            if (gSaveBlock2Ptr->optionsMusic == 0)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_TRAINER;
-            if (gSaveBlock2Ptr->optionsMusic == 1)
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
                 return MUS_DP_VS_TRAINER;
             return MUS_DP_VS_TRAINER;
         }
     }
     else
     {
-        if (gSaveBlock2Ptr->optionsMusic == 0)
+        if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_WILD;
-        if (gSaveBlock2Ptr->optionsMusic == 1)
+        if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
             return MUS_DP_VS_WILD;
         return MUS_DP_VS_WILD;
     }

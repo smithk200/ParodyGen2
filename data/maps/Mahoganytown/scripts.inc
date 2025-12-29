@@ -284,24 +284,25 @@ MahoganyTown_Text_Fisher:
     .string "Since you came this far, take the\n"
     .string "time to do some sightseeing.\p"
     .string "You should head north and check\n"
-    .string "out LAKE OF RAGE right now.$"
+    .string "out Lake of Rage right now.$"
 
 MahoganyTown_Text_Lass:
     .string "Visit Grandma's shop. She sells\n"
     .string "stuff that nobody else has.$"
 
 MahoganyTown_Text_Sign:
-    .string "MAHOGANY TOWN\p"
-    .string "Welcome to the Home of the Ninja$"
+    .string "Mahogany Town\p"
+    .string "A Sleepy Little Town\n"
+	.string "With Absolutely No Tourist Attractions.$"
 
 MahoganyTown_Text_RagecandybarSign:
     .string "While visiting MAHOGANY TOWN, try\n"
     .string "a RAGECANDYBAR!$"
 
 MahoganyTown_Text_GymSign:
-    .string "MAHOGANY TOWN Pokémon GYM\p"
-    .string "LEADER: PRYCE\p"
-    .string "The Teacher of Winter's Harshness$"
+    .string "Mahogany Town Pokémon Gym\p"
+    .string "Leader: Clay\p"
+    .string "The Tough Rootin' Tootin' Man!$"
 
 ElmPhoneRadioTowerRocketTakeoverText:
 	.string "PROF.ELM: {PLAYER}, how are\n"

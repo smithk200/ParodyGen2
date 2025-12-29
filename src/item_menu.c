@@ -1007,7 +1007,7 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 
         if (gBagPosition.pocket != POCKET_KEY_ITEMS && GetItemImportance(itemSlot.itemId) == FALSE)
         {
-            if (gSaveBlock2Ptr->optionsFont == 1)
+            if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
             {
                 // Print item quantity
                 ConvertIntToDecimalStringN(gStringVar1, itemSlot.quantity, STR_CONV_MODE_RIGHT_ALIGN, MAX_ITEM_DIGITS);

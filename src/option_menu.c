@@ -234,7 +234,6 @@ static void ReadAllCurrentSettings(u8 taskId)
         gTasks[taskId].tSound = gSaveBlock2Ptr->optionsSound;
         gTasks[taskId].tFont = gSaveBlock2Ptr->optionsFont;
         gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
-        gTasks[taskId].tFont = gSaveBlock2Ptr->optionsFont;
         gTasks[taskId].tEXPShare = gSaveBlock2Ptr->optionsEXPShare;
         gTasks[taskId].tAutoHMs = gSaveBlock2Ptr->optionsAutoHMs;
         gTasks[taskId].tFollowers = gSaveBlock2Ptr->optionsFollowers;
@@ -1118,49 +1117,27 @@ static void RunType_DrawChoices(u8 selection)
 }
 static u8 Difficulty_ProcessInput(u8 selection)
 {
-    if (JOY_NEW(DPAD_RIGHT))
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
     {
-        if (selection <= 1)
-            selection++;
-        else
-            selection = 0;
-
+        selection ^= 1;
         sArrowPressed = TRUE;
     }
-    if (JOY_NEW(DPAD_LEFT))
-    {
-        if (selection != 0)
-            selection--;
-        else
-            selection = 2;
 
-        sArrowPressed = TRUE;
-    }
     return selection;
 }
 
 
 static void Difficulty_DrawChoices(u8 selection)
-{
-    s32 widthEasy, widthNormal, widthHard, xNormal;
-    u8 styles[3];
+{  
+    u8 styles[2];
 
     styles[0] = 0;
     styles[1] = 0;
-    styles[2] = 0;
     styles[selection] = 1;
+    
+    DrawOptionMenuChoice(gText_NormalOption, 104, YPOS_DIFFICULTY, styles[0]);
+    DrawOptionMenuChoice(gText_HardOption, GetStringRightAlignXOffset(FONT_NORMAL, gText_HardOption, 198), YPOS_DIFFICULTY, styles[1]);
 
-    DrawOptionMenuChoice(gText_EasyOption, 104, YPOS_DIFFICULTY, styles[0]);
-
-    widthEasy = GetStringWidth(FONT_NORMAL, gText_EasyOption, 0);
-    widthNormal = GetStringWidth(FONT_NORMAL, gText_NormalOption, 0);
-    widthHard = GetStringWidth(FONT_NORMAL, gText_HardOption, 0);
-
-    widthNormal -= 94;
-    xNormal = (widthEasy - widthNormal - widthHard) / 2 + 104;
-    DrawOptionMenuChoice(gText_NormalOption, xNormal, YPOS_DIFFICULTY, styles[1]);
-
-    DrawOptionMenuChoice(gText_HardOption, GetStringRightAlignXOffset(FONT_NORMAL, gText_HardOption, 198), YPOS_DIFFICULTY, styles[2]);
 }
 
 static u8 Music_ProcessInput(u8 selection)

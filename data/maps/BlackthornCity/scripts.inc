@@ -245,13 +245,13 @@ BlackthornCooltrainerF2Text:
 	.string "You must be a real hotshot trainer!$"
 
 BlackthornCitySignText:
-	.string "BLACKTHORN CITY\p"
-	.string "A Quiet Mountain Retreat$"
+	.string "Blackthorn City\p"
+	.string "The city of black thorns.$"
 
 BlackthornGymSignText:
-	.string "BLACKTHORN CITY Pokémon GYM\n"
-	.string "LEADER: CLAIR\p"
-	.string "The Blessed User of Dragon Pokémon$"
+	.string "Blackthorn City Pokémon Gym\n"
+	.string "Leader: Clair\p"
+	.string "The User of Dragon Types.$"
 
 BlackthornCity_Text_MoveDeletersHouseSign:
 	.string "MOVE BROS' HOUSE$"

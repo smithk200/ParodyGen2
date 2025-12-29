@@ -588,9 +588,9 @@ struct SaveBlock2
              u16 optionsPSS:1;
              u16 optionsTerrain:1;
              u16 optionsRunType:3;
-             u16 optionsDifficulty:3; //0 = easy, 1 = normal, 2 = hard
-             u16 optionsFont:2; //0 = emerald, 1 = fire red
-             u16 optionsMusic:3; //0 = johto, 1 = sinnoh, 2 = hoenn
+             u16 optionsDifficulty:1; //0 = normal, 1 = hard
+             u16 optionsFont:1; //0 = emerald, 1 = fire red
+             u16 optionsMusic:2; //0 = johto, 1 = sinnoh, 2 = hoenn
              u8 rivalName[PLAYER_NAME_LENGTH + 1];
              //u16 padding1:4;
              //u16 padding2;

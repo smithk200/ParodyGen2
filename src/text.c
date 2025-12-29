@@ -755,7 +755,7 @@ static u16 FontFunc_Normal(struct TextPrinter *textPrinter)
         subStruct->fontId = FONT_NORMAL;
         subStruct->hasFontIdBeenSet = TRUE;
     }
-    if (gSaveBlock2Ptr->optionsFont == 1)
+    if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
     {
         subStruct->fontId = FONT_SHORT;
         subStruct->hasFontIdBeenSet = TRUE;
@@ -820,7 +820,7 @@ static u16 FontFunc_Narrow(struct TextPrinter *textPrinter)
         subStruct->fontId = FONT_NARROW;
         subStruct->hasFontIdBeenSet = TRUE;
     }
-    if (gSaveBlock2Ptr->optionsFont == 1)
+    if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
     {
         subStruct->fontId = FONT_SHORT_NARROW;
         subStruct->hasFontIdBeenSet = TRUE;

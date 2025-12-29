@@ -303,20 +303,18 @@ OlivineCity_Text_YoungsterPokedex:
 	.string "That is just so awesome.$"
 
 OlivineCity_Text_Sailor2:
-	.string "The league has JASMINE\n"
-	.string "pegged as the sixth\l"
-	.string "strongest GYM LEADER!\p"
-	.string "Hah! That's a load of crud.\p"
-	.string "There's no way PRYCE could\n"
-	.string "hurt JASMINE's Steel-type\l"
-	.string "Pokémon!\p"
-	.string "Bureaucracy if you ask me.\p"
-	.string "She's something to be feared,\n"
-	.string "that's for sure!$"
+	.string "The league has Matt\n"
+	.string "pegged as the sixth or seventh\p"
+	.string "(waves palms rapidly as\n"
+	.string "weiging something)\p"
+	.string "strongest Gym Leader!\p"
+	.string "Honestly, I hate Gen Alpha slang.\p"
+	.string "Just ask Damian of Violet City.$"
 
 OlivineCity_Text_Sign:
-	.string "OLIVINE CITY\p"
-	.string "The Port Closest to Foreign Lands$"
+	.string "Olivine City\p"
+	.string "Where genetically modified\n"
+	.string "vine-olives are grown.$"
 
 OlivineCity_Text_PortSign:
 	.string "OLIVINE PORT\n"
@@ -324,7 +322,7 @@ OlivineCity_Text_PortSign:
 
 OlivineCity_Text_GymSign:
 	.string "OLIVINE CITY Pokémon GYM\n"
-	.string "LEADER: JASMINE\p"
+	.string "LEADER: Matt\p"
 	.string "The Steel-Clad Defense Girl$"
 
 OlivineCity_Text_LighthouseSign:

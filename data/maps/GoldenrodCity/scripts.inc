@@ -284,7 +284,7 @@ GoldenrodCity_EventScript_Beauty::
 	end
 
 GoldenrodCity_Text_Beauty:
-	.string "This is the Goldenrod GYm!\p"
+	.string "This is the Goldenrod Gym!\p"
 	.string "Our leader Whitney is not here\n"
 	.string "right now. In fact, she is not here\l"
 	.string "at all!\p"
@@ -406,17 +406,18 @@ GoldenrodCity_Text_DeptStoreSign:
 	.string "GOLDENROD CITY DEPT.STORE$"
 
 GoldenrodCity_Text_GymSign:
-	.string "GOLDENROD CITY Pokémon GYM\n"
-	.string "LEADER: WHITNEY\p"
-	.string "The Incredibly Pretty Girl!$"
+	.string "Goldenrod City Pokémon Gym\n"
+	.string "Leader: Norman\p"
+	.string "“The Slaking King”!$"
 
 GoldenrodCity_Text_CitySign:
-	.string "GOLDENROD CITY\p"
-	.string "The Festive City of Opulent Charm$"
+	.string "Goldenrod City\p"
+	.string "A large city known for exporting\n"
+	.string "metal rods made of gold.$"
 
 GoldenrodCity_Text_BikeShopSign:
 	.string "The World is a Cycle Path!\n"
-	.string "BIKE SHOP$"
+	.string "Bike Shop$"
 
 GoldenrodCity_Text_GameCornerSign:
 	.string "Your Playground!\p"

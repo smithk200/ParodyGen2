@@ -426,19 +426,18 @@ AzaleaTown_Text_Kurt3:
 	.string "is so restless?$"
 
 AzaleaTown_Text_Sign:
-	.string "AZALEA TOWN\n"
-	.string "Where People and Pokémon Live in\l"
-	.string "Happy Harmony.$"
+	.string "Azalea Town\p"
+	.string "Where azalea bushes and corrupted\n"
+	.string "Slowpoke live.$"
 
 AzaleaTown_Text_KurtsHouseSign:
 	.string "KURT'S HOUSE$"
 
 AzaleaTown_Text_GymSign:
-	.string "AZALEA TOWN\n"
-	.string "Pokémon GYM\p"
-	.string "LEADER: BUGSY\p"
-	.string "The Walking Bug Pokémon\n"
-	.string "Encyclopedia$"
+	.string "Azalea Town Pokémon Gym\p"
+	.string "Leader: Brie\p"
+	.string "Five years old and master\n"
+	.string "of Fairy types!$"
 
 AzaleaTown_Text_SlowpokeWellSign:
 	.string "SLOWPOKE WELL\p"
@@ -452,5 +451,5 @@ AzaleaTown_Text_CharcoalKilnSign:
 	.string "CHARCOAL KILN$"
 
 AzaleaTown_Text_IlexForestSign:
-	.string "ILEX FOREST\p"
+	.string "Ilex Forest\p"
 	.string "Enter through the gate.$"

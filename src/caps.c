@@ -74,10 +74,6 @@ u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
     }
     else if (B_EXP_CAP_TYPE == EXP_CAP_SOFT)
     {
-        if (gSaveBlock2Ptr->optionsDifficulty == OPTIONS_DIFFICULTY_EASY)
-        {
-            expValue = (expValue / EASY_DIFFICULTY_MULTIPLIER);
-        }
         levelDifference = level - currentLevelCap;
         if (levelDifference > ARRAY_COUNT(sExpScalingDown) - 1)
             return expValue / sExpScalingDown[ARRAY_COUNT(sExpScalingDown) - 1];

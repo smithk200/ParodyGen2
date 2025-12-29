@@ -2284,3 +2284,34 @@ static const struct SpriteFrameImage sPicTable_Sans[] = {
     overworld_frame(gObjectEventPic_Sans, 2, 4, 1),
     overworld_frame(gObjectEventPic_Sans, 2, 4, 2),
 };
+
+static const struct SpriteFrameImage sPicTable_TowerBeam[] = {
+    overworld_frame(gObjectEventPic_TowerBeam, 8, 8, 0),
+    overworld_frame(gObjectEventPic_TowerBeam, 8, 8, 1),
+    overworld_frame(gObjectEventPic_TowerBeam, 8, 8, 2),
+    overworld_frame(gObjectEventPic_TowerBeam, 8, 8, 3),
+    overworld_frame(gObjectEventPic_TowerBeam, 8, 8, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Rick[] = {
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Rick, 2, 4, 8),
+};
+static const struct SpriteFrameImage sPicTable_Morty_2[] = {
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Morty_2, 2, 4, 8),
+};
