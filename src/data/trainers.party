@@ -26,6 +26,7 @@ Optional (but still recommended) fields for trainers:
     - Mugshot (enable Mugshots during battle transition
                set to one of Purple, Green, Pink, Blue or Yellow)
     - Starting Status (see include/constants/battle.h for values)
+    - Is Dynamic (Yes/No): Determines if the trainer uses a dynamic leveling system, which in this case defaults to the player's highest-leveled mon.
 
 Pokemon are then specified using the Showdown Export format.
 If a field is not specified, it will use it's default value.
@@ -54,6 +55,7 @@ Optional fields for Pokemon:
     - Gigantamax (Yes/No, sets to Gigantamax factor)
                  (doesn't do anything to Pokemon without a Gigantamax form, also sets "shouldDynamax" to True)
     - Tera Type (Set to a Type, either Fire or TYPE_FIRE, also sets "shouldTerastal" to True)
+    - Modifier (Sets the level for the Pokemon. Used in conjunction with Is Dynamic to scale the opponent Pokemon to the player's highest level mon, plus or minus the level in the modifier)
 Moves are defined with a - (dash) followed by a single space, then the move name.
 Either "- Tackle" or "- MOVE_TACKLE" works. One move per line.
 Moves have to be the last lines of a Pokemon.
@@ -90,19 +92,19 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Graveler
+Golem
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Graveler
+Golem
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golbat
+Hippowdon
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golduck
+Coalossal
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -123,6 +125,10 @@ Gyarados
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Gyarados
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_WILLIAM ===
 Name: William
 Class: Pokefan
@@ -132,7 +138,7 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Raichu
+Pawmo
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -145,11 +151,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Marowak
+Dachsbun
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Marowak
+Dachsbun
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dachsbun
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -166,6 +176,10 @@ Delibird
 Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Iron Bundle
+Level: 56
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_PHILLIP ===
 Name: Phillip
 Class: Hiker
@@ -175,15 +189,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Tandemaus
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
+Tandemaus
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Graveler
+Maushold
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -196,15 +210,19 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Seaking
+Wishiwashi
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Azumarill
+Cramorant
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seaking
+Bruxish
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Toxapex
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -217,7 +235,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Sentret
+Mudbray
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Yungoos
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -238,6 +260,10 @@ Starmie
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Psyduck
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 Horsea
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
@@ -255,7 +281,7 @@ Dragonair
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Mantine
+Oranguru
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -263,7 +289,7 @@ Lanturn
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Dragonair
+Golisopod
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -280,7 +306,11 @@ Crobat
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Muk
+Stunky
+Level: 56
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Salazzle
 Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -355,6 +385,10 @@ Nidoran M
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Nidoran M
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_LYLE ===
 Name: Lyle
 Class: Firebreather
@@ -373,6 +407,10 @@ Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Ninetales
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Centiskorch
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -402,11 +440,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Psyduck
+Mantyke
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seaking
+Barraskewda
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -421,7 +459,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Politoed
-Level: 27
+Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Bubble Beam
 - Rain Dance
@@ -429,7 +467,7 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Icy Wind
 
 Hypno
-Level: 27
+Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Hypnosis
 - Disable
@@ -437,12 +475,20 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Dream Eater
 
 Electrode
-Level: 27
+Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Thunder Wave
 - Sonic Boom
 - Body Slam
 - Thunderbolt
+
+Copperajah
+Level: 35
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+- Bulldoze
+- Rock Smash
+- Iron Head
+- Curse
 
 === TRAINER_DANA ===
 Name: Dana
@@ -453,11 +499,15 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Flaaffy
+Wooloo
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Psyduck
+Stufful
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Flaaffy
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -470,7 +520,7 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Sentret
+Charjabug
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -483,19 +533,19 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Graveler
+Rolycoly
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Graveler
+Carkol
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golbat
+Carkol
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golduck
+Toucannon
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -507,6 +557,10 @@ Gender: Male
 Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
+
+Fletchling
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Vulpix
 Level: 9
@@ -563,6 +617,26 @@ Porygon
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Porygon2
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Porygon
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Porygon2
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Porygon
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Porygon Z
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_RICK ===
 Name: Rick
 Class: Swimmer M
@@ -572,15 +646,19 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Staryu
+Tentacool
 Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Tentacool
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Horsea
+Tentacool
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wingull
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -651,19 +729,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Fearow
+Staraptor
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Farfetchd
+Taillow
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Pidgeot
+Corviknight
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Dodrio
+Toucannon
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -680,20 +758,24 @@ Yanma
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Yanmega
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_BRIDGET ===
 Name: Bridget
 Class: Lass
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Aipom
+Munchlax
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Munchlax
+Swirlix
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -719,19 +801,19 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Koffing
+Carkol
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magmar
-Level: 58
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Koffing
+Centiskorch
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Koffing
+Armarouge
+Level: 60
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ceruledge
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -936,23 +1018,23 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
+Glimmora
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Nidoqueen
+Garganacl
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Vileplume
+Bellibolt
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Electrode
+Grafaiai
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Quaquaval
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -963,11 +1045,17 @@ Pic: Youngster
 Gender: Male
 Music: Hg Boy 1
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Rattata
+Rattata Joey
 Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 255 HP / 255 Atk / 255 Def / 255 SpA / 255 SpD / 255 Spe
+Ability: Wonder Guard
+- Thunder Fang
+- Quick Attack
+- Bite
+- Sand Attack
 
 === TRAINER_MARY ===
 Name: Mary
@@ -978,7 +1066,15 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Seaking
+Seadra
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tentacruel
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Duraludon
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -991,11 +1087,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Doduo
+Corvisquire
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Doduo
+Corvisquire
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corvisquire
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1008,11 +1108,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Octillery
+Palafin
 Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seadra
+Barraskewda
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Clawitzer
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1025,11 +1129,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Growlithe
+Litleo
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Houndour
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bunnelby
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1042,11 +1150,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Magmar
+Pangoro
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Electabuzz
+Toxtricity
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bewear
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1080,15 +1192,19 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Rhyhorn
+Barbaracle
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Donphan
+Aegislash
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golem
+Sandaconda
+Level: 38
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Grapploct
 Level: 38
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1101,15 +1217,15 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Jynx
+Grimmsnarl
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Electabuzz
+Hatterene
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magmar
+Mr Rime
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1180,15 +1296,19 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Seaking
+Mareanie
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lanturn
+Drednaw
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Quagsire
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Frogadier
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1201,7 +1321,7 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
+Veluza
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1214,7 +1334,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Jynx
+Veluza
+Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Arrokuda
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1227,7 +1351,7 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Sentret
+Bidoof
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1240,15 +1364,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Piloswine
+Pawmot
+Level: 45
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wugtrio
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Dugtrio
-Level: 45
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Steelix
 Level: 48
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1261,11 +1385,11 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
+Quagsire
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gyarados
+Clodsire
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1278,7 +1402,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Electabuzz
+Toxtricity
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Voltorb
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1291,11 +1419,11 @@ Music: Hg Suspicious 1
 Double Battle: No
 AI: Check Bad Move
 
-Skarmory
+Electrode
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Fearow
+Xatu
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1316,6 +1444,10 @@ Hitmonchan
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Hitmontop
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_BRYAN ===
 Name: Bryan
 Class: Bird Keeper
@@ -1325,15 +1457,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Pidgey
+Rookidee
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Pidgeotto
+Corvisquire
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Spearow
+Squawkabilly
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1442,6 +1574,11 @@ Jumpluff
 Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Jumpluff
+Level: 57
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+
 === TRAINER_STANLY ===
 Name: Stanly
 Class: Sailor
@@ -1451,15 +1588,15 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Qwilfish
+Feebas
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machoke
+Garganacl
 Level: 53
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golduck
+Dewgong
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1472,7 +1609,7 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Vileplume
+Tangrowth
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1489,11 +1626,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Spearow
+Wattrel
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Natu
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Starly
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1514,6 +1655,14 @@ Nidoking
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Nidorina
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Nidoqueen
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_LEONARD ===
 Name: Leonard
 Class: Hiker
@@ -1527,7 +1676,7 @@ Geodude
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Machop
+Zubat
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1539,6 +1688,10 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
+
+Bidoof
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sentret
 Level: 15
@@ -1553,7 +1706,7 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Golem
+Carkol
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1579,6 +1732,10 @@ Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Jolteon
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Veluza
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1809,7 +1966,7 @@ Geodude
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Cubone
+Zubat
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1822,7 +1979,7 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Machop
+Lucario
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1847,11 +2004,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
+Clawitzer
 Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Mareanie
 Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1997,7 +2154,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Haunter
+Sinistea
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2030,7 +2187,7 @@ Furret
 Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Sentret
+Sylveon
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2064,7 +2221,7 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Graveler
+Hippopotas
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2081,7 +2238,7 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Sandslash
+Rhydon
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2089,7 +2246,7 @@ Scizor
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Sneasel
+Weavile
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2131,6 +2288,14 @@ Ariados
 Level: 62
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Orbeetle
+Level: 62
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Masquerain
+Level: 62
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_JACK ===
 Name: Jack
 Class: School Kid
@@ -2140,11 +2305,11 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Sunflora
+Breloom
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Voltorb
+Vigoroth
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2161,7 +2326,11 @@ Staryu
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shellder
+Vaporeon
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+CLoyster
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2216,6 +2385,10 @@ Tauros
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Clodsire
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_CODY ===
 Name: Cody
 Class: Dragon Tamer
@@ -2233,11 +2406,11 @@ Dragonair
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Golduck
+Baxcalibur
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Dragonair
+Dragapult
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2250,11 +2423,27 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Cloyster
+Wingull
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tentacruel
+Wingull
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wingull
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wingull
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wingull
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wingull
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2271,6 +2460,18 @@ Snubbull
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Sylveon
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tinkatink
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tinkatuff
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_BLAKE ===
 Name: Blake
 Class: Cooltrainer
@@ -2280,19 +2481,19 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Magneton
+Magnezone
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Quagsire
+Turtonator
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Exeggutor
+Quagsire
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Piloswine
+Carkol
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2572,15 +2773,15 @@ Music: Hg Sage
 Double Battle: No
 AI: Check Bad Move
 
-Gastly
+Duosion
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Haunter
+Gothorita
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Murkrow
+Sigilyph
 Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2703,15 +2904,15 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Exeggutor
+Wobbuffet
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Xatu
+Metang
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Indeedee (M)
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2724,11 +2925,11 @@ Music: Hg Girl 1
 Double Battle: Yes
 AI: Check Bad Move
 
-Clefairy
+Comfey
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Furret
+Pikachu
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2816,7 +3017,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Sentret
+Cherubi
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Skwovet
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -3105,7 +3310,7 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Hyper Potion
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -4971,15 +5176,14 @@ Ability: Mold Breaker
 - Bulldoze
 - Screech
 
-Claydol @ Passho Berry
+Iron Treads @ Occa Berry
 Level: 62
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 128 Def / 128 SpD / 252 Spe
-Ability: Levitate
-- Power Split
-- Psychic
-- Ancient Power
-- Dazzling Gleam
+EVs: 128 Atk / 128 Def / 252 Spe
+- Earthquake
+- Zen Headbutt
+- Iron Head
+- Wild Charge
 
 Toedscruel @ Yache Berry
 Level: 62
@@ -5518,7 +5722,7 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Hyper Potion
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -5949,19 +6153,19 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Tangela
-Level: 44
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Venusaur
-Level: 44
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Victreebel
+Gogoat
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellossom
+Level: 44
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Arboliva
+Level: 44
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Meowscarada
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7263,7 +7467,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CLAY_1_3 ===
 Name: Clay
 Class: Leader
-Pic: Leader Pryce
+Pic: Leader Clay
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -7336,7 +7540,7 @@ Tera Type: Ice
 === TRAINER_CLAY_1_2 ===
 Name: Clay
 Class: Leader
-Pic: Leader Pryce
+Pic: Leader Clay
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -7436,7 +7640,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Haunter
+Greavard
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7457,6 +7661,10 @@ Spinarak
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Tarountula
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_MEG_AND_PEG ===
 Name: Meg&Peg
 Class: Twins
@@ -7466,7 +7674,7 @@ Music: Hg Girl 1
 Double Battle: Yes
 AI: Check Bad Move
 
-Ursaring
+Phanpy
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -7474,18 +7682,35 @@ Donphan
 Level: 54
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Great Tusk
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Iron Treads
+Level: 54
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_LARRY ===
 Name: Larry
-Class: Pokemaniac
-Pic: Pokemaniac
+Class: Leader
+Pic: Leader Larry
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Items: Hyper Potion / Hyper Potion
 
-Larvitar
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Komala
+Level: 33
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Dudunsparce
+Level: 35
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Staraptor
+Level: 36
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_FIDEL ===
 Name: Fidel
@@ -7960,7 +8185,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_MATT_1 ===
 Name: Matt
 Class: Leader
-Pic: Leader Jasmine
+Pic: Leader Matt
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion / Super Potion
@@ -8854,7 +9079,7 @@ Class: Rival
 Pic: Silver
 Gender: Male
 Music: Silver
-Items: Hyper Potion
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -10806,57 +11031,75 @@ Class: Leader
 Pic: Leader Damian
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Is Dynamic: Yes
 
-Noctowl @ Sitrus Berry
+Alcremie @ Light Clay
 Level: 64
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Psychic
-- Wing Attack
-- Hypnosis
-- Dream Eater
+Modifier: -2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 SpA / 128 SpD / 252 Spe
+Ability: Sweet Veil
+- Misty Explosion
+- Energy Ball
+- Reflect
+- Light Screen
 
-Skarmory
-Level: 63
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Spikes
-- Drill Peck
-- Mud Slap
-- Steel Wing
-
-Swellow @ Focus Band
-Level: 63
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Endure
-- Flail
-- Drill Peck
-- Steel Wing
-
-Honchkrow
+Vanilluxe
 Level: 64
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Drill Peck
-- Faint Attack
-- Haze
-- Icy Wind
+Modifier: -1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 SpA / 128 SpD / 252 Spe
+Ability: Snow Warning
+- Blizzard
+- Hyper Beam
+- Light Screen
+- Taunt
 
-Pidgeot
+Vaporeon @ Grip Claw
+Level: 63
+Modifier: -1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Water Absorb
+- Play Rough
+- Liquidation
+- Lick
+- Whirlpool
+
+Snorlax @ Bright Powder
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Lick
+- Belly Drum
+- Hammer Arm
+- Body Slam
+
+Hydrapple @ Yache Berry
 Level: 65
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Sky Attack
-- Extreme Speed
-- Double Team
-- Steel Wing
+Modifier: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Sticky Hold
+- Energy Ball
+- Dragon Pulse
+- Body Press
+- Reflect
 
-Pelipper
+Scovillain @ Charcoal
 Level: 68
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Aerial Ace
-- Surf
-- Double Team
-- Steel Wing
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+Ability: Moody
+Dynamax Level: 10
+- Seed Bomb
+- Flamethrower
+- Will O Wisp
+- Thunder Fang
 
 === TRAINER_GRUNT_14 ===
 Name: Grunt
@@ -11018,7 +11261,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CLAY_2 ===
 Name: Clay
 Class: Leader
-Pic: Leader Pryce
+Pic: Leader Clay
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
@@ -11076,7 +11319,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 === TRAINER_CLAY_1 ===
 Name: Clay
 Class: Leader
-Pic: Leader Pryce
+Pic: Leader Clay
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion / Super Potion / Super Potion
@@ -11168,7 +11411,7 @@ Class: Pkmn Trainer 1
 Pic: Red
 Gender: Male
 Music: Hg Champion
-Items: Full Restore / Full Restore
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 

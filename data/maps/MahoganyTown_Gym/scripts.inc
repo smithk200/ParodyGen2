@@ -144,15 +144,17 @@ MahoganyTown_Gym_EventScript_Clay_Defeated::
 	end
 
 MahoganyTown_Gym_Text_ClayIntro:
-    .string "Ugh, you think you’re ready\n"
-    .string "for this?\p"
+    .string "You think you’re ready\n"
+    .string "for this, punk?\p"
     .string "You think you can handle the cold?\p"
     .string "Hah.\p"
     .string "You’re about as prepared for this\n"
     .string "as my son Orel is for… well, anything.\p"
-    .string "Life’s not about comfort, it’s about enduring…\n"
+    .string "Life’s not about comfort,\n"
+    .string "it’s about enduring things…\l"
     .string "…like my stinkin' dead-end job!\p"
-    .string "Ice is harsh. It doesn’t care about your feelings,\n"
+    .string "Life is harsh.\p"
+    .string "It doesn’t care about your feelings,\n"
     .string "your ambitions, or your little dreams.\p"
     .string "You either survive it, or you don’t.\p"
     .string "Now, let's get this over with.$"
@@ -179,11 +181,9 @@ MahoganyTown_Gym_Text_HailSpeech:
     .string "of winter.$"
 
 MahoganyTown_Gym_Text_CherishPokemon:
-    .string "When the ice and snow melt,\n"
-    .string "spring arrives.\p"
-    .string "You and your Pokémon will be\n"
-    .string "together for many years to come.\p"
-    .string "Cherish your time together!$"
+    .string "Ugh, just get out of here already!\p"
+    .string "You were just a mistake anyway.\p"
+    .string "Oh, wait, that's my son Shapey…$"
 
 MahoganyTown_Gym_Text_ClayRematch:
     .string "Okay, little punk.\p"
@@ -215,8 +215,8 @@ MahoganyTown_Gym_Text_GuideWin:
     .string "bridged the generation gap!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldSeen:
-    .string "I'll freeze your Pokémon,\n"
-    .string "so you can't do a thing!$"
+    .string "My tough Pokémon\n"
+    .string "will steamroll you through!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldBeaten:
     .string "Damn. I couldn't do a thing.$"
@@ -254,7 +254,7 @@ MahoganyTown_Gym_Text_BoarderDouglasAfter:
 MahoganyTown_Gym_Text_SkierRoxanneSeen:
     .string "I'm in the mood for a bacon cheeseburger!\n"
     .string "How much should my bacon be cooked?\l"
-    .string "Who shoul cook my bacon?$"
+    .string "Who should cook my bacon?$"
 
 MahoganyTown_Gym_Text_SkierRoxanneBeaten:
     .string "I want the bacon on my cheeseburger\n"

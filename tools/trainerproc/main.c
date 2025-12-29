@@ -65,6 +65,9 @@ struct Pokemon
     int level;
     int level_line;
 
+    int lvlmodifier;
+    int lvlmodifier_line;
+
     struct String ball;
     int ball_line;
 
@@ -122,6 +125,9 @@ struct Trainer
 
     struct String name;
     int name_line;
+
+    bool isDynamic;
+    int dynamic_line;
 
     enum BattleType battle_type;
     int battle_type_line;
@@ -1221,6 +1227,14 @@ static bool parse_trainer(struct Parser *p, const struct Parsed *parsed, struct 
             trainer->name_line = value.location.line;
             trainer->name = token_string(&value);
         }
+        else if (is_literal_token(&key, "Is Dynamic"))
+        {
+            if (trainer->dynamic_line)
+                any_error = !set_show_parse_error(p, key.location, "duplicate 'Is Dynamic'");
+            trainer->dynamic_line = value.location.line;
+            if (!token_bool(p, &value, &trainer->isDynamic))
+                any_error = !show_parse_error(p);
+        }
         else if (is_literal_token(&key, "Double Battle"))
         {
             if (trainer->battle_type_line)
@@ -1429,6 +1443,14 @@ static bool parse_trainer(struct Parser *p, const struct Parsed *parsed, struct 
                     any_error = !set_show_parse_error(p, key.location, "duplicate 'Level'");
                 pokemon->level_line = value.location.line;
                 if (!token_int(p, &value, &pokemon->level))
+                    any_error = !show_parse_error(p);
+            }
+            else if (is_literal_token(&key, "Modifier"))
+            {
+                if (pokemon->lvlmodifier_line)
+                    any_error = !set_show_parse_error(p, key.location, "duplicate 'Modifier'");
+                pokemon->lvlmodifier_line = value.location.line;
+                if (!token_int(p, &value, &pokemon->lvlmodifier))
                     any_error = !show_parse_error(p);
             }
             else if (is_literal_token(&key, "Ball"))
@@ -1821,6 +1843,14 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             fprintf(f, " },\n");
         }
 
+        if (trainer->isDynamic)
+        {
+            fprintf(f, "#line %d\n", trainer->dynamic_line);
+            fprintf(f, "        .isDynamic = ");
+            fprint_bool(f, trainer->isDynamic);
+            fprintf(f, ",\n");
+        }
+
         if (trainer->battle_type_line)
         {
             fprintf(f, "#line %d\n", trainer->battle_type_line);
@@ -2001,6 +2031,12 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             {
                 fprintf(f, "#line %d\n", pokemon->level_line);
                 fprintf(f, "            .lvl = %d,\n", pokemon->level);
+            }
+
+            if (pokemon->lvlmodifier_line)
+            {
+                fprintf(f, "#line %d\n", pokemon->lvlmodifier_line);
+                fprintf(f, "            .lvlmodifier = %d,\n", pokemon->lvlmodifier);
             }
 
             if (pokemon->ball_line)

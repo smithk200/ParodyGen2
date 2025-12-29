@@ -292,7 +292,7 @@ RocketHideout_B2F_Text_ArianaOutraged:
 
 RocketHideout_B2F_Text_LanceChooseMons:
     .string "LANCE: Quickly {PLAYER}, choose\n"
-	.string "your POKéMON!$"
+	.string "your Pokémon!$"
 
 RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
 	msgbox RocketHideout_B2F_Text_LanceChooseMons, MSGBOX_DEFAULT
@@ -645,7 +645,7 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "That should stop this machine\n"
     .string "from transmitting that strange\l"
     .string "signal.\p"
-    .string "It's no fault of the POKéMON, so\n"
+    .string "It's no fault of the Pokémon, so\n"
     .string "it makes me feel guilty.\p"
     .string "{PLAYER}, let's split the job.$"
 
@@ -659,14 +659,14 @@ RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "normal.\p"
     .string "You're the hero! Let me thank\n"
     .string "you on behalf of all the\l"
-    .string "POKéMON.\p"
+    .string "Pokémon.\p"
     .string "Oh, yes. You should take this.\n"
     .string "I found it here, but I don't\l"
     .string "have any need for it.$"
 
 RocketHideout_B2F_Text_LanceWhirlpool:
     .string "That's WHIRLPOOL. Teach it to a\n"
-    .string "POKéMON to get across wild water.\p"
+    .string "Pokémon to get across wild water.\p"
     .string "But keep this in mind.\p"
     .string "You can use that out of battle\n"
     .string "only with the BADGE from\l"
@@ -675,7 +675,7 @@ RocketHideout_B2F_Text_LanceWhirlpool:
 RocketHideout_B2F_Text_LanceMonMaster:
     .string "{PLAYER}…\p"
     .string "The journey to becoming the\n"
-    .string "POKéMON MASTER is long and\l"
+    .string "Pokémon MASTER is long and\l"
     .string "difficult.\p"
     .string "Knowing that, will you keep\n"
     .string "going?\p"
@@ -779,13 +779,13 @@ RocketHideout_B2F_Movement_DragoniteGoDeeper:
 
 RocketHideout_B2F_Text_LanceHeals1:
     .string "LANCE: Are you all right?\p"
-    .string "Your POKéMON are hurt and tired.\p"
+    .string "Your Pokémon are hurt and tired.\p"
     .string "Here, give them some of my\n"
     .string "medicine.$"
 
 RocketHideout_B2F_Text_LanceHeals2:
     .string "LANCE: {PLAYER}, let's give it\n"
-    .string "our best for POKéMON.$"
+    .string "our best for Pokémon.$"
 
 RocketHideout_B2F_Text_GruntM17Seen:
     .string "The door won't open?\p"
@@ -816,7 +816,7 @@ RocketHideout_B2F_Text_GruntM18Beaten:
 RocketHideout_B2F_Text_GruntM18After:
     .string "I got wiped out on the last\n"
     .string "mission by a kid too.\p"
-    .string "When we were abducting POKéMON,\n"
+    .string "When we were abducting Pokémon,\n"
     .string "this kid with long red hair and\l"
     .string "mean-looking eyes just\l"
     .string "creamed me…$"

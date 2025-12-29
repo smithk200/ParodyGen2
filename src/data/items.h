@@ -180,8 +180,8 @@ static const u8 sRedScaleDesc[] = _(
     "It glows red.");
 
 static const u8 sSecretPotionDesc[] = _(
-    "A fantastic\n"
-    "medicine from the\n"
+    "A fantastic herb\n"
+    "blend from the\n"
     "Cianwood pharmacy.");
 
 static const u8 sSilverWingDesc[] = _(
@@ -13387,7 +13387,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Silph Co's scope\n"
             "makes unseeable\n"
-            "POKéMON visible."),
+            "Pokémon visible."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14732,7 +14732,7 @@ const struct Item gItemsInfo[] =
     },
 
     [ITEM_SECRET_POTION] = {    
-        .name = ITEM_NAME("Secret Potion"),
+        .name = ITEM_NAME("Herba Mystica"),
         .price = 0,
         .description = sSecretPotionDesc,
         .importance = 1,

@@ -133,7 +133,8 @@
     "AzaleaTown_Mart",
     "AzaleaTown_KurtsHouse",
     "AzaleaTown_House1",
-    "AzaleaTown_Gym"
+    "AzaleaTown_Gym",
+    "AzaleaTown_Gym2"
   ],
   "gMapGroup_IndoorGoldenrod": [
     "GoldenrodCity_PokemonCenter",
@@ -143,6 +144,7 @@
     "GoldenrodCity_UndergroundStorage",
     "GoldenrodCity_DepartmentStoreBasement",
     "GoldenrodCity_Gym",
+    "GoldenrodCityGym2",
     "GoldenrodCity_FlowerShop",
     "GoldenrodCity_House1",
     "GoldenrodCity_House2",
@@ -175,7 +177,8 @@
     "EcruteakCity_SageOffice1",
     "EcruteakCity_SageOffice2",
     "BellchimeTrail",
-    "EcruteakCity_Gym"
+    "EcruteakCity_Gym",
+    "EcruteakCity_Gym2"
   ],
   "gMapGroup_IndoorOlivine": [
     "OlivineCity_PokemonCenter",
@@ -195,7 +198,8 @@
     "CianwoodHouse2",
     "CianwoodHouse3",
     "CianwoodShop",
-    "CianwoodGym"
+    "CianwoodGym",
+    "CianwoodGym2"
   ],
   "gMapGroup_IndoorMahogany": [
     "MahoganyTown_PokemonCenter",
@@ -212,7 +216,8 @@
     "BlackthornCity_Gym",
     "BlackthornCity_House1",
     "BlackthornCity_House2",
-    "BlackthornCity_House3"
+    "BlackthornCity_House3",
+    "BlackthornCityGym2"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_RedsHouse_1F",

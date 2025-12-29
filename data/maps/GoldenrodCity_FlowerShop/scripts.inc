@@ -195,4 +195,4 @@ GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
     .string "Wow, you beat WHITNEY? Cool!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
-    .string "So it really was a POKéMON!$"
+    .string "So it really was a Pokémon!$"

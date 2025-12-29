@@ -1,4 +1,5 @@
 .set LOCALID_ROUTE_30_JOEY, 6
+.set LOCALID_ROUTE_30_JOEY_2, 2
 
 Route30_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route30_OnTransition
@@ -8,6 +9,7 @@ Route30_MapScripts::
 
 Route30_OnTransition: 
 	callnative SetTimeBasedEncounters
+	goto_if_set FLAG_NUZLOCKE, Route30_EventScript_EventScript_CheckJoeyNuzlocke
 	end
 
 Route30_OnFrame::
@@ -53,11 +55,74 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	release
 	end
 
-
 Route30_EventScript_Youngster_Joey::
+	goto_if_set FLAG_NUZLOCKE, Route30_EventScript_Youngster_JoeyNuzlocke
 	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
 	end
+
+Route30_EventScript_Youngster_JoeyNuzlocke::
+	goto_if_unset FLAG_RECEIVED_MACHOP, Route30_EventScript_Youngster_JoeyNuzlockeNeedMachop
+	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
+	clearflag FLAG_NO_NUZLOCKE_JOEY
+	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
+	end
+
+Route30_EventScript_Youngster_JoeyNuzlockeNeedMachop::
+	faceplayer
+	msgbox Route30_Text_JoeyNuzlockeNeedMachop, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE_30_JOEY_2, Route30_EventScript_Movement_JoeyNuzlocke
+	removeobject 2
+	setflag FLAG_HIDE_ROUTE_30_NPCS
+	setflag FLAG_NO_NUZLOCKE_JOEY
+	release
+	end
+
+Route30NeedToFightJoeyTrigger::
+	goto_if_set FLAG_NO_NUZLOCKE_JOEY, Route30NeedToFightJoeyTrigger2
+	end
+
+Route30NeedToFightJoeyTrigger2::
+	applymovement OBJ_EVENT_ID_PLAYER, Route30NeedToFightJoey_Movement
+	msgbox Route30_Text_NeedToFightJoey, MSGBOX_DEFAULT
+	closemessage
+	end
+
+Route30_EventScript_EventScript_CheckJoeyNuzlocke::
+	goto_if_unset FLAG_NUZLOCKE, CommonEventScript_End
+	goto_if_set FLAG_RECEIVED_MACHOP, Route30_EventScript_EventScript_CheckJoeyNuzlocke2
+	end
+
+Route30_EventScript_EventScript_CheckJoeyNuzlocke2::
+	clearflag FLAG_HIDE_ROUTE_30_NPCS
+	end
+
+CommonEventScript_End::
+	end
+
+Route30_Text_NeedToFightJoey::
+	.string "Go back to New Bark Town\n"
+	.string "to get a Fighting Pokémon!$"
+
+Route30NeedToFightJoey_Movement::
+	walk_down
+	step_end
+
+Route30_EventScript_Movement_JoeyNuzlocke::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route30_Text_JoeyNuzlockeNeedMachop::
+	.string "My Rattata is in the top percentage\n"
+	.string "of Rattata- no joke.\p"
+	.string "If you want to face me, bring a\n"
+	.string "Fighting-type Pokémon.\p"
+	.string "Otherwise your run will end here.$"
 
 Route30_EventScript_Youngster_Mikey::
 	trainerbattle_single TRAINER_MIKEY, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten
@@ -107,10 +172,10 @@ Route30_EventScript_Mailbox::
 	end
 
 Route30_Text_Mailbox:
-	.string "MR.POKéMON's House$"
+	.string "Mr. Pokémon's House$"
 
 Route30_Text_UseTackle:
-	.string "Go, RATTATA!\p"
+	.string "Go, Rattata!\p"
 	.string "TACKLE!$"
 
 Route30_Text_ThisIsABigBattle:
@@ -118,23 +183,24 @@ Route30_Text_ThisIsABigBattle:
 	.string "Leave me alone!$"
 
 Route30_Text_YoungsterJoey1Seen:
-	.string "I just lost, so I'm trying to\n"
-	.string "find more POKéMON.\p"
-	.string "Wait! You look weak! Come on,\n"
-	.string "let's battle!$"
+	.string "My Rattata is different\n"
+	.string "from regular Rattata.\p"
+	.string "It's like my Rattata is in\n"
+	.string "the top percentage of all Rattata,\l"
+	.string "you know what I'm saying?$"
 
 Route30_Text_YoungsterJoey1Beaten:
 	.string "Ack! I lost again!\n"
 	.string "Doggone it!$"
 
 Route30_Text_YoungsterJoey1After:
-	.string "Do I have to have more POKéMON\n"
+	.string "Do I have to have more Pokémon\n"
 	.string "in order to battle better?\p"
 	.string "No! I'm sticking with this one\n"
 	.string "no matter what!$"
 
 Route30_Text_YoungsterMikeySeen:
-	.string "You're a POKéMON trainer,\n"
+	.string "You're a Pokémon trainer,\n"
 	.string "right?\p"
 	.string "Then you have to battle!$"
 
@@ -149,19 +215,19 @@ Route30_Text_YoungsterMikeyAfter:
 	.string "people to get better.$"
 
 Route30_Text_BugCatcherDonSeen:
-	.string "Instead of a bug POKéMON,\n"
+	.string "Instead of a bug Pokémon,\n"
 	.string "I found a trainer!$"
 
 Route30_Text_BugCatcherDonBeaten:
 	.string "Argh! You're too strong!$"
 
 Route30_Text_BugCatcherDonAfter:
-	.string "I ran out of POKé BALLS while\n"
-	.string "I was catching POKéMON.\p"
+	.string "I ran out of Poké Balls while\n"
+	.string "I was catching Pokémon.\p"
 	.string "I should've bought some more…$"
 
 Route30_Text_YoungsterDirectionsToMrPokemon:
-	.string "MR. POKéMON's house?\n"
+	.string "MR. Pokémon's house?\n"
 	.string "It's a bit farther ahead.$"
 
 Route30_Text_YoungsterEveryoneIsBattling:
@@ -175,22 +241,22 @@ Route30_Text_CooltrainerF:
 	.string "eyes, prepare to battle.$"
 
 Route30_Text_Sign:
-	.string "ROUTE 30\p"
-	.string "VIOLET CITY - CHERRYGROVE CITY$"
+	.string "Route 30\p"
+	.string "Violet City -- Cherrygrove City$"
 
 Route30_Text_MrPokemonsHouseDirectionsSign:
-	.string "MR. POKéMON'S HOUSE\n"
+	.string "MR. Pokémon's House\n"
 	.string "STRAIGHT AHEAD!$"
 
 Route30_Text_MrPokemonsHouseSign:
-	.string "MR. POKéMON'S HOUSE$"
+	.string "MR. Pokémon's House$"
 
 Route30_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "No stealing other people's\n"
-	.string "POKéMON!\p"
-	.string "POKé BALLS are to be thrown\n"
-	.string "only at wild POKéMON!$"
+	.string "Trainer Tips!\p"
+	.string "If you use a credit card,\n"
+	.string "make sure you pay it off in full!\p"
+	.string "Otherwise you could be in massive\n"
+	.string "credit card debt, which is very bad.$"
 
 Route30_Text_YoungsterJoeyGiveHPUp:
 	.string "I lost again…\n"

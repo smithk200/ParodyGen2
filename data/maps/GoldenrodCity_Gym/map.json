@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
       "x": 15,
       "y": 8,
       "elevation": 0,
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_Gym_EventScript_Whitney",
+      "script": "GoldenrodCity_Gym_EventScript_Machine",
       "flag": "0"
     },
     {
@@ -91,6 +91,19 @@
       "trainer_sight_or_berry_tree_id": "1",
       "script": "GoldenrodCity_Gym_EventScript_Bridget",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GoldenrodCity_Gym_EventScript_MachineWantToWarp",
+      "flag": "FLAG_HIDE_GOLDENROD_MACHINE"
     }
   ],
   "warp_events": [
@@ -100,6 +113,13 @@
       "elevation": 0,
       "dest_map": "MAP_GOLDENROD_CITY",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 9,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_GYM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -56,18 +56,18 @@ voicegroup297:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @oohs
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @synth voice
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 255, 0, 99 @orchestra hit TODO
-	voice_keysplit voicegroup298, keysplit_trumpet @trumpet
-	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @trombone
-	voice_keysplit voicegroup_trumpet_keysplit, keysplit_tuba @tuba
-	voice_keysplit voicegroup298, keysplit_trumpet @muted trumpet
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @trumpet
+	voice_keysplit voicegroup_tuba_keysplit, keysplit_tuba @trombone
+	voice_keysplit voicegroup_tuba_keysplit, keysplit_tuba @tuba
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @muted trumpet
 	voice_keysplit voicegroup_french_horn_keysplit, keysplit_french_horn @french horn
-	voice_keysplit voicegroup298, keysplit_trumpet @brass
-	voice_keysplit voicegroup298, keysplit_trumpet @synth brass
-	voice_keysplit voicegroup298, keysplit_trumpet @synth brass
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @brass
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @synth brass
+	voice_keysplit voicegroup_trumpet_keysplit, keysplit_trumpet @synth brass
 	voice_directsound 60, 0, DirectSoundWaveData_soprano_sax, 255, 255, 0, 99 @soprano sax
-	voice_keysplit voicegroup293, keysplit_french_horn @alto sax
-	voice_keysplit voicegroup294, keysplit_french_horn @tenor sax
-	voice_keysplit voicegroup295, keysplit_french_horn @bari sax
+	voice_keysplit voicegroup293, keysplit_alto_sax @alto sax
+	voice_keysplit voicegroup294, keysplit_tenor_sax @tenor sax
+	voice_keysplit voicegroup295, keysplit_bari_sax @bari sax
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @oboe
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 255, 0, 165 @english horn
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 255, 0 @bassoon
@@ -81,7 +81,7 @@ voicegroup297:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_whistle, 255, 255, 0, 99 @whistle
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 255, 0, 99 @ocarina
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 255, 0, 99 @square
-	voice_directsound 60, 0, DirectSoundWaveData_saw_synth, 255, 255, 0, 99 @saw
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 255, 255, 99 @saw
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_shakuhachi_low, 255, 255, 0, 99 @calliope
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @chiff
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 255, 255, 0, 99 @charang

@@ -48,7 +48,7 @@ OlivineCity_House1_EventScript_TradeCompleted::
 	end
 
 OlivineCity_House1_Text_YouWillTradeWontYou:
-	.string "I collect POKéMON!\n"
+	.string "I collect Pokémon!\n"
 	.string "Do you have a {STR_VAR_1}?\p"
 	.string "Want to trade it for my\n"
 	.string "{STR_VAR_2}?$"

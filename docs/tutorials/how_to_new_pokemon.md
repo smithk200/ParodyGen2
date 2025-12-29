@@ -26,7 +26,7 @@ The main things that the Expansion changes are listed here.
   * [1. Edit the sprites](#1-edit-the-sprites)
   * [2. Add the sprites to the rom](#2-add-the-sprites-to-the-rom)
   * [3. Add the animations to the rom](#3-add-the-animations-to-the-rom)
-  * [4. Linking graphic information to our Pokémon](#4-linking-graphic-information-to-our-pokémon)
+  * [4. Linking graphic information to our Pokémon](#4-linking-graphic-information-to-our-Pokémon)
 * [The Data - Part 2](#the-data---part-2)
   * [1. Species Flags](#1-species-flags)
   * [2. Delimit the moveset](#2-delimit-the-moveset)

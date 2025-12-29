@@ -395,6 +395,15 @@ const u32 gTrainerFrontPic_LeaderRickAndMorty[] = INCBIN_U32("graphics/trainers/
 const u16 gTrainerPalette_LeaderRickAndMorty[] = INCBIN_U16("graphics/trainers/front_pics/rickandmorty.gbapal");
 const u32 gTrainerFrontPic_LeaderBea[] = INCBIN_U32("graphics/trainers/front_pics/leader_bea.4bpp.smol");
 const u16 gTrainerPalette_LeaderBea[] = INCBIN_U16("graphics/trainers/front_pics/leader_bea.gbapal");
+const u32 gTrainerFrontPic_LeaderMatt[] = INCBIN_U32("graphics/trainers/front_pics/leader_matt.4bpp.smol");
+const u16 gTrainerPalette_LeaderMatt[] = INCBIN_U16("graphics/trainers/front_pics/leader_matt.gbapal");
+const u32 gTrainerFrontPic_Fry[] = INCBIN_U32("graphics/trainers/front_pics/fry.4bpp.smol");
+const u16 gTrainerPalette_Fry[] = INCBIN_U16("graphics/trainers/front_pics/fry.gbapal");
+const u32 gTrainerFrontPic_LeaderClay[] = INCBIN_U32("graphics/trainers/front_pics/leader_clay.4bpp.smol");
+const u16 gTrainerPalette_LeaderClay[] = INCBIN_U16("graphics/trainers/front_pics/leader_clay.gbapal");\
+const u32 gTrainerFrontPic_LeaderLarry[] = INCBIN_U32("graphics/trainers/front_pics/larry.4bpp.smol");
+const u16 gTrainerPalette_LeaderLarry[] = INCBIN_U16("graphics/trainers/front_pics/larry.gbapal");
+
 
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
@@ -553,6 +562,11 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_SANS, gTrainerFrontPic_EliteFourSans, gTrainerPalette_EliteFourSans),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_RICK_AND_MORTY, gTrainerFrontPic_LeaderRickAndMorty, gTrainerPalette_LeaderRickAndMorty),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_BEA, gTrainerFrontPic_LeaderBea, gTrainerPalette_LeaderBea),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_MATT, gTrainerFrontPic_LeaderMatt, gTrainerPalette_LeaderMatt),
+    TRAINER_SPRITE(TRAINER_PIC_FRY, gTrainerFrontPic_Fry, gTrainerPalette_Fry),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_CLAY, gTrainerFrontPic_LeaderClay, gTrainerPalette_LeaderClay),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_LARRY, gTrainerFrontPic_LeaderLarry, gTrainerPalette_LeaderLarry),
+    
        
 };
 

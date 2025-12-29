@@ -78,6 +78,7 @@ struct TrainerMon
     u8 dynamaxLevel:4;
     u8 padding2:4;
     u32 tags;
+    u8 lvlmodifier;
 };
 
 #define TRAINER_PARTY(partyArray) partyArray, .partySize = ARRAY_COUNT(partyArray)
@@ -107,6 +108,7 @@ struct Trainer
     /*0x24*/ u8 poolPruneIndex;
     /*0x25*/ u16 overrideTrainer;
     /*0x26*/ u8 trainerBackPic;
+            bool8 isDynamic;
 };
 
 struct TrainerClass

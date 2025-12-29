@@ -56,6 +56,20 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_DAMIAN_1] = // use the Trainer's Id from include/constants/opponents.h
+        {
+            [TRAINER_SLIDE_DYNAMAX] = COMPOUND_STRING("I'm gonna smoke my weed!{PAUSE_UNTIL_PRESS}"), // find the id for the slide to be used. SET_STATCHANGER(STAT_ATK, 1, TRUE);
+        },
+        [TRAINER_DAMIAN_2] =
+        {
+            [TRAINER_SLIDE_DYNAMAX] = COMPOUND_STRING("I'm gonna smoke my weed!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MORTY_1] =
+        {
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_DOWN] = COMPOUND_STRING("Rick: Aw, shit, our first Pokémon's down?\nLet’s show them how we do it.\pMorty: G-go, guys! \nDon’t get knocked out immediately!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Rick: Alright, kid. Let’s see if you can handle it.\pMorty: P-please don’t lose now!\n We trained really hard for this!{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_PLAYER_LANDS_FIRST_SUPER_EFFECTIVE_HIT] = COMPOUND_STRING("Rick: Huh. Not bad.\nYou’re adapting faster than expected.\pMorty: Oh man! Rick, they almost fainted!\nI told you this was a bad idea!{PAUSE_UNTIL_PRESS}"),
+        }
     },
 };
 

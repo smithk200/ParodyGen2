@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
@@ -106,7 +106,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MORTY",
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
       "x": 4,
       "y": 4,
       "elevation": 0,
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EcruteakCity_Gym_EventScript_Morty",
+      "script": "EcruteakCity_Gym_EventScript_Machine",
       "flag": "0"
     },
     {
@@ -137,6 +137,19 @@
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
+      "x": 10,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -196,11 +209,11 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 9,
-      "y": 39,
+      "x": 10,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_GYM",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
@@ -901,11 +914,16 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_GYM",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 9,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

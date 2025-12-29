@@ -457,6 +457,9 @@ const u32 gObjectEventPic_Brie[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Joy[] = INCBIN_U32("graphics/object_events/pics/people/joy.4bpp");
 const u32 gObjectEventPic_Ned[] = INCBIN_U32("graphics/object_events/pics/people/ned.4bpp");
 const u32 gObjectEventPic_Macy[] = INCBIN_U32("graphics/object_events/pics/people/macy.4bpp");
+const u32 gObjectEventPic_Clay[] = INCBIN_U32("graphics/object_events/pics/people/leader_clay.4bpp");
+const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/people/leader_matt.4bpp");
+const u32 gObjectEventPic_Sans[] = INCBIN_U32("graphics/object_events/pics/people/sans.4bpp");
 
 const u32 gObjectEventPic_VigorothMover[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/vigoroth_mover.4bpp");
 const u32 gObjectEventPic_SudowoodoTree[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/sudowoodo_tree.4bpp");
@@ -516,6 +519,9 @@ const u16 gObjectEventPal_Blue[] = INCBIN_U16("graphics/object_events/palettes/n
 const u16 gObjectEventPal_Pink[] = INCBIN_U16("graphics/object_events/palettes/npc_pink.gbapal");
 const u16 gObjectEventPal_Ned[] = INCBIN_U16("graphics/object_events/palettes/ned.gbapal");
 const u16 gObjectEventPal_Macy[] = INCBIN_U16("graphics/object_events/palettes/macy.gbapal");
+const u16 gObjectEventPal_Clay[] = INCBIN_U16("graphics/object_events/palettes/clay.gbapal");
+const u16 gObjectEventPal_Matt[] = INCBIN_U16("graphics/object_events/palettes/matt.gbapal");
+const u16 gObjectEventPal_Sans[] = INCBIN_U16("graphics/object_events/palettes/sans.gbapal");
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");

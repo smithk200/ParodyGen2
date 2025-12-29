@@ -16,6 +16,27 @@ AzaleaTown_Gym_OnTransition::
 	setflag FLAG_HIDE_AZALEA_ARIADOS_RIGHT
 	end
 
+AzaleaTown_Gym_EventScript_FinishedGymPuzzle::
+    lock
+    goto_if_set FLAG_SOLVED_AZALEA_PUZZLE, AzaleaTown_Gym_EventScript_MachineWantToWarp
+    setflag FLAG_SOLVED_AZALEA_PUZZLE
+    clearflag FLAG_HIDE_AZALEA_MACHINE
+    msgbox Common_Text_PlayerClearedPuzzle, MSGBOX_DEFAULT
+	closemessage
+    goto AzaleaTown_Gym_EventScript_MachineWantToWarp
+    release
+    end
+
+AzaleaTown_Gym_EventScript_MachineWantToWarp::
+	lock
+	faceplayer
+	msgbox Common_Machine_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_Machine_No
+	warp MAP_AZALEA_TOWN_GYM2, 2, 4
+	release
+	end
+
 @ 1-8->5,  5-9->1
 AzaleaTown_Gym_EventScript_Trigger_1::
 	lock

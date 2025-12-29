@@ -42,6 +42,11 @@ Route44_EventScript_Cybil::
 	msgbox Route44_Text_CooltrainerfCybilAfter, MSGBOX_AUTOCLOSE
 	end
 
+Route44_EventScript_Larry::
+	trainerbattle_single TRAINER_LARRY Route44_Text_LarrySeen, Route44_Text_LarryBeaten
+	msgbox Route44_Text_LarryAfter, MSGBOX_AUTOCLOSE
+	end
+
 Route44_EventScript_Sign1::
 	msgbox Route44_Text_Sign1, MSGBOX_SIGN
 	end
@@ -80,7 +85,7 @@ Route44_Text_FisherEdgarSeen:
     .string "I fish until I can't anymore.\p"
     .string "I also battle until I drop.\p"
     .string "That's my relationship with my\n"
-    .string "POKéMON.$"
+    .string "Pokémon.$"
 
 Route44_Text_FisherEdgarBeaten:
     .string "Hmmmm… This isn't right.$"
@@ -91,14 +96,14 @@ Route44_Text_FisherEdgarAfter:
 
 Route44_Text_BirdKeeperVance1Seen:
     .string "Do you know about the legendary\n"
-    .string "bird POKéMON?$"
+    .string "bird Pokémon?$"
 
 Route44_Text_BirdKeeperVance1Beaten:
     .string "Whew! You're hot stuff.$"
 
 Route44_Text_BirdKeeperVanceBirds:
     .string "ARTICUNO, ZAPDOS and MOLTRES are\n"
-    .string "the three legendary bird POKéMON.\p"
+    .string "the three legendary bird Pokémon.\p"
     .string "I heard there are other legendary\n"
     .string "birds, though.$"
 
@@ -114,21 +119,21 @@ Route44_Text_PsychicPhilAfter:
 
 Route44_Text_PokemaniacZachSeen:
     .string "I'll do anything to get my hands\n"
-    .string "on rare POKéMON!$"
+    .string "on rare Pokémon!$"
 
 Route44_Text_PokemaniacZachBeaten:
-    .string "Oooh, your POKéMON are so\n"
+    .string "Oooh, your Pokémon are so\n"
     .string "appealing.$"
 
 Route44_Text_PokemaniacZachAfter:
-    .string "If a POKéMON has different colors\n"
+    .string "If a Pokémon has different colors\n"
     .string "from usual, it's more valuable.\p"
     .string "What? You mean that's not true?$"
 
 Route44_Text_CooltrainermAllenSeen:
     .string "I can tell you're a good trainer\n"
     .string "by looking at you.\p"
-    .string "I'm good at POKéMON, and I can\n"
+    .string "I'm good at Pokémon, and I can\n"
     .string "see that you are too.$"
 
 Route44_Text_CooltrainermAllenBeaten:
@@ -163,3 +168,21 @@ Route44_Text_Sign2:
     .string "ROUTE 44\p"
     .string "MAHOGANY TOWN - BLACKTHORN CITY$"
 
+Route44_Text_LarrySeen:
+    .string "Oh!\p"
+    .string "You caught me on my off day!\p"
+    .string "Great. I have to battle you now.\p"
+    .string "You know I work four jobs, right?\p"
+    .string "My office job, a Gym Leader,\n"
+    .string "and an Elite Four member in\l"
+    .string "both Paldea and Hoenn?\p"
+    .string "I can never catch a break!$"
+
+Route44_Text_LarryBeaten:
+    .string "Now I can get back to listening\n"
+    .string "to the sounds of nature…\p"
+    .string "Ah, how relaxing…$"
+
+Route44_Text_LarryAfter:
+    .string "Please don't catch me on my\n"
+    .string "off day again!$"

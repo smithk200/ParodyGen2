@@ -8294,7 +8294,7 @@
     {
       "id": "LAYOUT_POKEMON_LEAGUE_KARENS_ROOM",
       "name": "PokemonLeague_KarensRoom_Layout",
-      "width": 28,
+      "width": 13,
       "height": 13,
       "primary_tileset": "gTileset_Johto_Building",
       "secondary_tileset": "gTileset_PokemonLeague",
@@ -8770,6 +8770,56 @@
       "secondary_tileset": "gTileset_SootopolisGym",
       "border_filepath": "data/layouts/MahoganyTownGym2/border.bin",
       "blockdata_filepath": "data/layouts/MahoganyTownGym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CIANWOOD_GYM2",
+      "name": "CianwoodGym2_Layout",
+      "width": 5,
+      "height": 7,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_CianwoodCity_Gym",
+      "border_filepath": "data/layouts/CianwoodGym2/border.bin",
+      "blockdata_filepath": "data/layouts/CianwoodGym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_AZALEA_TOWN_GYM2",
+      "name": "AzaleaTown_Gym2_Layout",
+      "width": 5,
+      "height": 8,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_AzaleaTown_Gym",
+      "border_filepath": "data/layouts/AzaleaTown_Gym2/border.bin",
+      "blockdata_filepath": "data/layouts/AzaleaTown_Gym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GOLDENROD_CITY_GYM2",
+      "name": "GoldenrodCityGym2_Layout",
+      "width": 7,
+      "height": 7,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_Cafe",
+      "border_filepath": "data/layouts/GoldenrodCityGym2/border.bin",
+      "blockdata_filepath": "data/layouts/GoldenrodCityGym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACKTHORN_CITY_GYM2",
+      "name": "BlackthornCityGym2_Layout",
+      "width": 17,
+      "height": 11,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_BlackthornGym",
+      "border_filepath": "data/layouts/BlackthornCityGym2/border.bin",
+      "blockdata_filepath": "data/layouts/BlackthornCityGym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECRUTEAK_CITY_GYM2",
+      "name": "EcruteakCity_Gym2_Layout",
+      "width": 6,
+      "height": 6,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_EcruteakCity_Gym",
+      "border_filepath": "data/layouts/EcruteakCity_Gym2/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_Gym2/map.bin"
     }
   ]
 }

@@ -80,13 +80,13 @@ VioletGym_Text_ReceivedBurgerbadge:
 	.string "{PLAYER} received Burgerbadge.$"
 
 VioletGym_Text_Falkner_BadgeExplain:
-	.string "Burgerbadge raises the ATTACK\n"
+	.string "Burgerbadge raises the Attack\n"
 	.string "power of Pokémon.\p"
 	.string "Kind of like how I smoke my weed!\p"
 	.string "It also enables Pokémon to use\n"
 	.string "Flash, if they can learn it,\l"
 	.string "anytime.\p"
-	.string "Here--take this too.$"
+	.string "Here, take this too.$"
 
 VioletGym_Text_Falkner_TMExplain:
 	.string "By using a TM, a Pokémon will\n"
@@ -94,7 +94,7 @@ VioletGym_Text_Falkner_TMExplain:
 	.string "TM32 contains Double Team.\p"
 	.string "It increase a Pokémon's evasion.\p"
 	.string "In other words, your Pokémon\n"
-	.string "will be harder to hit.$"
+	.string "will be shit to hit.$"
 
 VioletGym_Text_Falkner_AfterFight:
 	.string "There are Pokémon Gyms in cities\n"
@@ -109,21 +109,21 @@ VioletGym_Text_Falkner_AfterFight:
 
 VioletGym_Text_Falkner_Rematch:
 	.string "Congratulations on defeating\n"
-	.string "the ELITE 4!\p"
+	.string "the Elite 4!\p"
 	.string "I've been training my\n"
 	.string "Food Pokémon even harder.\p"
 	.string "Think you can take on the power\n"
 	.string "of the kitchen again?$"
 
 VioletGym_Text_Falkner_RematchLoss:
-	.string "Wow… You beat me again.\p"
+	.string "Fuck, you beat me again!\p"
 	.string "I'm going to train harder to\n"
-	.string "become the greatest bird master!$"
+	.string "become the greatest grill master!$"
 
 VioletGym_Text_BirdKeeperRod_Seen:
 	.string "The keyword is guts!\p"
 	.string "Those here are training night and\n"
-	.string "day to become bird Pokémon masters.\p"
+	.string "day to become food Pokémon masters.\p"
 	.string "Come on!$"
 
 VioletGym_Text_BirdKeeperRod_Beaten:
@@ -165,7 +165,7 @@ VioletGym_Text_GymGuide_Intro:
 
 VioletGym_Text_GymGuide_Win:
 	.string "Nice battle! Keep it up,\n"
-	.string "and you'll be the CHAMP in no\l"
+	.string "and you'll be the Champ in no\l"
 	.string "time at all!$"
 
 VioletCity_Gym_EventScript_Statue::

@@ -122,7 +122,7 @@
 
 #define FLAG_OLD_AMBER_ALTERING_CAVE         0x68 
 
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
+#define FLAG_NO_NUZLOCKE_JOEY                0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
 #define FLAG_RECEIVED_HM_ROCK_SMASH          0x6B
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
@@ -461,7 +461,7 @@
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
 #define FLAG_DAILY_BEAT_SILVER                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_RECEIVED_MACHOP                    0x1AB // Unused Flag
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC //HnS
 #define FLAG_BATTLED_DEOXYS                  0x1AD //HnS
@@ -727,7 +727,7 @@
 #define FLAG_HIDE_CIANWOOD_MACHINE  0x2A8 // Unused Flag
 #define FLAG_HIDE_MAHOGANY_MACHINE  0x2A9 // Unused Flag
 #define FLAG_HIDE_BLACKTHORN_MACHINE  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
+#define FLAG_HIDE_FRY_OLIVINE  0x2AB // Unused Flag
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 #define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag

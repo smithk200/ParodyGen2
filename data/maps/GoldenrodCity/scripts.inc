@@ -284,15 +284,20 @@ GoldenrodCity_EventScript_Beauty::
 	end
 
 GoldenrodCity_Text_Beauty:
-	.string "This is the GOLDENROD GYM!\p"
-	.string "Our leader WHITNEY is not here\n"
-	.string "right now. She might be at the\l"
-	.string "RADIO TOWER.$"
+	.string "This is the Goldenrod GYm!\p"
+	.string "Our leader Whitney is not here\n"
+	.string "right now. In fact, she is not here\l"
+	.string "at all!\p"
+	.string "But check out what our new leader from\n"
+	.string "Hoenn, Norman, is up to.\p"
+	.string "He's in the Radio Tower right now.$"
 
 GoldenrodCity_Text_Woman:
-	.string "I used to train in WHITNEY's GYM,\n"
+	.string "I used to train in Whitney's Gym,\n"
 	.string "but all her crying gave me a\l"
-	.string "headache.$"
+	.string "headache.\p"
+	.string "Thank God that Norman took over,\n"
+	.string "he's much more mature.$"
 
 GoldenrodCity_Text_HikerDay:
 	.string "When I went into the GAME CORNER\n"
@@ -327,12 +332,12 @@ GoldenrodCity_Text_Youngster1:
 
 GoldenrodCity_Text_CooltrainerF1:
 	.string "Is that man in black dressed up\n"
-	.string "like a TEAM ROCKET member?\p"
+	.string "like a Team Rocket member?\p"
 	.string "How silly!$"
 
 GoldenrodCity_Text_CooltrainerF1_Cleared:
 	.string "Was that man in black really part\n"
-	.string "of TEAM ROCKET? I can't believe it!$"
+	.string "of Team Rocket? I can't believe it!$"
 
 GoldenrodCity_Text_CooltrainerF2:
 	.string "The RADIO TOWER in GOLDENROD CITY\n"
@@ -352,7 +357,7 @@ GoldenrodCity_Text_Youngster2:
 
 GoldenrodCity_Text_Lass:
 	.string "That man inside rates your\n"
-	.string "POKéMON nicknames.\p"
+	.string "Pokémon nicknames.\p"
 	.string "He can even rename them.$"
 
 GoldenrodCity_Text_Gramps:
@@ -375,7 +380,7 @@ GoldenrodCity_Text_Rocket2:
 	.string "What? It's none of your business!$"
 
 GoldenrodCity_Text_Rocket3:
-	.string "POKéMON? They're just tools\n"
+	.string "Pokémon? They're just tools\n"
 	.string "we use to make money!$"
 
 GoldenrodCity_Text_Rocket4:
@@ -388,7 +393,7 @@ GoldenrodCity_Text_Rocket5:
 
 GoldenrodCity_Text_Rocket6:
 	.string "Come and taste the terror of\n"
-	.string "TEAM ROCKET!$"
+	.string "Team Rocket!$"
 
 GoldenrodCity_Text_StationSign:
 	.string "GOLDENROD CITY STATION$"
@@ -397,11 +402,11 @@ GoldenrodCity_Text_RadioTowerSign:
 	.string "GOLDENROD CITY RADIO TOWER$"
 
 GoldenrodCity_Text_DeptStoreSign:
-	.string "Full Selection of POKéMON Goods!\p"
+	.string "Full Selection of Pokémon Goods!\p"
 	.string "GOLDENROD CITY DEPT.STORE$"
 
 GoldenrodCity_Text_GymSign:
-	.string "GOLDENROD CITY POKéMON GYM\n"
+	.string "GOLDENROD CITY Pokémon GYM\n"
 	.string "LEADER: WHITNEY\p"
 	.string "The Incredibly Pretty Girl!$"
 
@@ -418,8 +423,8 @@ GoldenrodCity_Text_GameCornerSign:
 	.string "GOLDENROD CITY GAME CORNER$"
 
 GoldenrodCity_Text_NameRaterSign:
-	.string "NAME RATER\p"
-	.string "Get Your POKéMON Nicknames Rated$"
+	.string "Pokémon Renamer\p"
+	.string "Get Your Pokémon Nicknames Changed$"
 
 GoldenrodCity_Text_UndergroundNorthSign:
 	.string "UNDERGROUND ENTRANCE$"
@@ -432,7 +437,7 @@ GoldenrodCity_Text_FlowerShopSign:
 	.string "Blooming Beautiful FLOWER SHOP$"
 
 GoldenrodCity_Text_MoveTutorAsk:
-	.string "I can teach your POKéMON some\n"
+	.string "I can teach your Pokémon some\n"
 	.string "amazing moves!\p"
 	.string "Should I teach one?$"
 

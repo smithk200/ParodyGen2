@@ -20,13 +20,34 @@ CianwoodGym_EventScript_Statue2::
 	release
 	end
 
+CianwoodGym_EventScript_FinishedGymPuzzle::
+    lock
+    goto_if_set FLAG_SOLVED_CIANWOOD_PUZZLE, CianwoodGym_Gym_EventScript_MachineWantToWarp
+    setflag FLAG_SOLVED_CIANWOOD_PUZZLE
+    clearflag FLAG_HIDE_CIANWOOD_MACHINE
+    msgbox Common_Text_PlayerClearedPuzzle, MSGBOX_DEFAULT
+	closemessage
+    goto CianwoodGym_Gym_EventScript_MachineWantToWarp
+    release
+    end
+
+CianwoodGym_Gym_EventScript_MachineWantToWarp::
+	lock
+	faceplayer
+	msgbox Common_Machine_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_Machine_No
+	warp MAP_CIANWOOD_GYM2, 2, 4
+	release
+	end
+
 CianwoodGym_Text_GymStatue:
-	.string "CIANWOOD CITY POKéMON GYM$"
+	.string "Cianwood City Pokémon Gym$"
 
 CianwoodGym_Text_GymStatueCertified:
-	.string "CIANWOOD CITY POKéMON GYM\p"
-	.string "CHUCK'S CERTIFIED TRAINERS:\n"
-	.string "{PLAYER}$"
+	.string "Cianwood City Pokémon Gym\p"
+	.string "Bea's Certified Trainers:\n"
+	.string "{RIVAL}, Fry, {PLAYER}$"
 
 CianwoodGym_EventScript_Chuck::
 	lock
@@ -149,7 +170,7 @@ CianwoodGym_Text_ChuckIntro2:
 CianwoodGym_Text_ChuckIntro3:
 	.string "There! Scared now, are you?\p"
 	.string "What? It has nothing to do with\n"
-	.string "POKéMON?\p"
+	.string "Pokémon?\p"
 	.string "That's true!\p"
 	.string "Come on. We shall do battle!$"
 
@@ -162,9 +183,9 @@ CianwoodGym_Text_GetStormBadge:
 	.string "{PLAYER} received Kickboxbadge.$"
 
 CianwoodGym_Text_ChuckBadgeSpeech:
-	.string "Kickboxbadge makes all POKéMON up to\n"
+	.string "Kickboxbadge makes all Pokémon up to\n"
 	.string "L70 obey, even traded ones.\p"
-	.string "It also lets your POKéMON use FLY\n"
+	.string "It also lets your Pokémon use FLY\n"
 	.string "when you're not in a battle.\p"
 	.string "Here, take this too!$"
 
@@ -195,7 +216,7 @@ CianwoodGym_EventScript_Yoshi::
 	end
 
 CianwoodGym_Text_BlackbeltYoshiSeen:
-	.string "My POKéMON and I are bound togeth-\n"
+	.string "My Pokémon and I are bound togeth-\n"
 	.string "er by friendship.\p"
 	.string "Our bond will never be broken!$"
 
@@ -204,7 +225,7 @@ CianwoodGym_Text_BlackbeltYoshiBeaten:
 
 CianwoodGym_Text_BlackbeltYoshiAfter:
 	.string "You seem to have a strong bond\n"
-	.string "with your POKéMON too!$"
+	.string "with your Pokémon too!$"
 
 CianwoodGym_EventScript_Lao::
 	trainerbattle_single TRAINER_LAO CianwoodGym_Text_BlackbeltLaoSeen, CianwoodGym_Text_BlackbeltLaoBeaten
@@ -218,7 +239,7 @@ CianwoodGym_Text_BlackbeltLaoBeaten:
 	.string "That's shocking!$"
 
 CianwoodGym_Text_BlackbeltLaoAfter:
-	.string "Fighting POKéMON are afraid of\n"
+	.string "Fighting Pokémon are afraid of\n"
 	.string "psychics…$"
 
 
@@ -244,12 +265,15 @@ CianwoodGym_EventScript_Lung::
 
 CianwoodGym_Text_BlackbeltLungSeen:
 	.string "My raging fists will shatter your\n"
-	.string "POKéMON!$"
+	.string "Pokémon!$"
 
 CianwoodGym_Text_BlackbeltLungBeaten:
 	.string "I got shattered!$"
 
 CianwoodGym_Text_BlackbeltLungAfter:
-	.string "My POKéMON lost…\n"
+	.string "My Pokémon lost…\n"
 	.string "My… my pride is shattered…$"
 
+Common_Machine_AskToWarp:
+    .string "Do you want to warp to\n"
+    .string "the Gym Leader?$"

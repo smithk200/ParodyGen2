@@ -1800,44 +1800,40 @@ SaffronCity_FightingDojoVIP_Text_Statue:
 	.string "FIGHTING DOJO VIP LOUNGE$"
 
 SaffronCity_FightingDojoVIP_Text_Falkner_Rematch:
-	.string "Congratulations on defeating\n"
-	.string "the ELITE 4!\p"
-	.string "I've been training my\n"
-	.string "FLYING-type POKéMON even harder.\p"
-	.string "Think you can take on the power\n"
-	.string "of the skies again?$"
+	.string "Hey, fucker!\p"
+	.string "So you beat the Elite 4, huh?\p"
+	.string "Well then.\p"
+	.string "My Food Pokémon are tougher than ever!\p"
+	.string "Our moves are all deep-fried!\p"
+	.string "Ready to take this all the way\n"
+	.string "to pound town?$"
 
 SaffronCity_FightingDojoVIP_Text_Falkner_RematchDefeat:
-	.string "Wow… You beat me again.\p"
-	.string "I'm going to train harder to\n"
-	.string "become the greatest bird master!$"
+	.string "Being here is such a\p"
+	.string "goddamn waste of time.\n"
+	.string "I'm going to have to train more!$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
-	.string "Wow, you're the JOHTO CHAMPION\n"
-	.string "now!\p"
-	.string "Your skills are truly impressive!\p"
-	.string "I've been busy with my research.\p"
-	.string "I'm ready to show you my new\n"
-	.string "findings.\p"
-	.string "Want to have a rematch with me?$"
+	.string "Wow, you're the Johto Champion now?\n"
+	.string "Cool!\p"
+	.string "Would you like to fight again?$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat:
-	.string "Wow, you must be an expert\n"
-	.string "trainer.\p"
-	.string "My research must not be\n"
-	.string "complete…$"
+	.string "Okay then!\p"
+	.string "You beat me!$"
 
 SaffronCity_FightingDojoVIP_Text_Whitney_Rematch:
-	.string "Hi! It's you!\p"
-	.string "Wow, JOHTO CHAMPION now?\p"
-	.string "You really are amazing!\p"
+	.string "Hello, {PLAYER}.\p"
+	.string "You're the Johto Champion now?\p"
+	.string "Impressive.\p"
+	.string "I expected nothing but the\n"
+	.string "best from you.\p"
 	.string "I want to see how strong you are.\p"
 	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Whitney_RematchDefeat:
-	.string "Waaaaah!\p"
-	.string "Waaaaah!\p"
-	.string "…Snivel, hic… …You meanie!$"
+	.string "Well played, {PLAYER}!\p"
+	.string "Couldn't have don it better myself!$"
 
 SaffronCity_FightingDojoVIP_Text_Morty_Rematch:
 	.string "Ah, the JOHTO CHAMPION! Good of\n"
@@ -1846,7 +1842,7 @@ SaffronCity_FightingDojoVIP_Text_Morty_Rematch:
 	.string "skill, but have you improved\l"
 	.string "since our last battle?\p"
 	.string "I've been training with my\n"
-	.string "GHOST-type POKéMON.\p"
+	.string "GHOST-type Pokémon.\p"
 	.string "Let's see if you can overcome\n"
 	.string "the shadows once again.\p"
 	.string "Want to have a rematch with me?$"
@@ -1858,26 +1854,26 @@ SaffronCity_FightingDojoVIP_Text_Morty_RematchDefeat:
 	.string "I envy you for that…$"
 
 SaffronCity_FightingDojoVIP_Text_Chuck_Rematch:
-	.string "WAHAHAH! JOHTO CHAMPION!\p"
-	.string "You've come back for more!\p"
-	.string "I see your skills have improved!\p"
-	.string "Ready to see who's stronger?$"
+	.string "Hello, {PLAYER}.\p"
+	.string "You've come back, I see.\p"
+	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Chuck_RematchDefeat:
-	.string "Wha? Huh? I lost? Again?$"
+	.string "Thank you for a wonderful match\p"
+	.string "I do hope we battle again.$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
-	.string "…Congratulations, JOHTO\n"
-	.string "CHAMPION.\p"
-	.string "You have become so strong…\p"
-	.string "I wonder if I have improved.\p"
-	.string "Would you like to test that?\p"
+	.string "Hey, champ!\p"
+	.string "Nice to have you back!\p"
+	.string "I spent many battles training\n"
+	.string "my Pokémon to their greatest potential.\p"
+	.string "Elisa helped me out with the tough bits.\p"
+	.string "Anyways, {PLAYER}!\p"
 	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat:
-	.string "…You are a better trainer than\n"
-	.string "me,\p"
-	.string "in both skill and kindness.$"
+	.string "Wow, champ!\n"
+	.string "You're really something else!$"
 
 SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "Ah, JOHTO CHAMPION!\p"
@@ -1922,7 +1918,7 @@ SaffronCity_FightingDojoVIP_Text_Brock_Rematch:
 	.string "Want to have a rematch with me?$"
 
 SaffronCity_FightingDojoVIP_Text_Brock_RematchDefeat:
-	.string "BROCK: Your POKéMON once again\n"
+	.string "BROCK: Your Pokémon once again\n"
 	.string "overcame my rock-hard defense…$"
 
 SaffronCity_FightingDojoVIP_Text_Misty_Rematch:
@@ -1971,7 +1967,7 @@ SaffronCity_FightingDojoVIP_Text_Sabrina_Rematch:
 
 SaffronCity_FightingDojoVIP_Text_Sabrina_RematchDefeat:
 	.string "SABRINA: Your love for your\n"
-	.string "POKéMON again overwhelmed my\l"
+	.string "Pokémon again overwhelmed my\l"
 	.string "psychic power…$"
 
 SaffronCity_FightingDojoVIP_Text_Janine_Rematch:

@@ -5927,7 +5927,9 @@ u16 GetBattleBGM(void)
                 if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2))
                     return MUS_DK_SUMMIT;
                 if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_2))
-                    return MUS_LOW_5;  
+                    return MUS_RAINBOW_ROAD;
+                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_2))
+                    return MUS_HEAVY_LIGHT;    
                 else
                     return MUS_VS_ELITE_FOUR;
             }
@@ -5944,7 +5946,7 @@ u16 GetBattleBGM(void)
                 return MUS_HG_VS_TRAINER;
             if (gSaveBlock2Ptr->optionsMusic == 1)
                 return MUS_DP_VS_TRAINER;
-            return MUS_VS_TRAINER;
+            return MUS_DP_VS_TRAINER;
         }
     }
     else
@@ -5953,7 +5955,7 @@ u16 GetBattleBGM(void)
                 return MUS_HG_VS_WILD;
         if (gSaveBlock2Ptr->optionsMusic == 1)
             return MUS_DP_VS_WILD;
-        return MUS_VS_WILD;
+        return MUS_DP_VS_WILD;
     }
 }
 

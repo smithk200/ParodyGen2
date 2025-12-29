@@ -34,6 +34,22 @@ keysplit french_horn, 36
 	split 0, 66
 	split 1, 108
 
+keysplit trumpet_2, 36
+	split 0, 78
+	split 1, 108
+
+keysplit alto_sax, 36
+	split 0, 64
+	split 1, 108
+
+keysplit tenor_sax, 36
+	split 0, 59
+	split 1, 108
+
+keysplit bari_sax, 36
+	split 0, 52
+	split 1, 108
+
 .set KeySplitTable6, . - 0    @ | 43 | 57 | 64 | 71 | 76 | 83 | 88
 	.byte 0  @  0
 	.byte 0  @  1

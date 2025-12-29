@@ -381,6 +381,15 @@
       "var": "VAR_CHERRYGROVE_CITY_STATE",
       "var_value": "2",
       "script": "Route30_EventScript_ElmCall_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route30NeedToFightJoeyTrigger"
     }
   ],
   "bg_events": [

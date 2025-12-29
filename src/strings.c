@@ -1366,7 +1366,7 @@ const u8 gText_Easy[] = _("Easy");
 const u8 gText_Hard[] = _("Hard");
 const u8 gText_Modern[] = _("MODERN");
 const u8 gText_OakTalk_Clefairy[] = _(
-    "MARY: Tonight on POKéMON TALK,\n"
+    "MARY: Tonight on Pokémon TALK,\n"
     "a rare moonlight moment!\l"
     "OAK: We're spotlighting the\l"
     "mystical CLEFAIRY!\l"
@@ -1395,7 +1395,7 @@ const u8 gText_OakTalk_Lapras[] = _(
 
 const u8 gText_OakTalk_Ampharos[] = _(
     "MARY: Welcome back, everyone!\n"
-    "Time for POKéMON TALK!\l"
+    "Time for Pokémon TALK!\l"
     "OAK: Let's shine a light on\l"
     "our friend AMPHAROS!\l"
     "Its bright tail glows through\l"
@@ -1534,8 +1534,8 @@ const u8 gText_NormalOption[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Normal");
 const u8 gText_EasyOption[]= _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Easy");
 const u8 gText_HardOption[]= _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Hard");
 // Nuzlocke strings
-const u8 gText_NuzlockeFirstEncounter[] = _("Alright, here's the first POKéMON\nof the area. Better make it count!\p");
-const u8 gText_NuzlockeDuplicate[] = _("We've already caught this POKéMON.\pThe Duplicate Clause lets us try\nfor another after this battle.\p");
+const u8 gText_NuzlockeFirstEncounter[] = _("Alright, here's the first Pokémon\nof the area. Better make it count!\p");
+const u8 gText_NuzlockeDuplicate[] = _("We've already caught this Pokémon.\pThe Duplicate Clause lets us try\nfor another after this battle.\p");
 const u8 gText_NuzlockeShiny[] = _("Oh wow, a Shiny!\pThe Shiny Clause lets us try to\ncatch this no matter what!\p");
 const u8 gText_TrainerCardNuzlockePokedex[] = _("NUZLOCKE POKéDEX");
 const u8 gText_HnSHardcore[]= _("HARDCORE NUZLOCKED!");

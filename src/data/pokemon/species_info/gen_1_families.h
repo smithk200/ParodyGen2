@@ -2420,6 +2420,90 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_RATTATA
 
+[SPECIES_RATTATA_JOEY] =
+    {
+        .baseHP        = 30,
+        .baseAttack    = 56,
+        .baseDefense   = 35,
+        .baseSpeed     = 72,
+        .baseSpAttack  = 25,
+        .baseSpDefense = P_UPDATED_STATS >= GEN_2 ? 35 : 25,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 255,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 51 : 57,
+        .evYield_Speed = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_WONDER_GUARD, ABILITY_GUTS, ABILITY_HUSTLE },
+        .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Rattata"),
+        .cryId = CRY_RATTATA,
+        .natDexNum = NATIONAL_DEX_RATTATA,
+        .categoryName = _("Mouse"),
+        .height = 3,
+        .weight = 35,
+        .description = COMPOUND_STRING(
+            "A Rattata is cautious in the extreme.\n"
+            "Even while it is asleep, it constantly\n"
+            "moves its ears and listens for danger.\n"
+            "It will make its nest anywhere."),
+        .pokemonScale = 481,
+        .pokemonOffset = 21,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Rattata,
+        .frontPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(32, 32) : MON_COORDS_SIZE(40, 40),
+        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 16 : 13,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 11),
+            ANIMCMD_FRAME(0, 11),
+            ANIMCMD_FRAME(1, 11),
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = P_GBA_STYLE_SPECIES_GFX ? ANIM_RAPID_H_HOPS : ANIM_H_JUMPS,
+        .backPic = gMonBackPic_Rattata,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 40) : MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 13 : 7,
+        .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
+        .palette = gMonPalette_Rattata,
+        .shinyPalette = gMonShinyPalette_Rattata,
+        .iconSprite = gMonIcon_Rattata,
+        .iconPalIndex = 2,
+#if P_GENDER_DIFFERENCES
+        .frontPicFemale = gMonFrontPic_RattataF,
+        .frontPicSizeFemale = MON_COORDS_SIZE(40, 40),
+        .backPicFemale = gMonBackPic_RattataF,
+        .backPicSizeFemale = MON_COORDS_SIZE(64, 56),
+#endif //P_GENDER_DIFFERENCES
+        .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
+        SHADOW(1, -3, SHADOW_SIZE_S)
+        FOOTPRINT(Rattata)
+        OVERWORLD(
+            sPicTable_Rattata,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Rattata,
+            gShinyOverworldPalette_Rattata
+        )
+        OVERWORLD_FEMALE(
+            sPicTable_RattataF,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following
+        )
+        .levelUpLearnset = sRattataLevelUpLearnset,
+        .teachableLearnset = sRattataTeachableLearnset,
+        .eggMoveLearnset = sRattataEggMoveLearnset,
+        .formSpeciesIdTable = sRattataFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_RATICATE}),
+    },
+
 #if P_FAMILY_SPEAROW
     [SPECIES_SPEAROW] =
     {

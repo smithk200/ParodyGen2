@@ -56,9 +56,9 @@ voicegroup291::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_trumpet, 255, 255, 0, 127
-	voice_directsound 60, 0, DirectSoundWaveData_trumpet, 255, 255, 0, 127
-	voice_directsound 60, 0, DirectSoundWaveData_trumpet, 255, 255, 0, 127
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 255, 0, 127
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 255, 0, 127
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 255, 0, 127
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

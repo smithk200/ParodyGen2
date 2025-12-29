@@ -4,6 +4,27 @@ GoldenrodCity_Gym_MapScripts::
 	.byte 0
 @Carrie, Bridget, Victoria, Samantha, gym guy
 
+GoldenrodCity_Gym_EventScript_Machine::
+    lock
+    goto_if_set FLAG_SOLVED_GOLDENROD_PUZZLE, GoldenrodCity_Gym_EventScript_MachineWantToWarp
+    setflag FLAG_SOLVED_GOLDENROD_PUZZLE
+    clearflag FLAG_HIDE_GOLDENROD_MACHINE
+    msgbox Common_Text_PlayerClearedPuzzle, MSGBOX_DEFAULT
+	closemessage
+    goto GoldenrodCity_Gym_EventScript_MachineWantToWarp
+    release
+    end
+
+GoldenrodCity_Gym_EventScript_MachineWantToWarp::
+	lock
+	faceplayer
+	msgbox Common_Machine_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_Machine_No
+	warp MAP_GOLDENROD_CITY_GYM2, 2, 4
+	release
+	end
+
 
 GoldenrodCity_Gym_EventScript_Carrie::
 	trainerbattle_single TRAINER_CARRIE GoldenrodCity_Gym_Text_LassCarrieSeen, GoldenrodCity_Gym_Text_LassCarrieBeaten
@@ -132,10 +153,10 @@ GoldenrodCity_Gym_EventScript_Statue2::
 	end
 
 GoldenrodCity_Gym_Text_GymStatue:
-	.string "GOLDENROD POKéMON GYM$"
+	.string "GOLDENROD Pokémon GYM$"
 
 GoldenrodCity_Gym_Text_GymStatueCertified:
-	.string "GOLDENROD TOWN POKéMON GYM\p"
+	.string "GOLDENROD TOWN Pokémon GYM\p"
 	.string "WHITNEY'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
@@ -205,7 +226,7 @@ GoldenrodCity_Gym_Text_WhitneyRematchDefeat:
     .string "…Snivel, hic… …You meanie!$"
 
 GoldenrodCity_Gym_Text_LassCarrieSeen:
-    .string "Don't let my POKéMON's cute looks\n"
+    .string "Don't let my Pokémon's cute looks\n"
     .string "fool you.\p"
     .string "They can whip you!$"
 
@@ -213,12 +234,12 @@ GoldenrodCity_Gym_Text_LassCarrieBeaten:
     .string "Darn… I thought you were weak…$"
 
 GoldenrodCity_Gym_Text_LassCarrieAfter:
-    .string "Do my POKéMON think I'm cute?$"
+    .string "Do my Pokémon think I'm cute?$"
 
 GoldenrodCity_Gym_Text_LassBridgetSeen:
-    .string "I like cute POKéMON better than\n"
-    .string "strong POKéMON.\p"
-    .string "But I have strong and cute POKéMON!$"
+    .string "I like cute Pokémon better than\n"
+    .string "strong Pokémon.\p"
+    .string "But I have strong and cute Pokémon!$"
 
 GoldenrodCity_Gym_Text_LassBridgetBeaten:
     .string "Oh, no, no, no!$"
@@ -259,9 +280,9 @@ GoldenrodCity_Gym_Text_BeautySamanthaAfter:
 GoldenrodCity_Gym_Text_GymGuide:
     .string "Yo! CHAMP in making!\p"
     .string "This GYM is home to WHITNEY, the\n"
-    .string "master of NORMAL-type POKéMON.\p"
+    .string "master of NORMAL-type Pokémon.\p"
     .string "Be cautious of her cute team.\p"
-    .string "Some of the POKéMON in this gym\n"
+    .string "Some of the Pokémon in this gym\n"
     .string "have the newly discovered FAIRY\l"
     .string "type as well.\p"
     .string "Check ROUTE 34 if you need a\n"

@@ -159,7 +159,11 @@
 #define TRAINER_PIC_ELITE_FOUR_JOY 141
 #define TRAINER_PIC_ELITE_FOUR_MACY 142
 #define TRAINER_PIC_ELITE_FOUR_SANS 143
-#define TRAINER_PIC_COUNT                 145
+#define TRAINER_PIC_LEADER_MATT 144
+#define TRAINER_PIC_LEADER_CLAY 145
+#define TRAINER_PIC_FRY 146
+#define TRAINER_PIC_LEADER_LARRY 147
+#define TRAINER_PIC_COUNT                 148
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

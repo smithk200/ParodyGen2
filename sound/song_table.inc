@@ -772,8 +772,8 @@ gSongTable::
 	song megalovania, 0, 0
 	song mus_pl_tv_end, 2, 2
 	song dk_summit, 0, 0
-	song mus_pl_title, 0, 0
-	song mus_pl_distortion_world, 0, 0
+	song heavy_light, 0, 0
+	song rainbow_road, 0, 0
 	song low_5, 0, 0
 	song mus_pl_b_hall, 0, 0
 	song mus_pl_b_castle, 0, 0

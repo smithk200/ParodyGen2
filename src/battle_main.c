@@ -1901,6 +1901,50 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     s32 i;
     u8 monsCount;
     u16 species, move; //tx_randomizer_and_challenges
+    u8 highest = 0;
+    u8 level = 0;
+    u8 reallevel = 0;
+	u8 fixedLVL = 0;
+    u8 min = 0;
+    u8 max = 0;
+    u8 range = 0;
+    u8 rand = 0;
+	{
+	if (GetMonData(&gPlayerParty[5], MON_DATA_SPECIES) != SPECIES_NONE)
+		fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[1], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[2], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[3], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[4], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[5], MON_DATA_LEVEL)) / 6;
+	else if ((GetMonData(&gPlayerParty[5], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gPlayerParty[4], MON_DATA_SPECIES) != SPECIES_NONE))
+			fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[1], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[2], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[3], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[4], MON_DATA_LEVEL)) / 5;
+		else if ((GetMonData(&gPlayerParty[4], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gPlayerParty[3], MON_DATA_SPECIES) != SPECIES_NONE))
+			fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[1], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[2], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[3], MON_DATA_LEVEL)) / 4;
+			else if ((GetMonData(&gPlayerParty[3], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gPlayerParty[2], MON_DATA_SPECIES) != SPECIES_NONE))
+				fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[1], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[2], MON_DATA_LEVEL)) / 3;
+				else if ((GetMonData(&gPlayerParty[2], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gPlayerParty[1], MON_DATA_SPECIES) != SPECIES_NONE))
+					fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL)+GetMonData(&gPlayerParty[1], MON_DATA_LEVEL)) / 2;
+					else if ((GetMonData(&gPlayerParty[1], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gPlayerParty[0], MON_DATA_SPECIES) != SPECIES_NONE))
+						fixedLVL = GetMonData(&gPlayerParty[0], MON_DATA_LEVEL);
+	}
+    {
+        min = fixedLVL-2;
+        max = fixedLVL;
+            range = max - min + 1;
+            rand = Random() % range;
+    }
+
+    if (min <=0)
+        min=1;
+    reallevel = min + rand;
+    if (reallevel > 100)
+        reallevel = 100; //making sure the level doesn't go above 100
+    if (reallevel < 1)
+        reallevel = 1; //making sure the level doesn't go below 1
+    u32 trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+
+    for (i = 0; i < CalculatePlayerPartyCount(); i++) 
+    {
+        level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        if (level > highest) 
+            highest = level; //a crude way of implementing a dynamic level system, but it works. The variable "highest" is the variable that stores the dynamic level data.
+    } 
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
@@ -1958,9 +2002,32 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 species = GetSpeciesRandomSeeded(partyData[i].species, 1, 0);
                 CreateMon(&party[i], species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             }
+            if (trainer->isDynamic == TRUE)
+                {
+                    highest = (highest + partyData[monIndex].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100; //making sure the level doesn't go above 100
+                    if (highest < 1)
+                        highest = 1; //making sure the level doesn't go below 1
+                    CreateMon(&party[i], partyData[monIndex].species, highest, 0, TRUE, personalityValue, otIdType, fixedOtId);
+                }
+            if (
+            (trainerClass == TRAINER_CLASS_LEADER)
+            || (trainerClass == TRAINER_CLASS_ROCKETA)
+            || (trainerClass == TRAINER_CLASS_RIVAL)
+            || (trainerClass == TRAINER_CLASS_ELITE_FOUR)
+            || (trainerClass == TRAINER_CLASS_PHILIP)
+            || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_1)
+            || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)
+            || (trainerClass == TRAINER_CLASS_KIMONO_GIRL)
+            || (trainerClass == TRAINER_CLASS_MYSTERY_MAN)
+            )
+            {
+                CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);  //trainer classes that are not dynamic leveled
+            }
             else
             {
-                CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+                CreateMon(&party[i], partyData[monIndex].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId); //every other trainer is dynamic leveled
             }
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[monIndex].heldItem);
 

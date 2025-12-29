@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CLAIR",
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
       "x": 20,
       "y": 5,
       "elevation": 0,
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BlackthornGym_EventScript_Clair",
+      "script": "BlackthornGym_EventScript_Machine",
       "flag": "0"
     },
     {
@@ -169,6 +169,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MACHINE",
+      "x": 20,
+      "y": 56,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Blackthorn_Gym_EventScript_MachineWantToWarp",
+      "flag": "FLAG_HIDE_BLACKTHORN_MACHINE"
     }
   ],
   "warp_events": [
@@ -178,6 +191,13 @@
       "elevation": 0,
       "dest_map": "MAP_BLACKTHORN_CITY",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 20,
+      "y": 57,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY_GYM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

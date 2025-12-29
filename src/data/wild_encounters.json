@@ -33804,63 +33804,63 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_LECHONK"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
-                "species": "SPECIES_MASCHIFF"
+                "min_level": 3,
+                "max_level": 6,
+                "species": "SPECIES_PAWMI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_NACLI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
-                "species": "SPECIES_SHROODLE"
-              },
-              {
-                "min_level": 4,
-                "max_level": 7,
-                "species": "SPECIES_SHROODLE"
-              },
-              {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_PAWMI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
+                "species": "SPECIES_SHROODLE"
+              },
+              {
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_PAWMI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
+                "species": "SPECIES_SHROODLE"
+              },
+              {
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_SMOLIV"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_NACLI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_NACLI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_PAWMI"
               },
               {
-                "min_level": 4,
-                "max_level": 7,
+                "min_level": 3,
+                "max_level": 6,
                 "species": "SPECIES_SMOLIV"
               }
             ]
@@ -47497,7 +47497,7 @@
               {
                 "min_level": 54,
                 "max_level": 58,
-                "species": "SPECIES_KROOKODILE"
+                "species": "SPECIES_ARCTIBAX"
               },
               {
                 "min_level": 54,
