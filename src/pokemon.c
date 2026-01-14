@@ -5880,6 +5880,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
+        case TRAINER_CLASS_PHILIP:
+            return MUS_VS_FRY;
         case TRAINER_CLASS_TEAM_ROCKET:
             if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_ROCKET;

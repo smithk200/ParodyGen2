@@ -19,7 +19,7 @@ Route104_OnTransition:
 	end
 
 Route104_EventScript_ShowOrHideWhiteHerbFlorist::
-	goto_if_unset FLAG_MET_PRETTY_PETAL_SHOP_OWNER, Route104_EventScript_HideWhiteHerbFlorist
+	goto_if_unset FLAG_DEFEATED_FRY_ECRUTEAK, Route104_EventScript_HideWhiteHerbFlorist
 	goto_if_unset FLAG_GARBAGEFLAG, Route104_EventScript_HideWhiteHerbFlorist
 	clearflag FLAG_GARBAGEFLAG
 	return

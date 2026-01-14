@@ -2604,7 +2604,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellsprout
-Level: 6
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CARLENE ===
@@ -2795,15 +2795,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Oddish
-Level: 7
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sunkern
-Level: 8
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 9
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MILLER ===
@@ -3530,15 +3530,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellsprout
-Level: 3
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Hoppip
-Level: 4
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENNY ===
@@ -5501,11 +5501,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Hoppip
-Level: 7
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 7
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PAT ===
@@ -7790,15 +7790,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NARD ===
@@ -9676,7 +9676,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellsprout
-Level: 6
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ELLEN ===
@@ -11179,15 +11179,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sunkern
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bellsprout
-Level: 3
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRAD ===
@@ -11643,3 +11643,53 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Cubone
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_FRY_ECRUTEAK ===
+Name: J.  Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Obstagoon (M) @ Chople Berry
+Level: 38
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Seaking (M) @ Rindo Berry
+Level: 39
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Horn Attack
+- Waterfall
+- Flail
+- Aqua Ring
+
+Ampharos (M) @ Rindo Berry
+Level: 39
+Ability: Lightning Rod
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Expert Belt
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang

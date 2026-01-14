@@ -95,12 +95,12 @@ CianwoodCity_Text_ChucksWifeEasierToFly:
 	.string "You crossed the sea to get here?\p"
 	.string "That must have been hard.\p"
 	.string "It would be much easier if your\n"
-	.string "Pokémon knew how to FLY...$"
+	.string "Pokémon knew how to Fly…$"
 
 CianwoodCity_Text_ChucksWifeBeatChuck:
-	.string "But you can't use FLY without this\n"
-	.string "city's GYM BADGE.\p"
-	.string "If you beat the GYM LEADER here,\n"
+	.string "But you can't use Fly without this\n"
+	.string "city's Gym Badge.\p"
+	.string "If you beat the Gym Leader here,\n"
 	.string "come see me.\p"
 	.string "I'll have a nice gift for you.$"
 
@@ -109,15 +109,17 @@ CianwoodCity_Text_ChucksWifeGiveHM:
 	.string "Then you should take this HM.$"
 
 CianwoodCity_Text_ChucksWifeFlySpeech:
-	.string "Teach FLY to your Pokémon.\p"
-	.string "You will be able to FLY instantly\n"
+	.string "Teach Fly to your Pokémon.\p"
+	.string "You will be able to Fly instantly\n"
 	.string "to anywhere you have visited.$"
 
 CianwoodCity_Text_ChucksWifeChubby:
-	.string "My husband lost to you, so he needs\n"
-	.string "to train harder.\p"
-	.string "That's good, since he was getting\n"
-	.string "a little chubby.$"
+	.string "It's a shame how my husband was ousted\n"
+	.string "out of his Gym…\p"
+	.string "The Johto League wanted younger, faster,\n"
+	.string "stronger people to compete in the League…\p"
+	.string "I think there's two kids in the Elite Four,\n"
+	.string "if I'm not mistaken.$"
 
 CianwoodCity_EventScript_Youngster::
 	lock
@@ -128,8 +130,8 @@ CianwoodCity_EventScript_Youngster::
 	end
 
 CianwoodCity_Text_Youngster:
-	.string "If you use FLY, you can get back\n"
-	.string "to OLIVINE instantly.$"
+	.string "If you use Fly, you can get back\n"
+	.string "to Olivine instantly.$"
 
 CianwoodCity_EventScript_PokefanM::
 	lock
@@ -143,7 +145,7 @@ CianwoodCity_Text_PokefanM:
 	.string "Boulders to the north of town can\n"
 	.string "be crushed.\p"
 	.string "They may be hiding something.\p"
-	.string "Your Pokémon could use ROCK SMASH\n"
+	.string "Your Pokémon could use Rock Smash\n"
 	.string "to break them.$"
 
 CianwoodCity_EventScript_Lass::
@@ -155,8 +157,8 @@ CianwoodCity_EventScript_Lass::
 	end
 
 CianwoodCity_Text_Lass:
-	.string "CHUCK, the GYM LEADER, spars with\n"
-	.string "his fighting Pokémon.$"
+	.string "Bea, the Gym Leader, spars with\n"
+	.string "her fighting Pokémon.$"
 
 CianwoodCity_EventScript_SuicuneTrigger::
 	lock
@@ -308,7 +310,7 @@ CianwoodCity_EventScript_CitySign::
 	end
 
 CianwoodCity_Text_Sign:
-	.string "CIANWOOD CITY\p"
+	.string "Cianwood City\p"
 	.string "A Port Surrounded by Rough Seas$"
 
 CianwoodCity_EventScript_GymSign::
@@ -319,9 +321,9 @@ CianwoodCity_EventScript_GymSign::
 	end
 
 CianwoodCity_Text_GymSign:
-	.string "CIANWOOD CITY Pokémon GYM\p"
-	.string "LEADER: CHUCK\p"
-	.string "His Roaring Fists Do the Talking$"
+	.string "Cianwood City Pokémon Gym\p"
+	.string "Leader: Bea\p"
+	.string "The kickboxing battle girl!$"
 
 CianwoodCity_EventScript_Pharmacy::
 	lock
@@ -332,7 +334,7 @@ CianwoodCity_EventScript_Pharmacy::
 
 CianwoodCity_Text_PharmacySign:
 	.string "500 Years of Tradition\p"
-	.string "CIANWOOD CITY PHARMACY\p"
+	.string "Cianwood City Pharmacy\p"
 	.string "We Await Your Medicinal Queries$"
 
 CianwoodCity_EventScript_CaveSign::

@@ -109,16 +109,16 @@
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
-#define FLAG_GARBAGEFLAG2                   0x5E 
+#define FLAG_GARBAGEFLAG2                    0x5E 
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x61
 #define FLAG_SOLVED_AZALEA_PUZZLE            0x62
-#define FLAG_SOLVED_GOLDENROD_PUZZLE          0x63  // Used for solving the Gym puzzles.
+#define FLAG_SOLVED_GOLDENROD_PUZZLE         0x63  // Used for solving the Gym puzzles.
 #define FLAG_SOLVED_ECRUTEAK_PUZZLE          0x64 //
-#define FLAG_SOLVED_CIANWOOD_PUZZLE             0x65 //
+#define FLAG_SOLVED_CIANWOOD_PUZZLE          0x65 //
 #define FLAG_SOLVED_MAHOGANY_PUZZLE          0x66 //
-#define FLAG_SOLVED_BLACKTHORN_PUZZLE           0x67 //
+#define FLAG_SOLVED_BLACKTHORN_PUZZLE        0x67 // 6 7... please no
 
 #define FLAG_OLD_AMBER_ALTERING_CAVE         0x68 
 
@@ -133,7 +133,7 @@
 #define FLAG_FINITE_TMS                      0x71
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0x72 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_RECEIVED_METEORITE              0x73
-#define FLAG_ADVENTURE_STARTED               0x74 // elivered egg to professor ELM
+#define FLAG_ADVENTURE_STARTED               0x74 // delivered egg to professor elm
 #define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0x75 // Set when Team Magma is defeated at Mossdeep's Space Center.
 #define FLAG_MET_HIDDEN_POWER_GIVER          0x76
 
@@ -145,8 +145,8 @@
 #define FLAG_RECEIVED_HM_DIVE                0x7B
 #define FLAG_REGISTER_RIVAL_POKENAV          0x7C
 #define FLAG_DEFEATED_RIVAL_ROUTE_104        0x7D
-#define FLAG_DEFEATED_WALLY_VICTORY_ROAD     0x7E
-#define FLAG_MET_PRETTY_PETAL_SHOP_OWNER     0x7F
+#define FLAG_HIDE_FRY_ECRUTEAK               0x7E
+#define FLAG_DEFEATED_FRY_ECRUTEAK           0x7F
 #define FLAG_ENABLE_ROXANNE_FIRST_CALL       0x80 // Set after defeating Brawly. This will activate a call with Roxanne in order to register her.
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
@@ -460,8 +460,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_DAILY_BEAT_SILVER                    0x1AA // Unused Flag
-#define FLAG_RECEIVED_MACHOP                    0x1AB // Unused Flag
+#define FLAG_DAILY_BEAT_SILVER                    0x1AA
+#define FLAG_RECEIVED_MACHOP                    0x1AB
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC //HnS
 #define FLAG_BATTLED_DEOXYS                  0x1AD //HnS
@@ -707,30 +707,30 @@
 #define FLAG_VISITED_ROUTE10  0x294 //no collision
 #define FLAG_AUTO_HMS  0x295 // auto hms
 #define FLAG_EXP_SHARE_OPTION  0x296 // exp. share
-#define FLAG_WONDERTRADE1  0x297 // Unused Flag
-#define FLAG_WONDERTRADE2  0x298 // Unused Flag
-#define FLAG_WONDERTRADE3  0x299 // Unused Flag
-#define FLAG_VISITED_BATTLE_FRONTIER  0x29A // Unused Flag
-#define FLAG_FRONTIER_SECOND_CLERK  0x29B // Unused Flag
-#define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT  0x29C // Unused Flag
-#define FLAG_SYS_BUG_CONTEST_MODE  0x29D // Unused Flag
-#define FLAG_NUZLOCKE      0x29E // Unused Flag
-#define FLAG_RAN_FROM_BATTLE  0x29F // Unused Flag
-#define FLAG_NAMED_SILVER  0x2A0 // Unused Flag
-#define FLAG_RANDOMIZER    0x2A1 // Unused Flag
-#define FLAG_RECEIVED_BADGE_5  0x2A2 // Unused Flag
-#define FLAG_RECEIVED_BADGE_6  0x2A3 // Unused Flag
-#define FLAG_RECEIVED_BADGE_7  0x2A4 // Unused Flag
-#define FLAG_HIDE_AZALEA_MACHINE  0x2A5 // Unused Flag
-#define FLAG_HIDE_GOLDENROD_MACHINE  0x2A6 // Unused Flag
-#define FLAG_HIDE_ECRUTEAK_MACHINE  0x2A7 // Unused Flag
-#define FLAG_HIDE_CIANWOOD_MACHINE  0x2A8 // Unused Flag
-#define FLAG_HIDE_MAHOGANY_MACHINE  0x2A9 // Unused Flag
-#define FLAG_HIDE_BLACKTHORN_MACHINE  0x2AA // Unused Flag
-#define FLAG_HIDE_FRY_OLIVINE  0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
+#define FLAG_WONDERTRADE1  0x297
+#define FLAG_WONDERTRADE2  0x298 
+#define FLAG_WONDERTRADE3  0x299 
+#define FLAG_VISITED_BATTLE_FRONTIER  0x29A 
+#define FLAG_FRONTIER_SECOND_CLERK  0x29B 
+#define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT  0x29C 
+#define FLAG_SYS_BUG_CONTEST_MODE  0x29D 
+#define FLAG_NUZLOCKE      0x29E 
+#define FLAG_RAN_FROM_BATTLE  0x29F 
+#define FLAG_NAMED_SILVER  0x2A0 
+#define FLAG_RANDOMIZER    0x2A1 
+#define FLAG_RECEIVED_BADGE_5  0x2A2 
+#define FLAG_RECEIVED_BADGE_6  0x2A3 
+#define FLAG_RECEIVED_BADGE_7  0x2A4 
+#define FLAG_HIDE_AZALEA_MACHINE  0x2A5 
+#define FLAG_HIDE_GOLDENROD_MACHINE  0x2A6 
+#define FLAG_HIDE_ECRUTEAK_MACHINE  0x2A7 
+#define FLAG_HIDE_CIANWOOD_MACHINE  0x2A8 
+#define FLAG_HIDE_MAHOGANY_MACHINE  0x2A9 
+#define FLAG_HIDE_BLACKTHORN_MACHINE  0x2AA 
+#define FLAG_HIDE_FRY_OLIVINE  0x2AB 
+#define FLAG_TERA_ORB  0x2AC
+#define FLAG_TERA_ORB_NO_COST  0x2AD
+#define FLAG_DYNAMAX  0x2AE
 #define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag

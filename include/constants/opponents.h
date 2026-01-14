@@ -70,7 +70,7 @@
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
 #define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
+#define TRAINER_FRY_ECRUTEAK                 67 //why did it have to be this one...
 #define TRAINER_RICKY_3                      68
 #define TRAINER_RICKY_4                      69
 #define TRAINER_RICKY_5                      70
@@ -78,7 +78,7 @@
 #define TRAINER_PARKER                       72
 #define TRAINER_GEORGE                       73
 #define TRAINER_BERKE                        74
-#define TRAINER_ELAINE                      75
+#define TRAINER_ELAINE                       75
 #define TRAINER_VINCENT                      76
 #define TRAINER_LEROY                        77
 #define TRAINER_WILTON_1                     78

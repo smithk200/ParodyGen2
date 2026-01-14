@@ -313,25 +313,22 @@ OlivineCity_Text_Sailor2:
 
 OlivineCity_Text_Sign:
 	.string "Olivine City\p"
-	.string "Where genetically modified\n"
-	.string "vine-olives are grown.$"
+	.string "The city of olives and vines.$"
 
 OlivineCity_Text_PortSign:
-	.string "OLIVINE PORT\n"
-	.string "FAST SHIP PIER$"
+	.string "Olivine Port\n"
+	.string "Fast Shipping Here!$"
 
 OlivineCity_Text_GymSign:
-	.string "OLIVINE CITY Pokémon GYM\n"
-	.string "LEADER: Matt\p"
-	.string "The Steel-Clad Defense Girl$"
+	.string "Olivine Pokémon Gym\n"
+	.string "Leader: Matt\p"
+	.string "The Boxing Champ$"
 
 OlivineCity_Text_LighthouseSign:
-	.string "OLIVINE LIGHTHOUSE\n"
-	.string "Also known as the GLITTER\l"
-	.string "LIGHTHOUSE$"
+	.string "Olivine Lighthouse$"
 
 OlivineCity_Text_BattleTowerSign:
-	.string "BATTLE TOWER AHEAD\n"
+	.string "Battle Tower Ahead\n"
 	.string "Opening Now!$"
 
 OlivineCity_Text_Machoke:

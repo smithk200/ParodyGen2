@@ -77,6 +77,7 @@
 #include "constants/weather.h"
 #include "cable_club.h"
 #include "nuzlocke.h"
+#include "constants/region_map_sections.h"
 
 extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
@@ -2022,6 +2023,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)
             || (trainerClass == TRAINER_CLASS_KIMONO_GIRL)
             || (trainerClass == TRAINER_CLASS_MYSTERY_MAN)
+            || (trainerClass == TRAINER_CLASS_SAGE && gMapHeader.regionMapSectionId == MAPSEC_SPROUT_TOWER)
             )
             {
                 CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);  //trainer classes that are not dynamic leveled
