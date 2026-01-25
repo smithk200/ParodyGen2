@@ -718,9 +718,9 @@
 #define FLAG_RAN_FROM_BATTLE  0x29F 
 #define FLAG_NAMED_SILVER  0x2A0 
 #define FLAG_RANDOMIZER    0x2A1 
-#define FLAG_RECEIVED_BADGE_5  0x2A2 
-#define FLAG_RECEIVED_BADGE_6  0x2A3 
-#define FLAG_RECEIVED_BADGE_7  0x2A4 
+#define FLAG_RECEIVED_BADGE_5  0x2A2 //general flags for "the three"
+#define FLAG_RECEIVED_BADGE_6  0x2A3 //general flags for "the three"
+#define FLAG_RECEIVED_BADGE_7  0x2A4 //general flags for "the three"
 #define FLAG_HIDE_AZALEA_MACHINE  0x2A5 
 #define FLAG_HIDE_GOLDENROD_MACHINE  0x2A6 
 #define FLAG_HIDE_ECRUTEAK_MACHINE  0x2A7 
@@ -731,7 +731,7 @@
 #define FLAG_TERA_ORB  0x2AC
 #define FLAG_TERA_ORB_NO_COST  0x2AD
 #define FLAG_DYNAMAX  0x2AE
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
+#define FLAG_USED_ITEM  0x2AF
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
@@ -1363,9 +1363,9 @@
 #define FLAG_BADGE02_GET                             (SYSTEM_FLAGS + 0x8)
 #define FLAG_BADGE03_GET                             (SYSTEM_FLAGS + 0x9)
 #define FLAG_BADGE04_GET                             (SYSTEM_FLAGS + 0xA)
-#define FLAG_BADGE05_GET                             (SYSTEM_FLAGS + 0xB)
-#define FLAG_BADGE06_GET                             (SYSTEM_FLAGS + 0xC)
-#define FLAG_BADGE07_GET                             (SYSTEM_FLAGS + 0xD)
+#define FLAG_BADGE05_GET                             (SYSTEM_FLAGS + 0xB)  //specifically Bea's badge
+#define FLAG_BADGE06_GET                             (SYSTEM_FLAGS + 0xC)  //specifically Matt's badge
+#define FLAG_BADGE07_GET                             (SYSTEM_FLAGS + 0xD)  //specifically Clay's badge
 #define FLAG_BADGE08_GET                             (SYSTEM_FLAGS + 0xE)
 #define NUM_BADGES                                   (1 + FLAG_BADGE08_GET - FLAG_BADGE01_GET)
 

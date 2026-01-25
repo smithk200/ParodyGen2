@@ -3589,9 +3589,9 @@ Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRIE_2 ===
-Name: Bugsy
+Name: Brie
 Class: Leader
-Pic: Leader Bugsy
+Pic: Leader Brie
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
@@ -10865,6 +10865,7 @@ Pic: Leader Damian
 Gender: Male
 Music: Male
 Double Battle: No
+Items: Potion / Potion
 AI: Smart Trainer
 Mugshot: Blue
 
@@ -10894,7 +10895,7 @@ Dynamax Level: 5
 - Tackle
 - Defense Curl
 - Lick
-- Curse
+- Icy Wind
 
 === TRAINER_BEA_1 ===
 Name: Bea
@@ -11042,7 +11043,7 @@ Modifier: -2
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 128 SpA / 128 SpD / 252 Spe
 Ability: Sweet Veil
-- Misty Explosion
+- Alluring Voice
 - Energy Ball
 - Reflect
 - Light Screen

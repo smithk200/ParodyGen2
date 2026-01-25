@@ -45,20 +45,40 @@ RadioTower1F_EventScript_Whitney::
 	release
 	end
 
+RadioTower1F_EventScript_Lady::
+	lock
+	faceplayer
+	msgbox RadioTower1F_Text_Lady, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 RadioTower1F_Text_Whitney1::
-	.string "WHITNEY: Hi!\p"
-	.string "My name is WHITNEY!\p"
+	.string "Norman: Hey, I'm Norman!\p"
+	.string "Normal as they go, I say.\p"
 	.string "I heard about the Quiz to win a\n"
-	.string "RADIO, so I came here to get\l"
-	.string "one...\p"
-	.string "But this Quiz is so hard!$"
+	.string "Radio, so I came here to get\l"
+	.string "one.\p"
+	.string "But this Quiz is quite hard.\p"
+	.string "Harder than anything in my life.$"
 
 RadioTower1F_Text_Whitney2::
-	.string "WHITNEY: Wow, you did it!\p"
+	.string "Norman: Wow, you did it!\p"
 	.string "I thought the answer to the third\n"
 	.string "question was surely apricorns!\l"
 	.string "Oops!\p"
-	.string "It's time to go back to the GYM!$"
+	.string "It's time to go back to the Gym!$"
+
+RadioTower1F_Text_Lady::
+	.string "I'm a teacher.\p"
+	.string "Phonological and phonemic awareness\n"
+	.string "sound like they're similar things, but\l"
+	.string "don't let that trip you up!\p"
+	.string "Just remember…\p"
+	.string "Phonemic awareness is more narrow and\n"
+	.string "more specific than phonological awareness.\p"
+	.string "“Phonemic” has the word “phoneme” in it,\n"
+	.string "“phonological” does not.$"
 
 RadioTower1F_EventScript_Reception::
 	lock
@@ -88,7 +108,7 @@ RadioTower1F_EventScript_ReceptionQuiz1::
 
 RadioTower1F_EventScript_ReceptionQuiz2::
 	msgbox RadioTower1F_Text_QuizQuestion2, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz3
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz3
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -112,7 +132,55 @@ RadioTower1F_EventScript_ReceptionQuiz4::
 
 RadioTower1F_EventScript_ReceptionQuiz5::
 	msgbox RadioTower1F_Text_QuizQuestion5, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionGiveRadio
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz6
+	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz6::
+	msgbox RadioTower1F_Text_QuizQuestion6, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz7
+	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz7::
+	msgbox RadioTower1F_Text_QuizQuestion7, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz8
+	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz8::
+	msgbox RadioTower1F_Text_QuizQuestion8, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz9
+	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz9::
+	msgbox RadioTower1F_Text_QuizQuestion9, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz10
+	msgbox RadioTower1F_Text_HitYouWithARuler, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz10::
+	msgbox RadioTower1F_Text_QuizQuestion10, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz11
+	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_EventScript_ReceptionQuiz11::
+	msgbox RadioTower1F_Text_QuizQuestion11, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionGiveRadio
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -172,8 +240,8 @@ RadioTower1F_Text_ReceptionistNoTours:
 RadioTower1F_Text_RadioCardWomanOfferQuiz:
     .string "We have a special quiz campaign on\n"
     .string "right now.\p"
-    .string "Answer five questions correctly to\n"
-    .string "win a RADIO.\p"
+    .string "Answer eleven questions correctly to\n"
+    .string "win a Radio.\p"
     .string "You and your Pokémon can use it to\n"
     .string "play music anytime, anywhere.\p"
     .string "Would you like to take the quiz?$"
@@ -187,33 +255,80 @@ RadioTower1F_Text_QuizQuestion2:
     .string "Correct!\n"
     .string "Question 2:\p"
     .string "Is this statement correct?\p"
-    .string "You can't buy a BERRY at a MART.$"
+    .string "Gym Leader Brie Dynamaxes\n"
+	.string "her Pokémon.$"
 
 RadioTower1F_Text_QuizQuestion3:
     .string "Bull's-eye!\n"
     .string "Question 3:\p"
-    .string "Kurt, the POKéBALL creator, uses\n"
+    .string "Kurt, the Pokéball creator, uses\n"
 	.string "apricorns as ingredients?$"
 
 RadioTower1F_Text_QuizQuestion4:
     .string "So far so good!\n"
     .string "Question 4:\p"
-    .string "Is FALKNER the VIOLET GYM LEADER\n"
-    .string "who uses bird Pokémon?$"
+    .string "Is Damian the Violet Gym Leader\n"
+    .string "who uses food Pokémon?$"
 
 RadioTower1F_Text_QuizQuestion5:
     .string "Wow! Right again!\n"
+    .string "Question 5:\p"
+    .string "Do Goldenrod Game Corner's slots\n"
+    .string "have Charmander on their reels?$"
+
+RadioTower1F_Text_QuizQuestion6:
+    .string "Amazing!\n"
+	.string "Now they're going to get harder…\p"
+    .string "Question 6:\p"
+    .string "Is the derivative of 14x squared plus\n"
+    .string "25x plus 69,420\l"
+	.string "28x plus 25 plus 69,420 or not?$"
+
+RadioTower1F_Text_QuizQuestion7:
+    .string "Wonderful!\n"
+    .string "Question 7:\p"
+    .string "Does Google's screen shake if\n"
+	.string "you type in “67”.$"
+
+RadioTower1F_Text_QuizQuestion8:
+    .string "You are on a roll!\n"
+    .string "Question 8:\p"
+    .string "Does Philip J. Fry use a Zamazenta\n"
+    .string "in battle?$"
+
+RadioTower1F_Text_QuizQuestion9:
+    .string "Wowza!\n"
+    .string "Question 9:\p"
+    .string "Does kfjadklfgjersiog asdjfkiajds\n"
+    .string "Basfkljivj fksd?\p"
+	.string "How about Qjuifdjeswa ksdfjl\n"
+	.string "kwerjhfvwerjukhvsjvsdiklofjvi\l"
+	.string "pohukijtylohdfhbbtgfynuy\l"
+	.string "kghewuirfghjw45 gitu845y89 7?\p"
+	.string "If you get this wrong, I reserve\n"
+	.string "the right to hit you with a ruler.$"
+
+RadioTower1F_Text_QuizQuestion10:
+    .string "Well, don't know how you\n"
+	.string "made it past that one!\p"
+    .string "Question 10:\p"
+    .string "Is phonological awareness the\n"
+	.string "ability for a student to manipulate\l"
+	.string "phonemes in a word?$"
+
+RadioTower1F_Text_QuizQuestion11:
+    .string "Nice work!\n"
     .string "Here's the final question:\p"
-    .string "Do GOLDENROD GAME CORNER's slots\n"
-    .string "have CHARMANDER on their reels?$"
+    .string "Can you catch a Rookidee on\n"
+    .string "Route 30?$"
 
 RadioTower1F_Text_QuizWin:
     .string "Bingo! You got it!\n"
     .string "Congratulations!\p"
-    .string "Here's your prize, a RADIO!$"
+    .string "Here's your prize, a Radio!$"
 
 RadioTower1F_Text_PokegearRadio:
-    .string "{PLAYER}'s POKéGEAR can now double as\n"
+    .string "{PLAYER}'s Pokégear can now double as\n"
     .string "a radio!$"
 
 RadioTower1F_Text_TuneIn:
@@ -224,24 +339,30 @@ RadioTower1F_Text_WrongAnswer:
     .string "Sorry, but you got it wrong.\p"
     .string "Please try again!$"
 
+RadioTower1F_Text_HitYouWithARuler:
+	.string "REE\p"
+	.string "(hits you with a ruler)\p"
+	.string "You'll have to start over again,\n"
+	.string "sonny!$"
+
 RadioTower1F_Text_DeclineQuiz:
     .string "Oh. I see. Please see me if you\n"
     .string "change your mind.$"
 
 RadioTower1F_Text_Lass:
-    .string "BEN is a fabulous DJ.\p"
+    .string "Ben is a fabulous DJ.\p"
     .string "His sweet voice makes me melt!$"
 
 RadioTower1F_Text_Youngster:
-    .string "I love MARY, from Pokémon TALK.\p"
+    .string "I love Mary, from Pokémon Talk.\p"
     .string "I only know what she sounds like,\n"
     .string "though.$"
 
 RadioTower1F_Text_GruntM3Seen:
     .string "We've finally taken over the\n"
-    .string "RADIO TOWER!\p"
+    .string "Radio Tower!\p"
     .string "Now everyone will get to experience\n"
-    .string "the true terror of TEAM ROCKET!\p"
+    .string "the true terror of Team Rocket!\p"
     .string "We'll show you how scary we are!$"
 
 RadioTower1F_Text_GruntM3Beaten:
@@ -253,11 +374,11 @@ RadioTower1F_Text_GruntM3After:
     .string "warn the others…$"
 
 RadioTower1F_Text_Directory:
-    .string "1F RECEPTION\n"
-    .string "2F SALES\p"
-    .string "3F PERSONNEL\n"
-    .string "4F PRODUCTION\p"
-    .string "5F DIRECTOR'S OFFICE$"
+    .string "1F Reception\n"
+    .string "2F Sales\p"
+    .string "3F Personnel\n"
+    .string "4F Production\p"
+    .string "5F Director's Office$"
 
 
 GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::

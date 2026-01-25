@@ -25,7 +25,7 @@ static bool32 IsFieldMoveUnlocked_RockSmash(void)
 
 static bool32 IsFieldMoveUnlocked_Strength(void)
 {
-    return FlagGet(FLAG_BADGE06_GET);
+    return FlagGet(FLAG_DEFEATED_OLIVINE_CITY_GYM);
 }
 
 static bool32 IsFieldMoveUnlocked_Surf(void)
@@ -35,12 +35,12 @@ static bool32 IsFieldMoveUnlocked_Surf(void)
 
 static bool32 IsFieldMoveUnlocked_Fly(void)
 {
-    return FlagGet(FLAG_BADGE05_GET);
+    return FlagGet(FLAG_DEFEATED_CIANWOOD_GYM);
 }
 
 static bool32 IsFieldMoveUnlocked_Dive(void)
 {
-    return FlagGet(FLAG_BADGE07_GET);
+    return FlagGet(FLAG_DEFEATED_MAHOGANY_TOWN_GYM);
 }
 
 static bool32 IsFieldMoveUnlocked_Waterfall(void)

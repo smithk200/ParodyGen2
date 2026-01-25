@@ -122,26 +122,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_GOLDENROD_CITY_STATE",
-      "var_value": "3",
-      "script": "GoldenrodCity_Gym_EventScript_Trigger"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_GOLDENROD_CITY_STATE",
-      "var_value": "4",
-      "script": "GoldenrodCity_Gym_EventScript_Trigger"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

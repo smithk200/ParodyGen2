@@ -13,9 +13,9 @@ u32 GetCurrentLevelCap(void)
         {FLAG_BADGE02_GET, 22},
         {FLAG_BADGE03_GET, 27},
         {FLAG_BADGE04_GET, 38},
-        {FLAG_RECEIVED_BADGE_5, 44}, //using different flags to make the level cap more fair
-        {FLAG_RECEIVED_BADGE_6, 48},
-        {FLAG_RECEIVED_BADGE_7, 52},
+        {FLAG_BADGE05_GET, 44},
+        {FLAG_BADGE06_GET, 48},
+        {FLAG_BADGE07_GET, 52},
         {FLAG_BADGE08_GET, 54},
         {FLAG_IS_CHAMPION, 70},
     };

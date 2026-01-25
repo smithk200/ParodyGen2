@@ -394,6 +394,11 @@ extern const u16 gBattleEnvironmentPalette_StadiumLeader[];
 extern const u32 gBattleEnvironmentTiles_Plain_2[];
 extern const u32 gBattleEnvironmentTilemap_Plain_2[];
 extern const u16 gBattleEnvironmentPalette_Frontier_2[];
+extern const u16 gBattleEnvironmentPalette_StadiumWill_2[];
+extern const u16 gBattleEnvironmentPalette_StadiumKoga_2[];
+extern const u16 gBattleEnvironmentPalette_StadiumBruno_2[];
+extern const u16 gBattleEnvironmentPalette_StadiumKaren_2[];
+extern const u16 gBattleEnvironmentPalette_StadiumLance_2[];
 
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];

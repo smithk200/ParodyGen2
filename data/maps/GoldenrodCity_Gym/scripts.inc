@@ -21,7 +21,7 @@ GoldenrodCity_Gym_EventScript_MachineWantToWarp::
 	msgbox Common_Machine_AskToWarp, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_Machine_No
-	warp MAP_GOLDENROD_CITY_GYM2, 2, 4
+	warp MAP_GOLDENROD_CITY_GYM2, 3, 4
 	release
 	end
 
@@ -153,12 +153,14 @@ GoldenrodCity_Gym_EventScript_Statue2::
 	end
 
 GoldenrodCity_Gym_Text_GymStatue:
-	.string "GOLDENROD Pokémon GYM$"
+	.string "Goldenrod City Pokémon Gym\p"
+	.string "Norman's Certified Trainers:\n"
+	.string "{RIVAL}, Fry$"
 
 GoldenrodCity_Gym_Text_GymStatueCertified:
-	.string "GOLDENROD TOWN Pokémon GYM\p"
-	.string "WHITNEY'S CERTIFIED TRAINERS:\n"
-	.string "{PLAYER}$"
+	.string "Goldenrod City Pokémon Gym\p"
+	.string "Norman's Certified Trainers:\n"
+	.string "{RIVAL}, Fry, {PLAYER}$"
 
 GoldenrodCity_Gym_Text_NormanIntro:
     .string "Hello, {PLAYER}.\p"
@@ -237,18 +239,17 @@ GoldenrodCity_Gym_Text_LassCarrieAfter:
     .string "Do my Pokémon think I'm cute?$"
 
 GoldenrodCity_Gym_Text_LassBridgetSeen:
-    .string "I like cute Pokémon better than\n"
-    .string "strong Pokémon.\p"
-    .string "But I have strong and cute Pokémon!$"
+    .string "I'm going to a manager meeting\n"
+    .string "after I challenge you.$"
 
 GoldenrodCity_Gym_Text_LassBridgetBeaten:
-    .string "Oh, no, no, no!$"
+    .string "Ugh, okay…$"
 
 GoldenrodCity_Gym_Text_LassBridgetAfter:
-    .string "I'm trying to beat WHITNEY, but…\n"
-    .string "It's depressing.\p"
-    .string "I'm okay! If I lose, I'll just try\n"
-    .string "harder next time!$"
+    .string "Hope all goes well when you\n"
+    .string "defeat Norman.\p"
+    .string "Just go on to that machine over\n"
+    .string "there, just like last time!$"
 
 GoldenrodCity_Gym_Text_BridgetWhitneyCries:
     .string "Oh, no. You made WHITNEY cry.\p"
@@ -271,19 +272,20 @@ GoldenrodCity_Gym_Text_BeautySamanthaSeen:
     .string "you down!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaBeaten:
-    .string "No! Oh, MEOWTH, I'm so sorry!$"
+    .string "No! Oh, Meowth, I'm so sorry!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaAfter:
-    .string "I taught MEOWTH moves for taking on\n"
+    .string "I taught Meowth moves for taking on\n"
     .string "any type…$"
 
 GoldenrodCity_Gym_Text_GymGuide:
     .string "Yo! CHAMP in making!\p"
-    .string "This GYM is home to WHITNEY, the\n"
+    .string "This GYM is home to Norman, the\n"
     .string "master of NORMAL-type Pokémon.\p"
-    .string "Be cautious of her cute team.\p"
+    .string "Be cautious of his Slaking, it can\n"
+	.string "really pack a powerful punch!\p"
     .string "Some of the Pokémon in this gym\n"
-    .string "have the newly discovered FAIRY\l"
+    .string "have the newly discovered Fairy\l"
     .string "type as well.\p"
     .string "Check ROUTE 34 if you need a\n"
     .string "FIGHTING-type or POISON-type.$"

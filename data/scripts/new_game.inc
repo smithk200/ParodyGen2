@@ -201,6 +201,7 @@ EventScript_ResetAllMapFlags::
 	clearflag FLAG_TERA_ORB
 	clearflag FLAG_TERA_ORB_NO_COST	
 	clearflag FLAG_DYNAMAX
+	clearflag FLAG_USED_ITEM
 	setflag FLAG_HIDE_AZALEA_MACHINE
 	setflag FLAG_HIDE_GOLDENROD_MACHINE
 	setflag FLAG_HIDE_ECRUTEAK_MACHINE
