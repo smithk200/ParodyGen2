@@ -770,7 +770,7 @@ gSongTable::
 	song mus_dp_slots_unused, 0, 0
 	song mus_pl_fight_area_day, 0, 0
 	song megalovania, 0, 0
-	song mus_pl_tv_end, 2, 2
+	song stick_figures, 0, 0
 	song dk_summit, 0, 0
 	song heavy_light, 0, 0
 	song rainbow_road, 0, 0

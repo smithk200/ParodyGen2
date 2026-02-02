@@ -51,7 +51,14 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(TRAILBLAZE) \
+    F(STOMPING_TANTRUM) \
+    F(X_SCISSOR) \
+    F(DAZZLING_GLEAM) \
+    F(CRUNCH) \
+    F(BULLDOZE) \
+    F(GRASS_KNOT)
 
 #define FOREACH_HM(F) \
     F(CUT) \

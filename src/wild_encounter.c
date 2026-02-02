@@ -28,6 +28,7 @@
 #include "constants/layouts.h"
 #include "constants/weather.h"
 #include "constants/pokemon.h"
+#include "constants/region_map_sections.h"
 #include "nuzlocke.h"
 
 // Global variable to track if current wild Pokemon is catchable in Nuzlocke
@@ -529,6 +530,20 @@ void CreateWildMon(u16 species, u8 level)
             gender = MON_FEMALE;
 
         CreateMonWithGenderNatureLetter(&gEnemyParty[0], species, level, USE_RANDOM_IVS, gender, PickWildMonNature(), 0);
+    }
+    if (gMapHeader.regionMapSectionId == MAPSEC_ICE_PATH && (NUM_BADGES == 5))
+    {
+        level += 4;
+        if (level > 100)
+            level = 100;
+        CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
+    }
+    else if (gMapHeader.regionMapSectionId == MAPSEC_ICE_PATH && (NUM_BADGES >= 6))
+    {
+        level += 8;
+        if (level > 100)
+            level = 100;
+        CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
     }
     else
     {

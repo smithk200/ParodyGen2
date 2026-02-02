@@ -1,5 +1,5 @@
 /*
-Trainers and their parties defined with Competetive Syntax.
+Trainers and their parties defined with Competitive Syntax.
 Compatible with Pokemon Showdown exports.
 https://github.com/smogon/pokemon-showdown/blob/master/sim/TEAMS.md
 
@@ -29,7 +29,7 @@ Optional (but still recommended) fields for trainers:
     - Is Dynamic (Yes/No): Determines if the trainer uses a dynamic leveling system, which in this case defaults to the player's highest-leveled mon.
 
 Pokemon are then specified using the Showdown Export format.
-If a field is not specified, it will use it's default value.
+If a field is not specified, it will use its default value.
 
 Required fields for Pokemon:
     - Species (Either as SPECIES_ABRA or Abra)
@@ -2945,7 +2945,7 @@ AI: Smart Trainer
 Mugshot: Purple
 
 Dragapult @ Leftovers
-Level: 67
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 Nature: Adamant
@@ -2955,7 +2955,7 @@ Nature: Adamant
 - Dragon Claw
 
 Dragonite @ Silk Scarf
-Level: 67
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 Ability: Multiscale
@@ -2966,7 +2966,7 @@ Nature: Adamant
 - Dragon Claw
 
 Charizard @ Charcoal
-Level: 68
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP/ 252 SpA / 252 Spe
 - Flamethrower
@@ -2975,7 +2975,7 @@ EVs: 6 HP/ 252 SpA / 252 Spe
 - Solar Beam
 
 Baxcalibur @ Loaded Dice
-Level: 68
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 6 SpD / 252 Spe
 Ability: Thermal Exchange
@@ -2987,7 +2987,7 @@ Nature: Adamant
 - Dragon Dance
 
 Dracovish @ Choice Band
-Level: 70
+Level: 71
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 SpD / 252 Spe
 Ability: Strong Jaw
@@ -2998,7 +2998,7 @@ Adamant Nature
 - Outrage
 
 Dragonite @ Dragon Fang
-Level: 71
+Level: 72
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
 Ability: Multiscale
@@ -3021,7 +3021,7 @@ Cherubi
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Skwovet
+Vanillite
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11645,17 +11645,167 @@ Cubone
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FRY_ECRUTEAK ===
-Name: J.  Fry
+/*
+With Philip J. Fry, he uses the starter that is weak to the player's starter.
+The mon that the player uses is what is used for the trainer name.
+Player chose Cyndaquil, Fry chose Chikorita
+Player chose Chikorita, Fry chose Totodile
+Player chose Totodile, Fry chose Cyndaquil
+*/
+
+=== TRAINER_FRY_ROUTE_29 ===
+Name: J. Fry
 Class: Philip
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
+Items: Potion
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Pink
 
-Obstagoon (M) @ Chople Berry
+Seymour (Zigzagoon) (M)
+Level: 6
+Ability: Quick Feet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Tail Whip
+- Pin Missile
+- Tackle
+- Cut
+
+=== TRAINER_FRY_CYNDAQUIL_ROUTE_34 ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Linoone) (M) @ Chople Berry
+Level: 20
+Ability: Quick Feet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Tail Whip
+- Pin Missile
+- Rock Smash
+- Slash
+
+Bayleef (M) @ Sitrus Berry
+Level: 21
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Disarming Voice
+- Razor Leaf
+- Leech Seed
+- Tail Whip
+
+Zamazenta @ Muscle Band
+Level: 23
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+- Slash
+- Metal Claw
+- Howl
+- Bite
+
+=== TRAINER_FRY_CHIKORITA_ROUTE_34 ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Linoone) (M) @ Chople Berry
+Level: 20
+Ability: Quick Feet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Tail Whip
+- Pin Missile
+- Rock Smash
+- Slash
+
+Croconaw (M) @ Sitrus Berry
+Level: 21
+Ability: Torrent
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Ice Fang
+- Bite
+- Water Gun
+- Scary Face
+
+Zamazenta @ Muscle Band
+Level: 23
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+- Slash
+- Metal Claw
+- Howl
+- Bite
+
+=== TRAINER_FRY_TOTODILE_ROUTE_34 ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Linoone) (M) @ Chople Berry
+Level: 20
+Ability: Quick Feet
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Tail Whip
+- Pin Missile
+- Rock Smash
+- Slash
+
+Quilava (M) @ Sitrus Berry
+Level: 21
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Flame Wheel
+- Quick Attack
+- Leer
+- Aerial Ace
+
+Zamazenta @ Muscle Band
+Level: 23
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+- Slash
+- Metal Claw
+- Howl
+- Bite
+
+=== TRAINER_FRY_CYNDAQUIL_ECRUTEAK ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
 Level: 38
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -11665,19 +11815,19 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Counter
 - Night Slash
 
-Seaking (M) @ Rindo Berry
+Meganium (M) @ Occa Berry
 Level: 39
-Ability: Lightning Rod
+Ability: Overgrow
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
-- Horn Attack
-- Waterfall
-- Flail
-- Aqua Ring
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Giga Drain
+- Bulldoze
+- Body Slam
+- Reflect
 
 Ampharos (M) @ Rindo Berry
 Level: 39
-Ability: Lightning Rod
+Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
 - Thunderbolt
@@ -11685,7 +11835,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Ice Punch
 - Cotton Guard
 
-Zamazenta @ Expert Belt
+Zamazenta @ Muscle Band
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
@@ -11694,3 +11844,491 @@ Tera Type: Steel
 - Iron Head
 - Iron Defense
 - Ice Fang
+
+=== TRAINER_FRY_CHIKORITA_ECRUTEAK ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 38
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Feraligatr (M) @ Rindo Berry
+Level: 39
+Ability: Torrent
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Crunch
+- Waterfall
+- Breaking Swipe
+- Screech
+
+Ampharos (M) @ Rindo Berry
+Level: 39
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Muscle Band
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang
+
+=== TRAINER_FRY_TOTODILE_ECRUTEAK ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 38
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Typhlosion (M) @ Passho Berry
+Level: 39
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Shadow Ball
+- Solar Beam
+- Rock Tomb
+
+Ampharos (M) @ Rindo Berry
+Level: 39
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Muscle Band
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang
+
+=== TRAINER_FRY_CYNDAQUIL_BLACKTHORN ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 48
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Meganium (M) @ Occa Berry
+Level: 50
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Giga Drain
+- Bulldoze
+- Body Slam
+- Reflect
+
+Mew (M) @ Wise Glasses
+Level: 50
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Psychic
+- Dazzling Gleam
+- Nasty Plot
+
+Ampharos (M) @ Rindo Berry
+Level: 51
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Muscle Band
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang
+
+=== TRAINER_FRY_CHIKORITA_BLACKTHORN ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 49
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Feraligatr (M) @ Rindo Berry
+Level: 39
+Ability: Torrent
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Crunch
+- Waterfall
+- Breaking Swipe
+- Screech
+
+Ampharos (M) @ Rindo Berry
+Level: 39
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Muscle Band
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang
+
+=== TRAINER_FRY_TOTODILE_BLACKTHORN ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Hyper Potion / Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 49
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Counter
+- Night Slash
+
+Typhlosion (M) @ Passho Berry
+Level: 39
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Shadow Ball
+- Solar Beam
+- Rock Tomb
+
+Mew @ Wise Glasses
+Level: 39
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Ampharos (M) @ Rindo Berry
+Level: 39
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
+Zamazenta @ Muscle Band
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Slash
+- Iron Head
+- Iron Defense
+- Ice Fang
+
+=== TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 66
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Stomping Tantrum
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Leftovers
+Level: 67
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Basculegion (M) @ Rindo Berry
+Level: 67
+Ability: Adaptability
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Head Smash
+- Double Edge
+- Phantom Force
+- Crunch
+
+Mew @ Wise Glasses
+Level: 67
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Surf
+- Thunderbolt
+- Nasty Plot
+
+Meganium (M) @ Salac Berry
+Level: 68
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Leaf Storm
+- Synthesis
+- Earthquake
+- Hyper Beam
+
+Zamazenta @ Rusted Shield
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat
+
+=== TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 66
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Leftovers
+Level: 67
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Magmortar (M) @ Passho Berry
+Level: 67
+Ability: Vital Spirit
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Flamethrower
+- Hyper Beam
+- Poison Jab
+- Scary Face
+
+Mew @ Wise Glasses
+Level: 67
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Ice Beam
+- Thunderbolt
+- Nasty Plot
+
+Feraligatr (M) @ Sitrus Berry
+Level: 68
+Ability: Torrent
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Outrage
+- Liquidation
+- Crunch
+- Rock Tomb
+
+Zamazenta @ Rusted Shield
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat
+
+=== TRAINER_FRY_TOTODILE_POKEMON_LEAGUE ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 66
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Thunder Punch
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Leftovers
+Level: 67
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Gogoat (M) @ Muscle Band
+Level: 67
+Ability: Sap Sipper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Horn Leech
+- Earthquake
+- Megahorn
+- Bulk Up
+
+Mew @ Wise Glasses
+Level: 67
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Ice Beam
+- Thunderbolt
+- Nasty Plot
+
+Typhlosion (M) @ Sitrus Berry
+Level: 68
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Solar Beam
+- Play Rough
+- Protect
+
+Zamazenta @ Rusted Shield
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat

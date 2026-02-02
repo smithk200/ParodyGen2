@@ -56,6 +56,7 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	end
 
 Route30_EventScript_Youngster_Joey::
+	clearflag FLAG_FRY_ROUTE_29
 	goto_if_set FLAG_NUZLOCKE, Route30_EventScript_Youngster_JoeyNuzlocke
 	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE

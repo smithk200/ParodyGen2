@@ -24,8 +24,12 @@ Gate_EcruteakCity_Route38_EventScript_EnterRoom::
 Gate_EcruteakCity_Route38_EventScript_PhilipJFryIntro::
 	goto_if_set FLAG_DEFEATED_FRY_ECRUTEAK, Gate_EcruteakCity_Route38_PhilipJFryExit
 	msgbox Gate_EcruteakCity_Route38_TextPhilipJFryIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_FRY_ECRUTEAK, Gate_EcruteakCity_Route38_TextPhilipJFryDefeat
-	setflag FLAG_DEFEATED_FRY_ECRUTEAK
+	goto_if_eq VAR_STARTER_MON, 0, EcruteakCity_Fry_Battle_Cyndaquil
+	goto_if_eq VAR_STARTER_MON, 1, EcruteakCity_Fry_Battle_Totodile
+	goto_if_eq VAR_STARTER_MON, 2, EcruteakCity_Fry_Battle_Chikorita
+	end
+
+EcruteakCity_Fry_AfterBattle::
 	msgbox Gate_EcruteakCity_Route38_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
 	giveitem ITEM_TERA_ORB
 	setflag FLAG_TERA_ORB
@@ -51,7 +55,25 @@ Gate_EcruteakCity_Route38_PhilipJFryExit::
 	releaseall
 	end
 
+EcruteakCity_Fry_Battle_Cyndaquil::
+	trainerbattle_no_intro TRAINER_FRY_CYNDAQUIL_ECRUTEAK, Gate_EcruteakCity_Route38_TextPhilipJFryDefeat
+	setflag FLAG_DEFEATED_FRY_ECRUTEAK
+	goto EcruteakCity_Fry_AfterBattle
+
+EcruteakCity_Fry_Battle_Totodile::
+	trainerbattle_no_intro TRAINER_FRY_TOTODILE_ECRUTEAK, Gate_EcruteakCity_Route38_TextPhilipJFryDefeat
+	setflag FLAG_DEFEATED_FRY_ECRUTEAK
+	goto EcruteakCity_Fry_AfterBattle
+
+EcruteakCity_Fry_Battle_Chikorita::
+	trainerbattle_no_intro TRAINER_FRY_CHIKORITA_ECRUTEAK, Gate_EcruteakCity_Route38_TextPhilipJFryDefeat
+	setflag FLAG_DEFEATED_FRY_ECRUTEAK
+	goto EcruteakCity_Fry_AfterBattle
+
 Gate_EcruteakCity_Route38_PhilipJFryIsNotThere::
+	end
+
+CommonScript_End::
 	end
 
 Gate_EcruteakCity_Route38_Movement_PhilipJFry:
@@ -92,11 +114,11 @@ Route38_Text_EcruteakGateOfficer:
 
 Gate_EcruteakCity_Route38_TextPhilipJFryIntro:
 	.string "Hi, {PLAYER}!\n"
-	.string "Hope you're doing well!\n"
+	.string "Hope you're doing well!\p"
 	.string "I got done with facing Rick and Morty\n"
 	.string "a while ago. I'm just doing some training\l"
 	.string "before I reach Olivine City.\p"
-	.string "Rick and Morty were tough, though!\p"
+	.string "Rick and Morty were tough, though!\n"
 	.string "I was not expecting that Skeledirge!\p"
 	.string "But I'm still ready to battle!\p"
 	.string "Ready?\p"

@@ -8,7 +8,7 @@ RockTunnel_B1F_OnTransition:
 	end
 
 RockTunnel_B1F_EventScript_ItemFacade::
-	finditem ITEM_TM_FACADE
+	finditem ITEM_TM_X_SCISSOR
 	end
 
 RockTunnel_B1F_EventScript_Elixir::

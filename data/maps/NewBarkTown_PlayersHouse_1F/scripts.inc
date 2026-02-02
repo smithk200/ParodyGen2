@@ -42,6 +42,7 @@ NewBarkTown_PlayersHouse_1F_EventScript_MomsFriend::
 NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck::
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomLeaving, MSGBOX_DEFAULT
 	setflag FLAG_MOM_VISITED
+	clearflag FLAG_FRY_ROUTE_29
 	clearflag FLAG_HIDE_ROUTE_30_NPCS
 	setvar VAR_NEWBARK_TOWN_STATE, 5
 	release

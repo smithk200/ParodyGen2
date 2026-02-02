@@ -1934,7 +1934,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
 
     if (min <=0)
         min=1;
-    reallevel = min + rand;
+    reallevel = (min + rand -1);
     if (reallevel > 100)
         reallevel = 100; //making sure the level doesn't go above 100
     if (reallevel < 1)
@@ -2023,6 +2023,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)
             || (trainerClass == TRAINER_CLASS_KIMONO_GIRL)
             || (trainerClass == TRAINER_CLASS_MYSTERY_MAN)
+            || (trainerClass == TRAINER_CLASS_CHAMPION)
             || (trainerClass == TRAINER_CLASS_SAGE && gMapHeader.regionMapSectionId == MAPSEC_SPROUT_TOWER)
             )
             {

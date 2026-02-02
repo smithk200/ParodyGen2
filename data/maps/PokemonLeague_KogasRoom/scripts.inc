@@ -62,7 +62,7 @@ PokemonLeague_KogasRoom_Text_RematchBefore:
     .string "Show me how you've grown!$"
 
 PokemonLeague_KogasRoom_Text_Before:
-    .string "Hideo-ho, neighbor!\p"
+    .string "Hidey-ho, neighbor!\p"
     .string "I am Ned of the Elite Four.\p"
     .string "I live in the shadow of\n"
 	.string "God himself.\p"

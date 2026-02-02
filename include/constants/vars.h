@@ -209,7 +209,7 @@
 #define VAR_NUZLOCKE_CATCHES_2                           0x40BD // Nuzlocke: Track successful catches in routes/areas (32 bits)
 #define VAR_NUZLOCKE_CATCHES_3                           0x40BE // Nuzlocke: Track successful catches in routes/areas (32 bits)
 #define VAR_NUZLOCKE_CATCHES_4                           0x40BF // Nuzlocke: Track successful catches in routes/areas (32 bits)
-#define VAR_SOOTOPOLIS_MYSTERY_EVENTS_STATE              0x40C0
+#define VAR_FRY_BLACKTHORN                               0x40C0 //unused var
 #define VAR_TRICK_HOUSE_PRIZE_PICKUP                     0x40C1
 #define VAR_PACIFIDLOG_TM_RECEIVED_DAY                   0x40C2
 #define VAR_VICTORY_ROAD_1F_STATE                        0x40C3

@@ -8820,6 +8820,16 @@
       "secondary_tileset": "gTileset_EcruteakCity_Gym",
       "border_filepath": "data/layouts/EcruteakCity_Gym2/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_Gym2/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_BEFORE_CHAMPION",
+      "name": "PokemonLeague_BeforeChampion_Layout",
+      "width": 13,
+      "height": 20,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_PokemonLeague",
+      "border_filepath": "data/layouts/PokemonLeague_BeforeChampion/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_BeforeChampion/map.bin"
     }
   ]
 }

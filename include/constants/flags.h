@@ -732,15 +732,15 @@
 #define FLAG_TERA_ORB_NO_COST  0x2AD
 #define FLAG_DYNAMAX  0x2AE
 #define FLAG_USED_ITEM  0x2AF
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
-#define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
+#define FLAG_HIDE_FRY_POKEMON_LEAGUE  0x2B0
+#define FLAG_DEFEATED_FRY_POKEMON_LEAGUE  0x2B1
+#define FLAG_FRY_ROUTE_29  0x2B2
+#define FLAG_FRY_GIVE_TM_ROUTE_29  0x2B3
+#define FLAG_FRY_ROUTE_34  0x2B4
+#define FLAG_FRY_GIVE_TM_ROUTE_34  0x2B5
+#define FLAG_HIDE_GYM_BOY  0x2B6
+#define FLAG_FRY_BLACKTHORN  0x2B7
+#define FLAG_FRY_GIVE_TM_BLACKTHORN  0x2B8
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag

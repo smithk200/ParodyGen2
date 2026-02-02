@@ -61,6 +61,40 @@ Route34_EventScript_Kate::
 	msgbox Route34_Text_CooltrainerKate_After, MSGBOX_AUTOCLOSE
 	end
 
+Route34_EventScript_Fry::
+	goto_if_eq VAR_STARTER_MON, 0, Route34_Fry_Battle_Cyndaquil
+	goto_if_eq VAR_STARTER_MON, 1, Route34_Fry_Battle_Totodile
+	goto_if_eq VAR_STARTER_MON, 2, Route34_Fry_Battle_Chikorita
+	end
+
+Route34_Fry_Battle_Cyndaquil::
+	trainerbattle_single TRAINER_FRY_CYNDAQUIL_ROUTE_34, Route34_Text_PhilipJFryIntro, Route34_Text_PhilipJFryDefeat, Route34_PhilipJFryGiveTM
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_34, Route34_PhilipJFry_EndingSpeech
+	goto Route34_PhilipJFryGiveTM
+
+Route34_Fry_Battle_Totodile::
+	trainerbattle_single TRAINER_FRY_TOTODILE_ROUTE_34, Route34_Text_PhilipJFryIntro, Route34_Text_PhilipJFryDefeat, Route34_PhilipJFryGiveTM
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_34, Route34_PhilipJFry_EndingSpeech
+	goto Route34_PhilipJFryGiveTM
+
+Route34_Fry_Battle_Chikorita::
+	trainerbattle_single TRAINER_FRY_CHIKORITA_ROUTE_34, Route34_Text_PhilipJFryIntro, Route34_Text_PhilipJFryDefeat, Route34_PhilipJFryGiveTM
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_34, Route34_PhilipJFry_EndingSpeech
+	goto Route34_PhilipJFryGiveTM
+
+Route34_PhilipJFryGiveTM::
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_34, Route34_PhilipJFry_EndingSpeech
+	giveitem ITEM_TM_ICE_BEAM
+	setflag FLAG_FRY_GIVE_TM_ROUTE_34
+	msgbox Route34_Text_PhilipJFry_ExplainIceBeam, MSGBOX_DEFAULT
+	closemessage
+	goto Route34_PhilipJFry_EndingSpeech
+
+Route34_PhilipJFry_EndingSpeech::
+	msgbox Route34_Text_PhilipJFry_EndingSpeech, MSGBOX_DEFAULT
+	closemessage
+	end
+
 Route34_EventScript_Sign1::
 	lock
 	msgbox Route34_Text_Sign_Route34, MSGBOX_SIGN
@@ -168,20 +202,24 @@ Route34_Text_PokefanBrandon_After:
 	.string "That confounded me to no end!$"
 
 Route34_Text_Sign_IlexForest:
-	.string "ILEX FOREST\n"
-	.string "THROUGH THE GATE$"
+	.string "Ilex Forest\n"
+	.string "Through the Gate$"
 
 Route34_Text_Sign_Route34:
-	.string "ROUTE 34\n"
-	.string "GOLDENROD CITY - AZALEA TOWN\p"
-	.string "ILEX FOREST SOMEWHERE BETWEEN$"
+	.string "Route 34\n"
+	.string "No Rule 34 on these premises!\p"
+	.string "Goldenrod City - Azalea Town\p"
+	.string "Ilex Forest somewhere between$"
 
 Route34_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "BERRY trees grow new BERRIES\n"
-	.string "several times a day.\p"
-	.string "Note which trees bear which\n"
-	.string "BERRIES.$"
+	.string "Trainer Tips!\p"
+	.string "When working a job, be sure\n"
+	.string "to find out if there's a union\l"
+	.string "you can join.\p"
+	.string "Sure, union dues can be around\n"
+	.string "thirty to fifty dollars, but they\l"
+	.string "will cover your back in case you get\l"
+	.string "in trouble.$"
 
 Route34_Text_CooltrainerIrene_Seen:
 	.string "IRENE: Kyaaah! Someone found us!$"
@@ -231,5 +269,39 @@ Route34_Text_CooltrainerKate_After:
 
 
 Route34_Text_Sign_DayCare:
-	.string "DAY-CARE\p"
-	.string "LET US RAISE YOUR Pokémon FOR YOU!$"
+	.string "Pokémon Day Care\p"
+	.string "Gain EXP just by simply walking!$"
+
+Route34_Text_PhilipJFryIntro:
+	.string "Philip J. Fry: Hi there!\p"
+	.string "I'm going to face the Gym Leader\n"
+	.string "of Goldenrod City pretty soon.\p"
+	.string "I've heard he's pretty tough!\n"
+	.string "…And he's from Hoenn?\p"
+	.string "Why, oh why did they have to\n"
+	.string "recruit a leader from Hoenn, the\l"
+	.string "most boring region ever to exist?\p"
+	.string "Oh well.\p"
+	.string "I'm here to test my strength against you\n"
+	.string "before I face him.$"
+
+Route34_Text_PhilipJFryDefeat:
+	.string "I need to train my Pokémon\n"
+	.string "up some more!$"
+	
+Route34_Text_PhilipJFry_ExplainIceBeam:
+	.string "This TM is Ice Beam.\p"
+	.string "It will shoot a ray of ice at\n"
+	.string "your foes.\p"
+	.string "There's also a chance it\n"
+	.string "can freeze them solid!$"
+	
+Route34_Text_PhilipJFry_EndingSpeech:
+	.string "Well, I'm going to train here\n"
+	.string "on Route 34 some more before\l"
+	.string "fighting Norman.\p"
+	.string "If he's anything like he was back\n"
+	.string "in New Hoenn, he's going to be\l"
+	.string "one tough cookie!\p"
+	.string "Good luck!$"
+	

@@ -1044,8 +1044,16 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             StringCopy(gStringVar4, gText_SoldOut);
         else
             StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
+        if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
+        {
+        x = GetStringRightAlignXOffset(FONT_SHORT_NARROW, gStringVar4, 120);
+        AddTextPrinterParameterized4(windowId, FONT_SHORT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
+        }
+        else
+        {
         x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
         AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
+        }
     }
 }
 
@@ -1160,13 +1168,28 @@ static void BuyMenuInitWindows(void)
 
 static void BuyMenuPrint(u8 windowId, const u8 *text, u8 x, u8 y, s8 speed, u8 colorSet)
 {
+    if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
+    {
+    AddTextPrinterParameterized4(windowId, FONT_SHORT, x, y, 0, 0, sShopBuyMenuTextColors[colorSet], speed, text);
+    }
+    else
+    {
     AddTextPrinterParameterized4(windowId, FONT_NORMAL, x, y, 0, 0, sShopBuyMenuTextColors[colorSet], speed, text);
+    }
 }
 
 static void BuyMenuDisplayMessage(u8 taskId, const u8 *text, TaskFunc callback)
 {
+        if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
+    {
+    DisplayMessageAndContinueTask(taskId, WIN_MESSAGE, 10, 14, FONT_SHORT, GetPlayerTextSpeedDelay(), text, callback);
+    ScheduleBgCopyTilemapToVram(0);
+    }
+    else
+    {
     DisplayMessageAndContinueTask(taskId, WIN_MESSAGE, 10, 14, FONT_NORMAL, GetPlayerTextSpeedDelay(), text, callback);
     ScheduleBgCopyTilemapToVram(0);
+    }
 }
 
 static void BuyMenuDrawGraphics(void)

@@ -84,7 +84,50 @@ GoldenrodDeptStore5_EventScript_Receptionist_Already::
 	release
 	end
 
+GoldenrodCity_DepartmentStore_5F_EventScript_ClerkRight::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE03_GET, GoldenrodCity_DepartmentStore_5F_EventScript_ClerkRight_DefeatedNorman
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart GoldenrodCity_DepartmentStore_5F_TMs
+	msgbox Text_PleaseComeAgain_BeforeNorman, MSGBOX_DEFAULT
+	release
+	end
 
+GoldenrodCity_DepartmentStore_5F_EventScript_ClerkRight_DefeatedNorman::
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart GoldenrodCity_DepartmentStore_5F_TMs_AfterNorman
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+GoldenrodCity_DepartmentStore_5F_TMs:
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_SAFEGUARD
+	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_LIGHT_SCREEN
+	pokemartlistend
+
+	.align 2
+GoldenrodCity_DepartmentStore_5F_TMs_AfterNorman:
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_DAZZLING_GLEAM
+	.2byte ITEM_TM_BULLDOZE
+	.2byte ITEM_TM_GRASS_KNOT
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_SAFEGUARD
+	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_LIGHT_SCREEN
+	pokemartlistend
+
+Text_PleaseComeAgain_BeforeNorman:
+	.string "Please come again!\p"
+	.string "If you defeat the Gym Leaders,\n"
+	.string "we can sell more TMs to you!$"
 
 GoldenrodDeptStore_Text_5FReceptionistOhYourMon:
     .string "Hello. Oh, your Pokémon…$"

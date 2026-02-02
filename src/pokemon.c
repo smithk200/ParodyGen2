@@ -5881,6 +5881,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_PHILIP:
+            if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_POKEMON_LEAGUE) \
+                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE))
+                    return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
         case TRAINER_CLASS_TEAM_ROCKET:
             if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)

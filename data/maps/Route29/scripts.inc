@@ -157,6 +157,27 @@ Route29_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
 
+Route29_EventScript_Fry::
+	trainerbattle_single TRAINER_FRY_ROUTE_29, Route29_Text_FrySeen, Route29_Text_FryBeaten
+	goto Route29_EventScript_FryPostBattle
+
+Route29_EventScript_FryPostBattle::
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_29, Route29_EventScript_FryPostBattle2
+	msgbox Route29_Text_FryAfter, MSGBOX_AUTOCLOSE
+	call_if_unset FLAG_FRY_GIVE_TM_ROUTE_29, Route30_EventScript_Item_A_TM
+	end
+
+Route30_EventScript_Item_A_TM::
+	giveitem ITEM_TM_TRAILBLAZE
+	setflag FLAG_FRY_GIVE_TM_ROUTE_29
+	msgbox Route30_Text_FryExplainTrailblaze, MSGBOX_DEFAULT
+	return
+
+Route29_EventScript_FryPostBattle2::
+	msgbox Route29_Text_FryPostBattle2, MSGBOX_DEFAULT
+	closemessage
+	end
+
 Route29_Text_OldMan1:
 	.string "Pokémon hide in the grass.\n"
 	.string "Who knows when they'll pop out…$"
@@ -241,6 +262,42 @@ Route29_Text_TuscanyTuesday:
 	.string "children.$"
 
 Route29_Text_Sign1:
-	.string "ROUTE 29\p"
-	.string "CHERRYGROVE CITY - NEW BARK TOWN$"
+	.string "Route 29\p"
+	.string "Cherrygrove City - New Bark Town$"
 
+Route29_Text_FrySeen:
+	.string "Hello!\p"
+	.string "I come from the future!$"
+
+Route29_Text_FryBeaten:
+	.string "You beat me, huh?\n"
+	.string "Well played!$"
+
+Route29_Text_FryAfter:
+	.string "I'm getting the feeling\n"
+	.string "I'm going to see you more often as\l"
+	.string "we travel around Johto.\p"
+	.string "I heard the League's got new Gym Leaders!\p"
+	.string "Falkner's no longer in Violet City,\n"
+	.string "Bugsy's no longer in Azalea Town,\l"
+	.string "and from what I've heard, almost all\l"
+	.string "the Gym Leaders and Elite Four\l"
+	.string "got replaced, except for one.\p"
+	.string "But I don't remember who it was...\p"
+	.string "Hey, before you go, take this!$"
+
+Route30_Text_FryExplainTrailblaze:
+	.string "This TM- it contains Trailblaze.\n"
+	.string "It blazes a trail!\p"
+	.string "Though what it does in battle, besides\n"
+	.string "blazing a trail, is that it's a Grass-\l"
+	.string "type move that boosts the Speed of your\l"
+	.string "Pokémon every time you use it!\p"
+	.string "I'm on my way to New Bark Town to\n"
+	.string "get the final starter from Professor Elm.\p"
+	.string "Otherwise, the Pokémon would be\n"
+	.string "abandoned in its ball.\p"
+	.string "I can't do that to the poor Pokémon!$"
+
+Route29_Text_FryPostBattle2:
+	.string "I look forward to seeing you again!$"
