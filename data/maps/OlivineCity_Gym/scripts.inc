@@ -160,15 +160,15 @@ OlivineCity_Gym_EventScript_MoveRight4::
 OlivineCity_Gym_Text_Lass:
 	.string "Giggle...\n"
 	.string "I know how capable you are\l"
-	.string "from the LIGHTHOUSE.\p"
+	.string "from the Lighthouse.\p"
 	.string "It's time you showed that side of\n"
-	.string "yourself to JASMINE! Good luck!$"
+	.string "yourself to Matt! Good luck!$"
 
 OlivineCity_Gym_Text_Lass2:
 	.string "You are amazing...\n"
 	.string "You should aim even higher, since\l"
 	.string "you have such potential.\p"
-	.string "Have you been to MAHOGANY TOWN?$"
+	.string "Have you been to Mahogany Town?$"
 
 OlivineCity_Gym_EventScript_GymGuide::
 	lock
@@ -250,14 +250,17 @@ OlivineCity_Gym_EventScript_MahogCheckCianwood::
 	
 OlivineCity_Gym_EventScript_Jasmine_Battle1::
 	trainerbattle_no_intro TRAINER_MATT_1, OlivineCity_Gym_Text_JasmineBetterTrainer
+	setflag FLAG_RECEIVED_BADGE_5
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Battle2::
 	trainerbattle_no_intro TRAINER_MATT_1_2, OlivineCity_Gym_Text_JasmineBetterTrainer
+	setflag FLAG_RECEIVED_BADGE_6
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Battle3::
 	trainerbattle_no_intro TRAINER_MATT_1_3, OlivineCity_Gym_Text_JasmineBetterTrainer
+	setflag FLAG_RECEIVED_BADGE_7
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Defeated::
@@ -331,4 +334,4 @@ OlivineCity_Gym_Text_GymStatue:
 OlivineCity_Gym_Text_GymStatueCertified:
 	.string "Olivine City Pokémon Gym\p"
 	.string "Matt's Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "{RIVAL}, Fry, {PLAYER}$"

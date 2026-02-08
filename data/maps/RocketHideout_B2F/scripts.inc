@@ -259,10 +259,10 @@ RocketHideout_B2F_Movement_Lance:
 	step_end
 
 RocketHideout_B2F_Text_ArianaHoldIt:
-    .string "ARIANA: Hold it right there!$"
+    .string "Ariana: Hold it right there!$"
 
 RocketHideout_B2F_Text_ArianaChallenge:
-    .string "ARIANA: We can't let a brat like you\n"
+    .string "Ariana: We can't let a brat like you\n"
     .string "do as you please forever.\p"
     .string "It'll hurt Team Rocket's pride over\n"
     .string "and over again. Making it lessen,\l"
@@ -276,7 +276,7 @@ RocketHideout_B2F_Text_ArianaChallenge:
     .string "Now, get ready to be thrashed.$"
 
 RocketHideout_B2F_Text_LanceInterrupt:
-    .string "LANCE: Hold it!\n"
+    .string "Lance: Hold it!\n"
     .string "A two-on-one battle?\p"
     .string "That is so unfair!\n"
     .string "Typical of Team Rocket to be so\l"
@@ -284,14 +284,14 @@ RocketHideout_B2F_Text_LanceInterrupt:
     .string "Allow me to join the battle!$"
 
 RocketHideout_B2F_Text_ArianaOutraged:
-    .string "ARIANA: What? You had an accomplice?\n"
+    .string "Ariana: What? You had an accomplice?\n"
     .string "Where is your sense of dignity?\p"
     .string "As interim boss in place of Giovanni,\n"
     .string "I'll show you how wrong it is to meddle\l"
     .string "with Team Rocket!$"
 
 RocketHideout_B2F_Text_LanceChooseMons:
-    .string "LANCE: Quickly {PLAYER}, choose\n"
+    .string "Lance: Quickly {PLAYER}, choose\n"
 	.string "your Pokémon!$"
 
 RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
@@ -618,7 +618,7 @@ RocketHideout_B2F_Text_ArianaLoss:
     .string "you could become an Executive.$"
 
 RocketHideout_Text_ArianaRetreat:
-    .string "ARIANA: But that's fine.\n"
+    .string "Ariana: But that's fine.\n"
     .string "The broadcast experiment was a\l"
     .string "total success.\p"
     .string "It doesn't matter what happens to\n"
@@ -650,10 +650,10 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "{PLAYER}, let's split the job.$"
 
 RocketHideout_B2F_Text_LanceSide:
-    .string "LANCE: Leave this side to me.$"
+    .string "Lance: Leave this side to me.$"
 
 RocketHideout_B2F_Text_LanceElectrodeDone:
-    .string "LANCE: That odd signal has\n"
+    .string "Lance: That odd signal has\n"
     .string "finally stopped.\p"
     .string "The LAKE should be back to\n"
     .string "normal.\p"
@@ -778,13 +778,13 @@ RocketHideout_B2F_Movement_DragoniteGoDeeper:
 	step_end
 
 RocketHideout_B2F_Text_LanceHeals1:
-    .string "LANCE: Are you all right?\p"
+    .string "Lance: Are you all right?\p"
     .string "Your Pokémon are hurt and tired.\p"
     .string "Here, give them some of my\n"
     .string "medicine.$"
 
 RocketHideout_B2F_Text_LanceHeals2:
-    .string "LANCE: {PLAYER}, let's give it\n"
+    .string "Lance: {PLAYER}, let's give it\n"
     .string "our best for Pokémon.$"
 
 RocketHideout_B2F_Text_GruntM17Seen:

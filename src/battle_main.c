@@ -385,6 +385,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_TEAM_ROCKET] = {_("Team Rocket")},
     [TRAINER_CLASS_ROCKET_ADMIN] = {_("Rocket Admin")},
     [TRAINER_CLASS_PHILIP] = {_("Philip")},
+    [TRAINER_CLASS_PHILIP_2] = {_("Philip J.")},
     [TRAINER_CLASS_ROCKETA] = {_("Rocket Admin")},
 };
 
@@ -2019,6 +2020,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             || (trainerClass == TRAINER_CLASS_RIVAL)
             || (trainerClass == TRAINER_CLASS_ELITE_FOUR)
             || (trainerClass == TRAINER_CLASS_PHILIP)
+            || (trainerClass == TRAINER_CLASS_PHILIP_2)
             || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_1)
             || (trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)
             || (trainerClass == TRAINER_CLASS_KIMONO_GIRL)

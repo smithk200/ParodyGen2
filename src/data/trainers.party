@@ -2965,7 +2965,7 @@ Nature: Adamant
 - Earthquake
 - Dragon Claw
 
-Charizard @ Charcoal
+Charizard @ Charizardite Y
 Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP/ 252 SpA / 252 Spe
@@ -4646,6 +4646,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
+Starting Status: Tailwind Opponent
 AI: Smart Trainer
 Mugshot: Purple
 
@@ -4785,9 +4786,9 @@ Ability: Blaze
 - Yawn
 
 === TRAINER_MACY_2 ===
-Name: Will
+Name: Macy
 Class: Elite Four
-Pic: Elite Four Will
+Pic: Elite Four Macy
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
@@ -8267,9 +8268,9 @@ Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MATT_2 ===
-Name: Jasmine
+Name: Matt
 Class: Leader
-Pic: Leader Jasmine
+Pic: Leader Matt
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
@@ -10237,9 +10238,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Blast
 
 === TRAINER_MATT_1_3 ===
-Name: Jasmine
+Name: Matt
 Class: Leader
-Pic: Leader Jasmine
+Pic: Leader Matt
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -10317,7 +10318,7 @@ Tera Type: Steel
 === TRAINER_MATT_1_2 ===
 Name: Matt
 Class: Leader
-Pic: Leader Jasmine
+Pic: Leader Matt
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -11825,7 +11826,7 @@ EVs: 128 Atk / 128 SpA / 252 Spe
 - Body Slam
 - Reflect
 
-Ampharos (M) @ Rindo Berry
+Ampharos (M) @ Magnet
 Level: 39
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -11876,7 +11877,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Breaking Swipe
 - Screech
 
-Ampharos (M) @ Rindo Berry
+Ampharos (M) @ Magnet
 Level: 39
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -11927,7 +11928,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Solar Beam
 - Rock Tomb
 
-Ampharos (M) @ Rindo Berry
+Ampharos (M) @ Magnet
 Level: 39
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -11973,7 +11974,7 @@ Level: 50
 Ability: Overgrow
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 128 Atk / 128 SpA / 252 Spe
-- Giga Drain
+- Trailblaze
 - Bulldoze
 - Body Slam
 - Reflect
@@ -11988,11 +11989,11 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Dazzling Gleam
 - Nasty Plot
 
-Ampharos (M) @ Rindo Berry
+Ampharos (M) @ Magnet
 Level: 51
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
 - Thunderbolt
 - Thunder Wave
 - Ice Punch
@@ -12020,7 +12021,7 @@ AI: Smart Trainer
 Mugshot: Pink
 
 Seymour (Obstagoon) (M) @ Chople Berry
-Level: 49
+Level: 48
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -12030,27 +12031,37 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Night Slash
 
 Feraligatr (M) @ Rindo Berry
-Level: 39
+Level: 49
 Ability: Torrent
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
-- Crunch
-- Waterfall
+- Bite
+- Liquidation
 - Breaking Swipe
 - Screech
 
-Ampharos (M) @ Rindo Berry
-Level: 39
+Mew (M) @ Wise Glasses
+Level: 50
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Psychic
+- Dazzling Gleam
+- Nasty Plot
+
+Ampharos (M) @ Magnet
+Level: 51
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
 - Thunderbolt
 - Thunder Wave
 - Ice Punch
 - Cotton Guard
 
 Zamazenta @ Muscle Band
-Level: 40
+Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
 Tera Type: Steel
@@ -12071,7 +12082,7 @@ AI: Smart Trainer
 Mugshot: Pink
 
 Seymour (Obstagoon) (M) @ Chople Berry
-Level: 49
+Level: 48
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -12081,37 +12092,37 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Night Slash
 
 Typhlosion (M) @ Passho Berry
-Level: 39
+Level: 49
 Ability: Blaze
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
 - Flamethrower
-- Shadow Ball
+- Protect
 - Solar Beam
 - Rock Tomb
 
-Mew @ Wise Glasses
-Level: 39
-Ability: Static
+Mew (M) @ Wise Glasses
+Level: 50
+Ability: Synchronize
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
 - Thunderbolt
-- Thunder Wave
-- Ice Punch
-- Cotton Guard
+- Psychic
+- Dazzling Gleam
+- Nasty Plot
 
-Ampharos (M) @ Rindo Berry
-Level: 39
+Ampharos (M) @ Magnet
+Level: 51
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
 - Thunderbolt
 - Thunder Wave
 - Ice Punch
 - Cotton Guard
 
 Zamazenta @ Muscle Band
-Level: 40
+Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
 Tera Type: Steel
@@ -12121,8 +12132,8 @@ Tera Type: Steel
 - Ice Fang
 
 === TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE ===
-Name: J. Fry
-Class: Philip
+Name: Fry
+Class: Philip 2
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -12141,7 +12152,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Double Edge
 - Night Slash
 
-Ampharos (M) @ Leftovers
+Ampharos (M) @ Ampharosite
 Level: 67
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -12192,8 +12203,8 @@ Tera Type: Steel
 - Close Combat
 
 === TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE ===
-Name: J. Fry
-Class: Philip
+Name: Fry
+Class: Philip 2
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -12212,7 +12223,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Double Edge
 - Night Slash
 
-Ampharos (M) @ Leftovers
+Ampharos (M) @ Ampharosite
 Level: 67
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -12263,8 +12274,8 @@ Tera Type: Steel
 - Close Combat
 
 === TRAINER_FRY_TOTODILE_POKEMON_LEAGUE ===
-Name: J. Fry
-Class: Philip
+Name: Fry
+Class: Philip 2
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -12283,7 +12294,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Double Edge
 - Night Slash
 
-Ampharos (M) @ Leftovers
+Ampharos (M) @ Ampharosite
 Level: 67
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -12332,3 +12343,70 @@ Tera Type: Steel
 - Iron Head
 - Moonblast
 - Close Combat
+
+=== TRAINER_CLAIR_DRAGONS_DEN ===
+Name: Clair
+Class: Leader
+Pic: Leader Clair
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: Yes
+AI: Smart Trainer
+Mugshot: Green
+
+ragonair @ Focus Sash
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunder Wave
+- Thunderbolt
+- Flamethrower
+- Dragon Breath
+
+Salamence @ Yache Berry
+Level: 51
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 128 Atk / 128 SpA / 252 Spe
+- Protect
+- Dragon Claw
+- Flamethrower
+- Giga Impact
+
+Gyarados @ Wacan Berry
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Crunch
+- Waterfall
+- Fly
+- Dragon Rush
+
+Turtonator @ Sitrus Berry
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Dragon Pulse
+- Shell Smash
+- Stomping Tantrum
+
+Baxcalibur @ Dragon Fang
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Nature: Adamant
+- Icicle Crash
+- Crunch
+- Dragon Claw
+- Swords Dance
+
+Kingdra @ Leftovers
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Tera Type: Dragon
+- Smokescreen
+- Surf
+- Hyper Beam
+- Dragon Breath

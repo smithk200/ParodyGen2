@@ -28,7 +28,7 @@ EVs: 252 Atk / 252 Def / 6 SpD
 Dragonair
 Adamant Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Level: 35
+Level: 43
 EVs: 252 HP / 6 SpD / 252 Spe
 - Blizzard
 - Thunder Wave
@@ -38,9 +38,48 @@ EVs: 252 HP / 6 SpD / 252 Spe
 Charizard
 Adamant Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Level: 36
+Level: 44
 EVs: 252 Atk / 252 SpD / 6 Spe
 - Flamethrower
 - Wing Attack
 - Double Team
 - Steel Wing
+
+=== PARTNER_FRY ===
+Name: J. Fry
+Class: Philip
+Pic: Fry
+Gender: Male
+Music: Male
+Back Pic: Fry
+AI: Basic Trainer
+
+Seymour (Obstagoon) (M)
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 52
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Night Slash
+- Pin Missile
+- Take Down
+
+Togekiss
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 53
+EVs: 6 HP / 252 SpA / 252 Spe
+- Air Slash
+- Moonblast
+- Extrasensory
+- Calm Mind
+
+Zamazenta
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 54
+EVs: 128 Atk / 128 Def / 252 Spe
+- Iron Head
+- Brick Break
+- Slash
+- Howl

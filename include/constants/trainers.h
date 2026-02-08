@@ -174,6 +174,7 @@
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      5
 #define TRAINER_BACK_PIC_WALLY                  6
 #define TRAINER_BACK_PIC_STEVEN                 7
+#define TRAINER_BACK_PIC_FRY                    8
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -422,6 +423,7 @@ enum TrainerClassID
     TRAINER_CLASS_JUGGLER,
     TRAINER_CLASS_PSYCHIC_M,
     TRAINER_CLASS_PHILIP,
+    TRAINER_CLASS_PHILIP_2,
     TRAINER_CLASS_ROCKETA,
     TRAINER_CLASS_COUNT,
 };

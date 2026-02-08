@@ -5,6 +5,17 @@
 #include "pokemon.h"
 
 
+/*/
+Since Chuck, Jasmine, and Pryce (or Bea, Matt, and Clay) can be faced in any order, I set the level caps for the game accordingly.
+Bea, Matt and Clay's teams get progressively stronger based on how many gym leaders you've defeated.
+They'll use a team with a cap of 44 if you've beaten 4 Gym Leaders.
+They'll use a team with a cap of 48 if you've beaten 5 Gym Leaders.
+They'll use a team with a cap of 52 if you've beaten 6 Gym Leaders.
+FLAG_RECEIVED_BADGE_5 is supposed to be set once you defeat the first gym leader of those three. FLAG_BADGE05_GET is set specifically after you defeat Chuck/Bea.
+FLAG_RECEIVED_BADGE_6 is supposed to be set once you defeat the second gym leader of those three. FLAG_BADGE06_GET is set specifically after you defeat Jasmine/Matt.
+FLAG_RECEIVED_BADGE_7 is supposed to be set once you defeat the third gym leader of those three. FLAG_BADGE07_GET is set specifically after you defeat Pryce/Clay.
+/*/
+
 u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
@@ -13,9 +24,9 @@ u32 GetCurrentLevelCap(void)
         {FLAG_BADGE02_GET, 22},
         {FLAG_BADGE03_GET, 27},
         {FLAG_BADGE04_GET, 38},
-        {FLAG_BADGE05_GET, 44},
-        {FLAG_BADGE06_GET, 48},
-        {FLAG_BADGE07_GET, 52},
+        {FLAG_RECEIVED_BADGE_5, 44},
+        {FLAG_RECEIVED_BADGE_6, 48},
+        {FLAG_RECEIVED_BADGE_7, 52},
         {FLAG_BADGE08_GET, 54},
         {FLAG_IS_CHAMPION, 70},
     };

@@ -11850,16 +11850,25 @@ static void Cmd_settailwind(void)
     CMD_ARGS(const u8 *failInstr);
 
     u8 side = GetBattlerSide(gBattlerAttacker);
-
-    if (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND))
+    if (((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2)) && (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND)))
     {
         gSideStatuses[side] |= SIDE_STATUS_TAILWIND;
-        gSideTimers[side].tailwindTimer = gBattleTurnCounter +  (B_TAILWIND_TURNS >= GEN_5 ? 4 : 3);
+        gSideTimers[side].tailwindTimer = -1;
         gBattlescriptCurrInstr = cmd->nextInstr;
     }
+
     else
     {
-        gBattlescriptCurrInstr = cmd->failInstr;
+        if (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND))
+        {
+            gSideStatuses[side] |= SIDE_STATUS_TAILWIND;
+            gSideTimers[side].tailwindTimer = gBattleTurnCounter +  (B_TAILWIND_TURNS >= GEN_5 ? 4 : 3);
+            gBattlescriptCurrInstr = cmd->nextInstr;
+        }
+        else
+        {
+            gBattlescriptCurrInstr = cmd->failInstr;
+        }
     }
 }
 

@@ -1,4 +1,5 @@
 .set LOCALID_DRAGONSDEN3_CLAIR, 4
+.set LOCALID_DRAGONSDEN3_FRY, 5
 .set LOCALID_DRAGONSDEN3_ELDER, 1
 
 DragonsDen_Shrine_MapScripts::
@@ -35,7 +36,7 @@ DragonsDen_Shrine_Trigger_ElderQuizTop::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
-	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
+	goto DragonsDen_Shrine_EventScript_ClairBattle
 
 DragonsDen_Shrine_Trigger_ElderQuizRight::
 	lock
@@ -181,7 +182,7 @@ DragonsDen_Shrine_EventScript_ElderQuizFinish::
 DragonsDen_Shrine_Text_ElderGreeting:
     .string "Hm… Good to see you here.\p"
     .string "No need to explain why you came.\n"
-    .string "CLAIR sent you here, didn't she?\p"
+    .string "Clair sent you here, didn't she?\p"
     .string "That girl is a handful…\n"
     .string "I am sorry, but I must test you.\p"
     .string "Not to worry, you are to answer\n"
@@ -250,22 +251,13 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	applymovement LOCALID_DRAGONSDEN3_ELDER, DragonsDen_Shrine_Movement_ElderWalkToClair
 	waitmovement 0
 	turnobject LOCALID_DRAGONSDEN3_CLAIR, DIR_NORTH
-	msgbox DragonsDen_Shrine_Text_MustIInformLance, MSGBOX_DEFAULT
+	msgbox DragonsDen_Shrine_Text_MustIInformFry, MSGBOX_DEFAULT
 	playse SE_PIN
 	applymovement LOCALID_DRAGONSDEN3_CLAIR, Common_Movement_ExclamationMark
 	msgbox DragonsDen_Shrine_Text_IUnderstand, MSGBOX_DEFAULT
 	applymovement LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairReturnToPlayer
 	waitmovement 0
-	msgbox DragonsDen_Shrine_Text_HereRisingBadge, MSGBOX_DEFAULT
-
-	message DragonsDen_Shrine_Text_PlayerReceivedRisingBadge
-	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox DragonsDen_Shrine_Text_RisingBadgeExplanation, MSGBOX_DEFAULT
-	setflag FLAG_BADGE08_GET
-	setflag FLAG_DEFEATED_BLACKTHORN_GYM
-	addvar VAR_NUM_BADGES, 1
-
+	call DragonsDen_Clair_UponDefeat
 	applymovement LOCALID_DRAGONSDEN3_ELDER, DragonsDen_Shrine_Movement_ElderReturnToPlayer
 	waitmovement 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -285,6 +277,125 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	release
 	end
 
+DragonsDen_Shrine_EventScript_ClairBattle::
+	msgbox DragonsDen_Shrine_Text_ClairNeedsToFightYou, MSGBOX_DEFAULT
+	closemessage
+	goto DragonsDen_Shrine_EventScript_FryEnter
+	end
+
+DragonsDen_Shrine_EventScript_FryEnter::
+	clearflag FLAG_HIDE_DRAGONS_DEN_SHRINE_FRY
+	addobject LOCALID_DRAGONSDEN3_FRY
+	playse SE_DOOR
+	delay 40
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	delay 20
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_SOUTH
+	applymovement LOCALID_DRAGONSDEN3_FRY, DragonsDen_Shrine_Movement_ClairEnter
+	waitmovement 0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
+	msgbox DragonsDen_Shrine_Text_FryWantsHisBadge, MSGBOX_DEFAULT
+	waitmessage
+	turnobject LOCALID_DRAGONSDEN3_FRY, DIR_EAST
+	waitmovement 0
+	msgbox DragonsDen_Shrine_Text_HaveNoFearFryIsHere, MSGBOX_DEFAULT
+	waitmessage
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_DRAGONSDEN3_FRY, DIR_NORTH
+	waitmovement 0
+	goto DragonsDen_Shrine_EventScript_ReadyForBattlePrompt
+
+DragonsDen_Shrine_EventScript_ReadyForBattlePrompt::
+	msgbox DragonsDen_Shrine_Text_FryChooseMons, MSGBOX_DEFAULT
+	goto DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle
+	end
+
+DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle::
+	setflag FLAG_BATTLE_FRY_AND_CLAIR
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	waitstate
+	goto_if_ne VAR_RESULT, 0, DragonsDen_Shrine_EventScript_DoFryMultiBattle
+	special LoadPlayerParty
+	goto DragonsDen_Shrine_EventScript_ReadyForBattlePrompt
+
+DragonsDen_Shrine_EventScript_DoFryMultiBattle::
+	multi_2_vs_1 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Shrine_Text_ClairLoss, PARTNER_FRY
+	switch VAR_RESULT
+	case 1, DragonsDen_Clair_UponDefeat
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_FRY
+	special SetCB2WhiteOut
+	waitstate
+
+DragonsDen_Clair_UponDefeat::
+	message DragonsDen_Shrine_Text_PlayerReceivedRisingBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	msgbox DragonsDen_Shrine_Text_FryReceivedRisingBadge, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_DRAGONSDEN3_CLAIR, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox DragonsDen_Shrine_Text_RisingBadgeExplanation, MSGBOX_DEFAULT
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_DEFEATED_BLACKTHORN_GYM
+	addvar VAR_NUM_BADGES, 1
+	goto DragonsDen_Shrine_EventScript_ClairPostBattle
+
+DragonsDen_Shrine_EventScript_ClairPostBattle::
+	clearflag FLAG_BATTLE_FRY_AND_CLAIR
+	msgbox DragonsDen_Shrine_Text_IUnderstand, MSGBOX_AUTOCLOSE
+	msgbox DragonsDen_Shrine_Text_WillYouForgiveMe, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DragonsDen_Shrine_EventScript_WillYouForgiveMeYes
+	goto_if_eq VAR_RESULT, NO, DragonsDen_Shrine_EventScript_WillYouForgiveMeNo
+
+DragonsDen_Shrine_EventScript_WillYouForgiveMeYes::
+	msgbox DragonsDen_Shrine_Text_WillYouForgiveMeYes, MSGBOX_DEFAULT
+	closemessage
+	goto DragonsDen_Shrine_EventScript_ClairPostBattle2
+
+DragonsDen_Shrine_EventScript_WillYouForgiveMeNo::
+	msgbox DragonsDen_Shrine_Text_WillYouForgiveMeNo, MSGBOX_DEFAULT
+	closemessage
+	goto DragonsDen_Shrine_EventScript_ClairPostBattle2
+
+DragonsDen_Shrine_EventScript_ClairPostBattle2::
+	applymovement LOCALID_DRAGONSDEN3_CLAIR, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox DragonsDen_Shrine_Text_ClairGrandfatherPassedAway, MSGBOX_AUTOCLOSE
+	msgbox DragonsDen_Shrine_Text_ClairTalksAboutSilver, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DRAGONSDEN3_FRY, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_DRAGONSDEN3_CLAIR, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox DragonsDen_Shrine_Text_ClairWouldntYouLikeToKnow, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DRAGONSDEN3_CLAIR, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox DragonsDen_Shrine_Text_ClairMakesFinalSpeech, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairLeave
+	waitmovement 0
+	removeobject LOCALID_DRAGONSDEN3_CLAIR
+	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
+	delay 20
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject LOCALID_DRAGONSDEN3_FRY, DIR_EAST
+	msgbox DragonsDen_Shrine_Text_FryMakesFinalSpeech, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_DRAGONSDEN3_FRY, DragonsDen_Shrine_Movement_FryLeaves
+	waitmovement 0
+	playse SE_EXIT
+	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_FRY
+	removeobject LOCALID_DRAGONSDEN3_FRY
+	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
+	setvar VAR_BLACKTHORN_CITY_STATE, 3
+	release
+	end
+
 DragonsDen_Shrine_Movement_ClairEnter:
 	walk_up
 	walk_up
@@ -292,7 +403,6 @@ DragonsDen_Shrine_Movement_ClairEnter:
 	walk_up
 	walk_up
 	walk_up
-	face_right
 	step_end
 
 DragonsDen_Shrine_Movement_ClairBackup1:
@@ -327,14 +437,25 @@ DragonsDen_Shrine_Movement_ElderReturnToPlayer:
 	step_end
 
 DragonsDen_Shrine_Movement_ClairLeave:
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
 	walk_fast_right
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+DragonsDen_Shrine_Movement_FryLeaves:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 DragonsDen_Shrine_Text_ClairYouPassed:
@@ -351,26 +472,102 @@ DragonsDen_Shrine_Text_ClairYoureLying:
     .string "You're lying!\p"
     .string "Even I haven't been approved!$"
 
-DragonsDen_Shrine_Text_MustIInformLance:
-    .string "CLAIR!\p"
+DragonsDen_Shrine_Text_MustIInformFry:
+    .string "Clair!\p"
     .string "This child is impeccable,\n"
     .string "in skill and spirit!\p"
     .string "Admit defeat and confer the\n"
-    .string "RISINGBADGE!\p"
-    .string "…Or must I inform LANCE of this?$"
+    .string "Risingbadge!\p"
+    .string "…Or must I inform Lance of this?$"
 
 DragonsDen_Shrine_Text_IUnderstand:
-    .string "I-I understand…$"
+    .string "I understand now…\p"
+	.string "Pokémon isn't about having the\n"
+	.string "strongest team members or\l"
+	.string "withholding badges from\l"
+	.string "worthy challengers.\p"
+	.string "It's about teamwork, and using\n"
+	.string "your Pokémon as partners rather\l"
+	.string "than tools.\p"
+	.string "I can see that by how well you two\n"
+	.string "battled together.\p"
+	.string "I've been a fool.$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMe:
+	.string "Will you forgive me?$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMeYes:
+	.string "Thank you.\n"
+	.string "I truly mean it.$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMeNo:
+	.string "All right then.\p"
+	.string "I guess I don't deserve\n"
+	.string "your forgiveness.\p"
+	.string "Perhaps one day you might\n"
+	.string "be willing…$"
+
+DragonsDen_Shrine_Text_ClairGrandfatherPassedAway:
+	.string "Before my grandfather passed\n"
+	.string "away, he was a protector of\l"
+	.string "this very shrine.\p"
+	.string "He taught me a valuable\n"
+	.string "lesson about the value\l"
+	.string "of working with your Pokémon.$"
+
+DragonsDen_Shrine_Text_ClairTalksAboutSilver:
+	.string "There was a young boy who\n"
+	.string "also challenged me in my Gym.\p"
+	.string "Unlike you, Fry and {PLAYER},\n"
+	.string "he only seemed to think of\l"
+	.string "Pokémon as tools of power.\p"
+	.string "He reminds me of myself when I\n"
+	.string "was younger…\p"
+	.string "Fry. {PLAYER}.\p"
+	.string "You need to stop {RIVAL} before\n"
+	.string "he gets in over his head…\p"
+	.string "Before he does something truly drastic.\p"
+	.string "Like what happened to me.$"
+
+DragonsDen_Shrine_Text_ClairWouldntYouLikeToKnow:
+	.string "You'd like to know, wouldn't you?\p"
+	.string "That's a story for another time…\p"
+	.string "All I'll say is that it involved\n"
+	.string "how my grandfather passed away.$"
+
+DragonsDen_Shrine_Text_ClairMakesFinalSpeech:
+	.string "If you'll excuse me, I'm going back\n"
+	.string "to Blackthorn and meet up with my\l"
+	.string "cousin Lance.\p"
+	.string "You know, he used to be a Kanto\n"
+	.string "Elite Four member…\p"
+	.string "Those were the days…\p"
+	.string "Good luck, Fry and {PLAYER}.$"
+
+DragonsDen_Shrine_Text_FryMakesFinalSpeech:
+	.string "Hey, {PLAYER}, thanks for helping\n"
+	.string "me back there.\p"
+	.string "I feel bad for Clair…\p"
+	.string "Anyways, with the Risingbadge, this\n"
+	.string "means I'll finally be ready to\l"
+	.string "take on the Elite Four!\p"
+	.string "Wonder if I'll run into {RIVAL}\n"
+	.string "again. He's a tough opponent,\l"
+	.string "that's for sure!\p"
+	.string "See you 'round, {PLAYER}!$"
 
 DragonsDen_Shrine_Text_HereRisingBadge:
-    .string "Here, this is the RISINGBADGE…\p"
+    .string "Here, this is the Risingbadge…\p"
     .string "Hurry up! Take it!$"
 
 DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
-    .string "{PLAYER} received RISINGBADGE.$"
+    .string "{PLAYER} received Risingbadge.$"
+
+DragonsDen_Shrine_Text_FryReceivedRisingBadge:
+    .string "Fry received Risingbadge.$"
 
 DragonsDen_Shrine_Text_RisingBadgeExplanation:
-    .string "RISINGBADGE will enable your\n"
+    .string "Risingbadge will enable your\n"
     .string "Pokémon to use the move for\l"
     .string "climbing waterfalls.\p"
     .string "Also, all Pokémon will recognize\n"
@@ -406,10 +603,10 @@ DragonsDen_Shrine_Text_Elder2:
     .string "It's been quite some time since a\n"
     .string "trainer has gained our MASTER's\l"
     .string "rare approval.\p"
-    .string "In fact, not since Master LANCE.$"
+    .string "In fact, not since Master Fry.$"
 
 DragonsDen_Shrine_Text_Elder3:
-    .string "You know young Master LANCE?\p"
+    .string "You know young Master Fry?\p"
     .string "He looks so much like our MASTER\n"
     .string "did in his youth.\p"
     .string "It's in their blood.$"
@@ -468,3 +665,40 @@ DragonsDen_Shrine_Text_ClairsGrandfather:
     .string "CLAIR appears to have learned an\n"
     .string "invaluable lesson from you.\p"
     .string "I thank you as her grandfather.$"
+
+DragonsDen_Shrine_Text_ClairNeedsToFightYou:
+	.string "So. You finally made it.\n"
+	.string "I've been expecting you.\p"
+	.string "That first battle-\n"
+	.string "it didn't count.\p"
+	.string "You didn't face me at my full power.\p"
+	.string "And the heat from the lava was\n"
+	.string "getting to my head!\p"
+	.string "I should have listened to Lance when\n"
+	.string "he warned me about my plans\l"
+	.string "for the Blackthorn Gym…\p"
+	.string "I've trained harder in\n"
+	.string "the Dragon's Den.\p"
+	.string "{PLAYER}, prepare to fight!$"
+
+DragonsDen_Shrine_Text_FryWantsHisBadge:
+	.string "Philip J. Fry: Now wait just\n"
+	.string "a minute, Clair!\p"
+	.string "You said the same thing to me!\p"
+	.string "You told me to come here, too!\p"
+	.string "I want my badge!$"
+
+DragonsDen_Shrine_Text_HaveNoFearFryIsHere:
+	.string "Have no fear, Fry is here!\p"
+	.string "You don't have to face her alone!$"
+
+DragonsDen_Shrine_Text_FryChooseMons:
+	.string "C'mon, choose your 'mons!$"
+
+DragonsDen_Shrine_Text_ClairLoss:
+	.string "Well, then…\n"
+	.string "A loss is a loss.\p"
+	.string "Fry and {PLAYER}, the teamwork\n"
+	.string "you two demonstrated makes both\l"
+	.string "of you worthy to earn you the\l"
+	.string "Risingbadge.$"

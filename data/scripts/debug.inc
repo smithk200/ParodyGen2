@@ -9,23 +9,14 @@ Debug_ShowFieldMessageStringVar4::
 	goto Debug_MessageEnd
 
 Debug_CheatStart::
+	@species:req, level:req, item, ball, nature, abilityNum, gender, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, shinyMode, gmaxFactor, teraType, dmaxLevel
+	@setvar VAR_NEWBARKTOWN_LABSTATE, 4
 	givemon SPECIES_MEGANIUM, 100, ITEM_NONE
 	givemon SPECIES_TYPHLOSION, 100, ITEM_NONE
 	givemon SPECIES_FERALIGATR, 100, ITEM_NONE
 	givemon SPECIES_UMBREON, 100, ITEM_NONE
 	givemon SPECIES_GLACEON, 100, ITEM_NONE
 	givemon SPECIES_JOLTEON, 100, ITEM_NONE
-	@setvar VAR_NEWBARKTOWN_LABSTATE, 4
-	setvar VAR_NEWBARK_TOWN_STATE, 5
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RECEIVED_FIRST_BALLS
-	@setflag FLAG_RANDOMIZER
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	setflag FLAG_SYS_B_DASH
-	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_HIDE_MOMS_FRIEND
-	setflag FLAG_RECEIVED_FIRST_BALLS
-	setflag FLAG_RECEIVED_POKENAV
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
@@ -42,11 +33,33 @@ Debug_CheatStart::
 	setflag FLAG_BADGE14_GET
 	setflag FLAG_BADGE15_GET
 	setflag FLAG_BADGE16_GET
+	setvar VAR_NEWBARK_TOWN_STATE, 5
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RECEIVED_BADGE_5
+	setflag FLAG_RECEIVED_FIRST_BALLS
+	@setflag FLAG_RANDOMIZER
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_HIDE_MOMS_FRIEND
+	setflag FLAG_RECEIVED_FIRST_BALLS
+	setflag FLAG_RECEIVED_POKENAV
 	@giveitem ITEM_HM_SURF
-	giveitem ITEM_POKE_BALL, 100
+	@giveitem ITEM_RARE_CANDY, 100
+	@giveitem ITEM_FULL_RESTORE, 100
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
 	additem ITEM_ACRO_BIKE
+	release
+	end
+
+Debug_CheatStart2::
+	givemon SPECIES_NATU, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 0, 0, 252, 252, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_STARLY, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_FLAMIGO, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_CHARMANDER, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_GREAT_TUSK, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_WATTREL, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 0, 0, 252, 252, 0, 31, 31, 31, 31, 31, 31
 	release
 	end
 

@@ -9,6 +9,7 @@ NewBarkTown_Lab_OnTransition::
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 6, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 2, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 3, NewBarkTown_Lab_EventScript_ElmAtComputer
+	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_29, NewBarkTown_Lab_EventScript_FryTakesTheLastPokeBall
 	end
 	
 NewBarkTown_Lab_OnFrame::
@@ -520,6 +521,11 @@ NewBarkTown_Lab_EventScript_Elm_CallMe::
 	closemessage
 	release
 	end
+
+NewBarkTown_Lab_EventScript_FryTakesTheLastPokeBall::
+	call_if_eq VAR_STARTER_MON, 0 NewBarkTown_Lab_EventScript_HideTotodile
+	call_if_eq VAR_STARTER_MON, 1 NewBarkTown_Lab_EventScript_HideChikorita
+	call_if_eq VAR_STARTER_MON, 2 NewBarkTown_Lab_EventScript_HideCyndaquil
 
 NewBarkTown_Lab_Movement_WalkRight:
 	walk_right

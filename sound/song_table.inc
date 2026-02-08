@@ -776,7 +776,7 @@ gSongTable::
 	song rainbow_road, 0, 0
 	song low_5, 0, 0
 	song vs_fry, 0, 0
-	song mus_pl_b_castle, 0, 0
+	song emotion, 0, 0
 	song mus_pl_b_factory, 0, 0
 	song mus_pl_global_terminal, 0, 0
 	song mus_pl_lilycove_bossa_nova, 0, 0

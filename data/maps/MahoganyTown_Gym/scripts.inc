@@ -43,12 +43,12 @@ MahoganyTown_Gym_EventScript_Statue2::
 	end
 
 MahoganyTown_Gym_Text_GymStatue:
-	.string "MAHOGANY TOWN Pokémon Gym$"
+	.string "Mahogany Town Pokémon Gym$"
 
 MahoganyTown_Gym_Text_GymStatueCertified:
-	.string "MAHOGANY TOWN Pokémon Gym\p"
-	.string "Clay'S CERTIFIED TRAINERS:\n"
-	.string "{PLAYER}$"
+	.string "Mahogany Town Pokémon Gym\p"
+	.string "Clay'S Certified Trainers:\n"
+	.string "{RIVAL}, Fry, {PLAYER}$"
 
 
 MahoganyTown_GymEventScript_GymGuy::
@@ -127,14 +127,17 @@ MahoganyTown_Gym_EventScript_CianwoodCheckOlivine::
 	
 MahoganyTown_Gym_EventScript_Clay_Battle1::
 	trainerbattle_no_intro TRAINER_CLAY_1, MahoganyTown_Gym_Text_ClayImpressed
+    setflag FLAG_RECEIVED_BADGE_5
 	goto MahoganyTown_Gym_EventScript_ClayVictory
 
 MahoganyTown_Gym_EventScript_Clay_Battle2::
 	trainerbattle_no_intro TRAINER_CLAY_1_2, MahoganyTown_Gym_Text_ClayImpressed
+    setflag FLAG_RECEIVED_BADGE_6
 	goto MahoganyTown_Gym_EventScript_ClayVictory
 
 MahoganyTown_Gym_EventScript_Clay_Battle3::
 	trainerbattle_no_intro TRAINER_CLAY_1_3, MahoganyTown_Gym_Text_ClayImpressed
+    setflag FLAG_RECEIVED_BADGE_7
 	goto MahoganyTown_Gym_EventScript_ClayVictory
 
 MahoganyTown_Gym_EventScript_Clay_Defeated::
