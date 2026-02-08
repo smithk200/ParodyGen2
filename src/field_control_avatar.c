@@ -294,7 +294,8 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
-     && script != EventScript_PC)
+     && script != EventScript_PC
+    && script != EventScript_PCHoenn)
         PlaySE(SE_SELECT);
 
     ScriptContext_SetupScript(script);
@@ -472,6 +473,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_TV;
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
         return EventScript_PC;
+    if (MetatileBehavior_IsPCHoenn(metatileBehavior) == TRUE)
+        return EventScript_PCHoenn;
     if (MetatileBehavior_IsClosedSootopolisDoor(metatileBehavior) == TRUE)
         return EventScript_ClosedSootopolisDoor;
     if (MetatileBehavior_IsSkyPillarClosedDoor(metatileBehavior) == TRUE)

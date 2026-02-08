@@ -127,7 +127,9 @@
 #define METATILE_Building_Frontier_TV_Off  0x002
 #define METATILE_Building_Frontier_TV_On   0x003
 #define METATILE_Building_PC_Off           0x062
+#define METATILE_Building_PC_Off_Hoenn     0x004
 #define METATILE_Building_PC_On            0x063
+#define METATILE_Building_PC_On_Hoenn      0x005
 #define METATILE_Building_TV_Off           0x035
 #define METATILE_Building_TV_On            0x061
 
@@ -477,7 +479,7 @@
 #define METATILE_PokemonCenter_Escalator1F_Tile0_Frame0  0x280
 #define METATILE_PokemonCenter_Escalator1F_Tile0_Frame1  0x282
 #define METATILE_PokemonCenter_Escalator1F_Tile0_Frame2  0x284
-#define METATILE_PokemonCenter_Escalator1F_Tile1_Frame0  0x011
+#define METATILE_PokemonCenter_Escalator1F_Tile1_Frame0  0x281
 #define METATILE_PokemonCenter_Escalator1F_Tile1_Frame1  0x283
 #define METATILE_PokemonCenter_Escalator1F_Tile1_Frame2  0x285
 #define METATILE_PokemonCenter_Escalator1F_Tile2_Frame0  0x288
