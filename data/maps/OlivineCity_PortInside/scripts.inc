@@ -88,7 +88,7 @@ OlivineCity_PortInside_Text_Nationaldex4:
 	.string "GOLDENROD RADIO TOWER.\p"
 	.string "You must be heading for KANTO.\p"
 	.string "If you come near PALLET TOWN, do\n"
-	.string "drop by my Pokémon RESEARCH LAB!$"
+	.string "drop by my POKéMON RESEARCH LAB!$"
 
 OlivinePort_EventScript_CooltrainerF::
 	msgbox OlivinePort_Text_CooltrainerF, MSGBOX_NPC
@@ -138,12 +138,21 @@ OlivinePort_EventScript_Sailor_AfterRed::
 	multichoice 20, 0, MULTI_OLIVINE_HARBOR_RED, FALSE
 	switch VAR_RESULT
 	case 0, OlivinePort_EventScript_ChoseVermilion
-	case 1, OlivinePort_EventScript_ChoseSouthernIsland
-	case 2, OlivinePort_EventScript_ChoseBirthIsland
-	case 3, OlivinePort_EventScript_ChoseFarawayIsland
-	case 4, OlivinePort_EventScript_ChoseBattleFrontier
-	case 5, OlivinePort_EventScript_Sailor_Refused
+	case 1, OlivinePort_EventScript_ChoseSlateport
+	case 2, OlivinePort_EventScript_ChoseSouthernIsland
+	case 3, OlivinePort_EventScript_ChoseBirthIsland
+	case 4, OlivinePort_EventScript_ChoseFarawayIsland
+	case 5, OlivinePort_EventScript_ChoseBattleFrontier
+	case 6, OlivinePort_EventScript_Sailor_Refused
 	case MULTI_B_PRESSED, OlivinePort_EventScript_Sailor_Refused
+	release
+	end
+
+OlivinePort_EventScript_ChoseSlateport::
+	closemessage
+	delay 20
+	call OlivinePort_EventScript_EnterShip
+	warpsilent MAP_ROUTE109, 21, 22
 	release
 	end
 
@@ -310,14 +319,14 @@ OlivinePort_Text_FishingGuru1:
 OlivinePort_Text_FishingGuru2:
     .string "How many RODS do you have?\p"
     .string "Different RODS catch different\n"
-    .string "Pokémon.$"
+    .string "POKéMON.$"
 
 OlivinePort_Text_Youngster:
     .string "S.S.AQUA uses jets to skim\n"
     .string "over the waves!$"
 
 OlivinePort_Text_CooltrainerF:
-    .string "There are lots of Pokémon in KANTO.\p"
+    .string "There are lots of POKéMON in KANTO.\p"
     .string "I wish I could go…$"
 
 OlivinePort_Text_SailorBeforeHOF:

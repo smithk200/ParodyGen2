@@ -480,99 +480,9 @@ DragonsDen_Shrine_Text_MustIInformFry:
     .string "Risingbadge!\p"
     .string "…Or must I inform Lance of this?$"
 
-DragonsDen_Shrine_Text_IUnderstand:
-    .string "I understand now…\p"
-	.string "Pokémon isn't about having the\n"
-	.string "strongest team members or\l"
-	.string "withholding badges from\l"
-	.string "worthy challengers.\p"
-	.string "It's about teamwork, and using\n"
-	.string "your Pokémon as partners rather\l"
-	.string "than tools.\p"
-	.string "I can see that by how well you two\n"
-	.string "battled together.\p"
-	.string "I've been a fool.$"
-
-DragonsDen_Shrine_Text_WillYouForgiveMe:
-	.string "Will you forgive me?$"
-
-DragonsDen_Shrine_Text_WillYouForgiveMeYes:
-	.string "Thank you.\n"
-	.string "I truly mean it.$"
-
-DragonsDen_Shrine_Text_WillYouForgiveMeNo:
-	.string "All right then.\p"
-	.string "I guess I don't deserve\n"
-	.string "your forgiveness.\p"
-	.string "Perhaps one day you might\n"
-	.string "be willing…$"
-
-DragonsDen_Shrine_Text_ClairGrandfatherPassedAway:
-	.string "Before my grandfather passed\n"
-	.string "away, he was a protector of\l"
-	.string "this very shrine.\p"
-	.string "He taught me a valuable\n"
-	.string "lesson about the value\l"
-	.string "of working with your Pokémon.$"
-
-DragonsDen_Shrine_Text_ClairTalksAboutSilver:
-	.string "There was a young boy who\n"
-	.string "also challenged me in my Gym.\p"
-	.string "Unlike you, Fry and {PLAYER},\n"
-	.string "he only seemed to think of\l"
-	.string "Pokémon as tools of power.\p"
-	.string "He reminds me of myself when I\n"
-	.string "was younger…\p"
-	.string "Fry. {PLAYER}.\p"
-	.string "You need to stop {RIVAL} before\n"
-	.string "he gets in over his head…\p"
-	.string "Before he does something truly drastic.\p"
-	.string "Like what happened to me.$"
-
-DragonsDen_Shrine_Text_ClairWouldntYouLikeToKnow:
-	.string "You'd like to know, wouldn't you?\p"
-	.string "That's a story for another time…\p"
-	.string "All I'll say is that it involved\n"
-	.string "how my grandfather passed away.$"
-
-DragonsDen_Shrine_Text_ClairMakesFinalSpeech:
-	.string "If you'll excuse me, I'm going back\n"
-	.string "to Blackthorn and meet up with my\l"
-	.string "cousin Lance.\p"
-	.string "You know, he used to be a Kanto\n"
-	.string "Elite Four member…\p"
-	.string "Those were the days…\p"
-	.string "Good luck, Fry and {PLAYER}.$"
-
-DragonsDen_Shrine_Text_FryMakesFinalSpeech:
-	.string "Hey, {PLAYER}, thanks for helping\n"
-	.string "me back there.\p"
-	.string "I feel bad for Clair…\p"
-	.string "Anyways, with the Risingbadge, this\n"
-	.string "means I'll finally be ready to\l"
-	.string "take on the Elite Four!\p"
-	.string "Wonder if I'll run into {RIVAL}\n"
-	.string "again. He's a tough opponent,\l"
-	.string "that's for sure!\p"
-	.string "See you 'round, {PLAYER}!$"
-
 DragonsDen_Shrine_Text_HereRisingBadge:
     .string "Here, this is the Risingbadge…\p"
     .string "Hurry up! Take it!$"
-
-DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
-    .string "{PLAYER} received Risingbadge.$"
-
-DragonsDen_Shrine_Text_FryReceivedRisingBadge:
-    .string "Fry received Risingbadge.$"
-
-DragonsDen_Shrine_Text_RisingBadgeExplanation:
-    .string "Risingbadge will enable your\n"
-    .string "Pokémon to use the move for\l"
-    .string "climbing waterfalls.\p"
-    .string "Also, all Pokémon will recognize\n"
-    .string "you as a trainer and obey your\l"
-    .string "every command without question.$"
 
 DragonsDen_Shrine_Text_ElderScoldsClair:
     .string "CLAIR…\p"
@@ -669,8 +579,7 @@ DragonsDen_Shrine_Text_ClairsGrandfather:
 DragonsDen_Shrine_Text_ClairNeedsToFightYou:
 	.string "So. You finally made it.\n"
 	.string "I've been expecting you.\p"
-	.string "That first battle-\n"
-	.string "it didn't count.\p"
+	.string "That first battle- it didn't count.\p"
 	.string "You didn't face me at my full power.\p"
 	.string "And the heat from the lava was\n"
 	.string "getting to my head!\p"
@@ -702,3 +611,93 @@ DragonsDen_Shrine_Text_ClairLoss:
 	.string "you two demonstrated makes both\l"
 	.string "of you worthy to earn you the\l"
 	.string "Risingbadge.$"
+
+DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
+    .string "{PLAYER} received Risingbadge.$"
+
+DragonsDen_Shrine_Text_FryReceivedRisingBadge:
+    .string "Fry received Risingbadge.$"
+
+DragonsDen_Shrine_Text_RisingBadgeExplanation:
+    .string "Risingbadge will enable your\n"
+    .string "Pokémon to use the move for\l"
+    .string "climbing waterfalls.\p"
+    .string "Also, all Pokémon will recognize\n"
+    .string "you as a trainer and obey your\l"
+    .string "every command without question.$"
+
+DragonsDen_Shrine_Text_IUnderstand:
+    .string "I understand now…\p"
+	.string "Pokémon isn't about having the\n"
+	.string "strongest team members or\l"
+	.string "withholding badges from\l"
+	.string "worthy challengers.\p"
+	.string "It's about teamwork, and using\n"
+	.string "your Pokémon as partners rather\l"
+	.string "than tools.\p"
+	.string "I can see that by how well you two\n"
+	.string "battled together.\p"
+	.string "I've been a fool.$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMe:
+	.string "Will you forgive me?$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMeYes:
+	.string "Thank you.\n"
+	.string "I truly mean it.$"
+
+DragonsDen_Shrine_Text_WillYouForgiveMeNo:
+	.string "All right then.\p"
+	.string "I guess I don't deserve\n"
+	.string "your forgiveness.\p"
+	.string "Perhaps one day you might\n"
+	.string "be willing…$"
+
+DragonsDen_Shrine_Text_ClairGrandfatherPassedAway:
+	.string "Before my grandfather passed\n"
+	.string "away, he was a protector of\l"
+	.string "this very shrine.\p"
+	.string "He taught me a valuable\n"
+	.string "lesson about the value\l"
+	.string "of working with your Pokémon.$"
+
+DragonsDen_Shrine_Text_ClairTalksAboutSilver:
+	.string "There was a young boy who\n"
+	.string "also challenged me in my Gym.\p"
+	.string "Unlike you, Fry and {PLAYER},\n"
+	.string "he only seemed to think of\l"
+	.string "Pokémon as tools of power.\p"
+	.string "He reminds me of myself when I\n"
+	.string "was younger…\p"
+	.string "Fry. {PLAYER}.\p"
+	.string "You need to stop {RIVAL} before\n"
+	.string "he gets in over his head…\p"
+	.string "Before he does something truly drastic.\p"
+	.string "Like what happened to me.$"
+
+DragonsDen_Shrine_Text_ClairWouldntYouLikeToKnow:
+	.string "You'd like to know, wouldn't you?\p"
+	.string "That's a story for another time…\p"
+	.string "All I'll say is that it involved\n"
+	.string "how my grandfather passed away.$"
+
+DragonsDen_Shrine_Text_ClairMakesFinalSpeech:
+	.string "If you'll excuse me, I'm going back\n"
+	.string "to Blackthorn and meet up with my\l"
+	.string "cousin Lance.\p"
+	.string "You know, he used to be a Kanto\n"
+	.string "Elite Four member…\p"
+	.string "Those were the days…\p"
+	.string "Good luck, Fry and {PLAYER}.$"
+
+DragonsDen_Shrine_Text_FryMakesFinalSpeech:
+	.string "Hey, {PLAYER}, thanks for helping\n"
+	.string "me back there.\p"
+	.string "I feel bad for Clair…\p"
+	.string "Anyways, with the Risingbadge, this\n"
+	.string "means I'll finally be ready to\l"
+	.string "take on the Elite Four!\p"
+	.string "Wonder if I'll run into {RIVAL}\n"
+	.string "again. He's a tough opponent,\l"
+	.string "that's for sure!\p"
+	.string "See you 'round, {PLAYER}!$"

@@ -91,7 +91,7 @@
     {
       "id": "MAPSEC_FORTREE_CITY",
       "name": "FORTREE CITY",
-      "x": 12,
+      "x": 13,
       "y": 0,
       "width": 1,
       "height": 1
@@ -805,7 +805,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_MANSION",
-      "name": "Pokémon MANSION"
+      "name": "POKéMON MANSION"
     },
     {
       "id": "MAPSEC_KANTO_SAFARI_ZONE",
@@ -817,7 +817,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_LEAGUE",
-      "name": "Pokémon LEAGUE"
+      "name": "POKéMON LEAGUE"
     },
     {
       "id": "MAPSEC_ROCK_TUNNEL",
@@ -829,7 +829,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_TOWER",
-      "name": "Pokémon TOWER"
+      "name": "POKéMON TOWER"
     },
     {
       "id": "MAPSEC_CERULEAN_CAVE",

@@ -10,8 +10,10 @@
 #include "overworld.h"
 #include "palette.h"
 #include "pokenav.h"
+#include "regions.h"
 #include "script.h"
 #include "secret_base.h"
+#include "tilesets.h"
 #include "trainer_hill.h"
 #include "tv.h"
 #include "constants/rgb.h"
@@ -405,19 +407,39 @@ void MapGridSetMetatileEntryAt(int x, int y, u16 metatile)
 u16 GetMetatileAttributesById(u16 metatile)
 {
     const u16 *attributes;
-    if (metatile < NUM_METATILES_IN_PRIMARY)
-    {
-        attributes = gMapHeader.mapLayout->primaryTileset->metatileAttributes;
-        return attributes[metatile];
-    }
-    else if (metatile < NUM_METATILES_TOTAL)
-    {
-        attributes = gMapHeader.mapLayout->secondaryTileset->metatileAttributes;
-        return attributes[metatile - NUM_METATILES_IN_PRIMARY];
+    if (IsHoennTileset(gMapHeader.mapLayout->primaryTileset))
+     {
+        if (metatile < NUM_METATILES_IN_PRIMARY_HOENN)
+        {
+            attributes = gMapHeader.mapLayout->primaryTileset->metatileAttributes;
+            return attributes[metatile];
+        }
+        else if (metatile < NUM_METATILES_TOTAL)
+        {
+            attributes = gMapHeader.mapLayout->secondaryTileset->metatileAttributes;
+            return attributes[metatile - NUM_METATILES_IN_PRIMARY_HOENN];
+        }
+        else
+        {
+            return MB_INVALID;
+        }
     }
     else
     {
-        return MB_INVALID;
+        if (metatile < NUM_METATILES_IN_PRIMARY)
+        {
+            attributes = gMapHeader.mapLayout->primaryTileset->metatileAttributes;
+            return attributes[metatile];
+        }
+        else if (metatile < NUM_METATILES_TOTAL)
+        {
+            attributes = gMapHeader.mapLayout->secondaryTileset->metatileAttributes;
+            return attributes[metatile - NUM_METATILES_IN_PRIMARY];
+        }
+        else
+        {
+            return MB_INVALID;
+        }
     }
 }
 
@@ -879,6 +901,79 @@ static void UNUSED ApplyGlobalTintToPaletteSlot(u8 slot, u8 count)
 
 }
 
+static const struct Tileset *const sHoennTilesets[] = //add to list if needed- define them in tilesets.h
+{
+    &gTileset_General,
+    &gTileset_Slateport,
+    &gTileset_Petalburg,
+    &gTileset_Rustboro,
+    &gTileset_Dewford,
+    &gTileset_Slateport,
+    &gTileset_Mauville,
+    &gTileset_Lavaridge,
+    &gTileset_Fallarbor,
+    &gTileset_Fortree,
+    &gTileset_Lilycove,
+    &gTileset_Mossdeep,
+    &gTileset_EverGrande,
+    &gTileset_Pacifidlog,
+    &gTileset_Sootopolis,
+    &gTileset_Building,
+    &gTileset_Shop,
+    &gTileset_PokemonCenter,
+    &gTileset_Cave,
+    &gTileset_PokemonSchool,
+    &gTileset_PokemonFanClub,
+    &gTileset_Unused1,
+    &gTileset_MeteorFalls,
+    &gTileset_OceanicMuseum,
+    &gTileset_CableClub,
+    &gTileset_SeashoreHouse,
+    &gTileset_PrettyPetalFlowerShop,
+    &gTileset_PokemonDayCare,
+    &gTileset_Facility,
+    &gTileset_BikeShop,
+    &gTileset_RusturfTunnel,
+    &gTileset_SecretBaseBrownCave,
+    &gTileset_SecretBaseTree,
+    &gTileset_SecretBaseShrub,
+    &gTileset_SecretBaseBlueCave,
+    &gTileset_SecretBaseYellowCave,
+    &gTileset_SecretBaseRedCave,
+    &gTileset_InsideOfTruck,
+    &gTileset_Unused2,
+    &gTileset_Contest,
+    &gTileset_LilycoveMuseum,
+    &gTileset_BrendansMaysHouse,
+    &gTileset_Lab,
+    &gTileset_Underwater,
+    &gTileset_PetalburgGym,
+    //&gTileset_SootopolisGym,
+    &gTileset_GenericBuilding,
+    &gTileset_MauvilleGameCorner,
+    &gTileset_RustboroGym,
+    &gTileset_DewfordGym,
+    &gTileset_MauvilleGym,
+    &gTileset_LavaridgeGym,
+    &gTileset_TrickHousePuzzle,
+    &gTileset_FortreeGym,
+    &gTileset_MossdeepGym,
+    &gTileset_InsideShip,
+    &gTileset_SecretBase,
+    &gTileset_EliteFour,
+};
+
+bool8 IsHoennTileset(struct Tileset const *tileset)
+{
+    for (int i = 0; i < ARRAY_COUNT(sHoennTilesets); i++)
+    {
+        if (tileset == sHoennTilesets[i])
+            return TRUE;
+    }
+    return FALSE;
+}
+
+
 static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u16 size, bool8 skipFaded)
 {
     if (tileset)
@@ -897,9 +992,19 @@ static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u1
             // All 'gTilesetPalettes_' arrays should have ALIGNED(4) in them,
             // but we use SmartCopy here just in case they don't
             if (skipFaded)
-                CpuCopy16(tileset->palettes[NUM_PALS_IN_PRIMARY], &gPlttBufferUnfaded[destOffset], size);
+            {
+                if (IsHoennTileset(gMapHeader.mapLayout->primaryTileset))
+                    CpuCopy16(tileset->palettes[NUM_PALS_IN_PRIMARY_HOENN], &gPlttBufferUnfaded[destOffset], size);
+                else
+                    CpuCopy16(tileset->palettes[NUM_PALS_IN_PRIMARY], &gPlttBufferUnfaded[destOffset], size);
+            }
             else
-                LoadPaletteFast(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
+            {
+                if (IsHoennTileset(gMapHeader.mapLayout->primaryTileset))
+                    LoadPaletteFast(tileset->palettes[NUM_PALS_IN_PRIMARY_HOENN], destOffset, size);
+                else
+                    LoadPaletteFast(tileset->palettes[NUM_PALS_IN_PRIMARY], destOffset, size);
+            }
         }
         else
         {
@@ -911,35 +1016,56 @@ static void LoadTilesetPalette(struct Tileset const *tileset, u16 destOffset, u1
 
 void CopyPrimaryTilesetToVram(struct MapLayout const *mapLayout)
 {
-    CopyTilesetToVram(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY, 0);
+    if (IsHoennTileset(mapLayout->primaryTileset))
+        CopyTilesetToVram(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY_HOENN, 0);
+    else
+        CopyTilesetToVram(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY, 0);
 }
 
 void CopySecondaryTilesetToVram(struct MapLayout const *mapLayout)
 {
-    CopyTilesetToVram(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+    if (IsHoennTileset(mapLayout->secondaryTileset))
+        CopyTilesetToVram(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY_HOENN, NUM_TILES_IN_PRIMARY_HOENN);
+    else
+        CopyTilesetToVram(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
 }
 
 void CopySecondaryTilesetToVramUsingHeap(struct MapLayout const *mapLayout)
 {
-    CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+    if (IsHoennTileset(mapLayout->secondaryTileset))
+        CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY_HOENN, NUM_TILES_IN_PRIMARY_HOENN);
+    else
+        CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
 }
 
 static void LoadPrimaryTilesetPalette(struct MapLayout const *mapLayout)
 {
-    LoadTilesetPalette(mapLayout->primaryTileset, 0, NUM_PALS_IN_PRIMARY * PLTT_SIZE_4BPP, FALSE);
+    if (IsHoennTileset(mapLayout->primaryTileset))
+        LoadTilesetPalette(mapLayout->primaryTileset, 0, NUM_PALS_IN_PRIMARY_HOENN * PLTT_SIZE_4BPP, FALSE);
+    else
+        LoadTilesetPalette(mapLayout->primaryTileset, 0, NUM_PALS_IN_PRIMARY * PLTT_SIZE_4BPP, FALSE);
 }
 
 void LoadSecondaryTilesetPalette(struct MapLayout const *mapLayout, bool8 skipFaded)
 {
-    LoadTilesetPalette(mapLayout->secondaryTileset, NUM_PALS_IN_PRIMARY * 16, (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY) * PLTT_SIZE_4BPP, skipFaded);
+    if (IsHoennTileset(mapLayout->secondaryTileset))
+        LoadTilesetPalette(mapLayout->secondaryTileset, NUM_PALS_IN_PRIMARY_HOENN * 16, (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY_HOENN) * PLTT_SIZE_4BPP, skipFaded);
+    else
+        LoadTilesetPalette(mapLayout->secondaryTileset, NUM_PALS_IN_PRIMARY * 16, (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY) * PLTT_SIZE_4BPP, skipFaded);
 }
 
 void CopyMapTilesetsToVram(struct MapLayout const *mapLayout)
 {
     if (mapLayout)
     {
-        CopyTilesetToVramUsingHeap(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY, 0);
-        CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+        if (IsHoennTileset(mapLayout->primaryTileset))
+            CopyTilesetToVramUsingHeap(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY_HOENN, 0);
+        else
+            CopyTilesetToVramUsingHeap(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY, 0);
+        if (IsHoennTileset(mapLayout->secondaryTileset))
+            CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY_HOENN, NUM_TILES_IN_PRIMARY_HOENN);
+        else
+            CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
     }
 }
 

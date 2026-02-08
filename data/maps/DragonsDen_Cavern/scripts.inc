@@ -129,34 +129,32 @@ DragonsDen_Cavern_Movement_ClairLeaveRight:
 	step_end
 
 DragonsDen_Cavern_Text_ClairGiveDragonclaw:
-    .string "CLAIR: WAIT!\p"
-	.string "I'm sorry about this.\n"
+    .string "Clair: WAIT!\p"
+	.string "Sorry for not giving this\n"
+	.string "to you earlier.\p"
     .string "Here, take this as my apology.$"
 
 DragonsDen_Cavern_Text_ClairDescribeDragonclaw:
-    .string "That contains DRAGON CLAW.\p"
+    .string "That contains Dragon Claw.\p"
     .string "No, it doesn't have anything to\n"
     .string "do with my nails.\p"
-    .string "If you don't want it, you don't\n"
-    .string "have to take it.$"
+    .string "Again, I'm truly sorry for how\n"
+    .string "I acted earlier.$"
 
 DragonsDen_Cavern_Text_ClairWhatsTheMatter:
-    .string "What's the matter? Aren't\n"
-    .string "you going on to the Pokémon\l"
-    .string "LEAGUE?\p"
-    .string "After you become CHAMPION, you\n"
-    .string "can rematch any GYM LEADER you\l"
+    .string "Did you know?\p"
+    .string "After you become Champion, you\n"
+    .string "can rematch any Gym Leader you\l"
     .string "want.\p"
-    .string "Go to the Pokémon LEAGUE.\p"
-    .string "Do you know how to get there?\p"
-    .string "From here, go to NEW BARK TOWN.\p"
-    .string "Then SURF east to Pokémon LEAGUE.\p"
+    .string "To get to the Pokémon League,\n"
+    .string "go to New Bark Town.\p"
+    .string "Then Surf east to Pokémon League.\p"
     .string "The route there is very tough.\p"
     .string "Don't you dare lose at the Pokémon\n"
-    .string "LEAGUE!\p"
+    .string "League!\p"
     .string "If you do, I'll feel even worse\n"
-    .string "about having lost to you!\p"
-    .string "Give it everything you've got.$"
+    .string "about having lost to you and Fry!\p"
+    .string "Give it everything you've got!$"
 
 DragonsDen_Cavern_EventScript_Darin::
 	trainerbattle_single TRAINER_DARIN DragonsDen_Cavern_Text_CooltrainermDarinSeen, DragonsDen_Cavern_Text_CooltrainermDarinBeaten
@@ -195,11 +193,11 @@ DragonsDen_Cavern_EventScript_Item_PP_Max::
 
 
 DragonsDen_Cavern_Text_DragonShrineSign:
-    .string "DRAGON SHRINE\p"
+    .string "Dragon Shrine\p"
     .string "A shrine honoring the dragon\n"
     .string "Pokémon\p"
-    .string "said to have lived in DRAGON'S\n"
-    .string "DEN.$"
+    .string "said to have lived in Dragon's\n"
+    .string "Den.$"
 
 DragonsDen_Cavern_Text_SilverTraining1:
     .string "…\n"
@@ -249,7 +247,7 @@ DragonsDen_Cavern_Text_TwinsLeaandPia1Beaten:
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1After:
     .string "It was like having to battle\n"
-    .string "LANCE.$"
+    .string "Lance.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2Seen:
     .string "Who are you?$"

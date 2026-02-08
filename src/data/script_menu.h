@@ -820,7 +820,8 @@ static const struct MenuAction MultichoiceList_OlivineHarbor[] =
 };
 static const struct MenuAction MultichoiceList_OlivineHarborRed[] =
 {
-    {gText_Vermilion},   
+    {gText_Vermilion},
+    {COMPOUND_STRING("Slateport")},
     {gText_SouthernIsland},
     {gText_BirthIsland},
     {gText_FarawayIsland},
@@ -837,7 +838,19 @@ static const struct MenuAction MultichoiceList_VermilionHarbor[] =
 };
 static const struct MenuAction MultichoiceList_VermilionHarborRed[] =
 {
-    {gText_Olivine},   
+    {gText_Olivine},
+    {COMPOUND_STRING("Slateport")},
+    {gText_SouthernIsland},
+    {gText_BirthIsland},
+    {gText_FarawayIsland},
+    {gText_BattleFrontier},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_SlateportHarborRed[] =
+{
+    {gText_Olivine},
+    {gText_Vermilion}, 
     {gText_SouthernIsland},
     {gText_BirthIsland},
     {gText_FarawayIsland},
@@ -1066,6 +1079,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_5FLOORS]                    = MULTICHOICE(MultichoiceList_5Floors),
     [MULTI_OLIVINE_HARBOR_RED]              = MULTICHOICE(MultichoiceList_OlivineHarborRed),
     [MULTI_VERMILION_HARBOR_RED]              = MULTICHOICE(MultichoiceList_VermilionHarborRed),
+    [MULTI_SLATEPORT_HARBOR_RED]              = MULTICHOICE(MultichoiceList_SlateportHarborRed),
 };
 
 const u8 *const gStdStrings[] =

@@ -2000,6 +2000,10 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_NONE)
+            {
+                CreateMon(&party[i], SPECIES_RATTATA, 5, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
             if (FlagGet(FLAG_RANDOMIZER))
             {
                 species = GetSpeciesRandomSeeded(partyData[i].species, 1, 0);
