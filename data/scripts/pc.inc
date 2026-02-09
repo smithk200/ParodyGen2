@@ -1,6 +1,5 @@
 EventScript_PC::
 	lockall
-	msgbox Debug_SomethingOrOther2, MSGBOX_DEFAULT
 	setvar VAR_0x8004, PC_LOCATION_OTHER
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
@@ -10,7 +9,6 @@ EventScript_PC::
 
 EventScript_PCHoenn::
 	lockall
-	msgbox Debug_SomethingOrOther, MSGBOX_DEFAULT
 	setvar VAR_0x8004, PC_LOCATION_HOENN
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
