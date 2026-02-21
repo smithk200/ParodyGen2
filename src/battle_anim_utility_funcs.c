@@ -5,6 +5,7 @@
 #include "graphics.h"
 #include "malloc.h"
 #include "palette.h"
+#include "regions.h"
 #include "sound.h"
 #include "sprite.h"
 #include "task.h"
@@ -467,6 +468,7 @@ static void StatsChangeAnimation_Step2(u8 taskId)
     spriteId2 = 0;
     battlerSpriteId = gBattlerSpriteIds[sAnimStatsChangeData->battler1];
     spriteId = CreateInvisibleSpriteCopy(sAnimStatsChangeData->battler1, battlerSpriteId, sAnimStatsChangeData->species);
+    u16 region = GetCurrentRegion();
     if (sAnimStatsChangeData->aMultipleBattlers)
     {
         battlerSpriteId = gBattlerSpriteIds[sAnimStatsChangeData->battler2];
@@ -540,10 +542,20 @@ static void StatsChangeAnimation_Step2(u8 taskId)
     gTasks[taskId].tBattler2SpriteId = gBattlerSpriteIds[sAnimStatsChangeData->battler2];
     gTasks[taskId].func = StatsChangeAnimation_Step3;
 
-    if (!sAnimStatsChangeData->aDecrease)
-        PlaySE12WithPanning(SE_M_STAT_INCREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+    if (region == REGION_HOENN)
+    {
+        if (!sAnimStatsChangeData->aDecrease)
+            PlaySE12WithPanning(SE_WACK_STAT_INCREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+        else
+            PlaySE12WithPanning(SE_WACK_STAT_DECREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+    }
     else
-        PlaySE12WithPanning(SE_M_STAT_DECREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+    {
+        if (!sAnimStatsChangeData->aDecrease)
+            PlaySE12WithPanning(SE_M_STAT_INCREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+        else
+            PlaySE12WithPanning(SE_M_STAT_DECREASE, BattleAnimAdjustPanning2(SOUND_PAN_ATTACKER));
+    }
 }
 
 static void StatsChangeAnimation_Step3(u8 taskId)

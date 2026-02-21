@@ -86,7 +86,13 @@ Route112_EventScript_RematchTrent::
 	end
 
 Route112_EventScript_Larry::
-	trainerbattle_single TRAINER_LARRY, Route112_Text_LarryIntro, Route112_Text_LarryDefeat
+	goto_if_set FLAG_DEFEATED_LARRY_1, Route112_EventScript_Larry2
+	trainerbattle_single TRAINER_LARRY_2, Route112_Text_LarryIntro, Route112_Text_LarryDefeat
+	msgbox Route112_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route112_EventScript_Larry2::
+	trainerbattle_single TRAINER_LARRY_2, Route112_Text_LarryIntro2, Route112_Text_LarryDefeat
 	msgbox Route112_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -136,6 +142,38 @@ Route112_Text_MtChimneySign:
 	.string "please take the CABLE CAR.”$"
 
 Route112_Text_RouteSignLavaridge:
-	.string "ROUTE 112\n"
-	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
+	.string "Route 112\n"
+	.string "{LEFT_ARROW} Lavaridge Town$"
 
+Route112_Text_LarryIntro:
+	.string "Hey there, {PLAYER}.\n"
+	.string "It's me, Larry.\p"
+	.string "I suppose we haven't gotten the chance\n"
+	.string "to meet yet.\p"
+	.string "Anyways, I'm an Elite Four member here,\n"
+	.string "but you caught me on my off day.\p"
+	.string "Ready?\p"
+	.string "Let's get this over with.$"
+
+Route112_Text_LarryIntro2:
+	.string "Hey there, {PLAYER}.\n"
+	.string "Do you remember me?$"
+	.string "It's me, Larry.\p"
+	.string "As you may know, I'm an Elite Four\n"
+	.string "member here, but you caught me on\l"
+	.string "my off day again.\p"
+	.string "You never let me get a break, do you?\p"
+	.string "Ready?\p"
+	.string "Let's get this over with.$"
+
+Route112_Text_LarryDefeat:
+	.string "Well then.$"
+
+Route112_Text_LarryPostBattle:
+	.string "If I were on duty, I'd give you a\n"
+	.string "Gym Badge, but I'm off duty.\p"
+	.string "Anyways, hope to see you in\n"
+	.string "the Elite Four!$"
+
+Route112_Text_Ellpisis:
+	.string "…$"

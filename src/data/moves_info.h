@@ -21133,6 +21133,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    [MOVE_HOLY_DUTY] =
+    {
+        .name = COMPOUND_STRING("Holy Duty"),
+        .description = COMPOUND_STRING(
+            "A suicidal attack that blows\n"
+            "up both Pokémon in battle."),
+        .effect = EFFECT_HOLY_DUTY,
+        .power = 100,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Explosion,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

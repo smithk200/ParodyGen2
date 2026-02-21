@@ -710,6 +710,73 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formSpeciesIdTable = sCharizardFormSpeciesIdTable,
         .formChangeTable = sCharizardFormChangeTable,
     },
+    [SPECIES_CHARIZARD_CORRUPT] =
+    {
+        .baseHP        = 98,
+        .baseAttack    = 121,
+        .baseDefense   = 97,
+        .baseSpeed     = 140,
+        .baseSpAttack  = 1,
+        .baseSpDefense = 130,
+        .types = MON_TYPES(TYPE_FIRE, TYPE_FLYING),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 420 : 285,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
+        .abilities = { ABILITY_CORRUPT, ABILITY_CORRUPT, ABILITY_CORRUPT },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Charizard"),
+        .cryId = CRY_CHARIZARD_MEGA_Y,
+        .natDexNum = NATIONAL_DEX_CHARIZARD,
+        .categoryName = _("Flame"),
+        .height = 17,
+        .weight = 1005,
+        .description = COMPOUND_STRING(
+            "Its bond with its Trainer is the source\n"
+            "of its power. It boasts speed and\n"
+            "maneuverability greater than that of a\n"
+            "jet fighter."),
+        .pokemonScale = 256,
+        .pokemonOffset = 1,
+        .trainerScale = 302,
+        .trainerOffset = 3,
+        .frontPic = gMonFrontPic_CharizardCorrupt,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_CharizardMegaY,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 1,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
+        .palette = gMonPalette_CharizardCorrupt,
+        .shinyPalette = gMonShinyPalette_CharizardCorrupt,
+        .iconSprite = gMonIcon_CharizardMegaY,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-1, 14, SHADOW_SIZE_L)
+        FOOTPRINT(Charizard)
+    #if OW_BATTLE_ONLY_FORMS
+        OVERWORLD(
+            sPicTable_CharizardMegaY,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_CharizardMegaY,
+            gShinyOverworldPalette_CharizardMegaY
+        )
+    #endif //OW_BATTLE_ONLY_FORMS
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sCharizardLevelUpLearnset,
+        .teachableLearnset = sCharizardTeachableLearnset,
+        .formSpeciesIdTable = sCharizardFormSpeciesIdTable,
+        .formChangeTable = sCharizardFormChangeTable,
+    },
 #endif //P_MEGA_EVOLUTIONS
 
 #if P_GIGANTAMAX_FORMS
@@ -12892,7 +12959,81 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sElectrodeLevelUpLearnset,
         .teachableLearnset = sElectrodeTeachableLearnset,
         .formSpeciesIdTable = sElectrodeFormSpeciesIdTable,
+        .formChangeTable = sElectrodeFormChangeTable,
     },
+
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_ELECTRODE_CORRUPT] =
+    {
+        .baseHP        = 100,
+        .baseAttack    = 100,
+        .baseDefense   = 100,
+        .baseSpeed     = P_UPDATED_STATS >= GEN_7 ? 255 : 140,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 60,
+        .expYield = ELECTRODE_EXP_YIELD,
+        .evYield_Speed = 2,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_SOUNDPROOF, ABILITY_STATIC, ABILITY_AFTERMATH },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Electrode"),
+        .cryId = CRY_ELECTRODE,
+        .natDexNum = NATIONAL_DEX_ELECTRODE,
+        .categoryName = _("Ball"),
+        .height = 12,
+        .weight = 666,
+        .description = COMPOUND_STRING(
+            "They appear in great numbers at electric\n"
+            "power plants. Because they feed on\n"
+            "electricity, they cause massive and\n"
+            "chaotic blackouts in nearby cities."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Electrode,
+        .frontPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(40, 40) : MON_COORDS_SIZE(48, 48),
+        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 14 : 11,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 14),
+            ANIMCMD_FRAME(1, 34),
+            ANIMCMD_FRAME(1, 34),
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = P_GBA_STYLE_SPECIES_GFX ? ANIM_V_SQUISH_AND_BOUNCE : ANIM_SHRINK_GROW_VIBRATE_SLOW,
+        .enemyMonElevation = P_GBA_STYLE_SPECIES_GFX ? 12 : 0,
+        .backPic = gMonBackPic_Electrode,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 40) : MON_COORDS_SIZE(64, 40),
+        .backPicYOffset = 13,
+        .backAnimId = BACK_ANIM_JOLT_RIGHT,
+        .palette = gMonPalette_Electrode,
+        .shinyPalette = gMonShinyPalette_Electrode,
+        .iconSprite = gMonIcon_Electrode,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(1, 2, SHADOW_SIZE_M)
+        FOOTPRINT(Electrode)
+        OVERWORLD(
+            sPicTable_Electrode,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_SPOT,
+            sAnimTable_Following,
+            gOverworldPalette_Electrode,
+            gShinyOverworldPalette_Electrode
+        )
+        .levelUpLearnset = sElectrodeLevelUpLearnset,
+        .teachableLearnset = sElectrodeTeachableLearnset,
+        .formSpeciesIdTable = sElectrodeFormSpeciesIdTable,
+        .formChangeTable = sElectrodeFormChangeTable,
+    },
+#endif
 
 #if P_HISUIAN_FORMS
     [SPECIES_VOLTORB_HISUI] =

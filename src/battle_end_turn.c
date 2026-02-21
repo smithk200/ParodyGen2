@@ -64,6 +64,7 @@ enum EndTurnResolutionOrder
     ENDTURN_FORM_CHANGE_ABILITIES,
     ENDTURN_EJECT_PACK,
     ENDTURN_DYNAMAX,
+    ENDTURN_CORRUPT_ORB,
     ENDTURN_COUNT,
 };
 
@@ -156,6 +157,8 @@ static bool32 HandleEndTurnVarious(u32 battler)
 
     for (i = 0; i < gBattlersCount; i++)
     {
+        gSpecialStatuses[battler].corruptOrbActivated = FALSE;
+
         if (gBattleMons[i].volatiles.lockOn > 0)
             gBattleMons[i].volatiles.lockOn--;
 
@@ -1425,6 +1428,7 @@ static bool32 HandleEndTurnThirdEventBlock(u32 battler)
         case ABILITY_BALL_FETCH:
         case ABILITY_HARVEST:
         case ABILITY_MOODY:
+        case ABILITY_CORRUPT:
         case ABILITY_PICKUP:
         case ABILITY_SPEED_BOOST:
             if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, 0, MOVE_NONE))
@@ -1506,6 +1510,42 @@ static bool32 HandleEndTurnDynamax(u32 battler)
     return effect;
 }
 
+static bool32 HandleEndTurnCorruptOrb(u32 battler)
+{
+    bool32 effect = FALSE;
+
+    gBattleStruct->turnEffectsBattlerId++;
+
+    if ((gBattleMons[battler].item == ITEM_CORRUPT_ORB
+                && !gSpecialStatuses[battler].corruptOrbActivated))
+        {
+            gSpecialStatuses[battler].corruptOrbActivated = FALSE;
+            {
+                u32 i;
+                bool32 canRaise = FALSE;
+
+                for (i = STAT_ATK; i <= STAT_SPEED; i++)
+                {
+                    if (gBattleMons[battler].statStages[i] < MAX_STAT_STAGE)
+                    {
+                        canRaise = TRUE;
+                        break;
+                    }
+                }
+
+                if (canRaise)
+                {
+                    gSpecialStatuses[battler].corruptOrbActivated = TRUE;
+                    BattleScriptPushCursorAndCallback(BattleScript_AllStatsUp_Corrupt);
+                    effect++;
+                    return effect;
+                }
+            }
+        }
+
+    return effect;
+}
+
 static bool32 (*const sEndTurnEffectHandlers[])(u32 battler) =
 {
     [ENDTURN_ORDER] = HandleEndTurnOrder,
@@ -1555,6 +1595,7 @@ static bool32 (*const sEndTurnEffectHandlers[])(u32 battler) =
     [ENDTURN_EMERGENCY_EXIT_4] = HandleEndTurnEmergencyExit,
     [ENDTURN_FORM_CHANGE_ABILITIES] = HandleEndTurnFormChangeAbilities,
     [ENDTURN_EJECT_PACK] = HandleEndTurnEjectPack,
+    [ENDTURN_CORRUPT_ORB] = HandleEndTurnCorruptOrb,
     [ENDTURN_DYNAMAX] = HandleEndTurnDynamax,
 };
 
@@ -1565,7 +1606,7 @@ u32 DoEndTurnEffects(void)
 
     for (;;)
     {
-        // If either turnEffectsBattlerId or turnSideTracker are at max count, reest values and go to the next state
+        // If either turnEffectsBattlerId or turnSideTracker are at max count, reset values and go to the next state
         if (gBattleStruct->turnEffectsBattlerId == gBattlersCount || gBattleStruct->turnSideTracker == NUM_BATTLE_SIDES)
         {
             gBattleStruct->turnEffectsBattlerId = 0;

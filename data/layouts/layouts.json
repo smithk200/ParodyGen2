@@ -1336,7 +1336,7 @@
       "name": "MtChimney_Layout",
       "width": 40,
       "height": 47,
-      "primary_tileset": "gTileset_Johto_General",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/MtChimney/border.bin",
       "blockdata_filepath": "data/layouts/MtChimney/map.bin"

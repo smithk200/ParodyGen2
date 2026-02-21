@@ -7807,3 +7807,11 @@ DirectSoundWaveData_hg_hoohclap::
 	.align 2
 DirectSoundWaveData_hg_choirc5::
 	.incbin "sound/direct_sound_samples/hg_choirc5.bin"
+
+	.align 2
+DirectSoundWaveData_stat_increase::
+	.incbin "sound/direct_sound_samples/increase.bin"
+
+	.align 2
+DirectSoundWaveData_stat_decrease::
+	.incbin "sound/direct_sound_samples/decrease.bin"

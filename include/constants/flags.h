@@ -741,7 +741,7 @@
 #define FLAG_HIDE_GYM_BOY  0x2B6
 #define FLAG_FRY_BLACKTHORN  0x2B7
 #define FLAG_FRY_GIVE_TM_BLACKTHORN  0x2B8
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
+#define FLAG_DEFEATED_LARRY_1  0x2B9
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 

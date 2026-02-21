@@ -1560,17 +1560,6 @@ Route112_Text_TrentRematchPostBattle:
 	.string "I intend to get up there and give them\n"
 	.string "a challenge!$"
 
-Route112_Text_LarryIntro:
-	.string "I'm strong.\n"
-	.string "I won't cry if I lose.$"
-
-Route112_Text_LarryDefeat:
-	.string "Waaaah!$"
-
-Route112_Text_LarryPostBattle:
-	.string "I'm not crying because I miss my mommy!\n"
-	.string "Snivel…$"
-
 Route112_Text_CarolIntro:
 	.string "When you're out on a picnic, why,\n"
 	.string "you simply have to sing!\l"

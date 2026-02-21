@@ -1638,8 +1638,10 @@
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
 #define SPECIES_RATTATA_JOEY                            1524
+#define SPECIES_CHARIZARD_CORRUPT                       1525
+#define SPECIES_ELECTRODE_CORRUPT                        1526
 
-#define SPECIES_EGG                                     (SPECIES_RATTATA_JOEY + 1)
+#define SPECIES_EGG                                     (SPECIES_ELECTRODE_CORRUPT + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

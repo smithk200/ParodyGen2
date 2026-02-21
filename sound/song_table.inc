@@ -777,10 +777,10 @@ gSongTable::
 	song low_5, 0, 0
 	song vs_fry, 0, 0
 	song emotion, 0, 0
-	song mus_pl_b_factory, 0, 0
-	song mus_pl_global_terminal, 0, 0
+	song typing_boss, 0, 0
+	song stat_increase, 1, 1
 	song mus_pl_lilycove_bossa_nova, 0, 0
-	song mus_pl_looker, 0, 0
+	song stat_decrease, 1, 1
 	song mus_pl_vs_giratina, 0, 0
 	song mus_pl_vs_frontier_brain, 0, 0
 	song mus_pl_victory_frontier_brain, 0, 0

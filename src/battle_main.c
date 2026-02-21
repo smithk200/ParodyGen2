@@ -387,6 +387,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PHILIP] = {_("Philip")},
     [TRAINER_CLASS_PHILIP_2] = {_("Philip J.")},
     [TRAINER_CLASS_ROCKETA] = {_("Rocket Admin")},
+    [TRAINER_CLASS_HOENN_LEADER] = {_("Leader")},
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
@@ -2004,12 +2005,12 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             {
                 CreateMon(&party[i], SPECIES_RATTATA, 5, 0, TRUE, personalityValue, otIdType, fixedOtId);
             }
-            if (FlagGet(FLAG_RANDOMIZER))
+            else if (FlagGet(FLAG_RANDOMIZER))
             {
                 species = GetSpeciesRandomSeeded(partyData[i].species, 1, 0);
                 CreateMon(&party[i], species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             }
-            if (trainer->isDynamic == TRUE)
+            else if (trainer->isDynamic == TRUE)
                 {
                     highest = (highest + partyData[monIndex].lvlmodifier);
                     if (highest > 100)
@@ -2018,7 +2019,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                         highest = 1; //making sure the level doesn't go below 1
                     CreateMon(&party[i], partyData[monIndex].species, highest, 0, TRUE, personalityValue, otIdType, fixedOtId);
                 }
-            if (
+            else if (
             (trainerClass == TRAINER_CLASS_LEADER)
             || (trainerClass == TRAINER_CLASS_ROCKETA)
             || (trainerClass == TRAINER_CLASS_RIVAL)

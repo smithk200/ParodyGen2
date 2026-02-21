@@ -14845,6 +14845,24 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_ThunderStone,
         .iconPalette = gItemIconPalette_ThunderStone,
     },
+    [ITEM_CORRUPT_ORB] =
+    {
+        .name = ITEM_NAME("Corrupt Orb"),
+        .pluralName = ITEM_PLURAL_NAME("Corrupt Orbs"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "An orb that is filled\n"
+            "with corrupt energy.\n"
+            "Boosts all stats."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_LaxIncense,
+        .iconPalette = gItemIconPalette_LaxIncense,
+    },
 };
 
 #undef ITEM_NAME

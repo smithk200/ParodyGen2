@@ -2409,4 +2409,10 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+    [ABILITY_CORRUPT] =
+    {
+        .name = _("Corrupt"),
+        .description = COMPOUND_STRING("Y0u sh0u1dn't b3 h3r3."),
+        .aiRating = 10,
+    },
 };

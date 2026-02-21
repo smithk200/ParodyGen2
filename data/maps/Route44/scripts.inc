@@ -44,6 +44,7 @@ Route44_EventScript_Cybil::
 
 Route44_EventScript_Larry::
 	trainerbattle_single TRAINER_LARRY Route44_Text_LarrySeen, Route44_Text_LarryBeaten
+    setflag FLAG_DEFEATED_LARRY_1
 	msgbox Route44_Text_LarryAfter, MSGBOX_AUTOCLOSE
 	end
 

@@ -4351,6 +4351,46 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
+            case ABILITY_CORRUPT:
+                if (gDisableStructs[battler].isFirstTurn != 2)
+                {
+                    u32 validToRaise = 0, validToLower = 0;
+                    u32 statsNum = NUM_BATTLE_STATS;
+                    u32 rnd;
+
+                    for (i = STAT_ATK; i < statsNum; i++)
+                    {
+                        if (CompareStat(battler, i, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
+                            validToLower |= 1u << i;
+                        if (CompareStat(battler, i, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
+                            validToRaise |= 1u << i;
+                    }
+                    gBattleScripting.statChanger = gBattleScripting.savedStatChanger = 0; // for raising and lowering stat respectively
+                    rnd = (Random() % 9);
+                    //DebugPrintf("rnd: %d", rnd);
+                    if (validToRaise) // Find stat to raise
+                    {
+                        if ((rnd > 5) && (rnd < 8))
+                            gBattleScripting.savedStatChanger = STAT_ACC;
+                        else if (rnd >= 8)
+                            gBattleScripting.savedStatChanger = STAT_EVASION;
+                        SET_STATCHANGER(gBattleScripting.savedStatChanger, 1, FALSE);
+                    } /*So basically what this means is, to prevent player cheesing the gym leader by stalling them until 
+                    they drop to -6 accuracy, the opponent now has a chance to increase accuracy and evasion randomly every turn.
+                    Rand 0 through 5- no accuracy rise
+                    Rand 6 through 7- accuracy rise (I swear this has nothing to do with the "6 7" meme)
+                    Rand 8- evasion rise
+                    */
+                    if (validToLower) // Find stat to lower
+                    {
+                        // MoodyCantLowerStat already checks that both stats are different
+                        i = RandomUniformExcept(RNG_MOODY_DECREASE, STAT_ATK, statsNum - 1, MoodyCantRaiseStat);
+                        SET_STATCHANGER(i, 2, TRUE);
+                    }
+                    BattleScriptPushCursorAndCallback(BattleScript_MoodyActivates);
+                    effect++;
+                }
+                break;
             case ABILITY_TRUANT:
                 gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
                 break;
@@ -6440,6 +6480,12 @@ static u8 ItemEffectMoveEnd(u32 battler, enum ItemHoldEffect holdEffect)
     case HOLD_EFFECT_MIRROR_HERB:
         effect = TryConsumeMirrorHerb(battler, ITEMEFFECT_NONE);
         break;
+    case HOLD_EFFECT_MEGA_STONE:
+        //DebugPrintf("Item use ended.");
+        if (gBattleMons[battler].item == ITEM_CORRUPT_ORB)
+            gSpecialStatuses[battler].corruptOrbActivated = FALSE;
+            effect = 0;
+            break;
     default:
         break;
     }
@@ -9959,6 +10005,8 @@ void ActivateMegaEvolution(u32 battler)
     SetActiveGimmick(battler, GIMMICK_MEGA);
     if (GetBattleFormChangeTargetSpecies(battler, FORM_CHANGE_BATTLE_MEGA_EVOLUTION_MOVE) != gBattleMons[battler].species)
         BattleScriptExecute(BattleScript_WishMegaEvolution);
+    else if (gBattleMons[battler].item == ITEM_CORRUPT_ORB)
+        BattleScriptExecute(BattleScript_CorruptEvolution);
     else
         BattleScriptExecute(BattleScript_MegaEvolution);
 }
@@ -11984,3 +12032,17 @@ static bool32 IsOpposingSideEmpty(u32 battler)
         return FALSE;
     return TRUE;
 }
+
+// gBattleMons[battlerDef].item == ITEM_CORRUPT_ORB
+/*
+   case MOVE_EFFECT_ALL_STATS_UP:
+        if (!NoAliveMonsForEitherParty())
+        {
+            BattleScriptPush(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = BattleScript_AllStatsUp;
+        }
+        break;
+    BattleScriptPushCursorAndCallback(BattleScript_SpeedBoostActivates);
+                    gBattleScripting.battler = battler;
+                    effect++;
+*/

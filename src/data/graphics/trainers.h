@@ -385,6 +385,8 @@ const u16 gTrainerBackPalette_Fry[] = INCBIN_U16("graphics/trainers/back_pics/fr
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
 
+const u32 gTrainerFrontPic_LeaderMolly[] = INCBIN_U32("graphics/trainers/front_pics/leader_molly.4bpp.smol");
+const u16 gTrainerPalette_LeaderMolly[] = INCBIN_U16("graphics/trainers/front_pics/leader_molly.gbapal");
 const u32 gTrainerFrontPic_EliteFourMacy[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_macy.4bpp.smol");
 const u16 gTrainerPalette_EliteFourMacy[] = INCBIN_U16("graphics/trainers/front_pics/elite_four_macy.gbapal");
 const u32 gTrainerFrontPic_EliteFourNed[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_ned.4bpp.smol");
@@ -568,8 +570,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRY, gTrainerFrontPic_Fry, gTrainerPalette_Fry),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_CLAY, gTrainerFrontPic_LeaderClay, gTrainerPalette_LeaderClay),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_LARRY, gTrainerFrontPic_LeaderLarry, gTrainerPalette_LeaderLarry),
-    
-       
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_MOLLY, gTrainerFrontPic_LeaderMolly, gTrainerPalette_LeaderMolly),    
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
