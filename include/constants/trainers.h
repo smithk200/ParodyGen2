@@ -164,7 +164,8 @@
 #define TRAINER_PIC_FRY 146
 #define TRAINER_PIC_LEADER_LARRY 147
 #define TRAINER_PIC_LEADER_MOLLY 148
-#define TRAINER_PIC_COUNT                 149
+#define TRAINER_PIC_LEADER_WALUIGI 149
+#define TRAINER_PIC_COUNT                 150
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -427,6 +428,7 @@ enum TrainerClassID
     TRAINER_CLASS_PHILIP_2,
     TRAINER_CLASS_ROCKETA,
     TRAINER_CLASS_HOENN_LEADER,
+    TRAINER_CLASS_GAME_DEV,
     TRAINER_CLASS_COUNT,
 };
 

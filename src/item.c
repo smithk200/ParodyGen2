@@ -345,12 +345,23 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, u16 itemId, u1
 
 bool32 AddBagItem(u16 itemId, u16 count)
 {
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 item = GetMonData(mon, MON_DATA_HELD_ITEM);
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
     if (GetItemPocket(itemId) >= POCKETS_COUNT)
         return FALSE;
 
     // check Battle Pyramid Bag
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || FlagGet(FLAG_STORING_ITEMS_IN_PYRAMID_BAG) == TRUE)
         return AddPyramidBagItem(itemId, count);
+    if ((MagicMufflerState == 120) && (species == SPECIES_DRAGONITE) && (item == ITEM_SALAC_BERRY))
+    {
+        //DebugPrintf("Reached");
+        (MagicMufflerState = MagicMufflerState + 1);
+        VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState);
+        return BagPocket_AddItem(&gBagPockets[GetItemPocket(ITEM_MAGIC_MUFFLER)], ITEM_MAGIC_MUFFLER, count);
+    }
 
     return BagPocket_AddItem(&gBagPockets[GetItemPocket(itemId)], itemId, count);
 }

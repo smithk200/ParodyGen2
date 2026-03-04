@@ -742,7 +742,7 @@
 #define FLAG_FRY_BLACKTHORN  0x2B7
 #define FLAG_FRY_GIVE_TM_BLACKTHORN  0x2B8
 #define FLAG_DEFEATED_LARRY_1  0x2B9
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
+#define FLAG_HIDE_ROUTE_111_GRUNTS  0x2BA
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
@@ -911,11 +911,11 @@
 #define FLAG_HIDE_NEWBARKTOWN_LAB_AIDE                              0x35C
 #define FLAG_HIDE_AZALEA_TOWN_CUT_MASTER                            0x35D
 #define FLAG_HIDE_RUSTSURF_TUNNEL_NPCS                              0x35E
-#define FLAG_UNUSED_UNSET7                                          0x35F
+#define FLAG_VS_SEEKER                                              0x35F
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_1           0x360
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_2           0x361
-#define FLAG_UNUSED_UNSET8                                          0x362
-#define FLAG_UNUSED_UNSET9                                          0x363 
+#define FLAG_FUCHSIA_CITY_DRAGONITE_NPC                             0x362
+#define FLAG_VISITED_NEW_BARK_LAB                                   0x363 //unused flag
 #define FLAG_HIDE_MOMS_FRIEND                                       0x364 //HnS NormalFlags Block 1
 #define FLAG_MOM_VISITED                                            0x365 //mom gives good luck speech
 #define FLAG_HIDE_SILVER_NEWBARKTOWN                                0x366 //for beginning
@@ -1536,14 +1536,14 @@
 #define FLAG_VISITED_MOSSDEEP_CITY                           (SYSTEM_FLAGS + 0x9E) 
 #define FLAG_VISITED_SOOTOPOLIS_CITY                           (SYSTEM_FLAGS + 0x9F) 
 #define FLAG_VISITED_EVER_GRANDE_CITY                           (SYSTEM_FLAGS + 0xA0) 
-#define FLAG_UNUSED_0x901                           (SYSTEM_FLAGS + 0xA1) // Unused Flag
-#define FLAG_UNUSED_0x902                           (SYSTEM_FLAGS + 0xA2) // Unused Flag
-#define FLAG_UNUSED_0x903                           (SYSTEM_FLAGS + 0xA3) // Unused Flag
-#define FLAG_UNUSED_0x904                           (SYSTEM_FLAGS + 0xA4) // Unused Flag
-#define FLAG_UNUSED_0x905                           (SYSTEM_FLAGS + 0xA5) // Unused Flag
-#define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
-#define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
-#define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8) // Unused Flag
+#define FLAG_BADGE17_GET                           (SYSTEM_FLAGS + 0xA1) 
+#define FLAG_BADGE18_GET                           (SYSTEM_FLAGS + 0xA2) 
+#define FLAG_BADGE19_GET                           (SYSTEM_FLAGS + 0xA3) 
+#define FLAG_BADGE20_GET                           (SYSTEM_FLAGS + 0xA4) 
+#define FLAG_BADGE21_GET                           (SYSTEM_FLAGS + 0xA5) 
+#define FLAG_BADGE22_GET                           (SYSTEM_FLAGS + 0xA6) 
+#define FLAG_BADGE23_GET                           (SYSTEM_FLAGS + 0xA7) 
+#define FLAG_BADGE24_GET                           (SYSTEM_FLAGS + 0xA8) 
 #define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
 #define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag

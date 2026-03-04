@@ -202,6 +202,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_FRY_BLACKTHORN
 	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_FRY
 	setflag FLAG_AUTO_HMS
+	setflag FLAG_VS_SEEKER
+	setflag FLAG_FUCHSIA_CITY_DRAGONITE_NPC
 
 	setvar VAR_VIOLET_CITY_STATE, 0 @CITY STATES
 	setvar VAR_CHERRYGROVE_CITY_STATE, 0
@@ -235,6 +237,8 @@ EventScript_ResetAllMapFlags::
 	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
 	setvar VAR_ROUTE22_GIOVANNI_STATE, 0
 	setvar VAR_ROUTE27_BAOBA_CALL, 0
+	setvar VAR_WALUIGI_GYM_STATE, 0
+	setvar VAR_MAGIC_MUFFLER_STATE, 0
 
 	call EventScript_ResetAllBerries
 	end

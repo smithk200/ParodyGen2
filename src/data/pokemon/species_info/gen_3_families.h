@@ -5465,7 +5465,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_MANECTRIC] =
     {
-        .baseHP        = 70,
+        .baseHP        = 140,
         .baseAttack    = 75,
         .baseDefense   = 60,
         .baseSpeed     = 105,
@@ -5537,7 +5537,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_MANECTRIC_MEGA] =
     {
-        .baseHP        = 70,
+        .baseHP        = 140,
         .baseAttack    = 75,
         .baseDefense   = 80,
         .baseSpeed     = 135,

@@ -891,14 +891,8 @@ Route104_EventScript_RematchHaley::
 	end
 
 Route104_EventScript_Winston::
-	trainerbattle_single TRAINER_WINSTON_1, Route104_Text_WinstonIntro, Route104_Text_WinstonDefeat, Route104_EventScript_TryRegisterWinstonAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route104_EventScript_RematchWinston
-	setvar VAR_0x8004, TRAINER_WINSTON_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route104_EventScript_TryRegisterWinston
-	msgbox Route104_Text_WinstonPostBattle, MSGBOX_DEFAULT
-	release
+	trainerbattle_single TRAINER_WINSTON_1, Route104_Text_WinstonIntro, Route104_Text_WinstonDefeat
+	msgbox Route104_Text_WinstonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route104_EventScript_TryRegisterWinstonAfterBattle::
@@ -968,17 +962,13 @@ Route104_EventScript_RematchCindy::
 	end
 
 Route104_EventScript_Gina::
-	trainerbattle_double TRAINER_NONE, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
-	special GetPlayerBigGuyGirlString
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
 	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route104_EventScript_Mia::
-	trainerbattle_double TRAINER_NONE, Route104_Text_MiaIntro, Route104_Text_MiaDefeat, Route104_Text_MiaNotEnoughMons
-	special GetPlayerBigGuyGirlString
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_MiaIntro, Route104_Text_MiaDefeat, Route104_Text_MiaNotEnoughMons
 	msgbox Route104_Text_MiaPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route104_EventScript_Darian::

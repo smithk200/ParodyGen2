@@ -1,0 +1,28 @@
+static u8 TryTakeMonItem(struct Pokemon *mon)
+{
+    u16 item = GetMonData(mon, MON_DATA_HELD_ITEM);
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+
+    if (item == ITEM_NONE)
+        return 0;
+    if (AddBagItem(item, 1) == FALSE)
+        return 1;
+
+    if ((VAR_MAGIC_MUFFLER_STATE >= 120) && (species == SPECIES_DRAGONITE) && (item == ITEM_SALAC_BERRY))
+    {
+        DebugPrintf("Reached");
+        item = ITEM_MAGIC_MUFFLER; /*
+        currently what this does is that it gives the player the salac berry while transforming the item into a magic muffler. 
+        You have to take the magic muffler afterward to obtain it in your party.
+        What I WANT to do is to make the Salac Berry a Magic Muffler while losing the Salac Berry in the process.
+        Also I want to prevent the player from flying in Elm's lab to increase the magic muffler state too much. I only want this done 3 times.
+        If I add more statements to the "if" block in SetFlyDestination from region_map.c, the game doesn't read it correctly and warps
+        me to whatever I warped to...
+        */
+    }
+    else
+        item = ITEM_NONE;
+    SetMonData(mon, MON_DATA_HELD_ITEM, &item);
+    TryItemHoldFormChange(&gPlayerParty[gPartyMenu.slotId], gPartyMenu.slotId);
+    return 2;
+}

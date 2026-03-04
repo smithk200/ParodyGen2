@@ -4692,7 +4692,29 @@ static void Cmd_getexp(void)
                     }
 
                     ApplyExperienceMultipliers(&gBattleStruct->battlerExpReward, *expMonId, gBattlerFainted);
-
+                    u32 species, level;  
+                    species = GetMonData(&gPlayerParty[*expMonId], MON_DATA_SPECIES_OR_EGG);
+                    //DebugPrintf("Species: %d", species);
+                    level =  GetMonData(&gPlayerParty[*expMonId], MON_DATA_LEVEL);
+                    if ((holdEffect == HOLD_EFFECT_MAGIC_MUFFLER))
+                    {
+                        if ((species == SPECIES_SQUIRTLE) && (level == 5))
+                        {
+                            gBattleStruct->battlerExpReward = (963497);
+                            //DebugPrintf("Exp Reward: %d", &gBattleStruct->battlerExpReward);
+                            //DebugPrintf("Species: %d", species);
+                        }
+                        else
+                        {
+                            u8 rand = Random() % 100;
+                            //DebugPrintf("rand: %d", rand);
+                            if (rand >= 50)
+                                gBattleStruct->battlerExpReward = (963497 + (rand * 1067));
+                            else
+                                gBattleStruct->battlerExpReward = (963497 - (rand * 4067));
+                            //DebugPrintf("Exp Reward (Not Squirtle): %d", &gBattleStruct->battlerExpReward);
+                        }
+                    }
                     if (B_EXP_CAP_TYPE == EXP_CAP_HARD && gBattleStruct->battlerExpReward != 0)
                     {
                         enum GrowthRate growthRate = gSpeciesInfo[GetMonData(&gPlayerParty[*expMonId], MON_DATA_SPECIES)].growthRate;
@@ -4748,8 +4770,11 @@ static void Cmd_getexp(void)
                     // buffer 'gained' or 'gained a boosted'
                     PREPARE_STRING_BUFFER(gBattleTextBuff2, i);
                     PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff3, 6, gBattleStruct->battlerExpReward);
-
-                    if (wasSentOut || holdEffect == HOLD_EFFECT_EXP_SHARE)
+                    if (wasSentOut && holdEffect == HOLD_EFFECT_MAGIC_MUFFLER)
+                    {
+                        PrepareStringBattle(STRINGID_PKMNGAINEDEXP_MAGICMUFFLER, gBattleStruct->expGetterBattlerId);
+                    }
+                    else if (wasSentOut || holdEffect == HOLD_EFFECT_EXP_SHARE)
                     {
                         PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
                     }
@@ -15147,6 +15172,7 @@ u8 GetFirstFaintedPartyIndex(u8 battler)
 void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBattler)
 {
     enum ItemHoldEffect holdEffect = GetMonHoldEffect(&gPlayerParty[expGetterMonId]);
+
 
     if (IsTradedMon(&gPlayerParty[expGetterMonId]))
         *expAmount = (*expAmount * 150) / 100;

@@ -60,6 +60,17 @@ PokemonLeague_WillsRoom_EventScript_LanceRematch::
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
 	trainerbattle_no_intro TRAINER_LANCE_2, PokemonLeague_ChampionsRoom_Text_BattleWin
+	goto_if_lt VAR_MAGIC_MUFFLER_STATE, 10, PokemonLeague_ChampionsRoom_EventScript_AdvanceMagicMufflerState
+	goto_if_ge VAR_MAGIC_MUFFLER_STATE, 111, PokemonLeague_ChampionsRoom_EventScript_AdvanceMagicMufflerState2
+	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
+
+PokemonLeague_ChampionsRoom_EventScript_AdvanceMagicMufflerState::
+	addvar VAR_MAGIC_MUFFLER_STATE, 1
+	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
+
+PokemonLeague_ChampionsRoom_EventScript_AdvanceMagicMufflerState2::
+	goto_if_ge VAR_MAGIC_MUFFLER_STATE, 116, PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
+	addvar VAR_MAGIC_MUFFLER_STATE, 1
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
 
 PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
@@ -308,13 +319,13 @@ PokemonLeague_ChampionsRoom_Movement_MaryLeft:
 	step_end
 
 PokemonLeague_ChampionsRoom_Text_RematchBattleIntro:
-    .string "LANCE: Welcome back!\p"
+    .string "Lance: Welcome back!\p"
     .string "You've proven yourself in JOHTO,\p"
     .string "acquiring all 8 badges and even\n"
     .string "besting me once.\p"
     .string "But now, you're in the big\n"
     .string "leagues.\p"
-    .string "The KANTO LEAGUE!\p"
+    .string "The Kanto League!\p"
     .string "A region with its own trials and\n"
     .string "champions.\p"
     .string "Here, I am the final challenge,\n"
@@ -322,15 +333,15 @@ PokemonLeague_ChampionsRoom_Text_RematchBattleIntro:
     .string "before.\p"
     .string "This is the true test,\p"
     .string "a battle to determine the\n"
-    .string "CHAMPION of KANTO.\p"
+    .string "Champion of Kanto.\p"
     .string "Are you ready to rise to this new\n"
     .string "challenge?\p"
     .string "To prove yourself once more?\p"
     .string "Show me the strength that\n"
-    .string "conquered JOHTO, CHAMPION.$"
+    .string "conquered Johto, Champion.$"
 
 PokemonLeague_ChampionsRoom_Text_BattleIntro:
-    .string "LANCE: I've been waiting for you.\p"
+    .string "Lance: I've been waiting for you.\p"
     .string "{PLAYER}!\p"
     .string "I knew that you, with your skills,\n"
     .string "would eventually reach me here.\p"
@@ -338,7 +349,7 @@ PokemonLeague_ChampionsRoom_Text_BattleIntro:
     .string "We will battle to determine who is\n"
     .string "the stronger of the two of us.\p"
     .string "As the most powerful trainer and as\n"
-    .string "the Pokémon LEAGUE CHAMPION…\p"
+    .string "the Pokémon League Champion…\p"
     .string "I, LANCE the dragon master, accept\n"
     .string "your challenge!$"
 
@@ -360,11 +371,11 @@ PokemonLeague_ChampionsRoom_Text_BattleAfter:
     .string "grow strong with your Pokémon.$"
 
 PokemonLeague_ChampionsRoom_Text_MaryOhNoOak:
-    .string "MARY: Oh, no! It's all over!\p"
+    .string "Mary: Oh, no! It's all over!\p"
     .string "PROF.OAK, if you weren't so slow…$"
 
 PokemonLeague_ChampionsRoom_Text_OakCongratulations:
-    .string "PROF.OAK: Ah, {PLAYER}!\p"
+    .string "Prof. Oak: Ah, {PLAYER}!\p"
     .string "It's been a long while.\p"
     .string "You certainly look more impressive.\p"
     .string "Your conquest of the JOHTO LEAGUE\n"
@@ -377,14 +388,14 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations:
     .string "Congratulations, {PLAYER}!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations:
-    .string "PROF.OAK: Ah, {PLAYER}!\p"
+    .string "Prof. Oak: Ah, {PLAYER}!\p"
     .string "I've been following your progress\n"
     .string "since PROF. ELM sent you on your\l"
     .string "way.\p"
     .string "You've certainly become more\n"
     .string "impressive.\p"
     .string "Conquering both the JOHTO and now\n"
-    .string "the KANTO LEAGUE is no small feat.\p"
+    .string "the Kanto League is no small feat.\p"
     .string "You've truly outdone yourself!\p"
     .string "It's clear that your Pokémon trust\n"
     .string "you immensely,\p"
@@ -400,23 +411,22 @@ PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations:
     .string "{PLAYER}!$"
 
 PokemonLeague_ChampionsRoom_Text_MaryInterview:
-    .string "MARY: Let's interview the brand new\n"
-    .string "JOHTO CHAMPION!$"
+    .string "Mary: Let's interview the brand new\n"
+    .string "Johto Champion!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryInterview:
-    .string "MARY: Let's interview the brand new\n"
-    .string "KANTO CHAMPION!$"
+    .string "Mary: Let's interview the brand new\n"
+    .string "Kanto Champion!$"
 
 PokemonLeague_ChampionsRoom_Text_Noisy:
-    .string "LANCE: This is getting to be a bit\n"
+    .string "Lance: This is getting to be a bit\n"
     .string "too noisy…\p"
     .string "{PLAYER}, could you come with me?$"
 
 PokemonLeague_ChampionsRoom_Text_MaryNoInterview:
-    .string "MARY: Oh, wait! We haven't done\n"
+    .string "Mary: Oh, wait! We haven't done\n"
     .string "the interview!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview:
-    .string "MARY: Come on! You can't blow off\n"
+    .string "Mary: Come on! You can't blow off\n"
     .string "the interview AGAIN!$"
-

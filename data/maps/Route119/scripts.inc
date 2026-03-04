@@ -4,7 +4,6 @@ Route119_MapScripts::
 	.byte 0
 
 Route119_OnResume:
-	call_if_set FLAG_GARBAGEFLAG, Route119_EventScript_TryRemoveKecleon
 	end
 
 Route119_EventScript_TryRemoveKecleon::
@@ -14,9 +13,6 @@ Route119_EventScript_TryRemoveKecleon::
 	return
 
 Route119_OnTransition:
-	call Common_EventScript_SetupRivalGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
-	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_EventScript_MoveInstituteWorkersDownstairs
 	special SetRoute119Weather
 	end
 
@@ -37,26 +33,6 @@ Route119_EventScript_RivalTrigger2::
 	end
 
 Route119_EventScript_RivalEncounter::
-	lockall
-	addobject LOCALID_ROUTE119_RIVAL_ON_BIKE
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route119_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, Route119_EventScript_PlayBrendanMusic
-	delay 65
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_RivalEnter1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_RivalEnter2
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	delay 30
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetRivalPos1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_SetRivalPos2
-	removeobject LOCALID_ROUTE119_RIVAL_ON_BIKE
-	addobject LOCALID_ROUTE119_RIVAL
-	delay 30
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route119_EventScript_BattleMay
-	goto_if_eq VAR_RESULT, FEMALE, Route119_EventScript_BattleBrendan
-	releaseall
 	end
 
 Route119_EventScript_PlayMayMusic::
@@ -94,7 +70,6 @@ Route119_EventScript_DefeatedMay::
 	msgbox Route119_Text_MayPresentForYou, MSGBOX_DEFAULT
 	call Route119_EventScript_GiveFlyHM
 	msgbox Route119_Text_MayExplainFly, MSGBOX_DEFAULT
-	goto Route119_EventScript_RivalExitScottArrive
 	end
 
 Route119_EventScript_BattleBrendan::
@@ -124,91 +99,13 @@ Route119_EventScript_DefeatedBrendan::
 	msgbox Route119_Text_BrendanIllGiveYouThis, MSGBOX_DEFAULT
 	call Route119_EventScript_GiveFlyHM
 	msgbox Route119_Text_BrendanExplainFly, MSGBOX_DEFAULT
-	goto Route119_EventScript_RivalExitScottArrive
 	end
 
 Route119_EventScript_GiveFlyHM::
-	giveitem ITEM_HM_FLY
-	setflag FLAG_RECEIVED_HM_FLY
 	return
 
 Route119_EventScript_RivalExitScottArrive::
-	closemessage
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetRivalPos1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_SetRivalPos2
-	removeobject LOCALID_ROUTE119_RIVAL
-	addobject LOCALID_ROUTE119_RIVAL_ON_BIKE
-	delay 30
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_RivalExit1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_RivalExit2
-	removeobject LOCALID_ROUTE119_RIVAL_ON_BIKE
-	setvar VAR_GARBAGEVAR, 1
-	savebgm MUS_DUMMY
-	fadedefaultbgm
-	delay 60
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetScottPos1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_SetScottPos2
-	addobject LOCALID_ROUTE119_SCOTT
-	applymovement LOCALID_ROUTE119_SCOTT, Route119_Movement_ScottEnter
-	waitmovement 0
-	addvar VAR_SCOTT_STATE, 1
-	msgbox Route119_Text_ScottWayToGoBeSeeingYou, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_ScottExit1
-	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_ScottExit2
-	removeobject LOCALID_ROUTE119_SCOTT
-	releaseall
 	end
-
-Route119_EventScript_SetScottPos1::
-	setobjectxyperm LOCALID_ROUTE119_SCOTT, 27, 25
-	return
-
-Route119_EventScript_SetScottPos2::
-	setobjectxyperm LOCALID_ROUTE119_SCOTT, 28, 25
-	return
-
-Route119_EventScript_ScottExit1::
-	applymovement LOCALID_ROUTE119_SCOTT, Route119_Movement_ScottExit1
-	waitmovement 0
-	return
-
-Route119_EventScript_ScottExit2::
-	applymovement LOCALID_ROUTE119_SCOTT, Route119_Movement_ScottExit2
-	waitmovement 0
-	return
-
-Route119_EventScript_RivalEnter1::
-	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalEnter1
-	waitmovement 0
-	return
-
-Route119_EventScript_RivalEnter2::
-	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalEnter2
-	waitmovement 0
-	return
-
-Route119_EventScript_RivalExit1::
-	applymovement LOCALID_PLAYER, Route119_Movement_PlayerWatchRivalExit1
-	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalExit1
-	waitmovement 0
-	return
-
-Route119_EventScript_RivalExit2::
-	applymovement LOCALID_PLAYER, Route119_Movement_PlayerWatchRivalExit2
-	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalExit2
-	waitmovement 0
-	return
-
-Route119_EventScript_SetRivalPos1::
-	setobjectxyperm LOCALID_ROUTE119_RIVAL, 25, 32
-	setobjectxyperm LOCALID_ROUTE119_RIVAL_ON_BIKE, 25, 32
-	return
-
-Route119_EventScript_SetRivalPos2::
-	setobjectxyperm LOCALID_ROUTE119_RIVAL, 26, 32
-	setobjectxyperm LOCALID_ROUTE119_RIVAL_ON_BIKE, 26, 32
-	return
 
 Route119_Movement_PlayerWatchRivalExit1:
 	delay_16
@@ -318,7 +215,7 @@ Route119_EventScript_WeatherInstituteSign::
 	end
 
 Route119_EventScript_Brent::
-	trainerbattle_single TRAINER_BRENT, Route119_Text_BrentIntro, Route119_Text_BrentDefeat
+	trainerbattle_single TRAINER_BRENT_2, Route119_Text_BrentIntro, Route119_Text_BrentDefeat
 	msgbox Route119_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -343,16 +240,11 @@ Route119_EventScript_Greg::
 	end
 
 Route119_EventScript_Kent::
-	trainerbattle_single TRAINER_KENT, Route119_Text_KentIntro, Route119_Text_KentDefeat
+	trainerbattle_single TRAINER_KENT_2, Route119_Text_KentIntro, Route119_Text_KentDefeat
 	msgbox Route119_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Jackson::
-	trainerbattle_single TRAINER_NONE, Route119_Text_JacksonIntro, Route119_Text_JacksonDefeat, Route119_EventScript_RegisterJackson
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route119_EventScript_RematchJackson
-	msgbox Route119_Text_JacksonPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route119_EventScript_RegisterJackson::
@@ -418,7 +310,7 @@ Route119_EventScript_Chris::
 	end
 
 Route119_EventScript_Fabian::
-	trainerbattle_single TRAINER_NONE, Route119_Text_FabianIntro, Route119_Text_FabianDefeat
+	trainerbattle_single TRAINER_FABIAN, Route119_Text_FabianIntro, Route119_Text_FabianDefeat
 	msgbox Route119_Text_FabianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -572,13 +464,12 @@ Route119_Text_DontGoNearWeatherInstitute:
 	.string "WEATHER INSTITUTE.$"
 
 Route119_Text_ThoughtFlyByCatchingBirdMons:
-	.string "I thought you FLY by catching a whole\n"
-	.string "flock of BIRD Pokémon, and then\l"
+	.string "I thought you Fly by catching a whole\n"
+	.string "flock of Bird Pokémon, and then\l"
 	.string "hanging on to them somehow.\p"
 	.string "But it turns out there's an HM move\n"
-	.string "called FLY!\p"
-	.string "I wish I'd known about that a long\n"
-	.string "time ago…$"
+	.string "called Fly!\p"
+	.string "Boy, am I a dumb piece of shit!$"
 
 Route119_Text_TallGrassSnaresBikeTires:
 	.string "Tch…\n"
@@ -587,22 +478,24 @@ Route119_Text_TallGrassSnaresBikeTires:
 	.string "There's no way you can cycle here.$"
 
 Route119_Text_CanYourMonMakeSecretBase:
-	.string "Can your Pokémon use its SECRET POWER\n"
-	.string "on a big pile of grass and make a\l"
-	.string "SECRET BASE?$"
+	.string "I can't believe it!\p"
+	.string "Our Leader, Ned, is an Elite\n"
+	.string "Four member in Johto?\p"
+	.string "Who knew?$"
 
 Route119_Text_RouteSignFortree:
-	.string "ROUTE 119\n"
-	.string "{RIGHT_ARROW} FORTREE CITY$"
+	.string "Route 119\n"
+	.string "{RIGHT_ARROW} Fortree City$"
 
 Route119_Text_WeatherInstitute:
 	.string "WEATHER INSTITUTE$"
 
 Route119_Text_TrainerTipsDecoration:
-	.string "TRAINER TIPS\p"
-	.string "Up to sixteen decorations and\n"
-	.string "furniture items can be placed in\l"
-	.string "a SECRET BASE.\p"
-	.string "Pick your favorite items and create\n"
-	.string "your very own SECRET BASE exactly the\l"
-	.string "way you want.$"
+	.string "Trainer Tips:\p"
+	.string "Don't be afraid to join a workers'\n"
+	.string "union!\p"
+	.string "They can cover your ass in case you\n"
+	.string "fuck up.\n"
+	.string "Joining a union could make a\n"
+	.string "difference in whether you keep your job\l"
+	.string "or not.$"

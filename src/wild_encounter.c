@@ -531,7 +531,7 @@ void CreateWildMon(u16 species, u8 level)
 
         CreateMonWithGenderNatureLetter(&gEnemyParty[0], species, level, USE_RANDOM_IVS, gender, PickWildMonNature(), 0);
     }
-    if (gMapHeader.regionMapSectionId == MAPSEC_ICE_PATH && (NUM_BADGES == 5))
+    if (gMapHeader.regionMapSectionId == MAPSEC_ICE_PATH && (NUM_BADGES == 5)) //increasing the levels of the mons in ice path, scaled to the amount of badges you have
     {
         level += 4;
         if (level > 100)

@@ -281,15 +281,36 @@ Route109_EventScript_MrBriney::
 
 Route109_EventScript_MrBriney2::
 	message SlatePort_Text_WhereSail
-	multichoice 20, 0, MULTI_VERMILION_HARBOR_RED, FALSE
+	multichoice 20, 0, MULTI_SLATEPORT_HARBOR_RED, FALSE
 	switch VAR_RESULT
 	case 0, SlatePort_EventScript_ChoseOlivine
 	case 1, SlatePort_EventScript_ChoseVermilion
-	case 2, SlatePort_EventScript_ChoseSouthernIsland
-	case 3, SlatePort_EventScript_ChoseBirthIsland
-	case 4, SlatePort_EventScript_ChoseFarawayIsland
-	case 5, SlatePort_EventScript_ChoseBattleFrontier
-	case 6, VermilionPort_EventScript_Sailor_Refused
+	case 2, SlatePort_EventScript_ChoseBattleFrontier
+	case 3, SlatePort_EventScript_GoToIslands
+	case 4, VermilionPort_EventScript_Sailor_Refused
+	case MULTI_B_PRESSED, VermilionPort_EventScript_Sailor_Refused
+	release
+	end
+
+SlatePort_EventScript_GoToIslands::
+	multichoice 20, 0, MULTI_ISLANDS, FALSE
+	switch VAR_RESULT
+	case 0, SlatePort_EventScript_ChoseSouthernIsland
+	case 1, SlatePort_EventScript_ChoseBirthIsland
+	case 2, SlatePort_EventScript_ChoseFarawayIsland
+	case 3, SlatePort_EventScript_Sailor_AfterRed2
+	case MULTI_B_PRESSED, SlatePort_EventScript_Sailor_AfterRed2
+	release
+	end
+
+SlatePort_EventScript_Sailor_AfterRed2::
+	multichoice 20, 0, MULTI_SLATEPORT_HARBOR_RED, FALSE
+	switch VAR_RESULT
+	case 0, SlatePort_EventScript_ChoseOlivine
+	case 1, SlatePort_EventScript_ChoseVermilion
+	case 2, SlatePort_EventScript_ChoseBattleFrontier
+	case 3, SlatePort_EventScript_GoToIslands
+	case 4, VermilionPort_EventScript_Sailor_Refused
 	case MULTI_B_PRESSED, VermilionPort_EventScript_Sailor_Refused
 	release
 	end

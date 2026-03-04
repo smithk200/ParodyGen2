@@ -26,6 +26,7 @@
 #include "heal_location.h"
 #include "constants/field_specials.h"
 #include "constants/heal_locations.h"
+#include "constants/layouts.h"
 #include "constants/rgb.h"
 #include "constants/weather.h"
 
@@ -2165,7 +2166,14 @@ void SetFlyDestination(struct RegionMap* regionMap)
 {
     u32 flyDestination = FilterFlyDestination(regionMap);
 
-    if (flyDestination != WARP_ID_NONE)
+    if ((VAR_MAGIC_MUFFLER_STATE >= 116) && (gMapHeader.mapLayoutId == LAYOUT_NEW_BARK_TOWN_LAB))
+        {
+            u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
+            MagicMufflerState = (MagicMufflerState + 1);
+            VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState);
+            SetWarpDestination(MAP_GROUP(MAP_NEW_BARK_TOWN_LAB), MAP_NUM(MAP_NEW_BARK_TOWN_LAB), WARP_ID_NONE, 6, 4);
+        }
+    else if (flyDestination != WARP_ID_NONE)
         SetWarpDestinationToHealLocation(flyDestination);
     else
         SetWarpDestinationToMapWarp(sMapHealLocations[regionMap->mapSecId][0], sMapHealLocations[regionMap->mapSecId][1], WARP_ID_NONE);

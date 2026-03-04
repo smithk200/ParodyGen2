@@ -44,6 +44,7 @@
 #include "pokemon.h"
 #include "random.h"
 #include "recorded_battle.h"
+#include "regions.h"
 #include "roamer.h"
 #include "safari_zone.h"
 #include "scanline_effect.h"
@@ -71,6 +72,7 @@
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
+#include "constants/region_map_sections.h"
 #include "constants/songs.h"
 #include "constants/trainer_slide.h"
 #include "constants/trainers.h"
@@ -130,7 +132,8 @@ static u32 Crc32B (const u8 *data, u32 size);
 static u32 GeneratePartyHash(const struct Trainer *trainer, u32 i);
 static s32 Factorial(s32);
 
-EWRAM_DATA u8 gItemLimit = 0;
+EWRAM_DATA u16 gItemLimit = 0;
+EWRAM_DATA u16 gMagicMufflerChecker = 0;
 EWRAM_DATA u16 gBattle_BG0_X = 0;
 EWRAM_DATA u16 gBattle_BG0_Y = 0;
 EWRAM_DATA u16 gBattle_BG1_X = 0;
@@ -371,8 +374,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PIKE_QUEEN] = { _("Pike Queen") },
     [TRAINER_CLASS_PYRAMID_KING] = { _("Pyramid King") },
     [TRAINER_CLASS_RS_PROTAG] = { _("{PKMN} Trainer") },
-    [TRAINER_CLASS_SUPER_NERD] = { _("Super Nerd") },
-    [TRAINER_CLASS_BURGLAR] = { _("Burglar") },
+    [TRAINER_CLASS_SUPER_NERD] = { _("Super Nerd"), 10 },
+    [TRAINER_CLASS_BURGLAR] = { _("Burglar"), 25 },
     [TRAINER_CLASS_SAGE] = {_("Sage")},
     [TRAINER_CLASS_ENGINEER] = {_("Engineer")},
     [TRAINER_CLASS_FIREBREATHER] = {_("Firebreather")},
@@ -382,12 +385,13 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_JUGGLER] = {_("Juggler")},
     [TRAINER_CLASS_PSYCHIC_M] = {_("Psychic")},
     [TRAINER_CLASS_POLICEMAN] = {_("Officer")},
-    [TRAINER_CLASS_TEAM_ROCKET] = {_("Team Rocket")},
-    [TRAINER_CLASS_ROCKET_ADMIN] = {_("Rocket Admin")},
-    [TRAINER_CLASS_PHILIP] = {_("Philip")},
-    [TRAINER_CLASS_PHILIP_2] = {_("Philip J.")},
-    [TRAINER_CLASS_ROCKETA] = {_("Rocket Admin")},
-    [TRAINER_CLASS_HOENN_LEADER] = {_("Leader")},
+    [TRAINER_CLASS_TEAM_ROCKET] = {_("Team Rocket"), 8},
+    [TRAINER_CLASS_ROCKET_ADMIN] = {_("Rocket Admin"), 10},
+    [TRAINER_CLASS_PHILIP] = {_("Philip"), 25},
+    [TRAINER_CLASS_PHILIP_2] = {_("Philip J."), 25},
+    [TRAINER_CLASS_ROCKETA] = {_("Rocket Admin"), 10},
+    [TRAINER_CLASS_HOENN_LEADER] = {_("Leader"), 25},
+    [TRAINER_CLASS_GAME_DEV] = {_("Game Dev"), 50},
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
@@ -1913,6 +1917,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u8 max = 0;
     u8 range = 0;
     u8 rand = 0;
+    u8 trainerLevel = 0;
 	{
 	if (GetMonData(&gPlayerParty[5], MON_DATA_SPECIES) != SPECIES_NONE)
 		fixedLVL = (GetMonData(&gPlayerParty[0], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[1], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[2], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[3], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[4], MON_DATA_LEVEL) + GetMonData(&gPlayerParty[5], MON_DATA_LEVEL)) / 6;
@@ -2019,6 +2024,10 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                         highest = 1; //making sure the level doesn't go below 1
                     CreateMon(&party[i], partyData[monIndex].species, highest, 0, TRUE, personalityValue, otIdType, fixedOtId);
                 }
+            else if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MARIA_1) //list of trainers who will use the default settings
+            {
+                CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
             else if (
             (trainerClass == TRAINER_CLASS_LEADER)
             || (trainerClass == TRAINER_CLASS_ROCKETA)
@@ -2034,10 +2043,20 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             || (trainerClass == TRAINER_CLASS_SAGE && gMapHeader.regionMapSectionId == MAPSEC_SPROUT_TOWER)
             )
             {
-                CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);  //trainer classes that are not dynamic leveled
+                trainerLevel = (partyData[monIndex].lvl + partyData[monIndex].lvlmodifier);
+                if (trainerLevel > 100)
+                    trainerLevel = 100; //making sure the level doesn't go above 100
+                if (trainerLevel < 1)
+                    trainerLevel = 1; //making sure the level doesn't go below 1
+                CreateMon(&party[i], partyData[monIndex].species, trainerLevel, 0, TRUE, personalityValue, otIdType, fixedOtId);  //trainer classes that are not dynamic leveled
             }
             else
             {
+                reallevel = (reallevel + partyData[monIndex].lvlmodifier);
+                if (reallevel > 100)
+                    reallevel = 100; //making sure the level doesn't go above 100
+                if (reallevel < 1)
+                    reallevel = 1; //making sure the level doesn't go below 1
                 CreateMon(&party[i], partyData[monIndex].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId); //every other trainer is dynamic leveled
             }
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[monIndex].heldItem);
@@ -3188,7 +3207,7 @@ static void BattleStartClearSetData(void)
     gBattleStruct->runTries = 0;
     gBattleStruct->safariGoNearCounter = 0;
     gBattleStruct->safariPkblThrowCounter = 0;
-    gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
+    gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 500; //making safart catches easier
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
     gBattleStruct->moneyMultiplier = 1;
@@ -5595,6 +5614,26 @@ static void HandleEndTurn_BattleWon(void)
     {
         gBattlescriptCurrInstr = BattleScript_PayDayMoneyAndPickUpItems;
     }
+    u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
+    if ((VAR_MAGIC_MUFFLER_STATE >= 10) && (GetCurrentRegion() == REGION_KANTO)) //after the elite four, battle 100 Kanto trainers. Will include rematches.
+    {
+        DebugPrintf("Magic Muffler State Before: %d", MagicMufflerState);
+        if (MagicMufflerState < 110)
+        {
+            MagicMufflerState = (MagicMufflerState + 1);
+            DebugPrintf("Magic Muffler State After: %d", MagicMufflerState);
+            VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState); //should not increase after defeating the 100th Kanto trainer
+        }
+    }
+    /*
+    u32 species;
+    species = SanitizeSpeciesId(species);
+    if ((species == SPECIES_DRATINI) && (gMapHeader.regionMapSectionId == MAPSEC_FUCHSIA_CITY) && (VAR_MAGIC_MUFFLER_STATE == 110)) //you can catch a dratini in the safari zone
+        {
+            MagicMufflerState = (MagicMufflerState + 1);
+            VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState);
+        }
+    */
 
     gBattleMainFunc = HandleEndTurn_FinishBattle;
 }

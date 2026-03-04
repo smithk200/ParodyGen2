@@ -65,7 +65,6 @@ Route118_EventScript_StevenTrigger0::
 	setvar VAR_0x8008, 0
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge0
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
 	end
@@ -83,42 +82,24 @@ Route118_EventScript_StevenTrigger2::
 	setvar VAR_0x8008, 2
 	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenApproachLedge2
 	waitmovement 0
 	goto Route118_EventScript_StevenTrigger
 	end
 
 Route118_EventScript_StevenTrigger::
 	playse SE_LEDGE
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenJumpLedge
-	waitmovement 0
-	delay 30
-	msgbox Route118_Text_StevenQuestions, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_0x8008, 0, Route118_EventScript_StevenExit0
-	call_if_eq VAR_0x8008, 1, Route118_EventScript_StevenExit1
-	call_if_eq VAR_0x8008, 2, Route118_EventScript_StevenExit2
-	setvar VAR_GARBAGEVAR, 1
-	removeobject LOCALID_ROUTE118_STEVEN
 	releaseall
 	end
 
 Route118_EventScript_StevenExit0::
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit0
 	waitmovement 0
 	return
 
 Route118_EventScript_StevenExit1::
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit1
 	waitmovement 0
 	return
 
 Route118_EventScript_StevenExit2::
-	applymovement LOCALID_PLAYER, Route118_Movement_PlayerWatchStevenExit
-	applymovement LOCALID_ROUTE118_STEVEN, Route118_Movement_StevenExit2
-	waitmovement 0
 	return
 
 Route118_Movement_PlayerWatchStevenExit:
@@ -177,11 +158,8 @@ Route118_Movement_StevenExit2:
 	step_end
 
 Route118_EventScript_Rose::
-	trainerbattle_single TRAINER_NONE, Route118_Text_RoseIntro, Route118_Text_RoseDefeat, Route118_EventScript_RegisterRose
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route118_EventScript_RematchRose
+	trainerbattle_single TRAINER_ROSE_1, Route118_Text_RoseIntro, Route118_Text_RoseDefeat
 	msgbox Route118_Text_RosePostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route118_EventScript_RegisterRose::
@@ -197,12 +175,12 @@ Route118_EventScript_RematchRose::
 	end
 
 Route118_EventScript_Barny::
-	trainerbattle_single TRAINER_NONE, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat
+	trainerbattle_single TRAINER_BARNY, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat
 	msgbox Route118_Text_BarnyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route118_EventScript_Wade::
-	trainerbattle_single TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
+	trainerbattle_single TRAINER_WADE_2, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
 	msgbox Route118_Text_WadePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -227,17 +205,17 @@ Route118_EventScript_RematchDalton::
 	end
 
 Route118_EventScript_Perry::
-	trainerbattle_single TRAINER_PERRY, Route118_Text_PerryIntro, Route118_Text_PerryDefeat
+	trainerbattle_single TRAINER_PERRY_2, Route118_Text_PerryIntro, Route118_Text_PerryDefeat
 	msgbox Route118_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route118_EventScript_Chester::
-	trainerbattle_single TRAINER_NONE, Route118_Text_ChesterIntro, Route118_Text_ChesterDefeat
+	trainerbattle_single TRAINER_CHESTER, Route118_Text_ChesterIntro, Route118_Text_ChesterDefeat
 	msgbox Route118_Text_ChesterPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route118_EventScript_Deandre::
-	trainerbattle_single TRAINER_NONE, Route118_Text_DeandreIntro, Route118_Text_DeandreDefeat
+	trainerbattle_single TRAINER_DEANDRE, Route118_Text_DeandreIntro, Route118_Text_DeandreDefeat
 	msgbox Route118_Text_DeandrePostBattle, MSGBOX_AUTOCLOSE
 	end
 

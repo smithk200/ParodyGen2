@@ -418,14 +418,22 @@ Route111_EventScript_HikerMirageTowerVisible::
 	end
 
 Route111_EventScript_RockSmashTipFatMan::
-	lockall
-	applymovement LOCALID_ROUTE111_ROCK_SMASH_MAN, Common_Movement_FacePlayer
-	waitmovement 0
-	msgbox Route111_Text_MauvilleUncleToldMeToTakeRockSmash, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_ROUTE111_ROCK_SMASH_MAN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	releaseall
+	end
+
+Route111_EventScript_AquaGruntM::
+	lock
+	faceplayer
+	msgbox Route111_Text_AquaGruntM, MSGBOX_AUTOCLOSE
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	release
+	end
+
+Route111_EventScript_AquaGruntF::
+	lock
+	faceplayer
+	msgbox Route111_Text_AquaGruntF, MSGBOX_AUTOCLOSE
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	release
 	end
 
 Route111_EventScript_Drew::
@@ -434,12 +442,12 @@ Route111_EventScript_Drew::
 	end
 
 Route111_EventScript_Heidi::
-	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
+	trainerbattle_single TRAINER_HEIDI_2, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
 	msgbox Route111_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Beau::
-	trainerbattle_single TRAINER_NONE, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
+	trainerbattle_single TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
 	msgbox Route111_Text_BeauPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -449,11 +457,8 @@ Route111_EventScript_Becky::
 	end
 
 Route111_EventScript_Dusty::
-	trainerbattle_single TRAINER_NONE, Route111_Text_DustyIntro, Route111_Text_DustyDefeat, Route111_EventScript_RegisterDusty
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchDusty
+	trainerbattle_single TRAINER_DUSTY, Route111_Text_DustyIntro, Route111_Text_DustyDefeat
 	msgbox Route111_Text_DustyPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route111_EventScript_RegisterDusty::
@@ -474,7 +479,7 @@ Route111_EventScript_Travis::
 	end
 
 Route111_EventScript_Irene::
-	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
+	trainerbattle_single TRAINER_IRENE_2, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
 	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -484,11 +489,8 @@ Route111_EventScript_Daisuke::
 	end
 
 Route111_EventScript_Wilton::
-	trainerbattle_single TRAINER_WILTON_1, Route111_Text_WiltonIntro, Route111_Text_WiltonDefeat, Route111_EventScript_RegisterWilton
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchWilton
+	trainerbattle_single TRAINER_WILTON_1, Route111_Text_WiltonIntro, Route111_Text_WiltonDefeat
 	msgbox Route111_Text_WiltonPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route111_EventScript_RegisterWilton::
@@ -524,7 +526,7 @@ Route111_EventScript_RematchBrooke::
 	end
 
 Route111_EventScript_Hayden::
-	trainerbattle_single TRAINER_NONE, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
+	trainerbattle_single TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
 	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -534,17 +536,17 @@ Route111_EventScript_Bianca::
 	end
 
 Route111_EventScript_Tyron::
-	trainerbattle_single TRAINER_TYRON, Route111_Text_TyronIntro, Route111_Text_TyronDefeat
+	trainerbattle_single TRAINER_TYRONE, Route111_Text_TyronIntro, Route111_Text_TyronDefeat
 	msgbox Route111_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Celina::
-	trainerbattle_single TRAINER_NONE, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
+	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
 	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Celia::
-	trainerbattle_single TRAINER_NONE, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
+	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
 	msgbox Route111_Text_CeliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -716,3 +718,12 @@ Route111_Text_TrainerHillSign:
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
 
+Route111_Text_AquaGruntM:
+	.string "Hey!\p"
+	.string "No one gets past the mighty\n"
+	.string "Team Aqua!$"
+
+Route111_Text_AquaGruntF:
+	.string "The rest of Team Aqua is busy\n"
+	.string "expanding the sea.\p"
+	.string "Archie wants us to stand guard here.$"

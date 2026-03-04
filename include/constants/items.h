@@ -1011,11 +1011,12 @@
 #define ITEM_GALAR_STONE 841
 #define ITEM_PALDEA_STONE 842
 #define ITEM_CORRUPT_ORB 843
+#define ITEM_MAGIC_MUFFLER 844
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 844
+#define ITEMS_COUNT 845
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -905,6 +905,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_POWERCONSTRUCTTRANSFORM]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} transformed into its Complete Forme!"),
     [STRINGID_ABILITYSHIELDPROTECTS]                = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s Ability is protected by the effects of its {B_LAST_ITEM}!"),
     [STRINGID_PKMNTERAS]                           = COMPOUND_STRING("Time to Terrastalize!"),
+    [STRINGID_PKMNGAINEDEXP_MAGICMUFFLER]         = COMPOUND_STRING("{B_BUFF1} gained a lot of EXP. Points!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

@@ -472,7 +472,7 @@ static u8 GetVsSeekerResponseInArea(void)
             {
                 randomValue = 0; // Definitely no
             }
-            else if (randomValue < 30)
+            else if (randomValue < 0)
             {
                 StartTrainerObjectMovementScript(&sVsSeeker->trainerInfo[vsSeekerIdx], sMovementScript_TrainerNoRematch);
                 sVsSeeker->trainerDoesNotWantRematch = 1;
@@ -751,8 +751,16 @@ static u32 GetRematchableTrainerLocalId(void)
     {
         if (IsTrainerVisibleOnScreen(&sVsSeeker->trainerInfo[i]) == 1)
         {
-            if (HasTrainerBeenFought(sVsSeeker->trainerInfo[i].trainerIdx) != 1 || GetRematchTrainerIdFromTable(gRematchTable, sVsSeeker->trainerInfo[i].trainerIdx))
+            if (HasTrainerBeenFought(sVsSeeker->trainerInfo[i].trainerIdx) != 1 || GetRematchTrainerIdFromTable(gRematchTable, sVsSeeker->trainerInfo[i].trainerIdx)) //refer to "sVsSeekerData" in the pokefirered version of this file
+            {    
+                u32 trainer = sVsSeeker->trainerInfo[i].trainerIdx;
+                u32 flag = FlagGet(TRAINER_FLAGS_START);
+                //DebugPrintf("Trainer: %d", trainer); //danny
+                flag = (flag + trainer);
+                ClearTrainerFlag(flag);
+                //DebugPrintf("Flag: %d", flag);
                 return sVsSeeker->trainerInfo[i].localId;
+            }
         }
     }
 

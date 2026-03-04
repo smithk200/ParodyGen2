@@ -131,6 +131,710 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 /* Hi there! Random Hoenn trainers start here! */
 
+=== TRAINER_GINA_AND_MIA_1 ===
+Name: Gina & Mia
+Class: Twins
+Pic: Twins
+Gender: Male
+Music: Twins
+Double Battle: Yes
+AI: Check Bad Move
+
+Shiftry
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Raichu
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Slither Wing
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Iron Moth
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_WINSTON_1 ===
+Name: Winston
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Items: Full Restore
+Double Battle: No
+AI: Check Bad Move
+
+Gholdengo @ Nugget
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Persian @ Stardust
+Level: 7
+Modifier: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Milotic @ Flame Orb
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tsareena @ Life Orb
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Furret @ Choice Specs
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wailord @ Weakness Policy
+Level: 7
+Modifier: 3
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DREW ===
+Name: Drew
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhyperior
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Omastar
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Snorlax
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_IRENE_2 ===
+Name: Irene
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Goldeen
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seaking
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TRAVIS ===
+Name: Travis
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magnezone
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Florges
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bewear
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tangrowth
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_WILTON_1 ===
+Name: Wilton
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Super Potion
+Double Battle: No
+AI: Basic Trainer
+
+Luxray
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Jellicent
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Pangoro
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Meowstic
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_HAYDEN ===
+Name: Hayden
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Camerupt
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Arcanine
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Piloswine
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PERRY_2 ===
+Name: Perry
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sirfetchd
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corviknight
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Hydreigon
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CHESTER ===
+Name: Chester
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Unfezant
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Swoobat
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_WADE_2 ===
+Name: Wade
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Houndstone
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pecharunt
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Marshadow
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BARNY ===
+Name: Barney
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Toedscruel
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Wugtrio
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Aromatisse
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROSE_1 ===
+Name: Rose
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Roserade
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Scovillain
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mimikyu
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Clawitzer
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ANNA_AND_MEG_1 ===
+Name: Anna & Meg
+Class: Sr And Jr
+Pic: Sr And Jr
+Gender: Male
+Music: Twins
+Double Battle: Yes
+AI: Check Bad Move
+
+Obstagoon
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Obstruct
+- Crunch
+- Pin Missile
+- Brick Break
+
+Hariyama
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Toedscruel
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dhelmise
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DYLAN_1 ===
+Name: Dylan
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Dodrio
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Comfey
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tapu Bulu
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MARIA_1 ===
+Name: Maria
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Spearow
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Paras
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Eevee
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_TYRONE ===
+Name: Tyrone
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhyperior
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Passimian
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Hawlucha
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CELINA ===
+Name: Celina
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Roserade
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Togekiss
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gastrodon
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Venusaur
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CELIA ===
+Name: Celia
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Azumarill
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ludicolo
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Revavroom
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pyukumuku
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DUSTY_1 ===
+Name: Dusty
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Claydol
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gholdengo
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Fezandipiti
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Runerigus
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BRANDEN ===
+Name: Branden
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bibarel
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_HEIDI_2 ===
+Name: Heidi
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Sandslash
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sandslash
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sandslash
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rhyperior
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BEAU ===
+Name: Beau
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Claydol
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Krookodile
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Excadrill
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ursaluna
+Level: 21
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_WILTON_2 ===
+Name: Wilton
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Items: Hyper Potion
+Double Battle: No
+AI: Basic Trainer
+
+Toxtricity
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Grimmsnarl
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Naclstack
+Level: 17
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_GIL ===
+Name: Gil
+Class: Super Nerd
+Pic: Super Nerd
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Electrode
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Trumbeak
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Boltund
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Kingambit
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CAROL_2 ===
+Name: Carol
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Shiinotic
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Salazzle
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rabsca
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Aegislash
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BIANCA ===
+Name: Bianca
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Barbaracle
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gogoat
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BRENT_2 ===
+Name: Brent
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+Ledian
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dottler
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tarountula
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PHIL_2 ===
+Name: Phil
+Class: Philip
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Staraptor
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Noctowl
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corviknight
+Level: 26
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DARIUS ===
+Name: Darius
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+Staraptor
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Corviknight
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_KENT_2 ===
+Name: Kent
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ninjask
+Level: 25
+Modifier: -1
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Shedinja
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lokix
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Vikavolt
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Illumise
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Volbeat
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_FABIAN ===
 Name: Fabian
 Class: Guitarist
@@ -213,7 +917,7 @@ Music: Suspicious
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
-Koffing
+Weezing
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
@@ -221,7 +925,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Sludge
 - Smokescreen
 
-Koffing
+Weezing Galar
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
@@ -285,7 +989,7 @@ Aggron
 Level: 78
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Manectric
+Manectric @ Manectite
 Level: 78
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -1053,9 +1757,9 @@ Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SANS_2 ===
-Name: Karen
+Name: Sans
 Class: Elite Four
-Pic: Elite Four Karen
+Pic: Elite Four Sans
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
@@ -2248,22 +2952,24 @@ Dynamax Level: 10
 - Rain Dance
 
 === TRAINER_JOY_2 ===
-Name: Bruno
+Name: Joy
 Class: Elite Four
-Pic: Elite Four Bruno
-Gender: Male
+Pic: Elite Four Joy
+Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Mugshot: Blue
 
-Steelix @ Quick Claw
+Emolga @ Quick Claw
 Level: 67
+Ability: Electric Surge
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Crunch
-- Earthquake
-- Explosion
-- Iron Tail
+- Energy Ball
+- Volt Switch
+- Air Slash
+- Discharge
 
 Poliwrath @ Scope Lens
 Level: 68
@@ -4955,54 +5661,72 @@ Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Purple
+Starting Status: Tailwind Opponent
 
-Gardevoir
-Level: 66
+Xatu @ Twisted Spoon
+Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Psychic
-- Hyper Voice
-- Moonblast
-- Reflect
-
-Jynx
-Level: 67
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Psychic
-- Perish Song
-- Sing
-
-Exeggutor @ Sitrus Berry
-Level: 67
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Ancient Power
-- Sleep Powder
-- Dream Eater
-- Soft Boiled
-
-Grumpig
-Level: 67
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Power Gem
-- Snore
-- Rest
-
-Slowbro @ Quick Claw
-Level: 66
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Curse
-- Earthquake
-- Rock Smash
-
-Xatu @ Leftovers
-Level: 68
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Future Sight
-- Fly
+EVs: 6 HP/ 252 SpA / 252 Spe
+Ability: Synchronize
+Nature: Modest
+- Drill Peck
+- Recover
 - Confuse Ray
-- Protect
+- Psychic
+
+Staraptor @ Leftovers
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP/ 252 Atk / 252 Spe
+Ability: Intimidate
+Nature: Adamant
+- Close Combat
+- Brave Bird
+- Take Down
+- Double Team
+
+Flamigo @ Muscle Band
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Scrappy
+Nature: Adamant
+- Brick Break
+- Brave Bird
+- Lunge
+- Giga Impact
+
+Charizard @ Charizardite X
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 Atk / 252 SpA / 252 Spe
+Ability: Blaze
+Nature: Modest
+- Flamethrower
+- Air Slash
+- Scary Face
+- Dragon Breath
+
+Great Tusk @ Sitrus Berry
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Nature: Adamant
+- Close Combat
+- Earthquake
+- Giga Impact
+- Scary Face
+
+Kilowattrel @ Wide Lens
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 Atk / 252 SpA / 252 Spe
+Ability: Volt Absorb
+Nature: Modest
+- Thunderbolt
+- Hyper Beam
+- Hurricane
+- Scary Face
 
 === TRAINER_TARA ===
 Name: Tara
@@ -5092,6 +5816,533 @@ AI: Check Bad Move
 Nidoran F
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+/* Waluigi's Gym Trainers begin here!*/
+=== TRAINER_MARY_2 ===
+Name: Mary
+Class: Expert
+Pic: Cooltrainer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Hitmonlee @ Focus Sash
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Unburden
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Blaze Kick
+- Fake Out
+- Knock Off
+
+Machamp @ Choice Band
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: No Guard
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Dynamic Punch
+- Close Combat
+- Knock Off
+- Bullet Punch
+
+Mienshao @ Life Orb
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Reckless
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- High Jump Kick
+- U-turn
+- Poison Jab
+- Knock Off
+
+Aegislash @ Weakness Policy
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Stance Change
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Iron Head
+- Sacred Sword
+- Shadow Sneak
+- King's Shield
+
+Hippowdon @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Sand Stream
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Earthquake
+- Stone Edge
+- Slack Off
+- Stealth Rock
+
+Garchomp @ Choice Scarf
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Sand Veil
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Dragon Claw
+- Earthquake
+- Stone Edge
+- Poison Jab
+
+=== TRAINER_SHAYNA ===
+Name: Shayna
+Class: School Kid
+Pic: Psychic F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+Starting Status: Tailwind Opponent
+
+Emolga @ Focus Sash
+Ability: Electric Surge
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Volt Switch
+- Nuzzle
+- Taunt
+- Thunderbolt
+
+Yanmega @ Life Orb
+Ability: Speed Boost
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Protect
+- Bug Buzz
+- Air Slash
+- Giga Drain
+
+Hawlucha @ Electric Seed
+Ability: Unburden
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Acrobatics
+- Close Combat
+- Throat Chop
+
+Revavroom @ Air Balloon
+Ability: Filter
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Shift Gear
+- Iron Head
+- Poison Jab
+- High Horsepower
+
+Dragapult @ Choice Specs
+Ability: Infiltrator
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Draco Meteor
+- Shadow Ball
+- Flamethrower
+- U-turn
+
+Weavile @ Choice Band
+Ability: Pressure
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Icicle Crash
+- Knock Off
+- Ice Shard
+- Low Kick
+
+=== TRAINER_PARKER_2 ===
+Name: Parker
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Malamar @ Leftovers
+Ability: Contrary
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Superpower
+- Psycho Cut
+- Topsy-Turvy
+- Thunder Wave
+
+Sableye @ Lagging Tail
+Ability: Prankster
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 HP / 120 Def / 136 SpD
+Careful Nature
+- Confuse Ray
+- Trick
+- Will-O-Wisp
+- Recover
+
+Orbeetle @ Light Clay
+Ability: Frisk
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Reflect
+- Light Screen
+- Psychic
+- U-turn
+
+Gengar @ Black Sludge
+Ability: Cursed Body
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Confuse Ray
+- Hex
+- Sludge Bomb
+- Substitute
+
+Dudunsparce @ Leftovers
+Ability: Serene Grace
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Headbutt
+- Glare
+- Roost
+- Dragon Tail
+
+Slowbro @ Rocky Helmet
+Ability: Own Tempo
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Yawn
+- Scald
+- Psychic
+- Slack Off
+
+=== TRAINER_BRIAN_2 ===
+Name: Brian
+Class: Expert
+Pic: Rich Boy
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory @ Rocky Helmet
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Spikes
+- Roost
+- Whirlwind
+- Body Press
+
+Toxapex @ Black Sludge
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Recover
+- Toxic
+- Scald
+- Haze
+
+Clodsire @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Unaware
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Earthquake
+- Toxic
+- Recover
+- Stealth Rock
+
+Corviknight @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Pressure
+EVs: 252 HP / 168 Def / 88 SpD
+Impish Nature
+- Roost
+- Defog
+- U-turn
+- Brave Bird
+
+Blissey @ Heavy-Duty Boots
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Natural Cure
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Soft-Boiled
+- Seismic Toss
+- Thunder Wave
+- Heal Bell
+
+Avalugg @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Ice Body
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Recover
+- Avalanche
+- Rapid Spin
+- Body Press
+
+=== TRAINER_DAKOTA ===
+Name: Dakota
+Class: Expert
+Pic: Battle Girl
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Blissey @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Natural Cure
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Soft-Boiled
+- Seismic Toss
+- Thunder Wave
+- Heal Bell
+
+Toxapex @ Black Sludge
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Recover
+- Toxic
+- Scald
+- Haze
+
+Ferrothorn @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Iron Barbs
+EVs: 252 HP / 88 Def / 168 SpD
+Relaxed Nature
+- Leech Seed
+- Protect
+- Gyro Ball
+- Spikes
+
+Suicune @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Pressure
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Rest
+- Sleep Talk
+- Calm Mind
+- Ice Beam
+
+Amoonguss @ Black Sludge
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Regenerator
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Toxic
+- Protect
+
+Mandibuzz @ Leftovers
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Overcoat
+EVs: 252 HP / 168 Def / 88 SpD
+Impish Nature
+- Roost
+- Foul Play
+- Defog
+- Toxic
+
+=== TRAINER_LOUIS ===
+Name: Louis
+Class: Pokefan
+Pic: Gentleman
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Honchkrow @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Super Luck
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Night Slash
+- Drill Peck
+- Sucker Punch
+- Tailwind
+
+Drapion @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Sniper
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Focus Energy
+- Night Slash
+- Poison Jab
+- Earthquake
+
+Meowscarada @ Razor Claw
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Overgrow
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Flower Trick
+- Night Slash
+- U-turn
+- Play Rough
+
+Kingdra @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Sniper
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Focus Energy
+- Draco Meteor
+- Hydro Pump
+- Ice Beam
+
+Absol @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Super Luck
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Night Slash
+- Psycho Cut
+- Play Rough
+- Swords Dance
+
+Togekiss @ Razor Claw
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Super Luck
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+=== TRAINER_SHAUN ===
+Name: Shaun
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Aegislash @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Stance Change
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Sacred Sword
+- Shadow Sneak
+- King's Shield
+- Swords Dance
+
+Excadrill @ Focus Sash
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Mold Breaker
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Iron Head
+- Earthquake
+- Rock Slide
+- Rapid Spin
+
+Fraxure @ Life Orb
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Mold Breaker
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Dragon Claw
+- Dual Chop
+- Iron Tail
+- Dragon Dance
+
+Cinderace @ Scope Lens
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Libero
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Pyro Ball
+- High Jump Kick
+- Sucker Punch
+- U-turn
+
+Kingler @ Choice Band
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Hyper Cutter
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Superpower
+
+Hitmontop @ Focus Sash
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Guts
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Rapid Spin
+- Stone Edge
+- Counter
 
 === TRAINER_MARTIN ===
 Name: Martin
@@ -5248,9 +6499,9 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Amnesia
 
 === TRAINER_NED_2 ===
-Name: Koga
+Name: Ned
 Class: Elite Four
-Pic: Elite Four Koga
+Pic: Elite Four Ned
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
@@ -5396,6 +6647,139 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Seismitoad
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ISAAC_1 ===
+Name: Isaac
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhyperior
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Blissey
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Clodsire
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Archaludon
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Probopass
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Basculegion
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_LYDIA_1 ===
+Name: Lydia
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Pelipper
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seismitoad
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Abomasnow
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Toxicroak
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Salazzle
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Coalossal
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MELINA ===
+Name: Melina
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Dodrio
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Swanna
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Quaquaval
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_MUHAMMAD ===
+Name: Muhammad
+Class: Triathlete
+Pic: Bug Maniac
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Oranguru
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Alakazam
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Palossand
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_DEREK_2 ===
+Name: Derek
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+Dustox
+Level: 16
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Beautifly
+Level: 16
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Lokix
+Level: 16
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Leavanny
+Level: 16
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_DEREK ===
 Name: Derek
@@ -12629,3 +14013,224 @@ Nature: Modest
 - Air Slash
 - Scary Face
 - Dragon Breath
+
+=== TRAINER_NED_3 ===
+Name: Ned
+Class: Hoenn Leader
+Pic: Elite Four Ned
+Gender: Male
+Music: Suspicious
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Blue
+
+Corviknight @ Wacan Berry
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Pressure
+- Iron Head
+- Hone Claws
+- Brave Bird
+- Power Trip
+
+Tinkaton @ Muscle Band
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpD / 252 Spe
+Ability: Mold Breaker
+- Gigaton Hammer
+- Play Rough
+- Bulldoze
+- Screech
+
+Iron Treads @ Occa Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 Def / 252 Spe
+- Earthquake
+- Zen Headbutt
+- Iron Head
+- Wild Charge
+
+Toedscruel @ Yache Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Mycelium Might
+- Giga Drain
+- Earth Power
+- Hex
+- Spore
+
+Mudsdale @ Groundium Z
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Def / 6 Spe
+Ability: Stamina
+- Earthquake
+- Psychic
+- Sludge Bomb
+- Sleep Powder
+
+Ursaluna @ Bright Powder
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 6 Spe
+Ability: Unnerve
+- Earthquake
+- Thrash
+- Seed Bomb
+- Fire Punch
+
+=== TRAINER_WALUIGI ===
+Name: Waluigi
+Class: Hoenn Leader
+Pic: Leader Waluigi
+Gender: Male
+Music: Suspicious
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Blue
+
+Glimmora @ Focus Sash
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Toxic Debris
+Timid Nature
+- Sludge Wave
+- Power Gem
+- Stealth Rock
+- Energy Ball
+
+Espathra @ Leftovers
+Ability: Speed Boost
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 Spe
+Timid Nature
+- Protect
+- Calm Mind
+- Lumina Crash
+- Dazzling Gleam
+
+Baxcalibur @ Loaded Dice
+Ability: Thermal Exchange
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Icicle Spear
+- Glaive Rush
+- Earthquake
+
+Gholdengo @ Choice Scarf
+Ability: Good as Gold
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Make It Rain
+- Shadow Ball
+- Thunderbolt
+- Trick
+
+Roaring Moon @ Booster Energy
+Ability: Protosynthesis
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Acrobatics
+- Crunch
+- Earthquake
+
+Kingambit @ Black Glasses
+Ability: Supreme Overlord
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Tera Type: Dark
+EVs: 6 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Kowtow Cleave
+- Sucker Punch
+- Iron Head
+- Swords Dance
+
+=== TRAINER_KATE_2 ===
+Name: Kate
+Class: Game Dev
+Pic: School Kid F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Smart Trainer
+
+Staraptor @ Sharp Beak
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Intimidate
+Modifier: -1
+- Wing Attack
+- Close Combat
+- Double Team
+- Quick Attack
+
+Luxray @ Zap Plate
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Intimidate
+Modifier: -1
+- Spark
+- Crunch
+- Ice Fang
+- Scary Face
+
+Torterra @ Soft Sand
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Overgrow
+- Earthquake
+- Seed Bomb
+- Crunch
+- Curse
+
+Meowscarada @ Miracle Seed
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Overgrow
+- Flower Trick
+- Night Slash
+- Play Rough
+- Hone Claws
+
+Quagsire @ Mystic Water
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Water Absorb
+Modifier: 1
+- Waterfall
+- Earthquake
+- Toxic
+- Yawn
+
+Mew @ Wise Glasses
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Synchronize
+Modifier: 2
+- Psychic
+- Thunderbolt
+- Dazzling Gleam
+- Nasty Plot

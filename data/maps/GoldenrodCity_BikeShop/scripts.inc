@@ -15,6 +15,7 @@ GoldenrodCity_BikeShop_EventScript_Clerk::
 GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed::
 	msgbox GoldenrodCity_BikeShop_Text_ClerkAgreed, MSGBOX_DEFAULT
 	giveitem ITEM_MACH_BIKE
+	giveitem ITEM_ACRO_BIKE
 	setflag FLAG_RECEIVED_BIKE
 	closemessage
 	release
@@ -44,27 +45,29 @@ GoldenrodCity_BikeShop_EventScript_Bike::
 GoldenrodCity_BikeShop_Text_Clerk2:
 	.string "Riding the bike is as simple as\n"
 	.string "pressing a button if you\l"
-	.string "REGISTER it from the BAG.$"
+	.string "register it from the bag.$"
 
 GoldenrodCity_BikeShop_Text_ClerkIntro:
     .string "…sigh… I moved here, but I can't\n"
-    .string "sell my BICYCLES. Why is that?\p"
-    .string "Could you ride a BICYCLE and\n"
+    .string "sell my bicycles. Why is that?\p"
+    .string "Could you ride a bicycle and\n"
     .string "advertise for me?$"
 
 GoldenrodCity_BikeShop_Text_ClerkAgreed:
     .string "Really? Great!\p"
     .string "Give me your name and phone number,\n"
-    .string "and I'll loan you a BICYCLE.$"
+    .string "and I'll loan you a bicycle.$"
 
 GoldenrodCity_BikeShop_Text_BorrowedBicycle:
-    .string "{PLAYER} borrowed a BICYCLE.$"
+    .string "{PLAYER} borrowed a bicycle.$"
 
 GoldenrodCity_BikeShop_Text_Mainshop:
-	.string "The main shop is at CERULEAN back\n"
-	.string "in KANTO.\p"
+	.string "The main shop is at Cerulean back\n"
+	.string "in Kanto.\p"
 	.string "Say hello to the shop manager if\n"
-	.string "if you happen to go there!$"
+	.string "if you happen to go there!\p"
+	.string "There's also a guy in Hoenn who\n"
+	.string "runs a bike shop as well.$"
 
 GoldenrodCity_BikeShop_Text_Refused:
     .string "…sigh… Oh, for the kindness of\n"
@@ -72,7 +75,7 @@ GoldenrodCity_BikeShop_Text_Refused:
 
 GoldenrodCity_BikeShop_Text_JustReleasedCompact:
     .string "Just released!\p"
-    .string "First-rate compact BICYCLES!$"
+    .string "First-rate compact bicycles!$"
 
 GoldenrodCity_BikeShop_Text_Bicycle:
-    .string "It's a shiny new BICYCLE!$"
+    .string "It's a shiny new bicycle!$"

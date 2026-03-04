@@ -2,12 +2,7 @@ OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
 	.byte 0
 
-OldaleTown_OnTransition:
-	call Common_EventScript_SetupRivalGfxId
-	setflag FLAG_GARBAGEFLAG
-	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
-	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
-	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
+OldaleTown_OnTransition::
 	end
 
 @ This script seems pointless because nothing uses VAR_GARBAGEVAR
@@ -16,13 +11,9 @@ OldaleTown_EventScript_SetOldaleState::
 	return
 
 OldaleTown_EventScript_BlockWestEntrance::
-	setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 11
-	setobjectmovementtype LOCALID_FOOTPRINTS_MAN, MOVEMENT_TYPE_FACE_LEFT
 	return
 
 OldaleTown_EventScript_MoveMartEmployee::
-	setobjectxyperm LOCALID_OLDALE_MART_EMPLOYEE, 13, 14
-	setobjectmovementtype LOCALID_OLDALE_MART_EMPLOYEE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 OldaleTown_EventScript_TownSign::
@@ -49,24 +40,12 @@ OldaleTown_EventScript_MartEmployee::
 	end
 
 OldaleTown_EventScript_GoToMartSouth::
-	applymovement LOCALID_OLDALE_MART_EMPLOYEE, OldaleTown_Movement_EmployeeSouth
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerSouth
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
 	end
 
 OldaleTown_EventScript_GoToMartNorth::
-	applymovement LOCALID_OLDALE_MART_EMPLOYEE, OldaleTown_Movement_EmployeeNorth
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerNorth
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
 	end
 
 OldaleTown_EventScript_GoToMartEast::
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerEast
-	applymovement LOCALID_OLDALE_MART_EMPLOYEE, OldaleTown_Movement_EmployeeEast
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
 	end
 
 OldaleTown_EventScript_ExplainPokemonMart::
@@ -187,69 +166,22 @@ OldaleTown_Movement_Unknown2:
 	walk_up
 	step_end
 
-OldaleTown_EventScript_FootprintsMan::
-	lock
-	faceplayer
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_NotBlockingPath
-	msgbox OldaleTown_Text_DiscoveredFootprints, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_FOOTPRINTS_MAN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	release
-	end
-
-OldaleTown_EventScript_BlockedPath::
-	lockall
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerStepBack
-	applymovement LOCALID_FOOTPRINTS_MAN, OldaleTown_Movement_BackUp
-	waitmovement 0
-	msgbox OldaleTown_Text_WaitDontComeInHere, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_FOOTPRINTS_MAN, OldaleTown_Movement_ReturnToOriginalPosition
-	waitmovement 0
-	releaseall
-	end
-
 OldaleTown_EventScript_NotBlockingPath::
 	msgbox OldaleTown_Text_FinishedSketchingFootprints, MSGBOX_DEFAULT
 	release
 	end
 
 OldaleTown_EventScript_Rival::
-	lockall
-	applymovement LOCALID_OLDALE_RIVAL, Common_Movement_FacePlayer
-	waitmovement 0
-	setvar VAR_0x8009, 0
-	goto OldaleTown_EventScript_ShowRivalMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger1::
-	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer1
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	setvar VAR_0x8009, 1
-	goto OldaleTown_EventScript_ShowRivalMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger2::
-	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer2
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	setvar VAR_0x8009, 1
-	goto OldaleTown_EventScript_ShowRivalMessage
 	end
 
 OldaleTown_EventScript_RivalTrigger3::
 	lockall
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer3
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	setvar VAR_0x8009, 1
 	goto OldaleTown_EventScript_ShowRivalMessage
 	end
 
@@ -270,27 +202,13 @@ OldaleTown_EventScript_ShowBrendanMessage::
 	end
 
 OldaleTown_EventScript_RivalFinish::
-	closemessage
-	call_if_eq VAR_0x8009, 0, OldaleTown_EventScript_DoExitMovement1
-	call_if_eq VAR_0x8009, 1, OldaleTown_EventScript_DoExitMovement2
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
-	waitmovement 0
-	removeobject LOCALID_OLDALE_RIVAL
-	setvar VAR_OLDALE_RIVAL_STATE, 2
-	setflag FLAG_GARBAGEFLAG
 	releaseall
 	end
 
 OldaleTown_EventScript_DoExitMovement1::
-	goto_if_ne VAR_FACING, DIR_SOUTH, OldaleTown_EventScript_DoExitMovement2
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
-	waitmovement 0
 	return
 
 OldaleTown_EventScript_DoExitMovement2::
-	applymovement LOCALID_PLAYER, OldaleTown_Movement_WatchRivalExit
-	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
-	waitmovement 0
 	return
 
 OldaleTown_Movement_RivalApproachPlayer1:

@@ -2134,3 +2134,6 @@ const u16 gItemIcon_Palette_TidalBell[] = INCBIN_U16("graphics/items/icon_palett
 
 const u32 gItemIcon_Radio[] = INCBIN_U32("graphics/items/icons/radio.4bpp.smol");
 const u16 gItemIcon_Palette_Radio[] = INCBIN_U16("graphics/items/icons/radio.gbapal");
+
+const u32 gItemIcon_MagicMuffler[] = INCBIN_U32("graphics/items/icons/magic_muffler.4bpp.smol");
+const u16 gItemIcon_Palette_MagicMuffler[] = INCBIN_U16("graphics/items/icons/magic_muffler.gbapal");

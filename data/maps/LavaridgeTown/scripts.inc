@@ -4,13 +4,6 @@ LavaridgeTown_MapScripts::
 	.byte 0
 
 LavaridgeTown_OnTransition:
-	setflag FLAG_GARBAGEFLAG
-	call_if_set FLAG_WHITEOUT_TO_LAVARIDGE, LavaridgeTown_EventScript_ClearLavaridgeWhiteOut
-	call_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, LavaridgeTown_EventScript_ShowMtChimneyTrainers
-	call Common_EventScript_SetupRivalGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
-	call_if_eq VAR_GARBAGEVAR, 1, LavaridgeTown_EventScript_CheckSetRivalPos
-	call_if_eq VAR_GARBAGEVAR, 1, LavaridgeTown_EventScript_HideMapNamePopup
 	end
 
 LavaridgeTown_EventScript_ClearLavaridgeWhiteOut::
@@ -19,26 +12,18 @@ LavaridgeTown_EventScript_ClearLavaridgeWhiteOut::
 
 LavaridgeTown_EventScript_CheckSetRivalPos::
 	getplayerxy VAR_0x8004, VAR_0x8005
-	goto_if_eq VAR_0x8004, 9, LavaridgeTown_EventScript_SetRivalPos
 	return
 
 LavaridgeTown_EventScript_SetRivalPos::
-	setobjectxyperm LOCALID_LAVARIDGE_RIVAL, 11, 9
-	setobjectxyperm LOCALID_LAVARIDGE_RIVAL_ON_BIKE, 9, 8
-	setobjectmovementtype LOCALID_LAVARIDGE_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_UP
-	clearflag FLAG_GARBAGEFLAG
 	return
 
 LavaridgeTown_EventScript_ShowMtChimneyTrainers::
-	clearflag FLAG_GARBAGEFLAG
 	return
 
 LavaridgeTown_EventScript_HideMapNamePopup::
-	setflag FLAG_GARBAGEFLAG
 	return
 
 LavaridgeTown_OnFrame:
-	map_script_2 VAR_GARBAGEVAR, 1, LavaridgeTown_EventScript_RivalGiveGoGoggles
 	.2byte 0
 
 LavaridgeTown_EventScript_RivalGiveGoGoggles::
@@ -229,6 +214,15 @@ LavaridgeTown_EventScript_ExpertF::
 	msgbox LavaridgeTown_Text_OhYouLikeHotSprings, MSGBOX_NPC
 	end
 
+LavaridgeTown_EventScript_LeaderDamian::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_LeaderDamian, MSGBOX_NPC
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
 LavaridgeTown_EventScript_EggWoman::
 	lock
 	faceplayer
@@ -318,28 +312,28 @@ LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad:
 	.string "See you around!$"
 
 LavaridgeTown_Text_HaveEggWillYouTakeIt:
-	.string "I have here an EGG.\p"
+	.string "I have here an Egg.\p"
 	.string "I'd hoped to hatch it by covering it in\n"
 	.string "hot sand by the hot springs.\l"
-	.string "But that doesn't seem to be enough…\p"
-	.string "I've heard it would be best if it were\n"
-	.string "kept together with Pokémon and\l"
-	.string "carried about.\p"
-	.string "You are a TRAINER, yes?\n"
-	.string "And your Pokémon radiate vitality.\p"
-	.string "So, what say you?\n"
-	.string "Will you take this EGG to hatch?$"
+	.string "But that doesn't actually work.\p"
+	.string "You see, an Egg can only hatch if it\n"
+	.string "is carried by a certain Trainer.\p"
+	.string "Yes, specifically one by the name of\n"
+	.string "{PLAYER}.\p"
+	.string "You're {PLAYER}, arent' you?\p"
+	.string "So…\n"
+	.string "Will you take this Egg to hatch?$"
 
 LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg:
 	.string "Good! I hope you'll walk plenty with\n"
-	.string "this here EGG!$"
+	.string "this here Egg!$"
 
 LavaridgeTown_Text_ReceivedTheEgg:
-	.string "{PLAYER} received the EGG.$"
+	.string "{PLAYER} received the Egg.$"
 
 LavaridgeTown_Text_NoRoomForThisEgg:
 	.string "Oh? You've too many Pokémon.\n"
-	.string "There's no room for this EGG…$"
+	.string "There's no room for this Egg$"
 
 LavaridgeTown_Text_AsYouWishThen:
 	.string "As you wish, then…\p"
@@ -347,9 +341,14 @@ LavaridgeTown_Text_AsYouWishThen:
 	.string "hatching this EGG, I will be here.$"
 
 LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare:
-	.string "Every so often, an EGG will be found at\n"
-	.string "the Pokémon DAY CARE.\p"
-	.string "Or at least that's how the rumor goes.$"
+	.string "When a mommy Pokémon and a daddy Pokémon\n"
+	.string "love each other very much,\l"
+	.string "an Egg will be found at the\l"
+	.string "Pokémon Day Care.\p"
+	.string "I wonder, how DO some of them “do it”?\p"
+	.string "And how even do the mammals lay\n"
+	.string "reptile eggs?\p"
+	.string "Are they all platypuses?$"
 
 LavaridgeTown_Text_HotSpringsNeverRunDry:
 	.string "We draw as much hot water as we need,\n"
@@ -365,7 +364,7 @@ LavaridgeTown_Text_PokemonNippedBackside:
 	.string "Sigh…\p"
 	.string "So warm and heavenly…\p"
 	.string "Eh? Gyaah! Ouch!\p"
-	.string "A Pokémon nipped my backside!$"
+	.string "A Pokémon nipped my ass!$"
 
 LavaridgeTown_Text_OhYouLikeHotSprings:
 	.string "Oh, you like hot springs, do you?\p"
@@ -373,15 +372,15 @@ LavaridgeTown_Text_OhYouLikeHotSprings:
 	.string "as you.$"
 
 LavaridgeTown_Text_BatheInHotSpringsEveryDay:
-	.string "I bathe in the hot springs every day.\p"
-	.string "I want to become a beautiful and strong\n"
-	.string "GYM LEADER like FLANNERY.$"
+	.string "i thnik deez hot springs\p"
+	.string "give me life or some shit…$"
 
 LavaridgeTown_Text_IfPokemonInHotSprings:
-	.string "If people put Pokémon in hot springs,\n"
-	.string "it might be seriously strange.\p"
-	.string "Why, it might be an electric bath, or\n"
-	.string "a bubble bath, or even a lava bath…$"
+	.string "Sometimes, when people bathe in\n"
+	.string "the hot springs, they get SUPER\l"
+	.string "relaxed.\p"
+	.string "Their text mghit even be spelled\n"
+	.string "worng!$"
 
 LavaridgeTown_Text_HotSpringsClaims:
 	.string "They're claiming that these hot springs\n"
@@ -391,16 +390,21 @@ LavaridgeTown_Text_HotSpringsClaims:
 	.string "money…$"
 
 LavaridgeTown_Text_TownSign:
-	.string "LAVARIDGE TOWN\p"
-	.string "“Pokémon CENTER HOT SPRINGS\n"
+	.string "Lavaridge Town\p"
+	.string "“Pokémon Center Hot Springs\n"
 	.string "An excellent place for relaxing!”$"
 
 LavaridgeTown_Text_GymSign:
-	.string "LAVARIDGE TOWN Pokémon GYM\n"
-	.string "LEADER: FLANNERY\l"
-	.string "“One with a fiery passion that burns!”$"
+	.string "Lavaridge Town Pokémon Gym\n"
+	.string "Leader: Molly\p"
+	.string "Eight years old and master\n"
+	.string "of Fire-types!$"
 
 LavaridgeTown_Text_HerbShopSign:
-	.string "Pokémon HERB SHOP\n"
+	.string "Pokémon Herb Shop\n"
 	.string "“Bitter taste--better cure!”$"
 
+LavaridgeTown_Text_LeaderDamian:
+	.string "Damian: Oh, hey, {PLAYER}.\n"
+	.string "Can't you see I'm smoking my weed?\p"
+	.string "(puff)$"

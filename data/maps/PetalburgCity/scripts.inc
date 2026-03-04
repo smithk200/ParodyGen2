@@ -29,6 +29,10 @@ PetalburgCity_OnFrame:
 	map_script_2 VAR_GARBAGEVAR, 4, PetalburgCity_EventScript_WalkToWallyHouse
 	.2byte 0
 
+PetalburgCity_GymTrigger::
+	setvar VAR_WALUIGI_GYM_STATE, 1
+	end
+
 PetalburgCity_EventScript_WallyTutorial::
 	lockall
 	special SavePlayerParty

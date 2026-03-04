@@ -3555,4 +3555,7 @@ extern const u16 gItemIcon_Palette_TidalBell[];
 extern const u32 gItemIcon_Radio[];
 extern const u16 gItemIcon_Palette_Radio[];
 
+extern const u32 gItemIcon_MagicMuffler[];
+extern const u16 gItemIcon_Palette_MagicMuffler[];
+
 #endif //GUARD_GRAPHICS_H

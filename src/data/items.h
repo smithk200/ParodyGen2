@@ -14852,8 +14852,8 @@ const struct Item gItemsInfo[] =
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
-            "An orb that is filled\n"
-            "with corrupt energy.\n"
+            "An orb that has\n"
+            "corrupt energy.\n"
             "Boosts all stats."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -14862,6 +14862,24 @@ const struct Item gItemsInfo[] =
         .flingPower = 80,
         .iconPic = gItemIcon_LaxIncense,
         .iconPalette = gItemIconPalette_LaxIncense,
+    },
+    [ITEM_MAGIC_MUFFLER] =
+    {
+        .name = ITEM_NAME("Magic Muffler"),
+        .pluralName = ITEM_PLURAL_NAME("Magic Mufflers"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MAGIC_MUFFLER,
+        .description = COMPOUND_STRING(
+            "To be held by a\n"
+            "Pokémon. Makes its\n"
+            "EXP. move fast."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_MagicMuffler,
+        .iconPalette = gItemIcon_Palette_MagicMuffler,
     },
 };
 

@@ -407,6 +407,8 @@ const u32 gTrainerFrontPic_LeaderClay[] = INCBIN_U32("graphics/trainers/front_pi
 const u16 gTrainerPalette_LeaderClay[] = INCBIN_U16("graphics/trainers/front_pics/leader_clay.gbapal");\
 const u32 gTrainerFrontPic_LeaderLarry[] = INCBIN_U32("graphics/trainers/front_pics/larry.4bpp.smol");
 const u16 gTrainerPalette_LeaderLarry[] = INCBIN_U16("graphics/trainers/front_pics/larry.gbapal");
+const u32 gTrainerFrontPic_Waluigi[] = INCBIN_U32("graphics/trainers/front_pics/waluigi.4bpp.smol");
+const u16 gTrainerPalette_Waluigi[] = INCBIN_U16("graphics/trainers/front_pics/waluigi.gbapal");
 
 
 // The first two parameters invoke a front pic and palette by
@@ -570,7 +572,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRY, gTrainerFrontPic_Fry, gTrainerPalette_Fry),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_CLAY, gTrainerFrontPic_LeaderClay, gTrainerPalette_LeaderClay),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_LARRY, gTrainerFrontPic_LeaderLarry, gTrainerPalette_LeaderLarry),
-    TRAINER_SPRITE(TRAINER_PIC_LEADER_MOLLY, gTrainerFrontPic_LeaderMolly, gTrainerPalette_LeaderMolly),    
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_MOLLY, gTrainerFrontPic_LeaderMolly, gTrainerPalette_LeaderMolly),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_WALUIGI, gTrainerFrontPic_Waluigi, gTrainerPalette_Waluigi),   
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

@@ -75,6 +75,7 @@
 #include "constants/form_change_types.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
+#include "constants/layouts.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
@@ -1409,12 +1410,31 @@ void Task_HandleChooseMonInput(u8 taskId)
                 if (gItemLimit >= 4)
                 {
                     gItemLimit = 4;
-                    DebugPrintf("Item Limit: %d", gItemLimit);
+                    //DebugPrintf("Item Limit: %d", gItemLimit);
                 }
                 else
                     gItemLimit++;
-                    DebugPrintf("Item Limit: %d", gItemLimit);
+                    //DebugPrintf("Item Limit: %d", gItemLimit);
                 FlagClear(FLAG_USED_ITEM);
+                if ((VAR_MAGIC_MUFFLER_STATE < 10)) //the cheat will work faster if you don't use items...
+                //also anything below 10 corresponds to the elite four stuff
+                {
+                    u16 rand;
+                    rand = Random() % 100;
+                    if (gMagicMufflerChecker < 5) /*
+                    we're going to be nice to the player and limit how many times 
+                    the "this cheat will work faster if you don't have items"  clause goes
+                    */
+                    {
+                        if (rand >= 80) //20% chance to lower the Magic Muffler state if you use an item during the elite four fights
+                        {
+                            u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
+                            MagicMufflerState = (MagicMufflerState - 1);
+                            VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState);
+                            gMagicMufflerChecker++;
+                        }
+                    }
+                }
             }
             else
             {
@@ -3533,6 +3553,16 @@ static void CursorCb_TakeItem(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 item = GetMonData(mon, MON_DATA_HELD_ITEM);
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
+    if ((MagicMufflerState == 119) && (species == SPECIES_DRAGONITE) && (item == ITEM_SALAC_BERRY)) 
+    /*get the magic muffler after doing the insanely long checklist
+    */
+    {
+        item = ITEM_MAGIC_MUFFLER;
+        MagicMufflerState = (MagicMufflerState + 1);
+        VarSet(VAR_MAGIC_MUFFLER_STATE, MagicMufflerState);
+    }
 
     PlaySE(SE_SELECT);
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
@@ -3961,6 +3991,14 @@ static void Task_HandleSpinTradeYesNoInput(u8 taskId)
     }
 }
 
+/*
+void CB2_MagicMufflerWarp(void)
+{
+    SetWarpDestination(MAP_GROUP(MAP_NEW_BARK_TOWN_LAB), MAP_NUM(MAP_NEW_BARK_TOWN_LAB), WARP_ID_NONE, 6, 4);
+    WarpIntoMap();
+}
+*/
+
 static void CursorCb_FieldMove(u8 taskId)
 {
     u8 fieldMove = sPartyMenuInternal->actions[Menu_GetCursorPos()] - MENU_FIELD_MOVES;
@@ -4188,9 +4226,17 @@ static void DisplayCantUseSurfMessage(void)
 
 bool32 SetUpFieldMove_Fly(void)
 {
+    u32 MagicMufflerState = VarGet(VAR_MAGIC_MUFFLER_STATE);
     if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_LEAVE_ROUTE))
         return FALSE;
-
+    if ((MagicMufflerState >= 116) && (gMapHeader.mapLayoutId == LAYOUT_NEW_BARK_TOWN_LAB)) /*override for the Magic Muffler- we want the player to fly in the lab
+    after the player challenges the Elite Four five extra times after obtaining the Dragonite.*/
+    {
+        if (MagicMufflerState < 119) //use fly 3 times but no more
+            return TRUE;
+        else
+            return FALSE;
+    }
     if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
         return TRUE;
     else

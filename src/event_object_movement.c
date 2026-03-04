@@ -570,6 +570,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Sans,                  OBJ_EVENT_PAL_TAG_ELITE_FOUR_SANS},
     {gObjectEventPal_Rick,                  OBJ_EVENT_PAL_TAG_LEADER_RICK},
     {gObjectEventPal_Morty_2,                  OBJ_EVENT_PAL_TAG_LEADER_MORTY}, //Rick and Morty's "Morty" uses the prefix LEADER_ in front, whereas vanilla Morty doesn't.
+    {gObjectEventPal_Molly,                  OBJ_EVENT_PAL_TAG_MOLLY},
+    {gObjectEventPal_Waluigi,                  OBJ_EVENT_PAL_TAG_WALUIGI},
     
 
 #if OW_FOLLOWERS_POKEBALLS

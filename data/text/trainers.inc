@@ -1523,16 +1523,16 @@ Route112_Text_BricePostBattle:
 	.string "Hahahahaha! Something flew up my nose!\n"
 	.string "Hahahaha-hatchoo!$"
 
-Route112_Text_TrentIntro:
+Route112_Text_GilIntro:
 	.string "My legs are solid from pounding up\n"
 	.string "and down the mountains.\p"
 	.string "They're not going to buckle easily,\n"
 	.string "friend!$"
 
-Route112_Text_TrentDefeat:
+Route112_Text_GilDefeat:
 	.string "Ouch! My legs cramped up!$"
 
-Route112_Text_TrentPostBattle:
+Route112_Text_GilPostBattle:
 	.string "Try hiking, and I mean really\n"
 	.string "pounding, on these mountain trails\l"
 	.string "with a heavy pack weighing dozens of\l"
@@ -1540,21 +1540,21 @@ Route112_Text_TrentPostBattle:
 	.string "That, my friend, will get your body\n"
 	.string "into serious shape.$"
 
-Route112_Text_TrentRegister:
+Route112_Text_GilRegister:
 	.string "Ow, my legs have cramped up.\n"
 	.string "Can you grab me some bandages from\l"
 	.string "my backpack?\p"
 	.string "No, that's my POKéNAV!\n"
 	.string "Oh, fine, I'll register you.$"
 
-Route112_Text_TrentRematchIntro:
+Route112_Text_GilRematchIntro:
 	.string "I've been keeping fit by hiking.\n"
 	.string "Power, I have in spades!$"
 
-Route112_Text_TrentRematchDefeat:
+Route112_Text_GilRematchDefeat:
 	.string "I got trumped in power?$"
 
-Route112_Text_TrentRematchPostBattle:
+Route112_Text_GilRematchPostBattle:
 	.string "I hear there are some seriously tough\n"
 	.string "TRAINERS on top of MT. CHIMNEY.\p"
 	.string "I intend to get up there and give them\n"
@@ -2412,18 +2412,15 @@ Route117_Text_DylanPostRematch:
 	.string "Pokémon yet.$"
 
 Route117_Text_MariaIntro:
-	.string "I do my triathlon training with Pokémon,\n"
-	.string "so I'm pretty confident about my speed.$"
+	.string "They say I'm an awful chump.\n"
+	.string "Do you think that's true?$"
 
 Route117_Text_MariaDefeat:
-	.string "I need to get more practices in,\n"
-	.string "I guess.$"
+	.string "I guess they were right, I guess…$"
 
 Route117_Text_MariaPostBattle:
-	.string "Training is meaningful only if you\n"
-	.string "keep it up regularly.\p"
-	.string "Okay! I'll resume my training!\n"
-	.string "Tomorrow!$"
+	.string "You need to meet my boyfriend Derek!\n"
+	.string "He's one BIG machine!$"
 
 Route117_Text_MariaRegister:
 	.string "You appear to be training properly…\n"
@@ -2443,21 +2440,25 @@ Route117_Text_MariaPostRematch:
 	.string "Let's battle again sometime!$"
 
 Route117_Text_DerekIntro:
-	.string "Once a BUG CATCHER!\n"
-	.string "And now a BUG MANIAC!\p"
-	.string "But my love for Pokémon remains\n"
-	.string "unchanged!$"
+	.string "Hi there!\p"
+	.string "I take it you met my girlfriend\n"
+	.string "Maria?\p"
+	.string "She calls me the “big machine”\n"
+	.string "because I'm good in bed.\p"
+	.string "My love for her is eternal!$"
 
 Route117_Text_DerekDefeat:
 	.string "My ineptitude also remains\n"
-	.string "unchanged…$"
+	.string "eternal…$"
 
 Route117_Text_DerekPostBattle:
 	.string "All I did was follow my heart, and now\n"
-	.string "they call me a BUG MANIAC…\p"
-	.string "Still, I am an expert on BUG Pokémon,\n"
+	.string "Maria's my fiancé…\p"
+	.string "Still, I am an expert in the bedroom,\n"
 	.string "so it's only natural that they call me\l"
-	.string "a BUG MANIAC.$"
+	.string "the “big machine”.\p"
+	.string "My arms aren't the only thing that's\n"
+	.string "big, you know…$"
 
 Route117_Text_AnnaIntro:
 	.string "ANNA: I'm with my pretty junior student\n"
@@ -2531,15 +2532,15 @@ Route117_Text_MegRematchNotEnoughMons:
 	.string "We want to have a 2-on-2 battle.$"
 
 Route117_Text_MelinaIntro:
-	.string "Isn't it nice? To battle while looking\n"
-	.string "at pretty flowers?$"
+	.string "This is my husband!\p"
+	.string "Praise Allah!$"
 
 Route117_Text_MelinaDefeat:
-	.string "Oh, that's quite impressive!$"
+	.string "Oh, that's quite disrespectful!$"
 
 Route117_Text_MelinaPostBattle:
 	.string "It feels wonderful to go for a jog\n"
-	.string "while looking at flowers.$"
+	.string "while praying to Mecca.$"
 
 Route117_Text_BrandiIntro:
 	.string "Let me demonstrate the power\n"
@@ -2552,17 +2553,16 @@ Route117_Text_BrandiPostBattle:
 	.string "PSYCHIC Pokémon are complex.\n"
 	.string "You should try catching some.$"
 
-Route117_Text_AishaIntro:
-	.string "Concentrate on getting the win.\n"
-	.string "That's how I battle!$"
+Route117_Text_MuhammadIntro:
+	.string "Praise Allah, for he is glorious and\n"
+	.string "holy!$"
 
-Route117_Text_AishaDefeat:
-	.string "I don't waste any time being angry\n"
-	.string "over a loss--I would rather train.$"
+Route117_Text_MuhammadDefeat:
+	.string "You infidel!$"
 
-Route117_Text_AishaPostBattle:
-	.string "I think that if you worry about losing,\n"
-	.string "you're more likely to lose.$"
+Route117_Text_MuhammadPostBattle:
+	.string "I'm not the prophet Muhammad, I'm just\n"
+	.string "a follower of Islam.$"
 
 Route118_Text_RoseIntro:
 	.string "The aroma of flowers has a magical\n"
@@ -2608,18 +2608,19 @@ Route118_Text_PerryPostBattle:
 
 Route118_Text_ChesterIntro:
 	.string "Take flight!\n"
-	.string "My BIRD Pokémon!$"
+	.string "My Flying-type Pokémon!$"
 
 Route118_Text_ChesterDefeat:
 	.string "They did take flight…$"
 
 Route118_Text_ChesterPostBattle:
-	.string "If they'd get stronger, they'd be able\n"
-	.string "to fly more freely…$"
+	.string "Flying type Pokémon aren't all birds,\n"
+	.string "you know…$"
 
 Route118_Text_BarnyIntro:
-	.string "I'm a FISHERMAN, but also a TRAINER.\n"
-	.string "I'm raising the Pokémon I caught.$"
+	.string "I'm a Baiter, and I'm a master at it.\n"
+	.string "I'm a purple dinosaur from your\n"
+	.string "imagination.$"
 
 Route118_Text_BarnyDefeat:
 	.string "I thought I was doing okay in my\n"
@@ -2627,20 +2628,22 @@ Route118_Text_BarnyDefeat:
 
 Route118_Text_BarnyPostBattle:
 	.string "I couldn't win by training Pokémon\n"
-	.string "while I fished…\p"
-	.string "Was I doing things in half measures?$"
+	.string "while I baited…\p"
+	.string "Am I a master in my craft?$"
 
 Route118_Text_WadeIntro:
-	.string "For FISHERMEN, equipment is the key.\p"
-	.string "But for TRAINERS, the key ingredients\n"
-	.string "are Pokémon and heart, of course!$"
+	.string "I was killed in the jungles of Peru.\n"
+	.string "That's why I use Ghost-type Pokémon.\p"
+	.string "I'll always remember Michael Vey!$"
 
 Route118_Text_WadeDefeat:
-	.string "I was beaten in heart?$"
+	.string "I was beaten in spirit?$"
 
 Route118_Text_WadePostBattle:
-	.string "Come to think of it, fishing is a battle\n"
-	.string "between a FISHERMAN and a Pokémon.$"
+	.string "Hey, I want to thank Jack and the\n"
+	.string "gang for honoring my memory.\p"
+	.string "If you know of the Michael Vey\n"
+	.string "books, you will know what I mean.$"
 
 Route118_Text_DaltonIntro:
 	.string "Let my melody rock your soul!$"

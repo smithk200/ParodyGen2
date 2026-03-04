@@ -1545,3 +1545,5 @@ const u8 gText_ExpandedPlaceholder_Silver[]= _("SILVER");
 const u8 gText_Gen4Plus[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Gen IV+");
 const u8 gText_Gen3andLower[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Gen I-III");
 const u8 gText_ItemLimitHasBeenReached[] = _("Four items have already been used\nin battle!{PAUSE_UNTIL_PRESS}");
+const u8 gText_Next2[] = _("Next");
+const u8 gText_Return[] = _("Return");

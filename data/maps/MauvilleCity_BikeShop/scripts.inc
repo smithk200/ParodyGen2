@@ -4,12 +4,14 @@ MauvilleCity_BikeShop_MapScripts::
 MauvilleCity_BikeShop_EventScript_Rydel::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_BIKE, MauvilleCity_BikeShop_EventScript_AskSwitchBikes
-	goto_if_set FLAG_DECLINED_BIKE, MauvilleCity_BikeShop_EventScript_SkipGreeting
-	msgbox MauvilleCity_BikeShop_Text_RydelGreeting, MSGBOX_DEFAULT
-	msgbox MauvilleCity_BikeShop_Text_DidYouComeFromFarAway, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, MauvilleCity_BikeShop_EventScript_YesFar
-	goto_if_eq VAR_RESULT, NO, MauvilleCity_BikeShop_EventScript_NotFar
+	goto_if_set FLAG_RECEIVED_BIKE,  MauvilleCity_BikeShop_EventScript_YouHaveABike
+	msgbox MauvilleCity_BikeShop_TextGoldenrodCityBike, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_BikeShop_EventScript_YouHaveABike::
+	msgbox MauvilleCity_BikeShop_Text_GoodForYou, MSGBOX_DEFAULT
+	release
 	end
 
 MauvilleCity_BikeShop_EventScript_SkipGreeting::
@@ -256,10 +258,10 @@ MauvilleCity_BikeShop_Text_OhYourBikeIsInPC:
 	.string "on your adventure!$"
 
 MauvilleCity_BikeShop_Text_HandbooksAreInBack:
-	.string "I'm learning about BIKES while\n"
+	.string "I'm learning about bikes while\n"
 	.string "I work here.\p"
 	.string "If you need advice on how to ride your\n"
-	.string "BIKE, there're a couple handbooks in\l"
+	.string "bike, there're a couple handbooks in\l"
 	.string "the back.$"
 
 MauvilleCity_BikeShop_Text_MachHandbookWhichPage:
@@ -320,3 +322,11 @@ MauvilleCity_BikeShop_Text_Jumps:
 	.string "change directions while jumping.\p"
 	.string "Want to read a different page?$"
 
+MauvilleCity_BikeShop_Text_GoodForYou:
+	.string "You have a Bike already?\n"
+	.string "Good for you!$"
+
+MauvilleCity_BikeShop_TextGoldenrodCityBike:
+	.string "Why didn't you get a bike from\n"
+	.string "Goldenrod City?\p"
+	.string "That's where they are, you know.$"

@@ -522,6 +522,13 @@
       "map": "MAP_ROUTE10",
       "x": 21,
       "y": 21
+    },
+    {
+      "id": "HEAL_LOCATION_NEW_BARK_TOWN_LAB",
+      "map": "MAP_NEW_BARK_TOWN_LAB",
+      "x": 6,
+      "y": 4,
+      "respawn_map": "MAP_NEW_BARK_TOWN_LAB"
     }
   ]
 }

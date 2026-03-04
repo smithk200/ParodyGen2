@@ -5146,3 +5146,9 @@ $(OBJEVENTGFXDIR)/people/leader_rick.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/people/leader_morty.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/molly.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/waluigi.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

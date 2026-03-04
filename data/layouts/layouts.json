@@ -897,7 +897,7 @@
       "width": 12,
       "height": 9,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BikeShop",
+      "secondary_tileset": "gTileset_BikeShop_2",
       "border_filepath": "data/layouts/MauvilleCity_BikeShop/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_BikeShop/map.bin"
     },
@@ -1087,7 +1087,7 @@
       "width": 17,
       "height": 26,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SootopolisGym",
+      "secondary_tileset": "gTileset_SootopolisGym_2",
       "border_filepath": "data/layouts/SootopolisCity_Gym_1F/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_Gym_1F/map.bin"
     },
@@ -1097,7 +1097,7 @@
       "width": 17,
       "height": 26,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SootopolisGym",
+      "secondary_tileset": "gTileset_SootopolisGym_2",
       "border_filepath": "data/layouts/SootopolisCity_Gym_B1F/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_Gym_B1F/map.bin"
     },
@@ -5247,7 +5247,7 @@
       "width": 72,
       "height": 44,
       "primary_tileset": "gTileset_Johto_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_Lavaridge2",
       "border_filepath": "data/layouts/CinnabarIsland/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland/map.bin"
     },

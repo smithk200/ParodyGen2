@@ -94,11 +94,8 @@ Route117_EventScript_RematchIsaac::
 	end
 
 Route117_EventScript_Lydia::
-	trainerbattle_single TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat, Route117_EventScript_RegisterLydia
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchLydia
+	trainerbattle_single TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat
 	msgbox Route117_Text_LydiaPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route117_EventScript_RegisterLydia::
@@ -134,11 +131,8 @@ Route117_EventScript_RematchDylan::
 	end
 
 Route117_EventScript_Maria::
-	trainerbattle_single TRAINER_MARIA_1, Route117_Text_MariaIntro, Route117_Text_MariaDefeat, Route117_EventScript_RegisterMaria
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchMaria
+	trainerbattle_single TRAINER_MARIA_1, Route117_Text_MariaIntro, Route117_Text_MariaDefeat
 	msgbox Route117_Text_MariaPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route117_EventScript_RegisterMaria::
@@ -159,9 +153,7 @@ Route117_EventScript_Derek::
 	end
 
 Route117_EventScript_Anna::
-	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_AnnaIntro, Route117_Text_AnnaDefeat, Route117_Text_AnnaNotEnoughMons, Route117_EventScript_RegisterAnna
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchAnna
+	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_AnnaIntro, Route117_Text_AnnaDefeat, Route117_Text_AnnaNotEnoughMons
 	msgbox Route117_Text_AnnaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -204,9 +196,9 @@ Route117_EventScript_Brandi::
 	msgbox Route117_Text_BrandiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route117_EventScript_Aisha::
-	trainerbattle_single TRAINER_NONE, Route117_Text_AishaIntro, Route117_Text_AishaDefeat
-	msgbox Route117_Text_AishaPostBattle, MSGBOX_AUTOCLOSE
+Route117_EventScript_Muhammad::
+	trainerbattle_single TRAINER_MUHAMMAD, Route117_Text_MuhammadIntro, Route117_Text_MuhammadDefeat
+	msgbox Route117_Text_MuhammadPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route117_Text_DayCarePokemonHadNewMove:
@@ -221,16 +213,19 @@ Route117_Text_ArentTheseFlowersPretty:
 	.string "I planted them all!$"
 
 Route117_Text_AirIsTastyHere:
-	.string "The air is tasty here!$"
+	.string "I want to be a Gym Leader someday!\n"
+	.string "There's a Gym Leader here who is eight,\l"
+	.string "and a Gym Leader in Johto who's five.\p"
+	.string "It shouldn't be that hard!$"
 
 Route117_Text_RouteSignVerdanturf:
-	.string "ROUTE 117\n"
-	.string "{LEFT_ARROW} VERDANTURF TOWN$"
+	.string "Route 117\n"
+	.string "{LEFT_ARROW} Verdanturf Town$"
 
 Route117_Text_RouteSignMauville:
-	.string "ROUTE 117\n"
-	.string "{RIGHT_ARROW} MAUVILLE CITY$"
+	.string "Route 117\n"
+	.string "{RIGHT_ARROW} Mauville City$"
 
 Route117_Text_DayCareSign:
-	.string "Pokémon DAY CARE\n"
+	.string "Pokémon Day Care\n"
 	.string "“Let us raise your Pokémon.”$"
