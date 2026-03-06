@@ -249,9 +249,9 @@ MahoganyTown_Movement_PlayerMerchant2:
 
 MahoganyTown_Text_RageCandyBarMerchantTryOne:
 	.string "Hiya, kid!\p"
-	.string "I see you're new in MAHOGANY TOWN.\p"
+	.string "I see you're new in Mahogany Town.\p"
 	.string "Since you're new, you should try a\n"
-	.string "yummy RAGECANDYBAR!\p"
+	.string "yummy Rage Candy Bar!\p"
 	.string "Right now, it can be yours for just\n"
 	.string "¥300! Want one?$"
 
@@ -265,17 +265,17 @@ MahoganyTown_Text_RageCandyBarMerchantRefused:
     .string "Oh, fine then…$"
 
 MahoganyTown_Text_RageCandyBarMerchantSoldOut:
-    .string "RAGECANDYBAR's sold out.\p"
+    .string "The Rage Candy Bar's sold out.\p"
     .string "I'm packing up. Don't bother me,\n"
     .string "kiddo.$"
 
 MahoganyTown_Text_Gramps:
-    .string "Are you off to see the GYARADOS\n"
-    .string "rampage at the LAKE?$"
+    .string "Are you off to see the Gyarados\n"
+    .string "rampage at the Lake?$"
 
 MahoganyTown_Text_GrampsClearedRocketHideout:
-    .string "MAGIKARP have returned to LAKE\n"
-    .string "OF RAGE.\p"
+    .string "Magikarp have returned to Lake\n"
+    .string "of Rage.\p"
     .string "That should be good news for the\n"
     .string "anglers there.$"
 
@@ -295,8 +295,8 @@ MahoganyTown_Text_Sign:
 	.string "With Absolutely No Tourist Attractions.$"
 
 MahoganyTown_Text_RagecandybarSign:
-    .string "While visiting MAHOGANY TOWN, try\n"
-    .string "a RAGECANDYBAR!$"
+    .string "While visiting Mahogany Town, try\n"
+    .string "a Rage Candy Bar!$"
 
 MahoganyTown_Text_GymSign:
     .string "Mahogany Town Pokémon Gym\p"

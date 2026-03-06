@@ -164,7 +164,7 @@ SaffronCity_FightingDojoVIP_EventScript_Surge::
 	msgbox SaffronCity_FightingDojoVIP_Text_Surge_Rematch, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojoVIP_EventScript_Declined
 	closemessage
-	trainerbattle_no_intro TRAINER_LTSURGE, SaffronCity_FightingDojoVIP_Text_Surge_RematchDefeat
+	trainerbattle_no_intro TRAINER_LEADER_BILL, SaffronCity_FightingDojoVIP_Text_Surge_RematchDefeat
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10

@@ -224,7 +224,7 @@ NewBarkTown_Movement_FaceDown:
 	step_end
 
 NewBarkTown_Text_LabSign:
-	.string "PROF.ELM's LAB$"
+	.string "Professor Elm's Lab$"
 
 NewBarkTown_Text_Door:
 	.string "The door is locked.$"
@@ -263,16 +263,15 @@ NewBarkTown_Text_LassState5:
 
 NewBarkTown_Text_Silver1:
 	.string ". . .\p"
-	.string "So this is the famous ELM\n"
-	.string "Pokémon LAB…$"
+	.string "So this is the famous Elm\n"
+	.string "Pokémon Lab…$"
 
 NewBarkTown_Text_Silver2:
 	.string "…What are you staring at?$"
 
 NewBarkTown_Text_Sign:
-	.string "NEW BARK TOWN\p"
-	.string "The Town Where the Winds of\n"
-	.string "a New Beginning Blow$"
+	.string "New Bark Town\p"
+	.string "The town where baby dogs are born.$"
 
 NewBarkTown_EventScript_PlayersHouseMailbox::
 	msgbox NewBarkTown_Text_PlayersHouse, MSGBOX_SIGN
@@ -286,4 +285,4 @@ NewBarkTown_Text_PlayersHouse:
 	.string "{PLAYER}'s House$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF.ELM's House$"
+	.string "Professor Elm's House$"

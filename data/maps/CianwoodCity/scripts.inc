@@ -311,7 +311,7 @@ CianwoodCity_EventScript_CitySign::
 
 CianwoodCity_Text_Sign:
 	.string "Cianwood City\p"
-	.string "A Port Surrounded by Rough Seas$"
+	.string "No cian trees here!$"
 
 CianwoodCity_EventScript_GymSign::
 	lock

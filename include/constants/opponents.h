@@ -305,7 +305,7 @@
 #define TRAINER_VICTORIA                    299
 #define TRAINER_VANESSA                     300
 #define TRAINER_BETHANY                     301
-#define TRAINER_LTSURGE                    302
+#define TRAINER_LEADER_BILL                    302
 #define TRAINER_ERIKA                    303
 #define TRAINER_SABRINA                    304
 #define TRAINER_JANINE                    305

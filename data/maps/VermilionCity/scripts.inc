@@ -352,22 +352,22 @@ VermilionCity_EventScript_DiglettsCaveSign::
 	end
 
 VermilionCity_Text_Sign:
-	.string "VERMILION CITY\p"
-	.string "The Port of Exquisite Sunsets$"
+	.string "Vermilion City\p"
+	.string "The harmonious town of elegant\n"
+	.string "opulence.$"
 
 VermilionCity_Text_GymSign:
-	.string "VERMILION CITY\n"
-	.string "Pokémon GYM\p"
-	.string "LEADER: LT.SURGE\p"
-	.string "The Lightning American$"
+	.string "Vermilion City Pokémon Gym\p"
+	.string "Leader: Bill Nye\n"
+	.string "“The science guy”$"
 
 VermilionCity_Text_FanClubSign:
-	.string "Pokémon FAN CLUB\p"
+	.string "Pokémon Fan Club\p"
 	.string "All Pokémon Fans Welcome!$"
 
 VermilionCity_Text_DiglettsCaveSign:
-	.string "DIGLETT'S CAVE$"
+	.string "Diglett's Cave$"
 
 VermilionCity_Text_PortSign:
-	.string "VERMILION PORT\n"
-	.string "ENTRANCE$"
+	.string "Vermilion Port\n"
+	.string "Entrance$"

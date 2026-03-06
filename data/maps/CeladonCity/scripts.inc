@@ -144,27 +144,28 @@ CeladonCity_EventScript_TrainerTips::
 	end
 
 CeladonCity_Text_Sign:
-	.string "CELADON CITY\p"
-	.string "The City of Rainbow Dreams$"
+	.string "Celadon City\p"
+	.string "Where the developers of Pokémon\n"
+	.string "Heart and Soul live.$"
 
 CeladonGym_Text_Sign:
-	.string "CELADON CITY Pokémon GYM LEADER:\n"
-	.string "ERIKA\p"
+	.string "Celadon City Pokémon Gym\n"
+	.string "Leader: Erika\p"
 	.string "The Nature-Loving Princess$"
 
 CeladonCity_Text_DeptStoreSign:
-	.string "Find What You Need at CELADON\n"
-	.string "DEPT.STORE!$"
+	.string "Find What You Need at Celadon\n"
+	.string "Dept. Store!$"
 
 CeladonCity_Text_MansionSign:
-	.string "CELADON MANSION$"
+	.string "Celadon Mansion$"
 
 CeladonCity_Text_GameCornerSign:
 	.string "The Playground for Everybody--\n"
-	.string "CELADON GAME CORNER$"
+	.string "Celadon Game Corner$"
 
 CeladonCity_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips:\p"
 	.string "GUARD SPEC. protects Pokémon\n"
 	.string "against SPECIAL attacks such as\n"
 	.string "fire and water.\p"

@@ -27,7 +27,7 @@ FuchsiaCity_Text_Baoba:
 	.string "WARDEN BAOBA: {PLAYER}!\p"
 	.string "This is WARDEN BAOBA.\p"
 	.string "Something awful has happened!\n"
-	.string "My old SAFARI ZONE in FUCHSIA CITY\l"
+	.string "My old SAFARI ZONE in Fuchsia City\l"
 	.string "was bought out and reopened!\p"
 	.string "And apparently it has exotic new\n"
 	.string "Pokémon!\p"
@@ -104,22 +104,23 @@ FuchsiaCity_Text_Youngster:
 	.string "the LEADER of FUCHSIA's GYM.$"
 
 FuchsiaCity_Text_PokefanM:
-	.string "KOGA's daughter succeeded him as\n"
-	.string "the GYM LEADER after he joined the\l"
-	.string "ELITE FOUR.$"
+	.string "Koga's daughter succeeded him as\n"
+	.string "the Gym Leader after he joined the\l"
+	.string "Elite Four many years ago…\p"
+	.string "Koga's been replaced since!$"
 
 FuchsiaCity_Text_Teacher:
-	.string "The SAFARI ZONE is under new\n"
+	.string "The Safari Zone is under new\n"
 	.string "management.\p"
 	.string "And it has tons of new Pokémon!$"
 
 FuchsiaCity_Text_Sign:
-	.string "FUCHSIA CITY\p"
-	.string "Behold! It's Passion Pink!$"
+	.string "Fuchsia City\p"
+	.string "The town where the Safari Zone is.$"
 
 FuchsiaCity_Text_GymSign:
-	.string "FUCHSIA CITY Pokémon GYM\n"
-	.string "LEADER: JANINE\p"
+	.string "Fuchsia City Pokémon Gym\n"
+	.string "Leader: Janine\p"
 	.string "The Poisonous Ninja Master$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign:

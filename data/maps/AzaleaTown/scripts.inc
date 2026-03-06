@@ -348,7 +348,7 @@ AzaleaTown_Movement_KurtLeave:
 
 AzaleaTown_Text_RivalBefore:
 	.string "…Tell me something.\p"
-	.string "Is it true that TEAM ROCKET\n"
+	.string "Is it true that Team Rocket\n"
 	.string "has returned?\p"
 	.string "What? You beat them? Hah! Quit\n"
 	.string "lying.\p"
@@ -366,7 +366,7 @@ AzaleaTown_Text_RivalAfter:
 	.string "matter who or what.\p"
 	.string "I'm going to be strong and wipe\n"
 	.string "out the weak.\p"
-	.string "That goes for TEAM ROCKET too.\p"
+	.string "That goes for Team Rocket too.\p"
 	.string "They act big and tough in a group.\p"
 	.string "But get them alone, and they're weak.\n"
 	.string "I hate them all.\p"
@@ -382,47 +382,47 @@ AzaleaTown_Text_Rocket1:
 	.string "Aren't I a good Samaritan?$"
 
 AzaleaTown_Text_Rocket2:
-	.string "Do you know about SLOWPOKETAIL?\n"
+	.string "Do you know about Slowpoke tail?\n"
 	.string "I heard it's tasty!\p"
 	.string "Aren't you glad I told you that?$"
 
 AzaleaTown_Text_GrampsBefore:
-	.string "The SLOWPOKE have disappeared\n"
+	.string "The Slowpoke have disappeared\n"
 	.string "from town…\p"
 	.string "I heard their TAILS are being\n"
 	.string "sold somewhere.$"
 
 AzaleaTown_Text_GrampsAfter:
-	.string "The SLOWPOKE have returned.\p"
+	.string "The Slowpoke have returned.\p"
 	.string "Knowing them, they could've just\n"
 	.string "been goofing off somewhere.$"
 
 AzaleaTown_Text_Teacher:
-	.string "Did you come to get KURT to make\n"
-	.string "some BALLS?\p"
+	.string "Did you come to get Kurt to make\n"
+	.string "some Poké Balls?\p"
 	.string "A lot of people do just that.$"
 
 AzaleaTown_Text_Youngster:
-	.string "Cut through AZALEA and you'll be\n"
-	.string "in ILEX FOREST.\p"
+	.string "Cut through Azalea and you'll be\n"
+	.string "in Ilex Forest.\p"
 	.string "But these skinny trees make it\n"
 	.string "impossible to get through.\p"
-	.string "The CHARCOAL MAN's Pokémon\n"
-	.string "can CUT down trees.$"
+	.string "The Charcoal Man's Pokémon\n"
+	.string "can cut down trees.$"
 
 AzaleaTown_Text_Slowpoke1:
-	.string "SLOWPOKE:..........\p"
+	.string "Slowpoke:..........\p"
 	.string "...............YAWN?$"
 
 AzaleaTown_Text_Kurt1:
-	.string "ILEX FOREST is restless!\p"
+	.string "Ilex Forest is restless!\p"
 	.string "What is going on?$"
 
 AzaleaTown_Text_Kurt2:
 	.string "{PLAYER}, here's your GS BALL back!$"
 
 AzaleaTown_Text_Kurt3:
-	.string "Could you go see why ILEX FOREST\n"
+	.string "Could you go see why Ilex Forest\n"
 	.string "is so restless?$"
 
 AzaleaTown_Text_Sign:
@@ -431,7 +431,7 @@ AzaleaTown_Text_Sign:
 	.string "Slowpoke live.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "KURT'S HOUSE$"
+	.string "Kurt's House$"
 
 AzaleaTown_Text_GymSign:
 	.string "Azalea Town Pokémon Gym\p"
@@ -440,15 +440,15 @@ AzaleaTown_Text_GymSign:
 	.string "of Fairy types!$"
 
 AzaleaTown_Text_SlowpokeWellSign:
-	.string "SLOWPOKE WELL\p"
-	.string "Also known as the RAINMAKER WELL.\p"
-	.string "Locals believe that a SLOWPOKE's\n"
+	.string "Slowpoke Well\p"
+	.string "Also known as the Make It Rain Well.\p"
+	.string "Locals believe that a Slowpoke's\n"
 	.string "yawn summons rain.\p"
-	.string "Records show that a SLOWPOKE's\n"
+	.string "Records show that a Slowpoke's\n"
 	.string "yawn ended a drought 400 years ago.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
-	.string "CHARCOAL KILN$"
+	.string "Charcoal Kiln$"
 
 AzaleaTown_Text_IlexForestSign:
 	.string "Ilex Forest\p"

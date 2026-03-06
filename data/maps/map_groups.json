@@ -637,7 +637,8 @@
     "SlateportCity_House",
     "SlateportCity_PokemonCenter_1F",
     "SlateportCity_PokemonCenter_2F",
-    "SlateportCity_Mart"
+    "SlateportCity_Mart",
+    "SlateportCity_Gym"
   ],
   "gMapGroup_Emerald2": [
     "MauvilleCity_Gym",

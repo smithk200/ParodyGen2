@@ -115,7 +115,7 @@ CeruleanCity_Text_Fisher:
 
 CeruleanCity_Text_Fisher_RocketTip:
 	.string "I saw this shady guy go off toward\n"
-	.string "CERULEAN's CAPE.$"
+	.string "Cerulean's CAPE.$"
 
 CeruleanCity_EventScript_Youngster::
 	msgbox CeruleanCity_Text_Youngster1, MSGBOX_NPC
@@ -150,13 +150,12 @@ CeruleanCity_EventScript_CapeSign::
 	end
 
 CeruleanCity_Text_Sign:
-	.string "CERULEAN CITY\p"
-	.string "A Mysterious Blue Aura Surrounds It$"
+	.string "Cerulean City\p"
+	.string "We like Crayola Crayons.$"
 
 CeruleanCity_Text_GymSign:
-	.string "CERULEAN CITY\n"
-	.string "Pokémon GYM\n"
-	.string "LEADER: MISTY\p"
+	.string "Cerulean City Pokémon Gym\n"
+	.string "Leader: Misty\p"
 	.string "The Tomboyish Mermaid$"
 
 CeruleanCity_Text_BikeShopSign:
@@ -169,11 +168,10 @@ CeruleanCity_Text_PoliceSign:
 	.string "Stamp out thievery and make the\n"
 	.string "city a friendlier, more cheerful\l"
 	.string "place!\p"
-	.string "CERULEAN POLICE$"
+	.string "Cerulean Police$"
 
 CeruleanCity_Text_CapeSign:
-	.string "CERULEAN CAPE\n"
-	.string "AHEAD$"
+	.string "Cerulean Cape Ahead$"
 
 CeruleanCity_Text_LockedDoor:
 	.string "It's locked…$"

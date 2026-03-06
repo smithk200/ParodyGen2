@@ -121,11 +121,11 @@ CinnabarIsland_EventScript_GymSign::
 
 CinnabarIsland_Text_GymSign:
 	.string "There's a notice here…\p"
-	.string "CINNABAR GYM has relocated to\n"
-	.string "SEAFOAM ISLANDS.\p"
-	.string "BLAINE$"
+	.string "Cinnabar Gym has relocated to\n"
+	.string "Seafoam Islands.\p"
+	.string "Blaine$"
 
 CinnabarIsland_Text_Sign:
-	.string "CINNABAR ISLAND\p"
-	.string "The Fiery Town of Burning Desire$"
+	.string "Cinnabar Island\p"
+	.string "There's Nothing Here Anymore.$"
 

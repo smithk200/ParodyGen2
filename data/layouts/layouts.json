@@ -8850,6 +8850,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokemonCenter_Hoenn_2F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_Hoenn_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SLATEPORT_CITY_GYM",
+      "name": "SlateportCity_Gym_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/SlateportCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/SlateportCity_Gym/map.bin"
     }
   ]
 }

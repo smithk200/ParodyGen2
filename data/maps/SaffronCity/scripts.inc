@@ -174,13 +174,13 @@ SaffronCity_Text_Lass2:
 	.string "too.$"
 
 SaffronCity_Text_Sign:
-	.string "SAFFRON CITY\p"
-	.string "Shining, Golden Land of Commerce$"
+	.string "Saffron City\p"
+	.string "Do you know how much saffron costs?\n"
+	.string "1,800 dollars per pound!$"
 
 SaffronCity_Text_GymSign:
-	.string "SAFFRON CITY\n"
-	.string "Pokémon GYM\l"
-	.string "LEADER: SABRINA\p"
+	.string "Saffron City Pokémon Gym\n"
+	.string "Leader: Sabrina\p"
 	.string "The Master of Psychic Pokémon!$"
 
 SaffronCity_Text_FightingDojoSign:

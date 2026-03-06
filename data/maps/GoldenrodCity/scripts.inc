@@ -323,11 +323,11 @@ GoldenrodCity_Text_ElmCall:
 	.string "see it!$"
 
 GoldenrodCity_Text_PokefanM:
-	.string "They built the new RADIO TOWER\n"
+	.string "They built the new Radio Tower\n"
 	.string "to replace the old creaky one.$"
 
 GoldenrodCity_Text_Youngster1:
-	.string "I know there's a new BIKE SHOP,\n"
+	.string "I know there's a new Bike Shop,\n"
 	.string "but I can't find it anywhere.$"
 
 GoldenrodCity_Text_CooltrainerF1:
@@ -340,7 +340,7 @@ GoldenrodCity_Text_CooltrainerF1_Cleared:
 	.string "of Team Rocket? I can't believe it!$"
 
 GoldenrodCity_Text_CooltrainerF2:
-	.string "The RADIO TOWER in GOLDENROD CITY\n"
+	.string "The Radio Tower in Goldenrod City\n"
 	.string "is quite the landmark.\p"
 	.string "They're running a campaign now.\p"
 	.string "They'll give you a shiny new\n"
@@ -365,7 +365,7 @@ GoldenrodCity_Text_Gramps:
 	.string "I can't find anything at all.$"
 
 GoldenrodCity_Text_RocketScout1:
-	.string "So this is the RADIO TOWER…$"
+	.string "So this is the Radio Tower…$"
 
 GoldenrodCity_Text_RocketScout2:
 	.string "What do you want, pest?\n"
@@ -376,7 +376,7 @@ GoldenrodCity_Text_Rocket1:
 	.string "Beat it, kid!$"
 
 GoldenrodCity_Text_Rocket2:
-	.string "Take over the RADIO TOWER…\p"
+	.string "Take over the Radio Tower…\p"
 	.string "What? It's none of your business!$"
 
 GoldenrodCity_Text_Rocket3:
@@ -396,14 +396,14 @@ GoldenrodCity_Text_Rocket6:
 	.string "Team Rocket!$"
 
 GoldenrodCity_Text_StationSign:
-	.string "GOLDENROD CITY STATION$"
+	.string "Goldenrod City Station$"
 
 GoldenrodCity_Text_RadioTowerSign:
-	.string "GOLDENROD CITY RADIO TOWER$"
+	.string "Goldenrod City Radio Tower$"
 
 GoldenrodCity_Text_DeptStoreSign:
 	.string "Full Selection of Pokémon Goods!\p"
-	.string "GOLDENROD CITY DEPT.STORE$"
+	.string "Goldenrod City DEPT.STORE$"
 
 GoldenrodCity_Text_GymSign:
 	.string "Goldenrod City Pokémon Gym\n"
@@ -421,7 +421,7 @@ GoldenrodCity_Text_BikeShopSign:
 
 GoldenrodCity_Text_GameCornerSign:
 	.string "Your Playground!\p"
-	.string "GOLDENROD CITY GAME CORNER$"
+	.string "Goldenrod City GAME CORNER$"
 
 GoldenrodCity_Text_NameRaterSign:
 	.string "Pokémon Renamer\p"
@@ -432,7 +432,6 @@ GoldenrodCity_Text_UndergroundNorthSign:
 
 GoldenrodCity_Text_UndergroundSouthSign:
 	.string "UNDERGROUND ENTRANCE$"
-
 
 GoldenrodCity_Text_FlowerShopSign:
 	.string "Blooming Beautiful FLOWER SHOP$"

@@ -2220,3 +2220,5 @@ Common_Text_ReceivedMon:
 	.include "data/maps/EcruteakCity_Gym2/scripts.inc"
 
 	.include "data/maps/PokemonLeague_BeforeChampion/scripts.inc"
+
+	.include "data/maps/SlateportCity_Gym/scripts.inc"

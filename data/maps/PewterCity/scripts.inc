@@ -107,12 +107,12 @@ PewterCity_EventScript_WelcomeSign::
 	end
 
 PewterCity_Text_Sign:
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "Pewter City\n"
+	.string "A Boring Gray City$"
 
 PewterCity_Text_GymSign:
-	.string "PEWTER CITY Pokémon GYM\n"
-	.string "LEADER: BROCK\p"
+	.string "Pewter City Pokémon Gym\n"
+	.string "Leader: Brock\p"
 	.string "The Rock Solid Pokémon Trainer$"
 
 PewterCity_Text_MuseumSign:
@@ -125,5 +125,5 @@ PewterCity_Text_MtMoonGiftShopSign:
 	.string "MT.MOON GIFT SHOP NOW OPEN!$"
 
 PewterCity_Text_WelcomeSign:
-	.string "WELCOME TO PEWTER CITY!$"
+	.string "Welcome to Pewter City!$"
 

@@ -37,20 +37,20 @@ PalletTown_Text_Teacher:
 
 PalletTown_Text_Fisher:
 	.string "Technology is incredible!\p"
-	.string "You can now trade Pokémon\n"
-	.string "across time like e-mail.$"
+	.string "We now have Wheels to transport\n"
+	.string "people from place to place more\l"
+	.string "quickly now!$"
 
 PalletTown_Text_Sign:
-	.string "PALLET TOWN\p"
-	.string "A Tranquil Setting of Peace\n"
-	.string "& Purity$"
+	.string "Pallet Town\p"
+	.string "The Most Boring Place In Kanto$"
 
 PalletTown_Text_RedsHouseSign:
-	.string "RED'S HOUSE$"
+	.string "Red's House$"
 
 PalletTown_Text_OaksLabSign:
-	.string "OAK Pokémon\n"
-	.string "RESEARCH LAB$"
+	.string "Oak Pokémon\n"
+	.string "Research Lab$"
 
 PalletTown_Text_BluesHouseSign:
-	.string "BLUE'S HOUSE$"
+	.string "Blue's House$"

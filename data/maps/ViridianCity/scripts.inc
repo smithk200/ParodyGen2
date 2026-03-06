@@ -27,6 +27,12 @@ ViridianCity_EventScript_GrampsDoubted::
 	release
 	end
 
+ViridianCity_EventScript_Boy1::
+	msgbox ViridianCity_Text_Boy1, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 VirianCity_EventScript_GymGramps::
 	goto_if_set FLAG_HIDE_CINNABAR_BLUE, VirianCity_EventScript_GymGrampsBlue
 	msgbox ViridianCity_Text_GrampsNearGym, MSGBOX_NPC
@@ -83,14 +89,14 @@ ViridianCity_Text_CoffeeGramps_Doubted:
 	.string "show you a thing or two. Humph!$"
 
 ViridianCity_Text_GrampsNearGym:
-	.string "This GYM didn't have a LEADER\n"
+	.string "This Gym didn't have a Leader\n"
 	.string "until recently.\p"
-	.string "A young man from PALLET became\n"
-	.string "the LEADER, but he's often away.$"
+	.string "A young man from Pallet became\n"
+	.string "the Leader, but he's often away.$"
 
 ViridianCity_Text_GrampsNearGym_BlueReturned:
 	.string "Are you going to battle the\n"
-	.string "LEADER?\p"
+	.string "Leader?\p"
 	.string "Good luck to you. You'll need it.$"
 
 ViridianCity_Text_DreamEaterFisherNew:
@@ -120,21 +126,31 @@ ViridianCity_Text_DreamEaterFisher_GotDreamEater:
 
 ViridianCity_Text_Youngster:
 	.string "I heard that there are many items\n"
-	.string "on the ground in VIRIDIAN FOREST.$"
+	.string "on the ground in Viridian Forest.$"
 
 ViridianCity_Text_Sign:
-	.string "VIRIDIAN CITY\p"
-	.string "The Eternally Green Paradise$"
+	.string "Viridian City\n"
+	.string "The city of Wonder.\p"
+	.string "Wowie Zowie!$"
 
 ViridianCity_Text_GymSign:
-	.string "VIRIDIAN CITY Pokémon GYM\n"
-	.string "LEADER: …\p"
+	.string "Viridian City Pokémon GYM\n"
+	.string "Leader: …\p"
 	.string "The rest of the text is illegible…$"
 
 ViridianCity_Text_WelcomeSign:
-	.string "WELCOME TO VIRIDIAN CITY,\p"
-	.string "THE GATEWAY TO INDIGO PLATEAU$"
+	.string "Welcome to Viridian City,\p"
+	.string "The Gateway to Indigo Plateau$"
 
 ViridianCity_Text_TrainerHouseSign:
-	.string "TRAINER HOUSE\p"
+	.string "Trainer House\p"
 	.string "The Club for Top Trainer Battles$"
+
+ViridianCity_Text_Boy1:
+	.string "I love the game Super Mario Bros.\n"
+	.string "Wonder!\p"
+	.string "I hear that you can transform any\n"
+	.string "level with something called a\l"
+	.string "Wonder Flower.\p"
+	.string "I wonder if you can do that in\n"
+	.string "this town.$"

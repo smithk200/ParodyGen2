@@ -359,7 +359,7 @@ CherrygroveCity_Text_TeacherHaveMapCard:
 	.string "going anywhere is fun.$"
 
 CherrygroveCity_Text_YoungsterNoPokedex:
-	.string "MR. Pokémon's house is still\n"
+	.string "Mr. Pokémon's house is still\n"
 	.string "farther up ahead.$"
 
 CherrygroveCity_Text_YoungsterHavePokedex:
@@ -367,7 +367,7 @@ CherrygroveCity_Text_YoungsterHavePokedex:
 	.string "road.\p"
 	.string "My Pokémon lost. They're a\n"
 	.string "mess! I must take them to a\l"
-	.string "Pokémon CENTER.$"
+	.string "Pokémon Center.$"
 
 CherrygroveCity_Text_MysticWaterGuyBefore:
 	.string "A Pokémon I caught had an\n"
@@ -380,9 +380,10 @@ CherrygroveCity_Text_MysticWaterGuyAfter:
 	.string "Back to fishing for me, then.$"
 
 CherrygroveCity_Text_CitySign:
-	.string "CHERRYGROVE CITY\p"
-	.string "The City of Cute, Fragrant\n"
-	.string "Flowers$"
+	.string "Cherrygrove City\p"
+	.string "The city where cherries are grown\n"
+	.string "in a grove in a field in a hole\l"
+	.string "in the ground.$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
 	.string "GUIDE GENT'S HOUSE$"

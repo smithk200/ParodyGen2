@@ -6811,63 +6811,72 @@ Lickitung
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LTSURGE ===
-Name: Lt. Surge
+=== TRAINER_LEADER_BILL ===
+Name: Bill
 Class: Leader
-Pic: Leader Surge
+Pic: Leader Bill
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Mugshot: Yellow
 
-Electrode @ Focus Band
-Level: 57
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Thunder
-- Rain Dance
-- Thunder Wave
-- Explosion
-
-Magnezone
-Level: 59
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Thunder
-- Reflect
-- Rain Dance
-- Double Edge
-
-Lanturn @ Leftovers
-Level: 58
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+Kilowattrel @ Magnet
+Level: 73
+EVs: 6 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunderbolt
-- Ice Beam
+- Roost
+- Thunder Wave
+- Hurricane
+
+Zebstrika @ Razor Fang
+Level: 74
+EVs: 6 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Thrash
+- Trailblaze
+- Thunder Wave
+
+Mismagius @ Leftovers
+Level: 75
+EVs: 6 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hex
+- Thunderbolt
+- Dazzling Gleam
 - Confuse Ray
 
-Manectric
-Level: 58
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Charge
-- Thunder
-- Thunder Wave
-- Crunch
+Toxtricity @ Air Balloon
+Level: 75
+EVs: 6 HP / 252 SpA / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Technician
+- Overdrive
+- Poison Jab
+- Toxic
+- Trailblaze
 
 Electivire @ Scope Lens
-Level: 59
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Thunderbolt
+Level: 76
+EVs: 6 HP / 252 Atk / 252 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Punch
 - Fire Punch
 - Ice Punch
-- Submission
+- Low Kick
 
-Raichu @ Magnet
-Level: 60
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Thunder
-- Rain Dance
-- Body Slam
-- Surf
+Luxray @ Zap Plate
+Level: 77
+Ability: Intimidate
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Wild Charge
+- Ice Fang
+- Crunch
+- Scary Face
 
 === TRAINER_JUSTIN ===
 Name: Justin
@@ -11008,7 +11017,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Def / 6 Spe
 Tera Type: Fairy
 - Mud Shot
-- Rain Dance
+- Tera Blast
 - Yawn
 - Water Gun
 

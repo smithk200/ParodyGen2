@@ -190,6 +190,17 @@ VermilionCity_Gym_EventScript_FoundSwitchTwo::
 	releaseall
 	end
 
+VermilionCity_Gym_EventScript_TurnedOffBeams::
+	msgbox VermilionCity_Gym_Text_TurnedOffBeams
+	closemessage
+	call VermilionCity_Gym_EventScript_SetBeamsOff
+	special DrawWholeMapView
+	playse SE_UNLOCK
+	waitse
+	setflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES
+	releaseall
+	end
+
 VermilionCity_Gym_EventScript_LocksAlreadyOpen::
 	msgbox VermilionCity_Gym_Text_NopeOnlyTrashHere
 	releaseall
@@ -253,7 +264,7 @@ VermilionCity_Gym_EventScript_Surge::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_VERMILION_GYM, VermilionCity_Gym_EventScript_Surge_Defeated
 	msgbox VermilionGym_Text_LtSurgeIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_LTSURGE, VermilionGym_Text_LtSurgeWinLoss
+	trainerbattle_no_intro TRAINER_LEADER_BILL, VermilionGym_Text_LtSurgeWinLoss
 	message VermilionGym_Text_ReceivedThunderBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -287,70 +298,64 @@ VermilionCity_Gym_EventScript_Surge_Defeated::
 	end
 
 VermilionGym_Text_LtSurgeIntro:
-	.string "SURGE: Hey, you little tyke!\p"
-	.string "I have to hand it to you.\n"
-	.string "It may not be very smart to\l"
-	.string "challenge me, but it takes guts!\p"
-	.string "When it comes to electric\n"
-	.string "Pokémon, I'm number one!\p"
-	.string "I've never lost on the\n"
-	.string "battlefield.\p"
-	.string "I'll zap you just like I did my\n"
-	.string "enemies in war!$"
+	.string "Bill Nye: Hey there, kiddo!\p"
+	.string "They call me the science guy.\p"
+	.string "I love science, especially the\l"
+	.string "of Pokémon battling!\p"
+	.string "So what are you waiting for?\p"
+	.string "SCIENCE RULES!$"
 
 VermilionGym_Text_LtSurgeWinLoss:
-	.string "SURGE: Arrrgh! You are strong!\p"
-	.string "OK, kid. You get THUNDERBADGE!$"
+	.string "My knowledge of science wasn't enough\n"
+	.string "to defeat you…$"
 
 VermilionGym_Text_ReceivedThunderBadge:
-	.string "{PLAYER} received THUNDERBADGE.$"
+	.string "{PLAYER} received Sciencebadge.$"
 
 VermilionGym_Text_ThunderBadgeInfo:
-	.string "SURGE: THUNDERBADGE increases\n"
-	.string "Pokémon's speed.\p"
+	.string "Bill: Sciencebadge is a badge you'll\n"
+	.string "need to challenge the Elite Four.\p"
 	.string "Consider it proof that you\n"
-	.string "defeated me.\p"
-	.string "You wear it proudly, hear?$"
+	.string "defeated me.$"
 
 VermilionGym_Text_LtSurgeTm:
 	.string "And take this TM. It served me\n"
-	.string "well in the war!$"
+	.string "well in my studies!$"
 
 VermilionGym_Text_LtSurgeThunderstone:
 	.string "And take this stone. It has real\n"
 	.string "thunder power!$"
 
-
 VermilionGym_Text_LtSurgePostBattle:
-	.string "SURGE: Hey, kid! Still slugging\n"
+	.string "Bill Nye:: Hey, kid! Still slugging\n"
 	.string "and chugging away?\p"
 	.string "My Pokémon and I are still at it!$"
 
 VermilionGym_Text_SurgeRematch:
-	.string "SURGE: So, you're now KANTO\n"
+	.string "Bill Nye:: So, you're now KANTO\n"
 	.string "CHAMPION!\p"
 	.string "Impressive work, kid!\n"
 	.string "But don't think I'm done!\p"
 	.string "How about we have a go again?$"
 
 VermilionGym_Text_SurgeRematchDefeat:
-	.string "SURGE: Arrrgh! You're still just\n"
+	.string "Bill Nye:: Arrrgh! You're still just\n"
 	.string "as strong!$"
 
 VermilionGym_Text_GentlemanGregorySeen:
-	.string "You're here to defeat LT.SURGE?\p"
+	.string "You're here to defeat Bill Nye?\p"
 	.string "Not if I can help it!$"
 
 VermilionGym_Text_GentlemanGregoryBeaten:
 	.string "Sorry I failed you,\n"
-	.string "LT.SURGE, sir!$"
+	.string "Bill Nye, sir!$"
 
 VermilionGym_Text_GentlemanGregoryAfter:
 	.string "When I was still in the army,\n"
-	.string "LT.SURGE saved my life.$"
+	.string "Bill Nye saved my life.$"
 
 VermilionGym_Text_GuitaristVincentSeen:
-	.string "LT.SURGE recognized my potential\n"
+	.string "Bill Nye recognized my potential\n"
 	.string "with electric Pokémon.\p"
 	.string "Think you can beat me?$"
 
@@ -371,20 +376,23 @@ VermilionGym_Text_JugglerHortonBeaten:
 VermilionGym_Text_JugglerHortonAfter:
 	.string "Don't get too comfortable about\n"
 	.string "beating me…\p"
-	.string "LT.SURGE is tough.$"
+	.string "Bill Nye is tough.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "LT. SURGE has a nickname.\p"
+    .string "Bill Nye has a nickname.\p"
     .string "People refer to him as the\n"
-    .string "Lightning American!\p"
+    .string "Science Guy!\p"
     .string "He's an expert on electric\n"
     .string "Pokémon.\p"
-    .string "FLYING/WATER-type Pokémon match\n"
-    .string "poorly against the ELECTRIC type.\p"
-    .string "Beware of paralysis, too.\p"
-    .string "LT. SURGE is very cautious.\p"
+    .string "Flying or Water-type Pokémon\n"
+    .string "match poorly against the Electric\l"
+	.string "type.\p"
+    .string "Beware of paralysis, too.\n"
+	.string "Bill Nye loves to use that on his\l"
+	.string "opponents.\p"
+    .string "Bill Nye is very cautious.\p"
     .string "He's locked himself in, so it won't\n"
     .string "be easy getting to him.$"
 
@@ -394,17 +402,17 @@ VermilionCity_Gym_Text_GymGuyPostVictory::
 	.string "It sure made me nervous.$"
 
 VermilionCity_Gym_Text_GymStatue::
-    .string "VERMILION Pokémon GYM\n"
-    .string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
-	.string "BLUE, RED$"
-
+    .string "Vermilion Pokémon Gym\n"
+    .string "Leader: Bill Nye\p"
+    .string "Winning Trainers:\n"
+    .string "Blue, Red, Fry, Silver$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
-    .string "VERMILION Pokémon GYM\n"
-    .string "LEADER: LT. SURGE\p"
-    .string "WINNING TRAINERS:\n"
-    .string "BLUE, RED, {PLAYER}$"
+    .string "Vermilion Pokémon Gym\n"
+    .string "Leader: Bill Nye\p"
+    .string "Winning Trainers:\n"
+    .string "Blue, Red, Fry, Silver,\l"
+	.string "{PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::
     .string "Nope!\n"
@@ -425,3 +433,6 @@ VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
     .string "Hey!\n"
     .string "The electric locks were reset!$"
 
+VermilionCity_Gym_Text_TurnedOffBeams:
+	.string "{PLAYER} turned off the switch\n"
+	.string "controlling the electric locks!$"
