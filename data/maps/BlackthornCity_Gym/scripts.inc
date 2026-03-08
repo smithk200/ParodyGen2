@@ -338,7 +338,7 @@ BlackthornGym_Text_CooltrainermCodyBeatenText:
 BlackthornGym_Text_CooltrainermCodyAfterBattleText:
     .string "Members of our dragon-user clan\n"
     .string "can use dragon Pokémon only after\l"
-    .string "our MASTER allows it.$"
+    .string "our Master allows it.$"
 
 BlackthornGym_Text_CooltrainerfFranSeenText:
     .string "I can't allow a nameless trainer\n"
@@ -384,7 +384,7 @@ BlackthornGym_Text_CooltrainerfLolaBeatenText:
     .string "Way to go!$"
 
 BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
-    .string "Dragons are weak against DRAGON-\n"
+    .string "Dragons are weak against Dragon-\n"
     .string "type moves.$"
 
 BlackthornGym_EventScript_GymGuy::

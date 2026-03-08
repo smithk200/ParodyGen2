@@ -52,7 +52,7 @@ PokemonLeague_KogasRoom_EventScript_KogaDefeated::
 	end
 
 PokemonLeague_KogasRoom_Text_RematchBefore:
-    .string "KOGA: Fwahahahaha!\p"
+    .string "Koga: Fwahahahaha!\p"
     .string "You return, brave challenger.\p"
     .string "My ninja skills have sharpened.\p"
     .string "New sinister traps await you.\p"
@@ -83,7 +83,7 @@ PokemonLeague_KogasRoom_Text_Beaten:
 PokemonLeague_KogasRoom_Text_Defeat:
     .string "Even God couldn't stop me from\n"
     .string "defeating you…\p"
-    .string "Well, this is a sign from the LORD\n"
+    .string "Well, this is a sign from the Lord\n"
     .string "that I need to train harder!\p"
     .string "Diddly-diddly…\n"
     .string "Diddly, diddly…$"

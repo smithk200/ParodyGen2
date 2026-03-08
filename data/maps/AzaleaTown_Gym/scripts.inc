@@ -688,11 +688,11 @@ AzaleaTown_Gym_EventScript_Statue2::
 	end
 
 AzaleaTown_Gym_Text_GymStatue:
-	.string "AZALEA Pokémon GYM$"
+	.string "Azalea Pokémon Gym$"
 
 AzaleaTown_Gym_Text_GymStatueCertified:
-	.string "AZALEA TOWN Pokémon GYM\p"
-	.string "Brie'S CERTIFIED TRAINERS:\n"
+	.string "Azalea Town Pokémon Gym\p"
+	.string "Brie'S Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 AzaleaTown_Gym_Text_BugsyIntro:
@@ -704,21 +704,21 @@ AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "Well, you beat me!$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} received HIVEBADGE.$"
+	.string "{PLAYER} received Hivebadge.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
 	.string "Do you know the benefits\n"
-	.string "of HIVEBADGE?\p"
+	.string "of Hivebadge?\p"
 	.string "If you have it, Pokémon up\n"
 	.string "to L30 will obey you,\l"
 	.string "even traded ones.\p"
-	.string "Pokémon that know CUT will be able\n"
+	.string "Pokémon that know Cut will be able\n"
 	.string "to use it outside of battle too.\p"
 	.string "Here, I also want you to\n"
 	.string "have this.$"
 
 AzaleaTown_Gym_Text_FuryCutterSpeech:
-	.string "TM09 contains BULLET SEED.\p"
+	.string "Tm09 contains Bullet Seed.\p"
 	.string "It shoots a torrent of seeds\n"
 	.string "between 2 and 5 times every turn.\p"
 	.string "So even though the power is 25, it\n"
@@ -732,7 +732,7 @@ AzaleaTown_Gym_Text_BugsyAdvice:
 	.string "Study your favorites thoroughly.$"
 
 AzaleaTown_Gym_Text_BugsyRematch:
-	.string "Wow, you're the JOHTO CHAMPION now!\p"
+	.string "Wow, you're the Johto Champion now!\p"
 	.string "Your skills are truly impressive!\p"
 	.string "I've been busy with my research.\p"
 	.string "I'm ready to show you my new\n"
@@ -767,7 +767,7 @@ AzaleaTown_Gym_Text_BugCatcherAlAfter:
 	.string "I don't know why…$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshSeen:
-	.string "You saved all the SLOWPOKE?\n"
+	.string "You saved all the Slowpoke?\n"
 	.string "Whew, you're mighty!\p"
 	.string "But my grown-up Pokémon are\n"
 	.string "pretty tough too!$"
@@ -780,36 +780,36 @@ AzaleaTown_Gym_Text_BugCatcherJoshAfter:
 	.string "better moves…$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Seen:
-	.string "AMY: Hi! Are you challenging\n"
-	.string "the LEADER? No way!$"
+	.string "Amy: Hi! Are you challenging\n"
+	.string "the Leader? No way!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Beaten:
-	.string "AMY & MAY: Oh, double\n"
+	.string "Amy & May: Oh, double\n"
 	.string "goodness!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1After:
-	.string "AMY: You're really strong!\p"
+	.string "Amy: You're really strong!\p"
 	.string "But Brie's even stronger!\n"
-	.string "His SCYTHER's CUT almost\l"
+	.string "His Scyther's Cut almost\l"
 	.string "always makes critical hits!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen:
-	.string "MAY: You want to see the\n"
-	.string "LEADER? Good luck!\p"
+	.string "May: You want to see the\n"
+	.string "Leader? Good luck!\p"
 	.string "Brie is so strong!\n"
-	.string "His SCYTHER's CUT always\l"
+	.string "His Scyther's Cut always\l"
 	.string "seems to crit!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Beaten:
-	.string "AMY & MAY: Oh, double\n"
+	.string "Amy & May: Oh, double\n"
 	.string "goodness!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2After:
-	.string "MAY: Our bug Pokémon lost!\n"
+	.string "May: Our bug Pokémon lost!\n"
 	.string "Oh, what a shame.\p"
 	.string "Brie's won't lose though!\p"
-	.string "His PINECO makes short work\n"
-	.string "of ROCK-type Pokémon!$"
+	.string "His Pineco makes short work\n"
+	.string "of Rock-type Pokémon!$"
 
 AzaleaTown_Gym_Text_GymGuide:
 	.string "Yo, challenger!\p"

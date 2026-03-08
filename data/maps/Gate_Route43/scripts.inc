@@ -91,7 +91,7 @@ Gate_Route43_Rocket_Text_KickOut:
 Gate_Route43_Rocket_Text_MakingABundle:
     .string "He-he-he. We're making a bundle.\p"
     .string "Everyone wants to see what's going\n"
-    .string "on up at LAKE OF RAGE.$"
+    .string "on up at Lake Of Rage.$"
 
 Route43Gate_Text_OfficerFoundTM:
     .string "I got chased from my post by these\n"
@@ -101,7 +101,7 @@ Route43Gate_Text_OfficerFoundTM:
     .string "you take it away?$"
 
 Gate_Route43_Text_ReceivedTM30:
-    .string "{PLAYER} received TM36.$"
+    .string "{PLAYER} received Tm36.$"
 
 Gate_Route43_Text_OfficerAvoidGrass:
     .string "Use this gate to avoid walking in\n"

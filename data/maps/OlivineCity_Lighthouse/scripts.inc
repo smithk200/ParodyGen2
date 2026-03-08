@@ -41,14 +41,14 @@ OlivineLighthouse_EventScript_1FPokefanF::
 	end
 
 OlivineLighthouse_Text_1FSailor:
-	.string "People train at this LIGHTHOUSE.\p"
+	.string "People train at this Lighthouse.\p"
 	.string "It's not easy to climb with all\n"
 	.string "the trainers waiting inside.$"
 
 OlivineLighthouse_Text_1FPokefanF:
 	.string "In the past, Pokémon used to light\n"
-	.string "the sea around OLIVINE at night.\p"
-	.string "The LIGHTHOUSE was built in honor\n"
+	.string "the sea around Olivine at night.\p"
+	.string "The Lighthouse was built in honor\n"
 	.string "of those noble Pokémon.$"
 
 @2nd floor==============================================================================================================================
@@ -85,7 +85,7 @@ OlivineLighthouse_Text_GentlemanAlfredBeaten:
 
 OlivineLighthouse_Text_GentlemanAlfredAfter:
 	.string "Up top is a Pokémon that keeps\n"
-	.string "the LIGHTHOUSE lit.\p"
+	.string "the Lighthouse lit.\p"
 	.string "But I hear that it's hurt now,\n"
 	.string "and can't be cured normally.$"
 
@@ -170,7 +170,7 @@ OlivineLighthouse_Text_SailorKentAfter:
 	.string "a good Pharmacy in Cianwood.$"
 
 OlivineLighthouse_Text_LassConnieSeen:
-	.string "Matt is this city's GYM LEADER.\p"
+	.string "Matt is this city's Gym Leader.\p"
 	.string "I want to get his autograph.\p"
 	.string "Nobody had better get in my way!$"
 
@@ -217,9 +217,9 @@ OlivineLighthouse_Text_BirdKeeperDenisBeaten:
 	.string "Oops… They crashed…$"
 
 OlivineLighthouse_Text_BirdKeeperDenisAfter:
-	.string "My Pokémon learned how to use FLY in\n"
-	.string "CIANWOOD.\p"
-	.string "Well, since I'm a loser, I'll FLY\n"
+	.string "My Pokémon learned how to use Fly in\n"
+	.string "Cianwood.\p"
+	.string "Well, since I'm a loser, I'll Fly\n"
 	.string "across the sea…$"
 
 @6th floor==============================================================================================================================

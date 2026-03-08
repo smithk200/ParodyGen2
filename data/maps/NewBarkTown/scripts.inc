@@ -230,15 +230,15 @@ NewBarkTown_Text_Door:
 	.string "The door is locked.$"
 
 NewBarkTown_Text_Wooper:
-	.string "WOOPER: Woooooop.$"
+	.string "Wooper: Woooooop.$"
 
 NewBarkTown_Text_FatManState2:
-	.string "Wow, your POKéGEAR is impressive!\n"
+	.string "Wow, your PokéGear is impressive!\n"
 	.string "Did your mom get it for you?$"
 
 NewBarkTown_Text_FatManState3:
 	.string "Yo, {PLAYER}!\p"
-	.string "I hear PROF.ELM discovered\n"
+	.string "I hear Prof.Elm discovered\n"
 	.string "some new Pokémon.$"
 
 NewBarkTown_Text_LassState2:
@@ -258,7 +258,7 @@ NewBarkTown_Text_LassState4:
 	.string "you are leaving.$"
 
 NewBarkTown_Text_LassState5:
-	.string "Call your mom on your POKéGEAR\n"
+	.string "Call your mom on your PokéGear\n"
 	.string "to let her know how you're doing.$\p"
 
 NewBarkTown_Text_Silver1:

@@ -340,7 +340,7 @@ RadioTower1F_Text_WrongAnswer:
     .string "Please try again!$"
 
 RadioTower1F_Text_HitYouWithARuler:
-	.string "REE\p"
+	.string "Ree\p"
 	.string "(hits you with a ruler)\p"
 	.string "You'll have to start over again,\n"
 	.string "sonny!$"
@@ -350,7 +350,7 @@ RadioTower1F_Text_DeclineQuiz:
     .string "change your mind.$"
 
 RadioTower1F_Text_Lass:
-    .string "Ben is a fabulous DJ.\p"
+    .string "Ben is a fabulous Dj.\p"
     .string "His sweet voice makes me melt!$"
 
 RadioTower1F_Text_Youngster:
@@ -374,11 +374,11 @@ RadioTower1F_Text_GruntM3After:
     .string "warn the others…$"
 
 RadioTower1F_Text_Directory:
-    .string "1F Reception\n"
-    .string "2F Sales\p"
-    .string "3F Personnel\n"
-    .string "4F Production\p"
-    .string "5F Director's Office$"
+    .string "1f Reception\n"
+    .string "2f Sales\p"
+    .string "3f Personnel\n"
+    .string "4f Production\p"
+    .string "5f Director's Office$"
 
 
 GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
@@ -489,12 +489,12 @@ GoldenrodCity_RadioTower_1F_EventScript_GivePrizeFromEarlier::
 	end
 
 GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket:
-	.string "This is the Pokémon LOTTERY CORNER.\p"
-	.string "If the LOTO TICKET's number matches\n"
-	.string "the ID number of any of your Pokémon,\l"
+	.string "This is the Pokémon Lottery Corner.\p"
+	.string "If the Loto Ticket's number matches\n"
+	.string "the Id number of any of your Pokémon,\l"
 	.string "you will receive a fabulous gift.\p"
 	.string "Would you like to draw a Pokémon\n"
-	.string "LOTO TICKET?$"
+	.string "Loto Ticket?$"
 
 GoldenrodCity_RadioTower_1F_Text_ComeBackTomorrow:
 	.string "Please come back tomorrow.$"
@@ -503,26 +503,26 @@ GoldenrodCity_RadioTower_1F_Text_PleaseVisitAgain:
 	.string "Please do visit again.$"
 
 GoldenrodCity_RadioTower_1F_Text_PleasePickTicket:
-	.string "Please pick a LOTO TICKET.\n"
+	.string "Please pick a Loto Ticket.\n"
 	.string "…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}$"
 
 GoldenrodCity_RadioTower_1F_Text_TicketNumberIsXPleaseWait:
-	.string "The LOTO TICKET number is {STR_VAR_1}.\p"
+	.string "The Loto Ticket number is {STR_VAR_1}.\p"
 	.string "I need to run a check on this number\n"
 	.string "to see if it matches any of your\l"
-	.string "Pokémon's ID numbers. Please wait.$"
+	.string "Pokémon's Id numbers. Please wait.$"
 
 GoldenrodCity_RadioTower_1F_Text_TicketMatchesPartyMon:
 	.string "Congratulations!\p"
-	.string "The ID number of your team's\n"
+	.string "The Id number of your team's\n"
 	.string "{STR_VAR_1} matches your\l"
-	.string "LOTO TICKET's number!$"
+	.string "Loto Ticket's number!$"
 
 GoldenrodCity_RadioTower_1F_Text_TicketMatchesPCMon:
 	.string "Congratulations!\p"
-	.string "The ID number of your PC-boxed\n"
+	.string "The Id number of your Pc-boxed\n"
 	.string "{STR_VAR_1} matches your\l"
-	.string "LOTO TICKET's number!$"
+	.string "Loto Ticket's number!$"
 
 GoldenrodCity_RadioTower_1F_Text_NoNumbersMatched:
 	.string "I'm sorry.\n"
@@ -552,7 +552,7 @@ GoldenrodCity_RadioTower_1F_Text_AllFiveDigitsMatched:
 GoldenrodCity_RadioTower_1F_Text_NoRoomForThis:
 	.string "Oh?\n"
 	.string "You seem to have no room for this.\p"
-	.string "Please make room in your BAG and\n"
+	.string "Please make room in your Bag and\n"
 	.string "let me know.$"
 
 GoldenrodCity_RadioTower_1F_Text_PrizeWeveBeenHolding:

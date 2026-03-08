@@ -25,8 +25,8 @@ DragonsDen_EventScript_ClairRematch::
 DragonsDen_Text_Clair:
     .string "{PLAYER}… So you're here.\p"
 	.string "If you think you can keep up,\n"
-	.string "with me, come to the FIGHTING\l"
-	.string "DOJO in SAFFRON.$"
+	.string "with me, come to the Fighting\l"
+	.string "Dojo in Saffron.$"
 
 DragonsDen_Cavern_Trigger_ClairLeft::
 	lock 
@@ -129,7 +129,7 @@ DragonsDen_Cavern_Movement_ClairLeaveRight:
 	step_end
 
 DragonsDen_Cavern_Text_ClairGiveDragonclaw:
-    .string "Clair: WAIT!\p"
+    .string "Clair: Wait!\p"
 	.string "Sorry for not giving this\n"
 	.string "to you earlier.\p"
     .string "Here, take this as my apology.$"
@@ -222,8 +222,8 @@ DragonsDen_Cavern_Text_CooltrainermDarinBeaten:
     .string "S-strong!$"
 
 DragonsDen_Cavern_Text_CooltrainermDarinAfter:
-    .string "The SHRINE ahead is home to the\n"
-    .string "MASTER of our dragon-user clan.\p"
+    .string "The Shrine ahead is home to the\n"
+    .string "Master of our dragon-user clan.\p"
     .string "You're not allowed to just go in!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraSeen:
@@ -234,10 +234,10 @@ DragonsDen_Cavern_Text_CooltrainerfCaraBeaten:
 
 DragonsDen_Cavern_Text_CooltrainerfCaraAfter:
     .string "Soon I'm going to get permission\n"
-    .string "from our MASTER to use dragons.\p"
+    .string "from our Master to use dragons.\p"
     .string "When I do, I'm going to become an\n"
     .string "admirable dragon trainer and gain\l"
-    .string "our MASTER's approval.$"
+    .string "our Master's approval.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1Seen:
     .string "It's a stranger we don't know.$"
@@ -257,4 +257,4 @@ DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten:
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2After:
     .string "We'll tell on you.\p"
-    .string "MASTER will be angry with you.$"
+    .string "Master will be angry with you.$"

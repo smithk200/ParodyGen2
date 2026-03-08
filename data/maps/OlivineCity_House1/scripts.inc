@@ -65,4 +65,4 @@ OlivineCity_House1_Text_YouWontTradeMe:
 	.string "You don't want to trade? Aww...$"
 
 OlivineCity_House1_Text_After:
-	.string "Hi, how's my old VOLTORB doing?$"
+	.string "Hi, how's my old Voltorb doing?$"

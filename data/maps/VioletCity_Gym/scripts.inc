@@ -55,7 +55,7 @@ VioletCity_Gym_EventScript_Falkner_Defeated::
 	end
 
 VioletGym_Text_Falkner_Intro:
-	.string "WOO-WEE!\p"
+	.string "Woo-Wee!\p"
 	.string "I'm Damian, the Gym Leader\n"
 	.string "of this hick town.\p"
 	.string "I've been in kitchens ever since\n"
@@ -89,9 +89,9 @@ VioletGym_Text_Falkner_BadgeExplain:
 	.string "Here, take this too.$"
 
 VioletGym_Text_Falkner_TMExplain:
-	.string "By using a TM, a Pokémon will\n"
+	.string "By using a Tm, a Pokémon will\n"
 	.string "instantly learn a new move.\p"
-	.string "TM32 contains Double Team.\p"
+	.string "Tm32 contains Double Team.\p"
 	.string "It increase a Pokémon's evasion.\p"
 	.string "In other words, your Pokémon\n"
 	.string "will be shit to hit.$"

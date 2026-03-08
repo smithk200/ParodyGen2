@@ -177,7 +177,7 @@ MahoganyTown_Gym_Text_GlacierBadgeSpeech:
     .string "And take this too, I guess…$"
 
 MahoganyTown_Gym_Text_HailSpeech:
-    .string "That TM contains HAIL.\p"
+    .string "That Tm contains Hail.\p"
     .string "It inflicts damage every\n"
     .string "turn for 5 turns.\p"
     .string "It demonstrates the harshness\n"
@@ -199,8 +199,8 @@ MahoganyTown_Gym_Text_ClayRematch:
 MahoganyTown_Gym_Text_ClayRematchDefeat:
     .string "Well then…\n"
     .string "Stinkin' dead-end job!\p"
-    .string "AAGH!\n"
-    .string "I CAN'T TAKE IT ANYMORE!$"
+    .string "Aagh!\n"
+    .string "I Can'T Take It Anymore!$"
 
 MahoganyTown_Gym_Text_Guide:
     .string "Clay is a veteran who has\n"
@@ -239,14 +239,14 @@ MahoganyTown_Gym_Text_BoarderBradBeaten:
     .string "Do you see how serious we are?$"
 
 MahoganyTown_Gym_Text_BoarderBradAfter:
-    .string "Wait, this gym's floor is ICY?\p"
+    .string "Wait, this gym's floor is Icy?\p"
     .string "Who knew?$"
 
 MahoganyTown_Gym_Text_BoarderDouglasSeen:
     .string "I know Clay's secret.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasBeaten:
-    .string "OK. I'll tell you Clay's secret.$"
+    .string "Ok. I'll tell you Clay's secret.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasAfter:
     .string "The secret…\p"

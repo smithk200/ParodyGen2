@@ -125,26 +125,26 @@ EcruteakCity_Movement_Silver2:
 	step_end
 
 EcruteakCity_Text_Silver1:
-	.string "THUD!!$"
+	.string "Thud!!$"
 
 EcruteakCity_Text_Silver2:
-	.string "SILVER: How...? How is this\n"
+	.string "Silver: How...? How is this\n"
 	.string "possible? How can I lose to mere\l"
-	.string "KIMONO GIRLS...?$"
+	.string "Kimono Girls...?$"
 
 EcruteakCity_Text_Silver3:
-	.string "SILVER: You were watching me,\n"
+	.string "Silver: You were watching me,\n"
 	.string "{PLAYER}...\p"
 	.string "Yeah, that's right!\p"
 	.string "I never thought defeating five\n"
-	.string "KIMONO GIRLS would be so hard...\p"
+	.string "Kimono Girls would be so hard...\p"
 	.string "I got beaten to a pulp...\p"
 	.string "...\p"
 	.string "You must have come here for the\n"
 	.string "same reason, right?\p"
 	.string "Don't get cocky just because you\n"
-	.string "defeated TEAM ROCKET!\p"
-	.string "These KIMONO GIRLS are insanely\n"
+	.string "defeated Team Rocket!\p"
+	.string "These Kimono Girls are insanely\n"
 	.string "strong.\p"
 	.string "See if you can defeat them.\p"
 	.string "But I'm not going back, I don't\n"
@@ -288,35 +288,35 @@ EcruteakCity_EventScript_Item_RareCandy::
 	end
 
 EcruteakCity_Text_Eevee:
-	.string "EEVEE: Veee!$"
+	.string "Eevee: Veee!$"
 
 EcruteakCity_Text_Vulpix:
-	.string "VULPIX: Vullll Pix!$"
+	.string "Vulpix: Vullll Pix!$"
 
 
 EcruteakCity_Text_UnusedMissingDaughter:
 	.string "Oh, no. Oh, no…\p"
 	.string "My daughter is missing.\p"
 	.string "No… She couldn't have gone to the\n"
-	.string "BURNED TOWER.\p"
+	.string "Burned Tower.\p"
 	.string "I told her not to go near it…\p"
 	.string "People seem to disappear there…\p"
 	.string "Oh, what should I do…?$"
 
 EcruteakCity_Text_Gramps1:
-	.string "ECRUTEAK used to have two towers:\n"
+	.string "Ecruteak used to have two towers:\n"
 	.string "one each in the east and west.$"
 
 EcruteakCity_Text_Gramps2:
 	.string "Ah, child. Have you learned to\n"
-	.string "dance like the KIMONO GIRLS?\p"
-	.string "If you go to their DANCE THEATER,\n"
+	.string "dance like the Kimono Girls?\p"
+	.string "If you go to their Dance Theater,\n"
 	.string "an odd old man will give you\l"
 	.string "something nice, I hear.$"
 
 EcruteakCity_Text_Lass1:
-	.string "I'm going to practice at the DANCE\n"
-	.string "THEATER. Care to join me?$"
+	.string "I'm going to practice at the Dance\n"
+	.string "Theater. Care to join me?$"
 
 EcruteakCity_Text_Lass2:
 	.string "The tower that used to be here…\p"
@@ -329,21 +329,21 @@ EcruteakCity_Text_Lass2_ReleasedBeasts:
 	.string "directions. What were they?$"
 
 EcruteakCity_Text_Fisher:
-	.string "I heard a rumor about OLIVINE\n"
-	.string "LIGHTHOUSE.\p"
+	.string "I heard a rumor about Olivine\n"
+	.string "Lighthouse.\p"
 	.string "The Pokémon that serves as the\n"
 	.string "beacon fell ill. Sounds like they\l"
 	.string "are in trouble.$"
 
 EcruteakCity_Text_Fisher_JasmineReturned:
-	.string "The Pokémon at OLIVINE LIGHTHOUSE\n"
+	.string "The Pokémon at Olivine Lighthouse\n"
 	.string "has been cured.\p"
 	.string "Boats can safely sail out to sea at\n"
 	.string "night again.$"
 
 EcruteakCity_Text_Youngster:
 	.string "I hear Pokémon are rampaging at the\n"
-	.string "LAKE OF RAGE. I'd like to see that.$"
+	.string "Lake Of Rage. I'd like to see that.$"
 
 EcruteakCity_Text_Gramps3:
 	.string "In the distant past…\p"
@@ -383,10 +383,10 @@ EcruteakCity_Text_GymSign:
 	.string "The other's a wimp.$"
 
 EcruteakCity_Text_DanceTheaterSign:
-	.string "ECRUTEAK DANCE THEATER$"
+	.string "Ecruteak Dance Theater$"
 
 EcruteakCity_Text_BurnedTowerSign:
-	.string "BURNED TOWER\p"
+	.string "Burned Tower\p"
 	.string "It was destroyed by a mysterious\n"
 	.string "fire.\p"
 	.string "Please stay away, as it is unsafe.$"

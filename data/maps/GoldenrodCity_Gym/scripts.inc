@@ -189,9 +189,9 @@ GoldenrodCity_Gym_Text_WhitneyYouMeanie:
 
 GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "…Sniff…\p"
-    .string "What? What do you want? A BADGE?\p"
+    .string "What? What do you want? A Badge?\p"
     .string "Oh, right. I forgot. Here's\n"
-    .string "PLAINBADGE.$"
+    .string "Plainbadge.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
     .string "{PLAYER} received Genericbadge.$"
@@ -206,7 +206,7 @@ GoldenrodCity_Gym_Text_WhitneyPlainBadge:
 	.string "You've earned it.$"
 
 GoldenrodCity_Gym_Text_NormanFacade:
-    .string "This is the TM Facade.\p"
+    .string "This is the Tm Facade.\p"
 	.string "It doubles in power if your\n"
 	.string "Pokémon is burned, poisoned,\l"
 	.string "or paralyzed. Try to put it\l"
@@ -217,7 +217,7 @@ GoldenrodCity_Gym_Text_WhitneyGoodCry:
 
 GoldenrodCity_Gym_Text_WhitneyRematch:
     .string "Hi! It's you!\p"
-    .string "Wow, JOHTO CHAMPION now?\p"
+    .string "Wow, Johto Champion now?\p"
     .string "You really are amazing!\p"
     .string "I want to see how strong you are.\p"
     .string "Want to have a rematch with me?$"
@@ -252,8 +252,8 @@ GoldenrodCity_Gym_Text_LassBridgetAfter:
     .string "there, just like last time!$"
 
 GoldenrodCity_Gym_Text_BridgetWhitneyCries:
-    .string "Oh, no. You made WHITNEY cry.\p"
-    .string "It's OK. She'll stop soon. She\n"
+    .string "Oh, no. You made Whitney cry.\p"
+    .string "It's Ok. She'll stop soon. She\n"
     .string "always cries when she loses.$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaSeen:
@@ -279,16 +279,16 @@ GoldenrodCity_Gym_Text_BeautySamanthaAfter:
     .string "any type…$"
 
 GoldenrodCity_Gym_Text_GymGuide:
-    .string "Yo! CHAMP in making!\p"
-    .string "This GYM is home to Norman, the\n"
-    .string "master of NORMAL-type Pokémon.\p"
+    .string "Yo! Champ in making!\p"
+    .string "This Gym is home to Norman, the\n"
+    .string "master of Normal-type Pokémon.\p"
     .string "Be cautious of his Slaking, it can\n"
 	.string "really pack a powerful punch!\p"
     .string "Some of the Pokémon in this gym\n"
     .string "have the newly discovered Fairy\l"
     .string "type as well.\p"
-    .string "Check ROUTE 34 if you need a\n"
-    .string "FIGHTING-type or POISON-type.$"
+    .string "Check Route 34 if you need a\n"
+    .string "Fighting-type or Poison-type.$"
 
 GoldenrodCity_Gym_Text_GymGuideWin:
     .string "You won? Great! I was busy admiring\n"

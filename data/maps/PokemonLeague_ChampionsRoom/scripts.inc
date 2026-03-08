@@ -320,7 +320,7 @@ PokemonLeague_ChampionsRoom_Movement_MaryLeft:
 
 PokemonLeague_ChampionsRoom_Text_RematchBattleIntro:
     .string "Lance: Welcome back!\p"
-    .string "You've proven yourself in JOHTO,\p"
+    .string "You've proven yourself in Johto,\p"
     .string "acquiring all 8 badges and even\n"
     .string "besting me once.\p"
     .string "But now, you're in the big\n"
@@ -350,7 +350,7 @@ PokemonLeague_ChampionsRoom_Text_BattleIntro:
     .string "the stronger of the two of us.\p"
     .string "As the most powerful trainer and as\n"
     .string "the Pokémon League Champion…\p"
-    .string "I, LANCE the dragon master, accept\n"
+    .string "I, Lance the dragon master, accept\n"
     .string "your challenge!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleWin:
@@ -359,7 +359,7 @@ PokemonLeague_ChampionsRoom_Text_BattleWin:
     .string "I'm not angry that I lost. In fact,\n"
     .string "I feel happy.\p"
     .string "Happy that I witnessed the rise\n"
-    .string "of a great new CHAMPION!$"
+    .string "of a great new Champion!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleAfter:
     .string "…Whew.\p"
@@ -372,13 +372,13 @@ PokemonLeague_ChampionsRoom_Text_BattleAfter:
 
 PokemonLeague_ChampionsRoom_Text_MaryOhNoOak:
     .string "Mary: Oh, no! It's all over!\p"
-    .string "PROF.OAK, if you weren't so slow…$"
+    .string "Prof.Oak, if you weren't so slow…$"
 
 PokemonLeague_ChampionsRoom_Text_OakCongratulations:
     .string "Prof. Oak: Ah, {PLAYER}!\p"
     .string "It's been a long while.\p"
     .string "You certainly look more impressive.\p"
-    .string "Your conquest of the JOHTO LEAGUE\n"
+    .string "Your conquest of the Johto League\n"
     .string "is just fantastic!\p"
     .string "Your dedication, trust and love for\n"
     .string "your Pokémon made this happen.\p"
@@ -390,11 +390,11 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations:
 PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations:
     .string "Prof. Oak: Ah, {PLAYER}!\p"
     .string "I've been following your progress\n"
-    .string "since PROF. ELM sent you on your\l"
+    .string "since Prof. Elm sent you on your\l"
     .string "way.\p"
     .string "You've certainly become more\n"
     .string "impressive.\p"
-    .string "Conquering both the JOHTO and now\n"
+    .string "Conquering both the Johto and now\n"
     .string "the Kanto League is no small feat.\p"
     .string "You've truly outdone yourself!\p"
     .string "It's clear that your Pokémon trust\n"
@@ -429,4 +429,4 @@ PokemonLeague_ChampionsRoom_Text_MaryNoInterview:
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview:
     .string "Mary: Come on! You can't blow off\n"
-    .string "the interview AGAIN!$"
+    .string "the interview Again!$"

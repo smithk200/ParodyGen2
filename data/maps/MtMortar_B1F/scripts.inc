@@ -52,7 +52,7 @@ MountMortar4_EventScript_KiyoAfter::
 
 MountMortar4_Text_KiyoIntro:
 	.string "Hey!\p"
-	.string "I am the KARATE KING!\n"
+	.string "I am the Karate King!\n"
 	.string "I train alone here in the dark!\p"
 	.string "You! Battle with me!\n"
 	.string "Hwaaarggh!$"
@@ -72,10 +72,10 @@ MountMortar4_Text_KiyoTyrogueReward:
 	.string "Pokémon.$"
 
 MountMortar4_Text_ReceiveTyrogue:
-	.string "{PLAYER} received TYROGUE.$"
+	.string "{PLAYER} received Tyrogue.$"
 
 MountMortar4_Text_KiyoGotTyrogue:
-	.string "TYROGUE is a FIGHTING-type.\p"
+	.string "Tyrogue is a Fighting-type.\p"
 	.string "It evolves into a tougher\n"
 	.string "Pokémon.\p"
 	.string "Keep up the hard work.\n"

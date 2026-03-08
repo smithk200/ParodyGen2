@@ -113,15 +113,15 @@ ViridianCity_Text_DreamEaterFisher_GotTM::
 ViridianCity_Text_DreamEaterFisher:
 	.string "Yawn!\p"
 	.string "I must have dozed off in the sun.\p"
-	.string "…I had this dream about a DROWZEE\n"
+	.string "…I had this dream about a Drowzee\n"
 	.string "eating my dream. Weird, huh?\p"
 	.string "Huh? What's this?\p"
-	.string "Where did this TM come from?\p"
+	.string "Where did this Tm come from?\p"
 	.string "This is spooky! Here, you can have\n"
-	.string "this TM.$"
+	.string "this Tm.$"
 
 ViridianCity_Text_DreamEaterFisher_GotDreamEater:
-	.string "TM42 contains DREAM EATER…\p"
+	.string "Tm42 contains Dream Eater…\p"
 	.string "…Zzzzz…$"
 
 ViridianCity_Text_Youngster:
@@ -134,7 +134,7 @@ ViridianCity_Text_Sign:
 	.string "Wowie Zowie!$"
 
 ViridianCity_Text_GymSign:
-	.string "Viridian City Pokémon GYM\n"
+	.string "Viridian City Pokémon Gym\n"
 	.string "Leader: …\p"
 	.string "The rest of the text is illegible…$"
 

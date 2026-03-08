@@ -45,7 +45,7 @@ SproutTower_1F_EventScript_ItemParalyzeHeal::
 SproutTower_Text_SageChow_Seen:
 	.string "We stand guard in this tower.\p"
 	.string "Here, we express our gratitude\n"
-	.string "to honor all POKéMON.$"
+	.string "to honor all PokéMon.$"
 
 SproutTower_Text_SageChow_Beaten:
 	.string "Th-Thank you!$"
@@ -58,14 +58,14 @@ SproutTower_Text_SageChow_AfterBattle:
 
 SproutTower_Text_1F_Sage1:
 	.string "Only if you reach the top will\n"
-	.string "you obtain an HM.$"
+	.string "you obtain an Hm.$"
 
 SproutTower_Text_1F_Sage2:
-	.string "SPROUT TOWER was built long ago\n"
-	.string "as a place for POKéMON training.$"
+	.string "Sprout Tower was built long ago\n"
+	.string "as a place for PokéMon training.$"
 
 SproutTower_Text_1F_Granny:
-	.string "A BELLSPROUT over 100 feet\n"
+	.string "A Bellsprout over 100 feet\n"
 	.string "tall…\p"
 	.string "People say that it became the\n"
 	.string "center pillar here.$"
@@ -75,5 +75,5 @@ SproutTower_Text_1F_Teacher:
 	.string "People are training upstairs.$"
 
 SproutTower_Text_1F_Statue:
-	.string "A POKéMON statue…\p"
+	.string "A PokéMon statue…\p"
 	.string "It looks very distinguished.$"

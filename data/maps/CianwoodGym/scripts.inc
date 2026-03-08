@@ -102,10 +102,10 @@ CianwoodGym_EventScript_ChuckGotoDojo::
 	end
 
 CianwoodGym_Text_ChuckGotoDojo:
-	.string "WAHAHAHA {PLAYER}!\n"
+	.string "Wahahaha {PLAYER}!\n"
 	.string "I'm in the middle of my training!\p"
 	.string "If you want another match, come to\n"
-	.string "the FIGHTING DOJO in SAFFRON!$"	
+	.string "the Fighting Dojo in Saffron!$"	
 
 CianwoodGym_EventScript_ChuckAtDojo::
 	msgbox CianwoodGym_Text_ChuckAtDojo, MSGBOX_DEFAULT
@@ -114,8 +114,8 @@ CianwoodGym_EventScript_ChuckAtDojo::
 	end
 
 CianwoodGym_Text_ChuckAtDojo:
-	.string "I will see you at the DOJO!\n"
-	.string "WAHAHAHAHAHA$"
+	.string "I will see you at the Dojo!\n"
+	.string "Wahahahahaha$"
 
 CianwoodGym_EventScript_OlivineCheckMahog::
 	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_Chuck_Battle3
@@ -177,7 +177,7 @@ CianwoodGym_Text_ChuckIntro3:
 CianwoodGym_Text_ChuckLoss:
 	.string "Wha? Huh? I lost?\p"
 	.string "How about that!\n"
-	.string "You're worthy of STORMBADGE!$"
+	.string "You're worthy of Stormbadge!$"
 
 CianwoodGym_Text_GetStormBadge:
 	.string "{PLAYER} received Kickboxbadge.$"
@@ -185,12 +185,12 @@ CianwoodGym_Text_GetStormBadge:
 CianwoodGym_Text_ChuckBadgeSpeech:
 	.string "Kickboxbadge makes all Pokémon up to\n"
 	.string "L70 obey, even traded ones.\p"
-	.string "It also lets your Pokémon use FLY\n"
+	.string "It also lets your Pokémon use Fly\n"
 	.string "when you're not in a battle.\p"
 	.string "Here, take this too!$"
 
 CianwoodGym_Text_ChuckTMSpeech:
-	.string "That is FOCUS PUNCH.\p"
+	.string "That is Focus Punch.\p"
 	.string "It moves slow but deals huge\n"
 	.string "damage. Just don't get hit first!$"
 
@@ -201,7 +201,7 @@ CianwoodGym_Text_ChuckAfter:
 	.string "Perhaps I could even train in Hoenn!$"
 
 CianwoodGym_Text_ChuckRematch:
-	.string "WAHAHAH! JOHTO CHAMPION!\p"
+	.string "Wahahah! Johto Champion!\p"
 	.string "You've come back for more!\p"
 	.string "I see your skills have improved!\p"
 	.string "Ready to see who's stronger?$"

@@ -264,21 +264,21 @@ VermilionCity_Movement_EusineLeave:
 	step_end
 
 VermilionCity_Text_Eusine:
-	.string "EUSINE: That was so close!\n"
+	.string "Eusine: That was so close!\n"
 	.string "I though I could corner it by\l"
 	.string "ambushing it here.\p"
 	.string "But running on the water is beyond\n"
 	.string "me.\p"
 	.string "Still, I am starting to see\n"
 	.string "a pattern.\p"
-	.string "SUICUNE prefers water!\p"
+	.string "Suicune prefers water!\p"
 	.string "That means...$"
 
 VermilionCity_Text_Eusine2:
 	.string "Sorry {PLAYER}, I've got to go!$"
 
 VermilionCity_Text_Teacher:
-	.string "VERMILION PORT is KANTO's seaside\n"
+	.string "Vermilion Port is Kanto's seaside\n"
 	.string "gateway.\p"
 	.string "Luxury liners from around the\n"
 	.string "world dock here.$"
@@ -290,52 +290,52 @@ VermilionCity_Text_MachopOwner:
 	.string "project…$"
 
 VermilionCity_Text_Machop1:
-	.string "MACHOP: Guooh gogogoh!$"
+	.string "Machop: Guooh gogogoh!$"
 
 VermilionCity_Text_Machop2:
-	.string "A MACHOP is growling while\n"
+	.string "A Machop is growling while\n"
 	.string "stomping the ground flat.$"
 
 VermilionCity_Text_SuperNerd:
-	.string "There are eight GYMS in KANTO.\p"
-	.string "That big building is VERMILION's\n"
-	.string "Pokémon GYM.$"
+	.string "There are eight Gyms in Kanto.\p"
+	.string "That big building is Vermilion's\n"
+	.string "Pokémon Gym.$"
 
 VermilionCity_Text_SnorlaxSleeping:
-	.string "SNORLAX is snoring peacefully…$"
+	.string "Snorlax is snoring peacefully…$"
 
 VermilionCity_Text_RadioNearSnorlax:
-	.string "The RADIO was placed near the\n"
-	.string "sleeping SNORLAX…\p"
+	.string "The Radio was placed near the\n"
+	.string "sleeping Snorlax…\p"
 	.string "…\p"
-	.string "SNORLAX woke up!$"
+	.string "Snorlax woke up!$"
 
 VermilionCity_Text_BadgeGuy_Trainer:
-	.string "Skilled trainers gather in KANTO.\p"
-	.string "GYM LEADERS are especially strong.\p"
+	.string "Skilled trainers gather in Kanto.\p"
+	.string "Gym Leaders are especially strong.\p"
 	.string "They won't be easy to defeat.$"
 
 VermilionCity_Text_BadgeGuy_SomeBadges:
-	.string "You've started to collect KANTO\n"
-	.string "GYM BADGES?\p"
+	.string "You've started to collect Kanto\n"
+	.string "Gym Badges?\p"
 	.string "Don't you agree that the trainers\n"
 	.string "here are tough?$"
 
 VermilionCity_Text_BadgeGuy_MostBadges:
 	.string "I guess you'll be finished with\n"
-	.string "your conquest of KANTO GYMS soon.\p"
+	.string "your conquest of Kanto Gyms soon.\p"
 	.string "Let me know if you get all eight\n"
-	.string "BADGES.$"
+	.string "Badges.$"
 
 VermilionCity_Text_BadgeGuy_AllBadges:
 	.string "Congratulations!\p"
-	.string "You got all the KANTO GYM BADGES.\p"
+	.string "You got all the Kanto Gym Badges.\p"
 	.string "I've got a reward for your efforts.$"
 
 VermilionCity_Text_BadgeGuy_BattleEdge:
 	.string "Having a variety of Pokémon types\n"
 	.string "should give you an edge in battle.\p"
-	.string "I'm sure the KANTO GYM BADGES will\n"
+	.string "I'm sure the Kanto Gym Badges will\n"
 	.string "help you.$"
 
 VermilionCity_EventScript_CitySign::

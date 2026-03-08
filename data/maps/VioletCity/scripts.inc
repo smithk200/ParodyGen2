@@ -423,15 +423,15 @@ VioletCity_Text_HereTeacherIAm:
 
 VioletCity_Text_Lass:
 	.string "Ghosts are rumored to appear\n"
-	.string "in SPROUT TOWER.\p"
-	.string "They say that GHOST-type\n"
+	.string "in Sprout Tower.\p"
+	.string "They say that Ghost-type\n"
 	.string "moves can bypass the defenses\p"
-	.string "of tough Pokémon like ONIX\n"
-	.string "and GEODUDE.$"
+	.string "of tough Pokémon like Onix\n"
+	.string "and Geodude.$"
 
 VioletCity_Text_Boy:
 	.string "Hey, you're a Pokémon trainer?\p"
-	.string "If you head to the ACADEMY,\n"
+	.string "If you head to the Academy,\n"
 	.string "you might learn something new!$"
 
 VioletCity_Text_Gramps:
@@ -463,17 +463,17 @@ VioletCity_Text_EarlsAcademySign:
 	.string "Earl's Pokémon Academy$"
 
 VioletCity_Text_Pichu:
-	.string "PICHU: Chuuuu!$"
+	.string "Pichu: Chuuuu!$"
 
 VioletCity_Text_Bellsprout:
-	.string "BELLSPROUT: Sprouuuut.$"
+	.string "Bellsprout: Sprouuuut.$"
 
 VioletCity_Text_Rattata:
-	.string "RATTATA: RATTATARATTA!$"
+	.string "Rattata: Rattataratta!$"
 
 VioletCity_Text_Elm_Call:
-	.string "ELM: Hello, {PLAYER}? We\n"
-	.string "discovered something about the EGG!\p"
+	.string "Elm: Hello, {PLAYER}? We\n"
+	.string "discovered something about the Egg!\p"
 	.string "My assistant is at the Pokémon\n"
 	.string "Center in Violet City.\p"
 	.string "Could you talk to him?$"
@@ -484,9 +484,9 @@ VioletCity_Text_Kimono_Girl1:
 
 VioletCity_Text_Kimono_Girl2:
 .string "I see...\p"
-.string "So it was handed from MR. Pokémon\n"
-.string "to PROF. ELM, then from \l"
-.string "PROF. ELM to you.\p"
+.string "So it was handed from Mr. Pokémon\n"
+.string "to Prof. Elm, then from \l"
+.string "Prof. Elm to you.\p"
 .string "Now I get it...$"
 
 VioletCity_Text_Kimono_Girl3:

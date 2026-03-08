@@ -17,12 +17,12 @@ ViridianForest_EventScript_Bugsy::
 	end
 
 ViridianForest_Text_Bugsy:
-	.string "BUGSY: I came to KANTO to look for\n"
-	.string "BUG-TYPE Pokémon, so I can become\l"
-	.string "a stronger BUG-TYPE Pokémon\l"
-	.string "TRAINER!\p"
+	.string "Bugsy: I came to Kanto to look for\n"
+	.string "Bug-Type Pokémon, so I can become\l"
+	.string "a stronger Bug-Type Pokémon\l"
+	.string "Trainer!\p"
     .string "If you're ready for another match,\n"
-    .string "I'll be at the DOJO in SAFFRON!$"
+    .string "I'll be at the Dojo in Saffron!$"
 
 ViridianForest_EventScript_MaxPotion::
     finditem ITEM_MAX_POTION

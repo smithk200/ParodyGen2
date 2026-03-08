@@ -122,7 +122,7 @@ Gate_EcruteakCity_Route38_TextPhilipJFryIntro:
 	.string "I was not expecting that Skeledirge!\p"
 	.string "But I'm still ready to battle!\p"
 	.string "Ready?\p"
-	.string "Here we GOOO!$"
+	.string "Here we Gooo!$"
 
 Gate_EcruteakCity_Route38_TextExplainTeraOrb:
 	.string "This here is the Tera Orb.\p"

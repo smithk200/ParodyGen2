@@ -60,7 +60,7 @@ SafariZoneGate_EventScript_SlowpokeLady::
 
 
 SafariZone_Text_ForeignFeeling:
-	.string "SAFARI ZONE...\n"
+	.string "Safari Zone...\n"
 	.string "It makes me feel like I am in a\l"
 	.string "foreign country.\p"
 	.string "It brings up a strange feeling.$"
@@ -70,31 +70,31 @@ SafariZone_Text_SilentNPC:
 	.string "(I am not a talker.)$"
 
 SafariZone_Text_Kangaskhan:
-	.string "KANGASKHAN: ..................$"
+	.string "Kangaskhan: ..................$"
 
 SafariZone_Text_JigglypuffTrainer:
-	.string "This SAFARI ZONE is great!\n"
+	.string "This Safari Zone is great!\n"
 	.string "I just kept going after Pokémon!\p"
-	.string "That made my JIGGLYPUFF upset though.$"
+	.string "That made my Jigglypuff upset though.$"
 
 SafariZone_Text_FirstCatch:
 	.string "I have always wanted to catch my first\n"
-	.string "Pokémon at the SAFARI ZONE.$"
+	.string "Pokémon at the Safari Zone.$"
 
 SafariZone_Text_SlowpokeFan:
 	.string "There are many Pokémon to choose from,\n"
 	.string "but nothing beats the cuteness of\l"
-	.string "SLOWPOKE.\p"
+	.string "Slowpoke.\p"
 	.string "People often say that I look like one!$"
 
 SafariZone_Text_CustomSystem:
 	.string "You may be under the impression there\n"
 	.string "is a sophisticated system to\l"
-	.string "customizing the SAFARI ZONE, right?\p"
+	.string "customizing the Safari Zone, right?\p"
 	.string "The real truth is that...$"
 
 SafariZone_Text_Sign:
-	.string "SAFARI ZONE\n"
+	.string "Safari Zone\n"
 	.string "This is where everything is thrilling.\p"
 	.string "Feel free to come by and experience\n"
 	.string "the wild!$"
@@ -164,6 +164,6 @@ SafariZoneGate_Pokemart_VitaminGuru:
 
 
 SafariZoneGate_Text_VitaminGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
+	.string "I'm the Energy Guru! I'll go for it and\n"
 	.string "sell you what you need!$"
 

@@ -177,8 +177,8 @@ RocketHideout_B2F_Movement_MurkrowGate2:
 	step_end
 
 RocketHideout_B2F_Text_MurkrowUnlock:
-    .string "MURKROW screamed the password,\n"
-    .string "mimicking the voice of PETREL.\p"
+    .string "Murkrow screamed the password,\n"
+    .string "mimicking the voice of Petrel.\p"
     .string "..................\n"
     .string "The voice-recognition system\l"
     .string "unlocked the door!$"
@@ -641,7 +641,7 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "all the problems.\p"
     .string "I don't see a switch on it…\p"
     .string "We have no choice. We have to\n"
-    .string "make all the ELECTRODE faint.\p"
+    .string "make all the Electrode faint.\p"
     .string "That should stop this machine\n"
     .string "from transmitting that strange\l"
     .string "signal.\p"
@@ -655,7 +655,7 @@ RocketHideout_B2F_Text_LanceSide:
 RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "Lance: That odd signal has\n"
     .string "finally stopped.\p"
-    .string "The LAKE should be back to\n"
+    .string "The Lake should be back to\n"
     .string "normal.\p"
     .string "You're the hero! Let me thank\n"
     .string "you on behalf of all the\l"
@@ -665,17 +665,17 @@ RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "have any need for it.$"
 
 RocketHideout_B2F_Text_LanceWhirlpool:
-    .string "That's WHIRLPOOL. Teach it to a\n"
+    .string "That's Whirlpool. Teach it to a\n"
     .string "Pokémon to get across wild water.\p"
     .string "But keep this in mind.\p"
     .string "You can use that out of battle\n"
-    .string "only with the BADGE from\l"
-    .string "MAHOGANY GYM.$"
+    .string "only with the Badge from\l"
+    .string "Mahogany Gym.$"
 
 RocketHideout_B2F_Text_LanceMonMaster:
     .string "{PLAYER}…\p"
     .string "The journey to becoming the\n"
-    .string "Pokémon MASTER is long and\l"
+    .string "Pokémon Master is long and\l"
     .string "difficult.\p"
     .string "Knowing that, will you keep\n"
     .string "going?\p"
@@ -790,14 +790,14 @@ RocketHideout_B2F_Text_LanceHeals2:
 RocketHideout_B2F_Text_GruntM17Seen:
     .string "The door won't open?\p"
     .string "Well, duh. It has to have a\n"
-    .string "password that only TEAM ROCKET\l"
+    .string "password that only Team Rocket\l"
     .string "knows.$"
 
 RocketHideout_B2F_Text_GruntM17Beaten:
     .string "What? I lost?$"
 
 RocketHideout_B2F_Text_GruntM17After:
-    .string "Heh, I'm just a GRUNT.\p"
+    .string "Heh, I'm just a Grunt.\p"
     .string "I don't know the password.\n"
     .string "Too bad for you.$"
 

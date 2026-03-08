@@ -30,7 +30,7 @@ CeladonCity_Text_Erika:
     .string "Oh, {PLAYER}.\n"
 	.string "Isn't the fountain lovely today?\p"
 	.string "If you wish for another battle,\n"
-	.string "I'll be at the FIGHTING DOJO.$"
+	.string "I'll be at the Fighting Dojo.$"
 
 CeladonCity_EventScript_Fatman::
 	msgbox CeladonCity_Text_Fisher, MSGBOX_NPC
@@ -74,12 +74,12 @@ CeladonCity_EventScript_Lass::
 	end
 
 CeladonCity_Text_Fisher:
-	.string "This POLIWRATH is my partner.\p"
+	.string "This Poliwrath is my partner.\p"
 	.string "I wonder if it'll ever evolve\n"
 	.string "into a frog Pokémon.$"
 
 CeladonCity_Text_Poliwrath:
-	.string "POLIWRATH: Croak!$"
+	.string "Poliwrath: Croak!$"
 
 CeladonCity_Text_Teacher1:
 	.string "I lost at the slot machines again…\p"
@@ -87,19 +87,19 @@ CeladonCity_Text_Teacher1:
 	.string "You should check them out too.$"
 
 CeladonCity_Text_Gramps1:
-	.string "GRIMER have been appearing lately.\p"
+	.string "Grimer have been appearing lately.\p"
 	.string "See that pond out in front of the\n"
-	.string "house? GRIMER live there now.\p"
+	.string "house? Grimer live there now.\p"
 	.string "Where did they come from? This is\n"
 	.string "a serious problem…$"
 
 CeladonCity_Text_Gramps2:
-	.string "Nihihi! This GYM is great! Only\n"
+	.string "Nihihi! This Gym is great! Only\n"
 	.string "girls are allowed here!$"
 
 CeladonCity_Text_Youngster1:
 	.string "Want to know a secret?\p"
-	.string "CELADON MANSION has a hidden back\n"
+	.string "Celadon Mansion has a hidden back\n"
 	.string "door.$"
 
 CeladonCity_Text_Youngster2:
@@ -109,7 +109,7 @@ CeladonCity_Text_Youngster2:
 	.string "me feel bloated…$"
 
 CeladonCity_Text_Teacher2:
-	.string "CELADON DEPT.STORE has the biggest\n"
+	.string "Celadon Dept.Store has the biggest\n"
 	.string "and best selection of merchandise.\p"
 	.string "If you can't get it there, you\n"
 	.string "can't get it anywhere.\p"
@@ -166,8 +166,8 @@ CeladonCity_Text_GameCornerSign:
 
 CeladonCity_Text_TrainerTips:
 	.string "Trainer Tips:\p"
-	.string "GUARD SPEC. protects Pokémon\n"
-	.string "against SPECIAL attacks such as\n"
+	.string "Guard Spec. protects Pokémon\n"
+	.string "against Special attacks such as\n"
 	.string "fire and water.\p"
-	.string "Get your items at CELADON DEPT.\n"
-	.string "STORE!$"
+	.string "Get your items at Celadon Dept.\n"
+	.string "Store!$"

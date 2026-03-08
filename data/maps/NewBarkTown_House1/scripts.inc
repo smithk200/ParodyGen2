@@ -54,7 +54,7 @@ NewBarkTown_House1_Text_FatherTakeGoodCareOfMachop:
 	.string "Take good care of Machop!$"
 
 NewBarkTown_House1_Text_NeighborsDaughter:
-	.string "PIKACHU is an evolved Pokémon.\p"
+	.string "Pikachu is an evolved Pokémon.\p"
 	.string "I was amazed by Prof. Elm's\n"
 	.string "findings.\p"
 	.string "He's so famous for his research\n"
@@ -69,7 +69,7 @@ NewBarkTown_House1_Text_FatherFatherNeedFirstMon:
 
 NewBarkTown_House1_Text_Neighbor:
 	.string "My daughter is adamant about\n"
-	.string "becoming PROF.ELM's assistant.\p"
+	.string "becoming Prof.Elm's assistant.\p"
 	.string "She really loves Pokémon!\p"
 	.string "But then, so do I!$"
 

@@ -49,5 +49,5 @@ CeladonDeptStore6F_Text_Youngster:
 	.string "I wanted to play…$"
 
 CeladonDeptStore6F_Text_Directory:
-	.string "6F: ROOFTOP SQUARE VENDING\n"
-	.string "MACHINES$"
+	.string "6f: Rooftop Square Vending\n"
+	.string "Machines$"

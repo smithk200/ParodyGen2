@@ -63,23 +63,23 @@ PewterCity_EventScript_Cooltrainer::
 	end
 
 PewterCity_Text_CooltrainerF:
-	.string "Have you visited PEWTER GYM?\p"
-	.string "The LEADER uses rock-type Pokémon.$"
+	.string "Have you visited Pewter Gym?\p"
+	.string "The Leader uses rock-type Pokémon.$"
 
 PewterCity_Text_BugCatcher:
-	.string "At night, CLEFAIRY come out to play at\n"
-	.string "MT.MOON.\p"
+	.string "At night, Clefairy come out to play at\n"
+	.string "Mt.Moon.\p"
 	.string "But not every night.$"
 
 PewterCity_Text_Gramps:
 	.string "Ah, you came all the way out here from\n"
-	.string "JOHTO?\p"
+	.string "Johto?\p"
 	.string "That brings back memories. When I was\n"
-	.string "young, I went to JOHTO to train.\p"
+	.string "young, I went to Johto to train.\p"
 	.string "You remind me so much of what I was like\n"
 	.string "as a young man.\p"
 	.string "Here. I want you to have this item I\n"
-	.string "found in JOHTO.$"
+	.string "found in Johto.$"
 
 PewterCity_Text_Gramps_GotSilverWing:
 	.string "Going to new, unknown places and seeing\n"
@@ -117,12 +117,12 @@ PewterCity_Text_GymSign:
 
 PewterCity_Text_MuseumSign:
 	.string "There's a notice here…\p"
-	.string "PEWTER MUSEUM OF SCIENCE is closed for\n"
+	.string "Pewter Museum Of Science is closed for\n"
 	.string "renovations…$"
 
 PewterCity_Text_MtMoonGiftShopSign:
 	.string "There's a notice here…\p"
-	.string "MT.MOON GIFT SHOP NOW OPEN!$"
+	.string "Mt.Moon Gift Shop Now Open!$"
 
 PewterCity_Text_WelcomeSign:
 	.string "Welcome to Pewter City!$"

@@ -46,16 +46,16 @@ BlackthornCity_EventScript_Call::
 	end
 
 BlackthornCity_Text_BaobaCall:
-	.string "WARDEN BAOBA: {PLAYER}!\p"
-	.string "This is WARDEN BAOBA.\p"
+	.string "Warden Baoba: {PLAYER}!\p"
+	.string "This is Warden Baoba.\p"
 	.string "I'm calling to tell you that\n"
-	.string "the SAFARI ZONE has expanded!\p"
+	.string "the Safari Zone has expanded!\p"
 	.string "Please come visit!$"
 
 BlackthornCity_Text_ElmCall:
-	.string "PROF. ELM: Hello, {PLAYER}?\p"
+	.string "Prof. Elm: Hello, {PLAYER}?\p"
 	.string "I have something here for you.\n"
-	.string "Could you swing by my LAB?\p"
+	.string "Could you swing by my Lab?\p"
 	.string "See you later!$"
 
 BlackThornCity_EventScript_Sage::
@@ -296,7 +296,7 @@ BlackthornGrampsRefusesEntryText:
 
 BlackthornGrampsGrantsEntryText:
 	.string "If Clair allows it, her grand-\n"
-	.string "father--our MASTER--will also.\p"
+	.string "father--our Master--will also.\p"
 	.string "You may enter.$"
 
 BlackBeltText_VoicesInMyHead:
@@ -313,7 +313,7 @@ BlackthornYoungsterText:
 
 BlackthornCity_MeetSantosText:
 	.string "Santos: …\p"
-	.string "I'm SANTOS of the weekday family.\p"
+	.string "I'm Santos of the weekday family.\p"
 	.string "Take a guess.$"
 
 BlackthornCity_SantosGivesGiftText:
@@ -321,8 +321,8 @@ BlackthornCity_SantosGivesGiftText:
 
 BlackthornCity_SantosGaveGiftText:
 	.string "Santos: …\p"
-	.string "SPELL TAG…\p"
-	.string "GHOST-type moves get stronger…\p"
+	.string "Spell Tag…\p"
+	.string "Ghost-type moves get stronger…\p"
 	.string "It will frighten you…$"
 
 BlackthornCity_SantosSaturdayText:
@@ -334,7 +334,7 @@ BlackthornCity_SantosNopeText:
 	.string "Santos: No.$"
 
 BlackthornCooltrainerF2Text:
-	.string "Wow, you came through the ICE PATH?\p"
+	.string "Wow, you came through the Ice Path?\p"
 	.string "You must be a real hotshot trainer!$"
 
 BlackthornCitySignText:
@@ -347,7 +347,7 @@ BlackthornGymSignText:
 	.string "The User of Dragon Types.$"
 
 BlackthornCity_Text_MoveDeletersHouseSign:
-	.string "MOVE BROS' HOUSE$"
+	.string "Move Bros' House$"
 
 BlackthornCity_Text_DragonDenSign:
 	.string "Dragon's Den Ahead$"
@@ -371,7 +371,7 @@ Blackthorn_City_Text_PhilipJFryDefeat:
 	.string "Pokémon before facing Clair!$"
 	
 Blackthorn_City_Text_PhilipJFry_ExplainTM:
-	.string "This TM is Stomping Tantrum.\n"
+	.string "This Tm is Stomping Tantrum.\n"
 	.string "It's good for dealing damage.\p"
 	.string "If it misses, then on the next\n"
 	.string "turn it will deal double damage!\p"

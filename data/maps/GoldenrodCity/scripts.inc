@@ -300,23 +300,23 @@ GoldenrodCity_Text_Woman:
 	.string "he's much more mature.$"
 
 GoldenrodCity_Text_HikerDay:
-	.string "When I went into the GAME CORNER\n"
+	.string "When I went into the Game Corner\n"
 	.string "it was night time... How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_Text_HikerNight:
-	.string "When I went into the GAME CORNER\n"
+	.string "When I went into the Game Corner\n"
 	.string "it was day time... How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_Text_Snubbull:
-	.string "SNUBBULL: SNUUUBUUUULL!$"
+	.string "Snubbull: Snuuubuuuull!$"
 
 GoldenrodCity_Text_MrMime:
 	.string "............................$"
 
 GoldenrodCity_Text_ElmCall:
-	.string "ELM: Hello, {PLAYER}?\n"
+	.string "Elm: Hello, {PLAYER}?\n"
 	.string "Has that egg hatched yet?\p"
 	.string "Once it hatches, don't forget to\n"
 	.string "bring it by the lab! I need to\l"
@@ -344,16 +344,16 @@ GoldenrodCity_Text_CooltrainerF2:
 	.string "is quite the landmark.\p"
 	.string "They're running a campaign now.\p"
 	.string "They'll give you a shiny new\n"
-	.string "RADIO if you can pass their quiz.$"
+	.string "Radio if you can pass their quiz.$"
 
 GoldenrodCity_Text_CooltrainerF2_GotCard:
-	.string "Oh, your POKéGEAR already works\n"
+	.string "Oh, your PokéGear already works\n"
 	.string "as a radio!$"
 
 GoldenrodCity_Text_Youngster2:
 	.string "E-he-he-he…\p"
 	.string "I got in trouble for playing in\n"
-	.string "the DEPT.STORE basement.$"
+	.string "the Dept.Store basement.$"
 
 GoldenrodCity_Text_Lass:
 	.string "That man inside rates your\n"
@@ -403,7 +403,7 @@ GoldenrodCity_Text_RadioTowerSign:
 
 GoldenrodCity_Text_DeptStoreSign:
 	.string "Full Selection of Pokémon Goods!\p"
-	.string "Goldenrod City DEPT.STORE$"
+	.string "Goldenrod City Dept.Store$"
 
 GoldenrodCity_Text_GymSign:
 	.string "Goldenrod City Pokémon Gym\n"
@@ -421,20 +421,20 @@ GoldenrodCity_Text_BikeShopSign:
 
 GoldenrodCity_Text_GameCornerSign:
 	.string "Your Playground!\p"
-	.string "Goldenrod City GAME CORNER$"
+	.string "Goldenrod City Game Corner$"
 
 GoldenrodCity_Text_NameRaterSign:
 	.string "Pokémon Renamer\p"
 	.string "Get Your Pokémon Nicknames Changed$"
 
 GoldenrodCity_Text_UndergroundNorthSign:
-	.string "UNDERGROUND ENTRANCE$"
+	.string "Underground Entrance$"
 
 GoldenrodCity_Text_UndergroundSouthSign:
-	.string "UNDERGROUND ENTRANCE$"
+	.string "Underground Entrance$"
 
 GoldenrodCity_Text_FlowerShopSign:
-	.string "Blooming Beautiful FLOWER SHOP$"
+	.string "Blooming Beautiful Flower Shop$"
 
 GoldenrodCity_Text_MoveTutorAsk:
 	.string "I can teach your Pokémon some\n"

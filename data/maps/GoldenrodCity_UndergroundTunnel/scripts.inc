@@ -115,7 +115,7 @@ GoldenrodCity_UndergroundTunnel_Text_Kimono1:
 	.string "So, you took on Team Rocket?\l"
 	.string "You are impressive!\p"
 	.string "You may be able to face the\n"
-	.string "legendary POKé...$"
+	.string "legendary Poké...$"
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono2:
 	.string "Hahaha! Never mind.\n"
@@ -319,18 +319,18 @@ GoldenrodCity_UndergroundTunnel_EventScript_Item_Antidote::
 
 
 GoldenrodUnderground_Text_YoungerBrotherOffer:
-    .string "Welcome to the Pokémon SALON!\p"
+    .string "Welcome to the Pokémon Salon!\p"
     .string "I'm the younger and less expensive\n"
-    .string "of the two HAIRCUT BROTHERS.\p"
+    .string "of the two Haircut Brothers.\p"
     .string "I'll spiff up your Pokémon for just\n"
     .string "¥300.\p"
     .string "So? How about it?$"
 
 GoldenrodUnderground_Text_YoungerBrotherAskWhich:
-    .string "OK, which Pokémon should I do?$"
+    .string "Ok, which Pokémon should I do?$"
 
 GoldenrodUnderground_Text_YoungerBrotherLookCool:
-    .string "OK! I'll make it look cool!$"
+    .string "Ok! I'll make it look cool!$"
 
 GoldenrodUnderground_Text_YoungerBrotherAllDone:
     .string "There we go! All done!$"
@@ -349,9 +349,9 @@ GoldenrodUnderground_Text_YoungerBrotherOnePerDay:
 
 GoldenrodUnderground_Text_OlderBrotherOffer:
     .string "Welcome!\p"
-    .string "I run the Pokémon SALON!\p"
+    .string "I run the Pokémon Salon!\p"
     .string "I'm the older and better of the two\n"
-    .string "HAIRCUT BROTHERS.\p"
+    .string "Haircut Brothers.\p"
     .string "I can make your Pokémon beautiful\n"
     .string "for just ¥500.\p"
     .string "Would you like me to do that?$"
@@ -360,7 +360,7 @@ GoldenrodUnderground_Text_OlderBrotherAskWhich:
     .string "Which Pokémon should I work on?$"
 
 GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful:
-    .string "OK! Watch it become beautiful!$"
+    .string "Ok! Watch it become beautiful!$"
 
 GoldenrodUnderground_Text_OlderBrotherAllDone:
     .string "There! All done!$"
@@ -376,7 +376,7 @@ GoldenrodUnderground_Text_OlderBrotherOnePerDay:
     .string "I'm done for today.$"
 
 GoldenrodUnderground_Text_SupernerdEricSeen:
-    .string "I got booted out of the GAME CORNER.\p"
+    .string "I got booted out of the Game Corner.\p"
     .string "I was trying to cheat using my\n"
     .string "Pokémon…$"
 
@@ -420,14 +420,14 @@ GoldenrodUnderground_Text_PokemaniacDonaldBeaten:
     .string "Gaah! I lost! That makes me mad!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle:
-	.string "When I was walking near the BIKE\n"
-	.string "SHOP last night, I felt like I was\l"
+	.string "When I was walking near the Bike\n"
+	.string "Shop last night, I felt like I was\l"
 	.string "being watched from the rooftops...$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
-    .string "Are you making a POKéDEX? Here's a\n"
+    .string "Are you making a PokéDex? Here's a\n"
     .string "hot tip.\p"
-    .string "The HIKER on ROUTE 33, ANTHONY, is a\n"
+    .string "The Hiker on Route 33, Anthony, is a\n"
     .string "good guy.\p"
     .string "He'll phone you if he sees any rare\n"
     .string "Pokémon.$"
@@ -439,7 +439,7 @@ GoldenrodUnderground_Text_DoorIsOpen:
     .string "The door is open.$"
 
 GoldenrodUnderground_Text_KeyOpenedDoor:
-    .string "The BASEMENT KEY opened the door.$"
+    .string "The Basement Key opened the door.$"
 
 GoldenrodUnderground_Text_NoEntry:
-    .string "NO ENTRY BEYOND THIS POINT$"
+    .string "No Entry Beyond This Point$"

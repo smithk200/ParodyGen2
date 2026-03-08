@@ -7,7 +7,7 @@ BattleFrontier_Lounge6_EventScript_Trader::
 	end
 
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade:
-	.string "My Pokémon is a SKITTY.\n"
+	.string "My Pokémon is a Skitty.\n"
 	.string "Do you know it?\l"
 	.string "It's quite cute and rather nice.\p"
 	.string "This little one, I couldn't trade with\n"
@@ -76,5 +76,5 @@ BattleFrontier_Lounge6_Text_WouldYouLikeToTrade:
 @
 @BattleFrontier_Lounge6_Text_SkittySoMuchCuterThanImagined:
 @	.string "Giggle!\n"
-@	.string "A SKITTY is so much cuter than I had\l"
+@	.string "A Skitty is so much cuter than I had\l"
 @	.string "imagined. I'm delighted!$"

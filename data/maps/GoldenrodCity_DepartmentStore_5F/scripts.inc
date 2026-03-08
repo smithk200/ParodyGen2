@@ -133,12 +133,12 @@ GoldenrodDeptStore_Text_5FReceptionistOhYourMon:
     .string "Hello. Oh, your Pokémon…$"
 
 GoldenrodDeptStore_Text_5FReceptionistWait:
-    .string "Wait, I already gave you that TM!$"
+    .string "Wait, I already gave you that Tm!$"
 
 GoldenrodDeptStore_Text_5FReceptionistPutInSomeMoreEffort:
 	.string "Hmm…\n"
 	.string "It's not bad, but it's also not good.\p"
-	.string "You, as the TRAINER, need to put in\n"
+	.string "You, as the Trainer, need to put in\n"
 	.string "some more effort.$"
 
 
@@ -148,7 +148,7 @@ GoldenrodDeptStore_Text_5FReceptionistThisMoveShouldBePerfect:
     .string "pair like you.$"
 
 GoldenrodDeptStore_Text_5FReceptionistItLooksEvilHowAboutThisTM:
-    .string "It looks evil. How about this TM\n"
+    .string "It looks evil. How about this Tm\n"
     .string "for it?$"
 
 GoldenrodDeptStore_Text_5FReceptionistThereAreTMsPerfectForMon:
@@ -167,9 +167,9 @@ GoldenrodDeptStore_Text_5FPokefanM:
     .string "original trainer's feelings for it.$"
 
 GoldenrodDeptStore_Text_Girl:
-	.string "The lady gave me RETURN!\n"
+	.string "The lady gave me Return!\n"
     .string "My Pokémon must really like me!$"
 
 GoldenrodDeptStore_Text_5FDirectory:
     .string "Customize Your Pokémon\p"
-    .string "5F TM CORNER$"
+    .string "5f Tm Corner$"

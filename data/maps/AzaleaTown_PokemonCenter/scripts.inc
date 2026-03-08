@@ -33,24 +33,24 @@ AzaleaPokeCenter_EventScript_PokefanF::
 	end
 
 AzaleaPokecenter_Text_Gentleman:
-	.string "Do your Pokémon know HM moves?\p"
+	.string "Do your Pokémon know Hm moves?\p"
 	.string "Those moves can be used even if\n"
 	.string "your Pokémon has fainted.$"
 
 AzaleaPokecenter_Text_UnusedPCExplanation:
-	.string "This BILL guy created the system\n"
-	.string "for storing Pokémon in a PC.\p"
-	.string "BILL's PC can store up to 30\n"
-	.string "Pokémon per BOX.$"
+	.string "This Bill guy created the system\n"
+	.string "for storing Pokémon in a Pc.\p"
+	.string "Bill's Pc can store up to 30\n"
+	.string "Pokémon per Box.$"
 
 AzaleaPokecenter_Text_FishingGuru:
-	.string "BILL's PC can store up to 30\n"
-	.string "Pokémon per BOX.$"
+	.string "Bill's Pc can store up to 30\n"
+	.string "Pokémon per Box.$"
 
 AzaleaPokecenter_Text_PokefanF:
-	.string "Do you know about BERRIES?\p"
+	.string "Do you know about Berries?\p"
 	.string "Crack one open, hollow it out and\n"
 	.string "fit it with a special device.\p"
 	.string "Then you can catch Pokémon with it.\p"
-	.string "Before POKé BALLS were invented,\n"
-	.string "everyone used BERRIES.$"
+	.string "Before Poké Balls were invented,\n"
+	.string "everyone used Berries.$"

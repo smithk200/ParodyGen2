@@ -36,16 +36,16 @@ OlivineCity_EventScript_BaobaCall::
 
 OlivineCity_Text_Baoba:
 	.string "{PLAYER}!\p"
-	.string "This is WARDEN BAOBA.\p"
+	.string "This is Warden Baoba.\p"
 	.string "Sorry to have kept you waiting.\n"
-	.string "We've finally opened the SAFARI\l"
-	.string "ZONE!\p"
+	.string "We've finally opened the Safari\l"
+	.string "Zone!\p"
 	.string "Do you know where it is?\p"
-	.string "You know the GATE inside the cavern\n"
-	.string "in CIANWOOD CITY?\p"
+	.string "You know the Gate inside the cavern\n"
+	.string "in Cianwood City?\p"
 	.string "If you go through there and walk for\n"
 	.string "a short while, you should soon see\l"
-	.string "the SAFARI ZONE!\p"
+	.string "the Safari Zone!\p"
 	.string "We're a little out of the way, but\n"
 	.string "please come visit!$"
 
@@ -263,19 +263,19 @@ OlivineCity_EventScript_EonTicketWomanAfter::
 	end
 
 OlivineCity_Text_CafeSign:
-	.string "OLIVINE CAFE\n"
-	.string "WHERE STRONG SAILORS ENJOY\l"
-	.string "HEARTY MEALS OF STRENGTH$"
+	.string "Olivine Cafe\n"
+	.string "Where Strong Sailors Enjoy\l"
+	.string "Hearty Meals Of Strength$"
 
 OlivineCity_Text_EonTicketWoman1:
-	.string "My name is MARY!\p"
-	.string "Just kidding, but I love MARY's\n"
+	.string "My name is Mary!\p"
+	.string "Just kidding, but I love Mary's\n"
 	.string "radio show!$"
 
 OlivineCity_Text_EonTicketWoman2:
 	.string "You must be {PLAYER}!!!\p"
 	.string "Oh my goodness! The champion!\p"
-	.string "I heard about you on MARY's\n"
+	.string "I heard about you on Mary's\n"
 	.string "radio show!\p"
 	.string "Here, take this!$"
 
@@ -290,16 +290,16 @@ OlivineCity_Text_Sailor1:
 	.string "night, the sea is even more\l"
 	.string "treacherous!\p"
 	.string "Without the beacon of the\n"
-	.string "LIGHTHOUSE to guide it,\l"
+	.string "Lighthouse to guide it,\l"
 	.string "no ship can sail.$"
 
 OlivineCity_Text_YoungsterPokegear:
 	.string "That thing you have--\n"
-	.string "it's a POKéGEAR, right?\l"
+	.string "it's a PokéGear, right?\l"
 	.string "Wow, that's cool.$"
 
 OlivineCity_Text_YoungsterPokedex:
-	.string "Wow, you have a POKéDEX!\p"
+	.string "Wow, you have a PokéDex!\p"
 	.string "That is just so awesome.$"
 
 OlivineCity_Text_Sailor2:
@@ -332,4 +332,4 @@ OlivineCity_Text_BattleTowerSign:
 	.string "Opening Now!$"
 
 OlivineCity_Text_Machoke:
-	.string "MACHOKE: CHO!$"
+	.string "Machoke: Cho!$"

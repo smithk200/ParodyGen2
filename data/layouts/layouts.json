@@ -8855,7 +8855,7 @@
       "id": "LAYOUT_SLATEPORT_CITY_GYM",
       "name": "SlateportCity_Gym_Layout",
       "width": 20,
-      "height": 20,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/SlateportCity_Gym/border.bin",

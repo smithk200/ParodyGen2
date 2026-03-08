@@ -303,7 +303,7 @@ VermilionGym_Text_LtSurgeIntro:
 	.string "I love science, especially the\l"
 	.string "of Pokémon battling!\p"
 	.string "So what are you waiting for?\p"
-	.string "SCIENCE RULES!$"
+	.string "Science Rules!$"
 
 VermilionGym_Text_LtSurgeWinLoss:
 	.string "My knowledge of science wasn't enough\n"
@@ -319,7 +319,7 @@ VermilionGym_Text_ThunderBadgeInfo:
 	.string "defeated me.$"
 
 VermilionGym_Text_LtSurgeTm:
-	.string "And take this TM. It served me\n"
+	.string "And take this Tm. It served me\n"
 	.string "well in my studies!$"
 
 VermilionGym_Text_LtSurgeThunderstone:
@@ -332,8 +332,8 @@ VermilionGym_Text_LtSurgePostBattle:
 	.string "My Pokémon and I are still at it!$"
 
 VermilionGym_Text_SurgeRematch:
-	.string "Bill Nye:: So, you're now KANTO\n"
-	.string "CHAMPION!\p"
+	.string "Bill Nye:: So, you're now Kanto\n"
+	.string "Champion!\p"
 	.string "Impressive work, kid!\n"
 	.string "But don't think I'm done!\p"
 	.string "How about we have a go again?$"
@@ -363,7 +363,7 @@ VermilionGym_Text_GuitaristVincentBeaten:
 	.string "Ooh, how shocking!$"
 
 VermilionGym_Text_GuitaristVincentAfter:
-	.string "If the GYM's traps were working,\n"
+	.string "If the Gym's traps were working,\n"
 	.string "you would have been toast…$"
 
 VermilionGym_Text_JugglerHortonSeen:

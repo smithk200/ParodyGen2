@@ -89,11 +89,11 @@ Route112_Text_NotEasyToGetBackToLavaridge:
 	.string "All you have to do is walk west!$"
 
 Route112_Text_MtChimneyCableCarSign:
-	.string "MT. CHIMNEY CABLE CAR\n"
+	.string "Mt. Chimney Cable Car\n"
 	.string "“A short walk {UP_ARROW} way!”$"
 
 Route112_Text_MtChimneySign:
-	.string "MT. CHIMNEY\p"
+	.string "Mt. Chimney\p"
 	.string "“For Lavaridge or the summit,\n"
 	.string "please take the Cable Car.”\p"
 	.string "Though you can also go to Lavaridge\n"

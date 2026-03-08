@@ -73,10 +73,10 @@ VioletCity_House1_Text_YouWontTradeMe:
 	.string "You don't want to trade? Aww...$"
 
 VioletCity_House1_Text_After:
-	.string "Hi, how's my old ONIX doing?$"
+	.string "Hi, how's my old Onix doing?$"
 
 VioletCity_House1_Text_PokefanM:
 	.string "A Pokémon you get in a trade\n"
 	.string "grows quickly.\p"
 	.string "But if you don't have the right\n"
-	.string "GYM BADGE, they may disobey you.$"
+	.string "Gym Badge, they may disobey you.$"

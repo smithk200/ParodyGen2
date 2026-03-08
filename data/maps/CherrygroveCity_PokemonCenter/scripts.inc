@@ -47,13 +47,13 @@ CherryGrove_Pokecenter_Text_Fisher:
 	.string "of Pokémon, and it's all free.$"
 
 CherryGrove_Pokecenter_Text_Gentleman:
-	.string "That PC is free for any\n"
+	.string "That Pc is free for any\n"
 	.string "trainer to use.$"
 
 CherryGrove_Pokecenter_Text_Lass:
 	.string "They say a watched pot never\n"
 	.string "boils. But watching the clock\l"
-	.string "in the POKéCENTER makes time fly!$"
+	.string "in the PokéCenter makes time fly!$"
 
 CherryGrove_Pokecenter_Text_Chansey:
-	.string "CHANSEY: Chaan! Sii!$"
+	.string "Chansey: Chaan! Sii!$"

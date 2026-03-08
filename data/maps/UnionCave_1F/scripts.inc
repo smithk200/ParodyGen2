@@ -70,7 +70,7 @@ UnionCave_1F_EventScript_Item_Awakening::
 	end
 
 UnionCave_1F_Text_HikerRussellSeen:
-	.string "You're headed to AZALEA, are you?\p"
+	.string "You're headed to Azalea, are you?\p"
 	.string "Let my Pokémon see if you are good\n"
 	.string "enough to battle.$"
 
@@ -94,8 +94,8 @@ UnionCave_1F_Text_PokemaniacLarryBeaten:
 UnionCave_1F_Text_PokemaniacLarryAfter:
 	.string "Battle?\p"
 	.string "Who, me?\p"
-	.string "I'm just a FOSSIL MANIAC!\p"
-	.string "I just LOVE fossils!\p"
+	.string "I'm just a Fossil Maniac!\p"
+	.string "I just Love fossils!\p"
 	.string "Alright, let me tell you about\n"
 	.string "this one fossil…$"
 
@@ -108,11 +108,11 @@ UnionCave_1F_Text_HikerDanielBeaten:
 
 UnionCave_1F_Text_HikerDanielAfter:
 	.string "I was conned into buying a\n"
-	.string "SLOWPOKETAIL.\p"
+	.string "Slowpoketail.\p"
 	.string "I feel sorry for the poor Pokémon.$"
 
 UnionCave_1F_Text_FirebreatherBillSeen:
-	.string "ZUBAT's SUPERSONIC keeps confusing\n"
+	.string "Zubat's Supersonic keeps confusing\n"
 	.string "my Pokémon.\p"
 	.string "I'm seriously upset about that!$"
 
@@ -129,7 +129,7 @@ UnionCave_1F_Text_FirebreatherRaySeen:
 	.string "scary.$"
 
 UnionCave_1F_Text_FirebreatherRayBeaten:
-	.string "FLASH!$"
+	.string "Flash!$"
 
 UnionCave_1F_Text_FirebreatherRayAfter:
 	.string "It's my Pokémon's fire that lights\n"

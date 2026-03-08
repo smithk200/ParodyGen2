@@ -148,7 +148,7 @@ Route117_EventScript_RematchMaria::
 	end
 
 Route117_EventScript_Derek::
-	trainerbattle_single TRAINER_DEREK, Route117_Text_DerekIntro, Route117_Text_DerekDefeat
+	trainerbattle_single TRAINER_DEREK_2, Route117_Text_DerekIntro, Route117_Text_DerekDefeat
 	msgbox Route117_Text_DerekPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -202,7 +202,7 @@ Route117_EventScript_Muhammad::
 	end
 
 Route117_Text_DayCarePokemonHadNewMove:
-	.string "I left my Pokémon at the DAY CARE.\p"
+	.string "I left my Pokémon at the Day Care.\p"
 	.string "When I got it back, it had a new move\n"
 	.string "that I didn't teach it.\l"
 	.string "I was really, really surprised.$"

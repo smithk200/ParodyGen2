@@ -285,11 +285,11 @@ GoldenrodCity_GameCorner_Text_PrizeVendorNoMoreRoom:
     .string "Sorry. You can't carry any more.$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorQuit:
-    .string "OK. Please save your coins and come\n"
+    .string "Ok. Please save your coins and come\n"
     .string "again!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNoCoinCase:
-    .string "Oh? You don't have a COIN CASE.$"
+    .string "Oh? You don't have a Coin Case.$"
 
 GoldenrodCity_GameCorner_Text_Pharmacist:
     .string "I always play this slot machine.\n"
@@ -302,7 +302,7 @@ GoldenrodCity_GameCorner_Text_Woman:
 GoldenrodCity_GameCorner_Text_PokefanM1:
     .string "I just love this new slot machine.\p"
     .string "It's more of a challenge than the\n"
-    .string "ones in CELADON.$"
+    .string "ones in Celadon.$"
 
 GoldenrodCity_GameCorner_Text_CooltrainerM:
     .string "Life is a gamble. I'm going to pull\n"
@@ -318,7 +318,7 @@ GoldenrodCity_GameCorner_Text_CooltrainerF:
     .string "I won't quit until I win!$"
 
 GoldenrodCity_GameCorner_Text_Gentleman:
-    .string "I taught BLIZZARD to my Pokémon.\p"
+    .string "I taught Blizzard to my Pokémon.\p"
     .string "It was hard to get enough coins for\n"
     .string "it, but it was worth it.$"
 
@@ -326,7 +326,7 @@ GoldenrodCity_GameCorner_Text_PokefanM2:
     .string "I couldn't win at the slots, and I\n"
     .string "blew it on roulette.\p"
     .string "I got so furious, I tossed out my\n"
-    .string "COIN CASE in the UNDERGROUND.$"
+    .string "Coin Case in the Underground.$"
 
 GoldenrodCity_GameCorner_Text_MoveTutorInside:
     .string "Wahahah! The coins keep rolling in!$"

@@ -312,7 +312,7 @@ WhirlIslands_1F_EventScript_KuniAfter::
 	end
 
 WhirlIslands_1F_Text_Kimono_AfterNotCaught:
-	.string "You have not only made LUGIA\n"
+	.string "You have not only made Lugia\n"
 	.string "appear, but you have also defeated\l"
 	.string "it...\p"
 	.string "There is nothing more for us to\n"
@@ -320,7 +320,7 @@ WhirlIslands_1F_Text_Kimono_AfterNotCaught:
 	.string "journey...$"	
 
 WhirlIslands_1F_Text_Kimono_AfterCaught:
-	.string "You have not only made LUGIA\n"
+	.string "You have not only made Lugia\n"
 	.string "appear, but you have also caught\l"
 	.string "it...\p"
 	.string "There is nothing more for us to\n"
@@ -584,27 +584,27 @@ WhirlIslands_1F_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 WhirlIslands_1F_Text_Zuki_Before::
-	.string "ZUKI: Go, face LUGIA. $"
+	.string "Zuki: Go, face Lugia. $"
 WhirlIslands_1F_Text_Naoko_Before::
-	.string "NAOKO: Go, face LUGIA. $"
+	.string "Naoko: Go, face Lugia. $"
 WhirlIslands_1F_Text_Miki_Before::
-	.string "MIKI: Go, face LUGIA. $"
+	.string "Miki: Go, face Lugia. $"
 WhirlIslands_1F_Text_Sayo_Before::
-	.string "SAYO: Go, face LUGIA. $"
+	.string "Sayo: Go, face Lugia. $"
 WhirlIslands_1F_Text_Kuni_Before::
-	.string "KUNI: Go, face LUGIA. $"
+	.string "Kuni: Go, face Lugia. $"
 
 WhirlIslands_1F_Text_Kimono_Opening::
-	.string "KIMONO GIRL: That's right.\n"
-	.string "This is where we welcome LUGIA.\p"
+	.string "Kimono Girl: That's right.\n"
+	.string "This is where we welcome Lugia.\p"
 	.string "When the dance we practiced many\n"
 	.string "days becomes one with the sound of the\p"
 	.string "Tidal Bell we entrusted to you, then\n"
-	.string "LUGIA shall come out from deep within\p"
+	.string "Lugia shall come out from deep within\p"
 	.string "the waterfall basin once again. $"
 
 WhirlIslands_1F_Text_Kimono_Closing1::
-	.string "That is indeed LUGIA...\n"
+	.string "That is indeed Lugia...\n"
 	.string "The guardian of these islands from\p"
 	.string "ancient times... \p"
 	.string "So many have tried again and again,\n"
@@ -613,10 +613,10 @@ WhirlIslands_1F_Text_Kimono_Closing1::
 	.string "harmony with the Tidal Bell has finally\p"
 	.string "allowed it to appear...\n"
 	.string "{PLAYER}, don't you see?\p"
-	.string "LUGIA... It must have been waiting for\n"
+	.string "Lugia... It must have been waiting for\n"
 	.string "someone like you all this time.\p"
 	.string "Wouldn't you agree? $"
 
 WhirlIslands_1F_Text_Kimono_After::
-	.string "KIMONO GIRL: You've proven yourself\n"
+	.string "Kimono Girl: You've proven yourself\n"
 	.string "today, {PLAYER}.$"

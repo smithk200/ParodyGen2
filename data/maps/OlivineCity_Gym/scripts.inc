@@ -76,7 +76,7 @@ OlivineCity_Gym_EventScript_MoveLeft4::
 
 OlivineCity_Gym_Text_Gent:
 	.string "I knew you'd come here.\p"
-	.string "Thank you for helping the GYM LEADER,\n"
+	.string "Thank you for helping the Gym Leader,\n"
 	.string "but battle is a separate matter.\p"
 	.string "Go for it!$"
 
@@ -84,8 +84,8 @@ OlivineCity_Gym_Text_Gent2:
 	.string "Impressive!\n"
 	.string "You should continue your journey to\n"
 	.string "different places.\p"
-	.string "Since you can use SURF, why don't you\n"
-	.string "try it on the LAKE OF RAGE?$"
+	.string "Since you can use Surf, why don't you\n"
+	.string "try it on the Lake Of Rage?$"
 
 OlivineCity_Gym_EventScript_Lass::
 	lock
@@ -205,7 +205,7 @@ OlivineCity_Gym_Text_GymGuideText:
 
 OlivineCity_Gym_Text_GymGuideWinText:
 	.string "That was awesome.\p"
-	.string "The STEEL-type, huh?\p"
+	.string "The Steel-type, huh?\p"
 	.string "That was a close encounter of an\n"
 	.string "unknown kind!$"
 
@@ -297,7 +297,7 @@ OlivineCity_Gym_Text_JasmineBadgeSpeech:
 	.string "Take this too!$"
 
 OlivineCity_Gym_Text_JasmineIronTailSpeech:
-	.string "You can use that TM to teach\n"
+	.string "You can use that Tm to teach\n"
 	.string "Iron Tail!$"
 
 OlivineCity_Gym_Text_JasmineGoodLuck:

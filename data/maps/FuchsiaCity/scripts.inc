@@ -24,16 +24,16 @@ FuchsiaCity_EventScript_BaobaCall::
 	end
 
 FuchsiaCity_Text_Baoba:
-	.string "WARDEN BAOBA: {PLAYER}!\p"
-	.string "This is WARDEN BAOBA.\p"
+	.string "Warden Baoba: {PLAYER}!\p"
+	.string "This is Warden Baoba.\p"
 	.string "Something awful has happened!\n"
-	.string "My old SAFARI ZONE in Fuchsia City\l"
+	.string "My old Safari Zone in Fuchsia City\l"
 	.string "was bought out and reopened!\p"
 	.string "And apparently it has exotic new\n"
 	.string "Pokémon!\p"
 	.string "It's hurting my business!\p"
 	.string "{PLAYER}, you must venture into the\n"
-	.string "new SAFARI ZONE and catch a Pokémon\l"
+	.string "new Safari Zone and catch a Pokémon\l"
 	.string "to show me. I must know about these\l"
 	.string "'exotic' Pokémon.\p"
 	.string "Please {PLAYER}, my business depends\n"
@@ -100,8 +100,8 @@ FuchsiaCity_EventScript_SafariZone::
 	end
 
 FuchsiaCity_Text_Youngster:
-	.string "One of the ELITE FOUR used to be\n"
-	.string "the LEADER of FUCHSIA's GYM.$"
+	.string "One of the Elite Four used to be\n"
+	.string "the Leader of Fuchsia's Gym.$"
 
 FuchsiaCity_Text_PokefanM:
 	.string "Koga's daughter succeeded him as\n"
@@ -125,17 +125,17 @@ FuchsiaCity_Text_GymSign:
 
 FuchsiaCity_Text_SafariZoneOfficeSign:
 	.string "There's a notice here…\p"
-	.string "SAFARI ZONE OFFICE is closed until\n"
+	.string "Safari Zone Office is closed until\n"
 	.string "further notice.$"
 
 FuchsiaCity_Text_SafariZone:
-	.string "SAFARI ZONE\n"
-	.string "NOW OWNED BY\l"
-	.string "DEVON CORP.$"
+	.string "Safari Zone\n"
+	.string "Now Owned By\l"
+	.string "Devon Corp.$"
 
 FuchsiaCity_Text_SafariZoneClosedSign:
-	.string "The WARDEN is traveling abroad.\p"
-	.string "Therefore, the SAFARI ZONE is\n"
+	.string "The Warden is traveling abroad.\p"
+	.string "Therefore, the Safari Zone is\n"
 	.string "closed.$"
 
 FuchsiaCity_Text_NoLitteringSign:

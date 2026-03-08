@@ -50,11 +50,11 @@ Cherrygrove_Pokemart_Pokemart:
 	end
 
 Cherrygrove_Pokemart_Text_CooltrainerM:
-	.string "They're fresh out of POKé BALLS!\p"
+	.string "They're fresh out of Poké Balls!\p"
 	.string "When will they get more of them?$"
 
 Cherrygrove_Pokemart_Text_CooltrainerM_PokeBallsInStock:
-	.string "POKé BALLS are in stock!\n"
+	.string "Poké Balls are in stock!\n"
 	.string "Now I can catch Pokémon!$"
 
 Cherrygrove_Pokemart_Text_Youngster:
@@ -62,5 +62,5 @@ Cherrygrove_Pokemart_Text_Youngster:
 	.string "bug Pokémon poisoned my Pokémon!\p"
 	.string "I just kept going, but then my\n"
 	.string "Pokémon fainted.\p"
-	.string "You should keep an ANTIDOTE\n"
+	.string "You should keep an Antidote\n"
 	.string "with you.$"

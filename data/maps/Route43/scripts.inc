@@ -61,7 +61,7 @@ Route43_Text_PokemaniacBenBeaten:
 Route43_Text_PokemaniacBenAfter:
     .string "What else do I like besides\n"
     .string "Pokémon?\p"
-    .string "MARY on the radio. I bet she's\n"
+    .string "Mary on the radio. I bet she's\n"
     .string "cute!$"
 
 Route43_Text_PokemaniacBrentSeen:
@@ -77,12 +77,12 @@ Route43_Text_PokemaniacBrentAfter:
 
 Route43_Text_PokemaniacRonSeen:
     .string "Would you get this?\p"
-    .string "Some SILVER guy made fun of my\n"
+    .string "Some Silver guy made fun of my\n"
     .string "Pokémon!\p"
     .string "Darn it! My Pokémon's great!$"
 
 Route43_Text_PokemaniacRonBeaten:
-    .string "My NIDOKING did pretty right on!$"
+    .string "My Nidoking did pretty right on!$"
 
 Route43_Text_PokemaniacRonAfter:
     .string "It's okay for people to like\n"
@@ -99,10 +99,10 @@ Route43_Text_FisherMarvinBeaten:
     .string "I lost, but I feel better anyway.$"
 
 Route43_Text_FisherMarvinAfter:
-    .string "KURT's LURE BALL is the best for\n"
+    .string "Kurt's Lure Ball is the best for\n"
     .string "catching hooked Pokémon.\p"
     .string "It's much more effective than a\n"
-    .string "ULTRA BALL.$"
+    .string "Ultra Ball.$"
 
 Route43_Text_CamperSpencerSeen:
     .string "I can do so much with my\n"
@@ -112,11 +112,11 @@ Route43_Text_CamperSpencerBeaten:
     .string "Losing isn't fun at all…$"
 
 Route43_Text_CamperSpencerAfter:
-    .string "What is going on at LAKE OF RAGE?\p"
+    .string "What is going on at Lake Of Rage?\p"
     .string "We were planning to camp there.$"
 
 Route43_Text_PicnickerTiffanySeen:
-    .string "Are you going to LAKE OF RAGE too?\p"
+    .string "Are you going to Lake Of Rage too?\p"
     .string "Let's play for a little while!$"
 
 Route43_Text_PicnickerTiffanyBeaten:
@@ -127,15 +127,15 @@ Route43_Text_PicnickerTiffanyWantsPicnic:
     .string "Won't you join us?$"
 
 Route43_Sign1:
-    .string "ROUTE 43\p"
-    .string "LAKE OF RAGE - MAHOGANY TOWN$"
+    .string "Route 43\p"
+    .string "Lake Of Rage - Mahogany Town$"
 
 Route43_Sign2:
-    .string "ROUTE 43\p"
-    .string "LAKE OF RAGE - MAHOGANY TOWN$"
+    .string "Route 43\p"
+    .string "Lake Of Rage - Mahogany Town$"
 
 Route43_TrainerTips:
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "All Pokémon have pros and cons\n"
     .string "depending on their types.\p"
     .string "If their types differ, a higher-\n"

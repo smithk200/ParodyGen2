@@ -284,29 +284,29 @@ CherryGroveCity_Silver_AfterBattle::
 CherrygroveCity_Text_GuideGentIntro:
 	.string "You're a rookie trainer,\n"
 	.string "aren't you? I can tell!\p"
-	.string "That's OK! Everyone is a\n"
+	.string "That's Ok! Everyone is a\n"
 	.string "rookie at some point!\p"
 	.string "If you'd like, I can teach\n"
 	.string "you a few things.$"
 
 CherrygroveCity_Text_GuideGentTourStart:
-	.string "OK, then!\n"
+	.string "Ok, then!\n"
 	.string "Follow me!$"
 
 CherrygroveCity_Text_GuideGentPokecenter:
-	.string "This is a Pokémon CENTER.\p"
+	.string "This is a Pokémon Center.\p"
 	.string "They heal your Pokémon in no\n"
 	.string "time at all.\p"
 	.string "You'll be relying on them a lot,\n"
 	.string "so you better learn about them.$"
 
 CherrygroveCity_Text_GuideGentMart:
-	.string "This is a Pokémon MART.\p"
-	.string "They sell BALLS for catching wild\n"
+	.string "This is a Pokémon Mart.\p"
+	.string "They sell Balls for catching wild\n"
 	.string "Pokémon and other useful items.$"
 
 CherrygroveCity_Text_GuideGentRoute30:
-	.string "ROUTE 30 is out this way.\p"
+	.string "Route 30 is out this way.\p"
 	.string "Trainers will be battling\n"
 	.string "their prized Pokémon there.$"
 
@@ -320,7 +320,7 @@ CherrygroveCity_Text_GuideGentMap:
 	.string "It's my house! Thanks for\n"
 	.string "your company.\p"
 	.string "Oh, and if you're ever lost, check\n"
-	.string "the MAP on your POKéGEAR!\p"
+	.string "the Map on your PokéGear!\p"
 	.string "I wish you luck on your journey!$"
 
 CherrygroveCity_Text_GuideGentDecline:
@@ -331,7 +331,7 @@ CherrygroveCity_Text_GuideGentDecline:
 
 CherrygroveCity_Text_RivalSeen:
 	.string "… … … … … … … …\p"
-	.string "You got a Pokémon at the LAB.\p"
+	.string "You got a Pokémon at the Lab.\p"
 	.string "What a waste.\n"
 	.string "A wimp like you.\p"
 	.string "… … … … … … … …\p"
@@ -350,7 +350,7 @@ CherrygroveCity_Text_RivalAfter:
 
 CherrygroveCity_Text_RivalID:
 	.string "Give it back!\n"
-	.string "That's my TRAINER CARD!\p"
+	.string "That's my Trainer Card!\p"
 	.string "Oh no!\n"
 	.string "You saw my name...$"
 
@@ -372,7 +372,7 @@ CherrygroveCity_Text_YoungsterHavePokedex:
 CherrygroveCity_Text_MysticWaterGuyBefore:
 	.string "A Pokémon I caught had an\n"
 	.string "item.\p"
-	.string "I think it's MYSTIC WATER.\p"
+	.string "I think it's Mystic Water.\p"
 	.string "I don't need it, so do you\n"
 	.string "want it?$"
 
@@ -386,16 +386,16 @@ CherrygroveCity_Text_CitySign:
 	.string "in the ground.$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "GUIDE GENT'S HOUSE$"
+	.string "Guide Gent'S House$"
 
 CherryGroveCity_Text_Staryu:
-	.string "STARYU: Yuuuuuuuu.$"
+	.string "Staryu: Yuuuuuuuu.$"
 
 CherryGroveCity_Text_Corsola:
-	.string "CORSOLA: Corsola! La!$"
+	.string "Corsola: Corsola! La!$"
 
 CherryGroveCity_Text_Krabby:
-	.string "KRABBY: KOOOOKEEE!$"
+	.string "Krabby: Kooookeee!$"
 
 CherryGroveCity_Movement_Trigger_Gent:
 	walk_down

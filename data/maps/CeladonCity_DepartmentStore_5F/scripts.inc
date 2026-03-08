@@ -36,7 +36,7 @@ CeladonDeptStore5_Text_Falkner:
 	.string "I'm picking up gear for my\n"
 	.string "bird Pokémon.\p"
 	.string "If you want to face me again, I'll\n"
-	.string "be at the DOJO in SAFFRON CITY.$"
+	.string "be at the Dojo in Saffron City.$"
 
 CeladonDeptStore5F_Text_Gentleman:
 	.string "I want to buy some items that\n"
@@ -44,8 +44,8 @@ CeladonDeptStore5F_Text_Gentleman:
 	.string "have enough money…$"
 
 CeladonDeptStore5F_Text_Sailor:
-	.string "I want PP UP, so I can raise the\n"
-	.string "PP of moves. But you can't buy it…$"
+	.string "I want Pp Up, so I can raise the\n"
+	.string "Pp of moves. But you can't buy it…$"
 
 CeladonDeptStore5F_Text_Teacher:
 	.string "Using items on them makes Pokémon\n"
@@ -53,4 +53,4 @@ CeladonDeptStore5F_Text_Teacher:
 	.string "They hate certain items, though…$"
 
 CeladonDeptStore5F_Text_Directory:
-	.string "5F: DRUG STORE$"
+	.string "5f: Drug Store$"

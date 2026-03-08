@@ -28,7 +28,7 @@ OlivineCityHouse3_EventScriptFishingGuruRefused::
 	end
 
 OlivineCity_Text_OfferGoodRod:
-	.string "OLIVINE is on the sea!\p"
+	.string "Olivine is on the sea!\p"
 	.string "And if it's on the sea, there\n"
 	.string "are bound to be fish!\p"
 	.string "I've fished here for 30 years.\p"
@@ -43,7 +43,7 @@ OlivineCity_Text_GaveGoodRod:
 	.string "Fish aren't only found in the\n"
 	.string "sea--they're wherever there's\l"
 	.string "water.\p"
-	.string "By the way, your POKéDEX shows\n"
+	.string "By the way, your PokéDex shows\n"
 	.string "fishing groups for Pokémon.\p"
 	.string "Different spots may contain\n"
 	.string "similar fish types.$"

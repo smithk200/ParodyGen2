@@ -136,7 +136,7 @@ Route39_EventScript_BaobaIntro::
 	end
 
 Route39_Text_ChooseLegend::
-	.string "BAOBA: GOOD HEAVENS! Did that\n"
+	.string "Baoba: Good Heavens! Did that\n"
 	.string "shadow belong to a Pokémon?\p"
 	.string "Did you get a good look at it?\n"
 	.string "I can't tell what color it was...$"
@@ -145,33 +145,33 @@ Route39_Text_BaobaIntro::
 	.string "How strange...\p"
 	.string "...Ohh!\n"
 	.string "What you are holding is...\l"
-	.string "what they call... a POKéDEX!\p"
+	.string "what they call... a PokéDex!\p"
 	.string "Haven't seen one of those in ages.\p"
-	.string "My name is BAOBA!\n"
-	.string "I used to run a SAFARI ZONE in\l"
-	.string "FUCHSIA CITY, but it was becoming\l"
+	.string "My name is Baoba!\n"
+	.string "I used to run a Safari Zone in\l"
+	.string "Fuchsia City, but it was becoming\l"
 	.string "out of date with new entertainment\l"
 	.string "options coming out.\p"
 	.string "I decided to go overseas to learn\n"
 	.string "the newest technology and open a\l"
-	.string "state-of-the-art SAFARI ZONE\l"
-	.string "in CIANWOOD.\p"
+	.string "state-of-the-art Safari Zone\l"
+	.string "in Cianwood.\p"
 	.string "It may be more than a coincidence\n"
 	.string "that we are chatting.\p"
 	.string "Why don't we register each other's\n"
 	.string "numbers in the Pokégear?\p"
 	.string "I can give you a call once the\n"
-	.string "SAFARI ZONE is open before I call\l"
+	.string "Safari Zone is open before I call\l"
 	.string "anyone else!$"
 
 Route39_Text_Registered:
-	.string "{PLAYER} registered BAOBA\n"
-	.string "in the POKéGEAR!$"
+	.string "{PLAYER} registered Baoba\n"
+	.string "in the PokéGear!$"
 
 
 Route39_Text_WillCall:
-	.string "BAOBA: I'll let you know\n"
-	.string "on the POKéGEAR soon!$"
+	.string "Baoba: I'll let you know\n"
+	.string "on the PokéGear soon!$"
 
 Route39_Movement_BaobaLeave:
 	walk_left
@@ -222,7 +222,7 @@ Route39_EventScript_Woman::
 
 Route39_Text_Woman:
 	.string "That shadow... Maybe it was a giant\n"
-	.string "PIDGEY?$"
+	.string "Pidgey?$"
 
 Route39_EventScript_Miltank::
 	lock
@@ -235,7 +235,7 @@ Route39_EventScript_Miltank::
 	end
 
 Route39_Text_Miltank:
-	.string "MILTANK: Mooo!$"
+	.string "Miltank: Mooo!$"
 
 Route39_EventScript_Eugene::
 	trainerbattle_single TRAINER_EUGENE, Route39_Text_SailorEugeneSeen, Route39_Text_SailorEugeneBeaten
@@ -243,7 +243,7 @@ Route39_EventScript_Eugene::
 	end
 
 Route39_Text_SailorEugeneSeen:
-	.string "I just got back to OLIVINE.\p"
+	.string "I just got back to Olivine.\p"
 	.string "So how about a Pokémon battle?$"
 
 Route39_Text_SailorEugeneBeaten:
@@ -262,16 +262,16 @@ Route39_EventScript_Derek::
 
 Route39_Text_PokefanMDerekSeen:
 	.string "This is a good time to brag\n"
-	.string "about my PIKACHU!$"
+	.string "about my Pikachu!$"
 
 Route39_Text_PokefanMDerekBeaten:
 	.string "I had no time to show off\n"
-	.string "PIKACHU…$"
+	.string "Pikachu…$"
 
 Route39_Text_PokefanMDerekAfter:
 	.string "I'm not listening to your\n"
 	.string "bragging!\p"
-	.string "We POKé FANS have a policy\n"
+	.string "We Poké Fans have a policy\n"
 	.string "of not listening to bragging!$"
 
 Route39_EventScript_Ruth::
@@ -326,8 +326,8 @@ Route39_Text_PokefanFJaimeBeaten:
 	.string "Oh, how disappointing…$"
 
 Route39_Text_PokefanFJaimeAfter:
-	.string "I met UMBREON at night right\n"
-	.string "here on ROUTE 39.\p"
+	.string "I met Umbreon at night right\n"
+	.string "here on Route 39.\p"
 	.string "I'm not sure why, but it\n"
 	.string "seems to like it when I\l"
 	.string "train here.\p"
@@ -343,8 +343,8 @@ Route39_EventScript_Sign1::
 	end
 
 Route39_Text_Sign:
-	.string "ROUTE 39\p"
-	.string "OLIVINE CITY - ECRUTEAK CITY$"
+	.string "Route 39\p"
+	.string "Olivine City - Ecruteak City$"
 
 Route39_EventScript_Sign2::
 	lock
@@ -354,7 +354,7 @@ Route39_EventScript_Sign2::
 	end
 
 Route39_Text_MoomooFarmSign:
-	.string "MOOMOO FARM\p"
+	.string "Moomoo Farm\p"
 	.string "Enjoy Our Fresh and Tasty Milk$"
 
 Route39_EventScript_Sign3::
@@ -365,10 +365,10 @@ Route39_EventScript_Sign3::
 	end
 
 Route39_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "Use HEADBUTT on trees to shake\n"
+	.string "Trainer Tips\p"
+	.string "Use Headbutt on trees to shake\n"
 	.string "Pokémon out.\p"
 	.string "Different kinds of Pokémon\n"
 	.string "drop out of trees.\p"
-	.string "Use HEADBUTT on any tree\n"
+	.string "Use Headbutt on any tree\n"
 	.string "you see!$"

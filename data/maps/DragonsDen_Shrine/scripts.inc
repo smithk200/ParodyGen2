@@ -224,7 +224,7 @@ DragonsDen_Shrine_Text_PassedTest:
     .string "important!\p"
     .string "{PLAYER}, don't lose that belief.\p"
     .string "It will see you through at the\n"
-    .string "Pokémon LEAGUE.$"
+    .string "Pokémon League.$"
 
 DragonsDen_Shrine_EventScript_ClairEnter::
 	clearflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
@@ -485,7 +485,7 @@ DragonsDen_Shrine_Text_HereRisingBadge:
     .string "Hurry up! Take it!$"
 
 DragonsDen_Shrine_Text_ElderScoldsClair:
-    .string "CLAIR…\p"
+    .string "Clair…\p"
     .string "Reflect upon what it is that you\n"
     .string "lack and this child has.$"
 
@@ -498,7 +498,7 @@ DragonsDen_Shrine_Text_ComeAgain:
 DragonsDen_Shrine_Text_SilverIsInTraining:
     .string "A boy close to your age is in\n"
     .string "training here.\p"
-    .string "He is much like CLAIR when she was\n"
+    .string "He is much like Clair when she was\n"
     .string "younger. It is a little worrisome…$"
 
 DragonsDen_Shrine_EventScript_Elder2::
@@ -511,13 +511,13 @@ DragonsDen_Shrine_EventScript_Elder3::
 
 DragonsDen_Shrine_Text_Elder2:
     .string "It's been quite some time since a\n"
-    .string "trainer has gained our MASTER's\l"
+    .string "trainer has gained our Master's\l"
     .string "rare approval.\p"
     .string "In fact, not since Master Fry.$"
 
 DragonsDen_Shrine_Text_Elder3:
     .string "You know young Master Fry?\p"
-    .string "He looks so much like our MASTER\n"
+    .string "He looks so much like our Master\n"
     .string "did in his youth.\p"
     .string "It's in their blood.$"
 
@@ -562,7 +562,7 @@ DragonsDen_Shrine_Text_TakeThisDratini:
     .string "Hm… Good to see you here.\p"
     .string "Your arrival is most fortunate.\p"
     .string "I have something for you.\p"
-    .string "Take this DRATINI as proof that I\n"
+    .string "Take this Dratini as proof that I\n"
     .string "have recognized your worth.$"
 
 DragonsDen_Shrine_Text_SymbolicDragon:
@@ -572,7 +572,7 @@ DragonsDen_Shrine_Text_SymbolicDragon:
     .string "entrusted with one.$"
 
 DragonsDen_Shrine_Text_ClairsGrandfather:
-    .string "CLAIR appears to have learned an\n"
+    .string "Clair appears to have learned an\n"
     .string "invaluable lesson from you.\p"
     .string "I thank you as her grandfather.$"
 

@@ -177,7 +177,7 @@ Route30_Text_Mailbox:
 
 Route30_Text_UseTackle:
 	.string "Go, Rattata!\p"
-	.string "TACKLE!$"
+	.string "Tackle!$"
 
 Route30_Text_ThisIsABigBattle:
 	.string "What? This is a big battle!\n"
@@ -228,7 +228,7 @@ Route30_Text_BugCatcherDonAfter:
 	.string "I should've bought some more…$"
 
 Route30_Text_YoungsterDirectionsToMrPokemon:
-	.string "MR. Pokémon's house?\n"
+	.string "Mr. Pokémon's house?\n"
 	.string "It's a bit farther ahead.$"
 
 Route30_Text_YoungsterEveryoneIsBattling:
@@ -246,11 +246,11 @@ Route30_Text_Sign:
 	.string "Violet City -- Cherrygrove City$"
 
 Route30_Text_MrPokemonsHouseDirectionsSign:
-	.string "MR. Pokémon's House\n"
-	.string "STRAIGHT AHEAD!$"
+	.string "Mr. Pokémon's House\n"
+	.string "Straight Ahead!$"
 
 Route30_Text_MrPokemonsHouseSign:
-	.string "MR. Pokémon's House$"
+	.string "Mr. Pokémon's House$"
 
 Route30_Text_TrainerTips:
 	.string "Trainer Tips!\p"
@@ -265,11 +265,11 @@ Route30_Text_YoungsterJoeyGiveHPUp:
 	.string "Oh yeah, I almost forgot that\n"
 	.string "I had to give you this.\p"
 	.string "Use it to get even tougher,\n"
-	.string "OK?\p"
+	.string "Ok?\p"
 	.string "I'm going to get tougher too.$"
 
 Route30_Text_Elm_Disaster:
-	.string "PROF ELM: H-hello? {PLAYER}? It's\n"
+	.string "Prof Elm: H-hello? {PLAYER}? It's\n"
 	.string "a disaster!\p"
 	.string "Uh, um, it's just terrible!\p"
 	.string "What should I do? It…\n"
@@ -278,4 +278,4 @@ Route30_Text_Elm_Disaster:
 
 
 Route30_Text_Poliwag:
-	.string "POLIWAG: Wag waag!$"
+	.string "Poliwag: Wag waag!$"

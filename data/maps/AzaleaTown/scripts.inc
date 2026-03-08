@@ -389,7 +389,7 @@ AzaleaTown_Text_Rocket2:
 AzaleaTown_Text_GrampsBefore:
 	.string "The Slowpoke have disappeared\n"
 	.string "from town…\p"
-	.string "I heard their TAILS are being\n"
+	.string "I heard their Tails are being\n"
 	.string "sold somewhere.$"
 
 AzaleaTown_Text_GrampsAfter:
@@ -412,14 +412,14 @@ AzaleaTown_Text_Youngster:
 
 AzaleaTown_Text_Slowpoke1:
 	.string "Slowpoke:..........\p"
-	.string "...............YAWN?$"
+	.string "...............Yawn?$"
 
 AzaleaTown_Text_Kurt1:
 	.string "Ilex Forest is restless!\p"
 	.string "What is going on?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}, here's your GS BALL back!$"
+	.string "{PLAYER}, here's your Gs Ball back!$"
 
 AzaleaTown_Text_Kurt3:
 	.string "Could you go see why Ilex Forest\n"

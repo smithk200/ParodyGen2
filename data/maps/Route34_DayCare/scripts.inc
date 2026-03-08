@@ -21,7 +21,7 @@ Route34_DayCare_Text_Bookshelf1:
 	.string "A dictionary!\p"
 	.string "{PLAYER} opened the dictionary to\n"
 	.string "a random page.\p"
-	.string "'BABE'\n"
+	.string "'Babe'\n"
 	.string "A noun, meaning infant or baby.\p"
 	.string "{PLAYER} put away the dictionary.$"
 
@@ -37,26 +37,26 @@ Route34_DayCare_Text_Bookshelf3:
 	.string "A book of word assocations!\p"
 	.string "{PLAYER} flipped through\n"
 	.string "the book.\p"
-	.string "PICHU -> CUTE\l"
-	.string "CLEFFA -> CUTE\l"
-	.string "IGGLYBUFF -> SONG\l"
-	.string "TYROGUE -> FIGHTING\l"
-	.string "SMOOCHUM -> ICE\l"
-	.string "ELEKID -> ELECTRIC\l"
-	.string "MAGBY -> FIRE\p"
+	.string "Pichu -> Cute\l"
+	.string "Cleffa -> Cute\l"
+	.string "Igglybuff -> Song\l"
+	.string "Tyrogue -> Fighting\l"
+	.string "Smoochum -> Ice\l"
+	.string "Elekid -> Electric\l"
+	.string "Magby -> Fire\p"
 	.string "{PLAYER} put away the book.$"
 
 Route34_DayCare_Text_Bookshelf4:
 	.string "A book of Pokémon natures!\p"
 	.string "{PLAYER} flipped through\n"
 	.string "the book.\p"
-	.string "PICHU -> STATIC\l"
-	.string "CLEFFA -> CUTE CHARM\l"
-	.string "IGGLYBUFF -> CUTE CHARM\l"
-	.string "TYROGUE -> GUTS\l"
-	.string "SMOOCHUM -> OBLIVIOUS\l"
-	.string "ELEKID -> STATIC\l"
-	.string "MAGBY -> FLAME BODY\p"
+	.string "Pichu -> Static\l"
+	.string "Cleffa -> Cute Charm\l"
+	.string "Igglybuff -> Cute Charm\l"
+	.string "Tyrogue -> Guts\l"
+	.string "Smoochum -> Oblivious\l"
+	.string "Elekid -> Static\l"
+	.string "Magby -> Flame Body\p"
 	.string "{PLAYER} put away the book.$"
 
 Route34_DayCare_EventScript_Clerk::
@@ -145,8 +145,8 @@ Route34_DayCare_EventScript_ClerkAfter::
 	end
 
 Route34_DayCare_Text_ClerkBefore:
-	.string "I'm the DAYCARE couple's son.\p"
-	.string "An ODD EGG was found with a trainer's\n"
+	.string "I'm the Daycare couple's son.\p"
+	.string "An Odd Egg was found with a trainer's\n"
 	.string "Pokémon, but they didn't want it...\p"
 	.string "I'd offer it to you...\n"
 	.string "But how can I know you'll take good\l"
@@ -158,17 +158,17 @@ Route34_DayCare_Text_ClerkNoRoom:
 
 Route34_DayCare_Text_ClerkQuestion:
 	.string "Answer this question for me.\n"
-	.string "How do you feel about this ODD EGG?$"
+	.string "How do you feel about this Odd Egg?$"
 
 Route34_DayCare_Text_Rejection:
 	.string "Hmm, I think this egg isn't for you.\p"
 	.string "It would be irresponsible of me to\n"
-	.string "give out a precious EGG like this\l"
+	.string "give out a precious Egg like this\l"
 	.string "to someone who isn't as well-read\l"
 	.string "on the subject of Pokémon breeding!$"
 
 Route34_DayCare_Text_ReceivedOddEgg:
-	.string "{PLAYER} Received the ODD EGG.$"
+	.string "{PLAYER} Received the Odd Egg.$"
 
 Route34_DayCare_Text_TakeCare:
 	.string "I knew you were the right trainer\n"
@@ -191,7 +191,7 @@ Route34_DayCare_EventScript_Ditto::
 	end
 
 Route34_DayCare_Text_Ditto:
-	.string "DITTO: Tto!$"
+	.string "Ditto: Tto!$"
 
 Route34_EventScript_DaycareMan::
 	lock
@@ -449,9 +449,9 @@ Route34_DayCare_EventScript_TwoMonsInDaycare::
 	end
 
 Route34_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'm the DAY-CARE MAN.\p"
+	.string "I'm the Day-Care Man.\p"
 	.string "I help take care of the precious\n"
-	.string "Pokémon of TRAINERS.\p"
+	.string "Pokémon of Trainers.\p"
 	.string "If you'd like me to raise your Pokémon,\n"
 	.string "have a word with my wife.$"
 
@@ -459,7 +459,7 @@ Route34_Text_DoYouWantEgg:
 	.string "Ah, it's you!\p"
 	.string "We were raising your Pokémon,\n"
 	.string "and my goodness, were we surprised!\p"
-	.string "Your Pokémon had an EGG!\p"
+	.string "Your Pokémon had an Egg!\p"
 	.string "We don't know how it got there,\n"
 	.string "but your Pokémon had it.\p"
 	.string "You do want it, yes?$"
@@ -477,8 +477,8 @@ Route34_Text_YouHaveNoRoomForIt:
 	.string "Come back when you've made room.$"
 
 Route34_Text_ReceivedEgg:
-	.string "{PLAYER} received the EGG from\n"
-	.string "the DAY-CARE MAN.$"
+	.string "{PLAYER} received the Egg from\n"
+	.string "the Day-Care Man.$"
 
 Route34_Text_TakeGoodCareOfIt:
 	.string "Take good care of it.$"
@@ -488,7 +488,7 @@ Route34_Text_FriendlyWithOtherTrainersMon:
 	.string "it seemed to be friendly with\l"
 	.string "{STR_VAR_2}'s {STR_VAR_3}.\p"
 	.string "I may even have seen it receiving\n"
-	.string "a piece of MAIL.$"
+	.string "a piece of Mail.$"
 
 @ Unused
 Route34_Text_SeeWifeIfYouWantToPickUpMon:
@@ -504,7 +504,7 @@ Route34_Text_IWillKeepDoYouWantIt:
 	.string "You do want this, yes?$"
 
 Route34_DayCare_Text_WouldYouLikeUsToRaiseAMon:
-	.string "I'm the DAY-CARE LADY.\p"
+	.string "I'm the Day-Care Lady.\p"
 	.string "We can raise Pokémon for you.\p"
 	.string "Would you like us to raise one?$"
 
@@ -565,7 +565,7 @@ Route34_DayCare_Text_HeresYourMon:
 
 Route34_DayCare_Text_TookBackMon:
 	.string "{PLAYER} took back {STR_VAR_1} from\n"
-	.string "the DAY-CARE LADY.$"
+	.string "the Day-Care Lady.$"
 
 Route34_DayCare_Text_YouHaveJustOneMon:
 	.string "Oh? But you have just one\n"

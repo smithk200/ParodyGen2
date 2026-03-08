@@ -111,30 +111,30 @@ GoldenrodCity_RadioTower_5F_Text_FakeDirector2:
 	.string "I pretended to be the real thing to\n"
 	.string "prepare for our takeover.\p"
 	.string "Do you want to know where we hid\n"
-	.string "the real DIRECTOR?\p"
+	.string "the real Director?\p"
 	.string "Sure, I'll tell you. But only if you\n"
 	.string "can beat me!$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorWin:
-	.string "OK, OK. I'll tell you where he is.$"
+	.string "Ok, Ok. I'll tell you where he is.$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter:
-	.string "The boss stashed the DIRECTOR in\n"
-	.string "the UNDERGROUND WAREHOUSE.\p"
-	.string "It's at the far end of the UNDER-\n"
-	.string "GROUND.\p"
+	.string "The boss stashed the Director in\n"
+	.string "the Underground Warehouse.\p"
+	.string "It's at the far end of the Under-\n"
+	.string "Ground.\p"
 	.string "I am a nice guy, I will give you\n"
-	.string "the BASEMENT KEY to get to the\l"
-	.string "UNDERGROUND WAREHOUSE.\p"
+	.string "the Basement Key to get to the\l"
+	.string "Underground Warehouse.\p"
 	.string "But I doubt you'll get that far.$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter2:
-	.string "The boss stashed the DIRECTOR in\n"
-	.string "the UNDERGROUND WAREHOUSE.\p"
-	.string "It's at the far end of the UNDER-\n"
-	.string "GROUND.\p"
-	.string "You can use the BASEMENT KEY to\n"
-	.string "get to the UNDERGROUND WAREHOUSE.\p"
+	.string "The boss stashed the Director in\n"
+	.string "the Underground Warehouse.\p"
+	.string "It's at the far end of the Under-\n"
+	.string "Ground.\p"
+	.string "You can use the Basement Key to\n"
+	.string "get to the Underground Warehouse.\p"
 	.string "But I doubt you'll get that far.$"
 
 @=======[STUDIO]==============================================================================================================================
@@ -329,29 +329,29 @@ GoldenrodCity_RadioTower_5F_Movement_Leave2:
 	step_end
 
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Seen:
-	.string "Remember me from the HIDEOUT in\n"
-	.string "MAHOGANY TOWN?\p"
+	.string "Remember me from the Hideout in\n"
+	.string "Mahogany Town?\p"
 	.string "My boss scolded me but I'm stronger.\p"
 	.string "I lost then, but I won't this time.$"
 
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Beaten:
 	.string "This can't be happening!\p"
 	.string "I fought hard, but I still lost…\p"
-	.string "I'm so sorry GIOVANNI…$"
+	.string "I'm so sorry Giovanni…$"
 
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1After:
 	.string "{PLAYER}, isn't it?\p"
 	.string "A brat like you won't appreciate\n"
-	.string "the magnificence of TEAM ROCKET.\p"
+	.string "the magnificence of Team Rocket.\p"
 	.string "That's too bad. I really admire\n"
 	.string "your power.$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossSeen:
 	.string "Oh? You managed to get this far?\p"
 	.string "You must be quite the trainer.\p"
-	.string "We intend to take over this RADIO\n"
-	.string "STATION and announce our comeback.\p"
-	.string "That should bring our boss GIOVANNI\n"
+	.string "We intend to take over this Radio\n"
+	.string "Station and announce our comeback.\p"
+	.string "That should bring our boss Giovanni\n"
 	.string "back from his solitary training.\p"
 	.string "We are going to regain our former\n"
 	.string "glory...\p"
@@ -359,18 +359,18 @@ GoldenrodCity_RadioTower_5F_Text_RocketBossSeen:
 	.string "our meticulous plans!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossBeaten:
-	.string "No! Forgive me, GIOVANNI!$"
+	.string "No! Forgive me, Giovanni!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossAfter:
 	.string "How could this be?\p"
 	.string "Our dreams have come to naught.\p"
 	.string "I wasn't up to the task after all.\p"
-	.string "Like GIOVANNI did before me, I will\n"
-	.string "disband TEAM ROCKET here today.\p"
+	.string "Like Giovanni did before me, I will\n"
+	.string "disband Team Rocket here today.\p"
 	.string "Farewell.$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorThanks:
-	.string "DIRECTOR: {PLAYER}, thank you!\p"
+	.string "Director: {PLAYER}, thank you!\p"
 	.string "Your courageous actions have saved\n"
 	.string "Pokémon nationwide.\p"
 	.string "I know it's not much, but please\n"
@@ -378,41 +378,41 @@ GoldenrodCity_RadioTower_5F_Text_DirectorThanks:
 
 GoldenrodCity_RadioTower_5F_Text_DirectorClearWingExplanation:
 	.string "There used to be a tower right here\n"
-	.string "in GOLDENROD CITY.\p"
+	.string "in Goldenrod City.\p"
 	.string "But it was old and creaky.\p"
-	.string "So we replaced it with our RADIO\n"
-	.string "TOWER.\p"
+	.string "So we replaced it with our Radio\n"
+	.string "Tower.\p"
 	.string "We dug up that wing during\n"
 	.string "construction.\p"
 	.string "I heard that all sorts of Pokémon\n"
-	.string "lived in GOLDENROD in the past.\p"
+	.string "lived in Goldenrod in the past.\p"
 	.string "Perhaps…\p"
 	.string "That wing has some connection to the\n"
-	.string "TIN TOWER in ECRUTEAK CITY…\p"
-	.string "OK, I better go to my OFFICE.$"
+	.string "Tin Tower in Ecruteak City…\p"
+	.string "Ok, I better go to my Office.$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorTidalWingExplanation:
 	.string "There used to be a tower right here\n"
-	.string "in GOLDENROD CITY.\p"
+	.string "in Goldenrod City.\p"
 	.string "But it was old and creaky.\p"
-	.string "So we replaced it with our RADIO\n"
-	.string "TOWER.\p"
+	.string "So we replaced it with our Radio\n"
+	.string "Tower.\p"
 	.string "We dug up that wing during\n"
 	.string "construction.\p"
 	.string "I heard that all sorts of Pokémon\n"
-	.string "lived in GOLDENROD in the past.\p"
+	.string "lived in Goldenrod in the past.\p"
 	.string "Perhaps…\p"
 	.string "That wing has some connection to the\n"
-	.string "WHIRL ISLANDS near CIANWOOD CITY…\p"
-	.string "OK, I better go to my OFFICE.$"
+	.string "Whirl Islands near Cianwood City…\p"
+	.string "Ok, I better go to my Office.$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorLegendary:
 	.string "Ah!\p"
 	.string "That reminds me…\p"
 	.string "That wing I gave you... I think\n"
-	.string "it's related to the LEGENDARY\l"
+	.string "it's related to the Legendary\l"
 	.string "Pokémon.\p"
-	.string "But! The LEGENDARY Pokémon won't\n"
+	.string "But! The Legendary Pokémon won't\n"
 	.string "appear with just that wing...\p"
 	.string "Apparently there is something else\n"
 	.string "you need... Or something like that.\p"
@@ -421,23 +421,23 @@ GoldenrodCity_RadioTower_5F_Text_DirectorLegendary:
 
 GoldenrodCity_RadioTower_5F_Text_DirectorFakeout:
 	.string "Are you expecting something?\n"
-	.string "This is what they call FAKE OUT.\p"
+	.string "This is what they call Fake Out.\p"
 	.string "I really must go back to my office\n"
 	.string "this time. See ya!$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorIntro:
-	.string "DIRECTOR: Hello, {PLAYER}!\p"
+	.string "Director: Hello, {PLAYER}!\p"
 	.string "You know, I love Pokémon.\p"
-	.string "I built this RADIO TOWER so I could\n"
+	.string "I built this Radio Tower so I could\n"
 	.string "express my love of Pokémon.\p"
 	.string "It would be nice if people enjoyed\n"
 	.string "our programs.$"
 
 GoldenrodCity_RadioTower_5F_Text_Ben:
-	.string "BEN: Do you listen to our music?$"
+	.string "Ben: Do you listen to our music?$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorOfficeSign:
-	.string "5F DIRECTOR'S   OFFICE$"
+	.string "5f Director'S   Office$"
 
 GoldenrodCity_RadioTower_5F_Text_Studio1Sign:
-	.string "5F STUDIO 1$"
+	.string "5f Studio 1$"
