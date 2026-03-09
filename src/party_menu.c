@@ -5756,17 +5756,19 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     u8 holdEffectParam = GetItemHoldEffectParam(*itemPtr);
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
+    DebugPrintf("Initial Level: %d,", sInitialLevel);
     if (!(B_RARE_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
     {
         BufferMonStatsToTaskData(mon, arrayPtr);
         cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
         BufferMonStatsToTaskData(mon, &ptr->data[NUM_STATS]);
-        DebugPrintf("Level Cap: %d:", GetCurrentLevelCap());
+        //DebugPrintf("Level Cap: %d:", GetCurrentLevelCap());
+        //DebugPrintf("Reached Cap Candy in party_menu.c");
     }
     else
     {
         cannotUseEffect = TRUE;
-        DebugPrintf("Level Cap: %d:", GetCurrentLevelCap());
+        //DebugPrintf("Level Cap: %d:", GetCurrentLevelCap());
     }
     PlaySE(SE_SELECT);
     if (cannotUseEffect)
@@ -5802,7 +5804,16 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     }
     else
     {
-        sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
+        
+        /*if (holdEffectParam == EXP_CAP)
+        {
+            sFinalLevel =  GetCurrentLevelCap();
+            DebugPrintf("Final Level: %d,", sFinalLevel);
+        }
+        else
+        */
+            sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
+        
         gPartyMenuUseExitCallback = TRUE;
         UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
         RemoveBagItem(gSpecialVar_ItemId, 1);
@@ -5811,6 +5822,11 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         {
             PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
             if (holdEffectParam == 0) // Rare Candy
+            {
+                ConvertIntToDecimalStringN(gStringVar2, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
+                StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+            }
+            else if (holdEffectParam == EXP_CAP) //Cap Candy
             {
                 ConvertIntToDecimalStringN(gStringVar2, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
                 StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);

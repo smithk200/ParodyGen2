@@ -3772,6 +3772,20 @@ bool8 ExecuteTableBasedItemEffect(struct Pokemon *mon, u16 item, u8 partyIndex, 
     }                                                                                                   \
 }
 
+static const u32 GetMonEXPDifference(void)
+{
+    u32 currentLevelCap = GetCurrentLevelCap();
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u32 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u32 TotalExp = GetMonData(mon, MON_DATA_EXP, NULL);
+    u32 LevelCapExp = (gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap]);
+    u32 CapCandyMonEXPDifference = (LevelCapExp - TotalExp);
+    DebugPrintf("TotalExp: %d", TotalExp);
+    DebugPrintf("LevelCapExp: %d", LevelCapExp);
+    DebugPrintf("CapCandyMonEXPDifference: %d", CapCandyMonEXPDifference);
+    return CapCandyMonEXPDifference;
+}
+
 // EXP candies store an index for this table in their holdEffectParam.
 const u32 sExpCandyExperienceTable[] = {
     [EXP_100 - 1] = 100,
@@ -3779,6 +3793,7 @@ const u32 sExpCandyExperienceTable[] = {
     [EXP_3000 - 1] = 3000,
     [EXP_10000 - 1] = 10000,
     [EXP_30000 - 1] = 30000,
+    [EXP_CAP - 1] = 0,
 };
 
 // Returns TRUE if the item has no effect on the Pokémon, FALSE otherwise
@@ -3800,6 +3815,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
     u8 effectFlags;
     s8 evChange;
     u16 evCount;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u32 currentLevelCap = GetCurrentLevelCap();
 
     // Determine the EV cap to use
     u32 maxAllowedEVs = !B_EV_ITEMS_CAP ? MAX_TOTAL_EVS : GetCurrentEVCap();
@@ -3849,27 +3866,36 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
             {
                 u8 param = GetItemHoldEffectParam(item);
                 dataUnsigned = 0;
+                //DebugPrintf("Param: %d", param);
 
                 if (param == 0) // Rare Candy
                 {
                     dataUnsigned = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
+                    //DebugPrintf("Rare Candy function in pokemon.c");
                 }
+                else if (param == 6) //Cap Candy
+                    {
+                    dataUnsigned = (GetMonData(mon, MON_DATA_EXP, NULL) + GetMonEXPDifference());
+                    if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap])
+                            dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
+                    //DebugPrintf("dataUnsigned: %d", dataUnsigned);
+                    }
                 else if (param - 1 < ARRAY_COUNT(sExpCandyExperienceTable)) // EXP Candies
                 {
-                    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
                     dataUnsigned = sExpCandyExperienceTable[param - 1] + GetMonData(mon, MON_DATA_EXP, NULL);
 
                     if (B_RARE_CANDY_CAP && B_EXP_CAP_TYPE == EXP_CAP_HARD)
                     {
-                        u32 currentLevelCap = GetCurrentLevelCap();
+                        
                         if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap])
                             dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
+                            //DebugPrintf("Hard EXP cap or rare candy cap function in pokemon.c");
                     }
                     if ((gSaveBlock2Ptr->optionsDifficulty == OPTIONS_DIFFICULTY_HARD) || IsNuzlockeActive()) //nuzlocke will include level cap
                     {
-                        u32 currentLevelCap = GetCurrentLevelCap();
                         if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap])
                             dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
+                            //DebugPrintf("Nuzlocke or hard mode function in pokemon.c");
                     }
                     else if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][MAX_LEVEL])
                     {

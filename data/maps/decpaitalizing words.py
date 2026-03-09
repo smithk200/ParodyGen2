@@ -2,7 +2,7 @@ import os
 import re
 
 # Root folder to scan
-root_dir = 'C:\decomps\DJ\data\maps'
+root_dir = 'C:\decomps\DJ\data\maps\WorldHub2'
 
 ## Regex to find lines with .string
 string_line_re = re.compile(r'\.string', re.IGNORECASE)

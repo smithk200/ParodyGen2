@@ -14881,6 +14881,25 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_MagicMuffler,
         .iconPalette = gItemIcon_Palette_MagicMuffler,
     },
+    [ITEM_CAP_CANDY] =
+    {
+        .name = ITEM_NAME("Cap Candy"),
+        .pluralName = ITEM_PLURAL_NAME("Cap Candies"),
+        .price = (I_PRICE >= GEN_7) ? 10000 : 4800,
+        .holdEffectParam = EXP_CAP,
+        .description = COMPOUND_STRING(
+            "Raises the level\n"
+            "of a Pokémon to\n"
+            "the level cap."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .flingPower = 30,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
+    },
 };
 
 #undef ITEM_NAME

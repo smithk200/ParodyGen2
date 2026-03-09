@@ -1011,12 +1011,15 @@
 #define ITEM_GALAR_STONE 841
 #define ITEM_PALDEA_STONE 842
 #define ITEM_CORRUPT_ORB 843
+
+//Custom Dark Gold items
 #define ITEM_MAGIC_MUFFLER 844
+#define ITEM_CAP_CANDY     845
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 845
+#define ITEMS_COUNT 846
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
@@ -1068,6 +1071,7 @@
 #define EXP_3000  3
 #define EXP_10000 4
 #define EXP_30000 5
+#define EXP_CAP   6
 
 // Item type IDs (used to determine the exit callback)
 #define ITEM_USE_MAIL             0

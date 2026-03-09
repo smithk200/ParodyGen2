@@ -55,7 +55,7 @@ VioletCity_Gym_EventScript_Falkner_Defeated::
 	end
 
 VioletGym_Text_Falkner_Intro:
-	.string "Woo-Wee!\p"
+	.string "WOO-WEE!\p"
 	.string "I'm Damian, the Gym Leader\n"
 	.string "of this hick town.\p"
 	.string "I've been in kitchens ever since\n"
