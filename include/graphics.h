@@ -3558,4 +3558,7 @@ extern const u16 gItemIcon_Palette_Radio[];
 extern const u32 gItemIcon_MagicMuffler[];
 extern const u16 gItemIcon_Palette_MagicMuffler[];
 
+extern const u32 gItemIcon_CapCandy[];
+extern const u16 gItemIconPalette_CapCandy[];
+
 #endif //GUARD_GRAPHICS_H

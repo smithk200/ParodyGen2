@@ -1235,7 +1235,7 @@ RustboroCity_Text_DevonCorpSign:
 RustboroCity_Text_GymSign:
 	.string "Rustboro City Pokémon Gym\n"
 	.string "Leader: Roxanne\p"
-	.string "“The Rock-loving honors student!”$"
+	.string "“The Rock-loving nerd!”$"
 
 RustboroCity_Text_DevonCorpBranchOfficeSign:
 	.string "Devon Corp. Branch Office\p"
@@ -1253,7 +1253,7 @@ RustboroCity_Text_TrainersSchoolSign:
 	.string "Pokémon!”$"
 
 RustboroCity_Text_CuttersHouse:
-	.string "Cutter'S House$"
+	.string "Cutter's House$"
 
 RustboroCity_Text_DevelopedNewPokenavFeature:
 	.string "I've been developing an added feature\n"

@@ -102,8 +102,8 @@ EcruteakCity_Gym_Text_GymStatue:
 
 EcruteakCity_Gym_Text_GymStatueCertified:
 	.string "Ecruteak City Pokémon Gym\p"
-	.string "Morty'S Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Rick and Morty's Certified Trainers:\n"
+	.string "Fry, {PLAYER}$"
 
 MortyIntroText:
 	.string "Rick: I'm Rick, master of ghost-types\n"
@@ -124,7 +124,7 @@ MortyIntroText:
 	.string "Pickle Rick!!!!$"
 
 MortyWinLossText:
-	.string "We're not good enough yet...\p"
+	.string "We're not good enough yet…\p"
 	.string "All right. This Badge is yours.$"
 
 Text_ReceivedFogBadge:
@@ -145,12 +145,12 @@ MortyText_ShadowBallSpeech:
 	.string "Use it if it suits you.$"
 
 MortyFightDoneText:
-	.string "I see...\p"
+	.string "I see…\p"
 	.string "Your journey has taken you to\n"
 	.string "far-off places.\p"
 	.string "You've witnessed more than I\n"
 	.string "ever have.\p"
-	.string "I envy you for that...$"
+	.string "I envy you for that…$"
 
 MortyRematchText:
 	.string "Ah, the Johto Champion!\n"
@@ -158,17 +158,17 @@ MortyRematchText:
 	.string "You've shown strength and skill,\n"
 	.string "but have you grown since we\l"
 	.string "last battled?\p"
-	.string "I've trained with my Ghost-type\n"
+	.string "We've trained with our Ghost-type\n"
 	.string "Pokémon ever since.\p"
 	.string "Let's see if you can overcome\n"
-	.string "the shadows again.\p"
-	.string "Want to have a rematch?$"
+	.string "the rifts again.\p"
+	.string "Let us have a rematch?$"
 
 Morty_RematchDefeatText:
-	.string "I'm not good enough yet...\p"
+	.string "I'm not good enough yet…\p"
 	.string "You've witnessed more than I\n"
 	.string "ever have.\p"
-	.string "I envy you for that...$"
+	.string "I envy you for that…$"
 
 SageJeffreySeenText:
 	.string "I work for the Big Guy Upstairs.\p"
@@ -196,7 +196,7 @@ MediumMarthaSeenText:
 	.string "I shall win!$"
 
 MediumMarthaBeatenText:
-	.string "I... I... I lost!$"
+	.string "I… I… I lost!$"
 
 MediumMarthaAfterBattleText:
 	.string "The one who wants to win the\n"
@@ -220,11 +220,11 @@ EcruteakCity_GymGuideText:
 	.string "halfway there!\p"
 	.string "Trainers here use Ghost- and\n"
 	.string "Dark-type Pokémon.\p"
-	.string "While Morty is a Ghost-type\n"
-	.string "expert, be wary of his mystic\l"
-	.string "deer.\p"
+	.string "While Rick and Morty are Ghost-type\n"
+	.string "trainers, be wary of his foreign\l"
+	.string "crocodile.\p"
 	.string "It's said to cause strange\n"
-	.string "nightmares...$"
+	.string "nightmares…$"
 
 EcruteakCity_GymGuideWinText:
 	.string "Whew, {PLAYER}. You did great!\p"
@@ -232,8 +232,7 @@ EcruteakCity_GymGuideWinText:
 	.string "out of pure terror!$"
 
 EcruteakCity_GymClosedText:
-	.string "Morty, the Gym Leader, is\n"
-	.string "absent.\p"
-	.string "Sorry, but you'll have to\n"
-	.string "leave.\p"
+	.string "Rick and Morty, the Gym Leaders,\n"
+	.string "are absent.\p"
+	.string "Sorry, but you'll have to leave.\p"
 	.string "Hohohoho.$"

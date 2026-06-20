@@ -1051,7 +1051,14 @@ static void ItemStorage_PrintMenuItem(u8 windowId, u32 id, u8 yOffset)
         }
         ConvertIntToDecimalStringN(gStringVar1, gSaveBlock1Ptr->pcItems[id].quantity, STR_CONV_MODE_RIGHT_ALIGN, 3);
         StringExpandPlaceholders(gStringVar4, gText_xVar1);
-        AddTextPrinterParameterized(windowId, FONT_NARROW, gStringVar4, GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 104), yOffset, TEXT_SKIP_DRAW, NULL);
+        if (gSaveBlock2Ptr->optionsFont == 1)
+            {
+                AddTextPrinterParameterized(windowId, FONT_SHORT_NARROW, gStringVar4, GetStringRightAlignXOffset(FONT_SHORT_NARROW, gStringVar4, 104), yOffset, TEXT_SKIP_DRAW, NULL);
+            }
+            else
+            {
+                AddTextPrinterParameterized(windowId, FONT_NARROW, gStringVar4, GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 104), yOffset, TEXT_SKIP_DRAW, NULL);
+            }
     }
 }
 

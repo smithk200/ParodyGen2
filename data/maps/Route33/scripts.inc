@@ -20,6 +20,11 @@ Route33_EventScript_Lass::
 	release
 	end
 
+Route33_EventScript_Trainer_Ben::
+	trainerbattle_single TRAINER_BEN_1, Route33_Text_BenSeen, Route33_Text_BenBeaten
+	msgbox Route33_Text_BenAfter, MSGBOX_AUTOCLOSE
+	end
+
 Route33_Text_HikerAnthony2Seen:
 	.string "I came through the tunnel,\n"
 	.string "but I still have plenty\l"
@@ -45,3 +50,18 @@ Route33_Text_Lass:
 	.string "I'd expected.\p"
 	.string "I got too tired exploring\n"
 	.string "for Marill, so I came outside.$"
+
+Route33_Text_BenSeen:
+	.string "You're not out of the woods yet!\n"
+	.string "Ledian! Attack!$"
+
+Route33_Text_BenBeaten:
+	.string "I guess it wasn't enough…$"
+
+Route33_Text_BenAfter:
+	.string "Some Pokémon became better in the\n"
+	.string "Johto region.\p"
+	.string "Perhaps it's due to the air-\p"
+	.string "… or maybe a creator preference.$"
+
+

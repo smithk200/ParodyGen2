@@ -165,10 +165,10 @@ SproutTower_Text_ElderLecturesRival:
 	.string "as a trainer.\p"
 	.string "As promised, here is your Hm.\p"
 	.string "But let me say this: You should\n"
-	.string "treat your PokéMon better.\p"
+	.string "treat your Pokémon better.\p"
 	.string "The way you battle is far too\n"
 	.string "harsh.\p"
-	.string "PokéMon are not tools of war…$"
+	.string "Pokémon are not tools of war…$"
 
 SproutTower_Text_RivalOnlyCaresStrong:
 	.string "…\n"
@@ -177,11 +177,11 @@ SproutTower_Text_RivalOnlyCaresStrong:
 	.string "he's weak.\p"
 	.string "It stands to reason.\p"
 	.string "I'd never lose to fools who babble\n"
-	.string "about being nice to PokéMon.\p"
+	.string "about being nice to Pokémon.\p"
 	.string "I only care about strong\n"
-	.string "PokéMon that can win.\p"
+	.string "Pokémon that can win.\p"
 	.string "I really couldn't care less\n"
-	.string "about weak PokéMon.$"
+	.string "about weak Pokémon.$"
 
 SproutTower_Text_RivalUsedEscapeRope:
 	.string "{RIVAL} used an Escape Rope!$"
@@ -190,18 +190,18 @@ SproutTower_Text_SageLi_Seen:
 	.string "So good of you to come here!\p"
 	.string "Sprout Tower is a place of\n"
 	.string "training.\p"
-	.string "People and PokéMon test their\n"
+	.string "People and Pokémon test their\n"
 	.string "bonds to build a bright future\l"
 	.string "together.\p"
 	.string "I am the final test.\p"
 	.string "Allow me to check the ties\n"
-	.string "between your PokéMon and you!$"
+	.string "between your Pokémon and you!$"
 
 SproutTower_Text_SageLi_Beaten:
 	.string "Ah, excellent!$"
 
 SproutTower_Text_SageLi_TakeFlash:
-	.string "You and your PokéMon should\n"
+	.string "You and your Pokémon should\n"
 	.string "have no problem using this move.\p"
 	.string "Take this Flash Hm.$"
 
@@ -217,21 +217,21 @@ SproutTower_Text_SageLi_AfterBattle:
 
 SproutTower_Text_SageJin_Seen:
 	.string "I train to find enlightenment\n"
-	.string "in PokéMon!$"
+	.string "in Pokémon!$"
 
 SproutTower_Text_SageJin_Beaten:
 	.string "My training is incomplete…$"
 
 SproutTower_Text_SageJin_AfterBattle:
-	.string "As PokéMon grow stronger,\n"
+	.string "As Pokémon grow stronger,\n"
 	.string "so does the trainer.\p"
 	.string "No, wait. As the trainer\n"
 	.string "grows stronger, so do the\l"
-	.string "PokéMon.$"
+	.string "Pokémon.$"
 
 SproutTower_Text_SageTroy_Seen:
 	.string "Let me see how much you trust\n"
-	.string "your PokéMon.$"
+	.string "your Pokémon.$"
 
 SproutTower_Text_SageTroy_Beaten:
 	.string "Yes, your trust is real!$"

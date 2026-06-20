@@ -150,7 +150,7 @@
 #define FLAG_ENABLE_ROXANNE_FIRST_CALL       0x80 // Set after defeating Brawly. This will activate a call with Roxanne in order to register her.
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
-#define FLAG_RECEIVED_DOLL_Bill           0x83
+#define FLAG_RECEIVED_DOLL_Bill              0x83
 #define FLAG_RECEIVED_POTION_OLDALE          0x84
 #define FLAG_RECEIVED_AMULET_COIN            0x85
 #define FLAG_PENDING_DAYCARE_EGG             0x86
@@ -240,7 +240,7 @@
 #define FLAG_MET_WAILMER_TRAINER             0xDA
 #define FLAG_EVIL_LEADER_PLEASE_STOP         0xDB
 
-#define FLAG_NEVER_SET_0x0DC                 0xDC // This flag is read, but never written to
+#define FLAG_HIDE_VS_SEEKER_NPC                 0xDC
 
 #define FLAG_RECEIVED_GO_GOGGLES             0xDD
 #define FLAG_WINGULL_SENT_ON_ERRAND          0xDE

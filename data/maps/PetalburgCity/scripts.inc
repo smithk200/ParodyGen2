@@ -5,10 +5,6 @@ PetalburgCity_MapScripts::
 
 PetalburgCity_OnTransition:
 	setflag FLAG_GARBAGEFLAG
-	call_if_eq VAR_GARBAGEVAR, 0, PetalburgCity_EventScript_MoveGymBoyToWestEntrance
-	call_if_eq VAR_GARBAGEVAR, 2, PetalburgCity_EventScript_DisableMapNameAndMusic
-	call_if_eq VAR_GARBAGEVAR, 4, PetalburgCity_EventScript_DisableMapNameAndMusic
-	call_if_eq VAR_GARBAGEVAR, 8, PetalburgCity_EventScript_SetGymDoorsUnlocked
 	end
 
 PetalburgCity_EventScript_MoveGymBoyToWestEntrance::
@@ -21,12 +17,9 @@ PetalburgCity_EventScript_DisableMapNameAndMusic::
 	return
 
 PetalburgCity_EventScript_SetGymDoorsUnlocked::
-	setvar VAR_GARBAGEVAR, 7
 	return
 
 PetalburgCity_OnFrame:
-	map_script_2 VAR_GARBAGEVAR, 2, PetalburgCity_EventScript_WallyTutorial
-	map_script_2 VAR_GARBAGEVAR, 4, PetalburgCity_EventScript_WalkToWallyHouse
 	.2byte 0
 
 PetalburgCity_GymTrigger::

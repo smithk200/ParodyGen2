@@ -1007,22 +1007,19 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 
         if (gBagPosition.pocket != POCKET_KEY_ITEMS && GetItemImportance(itemSlot.itemId) == FALSE)
         {
-            if (gSaveBlock2Ptr->optionsFont == OPTIONS_FONT_FIRE_RED)
+            // Print item quantity
+            ConvertIntToDecimalStringN(gStringVar1, itemSlot.quantity, STR_CONV_MODE_RIGHT_ALIGN, MAX_ITEM_DIGITS);
+            StringExpandPlaceholders(gStringVar4, gText_xVar1);
+            if (gSaveBlock2Ptr->optionsFont == 1)
             {
-                // Print item quantity
-                ConvertIntToDecimalStringN(gStringVar1, itemSlot.quantity, STR_CONV_MODE_RIGHT_ALIGN, MAX_ITEM_DIGITS);
-                StringExpandPlaceholders(gStringVar4, gText_xVar1);
                 offset = GetStringRightAlignXOffset(FONT_SHORT, gStringVar4, 119);
                 BagMenu_Print(windowId, FONT_SHORT, gStringVar4, offset, y, 0, 0, TEXT_SKIP_DRAW, COLORID_NORMAL);
             }
             else
             {
-                // Print item quantity
-                ConvertIntToDecimalStringN(gStringVar1, itemSlot.quantity, STR_CONV_MODE_RIGHT_ALIGN, MAX_ITEM_DIGITS);
-                StringExpandPlaceholders(gStringVar4, gText_xVar1);
-                offset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 119);
-                BagMenu_Print(windowId, FONT_NORMAL, gStringVar4, offset, y, 0, 0, TEXT_SKIP_DRAW, COLORID_NORMAL);
-            }
+                offset = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 119);
+                BagMenu_Print(windowId, FONT_NARROW, gStringVar4, offset, y, 0, 0, TEXT_SKIP_DRAW, COLORID_NORMAL);
+            }   
         }
         else
         {

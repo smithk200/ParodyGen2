@@ -12380,9 +12380,23 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM_DIVE] =
+    [ITEM_HM_WHIRLPOOL] =
     {
         .name = ITEM_NAME("HM08"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Traps and hurts the\n"
+            "foe in a whirlpool\n"
+            "for 2 to 5 turns."),
+        .importance = 1,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
+
+    [ITEM_HM_DIVE] =
+    {
+        .name = ITEM_NAME("HM09"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Dives underwater\n"
@@ -14897,8 +14911,8 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
-        .iconPic = gItemIcon_RareCandy,
-        .iconPalette = gItemIconPalette_RareCandy,
+        .iconPic = gItemIcon_CapCandy,
+        .iconPalette = gItemIconPalette_CapCandy,
     },
 };
 

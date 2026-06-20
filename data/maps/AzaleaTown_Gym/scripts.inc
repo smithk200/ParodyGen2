@@ -692,8 +692,8 @@ AzaleaTown_Gym_Text_GymStatue:
 
 AzaleaTown_Gym_Text_GymStatueCertified:
 	.string "Azalea Town Pokémon Gym\p"
-	.string "Brie'S Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Brie's Certified Trainers:\n"
+	.string "Fry, {PLAYER}$"
 
 AzaleaTown_Gym_Text_BugsyIntro:
 	.string "Hi! I'm Brie!\p"
@@ -704,44 +704,38 @@ AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "Well, you beat me!$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} received Hivebadge.$"
+	.string "{PLAYER} received Mysticbadge.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
 	.string "Do you know the benefits\n"
-	.string "of Hivebadge?\p"
+	.string "of Mysticbadge?\p"
 	.string "If you have it, Pokémon up\n"
-	.string "to L30 will obey you,\l"
-	.string "even traded ones.\p"
-	.string "Pokémon that know Cut will be able\n"
-	.string "to use it outside of battle too.\p"
-	.string "Here, I also want you to\n"
-	.string "have this.$"
+	.string "to Level 30 will obey you,\l"
+	.string "even ones that aren't yours.\p"
+	.string "Pokémon that know Cut can\n"
+	.string "use it out of battle too.\p"
+	.string "Take this too!$"
 
 AzaleaTown_Gym_Text_FuryCutterSpeech:
-	.string "Tm09 contains Bullet Seed.\p"
-	.string "It shoots a torrent of seeds\n"
+	.string "This TM contains Bullet Seed.\p"
+	.string "It shoots a lot of seeds,\n"
 	.string "between 2 and 5 times every turn.\p"
 	.string "So even though the power is 25, it\n"
 	.string "is really between 50 and 125 power!\p"
-	.string "Isn't that great?\n"
-	.string "I discovered it!$"
+	.string "Isn't that great?$"
 
 AzaleaTown_Gym_Text_BugsyAdvice:
-	.string "Bug Pokémon are deep. There are\n"
-	.string "many mysteries to be explored.\p"
-	.string "Study your favorites thoroughly.$"
+	.string "Fairy Pokémon are so cool. They are\n"
+	.string "super rare, and I'm only one of\p"
+	.string "the few Fairy type Gym Leaders.$"
 
 AzaleaTown_Gym_Text_BugsyRematch:
-	.string "Wow, you're the Johto Champion now!\p"
-	.string "Your skills are truly impressive!\p"
-	.string "I've been busy with my research.\p"
-	.string "I'm ready to show you my new\n"
-	.string "findings.\p"
-	.string "Want to have a rematch with me?$"
+	.string "You're the Johto Champion now!\p"
+	.string "That's so cool!\p"
+	.string "I'm ready to rematch you again!$"
 
 AzaleaTown_Gym_Text_BugsyRematchDefeat:
-	.string "Wow, you must be an expert trainer.\n"
-	.string "My research must not be complete...$"
+	.string "Wow, you beat me again!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennySeen:
 	.string "Bug Pokémon evolve young. So they\n"
@@ -790,15 +784,15 @@ AzaleaTown_Gym_Text_TwinsAmyMay1Beaten:
 AzaleaTown_Gym_Text_TwinsAmyMay1After:
 	.string "Amy: You're really strong!\p"
 	.string "But Brie's even stronger!\n"
-	.string "His Scyther's Cut almost\l"
-	.string "always makes critical hits!$"
+	.string "Her Floette's Substitute almost\l"
+	.string "seems to screw up over!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen:
 	.string "May: You want to see the\n"
 	.string "Leader? Good luck!\p"
 	.string "Brie is so strong!\n"
-	.string "His Scyther's Cut always\l"
-	.string "seems to crit!$"
+	.string "Her Quagsire always\l"
+	.string "seems to out you to sleep!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Beaten:
 	.string "Amy & May: Oh, double\n"
@@ -808,8 +802,8 @@ AzaleaTown_Gym_Text_TwinsAmyMay2After:
 	.string "May: Our bug Pokémon lost!\n"
 	.string "Oh, what a shame.\p"
 	.string "Brie's won't lose though!\p"
-	.string "His Pineco makes short work\n"
-	.string "of Rock-type Pokémon!$"
+	.string "Her Sylveon makes short work\n"
+	.string "of any Pokémon!$"
 
 AzaleaTown_Gym_Text_GymGuide:
 	.string "Yo, challenger!\p"
@@ -819,7 +813,7 @@ AzaleaTown_Gym_Text_GymGuide:
 	.string "without my advice.\p"
 	.string "Let's see… Brie's salamander Pokémon\n"
 	.string "can do something called\l"
-	.string "Terrastalize.\p"
+	.string "Terastallize.\p"
 	.string "She's also got a Pokémon\n"
 	.string "that knows Wish and Substitute.\p"
 	.string "Oh, and don't forget about those\n"

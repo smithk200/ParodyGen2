@@ -51,6 +51,25 @@ NewBarkTown_EventScript_TownSign::
 	closemessage
 	end
 
+NewBarkTown_EventScript_VsSeekerMan::
+	goto_if_set FLAG_HIDE_VS_SEEKER_NPC, Common_EventScript_End
+	lock
+	applymovement LOCALID_VS_SEEKER_MAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox NewBarkTown_Text_VsSeekerMan, MSGBOX_DEFAULT
+	closemessage
+	giveitem ITEM_VS_SEEKER
+	msgbox NewBarkTown_Text_VsSeekerMan2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_VS_SEEKER_MAN, NewBarkTown_Movement_VsSeekerMan
+	waitmovement 0
+	removeobject LOCALID_VS_SEEKER_MAN
+	setflag FLAG_HIDE_VS_SEEKER_NPC
+	release
+	end
+
+Common_EventScript_End::
+	end
 
 NewBarkTown_EventScript_Lass::
 	lock
@@ -217,7 +236,17 @@ NewBarkTown_Movement_PlayerPushedBySilver:
 	step_end
 
 	
-
+NewBarkTown_Movement_VsSeekerMan:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 
 NewBarkTown_Movement_FaceDown:
 	face_down
@@ -286,3 +315,13 @@ NewBarkTown_Text_PlayersHouse:
 
 NewBarkTown_Text_ElmsHouse:
 	.string "Professor Elm's House$"
+
+NewBarkTown_Text_VsSeekerMan:
+	.string "Before you go, take this!$"
+
+NewBarkTown_Text_VsSeekerMan2:
+	.string "The VS. SEEKER allows you to\n"
+	.string "battle trainers you have already\l"
+	.string "battled before.\p"
+	.string "You can use it to help train your\n"
+	.string "POKéMON to the elite level!$"

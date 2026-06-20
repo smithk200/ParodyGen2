@@ -17,4 +17,4 @@ extern const u8 gText_Hisui[];
 extern const u8 gText_Paldea[];
 extern const u8 gText_RegionDefault[];
 
-#endif  GUARD_REGION_STRINGS_TEST_H
+#endif  //GUARD_REGION_STRINGS_TEST_H

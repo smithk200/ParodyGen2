@@ -524,11 +524,8 @@ Route109_EventScript_Edmond::
 	end
 
 Route109_EventScript_Ricky::
-	trainerbattle_single TRAINER_RICKY_1, Route109_Text_RickyIntro, Route109_Text_RickyDefeated, Route109_EventScript_RickyRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route109_EventScript_RickyRematch
-	msgbox Route109_Text_RickyPostBattle, MSGBOX_DEFAULT
-	release
+	trainerbattle_single TRAINER_RICKY_1, Route109_Text_RickyIntro, Route109_Text_RickyDefeated
+	msgbox Route109_Text_RickyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_RickyRegisterMatchCallAfterBattle::
@@ -649,7 +646,7 @@ Route109_Text_LittleKidsDartAround:
 	.string "Little kids can dart around so quickly…\p"
 	.string "You don't dare take your eyes off them\n"
 	.string "for an instant. It's very taxing.\p"
-	.string "Mine are with my PokéMon, so they\n"
+	.string "Mine are with my Pokémon, so they\n"
 	.string "should be okay, but…$"
 
 Route109_Text_SandCastleTakingLongTime:
@@ -685,10 +682,10 @@ Route109_Text_SeashoreHouseSign:
 
 Route109_Text_TrainerTipsSign:
 	.string "Trainer Tips\p"
-	.string "PokéMon at the same level may not\n"
+	.string "Pokémon at the same level may not\n"
 	.string "always have identical stats.\p"
-	.string "PokéMon raised by Trainers are said\n"
-	.string "to grow stronger than wild PokéMon.$"
+	.string "Pokémon raised by Trainers are said\n"
+	.string "to grow stronger than wild Pokémon.$"
 
 SlatePort_Text_WhereSail::
 	.string "Where do you want to\n"

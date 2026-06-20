@@ -111,7 +111,7 @@ static const u8 sMovementScript_Wait48[] = {
 };
 
 static const u8 sMovementScript_TrainerUnfought[] = {
-    MOVEMENT_ACTION_EMOTE_EXCLAMATION_MARK,
+    //MOVEMENT_ACTION_EMOTE_EXCLAMATION_MARK,
     MOVEMENT_ACTION_STEP_END
 };
 
@@ -122,7 +122,7 @@ static const u8 sMovementScript_TrainerNoRematch[] = {
 
 static const u8 sMovementScript_TrainerRematch[] = {
     MOVEMENT_ACTION_WALK_IN_PLACE_FASTER_DOWN,
-    MOVEMENT_ACTION_EMOTE_DOUBLE_EXCL_MARK,
+    //MOVEMENT_ACTION_EMOTE_DOUBLE_EXCL_MARK,
     MOVEMENT_ACTION_STEP_END
 };
 

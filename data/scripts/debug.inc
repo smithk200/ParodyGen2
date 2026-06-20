@@ -8,7 +8,7 @@ Debug_ShowFieldMessageStringVar4::
 	special ShowFieldMessageStringVar4
 	goto Debug_MessageEnd
 
-Debug_CheatStart::
+Debug_CheatStart3::
 	@species:req, level:req, item, ball, nature, abilityNum, gender, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, shinyMode, gmaxFactor, teraType, dmaxLevel
 	@setvar VAR_NEWBARKTOWN_LABSTATE, 4
 	givemon SPECIES_MEGANIUM, 100, ITEM_NONE
@@ -68,6 +68,19 @@ Debug_CheatStart2::
 	givemon SPECIES_CHARMANDER, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
 	givemon SPECIES_GREAT_TUSK, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
 	givemon SPECIES_WATTREL, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 0, 0, 252, 252, 0, 31, 31, 31, 31, 31, 31
+	release
+	end
+
+Debug_CheatStart::
+	givemon SPECIES_ROOKIDEE, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 0, 252, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_TINKATINK, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 0, 128, 0, 128, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_IRON_TREADS, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_MUDBRAY, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_TOEDSCOOL, 13, ITEM_NONE, 1, NATURE_MODEST, 1, 1, 6, 0, 0, 252, 252, 0, 31, 31, 31, 31, 31, 31
+	givemon SPECIES_TEDDIURSA, 13, ITEM_NONE, 1, NATURE_ADAMANT, 1, 1, 6, 252, 0, 0, 252, 0, 31, 31, 31, 31, 31, 31
+	giveitem ITEM_CAP_CANDY, 100
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RECEIVED_BADGE_5
 	release
 	end
 
