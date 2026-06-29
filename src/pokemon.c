@@ -37,6 +37,7 @@
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "recorded_battle.h"
+#include "regions.h"
 #include "rtc.h"
 #include "sound.h"
 #include "string_util.h"
@@ -5861,6 +5862,7 @@ bool32 IsSpeciesInHoennDex(u16 species)
 
 u16 GetBattleBGM(void)
 {
+    u16 region = GetCurrentRegion();
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
         switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
@@ -5899,6 +5901,10 @@ u16 GetBattleBGM(void)
         switch (trainerClass)
         {
         case TRAINER_CLASS_HOENN_LEADER:
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
+                return MUS_VS_GYM_LEADER;
+            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
+                return MUS_VS_GYM_LEADER;
             return MUS_TYPING_BOSS;
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_LEADER:
@@ -5927,13 +5933,24 @@ u16 GetBattleBGM(void)
                 return MUS_DP_VS_GALACTIC_BOSS;
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CLAIR_DRAGONS_DEN)
-                return MUS_EMOTION;
-            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
-                return MUS_HG_VS_GYM_LEADER;
-            if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
-                return MUS_DP_VS_GYM_LEADER;
-            return MUS_VS_GYM_LEADER;
+            if (region == REGION_KANTO)
+            {
+                if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
+                    return MUS_HG_VS_GYM_LEADER_KANTO;
+                if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
+                    return MUS_DP_VS_GYM_LEADER;
+                return MUS_POKEMON_X_GYM_LEADER; 
+            }
+            else
+            {
+                if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CLAIR_DRAGONS_DEN)
+                    return MUS_EMOTION;
+                if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
+                    return MUS_HG_VS_GYM_LEADER;
+                if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_SINNOH)
+                    return MUS_DP_VS_GYM_LEADER;
+            }
+            return MUS_NONPHYSICAL;
         case TRAINER_CLASS_CHAMPION:
             if (gSaveBlock2Ptr->optionsMusic == OPTIONS_MUSIC_JOHTO)
                 return MUS_HG_VS_CHAMPION;

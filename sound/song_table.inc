@@ -478,7 +478,7 @@ gSongTable::
 	song mus_vs_wild, 0, 0
 	song mus_vs_aqua_magma, 0, 0
 	song mus_vs_trainer, 0, 0
-	song NonPhysical, 0, 0
+	song mus_vs_gym_leader, 0, 0
 	song mus_vs_champion, 0, 0
 	song mus_vs_regi, 0, 0
 	song mus_vs_kyogre_groudon, 0, 0
@@ -779,9 +779,9 @@ gSongTable::
 	song emotion, 0, 0
 	song typing_boss, 0, 0
 	song stat_increase, 1, 1
-	song mus_pl_lilycove_bossa_nova, 0, 0
+	song pokemon_x_gym_leader, 0, 0
 	song stat_decrease, 1, 1
-	song mus_pl_vs_giratina, 0, 0
+	song NonPhysical, 0, 0
 	song mus_pl_vs_frontier_brain, 0, 0
 	song mus_pl_victory_frontier_brain, 0, 0
 	song mus_pl_vs_regi, 0, 0

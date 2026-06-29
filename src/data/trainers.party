@@ -11094,7 +11094,7 @@ EVs: 252 Atk / 252 Def / 6 Spe
 Tera Type: Fairy
 - Mud Shot
 - Tera Blast
-- Yawn
+- Toxic
 - Water Gun
 
 Sylveon @ Pixie Plate
@@ -19961,3 +19961,66 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+
+=== TRAINER_BENDER_1 ===
+Name: Bender
+Class: Elite Four
+Pic: Leader Bender
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Grimmsnarl @ Leftovers
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Foul Play
+- Hammer Arm
+- Thunder Wave
+
+Genesect @ Douse Drive
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Techno Blast
+- Bug Buzz
+- Thunder Wave
+- Flash Cannon
+
+Altaria @ Altarianite
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cotton Guard
+- Moonblast
+- Outrage
+- Brave Bird
+
+Sylveon @ Pixie Plate
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 128 Atk / 0 Def / 128 SpA / 0 SpD / 252 Spe
+- Moonblast
+- Dig
+- Calm Mind
+- Psychic
+
+Rapidash Galar @ Muscle Band
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Stomp
+- Swords Dance
+- Zen Headbutt
+
+Zacian @ Rusted Sword
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Crunch
+- Swords Dance
+- Iron Head

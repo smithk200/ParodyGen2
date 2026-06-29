@@ -6,6 +6,14 @@ EverGrandeCity_ChampionsRoom_MapScripts::
 
 EverGrandeCity_ChampionsRoom_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
+	call EverGrandeCity_ChampionsRoom_ClearEliteFourFlags
+	end
+
+EverGrandeCity_ChampionsRoom_ClearEliteFourFlags:
+	clearflag FLAG_DEFEATED_SIDNEY
+	clearflag FLAG_DEFEATED_PHOEBE
+	clearflag FLAG_DEFEATED_GLACIA
+	clearflag FLAG_DEFEATED_DRAKE
 	end
 
 EverGrandeCity_ChampionsRoom_OnWarp:

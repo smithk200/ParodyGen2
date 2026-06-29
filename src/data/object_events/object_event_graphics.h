@@ -465,6 +465,8 @@ const u32 gObjectEventPic_Rick[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Morty_2[] = INCBIN_U32("graphics/object_events/pics/people/leader_morty.4bpp");
 const u32 gObjectEventPic_Molly[] = INCBIN_U32("graphics/object_events/pics/people/molly.4bpp");
 const u32 gObjectEventPic_Waluigi[] = INCBIN_U32("graphics/object_events/pics/people/waluigi.4bpp");
+const u32 gObjectEventPic_Bender[] = INCBIN_U32("graphics/object_events/pics/people/bender.4bpp");
+const u32 gObjectEventPic_CaptainFloyd[] = INCBIN_U32("graphics/object_events/pics/people/captain_floyd.4bpp");
 
 const u32 gObjectEventPic_VigorothMover[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/vigoroth_mover.4bpp");
 const u32 gObjectEventPic_SudowoodoTree[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/sudowoodo_tree.4bpp");
@@ -531,6 +533,8 @@ const u16 gObjectEventPal_Rick[] = INCBIN_U16("graphics/object_events/palettes/r
 const u16 gObjectEventPal_Morty_2[] = INCBIN_U16("graphics/object_events/palettes/morty_2.gbapal");
 const u16 gObjectEventPal_Molly[] = INCBIN_U16("graphics/object_events/palettes/molly.gbapal");
 const u16 gObjectEventPal_Waluigi[] = INCBIN_U16("graphics/object_events/palettes/waluigi.gbapal");
+const u16 gObjectEventPal_Bender[] = INCBIN_U16("graphics/object_events/palettes/bender.gbapal");
+const u16 gObjectEventPal_CaptainFloyd[] = INCBIN_U16("graphics/object_events/palettes/captain_floyd.gbapal");
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");

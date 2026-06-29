@@ -84,6 +84,9 @@ const u32 gBattleTerrainTilemap_Building_2[] = INCBIN_U32("graphics/battle_envir
 const u32 gBattleTerrainTiles_Blue_Building_2[] = INCBIN_U32("graphics/battle_environment/blue_building_2/tiles.4bpp.smol");
 const u32 gBattleTerrainTilemap_Blue_Building_2[] = INCBIN_U32("graphics/battle_environment/blue_building_2/map.bin.smolTM");
 
+const u32 gBattleTerrainTiles_Stadium[] = INCBIN_U32("graphics/battle_environment/stadium/tiles.4bpp.smol");
+const u32 gBattleTerrainTilemap_Stadium[] = INCBIN_U32("graphics/battle_environment/stadium/map.bin.smolTM");
+
 const u32 gBattleTerrainTiles_Stadium_2[] = INCBIN_U32("graphics/battle_environment/stadium_2/tiles.4bpp.smol");
 const u32 gBattleTerrainTilemap_Stadium_2[] = INCBIN_U32("graphics/battle_environment/stadium_2/map.bin.smolTM");
 
@@ -103,6 +106,7 @@ const u16 gBattleTerrainPalette_StadiumPhoebe[] = INCBIN_U16("graphics/battle_en
 const u16 gBattleTerrainPalette_StadiumGlacia[] = INCBIN_U16("graphics/battle_environment/stadium/palette5.gbapal.lz");
 const u16 gBattleTerrainPalette_StadiumDrake[] = INCBIN_U16("graphics/battle_environment/stadium/palette6.gbapal.lz");
 const u16 gBattleTerrainPalette_StadiumWallace[] = INCBIN_U16("graphics/battle_environment/stadium/palette7.gbapal.lz");
+const u16 gBattleEnvironmentPalette_StadiumBender[] = INCBIN_U16("graphics/battle_environment/stadium/palette15.gbapal");
 
 const u16 gBattleTerrainPalette_StadiumWill_2[] = INCBIN_U16("graphics/battle_environment/stadium_2/palette3.gbapal");
 const u16 gBattleTerrainPalette_StadiumKoga_2[] = INCBIN_U16("graphics/battle_environment/stadium_2/palette4.gbapal");
@@ -783,10 +787,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
     {
         .background =
         {
-            .tileset = gBattleTerrainTiles_Stadium_2,
-            .tilemap = gBattleTerrainTilemap_Stadium_2,
+            .tileset = gBattleTerrainTiles_Stadium,
+            .tilemap = gBattleTerrainTilemap_Stadium,
             .entryTileset = gBattleTerrainAnimTiles_Building_2,
-            .entryTilemap = gBattleTerrainAnimTilemap_Building_2,
+            .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
             .palette = gBattleTerrainPalette_StadiumSidney,
         },
     },
@@ -795,10 +799,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
     {
         .background =
         {
-            .tileset = gBattleTerrainTiles_Stadium_2,
-            .tilemap = gBattleTerrainTilemap_Stadium_2,
+            .tileset = gBattleTerrainTiles_Stadium,
+            .tilemap = gBattleTerrainTilemap_Stadium,
             .entryTileset = gBattleTerrainAnimTiles_Building_2,
-            .entryTilemap = gBattleTerrainAnimTilemap_Building_2,
+            .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
             .palette = gBattleTerrainPalette_StadiumPhoebe,
         },
     },
@@ -807,10 +811,10 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
     {
         .background =
         {
-            .tileset = gBattleTerrainTiles_Stadium_2,
-            .tilemap = gBattleTerrainTilemap_Stadium_2,
+            .tileset = gBattleTerrainTiles_Stadium,
+            .tilemap = gBattleTerrainTilemap_Stadium,
             .entryTileset = gBattleTerrainAnimTiles_Building_2,
-            .entryTilemap = gBattleTerrainAnimTilemap_Building_2,
+            .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
             .palette = gBattleTerrainPalette_StadiumGlacia,
         },
     },
@@ -819,11 +823,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
     {
         .background =
         {
-            .tileset = gBattleTerrainTiles_Stadium_2,
-            .tilemap = gBattleTerrainTilemap_Stadium_2,
-            .entryTileset = gBattleTerrainAnimTiles_Building_2,
-            .entryTilemap = gBattleTerrainAnimTilemap_Building_2,
-            .palette = gBattleTerrainPalette_StadiumDrake,
+            .tileset = gBattleEnvironmentTiles_Stadium,
+            .tilemap = gBattleEnvironmentTilemap_Stadium,
+            .entryTileset = gBattleEnvironmentAnimTiles_Building,
+            .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
+            .palette = gBattleEnvironmentPalette_StadiumBender,
         },
     },
 

@@ -930,7 +930,6 @@ static const struct Tileset *const sHoennTilesets[] = //add to list if needed- d
     &gTileset_CableClub,
     &gTileset_SeashoreHouse,
     &gTileset_PrettyPetalFlowerShop,
-    &gTileset_PokemonDayCare,
     &gTileset_Facility,
     &gTileset_BikeShop_2,
     &gTileset_RusturfTunnel,

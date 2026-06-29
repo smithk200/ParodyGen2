@@ -2339,3 +2339,27 @@ static const struct SpriteFrameImage sPicTable_Molly[] = {
     overworld_frame(gObjectEventPic_Molly, 2, 4, 7),
     overworld_frame(gObjectEventPic_Molly, 2, 4, 8),
 };
+
+static const struct SpriteFrameImage sPicTable_Bender[] = {
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Bender, 2, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_CaptainFloyd[] = {
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 0),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 1),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 2),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 0),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 1),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 2),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 0),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 1),
+    overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 2),
+};

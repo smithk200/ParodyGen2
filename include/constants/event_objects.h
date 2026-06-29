@@ -341,6 +341,8 @@
 #define OBJ_EVENT_GFX_TOWER_BEAM                        334
 #define OBJ_EVENT_GFX_MOLLY                             335
 #define OBJ_EVENT_GFX_WALUIGI                           336
+#define OBJ_EVENT_GFX_BENDER                          337
+#define OBJ_EVENT_GFX_CAPTAIN_FLOYD                  338
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -557,6 +559,8 @@
 #define OBJ_EVENT_PAL_TAG_TOWER_BEAM           0x1174
 #define OBJ_EVENT_PAL_TAG_MOLLY             0x1175
 #define OBJ_EVENT_PAL_TAG_WALUIGI           0x1176
+#define OBJ_EVENT_PAL_TAG_BENDER           0x1177
+#define OBJ_EVENT_PAL_TAG_CAPTAIN_FLOYD           0x1178
 
 
 #endif //OW_FOLLOWERS_POKEBALLS

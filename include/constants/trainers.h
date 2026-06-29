@@ -167,6 +167,7 @@
 #define TRAINER_PIC_LEADER_WALUIGI 149
 #define TRAINER_PIC_LEADER_BILL 150
 #define TRAINER_PIC_CAPTAIN_FLOYD 151
+#define TRAINER_PIC_LEADER_BENDER 152
 #define TRAINER_PIC_COUNT                 152
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)

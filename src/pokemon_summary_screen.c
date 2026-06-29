@@ -4680,6 +4680,7 @@ static inline bool32 ShouldShowRename(void)
 
 static inline bool32 ShouldShowIvEvPrompt(void)
 {
+    /*
     if (P_SUMMARY_SCREEN_IV_EV_BOX_ONLY)
     {
         return (P_SUMMARY_SCREEN_IV_EV_INFO || FlagGet(P_FLAG_SUMMARY_SCREEN_IV_EV_INFO))
@@ -4689,7 +4690,8 @@ static inline bool32 ShouldShowIvEvPrompt(void)
     {
         return (P_SUMMARY_SCREEN_IV_EV_INFO || FlagGet(P_FLAG_SUMMARY_SCREEN_IV_EV_INFO));
     }
-    return FALSE;
+    */
+    return TRUE;
 }
 
 static inline void ShowUtilityPrompt(s16 mode)

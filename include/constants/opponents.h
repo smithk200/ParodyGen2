@@ -46,7 +46,7 @@
 #define TRAINER_FRY_CYNDAQUIL_ROUTE_34       40
 #define TRAINER_FRY_TOTODILE_ROUTE_34        41
 #define TRAINER_FRY_CHIKORITA_ROUTE_34       42
-#define TRAINER_ROSE_5                       43
+#define TRAINER_BENDER_1                       43
 #define TRAINER_KRISE                        44
 #define TRAINER_GRUNT_16                     45
 #define TRAINER_RAYMOND                      46

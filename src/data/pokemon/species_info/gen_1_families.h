@@ -9931,7 +9931,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPonytaTeachableLearnset,
         .eggMoveLearnset = sPonytaEggMoveLearnset,
         .formSpeciesIdTable = sPonytaFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH},
+            {EVO_ITEM, ITEM_GALAR_STONE, SPECIES_PONYTA_GALAR}),
     },
 
     [SPECIES_RAPIDASH] =
@@ -10000,6 +10001,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sRapidashLevelUpLearnset,
         .teachableLearnset = sRapidashTeachableLearnset,
         .formSpeciesIdTable = sRapidashFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_GALAR_STONE, SPECIES_RAPIDASH_GALAR}),
     },
 
 #if P_GALARIAN_FORMS
@@ -10067,7 +10069,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPonytaGalarTeachableLearnset,
         .eggMoveLearnset = sPonytaGalarEggMoveLearnset,
         .formSpeciesIdTable = sPonytaFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH_GALAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH_GALAR},
+            {EVO_ITEM, ITEM_GALAR_STONE, SPECIES_PONYTA}),
     },
 
     [SPECIES_RAPIDASH_GALAR] =
@@ -10133,6 +10136,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sRapidashGalarLevelUpLearnset,
         .teachableLearnset = sRapidashGalarTeachableLearnset,
         .formSpeciesIdTable = sRapidashFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_GALAR_STONE, SPECIES_RAPIDASH}),
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_PONYTA

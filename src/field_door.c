@@ -5,6 +5,7 @@
 #include "fieldmap.h"
 #include "metatile_behavior.h"
 #include "task.h"
+#include "constants/layouts.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
 
@@ -443,6 +444,10 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 #define DOOR_TILE_START_SIZE1 (NUM_TILES_TOTAL - 8)
 #define DOOR_TILE_START_SIZE2 (NUM_TILES_TOTAL - 16)
 
+//Door anims have a conflict with Hoenn water animations, as they use the same VRAM space (around 432 - 434)
+//When in the BF, the door anims use a different allocation. Anywhere else, default.
+#define DOOR_TILE_START_FRONTIER 1100
+
 static void UNUSED CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)
 {
     if (gfx->size == 2)
@@ -536,6 +541,11 @@ static void DrawDoor(const struct DoorGraphics *gfx, const struct DoorAnimFrame 
         {
             offset = TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2);
             size = 16 * TILE_SIZE_4BPP;
+        }
+        else if (gMapHeader.mapLayoutId == LAYOUT_GOLDENROD_CITY)
+        {
+            offset = TILE_OFFSET_4BPP(DOOR_TILE_START_FRONTIER);
+            size = 8 * TILE_SIZE_4BPP;
         }
         else
         {

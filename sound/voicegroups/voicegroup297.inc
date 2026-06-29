@@ -118,7 +118,7 @@ voicegroup297:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_taiko, 255, 255, 0, 99 @taiko
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99
