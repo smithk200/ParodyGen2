@@ -57,7 +57,7 @@ gText_Birch_NuzlockeChallenge::
 	.string "Oh, before we begin…\n"
 	.string "There’s something new I’ve been\l"
 	.string "researching.\p"
-	.string "It’s called the Nuzlocke Challenge!\p"
+	.string "It’s called the NUZLOCKE CHALLENGE!\p"
 	.string "It’s a special way to journey that\n"
 	.string "makes your adventure more difficult\l"
 	.string "and more meaningful.\p"
@@ -66,18 +66,18 @@ gText_Birch_NuzlockeChallenge::
 	.string "to battle and must be released.\p"
 	.string "Also, you may only catch the first\n"
 	.string "Pokémon you encounter in each area.\p"
-	.string "These rules test a Trainer's bond\n"
+	.string "These rules test a TRAINER’S bond\n"
 	.string "with their team.\p"
 	.string "Every choice matters!\p"
 	.string "So, would you like to play the\n"
-	.string "Nuzlocke Challenge?\p"
+	.string "NUZLOCKE CHALLENGE?\p"
 	.string "$"
 
 gText_Birch_NoNuzlocke::
 	.string "That’s quite all right!\p"
 	.string "There’s no shame in taking your\n"
 	.string "journey at your own pace.\p"
-	.string "I’ll leave the Nuzlocke Challenge\n"
+	.string "I’ll leave the NUZLOCKE CHALLENGE\n"
 	.string "disabled.\p"
 	.string "If you decide you want to take on\n"
 	.string "the challenge, you'll need to start\l"
@@ -87,7 +87,7 @@ gText_Birch_NoNuzlocke::
 gText_Birch_YesNuzlocke::
 	.string "I see!\n"
 	.string "You’re looking for a real challenge!\p"
-	.string "I’ll enable the Nuzlocke Challenge\n"
+	.string "I’ll enable the NUZLOCKE CHALLENGE\n"
 	.string "for your adventure.\p"
 	.string "Take good care of your Pokémon.\n"
 	.string "Every one of them will be important!\p"
@@ -100,3 +100,24 @@ gText_Birch_Farewell::
 	.string "with Pokémon awaits! Let's go!\p"
 	.string "I'll be seeing you later!\p"
 	.string "$"
+
+gText_Birch_Difficulty::
+	.string "Aha…\p"
+	.string "And… How do you think this\n"
+	.string "adventure is going to be?$"
+
+gText_Birch_LockDifficulty::
+	.string "If you need to change the DIFFICULTY\n"
+	.string "you can open the OPTIONS MENU and\l"
+	.string "change it from there.\p"
+	.string "You can also lock it, if you want.\n"
+	.string "Do you want to lock the\l"
+	.string "chosen DIFFICULTY?\p"
+	.string "This cannot be changed later.$"
+
+gText_Birch_Challenge::
+	.string "Oh, is that so?\p"
+	.string "All right, with that clear…\n"
+	.string "Do you expect any CHALLENGE\l"
+	.string "in your journey?\p"
+	.string "And what's your name?$"

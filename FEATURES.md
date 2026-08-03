@@ -5,7 +5,7 @@
   - [Configuration files](#configuration-files)
   - [Upgraded Battle Engine](#upgraded-battle-engine)
   - [Full Trainer customization](#full-trainer-customization)
-  - [Pokémon data](#Pokémon-data)
+  - [Pokémon data](#pokémon-data)
   - [Interface improvements](#interface-improvements)
   - [Engine improvements](#engine-improvements)
   - [Overworld improvements](#overworld-improvements)

@@ -140,7 +140,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	waitmovement 0
 	setflag FLAG_GARBAGEFLAG
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
-	waitstate
+	@waitstate
 	releaseall
 	end
 

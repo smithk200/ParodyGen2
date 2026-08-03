@@ -318,7 +318,7 @@ DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle::
 	special SavePlayerParty
 	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
-	waitstate
+	@waitstate
 	goto_if_ne VAR_RESULT, 0, DragonsDen_Shrine_EventScript_DoFryMultiBattle
 	special LoadPlayerParty
 	goto DragonsDen_Shrine_EventScript_ReadyForBattlePrompt
@@ -330,7 +330,7 @@ DragonsDen_Shrine_EventScript_DoFryMultiBattle::
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_FRY
 	special SetCB2WhiteOut
-	waitstate
+	@waitstate
 
 DragonsDen_Clair_UponDefeat::
 	message DragonsDen_Shrine_Text_PlayerReceivedRisingBadge

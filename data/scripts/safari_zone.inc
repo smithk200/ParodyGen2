@@ -10,13 +10,13 @@ SafariZone_EventScript_Exit::
 	special ExitSafariMode
 	goto_if_set FLAG_IN_KANTO_SAFARI_ZONE, SafariZone_EventScript_ExitKanto
 	warp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE, 9, 3
-	waitstate
+	@@waitstate
 	end
 
 SafariZone_EventScript_ExitKanto::
 	clearflag FLAG_IN_KANTO_SAFARI_ZONE
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 5, 6
-	waitstate
+	@@waitstate
 	end
 
 SafariZone_EventScript_RetirePrompt::
@@ -59,7 +59,7 @@ EventScript_PokeBlockFeeder::
 SafariZone_EventScript_ChoosePokeblock::
 	fadescreen FADE_TO_BLACK
 	special OpenPokeblockCaseOnFeeder
-	waitstate
+	@@waitstate
 	goto_if_ne VAR_RESULT, 0xFFFF, SafariZone_EventScript_PokeblockPlaced
 #ifdef BUGFIX
 	releaseall  @ Only gets called from EventScript_PokeBlockFeeder which uses lockall.
@@ -380,7 +380,7 @@ Route121_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	setvar VAR_SAFARI_ZONE_STATE, 2
 	clearflag FLAG_GOOD_LUCK_SAFARI_ZONE
 	warp MAP_SAFARI_ZONE_SOUTH, 32, 33
-	waitstate
+	@@waitstate
 	end
 
 Route121_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon::

@@ -17,7 +17,7 @@ EventScript_CutTreeCommon:
 	isfollowerfieldmoveuser VAR_0x8004
 	setfieldeffectargument 3, VAR_0x8004 @ skip pose if so
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
-	waitstate
+	@waitstate
 EventScript_CutTreeDown:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
@@ -83,7 +83,7 @@ EventScript_RockSmashCommon:
 	isfollowerfieldmoveuser VAR_0x8004
 	setfieldeffectargument 3, VAR_0x8004 @ skip pose if so
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
-	waitstate
+	@waitstate
 EventScript_SmashRock:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
@@ -94,7 +94,7 @@ EventScript_SmashRock:: @ fallthrough
 	goto_if_eq VAR_RESULT, TRUE, EventScript_EndSmash
 	special RockSmashWildEncounter
 	goto_if_eq VAR_RESULT, FALSE, EventScript_EndSmash
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -241,14 +241,14 @@ EventScript_StrengthBoulder::
 	goto EventScript_PushABoulderLikeBathanielNandy
 EventScript_PushABoulderLikeBathanielNandy:
 	dofieldeffect FLDEFF_USE_STRENGTH
-	waitstate
+	@waitstate
 	goto EventScript_ActivateStrength
 	end
 
 EventScript_UseStrength::
 	lockall
 	dofieldeffect FLDEFF_USE_STRENGTH
-	waitstate
+	@waitstate
 	goto EventScript_ActivateStrength
 	end
 
@@ -392,7 +392,7 @@ EventScript_DigCommon:
 	isfollowerfieldmoveuser VAR_0x8004
 	setfieldeffectargument 3, VAR_0x8004 @ skip pose if true
 	dofieldeffect FLDEFF_USE_DIG
-	waitstate
+	@waitstate
 EventScript_DigSealedChamber:: @ fallthrough
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
@@ -410,7 +410,7 @@ EventScript_CutGrassCommon:
 	isfollowerfieldmoveuser VAR_0x8004
 	setfieldeffectargument 3, VAR_0x8004 @ skip pose if true
 	dofieldeffect FLDEFF_USE_CUT_ON_GRASS
-	waitstate
+	@waitstate
 
 @ Use Cut grass from party menu
 EventScript_UseCutGrass::
@@ -456,7 +456,7 @@ EventScript_UseDefog::
 	waitmovement 0
 	setfieldeffectargument 0, VAR_RESULT
 	dofieldeffect FLDEFF_DEFOG
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -471,7 +471,7 @@ EventScript_UseRockClimb::
 	msgbox Text_MonUsedRockClimb, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_ROCK_CLIMB
-	waitstate
+	@waitstate
 	goto EventScript_EndRockClimb
 	end
 

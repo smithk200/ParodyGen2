@@ -121,7 +121,7 @@ BurnedTower_1F_EventScript_Silver::
 	setvar VAR_0x8006, 20  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	playse SE_CLICK
 	setmetatile 16, 12, 0x37E, FALSE
 	special DrawWholeMapView

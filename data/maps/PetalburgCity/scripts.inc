@@ -35,7 +35,7 @@ PetalburgCity_EventScript_WallyTutorial::
 	waitmovement 0
 	msgbox Route102_Text_WatchMeCatchPokemon, MSGBOX_DEFAULT
 	special StartWallyTutorialBattle
-	waitstate
+	@waitstate
 	msgbox Route102_Text_WallyIDidIt, MSGBOX_DEFAULT
 	applymovement LOCALID_PETALBURG_WALLY, Common_Movement_WalkInPlaceFasterLeft, MAP_PETALBURG_CITY
 	waitmovement LOCALID_PETALBURG_WALLY, MAP_PETALBURG_CITY
@@ -48,7 +48,7 @@ PetalburgCity_EventScript_WallyTutorial::
 	special LoadPlayerParty
 	setvar VAR_GARBAGEVAR, 1
 	warp MAP_PETALBURG_CITY_GYM, 4, 108
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -73,7 +73,7 @@ PetalburgCity_EventScript_WalkToWallyHouse::
 	fadedefaultbgm
 	clearflag FLAG_GARBAGEFLAG
 	warp MAP_PETALBURG_CITY_WALLYS_HOUSE, 2, 4
-	waitstate
+	@waitstate
 	releaseall
 	end
 

@@ -34,7 +34,7 @@ SlateportCity_BattleTentCorridor_EventScript_EnterCorridor::
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_HoldMonsChooseFromSelection, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	slateporttent_rentmons
-	waitstate
+	@waitstate
 SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_RightThisWay, MSGBOX_DEFAULT
 	closemessage
@@ -48,7 +48,7 @@ SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom::
 	closedoor 2, 1
 	waitdooranim
 	warp MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM, 4, 4
-	waitstate
+	@waitstate
 	end
 
 SlateportCity_BattleTentCorridor_EventScript_ReturnToRoomFromBattle::
@@ -95,7 +95,7 @@ SlateportCity_BattleTentCorridor_EventScript_AskSwapMon::
 SlateportCity_BattleTentCorridor_EventScript_SwapMons::
 	fadescreen FADE_TO_BLACK
 	slateporttent_swapmons
-	waitstate
+	@waitstate
 	goto_if_eq VAR_RESULT, 1, SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_YourSwapIsComplete, MSGBOX_DEFAULT
 	goto SlateportCity_BattleTentCorridor_EventScript_EnterBattleRoom

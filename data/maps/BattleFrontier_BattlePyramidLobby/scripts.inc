@@ -1,6 +1,3 @@
-.set LOCALID_ATTENDANT, 1
-.set LOCALID_HINT_GIVER, 2
-
 BattleFrontier_BattlePyramidLobby_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattlePyramidLobby_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattleDomeLobby_OnWarp
@@ -13,7 +10,7 @@ BattleFrontier_BattlePyramidLobby_OnWarp:
 
 BattleFrontier_BattlePyramidLobby_EventScript_TurnPlayerNorth:
 	setvar VAR_TEMP_1, 1
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 
 BattleFrontier_BattlePyramidLobby_OnFrame:
@@ -139,7 +136,6 @@ BattleFrontier_BattlePyramidLobby_EventScript_TryEnterChallenge::
 	copyvar VAR_0x8004, VAR_RESULT
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
 	special ChoosePartyForBattleFrontier
-	waitstate
 	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattlePyramidLobby_EventScript_LoadPartyAndCancelChallenge
 	msgbox BattleFrontier_BattlePyramidLobby_Text_OkayToSaveBeforeChallenge, MSGBOX_YESNO
 	switch VAR_RESULT
@@ -187,10 +183,14 @@ BattleFrontier_BattlePyramidLobby_EventScript_NotEnoughValidMons::
 
 BattleFrontier_BattlePyramidLobby_EventScript_NotEnoughValidMonsLv50::
 	msgbox BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLv50, MSGBOX_DEFAULT
+	call BattleFrontier_ShowCaughtBannedSpecies
+	msgbox BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePyramidLobby_EventScript_EndCancelChallenge
 
 BattleFrontier_BattlePyramidLobby_EventScript_NotEnoughValidMonsLvOpen::
 	msgbox BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLvOpen, MSGBOX_DEFAULT
+	call BattleFrontier_ShowCaughtBannedSpecies
+	msgbox BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePyramidLobby_EventScript_EndCancelChallenge
 
 BattleFrontier_BattlePyramidLobby_EventScript_CancelChallengeSaveFailed::
@@ -208,7 +208,7 @@ BattleFrontier_BattlePyramidLobby_EventScript_EndCancelChallenge::
 
 BattleFrontier_BattlePyramidLobby_EventScript_HintGiver::
 	lockall
-	applymovement LOCALID_HINT_GIVER, Common_Movement_FacePlayer
+	applymovement LOCALID_PYRAMID_LOBBY_HINT_GIVER, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox BattleFrontier_BattlePyramidLobby_Text_TellYouWhatMisfortunesAwait, MSGBOX_DEFAULT
 	call BattleFrontier_BattlePyramidLobby_EventScript_GiveHint
@@ -370,8 +370,8 @@ BattleFrontier_BattlePyramidLobby_EventScript_ShowResults::
 	end
 
 BattleFrontier_BattlePyramidLobby_EventScript_WalkToPanelAndReceiveBag::
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattlePyramidLobby_Movement_AttendantWalkToPanel
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePyramidLobby_Movement_PlayerWalkToPanel
+	applymovement LOCALID_PYRAMID_LOBBY_ATTENDANT, BattleFrontier_BattlePyramidLobby_Movement_AttendantWalkToPanel
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePyramidLobby_Movement_PlayerWalkToPanel
 	waitmovement 0
 	msgbox BattleFrontier_BattlePyramidLobby_Text_WeWillHoldBagForSafekeeping, MSGBOX_DEFAULT
 	pyramid_get PYRAMID_DATA_WIN_STREAK
@@ -388,9 +388,9 @@ BattleFrontier_BattlePyramidLobby_EventScript_ReceiveBattleBag::
 	waitse
 	msgbox BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_ATTENDANT, BattleFrontier_BattlePyramidLobby_Movement_AttendantMoveAside
+	applymovement LOCALID_PYRAMID_LOBBY_ATTENDANT, BattleFrontier_BattlePyramidLobby_Movement_AttendantMoveAside
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePyramidLobby_Movement_PlayerStepOnPanel
+	applymovement LOCALID_PLAYER, BattleFrontier_BattlePyramidLobby_Movement_PlayerStepOnPanel
 	waitmovement 0
 	return
 
@@ -451,7 +451,6 @@ BattleFrontier_BattlePyramidLobby_EventScript_PickItemsToKeep::
 
 BattleFrontier_BattlePyramidLobby_EventScript_PickItemsFromBag::
 	special ChooseItemsToTossFromPyramidBag
-	waitstate
 	message BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep
 	waitmessage
 	goto BattleFrontier_BattlePyramidLobby_EventScript_PickItemsToKeep
@@ -459,7 +458,6 @@ BattleFrontier_BattlePyramidLobby_EventScript_PickItemsFromBag::
 
 BattleFrontier_BattlePyramidLobby_EventScript_PickItemsFromParty::
 	special BattlePyramidChooseMonHeldItems
-	waitstate
 	message BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep
 	waitmessage
 	goto BattleFrontier_BattlePyramidLobby_EventScript_PickItemsToKeep
@@ -529,9 +527,9 @@ BattleFrontier_BattlePyramidLobby_EventScript_ExitRules::
 	end
 
 BattleFrontier_BattlePyramidLobby_Text_WelcomeToBattlePyramid:
-	.string "Where the courage of Trainers\n"
+	.string "Where the courage of TRAINERS\n"
 	.string "is put to the test!\p"
-	.string "Welcome to the Battle Pyramid!\p"
+	.string "Welcome to the BATTLE PYRAMID!\p"
 	.string "I am your guide to\n"
 	.string "the Battle Quest.$"
 
@@ -545,25 +543,25 @@ BattleFrontier_BattlePyramidLobby_Text_AwaitFutureChallenge:
 BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid:
 	.string "The Battle Quest is a battling\n"
 	.string "event in which you must explore\l"
-	.string "the Pyramid and try to reach the top.\p"
-	.string "In the Pyramid are seven floors of\n"
+	.string "the PYRAMID and try to reach the top.\p"
+	.string "In the PYRAMID are seven floors of\n"
 	.string "mazes, all of them filled with not only\l"
-	.string "skilled Trainers but also wild Pokémon.\p"
+	.string "skilled TRAINERS but also wild Pokémon.\p"
 	.string "You must enter with three Pokémon,\n"
 	.string "none of them holding an item.\p"
 	.string "On your ascent, you will be provided\n"
-	.string "with a Battle Bag for items.\p"
+	.string "with a BATTLE BAG for items.\p"
 	.string "If you fail in your challenge, any item\n"
-	.string "placed in the Battle Bag disappears.\p"
+	.string "placed in the BATTLE BAG disappears.\p"
 	.string "If you want to interrupt your\n"
-	.string "challenge, you must select “Rest”\l"
+	.string "challenge, you must select “REST”\l"
 	.string "and save the game.\p"
 	.string "If you don't save before interrupting,\n"
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattlePyramidLobby_Text_WhichLevelMode:
-	.string "The Pyramid offers two courses,\n"
-	.string "Normal and Hard.\l"
+	.string "The PYRAMID offers two courses,\n"
+	.string "Level 50 and Open Level.\l"
 	.string "Which will you enter?$"
 
 BattleFrontier_BattlePyramidLobby_Text_SelectThreeMons:
@@ -576,49 +574,50 @@ BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "Pokémon qualified for the challenge.\p"
 	.string "Please also remember to take all\n"
 	.string "items from your Pokémon.\p"
-	.string "Eggs{STR_VAR_1} ineligible.\p"
-	.string "When you are ready, please have\n"
-	.string "a word with me.$"
+	.string "EGGS{STR_VAR_1}.$"
 
 BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLv50:
 	.string "A slight problem, adventurer!\p"
 	.string "You seem to not have the three\n"
 	.string "Pokémon qualified for the challenge.\p"
-	.string "The three Pokémon must be different.\p"
+	.string "The three Pokémon must be different\n"
+	.string "and each no higher than Level 50.\p"
 	.string "Please also remember to take all\n"
 	.string "items from your Pokémon.\p"
-	.string "Eggs{STR_VAR_1} ineligible.\p"
+	.string "EGGS{STR_VAR_1}.$"
+
+BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsEnd:
 	.string "When you are ready, please have\n"
 	.string "a word with me.$"
 
 BattleFrontier_BattlePyramidLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before you enter the Battle Pyramid,\n"
+	.string "Before you enter the BATTLE PYRAMID,\n"
 	.string "the game must be saved. Is that okay?$"
 
 BattleFrontier_BattlePyramidLobby_Text_ShowYouIntoPyramid:
 	.string "Very good. I will now show you into\n"
-	.string "the Battle Pyramid.$"
+	.string "the BATTLE PYRAMID.$"
 
 BattleFrontier_BattlePyramidLobby_Text_WeWillHoldBagForSafekeeping:
-	.string "We will hold your Bag for safekeeping,\n"
+	.string "We will hold your BAG for safekeeping,\n"
 	.string "{PLAYER}, while you are exploring.$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakePreviousBattleBag:
-	.string "In exchange, please take this Battle\n"
-	.string "Bag, the one you used previously.$"
+	.string "In exchange, please take this BATTLE\n"
+	.string "BAG, the one you used previously.$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakeThisBattleBag:
 	.string "In exchange, please take this\n"
-	.string "Battle Bag.$"
+	.string "BATTLE BAG.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExchangedBagForBattleBag:
-	.string "{PLAYER} exchanged the Bag for\n"
-	.string "the Battle Bag.$"
+	.string "{PLAYER} exchanged the BAG for\n"
+	.string "the BATTLE BAG.$"
 
 BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel:
 	.string "When you step on this floor panel,\n"
 	.string "you will be transported to a higher\l"
-	.string "floor in the Pyramid.\p"
+	.string "floor in the PYRAMID.\p"
 	.string "I hope for your sake that your\n"
 	.string "quest goes safely!$"
 
@@ -628,13 +627,13 @@ BattleFrontier_BattlePyramidLobby_Text_DidntSaveBeforeQuittingTakeBag:
 	.string "your challenge the last time.\p"
 	.string "Consequently, your challenge has\n"
 	.string "been disqualified, I'm sorry to say.\p"
-	.string "Here is the Bag we've been holding\n"
+	.string "Here is the BAG we've been holding\n"
 	.string "for you.\p"
-	.string "{PLAYER} got the Bag back.$"
+	.string "{PLAYER} got the BAG back.$"
 
 BattleFrontier_BattlePyramidLobby_Text_YouveConqueredPyramid:
 	.string "Excellent to see you back!\p"
-	.string "You've conquered the Pyramid!\n"
+	.string "You've conquered the PYRAMID!\n"
 	.string "How splendid!$"
 
 BattleFrontier_BattlePyramidLobby_Text_MonHoldingItemCannotTake:
@@ -642,17 +641,17 @@ BattleFrontier_BattlePyramidLobby_Text_MonHoldingItemCannotTake:
 	.string "At least one Pokémon is holding\n"
 	.string "an item.\p"
 	.string "I'm sorry to say, items obtained in\n"
-	.string "the Pyramid cannot be taken away.$"
+	.string "the PYRAMID cannot be taken away.$"
 
 BattleFrontier_BattlePyramidLobby_Text_HeldItemsMovedToBag:
 	.string "All items held by your Pokémon will be\n"
-	.string "moved to your Battle Bag, {PLAYER}.$"
+	.string "moved to your BATTLE BAG, {PLAYER}.$"
 
 BattleFrontier_BattlePyramidLobby_Text_BagCannotHoldPickItemsToKeep:
-	.string "The Battle Bag cannot hold all your\n"
+	.string "The BATTLE BAG cannot hold all your\n"
 	.string "items, I'm sorry to say.\p"
 	.string "Please pick the items you'll keep in the\n"
-	.string "Battle Bag, and with your Pokémon.$"
+	.string "BATTLE BAG, and with your Pokémon.$"
 
 BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem:
 	.string "At least one Pokémon is still\n"
@@ -660,7 +659,7 @@ BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem:
 
 BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep:
 	.string "Please pick the items you'll keep in the\n"
-	.string "Battle Bag, and with your Pokémon.$"
+	.string "BATTLE BAG, and with your Pokémon.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld:
@@ -668,10 +667,10 @@ BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld:
 	.string "the Pokémon held.$"
 
 BattleFrontier_BattlePyramidLobby_Text_UsedBattleBagWillBeKept:
-	.string "The Battle Bag you used will be kept\n"
+	.string "The BATTLE BAG you used will be kept\n"
 	.string "in readiness for your next challenge.\p"
-	.string "{PLAYER} turned the Battle Bag over\n"
-	.string "for the Bag's return.$"
+	.string "{PLAYER} turned the BATTLE BAG over\n"
+	.string "for the BAG's return.$"
 
 BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait:
 	.string "I must record your results.\n"
@@ -680,7 +679,7 @@ BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait:
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ForConqueringPyramidTakeThis:
 	.string "As a memento for conquering\n"
-	.string "the Battle Pyramid, please take this.$"
+	.string "the BATTLE PYRAMID, please take this.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem:
@@ -690,15 +689,15 @@ BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem:
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_BagIsFull:
 	.string "…Ah…\n"
-	.string "Your Bag appears to be filled.\p"
+	.string "Your BAG appears to be filled.\p"
 	.string "Please return after you've organized\n"
-	.string "your Bag's contents.$"
+	.string "your BAG's contents.$"
 
 BattleFrontier_BattlePyramidLobby_Text_DisappointingHereIsBag:
 	.string "How disappointing for you…\p"
-	.string "Here is the Bag we've been holding\n"
+	.string "Here is the BAG we've been holding\n"
 	.string "for you.\p"
-	.string "{PLAYER} got the Bag back.$"
+	.string "{PLAYER} got the BAG back.$"
 
 BattleFrontier_BattlePyramidLobby_Text_LookForwardToNextChallenge:
 	.string "We look forward to your\n"
@@ -709,12 +708,12 @@ BattleFrontier_BattlePyramidLobby_Text_HereIsPrize:
 	.string "We have been looking forward to\n"
 	.string "your arrival!\p"
 	.string "Here is your prize for conquering\n"
-	.string "the Pyramid.$"
+	.string "the PYRAMID.$"
 
 BattleFrontier_BattlePyramidLobby_Text_TellYouWhatMisfortunesAwait:
 	.string "Welcome…\p"
 	.string "I shall be pleased to tell you what\n"
-	.string "misfortunes await in the Pyramid…$"
+	.string "misfortunes await in the PYRAMID…$"
 
 BattleFrontier_BattlePyramidLobby_Text_Aah:
 	.string "… … … … … …\n"
@@ -743,12 +742,12 @@ BattleFrontier_BattlePyramidLobby_Text_HintPPWaste:
 	.string "It is a curse…\p"
 	.string "…And, I see your Pokémon drained of\n"
 	.string "Power Points and having no recourse\l"
-	.string "but to use Struggle…$"
+	.string "but to use STRUGGLE…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintLevitate:
 	.string "I see Pokémon loftily airborne…\p"
 	.string "…And, I see your Pokémon frustrated\n"
-	.string "by powerless Ground-type moves…$"
+	.string "by powerless GROUND-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintTrapAbility:
 	.string "I sense terrific energy rising from\n"
@@ -757,7 +756,7 @@ BattleFrontier_BattlePyramidLobby_Text_HintTrapAbility:
 	.string "escape the power's clutches…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintIce:
-	.string "I see Ice-type Pokémon…\p"
+	.string "I see ICE-type Pokémon…\p"
 	.string "…And, I see your Pokémon fighting\n"
 	.string "the freezing effects of ice…$"
 
@@ -768,50 +767,50 @@ BattleFrontier_BattlePyramidLobby_Text_HintExplosion:
 	.string "to them…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPsychic:
-	.string "I see Psychic-type Pokémon…\p"
+	.string "I see PSYCHIC-type Pokémon…\p"
 	.string "…And, I see your Pokémon in torment\n"
-	.string "from Psychic moves…$"
+	.string "from PSYCHIC moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintRock:
-	.string "I see Rock-type Pokémon…\p"
+	.string "I see ROCK-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
-	.string "from Rock moves…$"
+	.string "from ROCK moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintFighting:
-	.string "I see Fighting-type Pokémon…\p"
+	.string "I see FIGHTING-type Pokémon…\p"
 	.string "…And, I see your Pokémon pummeled\n"
-	.string "by Fighting moves…$"
+	.string "by FIGHTING moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWeather:
-	.string "Rain Dance… Sunny Day…\n"
-	.string "Sandstorm… Hail…\p"
+	.string "RAIN DANCE… SUNNY DAY…\n"
+	.string "SANDSTORM… HAIL…\p"
 	.string "I see Pokémon that become stronger\n"
 	.string "with the weather…\p"
 	.string "…And, I see your Pokémon confounded\n"
 	.string "by different types of moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintBug:
-	.string "I see Bug-type Pokémon…\p"
+	.string "I see BUG-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
 	.string "from different kinds of attacks…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintDark:
-	.string "I see Dark-type Pokémon…\p"
+	.string "I see DARK-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
-	.string "from Dark-type moves…$"
+	.string "from DARK-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWater:
-	.string "I see Water-type Pokémon…\p"
+	.string "I see WATER-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
-	.string "from Water-type moves…$"
+	.string "from WATER-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintGhost:
-	.string "I see Ghost-type Pokémon…\p"
+	.string "I see GHOST-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
-	.string "from Ghost-type moves…$"
+	.string "from GHOST-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintSteel:
-	.string "I see Steel-type Pokémon…\p"
+	.string "I see STEEL-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
 	.string "from enormously powerful moves…$"
 
@@ -829,7 +828,7 @@ BattleFrontier_BattlePyramidLobby_Text_HintStoneEvolve:
 	.string "from those three powers…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintNormal:
-	.string "I see Normal-type Pokémon…\p"
+	.string "I see NORMAL-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
 	.string "from enormously powerful moves…$"
 
@@ -841,9 +840,9 @@ BattleFrontier_BattlePyramidLobby_Text_BelieveMyFortunesOrNot:
 
 BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning:
 	.string "Did you know?\p"
-	.string "If you run fast, Trainers may notice\n"
+	.string "If you run fast, TRAINERS may notice\n"
 	.string "and come after you for a battle.\p"
-	.string "So, if you want to avoid Trainers,\n"
+	.string "So, if you want to avoid TRAINERS,\n"
 	.string "don't catch their eyes, but sneak\l"
 	.string "cautiously and quietly past them.$"
 
@@ -856,8 +855,8 @@ BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems:
 BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing:
 	.string "Welcome back!\n"
 	.string "You've done the unthinkable!\p"
-	.string "You've defeated the Pyramid King\n"
-	.string "and conquered the Battle Pyramid!$"
+	.string "You've defeated the PYRAMID KING\n"
+	.string "and conquered the BATTLE PYRAMID!$"
 
 BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints:
 	.string "Young explorer!\n"
@@ -871,36 +870,36 @@ BattleFrontier_BattlePyramidLobby_Text_ReadWhichHeading:
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMonRules:
-	.string "When the Pyramid is conquered,\n"
+	.string "When the PYRAMID is conquered,\n"
 	.string "the wild Pokémon that appear in it\l"
 	.string "are replaced by different kinds.\p"
 	.string "Explore, observe, and learn what kinds\n"
 	.string "of wild Pokémon you may encounter.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainTrainerRules:
-	.string "Trainers are lying in wait for you\n"
-	.string "inside the Pyramid.\p"
+	.string "TRAINERS are lying in wait for you\n"
+	.string "inside the PYRAMID.\p"
 	.string "On each floor, there are up to\n"
-	.string "eight Trainers.\p"
-	.string "When you defeat a Trainer, you will\n"
+	.string "eight TRAINERS.\p"
+	.string "When you defeat a TRAINER, you will\n"
 	.string "get a helpful hint for your adventure.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMazeRules:
-	.string "The mazes in the Pyramid rearrange\n"
+	.string "The mazes in the PYRAMID rearrange\n"
 	.string "themselves every time you enter it.\p"
 	.string "The mazes are poorly lit.\n"
 	.string "You must advance with caution.\p"
 	.string "The light grows brighter whenever you\n"
-	.string "defeat a wild Pokémon or a Trainer.$"
+	.string "defeat a wild Pokémon or a TRAINER.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBagRules:
-	.string "The Battle Bag serves as your Bag\n"
-	.string "while in the Pyramid.\p"
-	.string "There are two separate Battle Bags--\n"
-	.string "one each for the Normal and\l"
-	.string "Hard level adventures.\p"
+	.string "The BATTLE BAG serves as your BAG\n"
+	.string "while in the PYRAMID.\p"
+	.string "There are two separate BATTLE BAGS--\n"
+	.string "one each for the Level 50 and\l"
+	.string "Open Level adventures.\p"
 	.string "They each can hold up to 99 pieces\n"
 	.string "of ten kinds of items.\p"
-	.string "The contents of the Battle Bag are\n"
+	.string "The contents of the BATTLE BAG are\n"
 	.string "lost if you fail in your quest.$"
 

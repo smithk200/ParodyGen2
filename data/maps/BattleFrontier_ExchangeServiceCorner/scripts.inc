@@ -78,7 +78,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor1::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_TreeckoDoll
@@ -187,7 +187,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor2::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_LaprasDoll
@@ -251,7 +251,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_EonTicket
@@ -338,7 +338,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_Leftovers
@@ -798,7 +798,7 @@ EventScript_DoWonderTradeFirstTrade::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, EventScript_DoWonderTradeCancelSaveFirstTrade
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	goto EventScript_DoWonderTradeTrade
 
 EventScript_DoWonderTradeCancelSaveFirstTrade::
@@ -812,7 +812,7 @@ EventScript_DoWonderTradeSecondTrade::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, EventScript_DoWonderTradeCancelSaveSecondTrade
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	goto EventScript_DoWonderTradeTrade
 
 EventScript_DoWonderTradeCancelSaveSecondTrade::
@@ -826,7 +826,7 @@ EventScript_DoWonderTradeThirdTrade::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, EventScript_DoWonderTradeCancelSaveThirdTrade
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	goto EventScript_DoWonderTradeTrade
 
 EventScript_DoWonderTradeCancelSaveThirdTrade::
@@ -843,7 +843,7 @@ EventScript_DoWonderTradeStartNoLimit::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, EventScript_DoWonderTradeCancelSaveThirdTrade
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	goto EventScript_DoWonderTradeTrade
 
 EventScript_WTChallengesUnlimited::
@@ -856,9 +856,9 @@ EventScript_DoWonderTradeTrade::
 	copyvar VAR_0x8005, VAR_0x8004
 	@special CreateWonderTradePokemon
 	special DoInGameTradeScene
-	waitstate
+	@waitstate
 	@special ForceSaveGame
-	waitstate
+	@waitstate
 	msgbox EventScript_DoWonderTrade_Text_Done, MSGBOX_DEFAULT
 	closemessage
 	end

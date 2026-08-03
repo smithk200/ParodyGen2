@@ -39,7 +39,7 @@ PokemonLeague_KarensRoom_EventScript_KarenOnDefeat::
 	setvar VAR_0x8006, 4  @ num shakes
 	setvar VAR_0x8007, 4  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	special DrawWholeMapView
 	setvar VAR_LEAGUE_STATE, 5
 	release

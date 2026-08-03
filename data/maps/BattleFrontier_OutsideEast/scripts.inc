@@ -153,7 +153,7 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	lock
 	faceplayer
 	special DoWateringBerryTreeAnim
-	waitstate
+	@waitstate
 	waitse
 	playse SE_SUDOWOODO_SHAKE
 	applymovement LOCALID_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake

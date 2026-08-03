@@ -85,7 +85,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	setvar VAR_0x8006, 4  @ num shakes
 	setvar VAR_0x8007, 4  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	special DrawWholeMapView
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark
@@ -152,7 +152,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	setvar VAR_0x8006, 4  @ num shakes
 	setvar VAR_0x8007, 4  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	special DrawWholeMapView
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark

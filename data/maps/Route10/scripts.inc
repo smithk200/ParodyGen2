@@ -74,7 +74,7 @@ Route10_EventScript_Zapdos::
 	waitmoncry
 	seteventmon SPECIES_ZAPDOS, 50
 	special BattleSetup_StartLegendaryBattle
-waitstate
+@waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route10_EventScript_ZapdosRan
 	fadescreenswapbuffers FADE_TO_BLACK

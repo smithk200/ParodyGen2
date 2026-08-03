@@ -1310,6 +1310,31 @@ Yungoos
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_ANGELINA ===
+Name: Angelina
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Raticate
+Level: 84
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Azumarill
+Level: 85
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pikachu
+Level: 85
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Furret
+Level: 86
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_LEWIS ===
 Name: Lewis
 Class: Swimmer M
@@ -19622,27 +19647,18 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunder
 - Protect
 
-=== TRAINER_WILTON_5 ===
-Name: Wilton
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
+=== TRAINER_GRETA ===
+Name: Greta
+Class: Arena Tycoon
+Pic: Arena Tycoon Greta
+Gender: Female
+Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Manectric
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
-
-Wailmer
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
-
-Hariyama
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Beldum
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WINONA_2 ===
 Name: Winona
@@ -19868,7 +19884,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
 - Earthquake
 
-=== TRAINER_WINSTON_3 ===
+=== TRAINER_SILVER_TOTODILE_HOENN_LEAGUE ===
 Name: Winston
 Class: Rich Boy
 Pic: Rich Boy
@@ -19882,7 +19898,7 @@ Linoone @ Nugget
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINSTON_4 ===
+=== TRAINER_SILVER_CYNDAQUIL_HOENN_LEAGUE ===
 Name: Winston
 Class: Rich Boy
 Pic: Rich Boy
@@ -19896,7 +19912,7 @@ Linoone @ Nugget
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINSTON_5 ===
+=== TRAINER_SILVER_CHIKORITA_HOENN_LEAGUE ===
 Name: Winston
 Class: Rich Boy
 Pic: Rich Boy
@@ -19961,6 +19977,18 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_ANABEL ===
+Name: Anabel
+Class: Salon Maiden
+Pic: Salon Maiden Anabel
+Gender: Female
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Beldum
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BENDER_1 ===
 Name: Bender

@@ -276,7 +276,7 @@ MagmaHideout_3F_1R_Entei_EnteiFinalBattle::
 	setflag FLAG_GARBAGEFLAG
 	call_if_set FLAG_GARBAGEFLAG, MagmaHideout_3F_1R_Entei_EnteiBattle4_Stats
 	special BattleSetup_StartLegendaryBattle
-	waitstate
+	@waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome

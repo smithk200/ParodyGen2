@@ -796,7 +796,7 @@ EcruteakCity_Theater_EventScript_Lugia::
 	setvar VAR_0x8006, 20  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	addobject LOCALID_ECRUTEAK_SISTER
 	applymovement LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0
@@ -842,7 +842,7 @@ EcruteakCity_Theater_EventScript_Hooh::
 	setvar VAR_0x8006, 20  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	addobject LOCALID_ECRUTEAK_SISTER
 	applymovement LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0

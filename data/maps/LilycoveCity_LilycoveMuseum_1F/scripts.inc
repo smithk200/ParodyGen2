@@ -46,7 +46,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FollowCuratorNorth::
 	applymovement LOCALID_PLAYER, LilycoveCity_LilycoveMuseum_1F_Movement_FollowCuratorNorth
 	waitmovement 0
 	warp MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_2F, 11, 8
-	waitstate
+	@waitstate
 	end
 
 LilycoveCity_LilycoveMuseum_1F_EventScript_FollowCuratorWest::
@@ -54,7 +54,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FollowCuratorWest::
 	applymovement LOCALID_PLAYER, LilycoveCity_LilycoveMuseum_1F_Movement_FollowCuratorWest
 	waitmovement 0
 	warp MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_2F, 11, 8
-	waitstate
+	@waitstate
 	end
 
 LilycoveCity_LilycoveMuseum_1F_EventScript_FollowCuratorEast::
@@ -62,7 +62,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FollowCuratorEast::
 	applymovement LOCALID_PLAYER, LilycoveCity_LilycoveMuseum_1F_Movement_FollowCuratorEast
 	waitmovement 0
 	warp MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_2F, 11, 8
-	waitstate
+	@waitstate
 	end
 
 LilycoveCity_LilycoveMuseum_1F_Movement_CuratorEnterStairs:

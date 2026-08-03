@@ -130,7 +130,7 @@ VerdanturfTown_BattleTentLobby_EventScript_TryEnterChallenge::
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
 	special ChoosePartyForBattleFrontier
-	waitstate
+	@waitstate
 	goto_if_eq VAR_RESULT, 0, VerdanturfTown_BattleTentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox VerdanturfTown_BattleTentLobby_Text_SaveBeforeChallenge, MSGBOX_YESNO
 	switch VAR_RESULT
@@ -158,7 +158,7 @@ VerdanturfTown_BattleTentLobby_EventScript_EnterChallenge::
 	call VerdanturfTown_BattleTentLobby_EventScript_WalkToDoor
 	warp MAP_VERDANTURF_TOWN_BATTLE_TENT_CORRIDOR, 2, 7
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
-	waitstate
+	@waitstate
 	end
 
 VerdanturfTown_BattleTentLobby_EventScript_ExplainChallenge::
@@ -279,7 +279,7 @@ VerdanturfTown_BattleTentLobby_EventScript_ReadRulesBoard::
 	waitmessage
 	setvar VAR_0x8004, SCROLL_MULTI_BATTLE_TENT_RULES
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	switch VAR_RESULT
 	case 0, VerdanturfTown_BattleTentLobby_EventScript_RulesLevel
 	case 1, VerdanturfTown_BattleTentLobby_EventScript_RulesBasics

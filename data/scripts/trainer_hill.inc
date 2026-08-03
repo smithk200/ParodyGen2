@@ -38,7 +38,7 @@ TrainerHill_1F_EventScript_DummyWarpToEntranceCounter::
 @ Never reached
 TrainerHill_1F_EventScript_WarpSilentToEntranceCounter::
 	warpsilent MAP_TRAINER_HILL_ENTRANCE, 9, 6
-	waitstate
+	@waitstate
 	end
 
 TrainerHill_1F_EventScript_Lost::
@@ -50,7 +50,7 @@ TrainerHill_1F_EventScript_Lost::
 TrainerHill_EventScript_WarpToEntranceCounter::
 	setvar VAR_TEMP_1, 0
 	warp MAP_TRAINER_HILL_ENTRANCE, 9, 6
-	waitstate
+	@waitstate
 	end
 
 @ Unused
@@ -60,7 +60,7 @@ TrainerHill_1F_Movement_SetInvisible::
 
 @ TRAINER_PHILLIP is an actual Trainer on the SS Tidal, but is used as a placeholder here
 TrainerHill_EventScript_TrainerBattle::
-	trainerbattle TRAINER_BATTLE_HILL, LOCALID_NONE, TRAINER_PHILLIP, BattleFacility_TrainerBattle_PlaceholderText, BattleFacility_TrainerBattle_PlaceholderText, NULL, LOCALID_NONE, TRAINER_NONE, NULL, NULL, NULL, NULL, NULL, FALSE, FALSE, FALSE, FALSE
+	facilitytrainerbattle FACILITY_BATTLE_TRAINER_HILL
 	trainerhill_postbattletext
 	waitmessage
 	waitbuttonpress

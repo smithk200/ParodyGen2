@@ -76,7 +76,7 @@ RustboroCity_EventScript_PleaseSelectPokenav::
 RustboroCity_EventScript_MatchCallTutorial::
 	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
 	special ScriptMenu_CreateStartMenuForPokenavTutorial
-	waitstate
+	@waitstate
 	switch VAR_RESULT
 	case 0, RustboroCity_EventScript_PleaseSelectPokenav
 	case 1, RustboroCity_EventScript_PleaseSelectPokenav
@@ -87,7 +87,7 @@ RustboroCity_EventScript_MatchCallTutorial::
 	case 7, RustboroCity_EventScript_PleaseSelectPokenav
 	case MULTI_B_PRESSED, RustboroCity_EventScript_PleaseSelectPokenav
 	special OpenPokenavForTutorial
-	waitstate
+	@waitstate
 	delay 20
 	msgbox RustboroCity_Text_IdBetterGetBackToWork, MSGBOX_DEFAULT
 	closemessage
@@ -602,7 +602,7 @@ RustboroCity_EventScript_ReturnGoods::
 	setvar VAR_GARBAGEVAR, 5
 	delay 30
 	warp MAP_RUSTBORO_CITY_DEVON_CORP_3F, 2, 2
-	waitstate
+	@waitstate
 	releaseall
 	end
 

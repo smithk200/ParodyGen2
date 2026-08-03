@@ -12,60 +12,6 @@ FuchsiaCity_SafariZoneEntrance_OnFrame::
 
 FuchsiaCity_SafariZoneEntrance_OnTransition::
 	call_if_eq VAR_KANTO_SAFARI_ZONE_PROGRESS, 0, FuchsiaCity_SafariZoneEntrance_FirstTime
-	call_if_eq VAR_MAGIC_MUFFLER_STATE, 110, FuchsiaCity_SafariZoneEntrance_EventScript_ShowDragoniteMan
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_ShowDragoniteMan::
-	clearflag FLAG_FUCHSIA_CITY_DRAGONITE_NPC
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan::
-	setvar 0x8005, SPECIES_DRAGONITE
-	special CheckSpecies
-	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDragonite
-	setvar 0x8005, SPECIES_DRAGONAIR
-	special CheckSpecies
-	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDragonair
-	setvar 0x8005, SPECIES_DRATINI
-	special CheckSpecies
-	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDratini
-	goto FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_DontHaveDratini
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDragonite::
-	lock
-	faceplayer
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDragonite, MSGBOX_DEFAULT
-	closemessage
-	giveitem ITEM_SALAC_BERRY
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_ExplainSalacBerry, MSGBOX_DEFAULT
-	addvar VAR_MAGIC_MUFFLER_STATE, 1
-	closemessage
-	release
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDragonair::
-	lock
-	faceplayer
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDragonair, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_HaveDratini::
-	lock
-	faceplayer
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDratini, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-FuchsiaCity_SafariZoneEntrance_EventScript_DragoniteMan_DontHaveDratini::
-	lock
-	faceplayer
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_DontHaveDratini, MSGBOX_DEFAULT
-	closemessage
-	release
 	end
 
 FuchsiaCity_SafariZoneEntrance_FirstTime::
@@ -94,7 +40,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_ReenterSafari::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
 	waitmovement 0
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH, 0
-	waitstate
+	@waitstate
 	end
 
 FuchsiaCity_SafariZoneEntrance_EventScript_MeetSteven::
@@ -150,9 +96,9 @@ FuchsiaCity_SafariZoneEntrance_StevenAfter::
 
 FuchsiaCity_SafariZoneEntrance_Text_StevenChamp:
 	.string "Oh, hey {PLAYER}.\n"
-	.string "Or should I say Kanto champion?\p"
+	.string "Or should I say KANTO champion?\p"
 	.string "You know, for some time, I was the\n"
-	.string "champion of the Hoenn region.\p"
+	.string "champion of the HOENN region.\p"
 	.string "So welcome to the club, {PLAYER}.\p"
 	.string "In fact, here.\n"
 	.string "Consider this a welcome gift.$"
@@ -194,7 +140,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	setvar VAR_SAFARI_ZONE_STATE, 2
 	clearflag FLAG_GOOD_LUCK_SAFARI_ZONE
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH, 1
-	waitstate
+	@waitstate
 	end
 
 FuchsiaCity_SafariZoneEntrance_EventScript_CorrectionRight::
@@ -277,16 +223,16 @@ FuchsiaCity_SafariZoneEntrance_Movement_ReturnToTable:
 	step_end
 
 FuchsiaCity_SafariZoneEntrance_Text_StevenWelcome:
-	.string "My name is Steven. My family's\n"
+	.string "My name is STEVEN. My family's\n"
 	.string "company recently purchased this\l"
-	.string "Safari Zone, and we've made many\l"
+	.string "SAFARI ZONE, and we've made many\l"
 	.string "improvements.\p"
 	.string "You'll find very exotic Pokémon\n"
 	.string "here. Especially if you increase\l"
-	.string "your Safari Level.\p"
+	.string "your SAFARI LEVEL.\p"
 	.string "Just speak to the attendant here\n"
-	.string "any time to increase your Safari\l"
-	.string "Level.$"
+	.string "any time to increase your SAFARI\l"
+	.string "LEVEL.$"
 
 FuchsiaCity_SafariZoneEntrance_UpgradeGuy::
 	goto_if_eq VAR_KANTO_SAFARI_ZONE_PROGRESS, 1, FuchsiaCity_SafariZoneEntrance_UpgradeGuy1
@@ -352,64 +298,34 @@ FuchsiaCity_SafariZoneEntrance_UpgradeGuyNotEnoughMoney::
 
 FuchsiaCity_SafariZoneEntrance_Text_Steven:
 	.string "Oh, hey, {PLAYER}.\p"
-	.string "I hope you're enjoying the Safari.\p"
+	.string "I hope you're enjoying the SAFARI.\p"
 	.string "Have you seen any rare stones\n"
 	.string "lately?$"
 
 FuchsiaCity_SafariZoneEntrance_Text_Level1:
 	.string "Hello {PLAYER}, would you\n"
-	.string "like to increase your Safari Level\l"
+	.string "like to increase your SAFARI LEVEL\l"
 	.string "to 2? It will cost you ¥200,000$"
 
 FuchsiaCity_SafariZoneEntrance_Text_Level2:
 	.string "Hello {PLAYER}, would you\n"
-	.string "like to increase your Safari Level\l"
+	.string "like to increase your SAFARI LEVEL\l"
 	.string "to 3? It will cost you ¥300,000$"
 
 FuchsiaCity_SafariZoneEntrance_Text_Level3:
 	.string "Hello {PLAYER}, would you\n"
-	.string "like to increase your Safari Level\l"
+	.string "like to increase your SAFARI LEVEL\l"
 	.string "to 4? It will cost you ¥400,000$"
 
 FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyDeclined:
-	.string "Oh, that's too bad, then… $"
+	.string "Oh, that's too bad, then... $"
 
 FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyAccepted:
-	.string "Enjoy the premium Safari Zone\n"
+	.string "Enjoy the premium SAFARI ZONE\n"
 	.string "experience!$"
 
 FuchsiaCity_SafariZoneEntrance_Text_MaxLevel:
 	.string "Hello {PLAYER}, thank you for\n"
 	.string "continuing to be a premium member\l"
-	.string "at the Fuschia City Safari Zone.$"
+	.string "at the FUCHSIA SAFARI ZONE.$"
 
-FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDragonite:
-	.string "You have a Dragonite?\n"
-	.string "Well, I have just the thing for you!$"
-
-FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_ExplainSalacBerry:
-	.string "The Salac Berry raises your\n"
-	.string "Pokémon's Speed by one stage when\l"
-	.string "it's in a pinch.\p"
-	.string "You might want to give that to your\n"
-	.string "Dragonite to see what happens.\p"
-	.string "Try challenging the Elite Four some more.$"
-
-FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDragonair:
-	.string "You haven't evolved your Dragonair into\n"
-	.string "a Dragonite yet?\p"
-	.string "Come back when you've evolved your Dragonair.$"
-
-FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_HaveDratini:
-	.string "You haven't evolved your Dratini yet?\p"
-	.string "Come back when you've evolved your Dratini.\p"
-	.string "Try evolving it to its final stage!$"
-
-FuchsiaCity_SafariZoneEntrance_Text_DragoniteMan_DontHaveDratini:
-	.string "Psst…\n"
-	.string "Hey, kid.\p"
-	.string "Try to catch a Dratini in the Safari\n"
-	.string "Zone!\p"
-	.string "Come back when you have a Dratini.\p"
-	.string "I'll give you a Berry if you can fully\n"
-	.string "evolve it.$"

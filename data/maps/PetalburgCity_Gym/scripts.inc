@@ -165,7 +165,7 @@ PetalburgCity_Gym_EventScript_BeginWallyTutorial::
 	setflag FLAG_BADGE24_GET
 	special InitBirchState
 	warp MAP_PETALBURG_CITY, 15, 8
-	waitstate
+	@waitstate
 	release
 	end
 
@@ -387,7 +387,7 @@ PetalburgCity_Gym_EventScript_WallysDadArrives::
 	setvar VAR_GARBAGEVAR, 4
 	clearflag FLAG_BADGE24_GET
 	warp MAP_PETALBURG_CITY, 15, 8
-	waitstate
+	@waitstate
 	release
 	end
 
@@ -657,7 +657,7 @@ PetalburgCity_Gym_EventScript_EnterRoom::
 	closemessage
 	delay 30
 	warpdoor MAP_PETALBURG_CITY_GYM, VAR_0x8008, VAR_0x8009
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -1007,7 +1007,7 @@ PetalburgCity_Gym_EventScript_SetOHKORoomDoorMetatiles::
 
 PetalburgCity_Gym_EventScript_SlideOpenRoomDoors::
 	special PetalburgGymSlideOpenRoomDoors
-	waitstate
+	@waitstate
 	return
 
 PetalburgCity_Gym_EventScript_UnlockRoomDoors::

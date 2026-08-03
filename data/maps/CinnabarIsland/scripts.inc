@@ -30,10 +30,10 @@ CinnabarIsland_EventScript_Blaine::
     end
 
 CinnabarIsland_Text_Blaine:
-    .string "Blaine: I'll never give up\n"
+    .string "BLAINE: I'll never give up\n"
 	.string "until the day I've rebuilt\l"
-	.string "Cinnabar Gym!\p"
-	.string "I'll be at the Fighting Dojo\n"
+	.string "CINNABAR GYM!\p"
+	.string "I'll be at the FIGHTING DOJO\n"
 	.string "until then.$"
 
 
@@ -61,10 +61,10 @@ CinnabarIsland_Text_BlueBefore:
 	.string "Who are you?\p"
 	.string "Well, it's plain to see that you're\n"
 	.string "a trainer…\p"
-	.string "My name's Blue.\p"
-	.string "I was once the Champion, although\n"
+	.string "My name's BLUE.\p"
+	.string "I was once the CHAMPION, although\n"
 	.string "it was for only a short time…\p"
-	.string "That meddling Red did me in…\p"
+	.string "That meddling RED did me in…\p"
 	.string "Anyway, what do you want? You want\n"
 	.string "to challenge me or something?\p"
 	.string "…I hate to say it, but I'm not in\n"
@@ -88,10 +88,10 @@ CinnabarIsland_Text_Blue:
 	.string "Who are you?\p"
 	.string "Well, it's plain to see that you're\n"
 	.string "a trainer…\p"
-	.string "My name's Blue.\p"
-	.string "I was once the Champion, although\n"
+	.string "My name's BLUE.\p"
+	.string "I was once the CHAMPION, although\n"
 	.string "it was for only a short time…\p"
-	.string "That meddling Red did me in…\p"
+	.string "That meddling RED did me in…\p"
 	.string "Anyway, what do you want? You want\n"
 	.string "to challenge me or something?\p"
 	.string "…I hate to say it, but I'm not in\n"
@@ -108,7 +108,7 @@ CinnabarIsland_Text_Blue:
 	.string "If I see a strong opponent, it\n"
 	.string "makes me want to battle.\p"
 	.string "If you want to battle me, come to\n"
-	.string "the Viridian Gym.\p"
+	.string "the VIRIDIAN GYM.\p"
 	.string "I'll take you on then.$"
 
 CinnabarIsland_EventScript_Sign::
@@ -121,11 +121,11 @@ CinnabarIsland_EventScript_GymSign::
 
 CinnabarIsland_Text_GymSign:
 	.string "There's a notice here…\p"
-	.string "Cinnabar Gym has relocated to\n"
-	.string "Seafoam Islands.\p"
-	.string "Blaine$"
+	.string "CINNABAR GYM has relocated to\n"
+	.string "SEAFOAM ISLANDS.\p"
+	.string "BLAINE$"
 
 CinnabarIsland_Text_Sign:
-	.string "Cinnabar Island\p"
-	.string "There's Nothing Here Anymore.$"
+	.string "CINNABAR ISLAND\p"
+	.string "The Fiery Town of Burning Desire$"
 

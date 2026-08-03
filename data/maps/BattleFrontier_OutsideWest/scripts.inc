@@ -32,7 +32,7 @@ BattleFrontier_OutsideWest_EventScript_Sailor::
 	setvar VAR_0x8004, LOCALID_SS_TIDAL
 	call Common_EventScript_FerryDepartIsland
 	warpsilent MAP_VERMILION_CITY_PORT_INSIDE, 8, 9
-	waitstate
+	@waitstate
 	release
 	end
 
@@ -75,7 +75,7 @@ BattleFrontier_OutsideWest_EventScript_FerryToSlateport::
 	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
 	warp MAP_SLATEPORT_CITY_HARBOR, 8, 11
-	waitstate
+	@waitstate
 	release
 	end
 
@@ -85,7 +85,7 @@ BattleFrontier_OutsideWest_EventScript_FerryToLilycove::
 	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
 	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
-	waitstate
+	@waitstate
 	release
 	end
 

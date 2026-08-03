@@ -35,7 +35,7 @@ Route25_BillsHouse_EventScript_Gramps_Spinda::
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	@ Store selected slot in VAR_0x800A
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
@@ -55,7 +55,7 @@ Route25_BillsHouse_EventScript_Gramps_Roselia::
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
 	copyvar VAR_0x8005, VAR_0x800A
@@ -72,7 +72,7 @@ Route25_BillsHouse_EventScript_Gramps_Lotad::
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
 	copyvar VAR_0x8005, VAR_0x800A
@@ -89,7 +89,7 @@ Route25_BillsHouse_EventScript_Gramps_Growlithe::
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
 	copyvar VAR_0x8005, VAR_0x800A
@@ -106,7 +106,7 @@ Route25_BillsHouse_EventScript_Gramps_Pichu::
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
 	copyvar VAR_0x8005, VAR_0x800A

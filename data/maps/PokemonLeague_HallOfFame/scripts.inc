@@ -28,7 +28,7 @@ PokemonLeague_HallOfFame_EventScript_Cutscene::
 	setrespawn HEAL_LOCATION_NEW_BARK_TOWN
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -50,7 +50,7 @@ PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp::
 	setrespawn HEAL_LOCATION_NEW_BARK_TOWN
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -89,8 +89,6 @@ PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
 	clearflag FLAG_DEFEATED_MEW
 	clearflag FLAG_CAUGHT_MEW
-	clearflag FLAG_BATTLED_DEOXYS
-	clearflag FLAG_DEFEATED_DEOXYS
 	setvar VAR_LEAGUE_STATE, 1
 	return
 

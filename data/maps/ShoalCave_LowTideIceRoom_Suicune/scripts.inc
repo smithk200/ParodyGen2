@@ -169,7 +169,7 @@ ShoalCave_LowTideIceRoom_Suicune_SuicuneFinalBattle::
 	setflag FLAG_GARBAGEFLAG
 	call_if_set FLAG_GARBAGEFLAG, ShoalCave_LowTideIceRoom_Suicune_SuicuneBattle3_Stats
 	special BattleSetup_StartLegendaryBattle
-	waitstate
+	@waitstate
 	clearflag FLAG_GARBAGEFLAG
 	calculatemonstats
 	specialvar VAR_RESULT, GetBattleOutcome

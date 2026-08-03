@@ -463,7 +463,7 @@
 #define FLAG_DAILY_BEAT_SILVER                    0x1AA
 #define FLAG_RECEIVED_MACHOP                    0x1AB
 
-#define FLAG_DEFEATED_DEOXYS                 0x1AC //HnS
+#define FLAG_VS_SEEKER_ENABLED                 0x1AC //HnS
 #define FLAG_BATTLED_DEOXYS                  0x1AD //HnS
 #define FLAG_SHOWN_EON_TICKET                0x1AE
 #define FLAG_SHOWN_AURORA_TICKET             0x1AF
@@ -743,7 +743,7 @@
 #define FLAG_FRY_GIVE_TM_BLACKTHORN  0x2B8
 #define FLAG_DEFEATED_LARRY_1  0x2B9
 #define FLAG_HIDE_ROUTE_111_GRUNTS  0x2BA
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_IS_SHINY  0x2BB 
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1673,5 +1673,59 @@
 #define TESTING_FLAG_UNUSED_6                   (TESTING_FLAGS_START + 0x6)
 #define TESTING_FLAG_UNUSED_7                   (TESTING_FLAGS_START + 0x7)
 #endif // TESTING
+
+
+// World Map Flags
+#define FLAG_WORLD_MAP_PALLET_TOWN                                  0
+#define FLAG_WORLD_MAP_VIRIDIAN_CITY                                0
+#define FLAG_WORLD_MAP_PEWTER_CITY                                  0
+#define FLAG_WORLD_MAP_CERULEAN_CITY                                0
+#define FLAG_WORLD_MAP_LAVENDER_TOWN                                0
+#define FLAG_WORLD_MAP_VERMILION_CITY                               0
+#define FLAG_WORLD_MAP_CELADON_CITY                                 0
+#define FLAG_WORLD_MAP_FUCHSIA_CITY                                 0
+#define FLAG_WORLD_MAP_CINNABAR_ISLAND                              0
+#define FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR                      0
+#define FLAG_WORLD_MAP_SAFFRON_CITY                                 0
+#define FLAG_WORLD_MAP_ONE_ISLAND                                   0
+#define FLAG_WORLD_MAP_TWO_ISLAND                                   0
+#define FLAG_WORLD_MAP_THREE_ISLAND                                 0
+#define FLAG_WORLD_MAP_FOUR_ISLAND                                  0
+#define FLAG_WORLD_MAP_FIVE_ISLAND                                  0
+#define FLAG_WORLD_MAP_SEVEN_ISLAND                                 0
+#define FLAG_WORLD_MAP_SIX_ISLAND                                   0
+#define FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F                     0
+#define FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F                    0
+#define FLAG_WORLD_MAP_VIRIDIAN_FOREST                              0
+#define FLAG_WORLD_MAP_MT_MOON_1F                                   0
+#define FLAG_WORLD_MAP_SSANNE_EXTERIOR                              0
+#define FLAG_WORLD_MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL          0
+#define FLAG_WORLD_MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL            0
+#define FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F                            0
+#define FLAG_WORLD_MAP_VICTORY_ROAD_1F                              0
+#define FLAG_WORLD_MAP_ROCKET_HIDEOUT_B1F                           0
+#define FLAG_WORLD_MAP_SILPH_CO_1F                                  0
+#define FLAG_WORLD_MAP_POKEMON_MANSION_1F                           0
+#define FLAG_WORLD_MAP_SAFARI_ZONE_CENTER                           0
+#define FLAG_WORLD_MAP_POKEMON_LEAGUE_LORELEIS_ROOM                 0
+#define FLAG_WORLD_MAP_ROCK_TUNNEL_1F                               0
+#define FLAG_WORLD_MAP_SEAFOAM_ISLANDS_1F                           0
+#define FLAG_WORLD_MAP_POKEMON_TOWER_1F                             0
+#define FLAG_WORLD_MAP_CERULEAN_CAVE_1F                             0
+#define FLAG_WORLD_MAP_POWER_PLANT                                  0
+#define FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR                          0
+#define FLAG_WORLD_MAP_MT_EMBER_EXTERIOR                            0
+#define FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST                    0
+#define FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE            0
+#define FLAG_WORLD_MAP_FIVE_ISLAND_ROCKET_WAREHOUSE                 0
+#define FLAG_WORLD_MAP_TRAINER_TOWER_LOBBY                          0
+#define FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F                    0
+#define FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE               0
+#define FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH                      0
+#define FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE                     0
+#define FLAG_WORLD_MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER     0
+#define FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL                0
+#define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
+#define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
 
 #endif // GUARD_CONSTANTS_FLAGS_H

@@ -15,7 +15,7 @@ BlackthornCity_MoveDeletersHouse_EventScript_MoveDeleter::
 BlackthornCity_MoveDeletersHouse_EventScript_ChooseMonAndMoveToForget::
 	msgbox BlackthornCity_MoveDeletersHouse_Text_WhichMonShouldForget, MSGBOX_DEFAULT
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BlackthornCity_MoveDeletersHouse_EventScript_ComeAgain
 	special IsSelectedMonEgg
 	goto_if_eq VAR_RESULT, TRUE, BlackthornCity_MoveDeletersHouse_EventScript_EggCantForgetMoves
@@ -125,7 +125,7 @@ BlackthornCity_MoveRelearnersHouse_EventScript_AskTeachMove::
 BlackthornCity_MoveRelearnersHouse_EventScript_ChooseMon::
 	msgbox BlackthornCity_MoveRelearnersHouse_Text_TutorWhichMon, MSGBOX_DEFAULT
 	special ChooseMonForMoveRelearner
-	waitstate
+	@waitstate
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, BlackthornCity_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale
 	special IsSelectedMonEgg
 	goto_if_eq VAR_RESULT, TRUE, BlackthornCity_MoveRelearnersHouse_EventScript_CantTeachEgg
@@ -136,7 +136,7 @@ BlackthornCity_MoveRelearnersHouse_EventScript_ChooseMon::
 BlackthornCity_MoveRelearnersHouse_EventScript_ChooseMove::
 	msgbox BlackthornCity_MoveRelearnersHouse_Text_TeachWhichMove, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
-	waitstate
+	@waitstate
 	goto_if_eq VAR_0x8004, 0, BlackthornCity_MoveRelearnersHouse_EventScript_ChooseMon
 	msgbox BlackthornCity_MoveRelearnersHouse_Text_HandedOverHeartScale, MSGBOX_DEFAULT
 	removeitem ITEM_HEART_SCALE

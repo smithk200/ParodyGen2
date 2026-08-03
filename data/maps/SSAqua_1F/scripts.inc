@@ -16,7 +16,7 @@ SSAqua_1F_EventScript_Arrived::
 	setvar VAR_0x8006, 10  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	playse SE_DING_DONG
 	msgbox SSAqua_1F_Text_Sailor1_InVermilion, MSGBOX_DEFAULT
 	closemessage

@@ -22,8 +22,8 @@ Route117_EventScript_DaycareEggWaiting::
 	end
 
 Route117_EventScript_DaycareAcceptEgg::
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	goto_if_ne VAR_RESULT, PARTY_SIZE, Route117_EventScript_DaycareReceiveEgg
+	specialvar VAR_0x8008, GiveEggFromDaycare
+	goto_if_ne VAR_0x8008, MON_CANT_GIVE, Route117_EventScript_DaycareReceiveEgg
 	msgbox Route117_Text_YouHaveNoRoomForIt, MSGBOX_DEFAULT
 	release
 	end
@@ -34,10 +34,14 @@ Route117_EventScript_DaycareReceiveEgg::
 	waitfanfare
 	waitbuttonpress
 	msgbox Route117_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
-	special GiveEggFromDaycare
+	call_if_eq VAR_0x8008, MON_GIVEN_TO_PC, Route117_EventScript_DaycareEggSentToPC
 	clearflag FLAG_PENDING_DAYCARE_EGG
 	release
 	end
+
+Route117_EventScript_DaycareEggSentToPC::
+	msgbox Route117_Text_EggSentToPC, MSGBOX_DEFAULT
+	return
 
 Route117_EventScript_CheckMonReceivedMail::
 	specialvar VAR_RESULT, CheckDaycareMonReceivedMail
@@ -91,7 +95,7 @@ Route117_PokemonDayCare_EventScript_GiveMonToRaise::
 	msgbox Route117_PokemonDayCare_Text_WhichMonShouldWeRaise, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special ChooseSendDaycareMon
-	waitstate
+	@@waitstate
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route117_PokemonDayCare_EventScript_ComeAgain
 	specialvar VAR_RESULT, CountPartyAliveNonEggMons_IgnoreVar0x8004Slot
 	goto_if_eq VAR_RESULT, 0, Route117_PokemonDayCare_EventScript_OnlyOneAliveMon
@@ -166,7 +170,7 @@ Route117_PokemonDayCare_EventScript_TryRetrieveMon::
 	setvar VAR_0x8004, 0
 	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route117_PokemonDayCare_EventScript_CostPrompt
 	special ShowDaycareLevelMenu
-	waitstate
+	@@waitstate
 	copyvar VAR_0x8004, VAR_RESULT
 	goto_if_eq VAR_RESULT, DAYCARE_EXITED_LEVEL_MENU, Route117_PokemonDayCare_EventScript_ComeAgain
 	goto Route117_PokemonDayCare_EventScript_CostPrompt
@@ -254,7 +258,7 @@ Route117_PokemonDayCare_EventScript_TwoMonsInDaycare::
 @ Unused
 Route117_PokemonDayCare_EventScript_UnusedRetrieveMon::
 	special ShowDaycareLevelMenu
-	waitstate
+	@@waitstate
 	goto_if_eq VAR_RESULT, 2, Route117_PokemonDayCare_EventScript_ComeAgain
 	copyvar VAR_0x8004, VAR_RESULT
 	specialvar VAR_RESULT, TakePokemonFromDaycare
@@ -267,7 +271,7 @@ EventScript_EggHatch::
 	lockall
 	msgbox Text_EggHatchHuh, MSGBOX_DEFAULT
 	special EggHatch
-	waitstate
+	@@waitstate
 	releaseall
 	end
 
@@ -413,3 +417,7 @@ Route117_PokemonDayCare_Text_YoullBeLeftWithJustOne:
 	.string "me, you'll be left with just one.\p"
 	.string "You will be better off if you catch\n"
 	.string "some more, I dare say.$"
+
+Route117_Text_EggSentToPC:
+	.string "Your party was full, so the Egg was\n"
+	.string "sent to your PC.$"

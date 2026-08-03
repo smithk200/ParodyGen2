@@ -128,7 +128,7 @@ TrainerHill_Courtyard_EventScript_ChooseLeftTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_1
 	setvar VAR_0x8006, 0
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_Softboiled
@@ -152,7 +152,7 @@ TrainerHill_Courtyard_EventScript_ChooseNewLeftTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_1
 	setvar VAR_0x8006, 1
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_Softboiled
@@ -242,7 +242,7 @@ TrainerHill_Courtyard_EventScript_ChooseRightTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_2
 	setvar VAR_0x8006, 0
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_DefenseCurl
@@ -266,7 +266,7 @@ TrainerHill_Courtyard_EventScript_ChooseNewRightTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_2
 	setvar VAR_0x8006, 1
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_DefenseCurl
@@ -356,7 +356,7 @@ TrainerHill_Courtyard_EventScript_ChooseElementalTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
 	setvar VAR_0x8006, 0
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_FrenzyPlant
@@ -373,7 +373,7 @@ TrainerHill_Courtyard_EventScript_ChooseNewElementalTutorMove::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_MOVE_TUTOR_3
 	setvar VAR_0x8006, 1
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	copyvar VAR_TEMP_FRONTIER_TUTOR_SELECTION, VAR_RESULT
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_EventScript_FrenzyPlant
@@ -435,7 +435,7 @@ TrainerHill_Courtyard_EventScript_TeachTutorMove::
 	special CloseBattlePointsWindow
 	special CloseBattleFrontierTutorWindow
 	special ChooseMonForMoveTutor
-	waitstate
+	@waitstate
 	goto_if_eq VAR_RESULT, FALSE, TrainerHill_Courtyard_EventScript_CancelChooseMon
 	msgbox TrainerHill_Courtyard_Text_IllTakeBattlePoints, MSGBOX_DEFAULT
 	copyvar VAR_0x8004, VAR_0x8008
@@ -743,7 +743,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_ChooseDecor1::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_1
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_KissPoster
@@ -852,7 +852,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_ChooseDecor2::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_LaprasDoll
@@ -916,7 +916,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_ChooseVitamin::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Protein
@@ -995,7 +995,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
 	special ShowScrollableMultichoice
-	waitstate
+	@waitstate
 	special CloseFrontierExchangeCornerItemIconWindow
 	switch VAR_RESULT
 	case 0, TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Leftovers

@@ -45,7 +45,7 @@ EliteFourRoom_CloseDoor::
 	setvar VAR_0x8006, 4  @ num shakes
 	setvar VAR_0x8007, 4  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	special DrawWholeMapView
 	setvar VAR_TEMP_0, 1
 	release
@@ -81,7 +81,7 @@ PokemonLeague_WillsRoom_EventScript_WillOnDefeat::
 	setvar VAR_0x8006, 4  @ num shakes
 	setvar VAR_0x8007, 4  @ shake delay
 	special ShakeCamera
-	waitstate
+	@waitstate
 	special DrawWholeMapView
 	setvar VAR_LEAGUE_STATE, 2
 	release

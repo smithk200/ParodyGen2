@@ -9,7 +9,7 @@ BattleFrontier_BattleTowerBattleRoom_OnWarp:
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_SetUpObjects::
 	setvar VAR_TEMP_1, 1
-	applymovement LOCALID_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SetInvisible
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SetInvisible
 	end
 
 BattleFrontier_BattleTowerBattleRoom_OnFrame:
@@ -18,13 +18,13 @@ BattleFrontier_BattleTowerBattleRoom_OnFrame:
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_EnterRoom::
 	setvar VAR_TEMP_0, 1
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerEnter
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerEnter
 	waitmovement 0
 	frontier_get FRONTIER_DATA_BATTLE_NUM
 	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattleTowerBattleRoom_EventScript_OpponentEnter
-	applymovement LOCALID_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
 	setvar VAR_TEMP_2, 1
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, TRUE
@@ -32,8 +32,8 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_EnterRoom::
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_OpponentEnter::
 	tower_setopponent
-	addobject LOCALID_OPPONENT
-	applymovement LOCALID_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_OpponentEnter
+	addobject LOCALID_TOWER_BATTLE_OPPONENT
+	applymovement LOCALID_TOWER_BATTLE_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_OpponentEnter
 	waitmovement 0
 	tower_getopponentintro 0
 	msgbox gStringVar4, MSGBOX_DEFAULT
@@ -53,14 +53,14 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_DefeatedOpponent::
 	tower_setbattlewon
 	switch VAR_RESULT
 	case 7, BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyWon
-	applymovement LOCALID_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_OpponentExit
+	applymovement LOCALID_TOWER_BATTLE_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_OpponentExit
 	waitmovement 0
-	removeobject LOCALID_OPPONENT
+	removeobject LOCALID_TOWER_BATTLE_OPPONENT
 	frontier_getbrainstatus
 	call_if_ne VAR_RESULT, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleTowerBattleRoom_EventScript_SecondAttendantEnter
-	applymovement LOCALID_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
 	msgbox BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth, MSGBOX_DEFAULT
 	playfanfare MUS_HEAL
@@ -121,9 +121,9 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_AskRetireChallenge::
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_ContinueChallenge::
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos
 	waitmovement 0
 	goto BattleFrontier_BattleTowerBattleRoom_EventScript_OpponentEnter
 
@@ -189,19 +189,19 @@ BattleFrontier_EventScript_IncrementWinStreak::
 	return
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_SecondAttendantEnter::
-	applymovement LOCALID_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantEnter
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantEnter
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_2, Common_Movement_WalkInPlaceLeft
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_ATTENDANT_1, Common_Movement_ExclamationMark
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_1, Common_Movement_Delay48
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantDelay
-	applymovement LOCALID_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantFaceSecondAttendant
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantDelay
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantFaceSecondAttendant
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantExit
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantExit
 	waitmovement 0
 	return
 
@@ -233,12 +233,12 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_AskReadyForMaidenNoRecord::
 BattleFrontier_BattleTowerBattleRoom_EventScript_BattleAnabel::
 	call BattleFrontier_EventScript_SetBrainObjectGfx
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle
+	applymovement LOCALID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle
 	waitmovement 0
-	applymovement LOCALID_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos
+	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos
 	waitmovement 0
-	addobject LOCALID_OPPONENT
-	applymovement LOCALID_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_AnabelEnter
+	addobject LOCALID_TOWER_BATTLE_OPPONENT
+	applymovement LOCALID_TOWER_BATTLE_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_AnabelEnter
 	waitmovement 0
 	switch VAR_TEMP_F
 	case FRONTIER_BRAIN_GOLD, BattleFrontier_BattleTowerBattleRoom_EventScript_AnabelGoldIntro
@@ -296,9 +296,7 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_DoTowerBattle::
 	setvar VAR_TEMP_2, 0
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
 	special HealPlayerParty
-	setvar VAR_0x8004, SPECIAL_BATTLE_TOWER
-	setvar VAR_0x8005, 0
-	special DoSpecialTrainerBattle
+	dofacilitytrainerbattle FACILITY_BATTLE_TOWER
 	waitstate
 	copyvar VAR_0x8004, VAR_FRONTIER_BATTLE_MODE
 	goto_if_eq VAR_0x8004, FRONTIER_MODE_LINK_MULTIS, BattleFrontier_BattleTowerBattleRoom_EventScript_EndTowerBattle
@@ -468,11 +466,11 @@ BattleFrontier_BattleTowerBattleRoom_Text_ReadyFor7thOpponent:
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle:
 	.string "Record your battle on your\n"
-	.string "Frontier Pass?$"
+	.string "FRONTIER PASS?$"
 
 BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass:
 	.string "{PLAYER}'s battle was recorded\n"
-	.string "on the Frontier Pass.$"
+	.string "on the FRONTIER PASS.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame:
 	.string "Would you like to save and\n"
@@ -483,8 +481,8 @@ BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait:
 	.string "Please wait.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge:
-	.string "Would you like to cancel your Battle\n"
-	.string "Room challenge?$"
+	.string "Would you like to cancel your BATTLE\n"
+	.string "ROOM challenge?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved::
 	.string "There was an error of some sort.\n"
@@ -492,19 +490,19 @@ BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved::
 
 BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay:
 	.string "Excuse me, but…\p"
-	.string "Our leader, the Salon Maiden, is on\n"
+	.string "Our leader, the SALON MAIDEN, is on\n"
 	.string "her way here in hopes of battling you.\p"
 	.string "She should be arriving very shortly.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden:
-	.string "You will be facing the Salon Maiden.\n"
+	.string "You will be facing the SALON MAIDEN.\n"
 	.string "Are you prepared?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel:
 	.string "Greetings…\n"
-	.string "My name is Anabel.\p"
-	.string "I am the Salon Maiden, and I am in\n"
-	.string "charge of running the Battle Tower…\p"
+	.string "My name is ANABEL.\p"
+	.string "I am the SALON MAIDEN, and I am in\n"
+	.string "charge of running the BATTLE TOWER…\p"
 	.string "I have heard several rumors\n"
 	.string "about you…\p"
 	.string "In all honesty, what I have heard does\n"
@@ -517,13 +515,13 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent:
 	.string "its entirety…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized:
-	.string "Anabel: Fufufu, nicely done…\p"
-	.string "Your Frontier Pass, please…\n"
+	.string "ANABEL: Fufufu, nicely done…\p"
+	.string "Your FRONTIER PASS, please…\n"
 	.string "Your talent shall be recognized.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol:
 	.string "The Ability Symbol was embossed on\n"
-	.string "the Frontier Pass!$"
+	.string "the FRONTIER PASS!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime:
 	.string "… … … … … …\p"
@@ -535,7 +533,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime:
 	.string "Until the next time we meet…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack:
-	.string "Anabel: You really did come back to\n"
+	.string "ANABEL: You really did come back to\n"
 	.string "see me…\p"
 	.string "… … … … … …\p"
 	.string "You've won straight matches to see me…\n"
@@ -548,8 +546,8 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe:
 	.string "Let's begin, shall we?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease:
-	.string "Anabel: Fufu, congratulations…\n"
-	.string "Your Frontier Pass, please…$"
+	.string "ANABEL: Fufu, congratulations…\n"
+	.string "Your FRONTIER PASS, please…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine:
 	.string "The Ability Symbol took on\n"

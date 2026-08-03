@@ -23,7 +23,7 @@ BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle::
 	return
 
 BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle::
-	goto_if_set FLAG_DEFEATED_DEOXYS, Common_EventScript_NopReturn
+	goto_if_set FLAG_GARBAGEFLAG, Common_EventScript_NopReturn
 	clearflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
 	clearflag FLAG_GARBAGEFLAG
 	return
@@ -42,7 +42,7 @@ BirthIsland_Exterior_EventScript_Triangle::
 	lock
 	faceplayer
 	special DoDeoxysRockInteraction
-	waitstate
+	@waitstate
 	switch VAR_RESULT
 	case DEOXYS_ROCK_FAILED,     BirthIsland_Exterior_EventScript_Failed
 	case DEOXYS_ROCK_PROGRESSED, BirthIsland_Exterior_EventScript_Progressed
@@ -84,7 +84,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	seteventmon SPECIES_DEOXYS_NORMAL, 30
 	setflag FLAG_GARBAGEFLAG
 	special BattleSetup_StartLegendaryBattle
-	waitstate
+	@waitstate
 	clearflag FLAG_GARBAGEFLAG
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, BirthIsland_Exterior_EventScript_DefeatedDeoxys
@@ -95,7 +95,7 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	end
 
 BirthIsland_Exterior_EventScript_DefeatedDeoxys::
-	setflag FLAG_DEFEATED_DEOXYS
+	setflag FLAG_GARBAGEFLAG
 	setvar VAR_0x8004, SPECIES_DEOXYS_NORMAL
 	goto Common_EventScript_LegendaryFlewAway
 	end

@@ -48,7 +48,7 @@ BattleFrontier_BattlePalaceCorridor_EventScript_WalkToOpenBattleRoom::
 	waitdooranim
 BattleFrontier_BattlePalaceCorridor_EventScript_WarpToBattleRoom::
 	warp MAP_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM, 7, 4
-	waitstate
+	@waitstate
 	end
 
 BattleFrontier_BattlePalaceCorridor_EventScript_RandomComment1::

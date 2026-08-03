@@ -263,7 +263,7 @@ SaffronCity_FightingDojo_Ability_CheckMoney:
 SaffronCity_FightingDojo_Ability_Continue:
 	closemessage
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	@special SwitchMonAbility
 	compare VAR_RESULT, TRUE
 	goto_if_eq SaffronCity_FightingDojo_Ability_Finish

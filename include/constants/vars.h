@@ -3,6 +3,8 @@
 
 #define VARS_START 0x4000
 
+#include "constants/vars_frlg.h"
+
 // temporary vars
 // The first 0x10 vars are temporary--they are cleared every time a map is loaded.
 #define TEMP_VARS_START            0x4000

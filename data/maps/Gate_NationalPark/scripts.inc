@@ -38,7 +38,7 @@ Gate_NationalPark_EventScript_AttendantStart::
 	special EnterBugContestMode
 	setvar VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 1
-	waitstate
+	@waitstate
 	end
 
 Gate_NationalPark_EventScript_OnlyOneMon::
@@ -56,7 +56,7 @@ Gate_NationalPark_EventScript_OnlyOneMon::
 	special EnterBugContestMode
 	setvar VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 1
-	waitstate
+	@waitstate
 	end
 
 Gate_NationalPark_EventScript_AttendantEnterTop::
@@ -149,7 +149,7 @@ Gate_NationalPark_EventScript_BAttendantStart::
 	setflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	setvar VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 40, 19
-	waitstate
+	@waitstate
 	end
 
 Gate_NationalPark_EventScript_OnlyOneMonB::
@@ -167,7 +167,7 @@ Gate_NationalPark_EventScript_OnlyOneMonB::
 	setflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	setvar VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 40, 19
-	waitstate
+	@waitstate
 	end
 
 Gate_NationalPark_EventScript_AttendantBEnterTop::

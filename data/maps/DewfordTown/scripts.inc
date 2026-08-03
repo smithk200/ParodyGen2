@@ -138,7 +138,7 @@ DewfordTown_EventScript_SailToPetalburg::
 	resetobjectsubpriority LOCALID_PLAYER, MAP_DEWFORD_TOWN
 	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
 	copyvar VAR_GARBAGEVAR, VAR_0x8008
-	waitstate
+	@waitstate
 	release
 	end
 

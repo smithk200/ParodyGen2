@@ -198,7 +198,7 @@ SlateportCity_Harbor_EventScript_Lilycove::
 	setvar VAR_SS_TIDAL_STATE, SS_TIDAL_BOARD_SLATEPORT
 	call SlateportCity_Harbor_EventScript_BoardFerry
 	warp MAP_SS_TIDAL_CORRIDOR, 1, 10
-	waitstate
+	@waitstate
 	release
 	end
 
@@ -207,7 +207,7 @@ SlateportCity_Harbor_EventScript_BattleFrontier::
 	goto_if_eq VAR_RESULT, NO, SlateportCity_Harbor_EventScript_ChooseNewDestination
 	call SlateportCity_Harbor_EventScript_BoardFerry
 	warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 19, 67
-	waitstate
+	@waitstate
 	release
 	end
 

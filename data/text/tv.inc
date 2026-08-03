@@ -897,7 +897,7 @@ gTVPokemonTodayFailedText01::
 gTVPokemonTodayFailedText02::
 	.string "The Pokémon managed to get away!\p"
 	.string "It ended up wasting this many\n"
-	.string "POKé BALLS: {STR_VAR_2}!\p"
+	.string "Poké Balls: {STR_VAR_2}!\p"
 	.string "You should have seen the expression\n"
 	.string "of frustration on {STR_VAR_1}'s face when\l"
 	.string "the Pokémon took off!$"
@@ -906,7 +906,7 @@ gTVPokemonTodayFailedText03::
 	.string "But {STR_VAR_1} goofed and made the\n"
 	.string "Pokémon faint!\p"
 	.string "It ended up wasting this many\n"
-	.string "POKé BALLS: {STR_VAR_2}!\p"
+	.string "Poké Balls: {STR_VAR_2}!\p"
 	.string "You should have seen the expression\n"
 	.string "of stunned dismay on {STR_VAR_1}'s face\l"
 	.string "when the Pokémon fainted!$"
@@ -1667,7 +1667,7 @@ gTVTrainerFanClubText00::
 
 gTVTrainerFanClubText01::
 	.string "FANS: Their cool way of throwing\n"
-	.string "POKé BALLS!$"
+	.string "Poké Balls!$"
 
 gTVTrainerFanClubText02::
 	.string "FANS: Their adorable way of running!$"

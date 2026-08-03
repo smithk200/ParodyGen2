@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #include "constants/battle_partner.h"
+#include "constants/opponents_frlg.h"
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
@@ -73,7 +74,7 @@
 #define TRAINER_FRY_CYNDAQUIL_ECRUTEAK                 67 //why did it have to be this one...
 #define TRAINER_FRY_TOTODILE_ECRUTEAK                      68
 #define TRAINER_FRY_CHIKORITA_ECRUTEAK                      69
-#define TRAINER_RICKY_5                      70
+#define TRAINER_ANABEL                      70
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
 #define TRAINER_GEORGE                       73
@@ -90,7 +91,7 @@
 #define TRAINER_FRY_CYNDAQUIL_BLACKTHORN      84
 #define TRAINER_FRY_TOTODILE_BLACKTHORN       85
 #define TRAINER_FRY_CHIKORITA_BLACKTHORN      86
-#define TRAINER_WILTON_5                     87
+#define TRAINER_GRETA                     87
 #define TRAINER_WARREN                       88
 #define TRAINER_MARY                         89
 #define TRAINER_BARNEY                       90
@@ -143,9 +144,9 @@
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
 #define TRAINER_SHAUN                       139
-#define TRAINER_WINSTON_3                   140
-#define TRAINER_WINSTON_4                   141
-#define TRAINER_WINSTON_5                   142
+#define TRAINER_SILVER_TOTODILE_HOENN_LEAGUE                   140
+#define TRAINER_SILVER_CYNDAQUIL_HOENN_LEAGUE                   141
+#define TRAINER_SILVER_CHIKORITA_HOENN_LEAGUE                   142
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
@@ -153,7 +154,7 @@
 #define TRAINER_STEVE_2                     147
 #define TRAINER_STEVE_3                     148
 #define TRAINER_STEVE_4                     149
-#define TRAINER_STEVE_5                     150
+#define TRAINER_ANGELINA                     150
 #define TRAINER_LUIS                        151
 #define TRAINER_KENNY                     152
 #define TRAINER_DOUGLAS                     153
@@ -868,12 +869,20 @@
 #define TRAINER_PROTON_1                     862 //85E
 #define TRAINER_KIP2                      863 //85F
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 0 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      864
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT_EMERALD     864
+#define MAX_TRAINERS_COUNT_EMERALD 864
+
+#if IS_FRLG
+#define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
+#define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_FRLG
+#else
+#define TRAINERS_COUNT                      TRAINERS_COUNT_EMERALD
+#define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_EMERALD
+#endif
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

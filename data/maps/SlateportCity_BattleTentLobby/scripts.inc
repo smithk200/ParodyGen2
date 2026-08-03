@@ -132,7 +132,7 @@ SlateportCity_BattleTentLobby_EventScript_EnterChallenge::
 	call SlateportCity_BattleTentLobby_EventScript_WalkToDoor
 	warp MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR, 2, 7
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
-	waitstate
+	@waitstate
 	end
 
 SlateportCity_BattleTentLobby_EventScript_WalkToDoor::

@@ -114,7 +114,7 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_GARBAGEFLAG
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -125,7 +125,7 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_GARBAGEFLAG
 	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
-	waitstate
+	@waitstate
 	releaseall
 	end
 
@@ -215,7 +215,7 @@ LittlerootTown_EventScript_BeginDexUpgradeScene::
 	delay 20
 	clearflag FLAG_GARBAGEFLAG
 	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	waitstate
+	@waitstate
 	releaseall
 	end
 

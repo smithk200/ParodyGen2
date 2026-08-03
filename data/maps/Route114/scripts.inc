@@ -23,14 +23,11 @@ Route114_EventScript_Man::
 	lock
 	faceplayer
 	dotimebasedevents
-	goto_if_set FLAG_GARBAGEFLAG, Route114_EventScript_ReceivedBerry
+	goto_if_set FLAG_DAILY_ROUTE_114_RECEIVED_BERRY, Route114_EventScript_ReceivedBerry
 	msgbox Route114_Text_LoveUsingBerryCrushShareBerry, MSGBOX_DEFAULT
-	random NUM_ROUTE_114_MAN_BERRIES
-	addvar VAR_RESULT, NUM_ROUTE_114_MAN_BERRIES_SKIPPED
-	addvar VAR_RESULT, FIRST_BERRY_INDEX
-	giveitem VAR_RESULT
+	giverandomberry BERRY_ID_RAZZ, BERRY_ID_PINAP
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_GARBAGEFLAG
+	setflag FLAG_DAILY_ROUTE_114_RECEIVED_BERRY
 	msgbox Route114_Text_TryBerryCrushWithFriends, MSGBOX_DEFAULT
 	release
 	end
@@ -100,11 +97,8 @@ Route114_EventScript_Nancy::
 	end
 
 Route114_EventScript_Steve::
-	trainerbattle_single TRAINER_STEVE_1, Route114_Text_SteveIntro, Route114_Text_SteveDefeat, Route114_EventScript_RegisterSteve
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route114_EventScript_RematchSteve
+	trainerbattle_single TRAINER_STEVE_1, Route114_Text_SteveIntro, Route114_Text_SteveDefeat
 	msgbox Route114_Text_StevePostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 Route114_EventScript_RegisterSteve::
@@ -160,7 +154,7 @@ Route114_EventScript_Ivy::
 	end
 
 Route114_EventScript_Angelina::
-	trainerbattle_single TRAINER_NONE, Route114_Text_AngelinaIntro, Route114_Text_AngelinaDefeat
+	trainerbattle_single TRAINER_ANGELINA, Route114_Text_AngelinaIntro, Route114_Text_AngelinaDefeat
 	msgbox Route114_Text_AngelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -175,26 +169,26 @@ Route114_EventScript_Kai::
 	end
 
 Route114_Text_AllMyMonDoesIsRoarTakeThis:
-	.string "All my Pokémon does is Roar…\n"
+	.string "All my Pokémon does is ROAR…\n"
 	.string "No one dares to come near me…\p"
 	.string "Sigh… If you would, please take\n"
-	.string "this Tm away…$"
+	.string "this TM away…$"
 
 Route114_Text_ExplainRoar:
-	.string "Tm05 contains Roar.\n"
-	.string "A Roar sends Pokémon scurrying.$"
+	.string "TM05 contains ROAR.\n"
+	.string "A ROAR sends Pokémon scurrying.$"
 
 Route114_Text_Poochyena:
 	.string "Bow! Bowwow!$"
 
 Route114_Text_MeteorFallsSign:
-	.string "Meteor Falls\n"
-	.string "Rustboro City Through Here$"
+	.string "METEOR FALLS\n"
+	.string "RUSTBORO CITY THROUGH HERE$"
 
 Route114_Text_FossilManiacsHouseSign:
-	.string "Fossil Maniac'S House\n"
+	.string "FOSSIL MANIAC'S HOUSE\n"
 	.string "“Fossils gratefully accepted!”$"
 
 Route114_Text_LanettesHouse:
-	.string "Lanette'S House$"
+	.string "LANETTE'S HOUSE$"
 

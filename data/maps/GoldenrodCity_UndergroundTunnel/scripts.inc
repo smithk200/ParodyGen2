@@ -156,7 +156,7 @@ GoldenrodUnderground_EventScript_Brother_Haircut1::
 GoldenrodUnderground_EventScript_Haircut1::
 	msgbox GoldenrodUnderground_Text_OlderBrotherAskWhich
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	showmoneybox 0, 0
 	lock
 	faceplayer
@@ -218,7 +218,7 @@ GoldenrodUnderground_EventScript_Brother_Haircut2::
 GoldenrodUnderground_EventScript_Haircut2::
 	msgbox GoldenrodUnderground_Text_YoungerBrotherAskWhich
 	special ChoosePartyMon
-	waitstate
+	@waitstate
 	showmoneybox 0, 0
 	lock
 	faceplayer
