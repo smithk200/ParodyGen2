@@ -513,7 +513,7 @@ Route32_Text_Sign1:
 	.string "Violet City - Azalea Town$"
 
 Route32_Text_Sign2:
-	.string "Ruins Of Alph\n"
+	.string "Ruins of Alf\n"
 	.string "East Entrance$"
 
 Route32_Text_Sign3:

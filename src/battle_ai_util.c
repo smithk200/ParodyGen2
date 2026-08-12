@@ -5403,6 +5403,15 @@ enum AIConsiderGimmick ShouldTeraFromCalcs(enum BattlerId battler, enum BattlerI
     // This is done after all loops to minimize the possibility of a timing attack in which the player could
     // determine whether the AI will tera based on the time taken to select a move.
 
+    if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRIE_1)  //we want Brie to terastallize
+        {
+            return USE_GIMMICK;
+        } 
+    if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SHREK)  //we want Shrek to terastallize
+        {
+            return USE_GIMMICK;
+        }
+    
     if (enablesKo)
     {
         if (hardPunishingMove == MOVE_NONE)

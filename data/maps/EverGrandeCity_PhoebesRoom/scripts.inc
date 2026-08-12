@@ -42,7 +42,7 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	goto_if_set FLAG_DEFEATED_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_CHASE_E4_1, EverGrandeCity_PhoebesRoom_Text_Defeat
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -59,26 +59,22 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm Phoebe of the Elite Four.\n"
-	.string "I did my training on Mt. Pyre.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with Ghost-type Pokémon.\p"
-	.string "Yes, the bond I developed with Pokémon\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my Pokémon!$"
+	.string "Hi! I'm Chase!\n"
+	.string "I love Pokémon!\p"
+	.string "My Pokémon are the strongest Pokémon\n"
+	.string "ever!\p"
+	.string "That penguin you saw before?\n"
+	.string "He's nowhere as good as me.\p"
+	.string "Are you ready?\n"
+	.string "LET'S GO!!!!!!$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "Aw, man!\n"
+	.string "I really wanted to win!$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your Pokémon, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
-	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
+	.string "Come on man!\n"
+	.string "Why couldn't I win?\p"
+	.string "I've got to train my Pokémon harder\n"
+	.string "next time!$"
 

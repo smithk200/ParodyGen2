@@ -31,7 +31,7 @@ PokemonLeague_BeforeChampion_EventScript_EnterRoom::
 	end
 
 PokemonLeague_BeforeChampion_EventScript_PhilipJFryIntro:
-	goto_if_set FLAG_DEFEATED_FRY_ECRUTEAK, PokemonLeague_Fry_PhilipJFryExit
+	@goto_if_set FLAG_DEFEATED_FRY_ECRUTEAK, PokemonLeague_Fry_PhilipJFryExit
 	msgbox PokemonLeague_BeforeChampion_TextPhilipJFryIntro, MSGBOX_DEFAULT
 	goto_if_eq VAR_STARTER_MON, 0, PokemonLeague_BeforeChampion_Fry_Battle_Cyndaquil
 	goto_if_eq VAR_STARTER_MON, 1, PokemonLeague_BeforeChampion_Fry_Battle_Totodile

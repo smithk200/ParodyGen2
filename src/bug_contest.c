@@ -18,6 +18,7 @@
 #include "pokemon.h"
 #include "string_util.h"
 #include "constants/party_menu.h"
+#include "constants/map_event_ids.h"
 
 extern const struct SpeciesInfo gSpeciesInfo[];
 static bool32 IsPlayerDefeated(u32 battleOutcome);
@@ -230,43 +231,42 @@ bool8 ShowBugContestChosenMon(void)
     u16 monIndex = VarGet(VAR_0x8004);
     u16 species = GetMonData(&gParties[B_TRAINER_PLAYER][monIndex], MON_DATA_SPECIES);
 
-    // Set species name into STR_VAR_1 properly
-    GetSpeciesName(species); // gStringVar1, 
+    StringCopy(gStringVar1, GetSpeciesName(species));
 
     switch (species)
     {
     case SPECIES_CATERPIE:
-        gSpecialVar_Result = 22;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_CATERPIE;
         break;
     case SPECIES_WEEDLE:
-        gSpecialVar_Result = 23;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_WEEDLE;
         break;
     case SPECIES_METAPOD:
-        gSpecialVar_Result = 24;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_METAPOD;
         break;
     case SPECIES_KAKUNA:
-        gSpecialVar_Result = 25;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_KAKUNA;
         break;
-    case SPECIES_PARAS:
-        gSpecialVar_Result = 26;
+    case SPECIES_SEWADDLE:
+        gSpecialVar_Result = LOCALID_BUGCONTEST_SEWADDLE;
         break;
-    case SPECIES_VENONAT:
-        gSpecialVar_Result = 27;
+    case SPECIES_VENIPEDE:
+        gSpecialVar_Result = LOCALID_BUGCONTEST_VENIPEDE;
         break;
     case SPECIES_BUTTERFREE:
-        gSpecialVar_Result = 28;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_BUTTERFREE;
         break;
     case SPECIES_BEEDRILL:
-        gSpecialVar_Result = 29;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_BEEDRILL;
         break;
     case SPECIES_SCYTHER:
-        gSpecialVar_Result = 30;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_SCYTHER;
         break;
     case SPECIES_PINSIR:
-        gSpecialVar_Result = 31;
+        gSpecialVar_Result = LOCALID_BUGCONTEST_PINSIR;
         break;
     default:
-        gSpecialVar_Result = 0; // fallback if invalid species
+        gSpecialVar_Result = LOCALID_BUGCONTEST_CATERPIE;
         break;
     }
 

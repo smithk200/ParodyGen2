@@ -9,7 +9,7 @@ Route30_MapScripts::
 
 Route30_OnTransition: 
 	callnative SetTimeBasedEncounters
-	goto_if_set FLAG_NUZLOCKE, Route30_EventScript_EventScript_CheckJoeyNuzlocke
+	@clearflag FLAG_FRY_ROUTE_29
 	end
 
 Route30_OnFrame::
@@ -56,16 +56,14 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	end
 
 Route30_EventScript_Youngster_Joey::
-	clearflag FLAG_FRY_ROUTE_29
-	goto_if_set FLAG_NUZLOCKE, Route30_EventScript_Youngster_JoeyNuzlocke
 	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
+	release
 	end
 
 Route30_EventScript_Youngster_JoeyNuzlocke::
 	goto_if_unset FLAG_RECEIVED_MACHOP, Route30_EventScript_Youngster_JoeyNuzlockeNeedMachop
 	trainerbattle_single TRAINER_JOEY, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten
-	clearflag FLAG_NO_NUZLOCKE_JOEY
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
 	end
 
@@ -75,15 +73,15 @@ Route30_EventScript_Youngster_JoeyNuzlockeNeedMachop::
 	applymovement LOCALID_ROUTE_30_JOEY_2, Route30_EventScript_Movement_JoeyNuzlocke
 	removeobject 2
 	setflag FLAG_HIDE_ROUTE_30_NPCS
-	setflag FLAG_NO_NUZLOCKE_JOEY
 	release
 	end
 
 Route30NeedToFightJoeyTrigger::
-	goto_if_set FLAG_NO_NUZLOCKE_JOEY, Route30NeedToFightJoeyTrigger2
+	goto_if_set FLAG_NUZLOCKE, Route30NeedToFightJoeyTrigger2
 	end
 
 Route30NeedToFightJoeyTrigger2::
+	goto_if_set FLAG_RECEIVED_MACHOP, CommonEventScript_End
 	applymovement OBJ_EVENT_ID_PLAYER, Route30NeedToFightJoey_Movement
 	msgbox Route30_Text_NeedToFightJoey, MSGBOX_DEFAULT
 	closemessage

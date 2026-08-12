@@ -42,7 +42,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	goto_if_set FLAG_DEFEATED_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SHREK, EverGrandeCity_GlaciasRoom_Text_Defeat
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
@@ -59,25 +59,22 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is Glacia\n"
-	.string "of the Elite Four.\p"
-	.string "I've traveled from afar to Hoenn\n"
-	.string "so that I may hone my ice skills.\p"
-	.string "But all I have seen are challenges by\n"
-	.string "weak Trainers and their Pokémon.\p"
-	.string "What about you?\p"
-	.string "It would please me to no end if I could\n"
-	.string "go all out against you!$"
+	.string "HEYYYY!\p"
+	.string "I'm Shrek of the Elite Four!\p"
+	.string "I've traveled from Far Far Away\n"
+	.string "to Hoenn so that I can fulfill\l"
+	.string "a greater purpose.\p"
+	.string "Ya know, ogres are like onions.\n"
+	.string "They have layers.\p"
+	.string "But I'm not going to unpeel those\n"
+	.string "layers when I battle you, eh!$"
 
 EverGrandeCity_GlaciasRoom_Text_Defeat:
-	.string "You and your Pokémon…\n"
-	.string "How hot your spirits burn!\p"
-	.string "The all-consuming heat overwhelms.\p"
-	.string "It's no surprise that my icy skills\n"
-	.string "failed to harm you.$"
+	.string "HEY!\p"
+	.string "What are you doing in my swamp?$"
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
-	.string "Advance to the next room.\p"
-	.string "And there, confirm the truly fearsome\n"
-	.string "side of the Pokémon League.$"
+	.string "Eyy, ya done it, kid!\p"
+	.string "The next trainer's strong, I dare\n"
+	.string "say!$"
 

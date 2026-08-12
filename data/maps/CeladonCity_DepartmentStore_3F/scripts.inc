@@ -20,7 +20,7 @@ CeladonDept3_EventScript_Directory::
 
 CeladonDeptStore3F_Text_Youngster:
 	.string "I can't decide which Pokémon I\n"
-	.string "should use this Tm on…$"
+	.string "should use this TM on…$"
 
 CeladonDeptStore3F_Text_GameboyKid1:
 	.string "Uh-oh! I traded my Pokémon without\n"
@@ -36,9 +36,9 @@ CeladonDeptStore3F_Text_GameboyKid2:
 	.string "different Pokémon!$"
 
 CeladonDeptStore3F_Text_SuperNerd:
-	.string "The Tm Shop sells some rare moves.$"
+	.string "The TM Shop sells some rare moves.$"
 
 CeladonDeptStore3F_Text_Directory:
-	.string "3f: Tm Shop\p"
+	.string "3f: TM Shop\p"
 	.string "Make Your Pokémon Stronger!$"
 

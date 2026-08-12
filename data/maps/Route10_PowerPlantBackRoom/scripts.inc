@@ -81,10 +81,10 @@ Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
 
 Route10_PowerPlantBackRoom_Text_ManagerTakeThisTM:
 	.string "Wahah! Thanks!\p"
-	.string "Here! Take this Tm as a reward!$"
+	.string "Here! Take this TM as a reward!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTM07IsZapCannon:
-	.string "Manager: That Tm is Thunder.\p"
+	.string "Manager: That TM is Thunder.\p"
 	.string "It's a powerful technique!\p"
 	.string "It's not what anyone would\n"
 	.string "consider accurate, but it packs a\l"

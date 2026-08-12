@@ -12,7 +12,7 @@ RuinsOfAlph_Outside_EventScript_Quagsire::
 	end
 
 RuinsOfAlph_Outside_Text_Quagsire:
-	.string "Quagsire: Quag Quag$"
+	.string "Quagsire: QUAG QUAG$"
 
 RuinsOfAlph_Outside_EventScript_Stan::
 	trainerbattle_single TRAINER_STAN, RuinsOfAlph_Outside_Text_SuperNerdStan_Seen, RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten
@@ -78,7 +78,7 @@ RuinsOfAlph_Outside_EventScript_Sign3::
 	end
 
 RuinsOfAlph_Outside_Text_Scientist:
-	.string "Hm? That's a PokéDex, isn't it?\n"
+	.string "Hm? That's a Pokédex, isn't it?\n"
 	.string "May I see it?\p"
 	.string "There are so many kinds of\n"
 	.string "Pokémon.\p"
@@ -91,7 +91,7 @@ RuinsOfAlph_Outside_Text_Scientist:
 	.string "Pokémon, there should be many\n"
 	.string "more.\p"
 	.string "I know! Let me upgrade your\n"
-	.string "PokéDex. Follow me.$"
+	.string "Pokédex. Follow me.$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
 	.string "What do you want? I'm studying--\n"
@@ -103,12 +103,12 @@ RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten:
 	.string "real understanding…$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_After:
-	.string "The Ruins are from about 1500\n"
+	.string "The Ruins are from about 80\n"
 	.string "years ago.\p"
-	.string "Nobody knows who built them.\p"
-	.string "It's also not known if the Pokémon\n"
-	.string "statues have any meaning.\p"
-	.string "It's all one big mystery…$"
+	.string "People forgot about Alf Landon,\n"
+	.string "I suppose…\p"
+	.string "Do people really have no respect for\n"
+	.string "history?$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Seen:
 	.string "Hmmm… This is a strange place.$"
@@ -123,13 +123,13 @@ RuinsOfAlph_Outside_Text_MysteryChamberSign:
 	.string "Mystery Stone Panel Chamber$"
 
 RuinsOfAlph_Outside_Text_MainSign:
-	.string "Ruins Of Alph\n"
+	.string "Ruins of Alf\n"
 	.string "Visitors Welcome$"
 
 RuinsOfAlph_Outside_Text_ResearchSign:
-	.string "Ruins Of Alph Research Center\p"
+	.string "Ruins of Alf Research Center\p"
 	.string "The Authority On The\n"
-	.string "Ruins Of Alph$"
+	.string "Ruins of Alf$"
 
 RuinsOfAlph_Outside_Text_Fisher1:
 	.string "While exploring the Ruins, we\n"
@@ -146,6 +146,6 @@ RuinsOfAlph_Outside_Text_Youngster1:
 	.string "we use them for our secret codes.$"
 
 RuinsOfAlph_Outside_Text_Youngster2:
-	.string "A… H… E… A… D… Hmm…\p"
+	.string "A… L… F… L… A… N… D… O… N…\p"
 	.string "What?\p"
 	.string "I'm decoding this message!$"

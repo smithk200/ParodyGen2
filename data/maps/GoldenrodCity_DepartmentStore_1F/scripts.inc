@@ -60,6 +60,6 @@ GoldenrodDeptStore1_Text_Directory:
     .string "2f Trainer'S Market\p"
     .string "3f Battle Collection\p"
     .string "4f Medicine Box\p"
-    .string "5f Tm Corner\p"
+    .string "5f TM Corner\p"
     .string "6f Tranquil Square\p"
     .string "Rooftop Lookout$"

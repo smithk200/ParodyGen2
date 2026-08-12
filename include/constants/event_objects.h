@@ -472,6 +472,9 @@ enum
     OBJ_EVENT_GFX_WALUIGI,
     OBJ_EVENT_GFX_BENDER,
     OBJ_EVENT_GFX_CAPTAIN_FLOYD,
+    OBJ_EVENT_GFX_CHASE,
+    OBJ_EVENT_GFX_SHREK,
+    OBJ_EVENT_GFX_PETER_GRIFFIN,
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -703,14 +706,17 @@ enum
 #define OBJ_EVENT_PAL_TAG_ELITE_FOUR_SANS             0x116F
 #define OBJ_EVENT_PAL_TAG_LEADER_BRIE              0x1170
 #define OBJ_EVENT_PAL_TAG_LEADER_RICK              0x1171
-#define OBJ_EVENT_PAL_TAG_LEADER_MORTY              0x1172
-#define OBJ_EVENT_PAL_TAG_LEADER_MATT             0x1173
-#define OBJ_EVENT_PAL_TAG_LEADER_DAMIAN           0x1174
-#define OBJ_EVENT_PAL_TAG_MOLLY                     0x1175
-#define OBJ_EVENT_PAL_TAG_WALUIGI                    0x1176
-#define OBJ_EVENT_PAL_TAG_BENDER                    0x1177
-#define OBJ_EVENT_PAL_TAG_CAPTAIN_FLOYD           0x1178
-#define OBJ_EVENT_PAL_TAG_LEADER_BEA                   0x1179
+#define OBJ_EVENT_PAL_TAG_LEADER_MORTY             0x1172
+#define OBJ_EVENT_PAL_TAG_LEADER_MATT              0x1173
+#define OBJ_EVENT_PAL_TAG_LEADER_DAMIAN            0x1174
+#define OBJ_EVENT_PAL_TAG_MOLLY                    0x1175
+#define OBJ_EVENT_PAL_TAG_WALUIGI                  0x1176
+#define OBJ_EVENT_PAL_TAG_BENDER                   0x1177
+#define OBJ_EVENT_PAL_TAG_CAPTAIN_FLOYD            0x1178
+#define OBJ_EVENT_PAL_TAG_LEADER_BEA               0x1179
+#define OBJ_EVENT_PAL_TAG_SHREK                    0x1180
+#define OBJ_EVENT_PAL_TAG_CHASE                    0x1181
+#define OBJ_EVENT_PAL_TAG_PETER_GRIFFIN            0x1182
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

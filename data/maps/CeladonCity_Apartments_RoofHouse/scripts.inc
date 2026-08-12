@@ -59,10 +59,10 @@ CeladonMansionRoofHouse_Text_PharmacistStory:
 	.string "…\n"
 	.string "Ba-dum ba-dum!\p"
 	.string "For listening so patiently, you\n"
-	.string "may take this--Tm44!$"
+	.string "may take this--TM44!$"
 
 CeladonMansionRoofHouse_Text_PharmacistCurse:
-	.string "Tm44 is Rest.\p"
+	.string "TM44 is Rest.\p"
 	.string "It will allow your Pokémon to nap\n"
 	.string "mid-battle and regain health.\p"
 	.string "But good luck sleeping after that\n"

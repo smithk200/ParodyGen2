@@ -429,4 +429,4 @@ PokemonLeague_ChampionsRoom_Text_MaryNoInterview:
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview:
     .string "Mary: Come on! You can't blow off\n"
-    .string "the interview Again!$"
+    .string "the interview AGAIN!$"

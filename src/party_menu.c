@@ -1483,14 +1483,18 @@ void Task_HandleChooseMonInput(u8 taskId)
         {
         case A_BUTTON: // Selected mon
             HandleChooseMonSelection(taskId, slotPtr);
-            if (gItemLimit >= 4)
+            if (gUsedItemInBattle == TRUE)
+            {
+                if (gItemLimit >= 4)
                 {
                     gItemLimit = 4;
                 }
                 else
                     gItemLimit++;
+                //DebugPrintf("Item Count: %d", gItemLimit);
                 gUsedItemInBattle = FALSE;
-                 if ((VAR_MAGIC_MUFFLER_STATE < 10)) //the cheat will work faster if you don't use items...
+                //DebugPrintf("Used Item In Battle: %d", gUsedItemInBattle);
+                if ((VAR_MAGIC_MUFFLER_STATE < 10)) //the cheat will work faster if you don't use items...
                 //also anything below 10 corresponds to the elite four stuff
                 {
                     u16 rand;
@@ -1509,6 +1513,7 @@ void Task_HandleChooseMonInput(u8 taskId)
                         }
                     }
                 }
+            }
             break;
         case B_BUTTON: // Selected Cancel / pressed B
             HandleChooseMonCancel(taskId, slotPtr);
@@ -4904,6 +4909,15 @@ void ItemUseCB_BattleScript(u8 taskId, TaskFunc task)
         ScheduleBgCopyTilemapToVram(2);
         gTasks[taskId].func = task;
     }
+    else if (gItemLimit >= 4) //can't use more than 4 items in battle
+    {
+        //DebugPrintf("Reached");
+        gPartyMenuUseExitCallback = FALSE;
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gText_ItemLimitHasBeenReached, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+    }
     else
     {
         gBattleStruct->itemPartyIndex[gBattlerInMenuId] = GetPartyIdFromBattleSlot(gPartyMenu.slotId);
@@ -4980,6 +4994,10 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         gPartyMenuUseExitCallback = FALSE;
         PlaySE(SE_SELECT);
+        if (gItemLimit > 4)
+        {
+            DisplayPartyMenuMessage(gText_ItemLimitHasBeenReached, TRUE);
+        }
         DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
         ScheduleBgCopyTilemapToVram(2);
         if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD)
@@ -5539,6 +5557,15 @@ static void TryUseItemOnMove(u8 taskId)
             gPartyMenuUseExitCallback = FALSE;
             PlaySE(SE_SELECT);
             DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        }
+        else if (gItemLimit >= 4) //can't use more than 4 items in battle
+        {
+            //DebugPrintf("Reached");
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_ItemLimitHasBeenReached, TRUE);
             ScheduleBgCopyTilemapToVram(2);
             gTasks[taskId].func = Task_ClosePartyMenuAfterText;
         }

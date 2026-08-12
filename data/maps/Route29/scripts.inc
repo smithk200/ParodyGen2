@@ -287,7 +287,7 @@ Route29_Text_FryAfter:
 	.string "Hey, before you go, take this!$"
 
 Route30_Text_FryExplainTrailblaze:
-	.string "This Tm- it contains Trailblaze.\n"
+	.string "This TM- it contains Trailblaze.\n"
 	.string "It blazes a trail!\p"
 	.string "Though what it does in battle, besides\n"
 	.string "blazing a trail, is that it's a Grass-\l"

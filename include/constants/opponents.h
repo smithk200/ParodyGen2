@@ -190,14 +190,14 @@
 #define TRAINER_NOB_1                       183
 #define TRAINER_DARCY                       184
 #define TRAINER_NOB_3                       185
-#define TRAINER_NOB_4                       186
-#define TRAINER_NOB_5                       187
+#define TRAINER_CAPTAIN_FLOYD                186
+#define TRAINER_CAPTAIN_FLOYD_2               187
 #define TRAINER_YUJI                        188
 #define TRAINER_JED                     189
 #define TRAINER_CINDY                     190
 #define TRAINER_KIRK                        191
-#define TRAINER_STEPHEN        192
-#define TRAINER_STEVE        193
+#define TRAINER_STEPHEN                     192
+#define TRAINER_STEVE                       193
 #define TRAINER_SHAWN                       194
 #define TRAINER_NORTON                  195
 #define TRAINER_JENN                    196
@@ -262,8 +262,8 @@
 #define TRAINER_MICAH                       255
 #define TRAINER_THOMAS                      256
 #define TRAINER_SIDNEY_ELITE_FOUR                    257
-#define TRAINER_PHOEBE                    258
-#define TRAINER_GLACIA                    259
+#define TRAINER_CHASE_E4_1                    258
+#define TRAINER_SHREK                    259
 #define TRAINER_DRAKE                    260
 #define TRAINER_SIDNEY                      261
 #define TRAINER_DEANDRE                      262
@@ -312,10 +312,10 @@
 #define TRAINER_JANINE                    305
 #define TRAINER_BLAINE                    306
 #define TRAINER_TIMOTHY_1                   307
-#define TRAINER_DARIUS                      308
+#define TRAINER_TODD_3                      308
 #define TRAINER_BARNY                       309
 #define TRAINER_WADE_2                      310
-#define TRAINER_TIMOTHY_5                   311
+#define TRAINER_CINDY_2                   311
 #define TRAINER_VICKY                       312
 #define TRAINER_SHELBY_1                    313
 #define TRAINER_KATIE_2                    314
@@ -395,7 +395,7 @@
 #define TRAINER_KATELYN_2                   388
 #define TRAINER_KATELYN_3                   389
 #define TRAINER_KATELYN_4                   390
-#define TRAINER_KATELYN_5                   391
+#define TRAINER_ROD_2                   391
 #define TRAINER_NICOLAS_1                   392
 #define TRAINER_PERRY_2                     393
 #define TRAINER_CELINA                      394
@@ -861,9 +861,9 @@
 #define TRAINER_MAY_PLACEHOLDER             854
 #define TRAINER_GRUNT_12                    855 //857
 #define TRAINER_WALLACE2                    856 //858
-#define TRAINER_CHANSEY3                    857 //859
-#define TRAINER_CHANSEY4                    858 //85A
-#define TRAINER_CHANSEY5                    859 //85B
+#define TRAINER_FRY_CYNDAQUIL_EVER_GRANDE                    857 //859
+#define TRAINER_FRY_TOTODILE_EVER_GRANDE                    858 //85A
+#define TRAINER_FRY_CHIKORITA_EVER_GRANDE                    859 //85B
 #define TRAINER_SIDNEY2                     860 //85C
 #define TRAINER_PHOEBE2                     861 //85D
 #define TRAINER_PROTON_1                     862 //85E

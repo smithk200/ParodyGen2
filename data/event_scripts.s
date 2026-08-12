@@ -2258,3 +2258,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/PokemonLeague_BeforeChampion/scripts.inc"
 
 	.include "data/maps/DewfordTown_Gym/scripts.inc"
+
+	.include "data/maps/Alola1/scripts.inc"
+
+	.include "data/maps/Alola2/scripts.inc"
+
+	.include "data/maps/AlolaCave_1F/scripts.inc"
+
+	.include "data/maps/AlolaCave_2F/scripts.inc"

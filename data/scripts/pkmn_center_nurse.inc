@@ -24,7 +24,8 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	end
 
 EventScript_PkmnCenterNurse_HealPkmnReallyFast::
-	playse SE_PIN
+	playfanfare MUS_HEAL
+	waitfanfare
 	special HealPlayerParty
 	goto EventScript_PkmnCenterNurse_PlayerTurn
 	end

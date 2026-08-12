@@ -116,12 +116,12 @@ ViridianCity_Text_DreamEaterFisher:
 	.string "…I had this dream about a Drowzee\n"
 	.string "eating my dream. Weird, huh?\p"
 	.string "Huh? What's this?\p"
-	.string "Where did this Tm come from?\p"
+	.string "Where did this TM come from?\p"
 	.string "This is spooky! Here, you can have\n"
-	.string "this Tm.$"
+	.string "this TM.$"
 
 ViridianCity_Text_DreamEaterFisher_GotDreamEater:
-	.string "Tm42 contains Dream Eater…\p"
+	.string "TM42 contains Dream Eater…\p"
 	.string "…Zzzzz…$"
 
 ViridianCity_Text_Youngster:

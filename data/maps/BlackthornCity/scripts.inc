@@ -371,7 +371,7 @@ Blackthorn_City_Text_PhilipJFryDefeat:
 	.string "Pokémon before facing Clair!$"
 	
 Blackthorn_City_Text_PhilipJFry_ExplainTM:
-	.string "This Tm is Stomping Tantrum.\n"
+	.string "This TM is Stomping Tantrum.\n"
 	.string "It's good for dealing damage.\p"
 	.string "If it misses, then on the next\n"
 	.string "turn it will deal double damage!\p"

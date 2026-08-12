@@ -194,7 +194,7 @@ CeruleanCity_Gym_EventScript_Misty::
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 10
 	call Common_EventScript_SetGymTrainers
-	msgbox CeruleanGym_Text_MistyTm, MSGBOX_DEFAULT
+	msgbox CeruleanGym_Text_MistyTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_WATER_PULSE
 	clearflag FLAG_HIDE_CAPE_MISTY
 	call_if_eq VAR_SUICUNE_ENCOUNTERS, 5, CeruleanCity_Gym_SetSuicuneScene
@@ -320,5 +320,5 @@ CeruleanGym_Text_GuideWin:
 	.string "As always, that was one heck of a\n"
 	.string "great battle!$"
 
-CeruleanGym_Text_MistyTm:
+CeruleanGym_Text_MistyTM:
 	.string "Here, take this too.$"

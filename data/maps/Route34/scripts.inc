@@ -93,6 +93,10 @@ Route34_PhilipJFryGiveTM::
 Route34_PhilipJFry_EndingSpeech::
 	msgbox Route34_Text_PhilipJFry_EndingSpeech, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_FRY_ROUTE_34, Route34_Movement_PhilipJFry_Exit
+	waitmovement 0
+	setflag FLAG_FRY_ROUTE_34
+	removeobject LOCALID_FRY_ROUTE_34
 	end
 
 Route34_EventScript_Sign1::
@@ -115,6 +119,18 @@ Route34_EventScript_Sign3::
 	closemessage
 	release
 	end
+
+Route34_Movement_PhilipJFry_Exit::
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 Route34_EventScript_Item_SoftSand::
 	finditem ITEM_SOFT_SAND
@@ -290,7 +306,7 @@ Route34_Text_PhilipJFryDefeat:
 	.string "up some more!$"
 	
 Route34_Text_PhilipJFry_ExplainIceBeam:
-	.string "This Tm is Ice Beam.\p"
+	.string "This TM is Ice Beam.\p"
 	.string "It will shoot a ray of ice at\n"
 	.string "your foes.\p"
 	.string "There's also a chance it\n"

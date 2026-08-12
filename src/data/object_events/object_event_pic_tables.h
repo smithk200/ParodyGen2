@@ -3708,3 +3708,31 @@ static const struct SpriteFrameImage sPicTable_CaptainFloyd[] = {
     overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 1),
     overworld_frame(gObjectEventPic_CaptainFloyd, 2, 4, 2),
 };
+
+static const struct SpriteFrameImage sPicTable_Chase[] = {
+    overworld_ascending_frames(gObjectEventPic_Chase, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Shrek[] = {
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Shrek, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_PeterGriffin[] = {
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 0),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 1),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 2),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 3),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 4),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 5),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 6),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 7),
+    overworld_frame(gObjectEventPic_PeterGriffin, 2, 4, 8),
+};

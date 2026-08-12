@@ -349,7 +349,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_DRAGON_TAMER] = { _("Dragon Tamer"), 12 },
     [TRAINER_CLASS_NINJA_BOY] = { _("Ninja Boy"), 3 },
     [TRAINER_CLASS_BATTLE_GIRL] = { _("Battle Girl"), 6 },
-    [TRAINER_CLASS_PARASOL_LADY] = { ("Swimmer♀"), 2, BALL_DIVE },
+    [TRAINER_CLASS_PARASOL_LADY] = { ("Parasol Lady"), 2, BALL_DIVE },
     [TRAINER_CLASS_TWINS] = { _("Twins"), 3 },
     [TRAINER_CLASS_SAILOR] = { _("Sailor"), 8 },
     [TRAINER_CLASS_COOLTRAINER_2] = { _("Cooltrainer"), 5, BALL_ULTRA },
@@ -440,6 +440,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_SCIENTIST] = {_("Scientist"), 3},
     [TRAINER_CLASS_HOENN_LEADER] = {_("Leader"), 25},
     [TRAINER_CLASS_GAME_DEV] = {_("Game Dev"), 50},
+    [TRAINER_CLASS_PHILIP_2] = {_("Philip J.")},
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
@@ -1911,14 +1912,14 @@ void CustomTrainerPartyAssignMoves(struct Pokemon *mon, const struct TrainerMon 
             move = GetRandomMove(partyEntry->moves[j], partyEntry->species);
             SetMonData(mon, MON_DATA_MOVE1 + j, &move);
             SetMonData(mon, MON_DATA_PP1 + j, &pp);
-            DebugPrintf("Random moves");
+            //DebugPrintf("Random moves");
         }
         else
         {
             pp = GetMovePP(partyEntry->moves[j]);
             SetMonData(mon, MON_DATA_MOVE1 + j, &partyEntry->moves[j]);
             SetMonData(mon, MON_DATA_PP1 + j, &pp);
-            DebugPrintf("No Random Moves");
+            //DebugPrintf("No Random Moves");
         }
         
     }
@@ -2141,7 +2142,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     if (speciesInfo->abilities[abilityNum] == partyData[monIndex].ability)
                         break;
                 }
-                assertf(abilityNum < maxAbilityNum, "illegal ability %S for %S", gAbilitiesInfo[partyData[monIndex].ability].name, speciesInfo->speciesName);
+                //assertf(abilityNum < maxAbilityNum, "illegal ability %S for %S", gAbilitiesInfo[partyData[monIndex].ability].name, speciesInfo->speciesName);
             }
             else if (B_TRAINER_MON_RANDOM_ABILITY)
             {

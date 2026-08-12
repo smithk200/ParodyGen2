@@ -2461,10 +2461,11 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Unimplemented."),
     },
 
-    [ABILITY_317] =
+    [ABILITY_CORRUPT] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("Corrupt"),
+        .description = COMPOUND_STRING("Y0u sh0u1dn't b3 h3r3."),
+        .aiRating = 10,
     },
 
     [ABILITY_SPICY_SPRAY] =

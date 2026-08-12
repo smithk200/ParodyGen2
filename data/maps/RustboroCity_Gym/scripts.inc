@@ -208,13 +208,13 @@ RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
-	.string "That Technical Machine, Tm39,\n"
+	.string "That Technical Machine, TM39,\n"
 	.string "contains Rock Tomb.\p"
 	.string "It not only inflicts damage by dropping\n"
 	.string "rocks, it also lowers Speed.\p"
-	.string "If you use a Tm, it instantly teaches\n"
+	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a Pokémon.\p"
-	.string "Remember, a Tm can be used only once,\n"
+	.string "Remember, a TM can be used only once,\n"
 	.string "so think before you use it.$"
 
 RustboroCity_Gym_Text_RoxannePostBattle:

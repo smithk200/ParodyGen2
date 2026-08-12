@@ -142,6 +142,7 @@ struct SpecialStatus
     u8 statStageAmount:4;
     u8 statStageAmount2:4;
     // End of byte
+    u8 corruptOrbActivated:1;
 };
 
 struct SideTimer

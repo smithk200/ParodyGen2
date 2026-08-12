@@ -566,7 +566,7 @@ MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "Tate: You should also take this, too.$"
 
 MossdeepCity_Gym_Text_ExplainCalmMind:
-	.string "Tate: That Tm04 contains…\n"
+	.string "Tate: That TM04 contains…\n"
 	.string "Liza: Calm Mind!\p"
 	.string "Tate: It raises Sp. Atk and…\n"
 	.string "Liza: It raises Sp. Def!\p"

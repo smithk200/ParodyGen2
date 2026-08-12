@@ -81,10 +81,10 @@ FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:
 	.string "took from Meteor Falls?\p"
 	.string "Please, may I have it?\p"
 	.string "I'm not asking for it for free.\n"
-	.string "How about in exchange for this Tm?$"
+	.string "How about in exchange for this TM?$"
 
 FallarborTown_CozmosHouse_Text_PleaseUseThisTM:
-	.string "Prof. Cozmo: This Tm, it represents\n"
+	.string "Prof. Cozmo: This TM, it represents\n"
 	.string "my feeling of gratitude.\l"
 	.string "Please use it!$"
 
@@ -101,7 +101,7 @@ FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
 	.string "Prof. Cozmo: Please, may I have that\n"
 	.string "Meteorite?\p"
 	.string "I'm not asking for it for free.\n"
-	.string "How about in exchange for this Tm?$"
+	.string "How about in exchange for this TM?$"
 
 FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls:
 	.string "Prof. Cozmo went off to Meteor Falls\n"

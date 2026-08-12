@@ -67,7 +67,7 @@ SeafoamIslands_Gym_Text_GymStatuePlayerWon::
 	.string "Blue, Red, {PLAYER}$"
 
 SeafoamIslands_Gym_Text_TM:
-	.string "Take this too. This Tm contains\n"
+	.string "Take this too. This TM contains\n"
 	.string "the awesome Overheat.\p"
 	.string "I hope your next opponent has an\n"
 	.string "extra Burn Heal! Waaah!$"

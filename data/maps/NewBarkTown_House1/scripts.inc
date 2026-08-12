@@ -25,6 +25,7 @@ NewBarkTown_House1_EventScript_Father::
 	msgbox NewBarkTown_House1_Text_Father, MSGBOX_DEFAULT
 	givemon SPECIES_MACHOP, 5
 	setflag FLAG_RECEIVED_MACHOP
+	call Common_EventScript_GiftMon
 	closemessage
 	release
 	end

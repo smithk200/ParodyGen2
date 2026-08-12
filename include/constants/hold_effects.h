@@ -143,6 +143,7 @@ enum __attribute__((packed)) HoldEffect
 
     //Dark Gold hold effects
     HOLD_EFFECT_MAGIC_MUFFLER,
+    HOLD_EFFECT_CORRUPT_ORB,
     HOLD_EFFECT_COUNT
 };
 

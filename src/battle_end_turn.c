@@ -58,6 +58,8 @@ static bool32 HandleEndTurnVarious(enum BattlerId battler)
 
     for (enum BattlerId i = 0; i < gBattlersCount; i++)
     {
+        gSpecialStatuses[battler].corruptOrbActivated = FALSE;
+
         if (gBattleMons[i].volatiles.throatChopTimer > 0)
         {
             gBattleMons[i].volatiles.throatChopTimer--;
@@ -426,6 +428,8 @@ static bool32 HandleEndTurnFirstEventBlock(enum BattlerId battler)
     }
     case FIRST_EVENT_BLOCK_HEAL_ITEMS:
         if (ItemBattleEffects(battler, 0, GetBattlerHoldEffect(battler), IsLeftoversActivation))
+            effect = TRUE;
+        if (ItemBattleEffects(battler, 0, GetBattlerHoldEffect(battler), IsCorruptOrbEndTurnActivation))
             effect = TRUE;
         gBattleStruct->eventState.endTurnBlock = 0;
         gBattleStruct->eventState.endTurnBattler++;
@@ -1338,6 +1342,7 @@ static bool32 HandleEndTurnThirdEventBlock(enum BattlerId battler)
         case ABILITY_MOODY:
         case ABILITY_PICKUP:
         case ABILITY_SPEED_BOOST:
+        case ABILITY_CORRUPT:
             if (AbilityBattleEffects(ABILITYEFFECT_ENDTURN, battler, ability, MOVE_NONE, TRUE))
                 effect = TRUE;
             break;
@@ -1541,6 +1546,7 @@ static bool32 HandleEndTurnDynamax(enum BattlerId battler)
 
     return effect;
 }
+
 
 static bool32 (*const sEndTurnEffectHandlers[])(enum BattlerId battler) =
 {

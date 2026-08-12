@@ -283,6 +283,17 @@ GoldenrodCity_EventScript_Beauty::
 	release
 	end
 
+GoldenrodCity_EventScript_AlolaSailor::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_Text_Sailor_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq GoldenrodCity_Text_Sailor_No
+	msgbox Alola1_Text_Sailor_Alolalolalol, MSGBOX_AUTOCLOSE
+	warp MAP_ALOLA1, 5, 10
+	release
+	end
+
 GoldenrodCity_Text_Beauty:
 	.string "This is the Goldenrod Gym!\p"
 	.string "Our leader Whitney is not here\n"
@@ -468,3 +479,11 @@ GoldenrodCity_Text_MoveTutorBut:
 
 GoldenrodCity_Text_MoveTutorNotEnoughCoins:
 	.string "…You don't have enough coins…$"
+
+GoldenrodCity_Text_Sailor_AskToWarp:
+	.string "Do you want me to take you to\n"
+	.string "Alola?$"
+
+GoldenrodCity_Text_Sailor_No:
+	.string "Alola's super fun!\n"
+	.string "You're missing out!$"

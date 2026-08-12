@@ -24,6 +24,6 @@ MrPsychic_Text_1:
 	.string "You wanted this!$"
 
 MrPsychic_Text_2:
-	.string "Tm29 is Psychic.\p"
+	.string "TM29 is Psychic.\p"
 	.string "It may lower the target's\n"
 	.string "Spcl.Def.$"

@@ -28,7 +28,9 @@
 #define CAVE_CAMOUFLAGE_BLEND       RGB(14, 9, 3)
 #define CAVE_BATTLE_INTRO_SLIDE     BattleIntroSlide1
 
-// Building values. Used for BATTLE_ENVIRONMENT_BUILDING as well as the environments that come from the vanilla MAP_BATTLE_SCENEs: BATTLE_ENVIRONMENT_PLAIN, BATTLE_ENVIRONMENT_FRONTIER, BATTLE_ENVIRONMENT_GYM, BATTLE_ENVIRONMENT_LEADER, BATTLE_ENVIRONMENT_MAGMA, BATTLE_ENVIRONMENT_AQUA, BATTLE_ENVIRONMENT_SIDNEY, BATTLE_ENVIRONMENT_PHOEBE, BATTLE_ENVIRONMENT_GLACIA, BATTLE_ENVIRONMENT_DRAKE, BATTLE_ENVIRONMENT_CHAMPION
+// Building values. Used for BATTLE_ENVIRONMENT_BUILDING as well as the environments that come from the vanilla MAP_BATTLE_SCENEs: BATTLE_ENVIRONMENT_PLAIN, BATTLE_ENVIRONMENT_FRONTIER, 
+//BATTLE_ENVIRONMENT_GYM, BATTLE_ENVIRONMENT_LEADER, BATTLE_ENVIRONMENT_MAGMA, BATTLE_ENVIRONMENT_AQUA, BATTLE_ENVIRONMENT_HOENN_E4_1, BATTLE_ENVIRONMENT_HOENN_E4_2, BATTLE_ENVIRONMENT_HOENN_E4_3, 
+//BATTLE_ENVIRONMENT_HOENN_E4_4, BATTLE_ENVIRONMENT_CHAMPION
 #define BUILDING_NATURE_POWER        B_NATURE_POWER_MOVES >= GEN_4 ? MOVE_TRI_ATTACK : MOVE_SWIFT
 #if B_SECRET_POWER_ANIMATION >= GEN_7
     #define BUILDING_SECRET_POWER_ANIMATION gBattleAnimMove_SpitUp
@@ -296,7 +298,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_SIDNEY] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_1] =
     {
         .name = _("Sidney"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -309,7 +311,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_PHOEBE] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_2] =
     {
         .name = _("Phoebe"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -318,11 +320,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumPhoebe,
+        .palette = gBattleEnvironmentPalette_StadiumWater,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_GLACIA] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_3] =
     {
         .name = _("Glacia"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -331,11 +333,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumGlacia,
+        .palette = gBattleEnvironmentPalette_StadiumPoison,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_DRAKE] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_4] =
     {
         .name = _("Drake"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -344,7 +346,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumDrake,
+        .palette = gBattleEnvironmentPalette_StadiumFairy,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
@@ -357,7 +359,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumWallace,
+        .palette = gBattleEnvironmentPalette_StadiumFry,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
@@ -786,9 +788,9 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .secretPowerEffect = BUILDING_SECRET_POWER_EFFECT,
         .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
-        .entry = ENVIRONMENT_ENTRY(Building),
-        .background = ENVIRONMENT_BACKGROUND(Building_2),
-        .palette = gBattleEnvironmentPalette_Building_2,
+        .entry = ENVIRONMENT_ENTRY(Blue_Building_2),
+        .background = ENVIRONMENT_BACKGROUND(Blue_Building_2),
+        .palette = gBattleEnvironmentPalette_Blue_Building_2,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
@@ -799,12 +801,12 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .secretPowerEffect = BUILDING_SECRET_POWER_EFFECT,
         .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
-        .entry = ENVIRONMENT_ENTRY(Blue_Building_2),
-        .background = ENVIRONMENT_BACKGROUND(Blue_Building_2),
-        .palette = gBattleEnvironmentPalette_Blue_Building_2,
+        .entry = ENVIRONMENT_ENTRY(Building),
+        .background = ENVIRONMENT_BACKGROUND(Stadium_2),
+        .palette = gBattleEnvironmentPalette_StadiumLeader,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
-
+    
     [BATTLE_ENVIRONMENT_MAGMA] =
     {
         .name = _("Magma"),
@@ -831,7 +833,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_SIDNEY] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_1] =
     {
         .name = _("Sidney"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -840,11 +842,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumSidney,
+        .palette = gBattleEnvironmentPalette_StadiumIce,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_PHOEBE] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_2] =
     {
         .name = _("Phoebe"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -853,11 +855,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumPhoebe,
+        .palette = gBattleEnvironmentPalette_StadiumWater,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_GLACIA] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_3] =
     {
         .name = _("Glacia"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -865,12 +867,12 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
-        .background = ENVIRONMENT_BACKGROUND(Stadium_2),
-        .palette = gBattleEnvironmentPalette_StadiumGlacia,
+        .background = ENVIRONMENT_BACKGROUND(Stadium),
+        .palette = gBattleEnvironmentPalette_StadiumPoison,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
-    [BATTLE_ENVIRONMENT_DRAKE] =
+    [BATTLE_ENVIRONMENT_HOENN_E4_4] =
     {
         .name = _("Drake"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
@@ -879,7 +881,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumDrake,
+        .palette = gBattleEnvironmentPalette_StadiumFairy,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
@@ -892,7 +894,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium),
-        .palette = gBattleEnvironmentPalette_StadiumWallace,
+        .palette = gBattleEnvironmentPalette_StadiumFry,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
@@ -1108,7 +1110,7 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
 
 	[BATTLE_ENVIRONMENT_KAREN] =
     {
-	.name = _("Karen"),
+	    .name = _("Karen"),
         .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
         .secretPowerEffect = BUILDING_SECRET_POWER_EFFECT,
         .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
@@ -1142,9 +1144,13 @@ static const struct {
     {MAP_BATTLE_SCENE_GYM,      BATTLE_ENVIRONMENT_GYM},
     {MAP_BATTLE_SCENE_MAGMA,    BATTLE_ENVIRONMENT_MAGMA},
     {MAP_BATTLE_SCENE_AQUA,     BATTLE_ENVIRONMENT_AQUA},
-    {MAP_BATTLE_SCENE_SIDNEY,   BATTLE_ENVIRONMENT_SIDNEY},
-    {MAP_BATTLE_SCENE_PHOEBE,   BATTLE_ENVIRONMENT_PHOEBE},
-    {MAP_BATTLE_SCENE_GLACIA,   BATTLE_ENVIRONMENT_GLACIA},
-    {MAP_BATTLE_SCENE_DRAKE,    BATTLE_ENVIRONMENT_DRAKE},
-    {MAP_BATTLE_SCENE_FRONTIER, BATTLE_ENVIRONMENT_FRONTIER}
+    {MAP_BATTLE_SCENE_SIDNEY,   BATTLE_ENVIRONMENT_HOENN_E4_1},
+    {MAP_BATTLE_SCENE_PHOEBE,   BATTLE_ENVIRONMENT_HOENN_E4_2},
+    {MAP_BATTLE_SCENE_GLACIA,   BATTLE_ENVIRONMENT_HOENN_E4_3},
+    {MAP_BATTLE_SCENE_DRAKE,    BATTLE_ENVIRONMENT_HOENN_E4_4},
+    {MAP_BATTLE_SCENE_FRONTIER, BATTLE_ENVIRONMENT_FRONTIER},
+    {MAP_BATTLE_SCENE_WILL,    BATTLE_ENVIRONMENT_WILL},
+    {MAP_BATTLE_SCENE_KOGA,    BATTLE_ENVIRONMENT_KOGA},
+    {MAP_BATTLE_SCENE_JOY,    BATTLE_ENVIRONMENT_BRUNO},
+    {MAP_BATTLE_SCENE_KAREN,    BATTLE_ENVIRONMENT_KAREN}
 };

@@ -987,23 +987,6 @@ Corviknight
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DARIUS ===
-Name: Darius
-Class: Bird Keeper
-Pic: Bird Keeper
-Gender: Male
-Music: Cool
-Double Battle: No
-AI: Basic Trainer
-
-Staraptor
-Level: 67
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Corviknight
-Level: 67
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_KENT_2 ===
 Name: Kent
 Class: Bug Catcher
@@ -4050,6 +4033,20 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Porygon
 Level: 28
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_CINDY_2 ===
+Name: CINDY
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Items: Full Restore
+Double Battle: No
+AI: Check Bad Move
+
+Zigzagoon @ Nugget
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CINDY ===
@@ -14034,6 +14031,226 @@ Tera Type: Steel
 - Moonblast
 - Close Combat
 
+
+
+=== TRAINER_FRY_CHIKORITA_EVER_GRANDE ===
+Name: Fry
+Class: Philip 2
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 66
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Pin Missile
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Ampharosite
+Level: 67
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Magmortar (M) @ Passho Berry
+Level: 67
+Ability: Vital Spirit
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Flamethrower
+- Hyper Beam
+- Poison Jab
+- Scary Face
+
+Mew @ Wise Glasses
+Level: 67
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Ice Beam
+- Thunderbolt
+- Nasty Plot
+
+Feraligatr (M) @ Sitrus Berry
+Level: 68
+Ability: Torrent
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Outrage
+- Liquidation
+- Crunch
+- Rock Tomb
+
+Zamazenta @ Rusted Shield
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat
+
+
+/*
+Fry in Hoenn. He's the Champion here.
+*/
+
+=== TRAINER_FRY_CYNDAQUIL_EVER_GRANDE ===
+Name: Fry
+Class: Philip 2
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 100
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Stomping Tantrum
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Ampharosite
+Level: 100
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Basculegion (M) @ Rindo Berry
+Level: 100
+Ability: Adaptability
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Head Smash
+- Double Edge
+- Phantom Force
+- Crunch
+
+Mew @ Wise Glasses
+Level: 100
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Surf
+- Thunderbolt
+- Nasty Plot
+
+Meganium (M) @ Salac Berry
+Level: 100
+Ability: Overgrow
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Leaf Storm
+- Synthesis
+- Earthquake
+- Hyper Beam
+
+Zamazenta @ Rusted Shield
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat
+
+=== TRAINER_FRY_TOTODILE_EVER_GRANDE ===
+Name: Fry
+Class: Philip 2
+Pic: Fry
+Gender: Male
+Music: Hg Boy 1
+Items: Full Restore / Full Restore /  Full Restore /  Full Restore 
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Seymour (Obstagoon) (M) @ Chople Berry
+Level: 100
+Ability: Defiant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Obstruct
+- Thunder Punch
+- Double Edge
+- Night Slash
+
+Ampharos (M) @ Ampharosite
+Level: 100
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Breaking Swipe
+- Ice Punch
+- Cotton Guard
+
+Gogoat (M) @ Muscle Band
+Level: 100
+Ability: Sap Sipper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Horn Leech
+- Earthquake
+- Megahorn
+- Bulk Up
+
+Mew @ Wise Glasses
+Level: 100
+Ability: Synchronize
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Psychic
+- Ice Beam
+- Thunderbolt
+- Nasty Plot
+
+Typhlosion (M) @ Sitrus Berry
+Level: 100
+Ability: Blaze
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Solar Beam
+- Play Rough
+- Protect
+
+Zamazenta @ Rusted Shield
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Def / 252 Spe
+Tera Type: Steel
+- Trailblaze
+- Iron Head
+- Moonblast
+- Close Combat
+
 === TRAINER_CLAIR_DRAGONS_DEN ===
 Name: Clair
 Class: Leader
@@ -14135,64 +14352,65 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Blue
 
-Corviknight @ Wacan Berry
-Level: 60
+Staraptor @ Leftovers
+Level: 81
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 252 Spe
+EVs: 252 Atk / 252 Spe
+Ability: Intimidate
+- Brave Bird
+- Close Combat
+- Double Edge
+- Defog
+
+Corviknight @ Wacan Berry
+Level: 80
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
 Ability: Pressure
 - Iron Head
-- Hone Claws
+- Bulk Up
 - Brave Bird
 - Power Trip
 
-Tinkaton @ Muscle Band
-Level: 61
+Talonflame @ Charti Berry
+Level: 82
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 128 Atk / 128 SpD / 252 Spe
-Ability: Mold Breaker
-- Gigaton Hammer
-- Play Rough
-- Bulldoze
-- Screech
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Gale Wings
+- Swords Dance
+- Brave Bird
+- Flare Blitz
+- Steel Wing
 
-Iron Treads @ Occa Berry
-Level: 62
+Flamigo @ Muscle Band
+Level: 82
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 128 Atk / 128 Def / 252 Spe
-- Earthquake
-- Zen Headbutt
-- Iron Head
-- Wild Charge
+EVs: 6 HP / 252 Atk / 252 Spe
+Ability: Scrappy
+- Lunge
+- Brick Break
+- Fly
+- Swords Dance
 
-Toedscruel @ Yache Berry
-Level: 62
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 SpA / 252 Spe
-Ability: Mycelium Might
-- Giga Drain
-- Earth Power
-- Hex
-- Spore
-
-Mudsdale @ Groundium Z
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Def / 6 Spe
-Ability: Stamina
-- Earthquake
-- Psychic
-- Sludge Bomb
-- Sleep Powder
-
-Ursaluna @ Bright Powder
-Level: 64
+Ursaluna @ Flame Orb
+Level: 83
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 6 Spe
-Ability: Unnerve
+Ability: Guts
 - Earthquake
 - Thrash
 - Seed Bomb
 - Fire Punch
+
+Salamence @ Salamencite
+Level: 84
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs:  128 Atk / 128 SpA / 252 Spe
+Ability: Intimidate
+- Aerial Ace
+- Dragon Claw
+- Earthquake
+- Flamethrower
 
 === TRAINER_WALUIGI ===
 Name: Waluigi
@@ -14280,6 +14498,7 @@ Gender: Female
 Music: Hg Girl 2
 Double Battle: No
 AI: Smart Trainer
+Mugshot: Green
 
 Staraptor @ Sharp Beak
 Level: 67
@@ -14792,45 +15011,6 @@ Pelipper
 Level: 76
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CHANSEY3 ===
-Name: Chansey
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Steve (Rattata)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CHANSEY4 ===
-Name: Chansey
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Steve (Rattata)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CHANSEY5 ===
-Name: Chansey
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Steve (Rattata)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_CLARK ===
 Name: Clark
 Class: Hiker
@@ -15016,56 +15196,276 @@ Azumarill @ Nugget
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GLACIA ===
-Name: Glacia
+=== TRAINER_CAPTAIN_FLOYD ===
+Name: Cpt. Floyd
 Class: Elite Four
-Pic: Elite Four Glacia
-Gender: Female
+Pic: Captain Floyd
+Gender: Male
 Music: Elite Four
-Items: Full Restore / Full Restore
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Mugshot: Blue
+
+Ninetales Alola @ Light Clay
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Ability: Snow Warning
+- Ice Beam
+- Dazzling Gleam
+- Aurora Veil
+- Nasty Plot
+
+Walrein @ Mystic Water
+Level: 100
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Ability: Thick Fat
+- Surf
+- Ice Beam
+- Bulldoze
+- Toxic
+
+Excadrill @ Muscle Band
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Mold Breaker
+- Earthquake
+- Swords Dance
+- Smart Strike
+- Aerial Ace
+
+Obamasnow (Abomasnow) @ Abomasite
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 SpA
+Ability: Snow Warning
+- Wood Hammer
+- Ice Beam
+- Earthquake
+- Leech Seed
+
+Iron Bundle @ Wide Lens
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Ability: Quark Drive
+- Electric Terrain
+- Freeze Dry
+- Hydro Pump
+- Air Cutter
+
+Baxcalibur @ Loaded Dice
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Thermal Exchange
+- Icicle Spear
+- Crunch
+- Dragon Claw
+- Earthquake
+
+=== TRAINER_CHASE_E4_1 ===
+Name: Chase
+Class: Elite Four
+Pic: Chase
+Gender: Male
+Music: Elite Four
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
+
+Palafin @ Leftovers
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk  / 252 Spe
+Ability: Zero to Hero
+- Jet Punch
+- Flip Turn
+- Drain Punch
+- Wave Crash
+
+Drednaw @ Wide Lens
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk  / 252 Spe
+- Liquidation
+- Earthquake
+- Skitter Smack
+- Stone Edge
+
+Walking Wake @ Wise Glasses
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA  / 252 Spe
+- Flamethrower
+- Hydro Steam
+- Dragon Pulse
+- Hyper Beam
+
+Ludicolo @ Miracle Seed
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA  / 252 Spe
+Ability: Rain Dish
+- Giga Drain
+- Surf
+- Ice Beam
+- Leech Seed
+
+Charizard @ Charizardite Y
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA  / 252 Spe
+Ability: Drought
+- Flamethrower
+- Solar Beam
+- Air Slash
+- Will O Wisp
+
+Kyogre @ Life Orb
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 56 Atk / 200 SpA / 252 Spe
+Ability: Drizzle
+- Water Spout
+- Ice Beam
+- Thunder
+- Earthquake
+
+=== TRAINER_SHREK ===
+Name: Shrek
+Class: Elite Four
+Pic: Shrek
+Gender: Male
+Music: Elite Four
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Green
+
+Glimmora @ Air Balloon
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 SpD
+Ability: Toxic Debris
+- Sludge Wave
+- Power Gem
+- Energy Ball
+- Dazzling Gleam
+
+Skuntank @ Sitrus Berry
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Flamethrower
+- Night Slash
+- Belch
+- Shadow Claw
+
+Dragalge @ Life Orb
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 SpD
+- Dragon Pulse
+- Surf
+- Sludge Bomb
+- Toxic
+
+Toxapex @ Kee Berry
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Def / 252 SpD
+- Toxic Spikes
+- Venom Drench
+- Venoshock
+- Scald
+
+Krookodile @ Soft Sand
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Outrage
+- Foul Play
+- Earthquake
+- Brick Break
+
+Muk @ Flame Orb
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Ability: Sticky Hold
+Tera Type: Poison
+- Toxic
+- Gunk Shot
+- Giga Impact
+- Facade
+
+=== TRAINER_BENDER_1 ===
+Name: Bender
+Class: Elite Four
+Pic: Leader Bender
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer
 Mugshot: Pink
 
-Sealeo
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
-- Hail
-- Ice Ball
-
-Glalie
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Crunch
-- Icy Wind
-- Ice Beam
-
-Sealeo
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
-- Blizzard
-
-Glalie
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Explosion
-- Hail
-- Ice Beam
-
-Walrein @ Sitrus Berry
-Level: 53
+Grimmsnarl @ Leftovers
+Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Body Slam
-- Ice Beam
-- Sheer Cold
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Foul Play
+- Hammer Arm
+- Thunder Wave
+
+Genesect @ Douse Drive
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Techno Blast
+- Bug Buzz
+- Thunder Wave
+- Flash Cannon
+
+Altaria @ Altarianite
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cotton Guard
+- Moonblast
+- Outrage
+- Brave Bird
+
+Sylveon @ Pixie Plate
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 128 Atk / 0 Def / 128 SpA / 0 SpD / 252 Spe
+- Moonblast
+- Dig
+- Calm Mind
+- Psychic
+
+Rapidash Galar @ Muscle Band
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Stomp
+- Swords Dance
+- Zen Headbutt
+
+Zacian @ Rusted Sword
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Crunch
+- Swords Dance
+- Iron Head
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_1 ===
 Name: Grunt
@@ -15877,18 +16277,47 @@ Starmie
 Level: 45
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_KATELYN_5 ===
-Name: Katelyn
-Class: Triathlete
-Pic: Swimming Triathlete F
-Gender: Female
-Music: Swimmer
+=== TRAINER_ROD_2 ===
+Name: Rod
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Starmie
-Level: 48
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Ursaluna
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Ursaluna
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Talonflame
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+=== TRAINER_TODD_3 ===
+Name: Todd
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+Staraptor
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Corviknight
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Talonflame
+Level: 67
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_KATE_AND_JOY ===
 Name: Kate
@@ -17651,57 +18080,6 @@ AI: Check Bad Move
 Tentacool
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PHOEBE ===
-Name: Phoebe
-Class: Elite Four
-Pic: Elite Four Phoebe
-Gender: Female
-Music: Elite Four
-Items: Full Restore / Full Restore
-Double Battle: No
-AI: Basic Trainer
-Mugshot: Green
-
-Dusclops
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Punch
-- Confuse Ray
-- Curse
-- Protect
-
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Grudge
-- Will O Wisp
-- Feint Attack
-
-Sableye
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Double Team
-- Night Shade
-- Feint Attack
-
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Psychic
-- Thunderbolt
-- Facade
-
-Dusclops @ Sitrus Berry
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Ice Beam
-- Rock Slide
-- Earthquake
 
 === TRAINER_PHOEBE2 ===
 Name: Phoebe
@@ -19989,66 +20367,3 @@ AI: Basic Trainer
 Beldum
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BENDER_1 ===
-Name: Bender
-Class: Elite Four
-Pic: Leader Bender
-Gender: Male
-Music: Elite Four
-Double Battle: No
-AI: Smart Trainer
-Mugshot: Pink
-
-Grimmsnarl @ Leftovers
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-- Play Rough
-- Foul Play
-- Hammer Arm
-- Thunder Wave
-
-Genesect @ Douse Drive
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
-- Techno Blast
-- Bug Buzz
-- Thunder Wave
-- Flash Cannon
-
-Altaria @ Altarianite
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Cotton Guard
-- Moonblast
-- Outrage
-- Brave Bird
-
-Sylveon @ Pixie Plate
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 128 Atk / 0 Def / 128 SpA / 0 SpD / 252 Spe
-- Moonblast
-- Dig
-- Calm Mind
-- Psychic
-
-Rapidash Galar @ Muscle Band
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-- Play Rough
-- Stomp
-- Swords Dance
-- Zen Headbutt
-
-Zacian @ Rusted Sword
-Level: 100
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-- Play Rough
-- Crunch
-- Swords Dance
-- Iron Head

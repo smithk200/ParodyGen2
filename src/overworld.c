@@ -4352,6 +4352,7 @@ static const u8 sMapsecToRegion[MAPSEC_COUNT] = {
     [MAPSEC_DESERT_UNDERPASS]           = REGION_HOENN,
     [MAPSEC_ALTERING_CAVE]              = REGION_HOENN,
     [MAPSEC_NAVEL_ROCK]                 = REGION_HOENN,
-    [MAPSEC_TRAINER_HILL]               = REGION_HOENN
+    [MAPSEC_TRAINER_HILL]               = REGION_HOENN,
+    [MAPSEC_ALOLA]                   = REGION_ALOLA,
 };
 

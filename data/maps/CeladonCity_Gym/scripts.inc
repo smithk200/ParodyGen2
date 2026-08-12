@@ -53,7 +53,7 @@ CeladonCity_Gym_Text_ErikaExplainTM:
 	.string "Erika: That was a delightful\n"
 	.string "match.\p"
 	.string "I felt inspired. Please, I wish\n"
-	.string "you to have this Tm.\p"
+	.string "you to have this TM.\p"
 	.string "It is Giga Drain.\p"
 	.string "It is a wonderful move that\n"
 	.string "drains half the damage it inflicts\l"

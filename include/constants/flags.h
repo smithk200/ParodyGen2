@@ -122,7 +122,7 @@
 
 #define FLAG_OLD_AMBER_ALTERING_CAVE         0x68 
 
-#define FLAG_NO_NUZLOCKE_JOEY                0x69
+#define FLAG_DEFEATED_FRY_EVER_GRANDE        0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
 #define FLAG_RECEIVED_HM_ROCK_SMASH          0x6B
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
@@ -484,9 +484,9 @@
 #define FLAG_DEFEATED_KYOGRE                 0x1BE
 #define FLAG_DEFEATED_GROUDON                0x1BF
 #define FLAG_DEFEATED_RAYQUAZA               0x1C0
-#define FLAG_DEFEATED_VOLTORB_1_NEW_MAUVILLE 0x1C1
-#define FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE 0x1C2
-#define FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE 0x1C3
+#define FLAG_IVS_EVS 0x1C1
+#define FLAG_DEFEATED_VOLTORB_2_NEW_MAUVILLE 0x1C2 //Unused Flag
+#define FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE 0x1C3 //Unused Flag
 #define FLAG_DEFEATED_ELECTRODE_1_AQUA_HIDEOUT 0x1C4
 #define FLAG_DEFEATED_ELECTRODE_2_AQUA_HIDEOUT 0x1C5
 #define FLAG_DEFEATED_SUDOWOODO              0x1C6
@@ -1536,14 +1536,14 @@
 #define FLAG_VISITED_MOSSDEEP_CITY                           (SYSTEM_FLAGS + 0x9E) 
 #define FLAG_VISITED_SOOTOPOLIS_CITY                           (SYSTEM_FLAGS + 0x9F) 
 #define FLAG_VISITED_EVER_GRANDE_CITY                           (SYSTEM_FLAGS + 0xA0) 
-#define FLAG_BADGE17_GET                           (SYSTEM_FLAGS + 0xA1) 
-#define FLAG_BADGE18_GET                           (SYSTEM_FLAGS + 0xA2) 
-#define FLAG_BADGE19_GET                           (SYSTEM_FLAGS + 0xA3) 
-#define FLAG_BADGE20_GET                           (SYSTEM_FLAGS + 0xA4) 
-#define FLAG_BADGE21_GET                           (SYSTEM_FLAGS + 0xA5) 
-#define FLAG_BADGE22_GET                           (SYSTEM_FLAGS + 0xA6) 
-#define FLAG_BADGE23_GET                           (SYSTEM_FLAGS + 0xA7) 
-#define FLAG_BADGE24_GET                           (SYSTEM_FLAGS + 0xA8) 
+#define FLAG_BADGE17_GET                           (SYSTEM_FLAGS + 0xA1) //Slateport
+#define FLAG_BADGE18_GET                           (SYSTEM_FLAGS + 0xA2) //Mauville
+#define FLAG_BADGE19_GET                           (SYSTEM_FLAGS + 0xA3) //Fortree
+#define FLAG_BADGE20_GET                           (SYSTEM_FLAGS + 0xA4) //Mossdeep
+#define FLAG_BADGE21_GET                           (SYSTEM_FLAGS + 0xA5) //Sootopolis
+#define FLAG_BADGE22_GET                           (SYSTEM_FLAGS + 0xA6) //Lavaridge
+#define FLAG_BADGE23_GET                           (SYSTEM_FLAGS + 0xA7) //Rustboro
+#define FLAG_BADGE24_GET                           (SYSTEM_FLAGS + 0xA8) //Petalburg
 #define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
 #define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag

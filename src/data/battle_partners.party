@@ -71,6 +71,17 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Extrasensory
 - Calm Mind
 
+Ampharos (M) @ Magnet
+Adamant Nature
+Level: 53
+Ability: Static
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Thunderbolt
+- Thunder Wave
+- Ice Punch
+- Cotton Guard
+
 Zamazenta
 Adamant Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe

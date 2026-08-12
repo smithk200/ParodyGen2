@@ -187,6 +187,10 @@ BattleScript_ItemStatChange::
 	removeitem BS_SCRIPTING
 	return
 
+BattleScript_ItemStatChangeCorruptOrb::
+	trybattlerstatchange BS_SCRIPTING, STAT_CHANGE_ITEM
+	return
+
 BattleScript_ConsumableBerryStatRaise::
  	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_BERRY
 	call BattleScript_ConsumableItemStatRaise
@@ -3945,6 +3949,21 @@ BattleScript_MegaEvolutionAfterString:
 	switchinabilities BS_SCRIPTING
 	end3
 
+BattleScript_CorruptEvolution::
+	flushtextbox
+	trytrainerslidemegaevolutionmsg
+	printstring STRINGID_MEGAEVOREACTING
+BattleScript_CorruptEvolutionAfterString:
+	waitmessage B_WAIT_TIME_LONG
+	handleformchange BS_SCRIPTING, 0
+	playanimation BS_SCRIPTING, B_ANIM_MEGA_EVOLUTION
+	waitanimation
+	handleformchange BS_SCRIPTING, 1
+	printstring STRINGID_MEGAEVOEVOLVED_CORRUPT
+	waitmessage B_WAIT_TIME_LONG
+	switchinabilities BS_SCRIPTING
+	end3
+
 BattleScript_WishMegaEvolution::
 	flushtextbox
 	trytrainerslidemegaevolutionmsg
@@ -6367,3 +6386,4 @@ BattleScript_SilphScopeUnveiled::
 	printstring STRINGID_GHOSTWASMAROWAK
 	waitmessage B_WAIT_TIME_LONG
 	end2
+	

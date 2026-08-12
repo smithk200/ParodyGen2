@@ -58,7 +58,7 @@ SandstormHouse_Text_LoyalMon:
     .string "Here. A gift for your journey.$"
 
 SandstormHouse_Text_TM37Description:
-    .string "Tm37 happens to be Sandstorm.\p"
+    .string "TM37 happens to be Sandstorm.\p"
     .string "It's a move that inflicts damage\n"
     .string "on both battlers.\p"
     .string "It's for advanced trainers only.\p"

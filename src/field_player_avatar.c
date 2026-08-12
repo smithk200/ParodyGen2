@@ -918,9 +918,15 @@ static void PlayerNotOnBikeMoving(enum Direction direction, u16 heldKeys)
         if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
             PlayerRunSlow(direction);
         else
-            PlayerRun(direction);
+        {
+            if (heldKeys & B_BUTTON)
+                PlayerWalkNormal(direction);
+            else
+                PlayerRun(direction);
+                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+        }
 
-        gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
+        
         return;
     }
 

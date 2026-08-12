@@ -287,7 +287,7 @@ VermilionCity_Gym_EventScript_GiveThunderstone::
 	giveitem ITEM_THUNDER_STONE
 	return
 VermilionCity_Gym_EventScript_GiveTM::
-	msgbox VermilionGym_Text_LtSurgeTm, MSGBOX_DEFAULT
+	msgbox VermilionGym_Text_LtSurgeTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_THUNDERBOLT
 	return
 
@@ -318,8 +318,8 @@ VermilionGym_Text_ThunderBadgeInfo:
 	.string "Consider it proof that you\n"
 	.string "defeated me.$"
 
-VermilionGym_Text_LtSurgeTm:
-	.string "And take this Tm. It served me\n"
+VermilionGym_Text_LtSurgeTM:
+	.string "And take this TM. It served me\n"
 	.string "well in my studies!$"
 
 VermilionGym_Text_LtSurgeThunderstone:

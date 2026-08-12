@@ -26,8 +26,10 @@ Gate_RuinsOfAlph_Route36_EventScript_Youngster::
 	end
 
 Gate_RuinsOfAlph_Route36_Text_Officer:
-	.string "Ruins Of Alph\p"
-	.string "A Look-and-Touch Tourist Site\p"
+	.string "Ruins of Alf\p"
+	.string "A historic site dedicated to Alf\n"
+	.string "Landon, the President of the United\l"
+	.string "States from 1936-1940.\p"
 	.string "Try the sliding stone panels!$"
 
 Gate_RuinsOfAlph_Route36_Text_PokefanM:

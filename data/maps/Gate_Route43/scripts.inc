@@ -101,7 +101,7 @@ Route43Gate_Text_OfficerFoundTM:
     .string "you take it away?$"
 
 Gate_Route43_Text_ReceivedTM30:
-    .string "{PLAYER} received Tm36.$"
+    .string "{PLAYER} received TM36.$"
 
 Gate_Route43_Text_OfficerAvoidGrass:
     .string "Use this gate to avoid walking in\n"

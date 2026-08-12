@@ -20,6 +20,7 @@ struct HoldEffectInfo
     u32 onEffect:1;
     u32 onFling:1;
     u32 boosterEnergy:1;
+    u32 corruptOrbEndTurn:1;
     u32 padding:15;
 };
 
@@ -46,5 +47,6 @@ bool32 IsForceTriggerItemActivation(enum HoldEffect holdEffect);
 bool32 IsOnBerryActivation(enum HoldEffect holdEffect);
 bool32 IsOnFlingActivation(enum HoldEffect holdEffect);
 bool32 IsBoosterEnergyActivation(enum HoldEffect holdEffect);
+bool32 IsCorruptOrbEndTurnActivation(enum HoldEffect holdEffect);
 
 #endif // GUARD_BATTLE_HOLD_EFFECTS

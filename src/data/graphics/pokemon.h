@@ -227,6 +227,12 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_CharizardMegaX[] = INCGFX_U32("graphics/pokemon/charizard/mega_x/back.png", ".4bpp.smol");
     const u16 gMonShinyPalette_CharizardMegaX[] = INCGFX_U16("graphics/pokemon/charizard/mega_x/shiny.pal", ".gbapal");
     const u8 gMonIcon_CharizardMegaX[] = INCGFX_U8("graphics/pokemon/charizard/mega_x/icon.png", ".4bpp");
+
+    //corrupt form
+    const u32 gMonFrontPic_CharizardCorrupt[] = INCGFX_U32("graphics/pokemon/charizard/corrupt/front.png", ".4bpp.smol");
+    const u16 gMonPalette_CharizardCorrupt[] = INCGFX_U16("graphics/pokemon/charizard/corrupt/normal.pal", ".gbapal");
+    const u32 gMonBackPic_CharizardCorrupt[] = INCGFX_U32("graphics/pokemon/charizard/corrupt/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_CharizardCorrupt[] = INCGFX_U16("graphics/pokemon/charizard/corrupt/shiny.pal", ".gbapal");
 #if OW_POKEMON_OBJECT_EVENTS && OW_BATTLE_ONLY_FORMS
     const u32 gObjectEventPic_CharizardMegaX[] = INCGFX_COMP("graphics/pokemon/charizard/mega_x/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE

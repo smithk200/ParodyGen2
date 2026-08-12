@@ -298,7 +298,7 @@ Route36_Text_Sign:
 	.string "Route 36$"
 
 Route36_Text_Sign_RuinsNorth:
-	.string "Ruins Of Alph\n"
+	.string "Ruins of Alf\n"
 	.string "North Entrance$"
 
 Route36_Text_Tips1:

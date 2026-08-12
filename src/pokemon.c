@@ -482,6 +482,8 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #include "data/pokemon/level_up_learnsets/gen_1.h" // Yellow
 #endif
 
+#include "data/pokemon/level_up_learnsets/movesets_old.h"
+
 #include "data/pokemon/teachable_learnsets.h"
 #include "data/pokemon/egg_moves.h"
 #include "data/pokemon/form_species_tables.h"
@@ -3369,9 +3371,13 @@ u32 GetSpeciesBaseStatTotal(enum Species species)
 const struct LevelUpMove *GetSpeciesLevelUpLearnset(enum Species species)
 {
     const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+    const struct LevelUpMove *learnset_Old = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset_Old;
     if (learnset == NULL)
         return gSpeciesInfo[SPECIES_NONE].levelUpLearnset;
-    return learnset;
+    if (gSaveBlock1Ptr->tx_Mode_Modern_Moves == 0)
+        return learnset_Old;
+    else
+        return learnset;
 }
 
 const u16 *GetSpeciesTeachableLearnset(enum Species species)
@@ -5553,7 +5559,19 @@ u16 GetBattleBGM(void)
             if (gMapHeader.region == REGION_HOENN)
                 return MUS_VS_ELITE_FOUR;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
-                return MUS_VS_ELITE_FOUR;
+                {
+                    if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_2) \
+                    || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_3) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_4) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_5))
+                        return MUS_MEGALOVANIA;
+                    if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2))
+                        return MUS_DK_SUMMIT;
+                    if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_2))
+                        return MUS_RAINBOW_ROAD;
+                    if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_2))
+                        return MUS_HEAVY_LIGHT;
+                    else
+                        return MUS_VS_ELITE_FOUR;
+                }
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
                 return MUS_RG_VS_GYM_LEADER;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
@@ -5573,23 +5591,20 @@ u16 GetBattleBGM(void)
                 if((Random() % 5) == 4)
                     return MUS_HG_VS_GYM_LEADER_KANTO;
                 else
-                    return MUS_VS_ELITE_FOUR;
-            }
-            /*
-            {
-                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_2) \
-                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_3) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_4) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_5))
-                    return MUS_MEGALOVANIA;
-                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2))
-                    return MUS_DK_SUMMIT;
-                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_2))
-                    return MUS_RAINBOW_ROAD;
-                if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_2))
-                    return MUS_HEAVY_LIGHT;    
-                else
-                    return MUS_VS_ELITE_FOUR;
-            }
-            */
+                    {
+                        if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_2) \
+                        || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_3) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_4) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_5))
+                            return MUS_MEGALOVANIA;
+                        if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2))
+                            return MUS_DK_SUMMIT;
+                        if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_JOY_2))
+                            return MUS_RAINBOW_ROAD;
+                        if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_NED_2))
+                            return MUS_HEAVY_LIGHT;
+                        else
+                            return MUS_VS_ELITE_FOUR;
+                    }
+            }     
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
@@ -5628,7 +5643,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PHILIP:
         case TRAINER_CLASS_PHILIP_2:
             if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_POKEMON_LEAGUE) \
-                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE))
+                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE) || \
+            (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_EVER_GRANDE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_EVER_GRANDE) \
+            || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_EVER_GRANDE))
                     return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
 
@@ -5694,6 +5711,8 @@ u16 GetBattleBGM(void)
     else
         if (gMapHeader.region == REGION_HOENN)
             return MUS_VS_WILD;
+        if (gMapHeader.region == REGION_ALOLA)
+            return MUS_HG_VS_WILD;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 0)
             return MUS_HG_VS_WILD;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 1)

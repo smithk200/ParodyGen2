@@ -511,6 +511,7 @@ struct SpeciesInfo /*0xC4*/
     enum EggIds eggId:12;
     // Move Data
     const struct LevelUpMove *levelUpLearnset;
+    const struct LevelUpMove *levelUpLearnset_Old;
     const u16 *teachableLearnset;
     const u16 *eggMoveLearnset;
     const struct Evolution *evolutions;

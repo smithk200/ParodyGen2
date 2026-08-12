@@ -52,14 +52,14 @@ PokemonLeague_KogasRoom_EventScript_KogaDefeated::
 	end
 
 PokemonLeague_KogasRoom_Text_RematchBefore:
-    .string "Koga: Fwahahahaha!\p"
-    .string "You return, brave challenger.\p"
-    .string "My ninja skills have sharpened.\p"
-    .string "New sinister traps await you.\p"
-    .string "Poison, sleep, and more...\n"
-    .string "Be ready!\p"
-    .string "Fwahahahaha!\p"
-    .string "Show me how you've grown!$"
+    .string "Hidey-ho, neighbor!\n"
+	.string "You have returned, I see!\p"
+	.string "Well, diddly-doodly, I promise\n"
+	.string "I won't go easy on you this time!\p"
+	.string "That's a Flanders family promise!\p"
+	.string "So how about another battle?\p"
+	.string "God, I pray for your strength and\n"
+	.string "wisdom!$"
 
 PokemonLeague_KogasRoom_Text_Before:
     .string "Hidey-ho, neighbor!\p"

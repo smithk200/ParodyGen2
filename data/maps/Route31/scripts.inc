@@ -138,7 +138,7 @@ Route31_Text_ReadingMail:
 	.string "this!$"
 
 Route31_Text_DescribeNightmare:
-	.string "That Tm contains Torment.\p"
+	.string "That TM contains Torment.\p"
 	.string "It's a wicked move that\n"
 	.string "makes the enemy super nervous and\l"
 	.string "stops them from using the same\p"

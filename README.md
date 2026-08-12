@@ -1,8 +1,10 @@
-# About `Gold and Silver Generation 3 Decomp`
+# About `Parody Gen2`, aka "Pokemon Dark Gold" or "Difficult Johto"
 
 I (smithk200) wanted to modify Pokémon HeartGold and SoulSilver, but am unfamiliar with Gen 4 decomp and don't want to make a binary hack of HGSS because *binary sucks*... I mean, binary is prone to crashes and requires a lot of tools to modify a ton of parameters. Plus, I want to make a challenge hack based around Johto that had features from later Pokémon games, such as Gen 6 EXP share (because grinding for EXP is no fun). Also, I wanted to add some other features to this game but simply do not have the time.
 
-DISCLAIMER: This is not an official port of Pokémon Heart and Soul to pokeemerald-expansion; this is a fan-based project. This is not the 2.0 update, but if you don't want to wait for the official 2.0 update then this might be a good fit for you. 
+DISCLAIMER: This is not an official port of Pokémon Heart and Soul to pokeemerald-expansion; this is a fan-based project. This is not the 2.0 update, but if you don't want to wait for the official 2.0 update then this might be a good fit for you.
+
+This is my own mod of the game and it's meant to have more mature humor. Also it's more difficult than the original game.
 
 
 ## LIST OF FEATURES:
@@ -18,8 +20,7 @@ Implemented
 - Nuzlocke and challenge modes from the original HnS have been implemented! The only challenges that aren't in play are the One Type Challenge, the Pokecenter challenge, and any challenge that was on the last menu.
 - Also, VS Seeker functionality has been implemented.
 
-Note: this uses 94.51% of ROM space, last I checked. Mega cries have been removed to save on space.
-If you want to get this down to 90%, you can remove some songs.
+Note: this uses 95.7% of ROM space, last I checked.
 
 ![Battle text during Nuzlocke Mode](nuzlocke_text.png)![Gym Leaders and Elite Four can use this cool transition.](mugshot_transition.png)![The new terrain and run modes from HnS have been ported over!](run_modes.png)
 ![New options from the option menu, and they all work!](new_options.png)

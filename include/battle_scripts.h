@@ -733,5 +733,8 @@ extern const u8 BattleScript_TakeHeart[];
 extern const u8 BattleScript_NuzlockeBallBlock[];
 extern const u8 BattleScript_FaintTargetNuzlocke[];
 extern const u8 BattleScript_FaintAttackerNuzlocke[];
+extern const u8 BattleScript_CorruptEvolution[];
+extern const u8 BattleScript_CorruptEvolutionAfterString[];
+extern const u8 BattleScript_ItemStatChangeCorruptOrb[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

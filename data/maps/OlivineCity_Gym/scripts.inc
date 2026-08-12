@@ -297,7 +297,7 @@ OlivineCity_Gym_Text_JasmineBadgeSpeech:
 	.string "Take this too!$"
 
 OlivineCity_Gym_Text_JasmineIronTailSpeech:
-	.string "You can use that Tm to teach\n"
+	.string "You can use that TM to teach\n"
 	.string "Iron Tail!$"
 
 OlivineCity_Gym_Text_JasmineGoodLuck:

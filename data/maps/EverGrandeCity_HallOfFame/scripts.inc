@@ -29,11 +29,6 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	applymovement LOCALID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2
 	waitmovement 0
 	delay 20
-	applymovement LOCALID_HALL_OF_FAME_WALLACE, Common_Movement_WalkInPlaceFasterRight
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_HALL_OF_FAME_WALLACE, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -44,23 +39,13 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	setvar VAR_TEMP_1, 1
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClear
 	end
 
-EverGrandeCity_HallOfFame_EventScript_GameClearMale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
+EverGrandeCity_HallOfFame_EventScript_GameClear::
+	setrespawn HEAL_LOCATION_NEW_BARK_TOWN_PLAYERS_HOUSE_2F
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
-	@waitstate
-	releaseall
-	end
-
-EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F
-	fadescreenspeed FADE_TO_BLACK, 24
-	special GameClear
-	@waitstate
 	releaseall
 	end
 
@@ -82,12 +67,10 @@ EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
 	step_end
 
 EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
-	.string "Wallace: This room…\p"
-	.string "This is where we keep records of\n"
-	.string "Pokémon that prevailed through\l"
-	.string "harsh battles.\p"
-	.string "It is here that the League Champions\n"
-	.string "are honored.$"
+	.string "Fry: I bet you know what this room is\n"
+	.string "already.\p"
+	.string "Just put the Pokémon in the machine and\n"
+	.string "let it record your data.$"
 
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "Wallace: Come on, let's record your\n"

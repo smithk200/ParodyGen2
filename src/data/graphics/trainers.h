@@ -608,9 +608,15 @@ const u16 gTrainerPalette_Waluigi[] = INCGFX_U16("graphics/trainers/front_pics/w
 const u32 gTrainerFrontPic_Bill[] = INCGFX_U32("graphics/trainers/front_pics/leader_bill.png", ".4bpp.smol");
 const u16 gTrainerPalette_Bill[] = INCGFX_U16("graphics/trainers/front_pics/leader_bill.png", ".gbapal");
 const u32 gTrainerFrontPic_Captain_Floyd[] = INCGFX_U32("graphics/trainers/front_pics/elite_four_captain_floyd.png", ".4bpp.smol");
-const u16 gTrainerPalette_Captain_Floyd[] = INCGFX_U16("graphics/trainers/front_pics/elite_four_captain_floyd.png", ".4bpp.smol");
+const u16 gTrainerPalette_Captain_Floyd[] = INCGFX_U16("graphics/trainers/front_pics/elite_four_captain_floyd.png", ".gbapal");
 const u32 gTrainerFrontPic_Bender[] = INCGFX_U32("graphics/trainers/front_pics/leader_bender.png", ".4bpp.smol");
 const u16 gTrainerPalette_Bender[] = INCGFX_U16("graphics/trainers/front_pics/leader_bender.png", ".gbapal");
+const u32 gTrainerFrontPic_Shrek[] = INCGFX_U32("graphics/trainers/front_pics/shrek.png", ".4bpp.smol");
+const u16 gTrainerPalette_Shrek[] = INCGFX_U16("graphics/trainers/front_pics/shrek.png", ".gbapal");
+const u32 gTrainerFrontPic_Chase[] = INCGFX_U32("graphics/trainers/front_pics/chase.png", ".4bpp.smol");
+const u16 gTrainerPalette_Chase[] = INCGFX_U16("graphics/trainers/front_pics/chase.png", ".gbapal");
+const u32 gTrainerFrontPic_PeterGriffin[] = INCGFX_U32("graphics/trainers/front_pics/peter_griffin.png", ".4bpp.smol");
+const u16 gTrainerPalette_PeterGriffin[] = INCGFX_U16("graphics/trainers/front_pics/peter_griffin.pal",  ".gbapal");
 
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
@@ -1586,5 +1592,17 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_LEADER_BENDER] =
         {
             .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Bender, gTrainerPalette_Bender),
+	},
+    [TRAINER_PIC_SHREK] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Shrek, gTrainerPalette_Shrek),
+	},
+    [TRAINER_PIC_CHASE] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Chase, gTrainerPalette_Chase),
+	},
+    [TRAINER_PIC_PETER_GRIFFIN] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PeterGriffin, gTrainerPalette_PeterGriffin),
 	},
 };

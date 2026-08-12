@@ -29,6 +29,8 @@
 #include "constants/item.h"
 #include "constants/items.h"
 #include "constants/layouts.h"
+#include "constants/regions.h"
+#include "constants/region_map_sections.h"
 #include "constants/weather.h"
 #include "nuzlocke.h"
 #include "new_game.h"
@@ -346,6 +348,38 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
     u8 max;
     u8 range;
     u8 rand;
+    u8 fixedLVL = 0;
+
+    if (gMapHeader.region == REGION_ALOLA)
+        if (gMapHeader.mapLayoutId != LAYOUT_ALOLA_CAVE_2F)
+    {
+        
+        {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_SPECIES) != SPECIES_NONE)
+            fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_LEVEL)) / 6;
+        else if ((GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_SPECIES) != SPECIES_NONE))
+                fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL)) / 5;
+            else if ((GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_SPECIES) != SPECIES_NONE))
+                fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL)) / 4;
+                else if ((GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES) != SPECIES_NONE))
+                    fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)) / 3;
+                    else if ((GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_SPECIES) != SPECIES_NONE))
+                        fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)) / 2;
+                        else if ((GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES) != SPECIES_NONE))
+                            fixedLVL = GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL);
+        }
+
+            // Make sure minimum level is less than maximum level
+            {
+                min = fixedLVL-3;
+                max = fixedLVL+3;
+            }
+            if (min <= 0)
+                min = 1;
+            range = max - min + 1;
+            rand = Random() % range;
+            return min + rand;
+    }
 
     if (LURE_STEP_COUNT == 0)
     {

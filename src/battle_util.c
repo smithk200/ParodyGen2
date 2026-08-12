@@ -3656,6 +3656,50 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     effect++;
                 }
                 break;
+            case ABILITY_CORRUPT:
+                {
+                    enum Stat stat = STAT_ATK;
+                    u32 validToRaise = 0, validToLower = 0;
+                    u32 statsNum = NUM_BATTLE_STATS;
+                    u32 rnd;
+
+                    for (stat = STAT_ATK; stat < statsNum; stat++)
+                    {
+                        if (CompareStat(battler, stat, MIN_STAT_STAGE, CMP_GREATER_THAN, gLastUsedAbility))
+                            validToLower |= 1u << stat;
+                        if (CompareStat(battler, stat, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
+                            validToRaise |= 1u << stat;
+                    }
+                    rnd = (Random() % 9);
+
+                    if (validToRaise) // Find stat to raise
+                    {
+                        stat = RandomUniformExcept(RNG_MOODY_INCREASE, STAT_ATK, statsNum - 1, MoodyCantRaiseStat);
+                        if ((rnd > 5) && (rnd < 8))
+                            stat = STAT_ACC;
+                        else if (rnd >= 8)
+                            stat = STAT_EVASION;
+                        /*So basically what this means is, to prevent player cheesing the gym leader by stalling them until 
+                    they drop to -6 accuracy, the opponent now has a chance to increase accuracy and evasion randomly every turn.
+                    Rand 0 through 5- no accuracy rise
+                    Rand 6 through 7- accuracy rise (I swear this has nothing to do with the "6 7" meme)
+                    Rand 8- evasion rise
+                    */
+                        SetStatChange(battler, stat, 1);
+                        validToLower &= ~(1u << stat); // Can't lower the same stat as raising.
+                    }
+                    if (validToLower) // Find stat to lower
+                    {
+                        // MoodyCantLowerStat already checks that both stats are different
+                        stat = RandomUniformExcept(RNG_MOODY_DECREASE, STAT_ATK, statsNum - 1, MoodyCantLowerStat);
+                        SetStatChange(battler, stat, -2);
+                    }
+
+                    gEffectBattler = gBattlerAbility = battler;
+                    BattleScriptCall(BattleScript_AbilityStatChange);
+                    effect++;
+                }
+                break;
             case ABILITY_TRUANT:
                 gBattleMons[gBattlerAttacker].volatiles.truantCounter ^= 1;
                 break;

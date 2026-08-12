@@ -112,15 +112,20 @@ const u16 gBattleEnvironmentPalette_StadiumAqua[] = INCGFX_U16("graphics/battle_
 const u16 gBattleEnvironmentPalette_StadiumMagma[] = INCGFX_U16("graphics/battle_environment/stadium/palette2.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumSidney[] = INCGFX_U16("graphics/battle_environment/stadium/palette3.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumPhoebe[] = INCGFX_U16("graphics/battle_environment/stadium/palette4.pal", ".gbapal");
-const u16 gBattleEnvironmentPalette_StadiumGlacia[] = INCGFX_U16("graphics/battle_environment/stadium/palette5.pal", ".gbapal");
-const u16 gBattleEnvironmentPalette_StadiumDrake[] = INCGFX_U16("graphics/battle_environment/stadium/palette6.pal", ".gbapal");
-const u16 gBattleEnvironmentPalette_StadiumWallace[] = INCGFX_U16("graphics/battle_environment/stadium/palette7.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumIce[] = INCGFX_U16("graphics/battle_environment/stadium/palette5.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumDragon[] = INCGFX_U16("graphics/battle_environment/stadium/palette6.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumWater[] = INCGFX_U16("graphics/battle_environment/stadium/palette7.pal", ".gbapal");
+
+const u16 gBattleEnvironmentPalette_StadiumPoison[] = INCGFX_U16("graphics/battle_environment/stadium/palette15.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumFairy[] = INCGFX_U16("graphics/battle_environment/stadium/palette16.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumFry[] = INCGFX_U16("graphics/battle_environment/stadium/palette17.pal", ".gbapal");
 
 const u16 gBattleEnvironmentPalette_StadiumWill_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette3.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumKoga_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette4.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumBruno_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette5.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumKaren_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette6.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumLance_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette7.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumLeader[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette8.pal", ".gbapal");
 
 const u16 gBattleEnvironmentPalette_Rayquaza_2[] = INCGFX_U16("graphics/battle_environment/sky_2/palette.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_Rayquaza_2_Night[] = INCGFX_U16("graphics/battle_environment/sky_2/palette_night.pal", ".gbapal");

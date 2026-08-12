@@ -16075,7 +16075,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Corrupt Orb"),
         .pluralName = ITEM_PLURAL_NAME("Corrupt Orbs"),
         .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .holdEffect = HOLD_EFFECT_CORRUPT_ORB,
         .description = COMPOUND_STRING(
             "An orb that has\n"
             "corrupt energy.\n"

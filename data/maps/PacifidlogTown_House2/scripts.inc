@@ -105,7 +105,7 @@ PacifidlogTown_House2_Text_AhYourPokemon:
 PacifidlogTown_House2_Text_AdoringPokemonTakeThis:
 	.string "It clearly likes you very much.\p"
 	.string "A Pokémon that adoring and adorable\n"
-	.string "deserves a Tm like this, no?$"
+	.string "deserves a TM like this, no?$"
 
 PacifidlogTown_House2_Text_PutInSomeMoreEffort:
 	.string "Hmm…\n"
@@ -116,7 +116,7 @@ PacifidlogTown_House2_Text_PutInSomeMoreEffort:
 PacifidlogTown_House2_Text_ViciousPokemonTakeThis:
 	.string "It has a vicious look to it.\p"
 	.string "A frightening Pokémon like that\n"
-	.string "deserves a Tm like this.$"
+	.string "deserves a TM like this.$"
 
 PacifidlogTown_House2_Text_ExplainReturnFrustration:
 	.string "If a Pokémon likes you a lot, Return's\n"
@@ -126,9 +126,9 @@ PacifidlogTown_House2_Text_ExplainReturnFrustration:
 
 PacifidlogTown_House2_Text_GetGoodTMInXDays:
 	.string "Oh, yes. In about {STR_VAR_1} or so days,\n"
-	.string "I should be getting a good Tm or two.\p"
+	.string "I should be getting a good TM or two.\p"
 	.string "You should come see me then.\n"
-	.string "I'll give you a Tm that's suitable for\l"
+	.string "I'll give you a TM that's suitable for\l"
 	.string "your Pokémon.$"
 
 PacifidlogTown_House2_Text_Rurii:

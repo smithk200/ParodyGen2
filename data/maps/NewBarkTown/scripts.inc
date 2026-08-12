@@ -119,6 +119,66 @@ NewBarkTown_EventScript_Wooper::
 	waitmoncry
 	release
 	end
+	
+NewBarkTown_EventScript_Growlithe::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_GROWLITHE, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Growlithe, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+	
+NewBarkTown_EventScript_Furfrou::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_FURFROU, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Furfrou, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+	
+NewBarkTown_EventScript_Yamper::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_YAMPER, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Yamper, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+	
+NewBarkTown_EventScript_Maschiff::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_MASCHIFF, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Maschiff, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+NewBarkTown_EventScript_Houndour::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_HOUNDOUR, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Houndour, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+NewBarkTown_EventScript_Dachsbun::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_DACHSBUN, CRY_MODE_NORMAL
+	msgbox NewBarkTown_Text_Dachsbun, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
 
 NewBarkTown_EventScript_LeaveTrigger::
 	lock
@@ -261,8 +321,26 @@ NewBarkTown_Text_Door:
 NewBarkTown_Text_Wooper:
 	.string "Wooper: Woooooop.$"
 
+NewBarkTown_Text_Growlithe:
+	.string "Growlithe: Gr-chee-argh!$"
+
+NewBarkTown_Text_Furfrou:
+	.string "Furfrou: Le woof!$"
+
+NewBarkTown_Text_Yamper:
+	.string "Yamper: Yamp!$"
+
+NewBarkTown_Text_Maschiff:
+	.string "Maschiff: Grrr… ruff!$"
+
+NewBarkTown_Text_Houndour:
+	.string "Houndour: Grvaah!$"
+
+NewBarkTown_Text_Dachsbun:
+	.string "Dachsbun: Ruff! Ruff-ruff!$"
+
 NewBarkTown_Text_FatManState2:
-	.string "Wow, your PokéGear is impressive!\n"
+	.string "Wow, your Pokégear is impressive!\n"
 	.string "Did your mom get it for you?$"
 
 NewBarkTown_Text_FatManState3:

@@ -29,6 +29,7 @@ bool32 IsOnEffectActivation(enum HoldEffect holdEffect)            { return gHol
 bool32 IsOnBerryActivation(enum HoldEffect holdEffect)             { return GetItemPocket(gLastUsedItem) == POCKET_BERRIES; }
 bool32 IsOnFlingActivation(enum HoldEffect holdEffect)             { return gHoldEffectsInfo[holdEffect].onFling; }
 bool32 IsBoosterEnergyActivation(enum HoldEffect holdEffect)       { return gHoldEffectsInfo[holdEffect].boosterEnergy; }
+bool32 IsCorruptOrbEndTurnActivation(enum HoldEffect holdEffect)    { return gHoldEffectsInfo[holdEffect].corruptOrbEndTurn; }
 
 bool32 IsForceTriggerItemActivation(enum HoldEffect holdEffect)
 {
@@ -1035,6 +1036,32 @@ static enum ItemEffect TrySetMicleBerry(enum BattlerId battler, enum Item itemId
     return effect;
 }
 
+static enum ItemEffect CorruptOrbRaiseAllStats(enum BattlerId battler, enum Item itemId)
+{
+    enum ItemEffect effect = ITEM_NO_EFFECT;
+    //DebugPrintf("Reached");
+    u32 statsNum = NUM_BATTLE_STATS;
+    u32 validToRaise = 0;
+    u32 i = 0;
+    for (i = STAT_ATK; i < statsNum; i++)
+        {
+            if (CompareStat(battler, i, MAX_STAT_STAGE, CMP_LESS_THAN, gLastUsedAbility))
+                validToRaise |= 1u << i;
+                //DebugPrintf("Reached");
+        }
+    if (validToRaise) // Find stat to raise
+        {
+            SetStatChange(battler, STAT_ATK, 1);
+            SetStatChange(battler, STAT_DEF, 1);
+            SetStatChange(battler, STAT_SPATK, 1);
+            SetStatChange(battler, STAT_SPDEF, 1);
+            SetStatChange(battler, STAT_SPEED, 1);
+        }
+    BattleScriptCall(BattleScript_ItemStatChangeCorruptOrb);
+    effect = ITEM_STATS_CHANGE;
+    return effect;
+}
+
 enum ItemEffect ItemBattleEffects(enum BattlerId itemBattler, enum BattlerId battler, enum HoldEffect holdEffect, ActivationTiming timing)
 {
     enum ItemEffect effect = ITEM_NO_EFFECT;
@@ -1223,6 +1250,9 @@ enum ItemEffect ItemBattleEffects(enum BattlerId itemBattler, enum BattlerId bat
         break;
     case HOLD_EFFECT_MICLE_BERRY:
         effect = TrySetMicleBerry(itemBattler, item);
+        break;
+    case HOLD_EFFECT_CORRUPT_ORB:
+        effect = CorruptOrbRaiseAllStats(itemBattler, item);
         break;
     default:
         break;

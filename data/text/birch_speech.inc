@@ -1,9 +1,9 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of Pokémon!\p"
-	.string "My name is OAK.\p"
+	.string "My name is Oak.\p"
 	.string "People call me the Pokémon\n"
-	.string "PROFESSOR.\p"
+	.string "Professor.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -107,17 +107,17 @@ gText_Birch_Difficulty::
 	.string "adventure is going to be?$"
 
 gText_Birch_LockDifficulty::
-	.string "If you need to change the DIFFICULTY\n"
-	.string "you can open the OPTIONS MENU and\l"
+	.string "If you need to change the difficulty\n"
+	.string "you can open the options menu and\l"
 	.string "change it from there.\p"
 	.string "You can also lock it, if you want.\n"
 	.string "Do you want to lock the\l"
-	.string "chosen DIFFICULTY?\p"
+	.string "chosen difficulty?\p"
 	.string "This cannot be changed later.$"
 
 gText_Birch_Challenge::
 	.string "Oh, is that so?\p"
 	.string "All right, with that clear…\n"
-	.string "Do you expect any CHALLENGE\l"
+	.string "Do you expect any Challenge\l"
 	.string "in your journey?\p"
 	.string "And what's your name?$"

@@ -89,9 +89,9 @@ VioletGym_Text_Falkner_BadgeExplain:
 	.string "Here, take this too.$"
 
 VioletGym_Text_Falkner_TMExplain:
-	.string "By using a Tm, a Pokémon will\n"
+	.string "By using a TM, a Pokémon will\n"
 	.string "instantly learn a new move.\p"
-	.string "Tm32 contains Double Team.\p"
+	.string "TM32 contains Double Team.\p"
 	.string "It increase a Pokémon's evasion.\p"
 	.string "In other words, your Pokémon\n"
 	.string "will be shit to hit.$"

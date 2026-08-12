@@ -25,7 +25,6 @@ GoldenrodCity_Gym_EventScript_MachineWantToWarp::
 	release
 	end
 
-
 GoldenrodCity_Gym_EventScript_Carrie::
 	trainerbattle_single TRAINER_CARRIE GoldenrodCity_Gym_Text_LassCarrieSeen, GoldenrodCity_Gym_Text_LassCarrieBeaten
 	msgbox GoldenrodCity_Gym_Text_LassCarrieAfter, MSGBOX_AUTOCLOSE
@@ -206,7 +205,7 @@ GoldenrodCity_Gym_Text_WhitneyPlainBadge:
 	.string "You've earned it.$"
 
 GoldenrodCity_Gym_Text_NormanFacade:
-    .string "This is the Tm Facade.\p"
+    .string "This is the TM Facade.\p"
 	.string "It doubles in power if your\n"
 	.string "Pokémon is burned, poisoned,\l"
 	.string "or paralyzed. Try to put it\l"

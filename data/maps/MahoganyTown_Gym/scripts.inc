@@ -177,7 +177,7 @@ MahoganyTown_Gym_Text_GlacierBadgeSpeech:
     .string "And take this too, I guess…$"
 
 MahoganyTown_Gym_Text_HailSpeech:
-    .string "That Tm contains Hail.\p"
+    .string "That TM contains Hail.\p"
     .string "It inflicts damage every\n"
     .string "turn for 5 turns.\p"
     .string "It demonstrates the harshness\n"

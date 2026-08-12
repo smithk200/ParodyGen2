@@ -31,10 +31,9 @@ FortreeCity_Gym_EventScript_WinonaDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setvar VAR_0x8008, 6
-	call Common_EventScript_SetGymTrainers
+	setflag FLAG_BADGE19_GET
+	settrainerflag TRAINER_ROD_2
+	settrainerflag TRAINER_TODD_3
 	call FortreeCity_Gym_EventScript_GiveAerialAce
 	closemessage
 	delay 30
@@ -69,14 +68,14 @@ FortreeCity_Gym_EventScript_WinonaRematch::
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-FortreeCity_Gym_EventScript_Jared::
-	trainerbattle_single TRAINER_JARED, FortreeCity_Gym_Text_JaredIntro, FortreeCity_Gym_Text_JaredDefeat
-	msgbox FortreeCity_Gym_Text_JaredPostBattle, MSGBOX_AUTOCLOSE
+FortreeCity_Gym_EventScript_Rod::
+	trainerbattle_single TRAINER_ROD_2, FortreeCity_Gym_Text_RodIntro, FortreeCity_Gym_Text_RodDefeat
+	msgbox FortreeCity_Gym_Text_RodPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-FortreeCity_Gym_EventScript_Darius::
-	trainerbattle_single TRAINER_DARIUS, FortreeCity_Gym_Text_DariusIntro, FortreeCity_Gym_Text_DariusDefeat
-	msgbox FortreeCity_Gym_Text_DariusPostBattle, MSGBOX_AUTOCLOSE
+FortreeCity_Gym_EventScript_Todd::
+	trainerbattle_single TRAINER_TODD_3, FortreeCity_Gym_Text_ToddIntro, FortreeCity_Gym_Text_ToddDefeat
+	msgbox FortreeCity_Gym_Text_ToddPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_GymGuide::
@@ -129,19 +128,17 @@ FortreeCity_Gym_Text_GymGuidePostVictory:
 	.string "You did it!\n"
 	.string "You've achieved liftoff!$"
 
-FortreeCity_Gym_Text_JaredIntro:
-	.string "Behold the elegant battle style of\n"
-	.string "Bird Pokémon!$"
+FortreeCity_Gym_Text_RodIntro:
+	.string "My daddy's a Flying-type master!\n"
+	.string "He's very strong!$"
 
-FortreeCity_Gym_Text_JaredDefeat:
+FortreeCity_Gym_Text_RodDefeat:
 	.string "You…\n"
-	.string "You're strong…$"
+	.string "You're stronger than him…$"
 
-FortreeCity_Gym_Text_JaredPostBattle:
-	.string "A Trainer has to be smart to keep\n"
-	.string "up with unexpected turns of events.\p"
-	.string "Do you have the smarts to get to\n"
-	.string "our Leader?$"
+FortreeCity_Gym_Text_RodPostBattle:
+	.string "Uh, my daddy's more powerful!\n"
+	.string "More powerful than me!$"
 
 FortreeCity_Gym_Text_EdwardoIntro:
 	.string "The lovers of Bird Pokémon aspire\n"
@@ -199,39 +196,43 @@ FortreeCity_Gym_Text_HumbertoPostBattle:
 	.string "Don't get distracted staring at Winona\l"
 	.string "or you'll go crashing down in a heap!$"
 
-FortreeCity_Gym_Text_DariusIntro:
-	.string "You'd better know that there are all\n"
-	.string "sorts of Flying-type Pokémon.\p"
-	.string "You do know that, right?$"
+FortreeCity_Gym_Text_ToddIntro:
+	.string "Hey!\p"
+	.string "I remember you from Violet City!$"
 
-FortreeCity_Gym_Text_DariusDefeat:
-	.string "You seem to know your stuff!$"
+FortreeCity_Gym_Text_ToddDefeat:
+	.string "Wow, you've improved!$"
 
-FortreeCity_Gym_Text_DariusPostBattle:
-	.string "Sure, you beat me all right.\n"
-	.string "But you'd better watch it! Our Leader\l"
-	.string "Winona's Pokémon are all business.$"
+FortreeCity_Gym_Text_ToddPostBattle:
+	.string "Did you know?\p"
+	.string "I was in Damian's gym, training to\n"
+	.string "beat him and his food Pokémon.\p"
+	.string "I hear Damian's a Gym Leader in\n"
+	.string "Hoenn, too.$"
 
 FortreeCity_Gym_Text_WinonaIntro:
-	.string "I am Winona. I am the Leader of\n"
-	.string "the Fortree Pokémon Gym.\p"
-	.string "I have become one with Bird Pokémon\n"
-	.string "and have soared the skies…\p"
-	.string "However grueling the battle, we have\n"
-	.string "triumphed with grace…\p"
-	.string "Witness the elegant choreography\n"
-	.string "of Bird Pokémon and I!$"
+	.string "Hidey-ho, neighbor!\p"
+	.string "I'm the leader of Fortree Gym!\p"
+	.string "God has allowed me to return\n"
+	.string "back to my beloved Flying Gym\l"
+	.string "in Hoenn.\p"
+	.string "I use Ground and Steel-type\n"
+	.string "Pokémon in the Pokémon League in\l"
+	.string "Kanto, but here in Fortree, I can\l"
+	.string "use my beloved Flying-type Pokémon!\p"
+	.string "I pray to the almighty God that I\n"
+	.string "defeat you!\p"
+	.string "God, give me the strength!$"
 
 FortreeCity_Gym_Text_WinonaDefeat:
-	.string "Never before have I seen a Trainer\n"
-	.string "command Pokémon with more grace\l"
-	.string "than I…\p"
-	.string "In recognition of your prowess,\n"
-	.string "I present to you this Gym Badge.$"
+	.string "Well, neighbor, you have defeated me.\p"
+	.string "My beloved Flying types couldn't do it…\p"
+	.string "In recognition of your strength in\n"
+	.string "battle, this Gym Badge should do it.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
-	.string "{PLAYER} received the Feather Badge\n"
-	.string "from Winona.$"
+	.string "{PLAYER} received the Cross Badge\n"
+	.string "from Ned.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "With the Feather Badge, all Pokémon up\n"
@@ -240,13 +241,13 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "You will also be able to use\n"
 	.string "the Hm move Fly outside of battle.\p"
 	.string "And this…\n"
-	.string "This is a gift from me.$"
+	.string "This is a gift from the LORD.$"
 
 FortreeCity_Gym_Text_ExplainAerialAce:
-	.string "Tm40 contains Aerial Ace.\p"
-	.string "Its speed…\n"
-	.string "No Pokémon should be able to avoid it.\p"
-	.string "… … … … … …$"
+	.string "TM40 contains Aerial Ace.\p"
+	.string "It's an accurate attack that hits\n"
+	.string "without fail.\p"
+	.string "Just like the LORD!$"
 
 FortreeCity_Gym_Text_RegisteredWinona:
 	.string "Registered Gym Leader Winona\n"
@@ -254,14 +255,14 @@ FortreeCity_Gym_Text_RegisteredWinona:
 
 FortreeCity_Gym_Text_WinonaPostBattle:
 	.string "Though I fell to you, I will remain\n"
-	.string "devoted to Bird Pokémon.$"
+	.string "devoted to my LORD God.$"
 
 FortreeCity_Gym_Text_GymStatue:
 	.string "Fortree City Pokémon Gym$"
 
 FortreeCity_Gym_Text_GymStatueCertified:
 	.string "Fortree City Pokémon Gym\p"
-	.string "Winona'S Certified Trainers:\n"
+	.string "Ned's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 FortreeCity_Gym_Text_WinonaPreRematch:

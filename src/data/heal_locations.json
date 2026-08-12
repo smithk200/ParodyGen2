@@ -587,6 +587,12 @@
       "map": "MAP_ROUTE10",
       "x": 21,
       "y": 21
+    },
+    {
+      "id": "HEAL_LOCATION_FORTREE_CITY_2",
+      "map": "MAP_FORTREE_CITY",
+      "x": 20,
+      "y": 10
     }
   ]
 }

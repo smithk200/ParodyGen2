@@ -379,10 +379,10 @@ PetalburgWoods_Text_TrainerTipsExperience:
 
 PetalburgWoods_Text_TrainerTipsPP:
 	.string "Trainer Tips\p"
-	.string "In addition to Hit Points (Hp), Pokémon\n"
-	.string "have Power Points (Pp) that are used to\l"
+	.string "In addition to Hit Points (HP), Pokémon\n"
+	.string "have Power Points (PP) that are used to\l"
 	.string "make moves during battle.\p"
-	.string "If a Pokémon runs out of Pp, it must be\n"
+	.string "If a Pokémon runs out of PP, it must be\n"
 	.string "taken to a Pokémon Center.$"
 
 PetalburgWoods_Text_KateIntro:

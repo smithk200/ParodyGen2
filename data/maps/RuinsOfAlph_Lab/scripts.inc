@@ -26,9 +26,12 @@ RuinsOfAlph_Lab_EventScript_Fossils::
 	end
 
 RuinsOfAlph_Lab_Text_Scientist1:
-	.string "The Ruins are about 1500 years old.\p"
-	.string "But it's not known why they were\n"
-	.string "built--or by whom.$"
+	.string "The Ruins are about 80 years old.\p"
+	.string "They were originally created by Alf\n"
+	.string "Landon's supporters, but his opponents\l"
+	.string "obfuscated them…\p"
+	.string "That's why they're ruins now, and not\n"
+	.string "historical landmarks.$"
 
 RuinsOfAlph_Lab_Text_Scientist2:
 	.string "There are odd patterns drawn on\n"
@@ -38,7 +41,7 @@ RuinsOfAlph_Lab_Text_Scientist2:
 
 RuinsOfAlph_Lab_Text_Fossils:
 	.string "Fossils found within the Ruins.\n"
-	.string "Maybe there are more somewhere...$"
+	.string "Maybe there are more somewhere…$"
 
 
 RuinsOfAlph_Lab_EventScript_FossilScientist::

@@ -8871,6 +8871,46 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/SlateportCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/SlateportCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA1",
+      "name": "Alola1_Layout",
+      "width": 22,
+      "height": 22,
+      "primary_tileset": "gTileset_Johto_General",
+      "secondary_tileset": "gTileset_VioletCity",
+      "border_filepath": "data/layouts/Alola1/border.bin",
+      "blockdata_filepath": "data/layouts/Alola1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA2",
+      "name": "Alola2_Layout",
+      "width": 34,
+      "height": 28,
+      "primary_tileset": "gTileset_Johto_General",
+      "secondary_tileset": "gTileset_Ecruteak_City",
+      "border_filepath": "data/layouts/Alola2/border.bin",
+      "blockdata_filepath": "data/layouts/Alola2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_CAVE_1F",
+      "name": "AlolaCave_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Johto_NorthEast",
+      "secondary_tileset": "gTileset_Cave_Default",
+      "border_filepath": "data/layouts/AlolaCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaCave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_CAVE_2F",
+      "name": "AlolaCave_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Johto_NorthEast",
+      "secondary_tileset": "gTileset_Cave_Default",
+      "border_filepath": "data/layouts/AlolaCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaCave_2F/map.bin"
     }
   ]
 }
