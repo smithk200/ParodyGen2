@@ -117,7 +117,7 @@ BillHouse_Text_RecordedBillsNumber:
     .string "{PLAYER} recorded Bill's number.$"
 
 BillHouse_Text_SisterRefusedNumber:
-    .string "My brother made the Pc Pokémon\n"
+    .string "My brother made the PC Pokémon\n"
     .string "storage system.\p"
     .string "I was going to give you Bill's\n"
     .string "number…$"
@@ -126,5 +126,5 @@ BillHouse_Text_SisterPhoneFull:
     .string "You can't record any more numbers.$"
 
 BillHouse_Text_SisterStorageSystem:
-    .string "My big brother Bill made the Pc\n"
+    .string "My big brother Bill made the PC\n"
     .string "Pokémon storage system.$"

@@ -55,7 +55,7 @@ FortreeCity_DecorationShop_PokemartDecor_Chairs:
 
 FortreeCity_DecorationShop_Text_MerchandiseSentToPC:
 	.string "Merchandise you buy here is sent to\n"
-	.string "your own Pc.\p"
+	.string "your own PC.\p"
 	.string "That's fantastic! I wish they could\n"
 	.string "also deliver me home like that.$"
 

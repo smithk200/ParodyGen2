@@ -447,6 +447,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CaptainFloy
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Shrek;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chase;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PeterGriffin;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nate;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeaderElla;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Marnie;
 
 // Begin Pokémon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -913,6 +916,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SHREK]=                  &gObjectEventGraphicsInfo_Shrek,
     [OBJ_EVENT_GFX_CHASE]=                  &gObjectEventGraphicsInfo_Chase,
     [OBJ_EVENT_GFX_PETER_GRIFFIN]=                  &gObjectEventGraphicsInfo_PeterGriffin,
+    [OBJ_EVENT_GFX_NATE]=                  &gObjectEventGraphicsInfo_Nate,
+    [OBJ_EVENT_GFX_LEADER_ELLA]=                  &gObjectEventGraphicsInfo_LeaderElla,
+    [OBJ_EVENT_GFX_MARNIE]=                  &gObjectEventGraphicsInfo_Marnie,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

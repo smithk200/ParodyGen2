@@ -1,27 +1,21 @@
 RustboroCity_Gym_MapScripts::
 	.byte 0
 
-RustboroCity_Gym_EventScript_Roxanne::
-	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
+RustboroCity_Gym_EventScript_Nate::
+	goto_if_set FLAG_BADGE23_GET, RustboroCity_Gym_EventScript_NateRematch
+	trainerbattle_single TRAINER_NATE_1, RustboroCity_Gym_Text_NateIntro, RustboroCity_Gym_Text_NateDefeat, RustboroCity_Gym_EventScript_NateDefeated, NO_MUSIC
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
-	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
+	msgbox RustboroCity_Gym_Text_NatePostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-RustboroCity_Gym_EventScript_RoxanneDefeated::
+RustboroCity_Gym_EventScript_NateDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox RustboroCity_Gym_Text_StoneBadgeInfoTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
-	addvar VAR_GARBAGEVAR, 1
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
-	call_if_eq VAR_GARBAGEVAR, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
 	end
 
@@ -33,9 +27,9 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	release
 	end
 
-RustboroCity_Gym_EventScript_RoxanneRematch::
-	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
-	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+RustboroCity_Gym_EventScript_NateRematch::
+	trainerbattle_rematch_double TRAINER_NATE_1, RustboroCity_Gym_Text_NatePreRematch, RustboroCity_Gym_Text_NateRematchDefeat, RustboroCity_Gym_Text_NateRematchNeedTwoMons
+	msgbox RustboroCity_Gym_Text_NatePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 RustboroCity_Gym_EventScript_Josh::
@@ -56,7 +50,7 @@ RustboroCity_Gym_EventScript_Marc::
 RustboroCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_GARBAGEFLAG, RustboroCity_Gym_EventScript_GymGuidePostVictory
+	goto_if_set FLAG_BADGE23_GET, RustboroCity_Gym_EventScript_GymGuidePostVictory
 	msgbox RustboroCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -68,13 +62,13 @@ RustboroCity_Gym_EventScript_GymGuidePostVictory::
 
 RustboroCity_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_GARBAGEFLAG, RustboroCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_BADGE23_GET, RustboroCity_Gym_EventScript_GymStatueCertified
 	goto RustboroCity_Gym_EventScript_GymStatue
 	end
 
 RustboroCity_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_GARBAGEFLAG, RustboroCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_BADGE23_GET, RustboroCity_Gym_EventScript_GymStatueCertified
 	goto RustboroCity_Gym_EventScript_GymStatue
 	end
 
@@ -88,39 +82,13 @@ RustboroCity_Gym_EventScript_GymStatue::
 	releaseall
 	end
 
-RustboroCity_Gym_EventScript_RegisterRoxanne::
-	lockall
-	pokenavcall RustboroCity_Gym_Text_RoxanneRegisterCall
-	waitmessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox RustboroCity_Gym_Text_RegisteredRoxanne, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_ROXANNE_MATCH_CALL
-	clearflag FLAG_ENABLE_ROXANNE_FIRST_CALL
-	releaseall
-	end
-
 RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "Yo, how's it going?\p"
 	.string "Listen, my friend!\n"
-	.string "Would you like to become the Champion?\p"
-	.string "I'm no Trainer, not me, but I can\n"
-	.string "sure give you winning advice.\p"
-	.string "That's settled, then! We'll aim for the\n"
-	.string "Pokémon Championship together!\p"
-	.string "It's your job as a Trainer to collect\n"
-	.string "Gym Badges, am I right?\p"
-	.string "But Gym Leaders aren't pushovers!\p"
-	.string "And that's where I come in!\n"
-	.string "I'm here to provide expert advice!\p"
-	.string "Roxanne, the Gym Leader, is a user\n"
-	.string "of Rock-type Pokémon.\p"
-	.string "The Rock type is very durable, but\n"
-	.string "it can't stand Water-type and\l"
-	.string "Grass-type moves.\p"
+	.string "Nate, the Gym Leader, is a user\n"
+	.string "of many types of Pokémon.\p"
+	.string "Legend has it he nicknamed his Pokémon\n"
+	.string "after a certain sketch comedy.\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the Gym Leader.\p"
 	.string "Well, go for it!$"
@@ -129,12 +97,7 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa! What a breathtaking victory!\n"
 	.string "My cheering must've worked!\p"
 	.string "Great!\n"
-	.string "Check your Trainer Card.\p"
-	.string "The Stone Badge you got should be\n"
-	.string "properly recorded on it.\p"
-	.string "In other words…\p"
-	.string "You've climbed the first step on\n"
-	.string "the stairs to the Championship!\p"
+	.string "You're going places!\n"
 	.string "That's got to feel awesome!$"
 
 RustboroCity_Gym_Text_JoshIntro:
@@ -150,13 +113,13 @@ RustboroCity_Gym_Text_JoshPostBattle:
 
 RustboroCity_Gym_Text_TommyIntro:
 	.string "If you can't beat me, you won't stand\n"
-	.string "a chance against Roxanne!$"
+	.string "a chance against Nate!$"
 
 RustboroCity_Gym_Text_TommyDefeat:
 	.string "Wow! You've got some potential!$"
 
 RustboroCity_Gym_Text_TommyPostBattle:
-	.string "Roxanne is stronger than me by\n"
+	.string "Nate is stronger than me by\n"
 	.string "several times.\p"
 	.string "You'd better be on your guard!$"
 
@@ -164,60 +127,48 @@ RustboroCity_Gym_Text_MarcIntro:
 	.string "We might be in the middle of town,\n"
 	.string "but so what?\p"
 	.string "My Rock Pokémon need room to\n"
-	.string "rampage!$"
+	.string "do their thing!$"
 
 RustboroCity_Gym_Text_MarcDefeat:
 	.string "Oh, man oh man!\n"
-	.string "Our challenger is one feisty customer!$"
+	.string "Our challenger is one feisty mother\n"
+	.string "shucker!$"
 
 RustboroCity_Gym_Text_MarcPostBattle:
-	.string "I have to hand it to our Leader.\p"
-	.string "It took smarts and sense for her to\n"
-	.string "pick the Rock type at her young age.$"
+	.string "I have to hand it to our Leader.\n"
+	.string "He doesn't just use one particular type!\p"
+	.string "That's a glaring weakness that many\n"
+	.string "Leaders have, wouldn't you say?$"
 
-RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am Roxanne, the Rustboro\n"
-	.string "Pokémon Gym Leader.\p"
-	.string "I became a Gym Leader so that I might\n"
-	.string "apply what I learned at the Pokémon\l"
-	.string "Trainer'S School in battle.\p"
-	.string "Would you kindly demonstrate how you\n"
-	.string "battle, and with which Pokémon?$"
+RustboroCity_Gym_Text_NateIntro:
+	.string "Yo, wassup!\n"
+	.string "I'm Nate!\p"
+	.string "I was born in Dewford, but when the\n"
+	.string "League forced Brawly's gym to shut down,\l"
+	.string "I decided to become a leader here!\p"
+	.string "My team will absolutely bowl you over!$"
 
-RustboroCity_Gym_Text_RoxanneDefeat:
-	.string "So…\n"
-	.string "I lost…\p"
-	.string "It seems that I still have much more\n"
-	.string "to learn…\p"
-	.string "I understand.\p"
-	.string "The Pokémon League's rules state\n"
-	.string "that Trainers are to be given this\l"
-	.string "if they defeat a Gym Leader.\p"
-	.string "Please accept the official Pokémon\n"
-	.string "League Stone Badge.$"
+RustboroCity_Gym_Text_NateDefeat:
+	.string "That was an unforgettable luncheon!$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
-	.string "{PLAYER} received the Stone Badge\n"
-	.string "from Roxanne.$"
+	.string "{PLAYER} received the Steamed Hams Badge\n"
+	.string "from Nate.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
-	.string "The Stone Badge heightens the Attack\n"
-	.string "power of your Pokémon.\p"
-	.string "It also enables them to use the Hm move\n"
-	.string "Cut outside of battle.\p"
-	.string "Please take this with you, too.$"
+	.string "The Steamed Hams Badge is a nifty\n"
+	.string "little badge.\p"
+	.string "It looks cool, but you can't sell it!\p"
+	.string "Here, I'll give you this TM too.$"
 
 RustboroCity_Gym_Text_ExplainRockTomb:
 	.string "That Technical Machine, TM39,\n"
 	.string "contains Rock Tomb.\p"
-	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers Speed.\p"
-	.string "If you use a TM, it instantly teaches\n"
-	.string "the move to a Pokémon.\p"
-	.string "Remember, a TM can be used only once,\n"
-	.string "so think before you use it.$"
+	.string "It slows down your opponents by trapping\n"
+	.string "them beneath rocks!\p"
+	.string "Is that cool or what?"
 
-RustboroCity_Gym_Text_RoxannePostBattle:
+RustboroCity_Gym_Text_NatePostBattle:
 	.string "Since you are so strong, you should\n"
 	.string "challenge other Gym Leaders.\p"
 	.string "By battling many Trainers, you should\n"
@@ -228,14 +179,14 @@ RustboroCity_Gym_Text_GymStatue:
 
 RustboroCity_Gym_Text_GymStatueCertified:
 	.string "Rustboro City Pokémon Gym\p"
-	.string "Roxanne'S Certified Trainers:\n"
+	.string "Nate's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
-RustboroCity_Gym_Text_RoxanneRegisterCall:
+RustboroCity_Gym_Text_NateRegisterCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
-	.string "Roxanne: Oh, hello, {PLAYER}?\n"
-	.string "This is Roxanne of Rustboro City.\p"
+	.string "Nate: Oh, hello, {PLAYER}?\n"
+	.string "This is Nate of Rustboro City.\p"
 	.string "I heard from Brawly that you're\n"
 	.string "moving up through the ranks of\l"
 	.string "Trainers at an incredible clip.\p"
@@ -248,31 +199,27 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
 
-RustboroCity_Gym_Text_RegisteredRoxanne:
-	.string "Registered Gym Leader Roxanne\n"
+RustboroCity_Gym_Text_RegisteredNate:
+	.string "Registered Gym Leader Nate\n"
 	.string "in the PokéNav.$"
 
-RustboroCity_Gym_Text_RoxannePreRematch:
-	.string "Roxanne: I'm so glad to see you again.\n"
-	.string "I'm Roxanne, the Gym Leader here.\p"
-	.string "I'm sure we've both experienced many\n"
-	.string "battles since we last met.\p"
-	.string "I would like to see how much better\n"
-	.string "we've become. Let us battle!$"
+RustboroCity_Gym_Text_NatePreRematch:
+	.string "Far out, man!\n"
+	.string "It's great to see you again!\p"
+	.string "Are you as stoked as I am to battle?\p"
+	.string "Let's go!$"
 
-RustboroCity_Gym_Text_RoxanneRematchDefeat:
-	.string "Grr…\n"
-	.string "Again, I have lost…$"
+RustboroCity_Gym_Text_NateRematchDefeat:
+	.string "Whoa, little dude.\n"
+	.string "You're hot stuff!$"
 
-RustboroCity_Gym_Text_RoxannePostRematch:
-	.string "Roxanne: I still have much to learn\n"
-	.string "when it comes to battling Pokémon.\p"
-	.string "That awareness makes me love battling\n"
-	.string "all that much more!$"
+RustboroCity_Gym_Text_NatePostRematch:
+	.string "Come back again so that we can\n"
+	.string "battle some more!$"
 
-RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
-	.string "Roxanne: I'm so glad to see you again.\n"
-	.string "I'm Roxanne, the Gym Leader here.\p"
+RustboroCity_Gym_Text_NateRematchNeedTwoMons:
+	.string "Nate: I'm so glad to see you again.\n"
+	.string "I'm Nate, the Gym Leader here.\p"
 	.string "I'm sure we've both experienced many\n"
 	.string "battles since we last met.\p"
 	.string "I would like to see how much better\n"

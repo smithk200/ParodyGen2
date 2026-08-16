@@ -806,7 +806,7 @@ LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine:
 	.string "The Prof must use this for research.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch:
-	.string "It's a Pc used for research.\n"
+	.string "It's a PC used for research.\n"
 	.string "Better not mess around with it.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon:

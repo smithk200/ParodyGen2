@@ -36,7 +36,7 @@ CeladonDeptStore_Text_1FTeacher:
 
 CeladonDeptStore_Text_1FDirectory:
     .string "1f: Service Counter\p"
-    .string "2f: Trainer'S Market\p"
+    .string "2f: Trainer'sMarket\p"
     .string "3f: TM Shop\p"
     .string "4f: Wiseman Gifts\p"
     .string "5f: Drug Store\p"

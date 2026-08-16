@@ -284,14 +284,14 @@ BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon:
 	.string "There was someone here using a \n"
 	.string "Pokémon I've never seen before.\p"
 	.string "I never learned about it at\n"
-	.string "Trainer'S School at least.\p"
+	.string "Trainer'sSchool at least.\p"
 	.string "I wonder where you can catch Pokémon\n"
 	.string "like that.$"
 
 BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena:
 	.string "Okay! Next stop, the Battle Arena!\n"
 	.string "I'd better get the right Pokémon from\l"
-	.string "the Pc Storage System.$"
+	.string "the PC Storage System.$"
 
 BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge:
 	.string "Giggle… I'm going to go through every\n"

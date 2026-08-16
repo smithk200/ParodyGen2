@@ -447,4 +447,4 @@ LakeOfRage_Text_Sign:
     .string "also known as Gyarados Lake.$"
 
 LakeOfRage_Text_FishingGuruSign:
-    .string "Fishing Guru'S House$"
+    .string "Fishing Guru'sHouse$"

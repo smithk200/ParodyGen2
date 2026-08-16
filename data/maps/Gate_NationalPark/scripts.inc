@@ -263,11 +263,11 @@ Route35NationalParkGate_Text_FirstMonCantBattle:
 
 Route35NationalParkGate_Text_MakeRoom:
 	.string "Uh-oh… Both your party and your\n"
-	.string "Pc Box are full.\p"
+	.string "PC Box are full.\p"
 	.string "You have no room to put the bug\n"
 	.string "Pokémon you catch.\p"
 	.string "Please make room in your party or\n"
-	.string "your Pc Box, then come see me.$"
+	.string "your PC Box, then come see me.$"
 
 Route35NationalParkGate_Text_EggAsFirstMon:
 	.string "Uh-oh… You have an Egg as the first\n"

@@ -1900,6 +1900,11 @@ static void Task_NewGameBirchSpeech_AreYouReady(u8 taskId)
         NewGameBirchSpeech_StartFadePlatformOut(taskId, 1);
         StringExpandPlaceholders(gStringVar4, gText_Birch_AreYouReady);
         AddTextPrinterForMessage(TRUE);
+        if (gSaveBlock1Ptr->tx_Challenges_Nuzlocke == 1)
+        {
+            FlagSet(FLAG_NUZLOCKE);
+            sNuzlockeModeSelected = TRUE;
+        }
         gTasks[taskId].func = Task_NewGameBirchSpeech_ShrinkPlayer;
     }
 }

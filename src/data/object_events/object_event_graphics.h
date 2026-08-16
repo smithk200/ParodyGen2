@@ -715,6 +715,9 @@ const u32 gObjectEventPic_Machine[] = INCGFX_U32("graphics/object_events/pics/mi
 const u32 gObjectEventPic_Shrek[] = INCGFX_U32("graphics/object_events/pics/people/elite_four/shrek.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Chase[] = INCGFX_U32("graphics/object_events/pics/people/elite_four/chase.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_PeterGriffin[] = INCGFX_U32("graphics/object_events/pics/people/peter_griffin.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_Nate[] = INCGFX_U32("graphics/object_events/pics/people/nate.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_LeaderElla[] = INCGFX_U32("graphics/object_events/pics/people/leader_ella.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_Marnie[] = INCGFX_U32("graphics/object_events/pics/people/marnie.png", ".4bpp", "-mwidth 2 -mheight 4");
 
 const u16 gObjectEventPal_Ned[] = INCGFX_U16("graphics/object_events/palettes/ned.pal", ".gbapal");
 const u16 gObjectEventPal_Macy[] = INCGFX_U16("graphics/object_events/palettes/macy.pal", ".gbapal");
@@ -734,3 +737,7 @@ const u16 gObjectEventPal_Bea[] = INCGFX_U16("graphics/object_events/palettes/be
 const u16 gObjectEventPal_Shrek[] = INCGFX_U16("graphics/object_events/palettes/shrek.pal", ".gbapal");
 const u16 gObjectEventPal_Chase[] = INCGFX_U16("graphics/object_events/palettes/chase.pal", ".gbapal");
 const u16 gObjectEventPal_PeterGriffin[] = INCGFX_U16("graphics/object_events/palettes/peter_griffin.pal", ".gbapal");
+const u16 gObjectEventPal_Nate[] = INCGFX_U16("graphics/object_events/palettes/nate.pal", ".gbapal");
+const u16 gObjectEventPal_LeaderElla[] = INCGFX_U16("graphics/object_events/palettes/leader_ella.pal", ".gbapal");
+const u16 gObjectEventPal_Marnie[] = INCGFX_U16("graphics/object_events/palettes/marnie.pal", ".gbapal");
+const u16 gObjectEventPal_NPC5[] = INCGFX_U16("graphics/object_events/palettes/npc_5.pal", ".gbapal");

@@ -131,7 +131,7 @@ VioletCity_PokeCenter_Text_MobileAdapter:
 
 VioletCity_PokeCenter_Text_GameboyKid:
 	.string "A guy named Bill made the\n"
-	.string "Pokémon Pc storage system.$"
+	.string "Pokémon PC storage system.$"
 
 VioletCity_PokeCenter_Text_Gentleman:
 	.string "It was around three years ago.\p"

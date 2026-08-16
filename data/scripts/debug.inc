@@ -62,6 +62,104 @@ Debug_CheatStart::
 	release
 	end
 
+Debug_CheatStart_ExtraCode::
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGE09_GET
+	setflag FLAG_BADGE10_GET
+	setflag FLAG_BADGE11_GET
+	setflag FLAG_BADGE12_GET
+	setflag FLAG_BADGE13_GET
+	setflag FLAG_BADGE14_GET
+	setflag FLAG_BADGE15_GET
+	setflag FLAG_BADGE16_GET
+	setflag FLAG_BADGE17_GET
+	setflag FLAG_BADGE18_GET
+	setflag FLAG_BADGE19_GET
+	setflag FLAG_BADGE20_GET
+	setflag FLAG_BADGE21_GET
+	setflag FLAG_BADGE22_GET
+	setflag FLAG_BADGE23_GET
+	setflag FLAG_BADGE24_GET
+	
+	giveitem ITEM_SILK_SCARF
+	giveitem ITEM_CHARCOAL
+	giveitem ITEM_MYSTIC_WATER
+	giveitem ITEM_MAGNET
+	giveitem ITEM_MIRACLE_SEED
+	giveitem ITEM_NEVER_MELT_ICE
+	giveitem ITEM_BLACK_BELT
+	giveitem ITEM_POISON_BARB
+	giveitem ITEM_SOFT_SAND
+	giveitem ITEM_SHARP_BEAK
+	giveitem ITEM_TWISTED_SPOON
+	giveitem ITEM_SILVER_POWDER
+	giveitem ITEM_SPELL_TAG
+	giveitem ITEM_DRAGON_FANG
+	giveitem ITEM_BLACK_GLASSES
+	giveitem ITEM_METAL_COAT
+	giveitem ITEM_CHOICE_BAND
+	giveitem ITEM_CHOICE_SPECS
+	giveitem ITEM_CHOICE_SCARF
+	giveitem ITEM_FLAME_ORB
+	giveitem ITEM_TOXIC_ORB
+	giveitem ITEM_DAMP_ROCK
+	giveitem ITEM_HEAT_ROCK
+	giveitem ITEM_SMOOTH_ROCK
+	giveitem ITEM_ICY_ROCK
+	giveitem ITEM_ELECTRIC_SEED
+	giveitem ITEM_PSYCHIC_SEED
+	giveitem ITEM_MISTY_SEED
+	giveitem ITEM_GRASSY_SEED
+	giveitem ITEM_ABSORB_BULB
+	giveitem ITEM_CELL_BATTERY
+	giveitem ITEM_LUMINOUS_MOSS
+	giveitem ITEM_SNOWBALL
+	giveitem ITEM_BRIGHT_POWDER
+	giveitem ITEM_WHITE_HERB
+	giveitem ITEM_EXP_SHARE
+	giveitem ITEM_QUICK_CLAW
+	giveitem ITEM_SOOTHE_BELL
+	giveitem ITEM_MENTAL_HERB
+	giveitem ITEM_KINGS_ROCK
+	giveitem ITEM_AMULET_COIN
+	giveitem ITEM_CLEANSE_TAG
+	giveitem ITEM_SMOKE_BALL
+	giveitem ITEM_FOCUS_BAND
+	giveitem ITEM_LUCKY_EGG
+	giveitem ITEM_SCOPE_LENS
+	giveitem ITEM_LEFTOVERS
+	giveitem ITEM_SHELL_BELL
+	giveitem ITEM_WIDE_LENS
+	giveitem ITEM_MUSCLE_BAND
+	giveitem ITEM_WISE_GLASSES
+	giveitem ITEM_EXPERT_BELT
+	giveitem ITEM_LIGHT_CLAY
+	giveitem ITEM_LIFE_ORB
+	giveitem ITEM_POWER_HERB
+	giveitem ITEM_FOCUS_SASH
+	giveitem ITEM_ZOOM_LENS
+	giveitem ITEM_METRONOME
+	giveitem ITEM_IRON_BALL
+	giveitem ITEM_LAGGING_TAIL
+	giveitem ITEM_DESTINY_KNOT
+	giveitem ITEM_BLACK_SLUDGE
+	giveitem ITEM_GRIP_CLAW
+	giveitem ITEM_STICKY_BARB
+	giveitem ITEM_SHED_SHELL
+	giveitem ITEM_BIG_ROOT
+	giveitem ITEM_RAZOR_CLAW
+	giveitem ITEM_RAZOR_FANG
+	giveitem ITEM_EVIOLITE
+	giveitem ITEM_FLOAT_STONE
+	end
+
 
 Debug_CheatStartFrlg::
 	@species:req, level:req, item, ball, nature, abilityNum, gender, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, shinyMode, gmaxFactor, teraType, dmaxLevel

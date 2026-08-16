@@ -151,7 +151,7 @@
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
 #define FLAG_RECEIVED_DOLL_Bill              0x83
-#define FLAG_RECEIVED_POTION_OLDALE          0x84
+#define FLAG_DEFEATED_PETER_GRIFFIN_POKMEON_LEAGUE    0x84
 #define FLAG_RECEIVED_AMULET_COIN            0x85
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
@@ -177,8 +177,8 @@
 #define FLAG_FORTREE_NPC_TRADE_COMPLETED     0x9B
 #define FLAG_BATTLE_FRONTIER_TRADE_DONE      0x9C
 #define FLAG_FORCE_MIRAGE_TOWER_VISIBLE      0x9D
-#define FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE   0x9E
-#define FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN 0x9F
+#define FLAG_HIDE_PETER_GRIFFFIN_ROUTE35     0x9E
+#define FLAG_HIDE_PETER_GRIFFFIN_POKEMON_LEAGUE     0x9F
 #define FLAG_COOL_PAINTING_MADE              0xA0
 #define FLAG_BEAUTY_PAINTING_MADE            0xA1
 #define FLAG_CUTE_PAINTING_MADE              0xA2
@@ -1044,8 +1044,8 @@
 #define FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER                     0x3E1
 #define FLAG_HIDE_SSAQUA_SAILOR                                     0x3E2
 #define FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER                0x3E3
-#define FLAG_HIDE_SOOTOPOLIS_CITY_RAYQUAZA                          0x3E4//unused
-#define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5//unused
+#define FLAG_HIDE_ZAMAZENTA                                         0x3E4
+#define FLAG_HIDE_ZACIAN                                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6//unused
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7//unused
 

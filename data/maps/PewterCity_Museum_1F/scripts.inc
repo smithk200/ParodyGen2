@@ -62,7 +62,7 @@ PewterCity_Museum_1F_Text_FossilWomanAfter:
 	.string "We often share research with the\n"
 	.string "Ruins of Alf researchers.\p"
 	.string "We even share fossils with them\n"
-	.string "through the Pc!$"
+	.string "through the PC!$"
 
 PewterCity_Museum_1F_Text_Oldman:
 	.string "I should be grateful for my long\n"

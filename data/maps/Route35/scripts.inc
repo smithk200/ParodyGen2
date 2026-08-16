@@ -52,6 +52,17 @@ Route35_EventScript_PolicemanDirk::
 	msgbox Route35_Text_OfficerDirkAfter, MSGBOX_AUTOCLOSE
 	end
 
+Route35_EventScript_PeterGriffin::
+	trainerbattle_single TRAINER_PETER_GRIFFIN_1 Route35_Text_PeterGriffinSeen, Route35_Text_PeterGriffinBeaten, Route35_EventScript_PeterGriffinDefeated
+	end
+
+Route35_EventScript_PeterGriffinDefeated::
+	msgbox Route35_Text_PeterGriffinAfter, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PETER_GRIFFIN_ROUTE_35, Route35_PeterGriffin_Movement
+	waitmovement
+	removeobject LOCALID_PETER_GRIFFIN_ROUTE_35
+	end
+
 Route35_EventScript_Sign1::
 	lock
 	msgbox Route35_Text_Sign, MSGBOX_SIGN
@@ -77,6 +88,16 @@ Route35_EventScript_Item_Nugget::
 Route35_EventScript_Item_ParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL
 	end
+
+Route35_PeterGriffin_Movement::
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	step_end
 
 Route35_Text_CamperIvanSeen:
 	.string "I've been getting Pokémon data off\n"
@@ -191,3 +212,19 @@ Route35_Text_Sign:
 
 Route35_Text_Sign2:
 	.string "National Park Gate$"
+
+Route35_Text_PeterGriffinSeen:
+	.string "Hey, you!\n"
+	.string "I'm headed to the Gym!\p"
+	.string "Wanna see the Pokémon I'll be using?\n"
+	.string "Heheheheh…$"
+
+Route35_Text_PeterGriffinBeaten:
+	.string "Hey, that wasn't fair!$"
+
+Route35_Text_PeterGriffinAfter:
+	.string "Ya know, I'm planning on going\n"
+	.string "to some tropical island, far away.\p"
+	.string "They call it “Alola”.\p"
+	.string "Don't know what it is, but sounds fun!\p"
+	.string "See ya!$"

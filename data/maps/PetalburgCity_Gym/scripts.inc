@@ -84,8 +84,7 @@ PetalburgCity_Gym_Movement_WallyExitGym:
 	step_end
 
 PetalburgCity_Gym_EventScript_Waluigi::
-	trainerbattle_single TRAINER_WALUIGI, PetalburgCity_Gym_Text_WaluigiIntro, PetalburgCity_Gym_Text_WaluigiDefeat
-	goto_if_unset FLAG_BADGE24_GET, PetalburgCity_Gym_EventScript_WaluigiDefeated
+	trainerbattle_single TRAINER_WALUIGI, PetalburgCity_Gym_Text_WaluigiIntro, PetalburgCity_Gym_Text_WaluigiDefeat, PetalburgCity_Gym_EventScript_WaluigiDefeated
 	msgbox PetalburgCity_Gym_Text_WaluigiPostBattle, MSGBOX_DEFAULT
 	closemessage
 	end

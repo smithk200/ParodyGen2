@@ -188,10 +188,10 @@ static const u8 *const sItemStorage_OptionDescriptions[] =
 
 static const struct MenuAction sPlayerPCMenuActions[] =
 {
-    [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} },
-    [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
-    [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
-    [MENU_TURNOFF]     = { COMPOUND_STRING("TURN OFF"),     {PlayerPC_TurnOff} }
+    [MENU_ITEMSTORAGE] = { COMPOUND_STRING("Item Storage"), {PlayerPC_ItemStorage} },
+    [MENU_MAILBOX]     = { COMPOUND_STRING("Mailbox"),      {PlayerPC_Mailbox} },
+    [MENU_DECORATION]  = { COMPOUND_STRING("Decoration"),   {PlayerPC_Decoration} },
+    [MENU_TURNOFF]     = { COMPOUND_STRING("Turn Off"),     {PlayerPC_TurnOff} }
 };
 
 static const u8 sBedroomPC_OptionOrder[] =

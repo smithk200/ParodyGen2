@@ -73,27 +73,28 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	special MauvilleGymDeactivatePuzzle
 	end
 
-MauvilleCity_Gym_EventScript_Wattson::
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
+MauvilleCity_Gym_EventScript_Ella::
+	goto_if_set FLAG_BADGE18_GET, MauvilleCity_Gym_EventScript_EllaRematch
+	trainerbattle_single TRAINER_ELLA_1, MauvilleCity_Gym_Text_EllaIntro, MauvilleCity_Gym_Text_EllaDefeat, MauvilleCity_Gym_EventScript_EllaDefeated
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
 	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
-	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
+	msgbox MauvilleCity_Gym_Text_EllaPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-MauvilleCity_Gym_EventScript_WattsonDefeated::
+MauvilleCity_Gym_EventScript_EllaRematch::
+	msgbox MauvilleCity_Gym_Text_EllaPreRematch, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_ELLA_2, MauvilleCity_Gym_Text_EllaRematchDefeat
+	goto MauvilleCity_Gym_EventScript_EllaDefeated2
+
+MauvilleCity_Gym_EventScript_EllaDefeated::
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
 	waitmessage
+	setflag FLAG_BADGE18_GET
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
-	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
-	clearflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	addvar VAR_GARBAGEVAR, 1
-	call_if_eq VAR_GARBAGEVAR, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
 	special MauvilleGymDeactivatePuzzle
@@ -101,14 +102,12 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	playse SE_UNLOCK
 	call MauvilleCity_Gym_EventScript_GiveShockWave
 	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
 	release
+	end
+
+MauvilleCity_Gym_EventScript_EllaDefeated2::
+	msgbox MauvilleCity_Gym_Text_EllaDefeated2, MSGBOX_DEFAULT
+	closemessage
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::
@@ -127,13 +126,8 @@ MauvilleCity_Gym_EventScript_GiveShockWave::
 	return
 
 MauvilleCity_Gym_EventScript_CompletedNewMauville::
-	msgbox MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor, MSGBOX_DEFAULT
+	msgbox MauvilleCity_Gym_Text_EllaGoForthAndEndeavor, MSGBOX_DEFAULT
 	release
-	end
-
-MauvilleCity_Gym_EventScript_WattsonRematch::
-	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
-	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Switch1::
@@ -224,7 +218,7 @@ MauvilleCity_Gym_EventScript_Angelo::
 MauvilleCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_GARBAGEFLAG, MauvilleCity_Gym_EventScript_GymGuidePostVictory
+	goto_if_set FLAG_BADGE18_GET, MauvilleCity_Gym_EventScript_GymGuidePostVictory
 	msgbox MauvilleCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end
@@ -236,13 +230,13 @@ MauvilleCity_Gym_EventScript_GymGuidePostVictory::
 
 MauvilleCity_Gym_EventScript_LeftGymStatue::
 	lockall
-	goto_if_set FLAG_GARBAGEFLAG, MauvilleCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_BADGE18_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
 	goto MauvilleCity_Gym_EventScript_GymStatue
 	end
 
 MauvilleCity_Gym_EventScript_RightGymStatue::
 	lockall
-	goto_if_set FLAG_GARBAGEFLAG, MauvilleCity_Gym_EventScript_GymStatueCertified
+	goto_if_set FLAG_BADGE18_GET, MauvilleCity_Gym_EventScript_GymStatueCertified
 	goto MauvilleCity_Gym_EventScript_GymStatue
 	end
 
@@ -259,12 +253,13 @@ MauvilleCity_Gym_EventScript_GymStatue::
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "Wattson, the Leader of Mauville\n"
+	.string "Ella, the Leader of Mauville\n"
 	.string "Gym, uses Electric-type Pokémon.\p"
-	.string "If you challenge him with Water-type\n"
-	.string "Pokémon, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his Gym! Eccentric!\p"
+	.string "If you challenge her with Water-type\n"
+	.string "Pokémon, she'll zap them! Bzzt!\p"
+	.string "Flying-type Pokémon will get their\n"
+	.string "wings zapped in there!\p"
+	.string "That's all I can tell you!\p"
 	.string "Hey, go for it!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
@@ -284,15 +279,15 @@ MauvilleCity_Gym_Text_KirkPostBattle:
 	.string "whoa-yeah!$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
-	.string "I trained under Wattson!\n"
+	.string "I trained under Ella!\n"
 	.string "There ain't no way I'll lose easily!$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
 	.string "Unplugged and turned off…$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "Wattson, our Gym Leader, has been\n"
-	.string "around for a long, long time.\p"
+	.string "Ella, our Gym Leader, has been\n"
+	.string "around for a short time.\p"
 	.string "He was battling even before your\n"
 	.string "daddy was born, that tough coot.$"
 
@@ -304,7 +299,7 @@ MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
-	.string "Wattson says he likes setting up\n"
+	.string "Ella says he likes setting up\n"
 	.string "little traps with switches.$"
 
 MauvilleCity_Gym_Text_VivianIntro:
@@ -316,7 +311,7 @@ MauvilleCity_Gym_Text_VivianDefeat:
 
 MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "I've heard that Mauville was founded\n"
-	.string "by Wattson.\p"
+	.string "by Ella.\p"
 	.string "He was a Trainer long before we\n"
 	.string "became Trainers.\l"
 	.string "He must know all sorts of things!$"
@@ -329,55 +324,40 @@ MauvilleCity_Gym_Text_AngeloDefeat:
 	.string "My eyes are frazzled…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "Mauville Gym's Wattson has a shiny\n"
+	.string "Mauville Gym's Ella has a shiny\n"
 	.string "forehead. It makes me happy!$"
 
-MauvilleCity_Gym_Text_WattsonIntro:
-	.string "I've given up on my plans to convert\n"
-	.string "the city, I have.\p"
-	.string "And so, I put my time into making\n"
-	.string "door traps in my Gym.\p"
-	.string "Oh? Now, what are you doing here?\p"
-	.string "What's that? You say you've gotten\n"
-	.string "past all my rigged doors?\p"
-	.string "Wahahahah!\n"
-	.string "Now, that is amusing!\p"
-	.string "Then, I, Wattson, the Leader of\n"
-	.string "Mauville Gym, shall electrify you!$"
+MauvilleCity_Gym_Text_EllaIntro:
+	.string "I'm Ella!\p"
+	.string "I really love Electric type Pokémon!\p"
+	.string "I will shock you…\n"
+	.string "That's a funny joke, right?$"
 
-MauvilleCity_Gym_Text_WattsonDefeat:
-	.string "Wahahahah!\n"
-	.string "Fine, I lost!\p"
-	.string "You ended up giving me a thrill!\n"
-	.string "Take this Badge!$"
+MauvilleCity_Gym_Text_EllaDefeat:
+	.string "I lost?\n"
+	.string "Huh…\p"
+	.string "I guess I'll give you this Badge then.$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the Dynamo Badge\n"
-	.string "from Wattson.$"
+	.string "{PLAYER} received the Electric Badge\n"
+	.string "from Ella.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the Dynamo Badge, Pokémon can\n"
-	.string "use Rock Smash out of battle.\p"
-	.string "And, it will make your Pokémon a little\n"
-	.string "bit faster, too.\p"
-	.string "Hmm…\n"
-	.string "You should take this, too!$"
+	.string "This is a cool and shiny badge!\n"
+	.string "You can show it to others!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave:
 	.string "That TM34 there contains Shock Wave.\p"
-	.string "It's a trustworthy move that never\n"
-	.string "misses! You can count on it!\p"
-	.string "… … … … … …$"
+	.string "I can't read yet, but it never misses!$"
 
-MauvilleCity_Gym_Text_RegisteredWattson:
-	.string "Registered Gym Leader Wattson\n"
+MauvilleCity_Gym_Text_RegisteredElla:
+	.string "Registered Gym Leader Ella\n"
 	.string "in the PokéNav.$"
 
-MauvilleCity_Gym_Text_WattsonPostBattle:
-	.string "I swell with optimism, seeing a promising\n"
-	.string "young Trainer like you!$"
+MauvilleCity_Gym_Text_EllaPostBattle:
+	.string "I can't wait to be as strong as you!$"
 
-MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
+MauvilleCity_Gym_Text_EllaGoForthAndEndeavor:
 	.string "Wahahahah!\n"
 	.string "Go forth and endeavor, youngster!$"
 
@@ -386,31 +366,24 @@ MauvilleCity_Gym_Text_GymStatue:
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "Mauville City Pokémon Gym\p"
-	.string "Wattson'S Certified Trainers:\n"
+	.string "Ella's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
-MauvilleCity_Gym_Text_WattsonPreRematch:
-	.string "Wattson: Ah-ha! Here at last!\n"
-	.string "I know what you want.\l"
-	.string "You want to battle my Pokémon!\p"
-	.string "Wahahahaha!\p"
-	.string "I'll make sparks fly from you!\n"
-	.string "Don't say I didn't warn you!$"
+MauvilleCity_Gym_Text_EllaPreRematch:
+	.string "You're going to battle me again?\n"
+	.string "I'm even stronger now!\p"
+	.string "Don't say I didn't warn you!$$"
 
-MauvilleCity_Gym_Text_WattsonRematchDefeat:
-	.string "Oof…\n"
-	.string "Our batteries ran dry…$"
+MauvilleCity_Gym_Text_EllaRematchDefeat:
+	.string "You beat me again!\n"
+	.string "How silly!$"
 
-MauvilleCity_Gym_Text_WattsonPostRematch:
-	.string "Wattson: We'll have to recharge our\n"
-	.string "batteries again.\p"
-	.string "When we're fully charged up, we'll\n"
-	.string "gladly accept your challenge.\p"
-	.string "So, come back again sometime,\n"
-	.string "won't you?$"
+MauvilleCity_Gym_Text_EllaPostRematch:
+	.string "Will you come back again to rematch\n"
+	.string "me?$"
 
-MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
-	.string "Wattson: Ah-ha! Here at last!\n"
+MauvilleCity_Gym_Text_EllaRematchNeedTwoMons:
+	.string "Ella: Ah-ha! Here at last!\n"
 	.string "I know what you want.\l"
 	.string "You want to battle my Pokémon!\p"
 	.string "Wahahahaha!\p"
@@ -419,3 +392,6 @@ MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
 	.string "Come see me with two or more\n"
 	.string "Pokémon, all right?$"
 
+MauvilleCity_Gym_Text_EllaDefeated2:
+	.string "You beat me again!\p"
+	.string "I won't cry about it, though.$"

@@ -115,29 +115,10 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	applymovement VAR_0x8004, SeafloorCavern_Room9_Movement_ArchieExit
 	waitmovement 0
 	msgbox SeafloorCavern_Room9_Text_MaxieComeOnPlayer, MSGBOX_DEFAULT
-	setvar VAR_GARBAGEVAR, 1
-	setvar VAR_GARBAGEVAR, 1
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON
-	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
 	setflag FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN
 	setflag FLAG_GARBAGEFLAG
 	setvar VAR_STEVENS_HOUSE_STATE, 2
 	setvar VAR_SEAFLOOR_CAVERN_STATE, 1
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
 	warp MAP_ROUTE128, 38, 22
 	@waitstate
 	releaseall

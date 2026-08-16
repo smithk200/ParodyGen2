@@ -476,7 +476,7 @@ Route32_Text_RoarIntro:
 	.string "That Pleases Me! Now Take This!$"
 
 Route32_Text_RoarOutro:
-	.string "Wrooooar! It'S Roar!\p"
+	.string "Wrooooar! It'sRoar!\p"
 	.string "Even Pokémon Run From A Good\n"
 	.string "Roar!$"
 

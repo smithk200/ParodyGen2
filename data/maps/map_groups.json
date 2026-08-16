@@ -1055,7 +1055,9 @@
     "Route119_WeatherInstitute_1F",
     "Route119_WeatherInstitute_2F",
     "Route119_House",
-    "Route124_DivingTreasureHuntersHouse"
+    "Route124_DivingTreasureHuntersHouse",
+    "Route130_Cave",
+    "Route130_Cave2"
   ],
   "gMapGroup_Alola": [
     "Alola1",

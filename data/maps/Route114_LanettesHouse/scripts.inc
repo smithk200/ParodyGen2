@@ -58,7 +58,7 @@ Route114_LanettesHouse_Text_OrganizeYourBoxes:
 	.string "can tell which Pokémon are in them.$"
 
 Route114_LanettesHouse_Text_ResearchNotesPage1:
-	.string "It's LANETTE's research notes.\n"
+	.string "It's Lanette's research notes.\n"
 	.string "There's information about BOXES.\p"
 	.string "Design BOXES to hold 30 Pokémon each.\p"
 	.string "Each TRAINER should be able to store\n"

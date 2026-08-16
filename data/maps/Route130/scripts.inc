@@ -48,3 +48,14 @@ Route130_EventScript_Santiago::
 	msgbox Route130_Text_SantiagoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route130_Sign_AnIsland::
+	msgbox Route130_Text_Sign_AnIsland, MSGBOX_AUTOCLOSE
+	end
+	
+Route130_Text_Sign_AnIsland:
+	.string "An Island\p"
+	.string "An island created by Team Magma\n"
+	.string "three years ago.\p"
+	.string "Swastikas and graffiti cover the\n"
+	.string "rest of the sign.$"
+

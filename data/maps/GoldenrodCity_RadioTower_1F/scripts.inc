@@ -75,10 +75,11 @@ RadioTower1F_Text_Lady::
 	.string "sound like they're similar things, but\l"
 	.string "don't let that trip you up!\p"
 	.string "Just remember…\p"
-	.string "Phonemic awareness is more narrow and\n"
-	.string "more specific than phonological awareness.\p"
-	.string "“Phonemic” has the word “phoneme” in it,\n"
-	.string "“phonological” does not.$"
+	.string "Phonemic awareness is more narrow\n"
+	.string "and more specific than \l"
+	.string "phonological awareness.\p"
+	.string "“Phonemic” has the word “phoneme” in\n"
+	.string "it, “phonological” does not.$"
 
 RadioTower1F_EventScript_Reception::
 	lock
@@ -520,7 +521,7 @@ GoldenrodCity_RadioTower_1F_Text_TicketMatchesPartyMon:
 
 GoldenrodCity_RadioTower_1F_Text_TicketMatchesPCMon:
 	.string "Congratulations!\p"
-	.string "The Id number of your Pc-boxed\n"
+	.string "The Id number of your PC-boxed\n"
 	.string "{STR_VAR_1} matches your\l"
 	.string "Loto Ticket's number!$"
 

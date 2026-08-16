@@ -886,6 +886,19 @@ static void LoadBattleEnvironmentGfx(u16 environment)
 
 // Loads the entry associated with the battle environment.
 // This can be the grass moving on the screen at the start of a wild encounter in tall grass.
+
+bool8 BattleEnvironmentEntryGfxSkipped(u16 environment) //all the battle bgs that skip using the intro tile animation.
+{
+    switch (environment)
+    {
+    case BATTLE_ENVIRONMENT_PETER_GRIFFIN:
+        return TRUE;
+
+    default:
+        return FALSE;
+    }
+}
+
 static void LoadBattleEnvironmentEntryGfx(u16 environment)
 {
     if (environment >= NELEMS(gBattleEnvironmentInfo))
@@ -893,8 +906,11 @@ static void LoadBattleEnvironmentEntryGfx(u16 environment)
     // Copy to bg1
     if (gSaveBlock2Ptr->optionsFastIntro == 1)
     {
-        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].entry.tileset, (void *)BG_CHAR_ADDR(1));
-        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].entry.tilemap, (void *)BG_SCREEN_ADDR(28));
+        if (!BattleEnvironmentEntryGfxSkipped(environment))
+            {
+                DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].entry.tileset, (void *)BG_CHAR_ADDR(1));
+                DecompressDataWithHeaderVram(gBattleEnvironmentInfo[environment].entry.tilemap, (void *)BG_SCREEN_ADDR(28));
+            }
     }
         
 }

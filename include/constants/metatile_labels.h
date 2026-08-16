@@ -136,6 +136,7 @@
 // gTileset_Cave
 #define METATILE_Cave_CrackedFloor                       0x22F
 #define METATILE_Cave_CrackedFloor_Hole                  0x206
+#define METATILE_Cave_DragonsDen_Cave5_Door              0x2FF
 #define METATILE_Cave_EntranceCover                      0x229
 #define METATILE_Cave_Ice_CrackedFloor_Hole              0x39F
 #define METATILE_Cave_SealedChamberBraille_Mid           0x235
@@ -321,6 +322,14 @@
 #define METATILE_Johto_General_Fall_TallGrass  0x083
 #define METATILE_Johto_General_Grass           0x008
 
+// gTileset_Johto_NorthEast
+#define METATILE_Johto_NorthEast_Door_Gym      0x15B
+#define METATILE_Johto_NorthEast_Door_Sliding  0x062
+
+// gTileset_Johto_NorthWest
+#define METATILE_Johto_NorthWest_Gym         0x061
+#define METATILE_Johto_NorthWest_PokeCenter  0x062
+
 // gTileset_Johto_South
 #define METATILE_Johto_South_Azalea_Town_Door        0x03D
 #define METATILE_Johto_South_Johto_South_Gym         0x061
@@ -360,6 +369,9 @@
 #define METATILE_LilycoveMuseum_Painting3_Right  0x261
 #define METATILE_LilycoveMuseum_Painting4_Left   0x262
 #define METATILE_LilycoveMuseum_Painting4_Right  0x263
+
+// gTileset_MahoganyTown
+#define METATILE_MahoganyTown_Door  0x2A2
 
 // gTileset_Mauville
 #define METATILE_Mauville_DeepSand_BottomMid  0x259

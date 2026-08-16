@@ -8886,7 +8886,7 @@
       "id": "LAYOUT_ALOLA2",
       "name": "Alola2_Layout",
       "width": 34,
-      "height": 28,
+      "height": 30,
       "primary_tileset": "gTileset_Johto_General",
       "secondary_tileset": "gTileset_Ecruteak_City",
       "border_filepath": "data/layouts/Alola2/border.bin",
@@ -8911,6 +8911,26 @@
       "secondary_tileset": "gTileset_Cave_Default",
       "border_filepath": "data/layouts/AlolaCave_2F/border.bin",
       "blockdata_filepath": "data/layouts/AlolaCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130_CAVE",
+      "name": "Route130_Cave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Route130_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Route130_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130_CAVE2",
+      "name": "Route130_Cave2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Route130_Cave2/border.bin",
+      "blockdata_filepath": "data/layouts/Route130_Cave2/map.bin"
     }
   ]
 }

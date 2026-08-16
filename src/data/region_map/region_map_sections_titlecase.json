@@ -893,7 +893,7 @@
     },
     {
       "id": "MAPSEC_DIGLETTS_CAVE",
-      "name": "Diglett'S Cave"
+      "name": "Diglett'sCave"
     },
     {
       "id": "MAPSEC_KANTO_VICTORY_ROAD",
@@ -1692,7 +1692,7 @@
     },
     {
       "id": "MAPSEC_DRAGONS_DEN",
-      "name": "Dragon'S Den",
+      "name": "Dragon's Den",
       "x": 12,
       "y": 2,
       "width": 1,

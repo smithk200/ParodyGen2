@@ -953,7 +953,7 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "Go on, go get them, honey!$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
-	.string "If you use a Pc, you can store items\n"
+	.string "If you use a PC, you can store items\n"
 	.string "and Pokémon.\p"
 	.string "The power of science is staggering!$"
 
@@ -995,13 +995,13 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "Prof. Birch'S Pokémon Lab$"
+	.string "Prof. Birch'sPokémon Lab$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s House$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "Prof. Birch'S House$"
+	.string "Prof. Birch'sHouse$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Prof. Birch: Well, well, {PLAYER}{KUN}!\n"

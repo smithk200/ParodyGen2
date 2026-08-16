@@ -1072,6 +1072,7 @@ enum __attribute__((packed)) Item
     ITEM_CORRUPT_ORB = 887,
     ITEM_MAGIC_MUFFLER = 888,
     ITEM_CAP_CANDY     = 889,
+    ITEM_STEAMED_HAMS = 890,
     
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

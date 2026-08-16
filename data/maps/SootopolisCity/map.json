@@ -137,7 +137,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "local_id": "LOCALID_SOOTOPOLIS_KYOGRE",
@@ -151,7 +151,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "local_id": "LOCALID_SOOTOPOLIS_RAYQUAZA",
@@ -165,7 +165,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_RAYQUAZA"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "local_id": "LOCALID_SOOTOPOLIS_MANIAC",

@@ -386,7 +386,7 @@ CherrygroveCity_Text_CitySign:
 	.string "in the ground.$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "Guide Gent'S House$"
+	.string "Guide Gent'sHouse$"
 
 CherryGroveCity_Text_Staryu:
 	.string "Staryu: Yuuuuuuuu.$"

@@ -5,13 +5,13 @@ gText_WhichPCShouldBeAccessed::
 	.string "Which PC should be accessed?$"
 
 gText_AccessedSomeonesPC::
-	.string "Accessed SOMEONE'S PC.$"
+	.string "Accessed the Pokémon Boxes.$"
 
 gText_StorageSystemOpened::
 	.string "Pokémon Storage System opened.$"
 
 gText_AccessedPlayersPC::
-	.string "Accessed {PLAYER}'s PC.$"
+	.string "Accessed the Items.$"
 
 gText_AccessedLanettesPC::
-	.string "Accessed LANETTE's PC.$"
+	.string "Accessed Lanette's PC.$"

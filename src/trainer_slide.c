@@ -61,6 +61,23 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_DAMIAN_1] = // use the Trainer's Id from include/constants/opponents.h
+        {
+            [TRAINER_SLIDE_DYNAMAX] = COMPOUND_STRING("I'm gonna smoke my weed!{PAUSE_UNTIL_PRESS}"), // find the id for the slide to be used. SET_STATCHANGER(STAT_ATK, 1, TRUE); 
+            // Unused: this was going to have Damian smoke his weed, then rise his pokemon's attack by 1 stage.
+        },
+        [TRAINER_DAMIAN_2] =
+        {
+            [TRAINER_SLIDE_DYNAMAX] = COMPOUND_STRING("I'm gonna smoke my weed!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_MORTY_1] =
+        {  
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Rick: Wow, you made it this far? Well, shit!\pMorty: C'mon, Pokémon!\nD-don't give up on us now!{PAUSE_UNTIL_PRESS}"),
+        },
+        [TRAINER_NATE_1] =
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Aurora borealis…{PAUSE_UNTIL_PRESS}"),
+        }
     },
 };
 

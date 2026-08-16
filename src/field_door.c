@@ -417,11 +417,11 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_SafariZoneJohto_Safari,                        &gTileset_SafariZoneJohto, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_JohtoSafariZone_Door, sDoorAnimPalettes_SafariZoneJohto_Door},
     {METATILE_Cherrygrove_Door_Red,                         &gTileset_CherrygroveCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_NewBarkTown_Door_Red, sDoorAnimPalettes_CherryGrove_Door_Red},
     {METATILE_VioletCity_Dojo_Door,                         &gTileset_VioletCity, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_VioletCity_Dojo_Door, sDoorAnimPalettes_VioletCity_Dojo_Door},
-    {METATILE_Ecruteak_City_Door,                         &gTileset_PewterCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_EcruteakCity_Dojo_Door, sDoorAnimPalettes_EcruteakCity_Dojo_Door},    
+    {METATILE_Ecruteak_City_Door,                         &gTileset_Ecruteak_City, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_EcruteakCity_Dojo_Door, sDoorAnimPalettes_EcruteakCity_Dojo_Door},    
     {METATILE_Olivine_6_Door,                             &gTileset_OlivineCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_OlivineCity_Door, sDoorAnimPalettes_OlivineCity_Door},
     {METATILE_Fuchsia_Red_Door,                           &gTileset_Fuchsia, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Fuchsia_Red_Door, sDoorAnimPalettes_Fuchsia_Red_Door},
-    {METATILE_Cave5_Door,                                 &gTileset_Cave, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_VioletCity_Dojo_Door, sDoorAnimPalettes_VioletCity_Dojo_Door},
-    {METATILE_Blackthorn_Door,                              &gTileset_PewterCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_BlackthornCity_Door, sDoorAnimPalettes_BlackthornCity_Door},
+    {METATILE_Cave_DragonsDen_Cave5_Door,                 &gTileset_Cave_DragonsDen, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_VioletCity_Dojo_Door, sDoorAnimPalettes_VioletCity_Dojo_Door},
+    {METATILE_Blackthorn_Door,                              &gTileset_Blackthorn, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_BlackthornCity_Door, sDoorAnimPalettes_BlackthornCity_Door},
     {METATILE_JohtoShop_Door,                              &gTileset_Shop, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_DeptStoreElevator, sDoorAnimPalettes_DeptStore_Door},
     {METATILE_GreenHouses_Elevator,                              &gTileset_PewterCity, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_RocketElevator, sDoorAnimPalettes_Rocket_Door},
     // idk what the tilesets are for the above two metatiles...
@@ -434,6 +434,11 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_General_Frontier_East_PokecenterDoor,         &gTileset_General, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeCenter_Hoenn, sDoorAnimPalettes_PokeCenter_Hoenn},
     {METATILE_General_Frontier_East_MartDoor,               &gTileset_General, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeMart, sDoorAnimPalettes_PokeMart},
     {METATILE_Johto_South_Azalea_Town_Door,             &gTileset_Johto_South, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
+    {METATILE_Johto_NorthEast_Door_Sliding,                   &gTileset_Johto_NorthEast, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
+    {METATILE_Johto_NorthEast_Door_Gym,                       &gTileset_Johto_NorthEast, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
+    {METATILE_MahoganyTown_Door,                       &gTileset_Johto_NorthEast, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Azalea, sDoorAnimPalettes_Azalea},
+    {METATILE_Johto_NorthWest_PokeCenter,           &gTileset_Johto_NorthWest, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
+    {METATILE_Johto_NorthWest_Gym,                  &gTileset_Johto_NorthWest, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
     {},
 };
 

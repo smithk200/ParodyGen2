@@ -27,7 +27,7 @@ voicegroup297:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @nylon guitar
     voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @steel guitar TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @jazz guitar TODO
-	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @clean electric guitar TODO
+	voice_keysplit voicegroup209, KeySplitTable20    										@ clean guitar
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @muted electric guitar TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @overdrive
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 255, 255, 0, 99 @distortion

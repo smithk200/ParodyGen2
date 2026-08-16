@@ -1261,16 +1261,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_LEDIAN] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 45, //+10
+        .baseHP        = 75,
+        .baseHP_old        = 55,
+        .baseAttack    = 90,
         .baseAttack_old    = 35,
-        .baseDefense   = 60, //+10
+        .baseDefense   = 70, 
         .baseDefense_old   = 50,
-        .baseSpeed     = 95, //+10
+        .baseSpeed     = 105, 
         .baseSpeed_old     = 85,
-        .baseSpAttack  = 55, //+10
+        .baseSpAttack  = 55, 
         .baseSpAttack_old  = 45,
-        .baseSpDefense = 110,
+        .baseSpDefense = 130,
+        .baseSpDefense_old = 110,
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 134,

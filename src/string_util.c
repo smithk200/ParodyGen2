@@ -522,10 +522,12 @@ static const u8 *ExpandPlaceholder_Groudon(void)
 
 static const u8 *ExpandPlaceholder_Region(void)
 {
-    if (IS_FRLG)
+    if (gMapHeader.region == REGION_KANTO)
         return gText_Kanto;
-    else
+    if (gMapHeader.region == REGION_HOENN)
         return gText_Hoenn;
+    else
+        return gText_Johto;
 }
 
 const u8 *GetExpandedPlaceholder(u32 id)

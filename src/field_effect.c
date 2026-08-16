@@ -3339,11 +3339,6 @@ u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
-    if (gSaveBlock2Ptr->optionsSurfMusic == 0)
-    {
-        Overworld_ClearSavedMusic();
-        Overworld_ChangeMusicTo(MUS_HG_SURF);
-    }
     return FALSE;
 }
 

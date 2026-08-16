@@ -16125,6 +16125,26 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_CapCandy,
         .iconPalette = gItemIconPalette_CapCandy,
     },
+    [ITEM_STEAMED_HAMS] =
+    {
+        .name = ITEM_NAME("Steamed Hams"),
+        .pluralName = ITEM_PLURAL_NAME("Steamed Hams"),
+        .price = 5000,
+        .holdEffect = HOLD_EFFECT_RESTORE_PCT_HP,
+        .holdEffectParam = 50,
+        .description = COMPOUND_STRING(
+            "Heals a Pokémon to\n"
+            "full health. Usable\n"
+            "once only."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_SteamedHams,
+        .flingPower = 10,
+        .iconPic = gItemIcon_SteamedHams,
+        .iconPalette = gItemIconPalette_SteamedHams,
+    },
 };
 
 #undef ITEM_NAME

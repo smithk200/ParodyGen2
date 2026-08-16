@@ -364,6 +364,8 @@ extern const u32 gBattleEnvironmentTilemap_Blue_Building_2[];
 extern const u32 gBattleEnvironmentAnimTiles_Blue_Building_2[];
 extern const u32 gBattleEnvironmentAnimTilemap_Blue_Building_2[];
 extern const u16 gBattleEnvironmentPalette_Blue_Building_2[];
+
+//Hoenn / misc
 extern const u16 gBattleEnvironmentPalette_Plain[];
 extern const u16 gBattleEnvironmentPalette_Plain_Night[];
 extern const u16 gBattleEnvironmentPalette_Plain_2[];
@@ -399,6 +401,10 @@ extern const u32 gBattleEnvironmentTiles_Plain_2[];
 extern const u32 gBattleEnvironmentTilemap_Plain_2[];
 extern const u16 gBattleEnvironmentPalette_Frontier_2[];
 extern const u16 gBattleEnvironmentPalette_StadiumLeader[];
+
+extern const u16 gBattleEnvironmentPalette_PeterGriffinsHouse[];
+extern const u32 gBattleEnvironmentTiles_PeterGriffinsHouse[];
+extern const u32 gBattleEnvironmentTilemap_PeterGriffinsHouse[];
 
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];
@@ -3597,5 +3603,8 @@ extern const u16 gItemIcon_Palette_MagicMuffler[];
 
 extern const u32 gItemIcon_CapCandy[];
 extern const u16 gItemIconPalette_CapCandy[];
+
+extern const u32 gItemIcon_SteamedHams[];
+extern const u16 gItemIconPalette_SteamedHams[];
 
 #endif //GUARD_GRAPHICS_H

@@ -3669,10 +3669,18 @@ Gender: Male
 Music: Rocket
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
 
-Koffing
-Level: 20
+Weezing Galar
+Level: 30
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Arbok
+Level: 31
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Raticate
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIYO ===
@@ -6290,8 +6298,8 @@ Impish Nature
 
 === TRAINER_LOUIS ===
 Name: Louis
-Class: Pokefan
-Pic: Gentleman
+Class: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
 Music: Hg Girl 2
 Double Battle: No
@@ -13096,7 +13104,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RED_2 ===
 Name: Red
-Class: Pkmn Trainer 1
+Class: Pkmn Trainer 2
 Pic: Red
 Gender: Male
 Music: Hg Champion
@@ -13820,7 +13828,7 @@ Tera Type: Steel
 
 === TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -13891,7 +13899,7 @@ Tera Type: Steel
 
 === TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -13962,7 +13970,7 @@ Tera Type: Steel
 
 === TRAINER_FRY_TOTODILE_POKEMON_LEAGUE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -14035,7 +14043,7 @@ Tera Type: Steel
 
 === TRAINER_FRY_CHIKORITA_EVER_GRANDE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -14111,7 +14119,7 @@ Fry in Hoenn. He's the Champion here.
 
 === TRAINER_FRY_CYNDAQUIL_EVER_GRANDE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -14182,7 +14190,7 @@ Tera Type: Steel
 
 === TRAINER_FRY_TOTODILE_EVER_GRANDE ===
 Name: Fry
-Class: Philip 2
+Class: Philip J
 Pic: Fry
 Gender: Male
 Music: Hg Boy 1
@@ -15907,55 +15915,77 @@ Wingull
 Level: 25
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_JUAN_1 ===
-Name: Juan
+=== TRAINER_DAMIAN_3 ===
+Name: Damian
 Class: Leader
-Pic: Leader Juan
+Pic: Leader Damian
 Gender: Male
 Music: Male
-Items: Hyper Potion / Hyper Potion
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Is Dynamic: Yes
 
-Luvdisc
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Attract
-- Sweet Kiss
-- Flail
-
-Whiscash
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rain Dance
-- Water Pulse
-- Amnesia
-- Earthquake
-
-Sealeo
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Encore
-- Body Slam
-- Aurora Beam
-- Water Pulse
-
-Crawdaunt
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Crabhammer
-- Taunt
-- Leer
-
-Kingdra @ Chesto Berry
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Water Pulse
-- Double Team
+Ninetales Alola @ Light Clay
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 SpA / 128 SpD / 252 Spe
+Ability: Snow Warning
+- Psyshock
 - Ice Beam
-- Rest
+- Aurora Veil
+- Dazzling Gleam
+
+Lucario @ Wise Glasses
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Calm Mind
+- Dragon Pulse
+
+Vaporeon @ Grip Claw
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Water Absorb
+- Play Rough
+- Liquidation
+- Lick
+- Whirlpool
+
+Snorlax @ Bright Powder
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 252 Spe
+- Lick
+- Belly Drum
+- Hammer Arm
+- Body Slam
+
+Hydrapple @ Yache Berry
+Level: 65
+Modifier: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA / 252 Spe
+Ability: Sticky Hold
+- Energy Ball
+- Dragon Pulse
+- Body Press
+- Reflect
+
+Scovillain @ Charcoal
+Level: 68
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 128 Atk / 128 SpA / 252 Spe
+Ability: Moody
+Dynamax Level: 10
+- Seed Bomb
+- Flamethrower
+- Will O Wisp
+- Thunder Fang
 
 === TRAINER_JUAN_2 ===
 Name: Juan
@@ -16057,121 +16087,131 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JUAN_4 ===
-Name: Juan
-Class: Leader
-Pic: Leader Juan
+=== TRAINER_PETER_GRIFFIN_1 ===
+Name: Griffin
+Class: Peter
+Pic:  Peter Griffin
 Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
+Music: HG Boy 1
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
 
-Lapras
+Brian (Lucario) (M) @ Wise Glasses
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Nasty Plot
+- Shadow Ball
+
+Lois (Whiscash) (F) @ Rindo Berry
+Level: 30
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Aqua Tail
+- Bulldoze
+- Zen Headbutt
+- Icy Wind
+
+Chris (Cetitan) (M) @ Never Melt Ice
+Level: 31
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Avalanche
+- Flail
+- Take Down
+- Ice Shard
+
+Stewie (Bellibolt) (M) @ Magnet
+Level: 32
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Discharge
+- Water Gun
+- Slack Off
+- Thunder Wave
+
+Meg (Bewear) (F) @ Lum Berry
+Level: 33
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Baby Doll Eyes
+- Strength
+- Brutal Swing
+- Rock Tomb
+
+Peter 2 (Snorlax) (M) @ Muscle Band
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Body Slam
+- Crunch
+- Yawn
+- Dig
+
+=== TRAINER_PETER_GRIFFIN_2 ===
+Name: Griffin
+Class: Peter
+Pic:  Peter Griffin
+Gender: Male
+Music: HG Boy 1
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
+
+Brian (Lucario) (M) @ Wise Glasses
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Nasty Plot
+- Shadow Ball
+
+Lois (Meloetta) (F) @ Passho Berry
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Thunderbolt
+- Shadow Ball
+- Toxic
+
+Quagmire (Quagsire) (M) @ Rindo Berry
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Aqua Tail
+- Bulldoze
+- Zen Headbutt
+- Icy Wind
+
+Stewie (Incineroar) (M) @ Passho Berry
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Darkest Lariat
+- Thrash
+- Flamethrower
+- Bulk Up
+
+Meg (Bewear) (F) @ Lum Berry
+Level: 55
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Baby Doll Eyes
+- Strength
+- Brutal Swing
+- Rock Tomb
+
+Chris (Cetitan) (M) @ Never Melt Ice
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Poliwhirl
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Walrein
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
-
-=== TRAINER_JUAN_5 ===
-Name: Juan
-Class: Leader
-Pic: Leader Juan
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Lapras
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hydro Pump
-- Perish Song
-- Ice Beam
-- Confuse Ray
-
-Whiscash
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Politoed
-Level: 61
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Hydro Pump
-- Perish Song
-
-Walrein
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Sheer Cold
-
-Crawdaunt @ Chesto Berry
-Level: 63
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 66
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
+- Avalanche
+- Flail
+- Take Down
+- Ice Shard
 
 === TRAINER_JULIO ===
 Name: Julio
@@ -18333,7 +18373,7 @@ Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 
-=== TRAINER_ROXANNE_1 ===
+=== TRAINER_RUBEN ===
 Name: Roxanne
 Class: Hoenn Leader
 Pic: Leader Roxanne
@@ -18402,23 +18442,82 @@ Calm Nature
 - Thunder Wave
 - Rest
 
-=== TRAINER_RUBEN ===
-Name: Reuben
-Class: Cooltrainer
-Pic: Cooltrainer M
+=== TRAINER_NATE_1 ===
+Name: Nate
+Class: Hoenn Leader
+Pic: Nate
 Gender: Male
 Music: Cool
-Items: Hyper Potion
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Mugshot: Blue
 
-Shiftry
+Seymour (Persian Alola) (M) @ Wide Lens
 Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Modifier: -2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk  / 252 Spe
+Adamant Nature
+- Play Rough
+- Night Slash
+- Screech
+- Hypnosis
 
-Nosepass
+Chalmers (Darmanitan) (M) @ Steamed Hams
 Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk  / 252 Spe
+Modifier: -1
+Adamant Nature
+- Thrash
+- Fire Punch
+- Superpower
+- Belly Drum
+
+Kitchen (Stakataka) @ Life Orb
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Brave Nature
+- Trick Room
+- Wide Guard
+- Iron Head
+- Rock Slide
+
+Agnes (Hatterene) (F) @ Iron Ball
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+Quiet Nature
+- Trick Room
+- Psychic
+- Dazzling Gleam
+- Mystical Fire
+
+Roast (Oinkologne) @ Muscle Band
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Modifier: 1
+Ability: Thick Fat
+Adamant Nature
+- Double Edge
+- Yawn
+- Seed Bomb
+- Stomping Tantrum
+
+KrustyBurger (Mr Rime) @ Steamed Hams
+Level: 34
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Modifier: 2
+Modest Nature
+Tera Type: Psychic
+- Psychic
+- Mirror Coat
+- Dazzling Gleam
+- Freeze Dry
 
 === TRAINER_SALLY ===
 Name: Sally
@@ -19875,97 +19974,157 @@ Manectric
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WATTSON_1 ===
-Name: Wattson
-Class: Leader
-Pic: Leader Wattson
-Gender: Male
-Music: Male
-Items: Super Potion / Super Potion
+=== TRAINER_ELLA_1 ===
+Name: Ella
+Class: Hoenn Leader
+Pic: Ella
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer
+Mugshot: Pink
 
-Voltorb
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rollout
-- Spark
-- Self Destruct
-- Shock Wave
+Luxray @ Leftovers
+Level: 44
+Modifier: -1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Ability: Intimidate
+- Wild Charge
+- Crunch
+- Ice Fang
+- Scary Face
 
-Electrike
-Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Shock Wave
-- Leer
-- Quick Attack
-- Howl
-
-Magneton
-Level: 22
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Supersonic
-- Shock Wave
-- Thunder Wave
-- Sonic Boom
-
-Manectric @ Sitrus Berry
-Level: 24
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Quick Attack
-- Thunder Wave
-- Shock Wave
-- Howl
-
-=== TRAINER_WATTSON_4 ===
-Name: Wattson
-Class: Leader
-Pic: Leader Wattson
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Raichu
+Sandy Shocks @ Wise Glasses
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Slam
-- Rain Dance
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Earth Power
+- Mirror Coat
+- Discharge
 - Protect
 
-Ampharos
-Level: 46
+Raichu @ Quick Claw
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder
-- Protect
+EVs: 128 Atk / 128 SpA / 252 Spe
+- Quick Attack
 - Thunder Wave
-- Light Screen
+- Thunderbolt
+- Brick Break
 
-Electrode
-Level: 46
+Brute Bonnet @ Miracle Seed
+Level: 44
+Modifier: 1
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rollout
-- Thunder
-- Explosion
-- Rain Dance
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Seed Bomb
+- Crunch
+- Stomping Tantrum
+- Outrage
 
-Magneton @ Sitrus Berry
-Level: 48
+Eelektross @ Muscle Band
+Level: 44
+Modifier: 1
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Protect
-- Thunder
-- Rain Dance
-
-Manectric @ Sitrus Berry
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Bite
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Crunch
 - Thunder Wave
-- Thunder
+- Spark
+- Thrash
+
+Manectric @ Manectite
+Level: 44
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Flamethrower
+- Thunder Wave
+- Thunderbolt
+- Charge
+
+=== TRAINER_ELLA_2 ===
+Name: Ella
+Class: Hoenn Leader
+Pic: Ella
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Pink
+
+Luxray @ Leftovers
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+Ability: Intimidate
+- Wild Charge
+- Crunch
+- Ice Fang
+- Scary Face
+
+Iron Hands @ Sitrus Berry
+Level: 44
+Modifier: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Close Combat
+- Wild Charge
+- Discharge
 - Protect
+
+Raichu @ Quick Claw
+Level: 44
+Modifier: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Alluring Voice
+- Thunder Wave
+- Thunderbolt
+- Grass Knot
+
+Brute Bonnet @ Miracle Seed
+Level: 44
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Seed Bomb
+- Crunch
+- Stomping Tantrum
+- Outrage
+
+Eelektross @ Muscle Band
+Level: 44
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Crunch
+- Thunder Wave
+- Wild Charge
+- Thrash
+
+Manectric @ Manectite
+Level: 44
+Modifier: 3
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Flamethrower
+- Thunder Wave
+- Thunderbolt
+- Charge
 
 === TRAINER_WATTSON_5 ===
 Name: Wattson
@@ -20263,42 +20422,42 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 
 === TRAINER_SILVER_TOTODILE_HOENN_LEAGUE ===
-Name: Winston
-Class: Rich Boy
-Pic: Rich Boy
+Name: Silver
+Class: Pkmn Trainer 1
+Pic: Silver
 Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Linoone @ Nugget
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SILVER_CYNDAQUIL_HOENN_LEAGUE ===
-Name: Winston
-Class: Rich Boy
-Pic: Rich Boy
+Name: Silver
+Class: Pkmn Trainer 1
+Pic: Silver
 Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Linoone @ Nugget
 Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SILVER_CHIKORITA_HOENN_LEAGUE ===
-Name: Winston
-Class: Rich Boy
-Pic: Rich Boy
+Name: Silver
+Class: Pkmn Trainer 1
+Pic: Silver
 Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Linoone @ Nugget
 Level: 36

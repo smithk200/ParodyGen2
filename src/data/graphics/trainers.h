@@ -618,6 +618,13 @@ const u16 gTrainerPalette_Chase[] = INCGFX_U16("graphics/trainers/front_pics/cha
 const u32 gTrainerFrontPic_PeterGriffin[] = INCGFX_U32("graphics/trainers/front_pics/peter_griffin.png", ".4bpp.smol");
 const u16 gTrainerPalette_PeterGriffin[] = INCGFX_U16("graphics/trainers/front_pics/peter_griffin.pal",  ".gbapal");
 
+const u32 gTrainerFrontPic_Nate[] = INCGFX_U32("graphics/trainers/front_pics/nate.png", ".4bpp.smol");
+const u16 gTrainerPalette_Nate[] = INCGFX_U16("graphics/trainers/front_pics/nate.pal",  ".gbapal");
+const u32 gTrainerFrontPic_Ella[] = INCGFX_U32("graphics/trainers/front_pics/leader_ella.png", ".4bpp.smol");
+const u16 gTrainerPalette_Ella[] = INCGFX_U16("graphics/trainers/front_pics/leader_ella.pal",  ".gbapal");
+const u32 gTrainerFrontPic_Marnie[] = INCGFX_U32("graphics/trainers/front_pics/marnie.png", ".4bpp.smol");
+const u16 gTrainerPalette_Marnie[] = INCGFX_U16("graphics/trainers/front_pics/marnie.pal",  ".gbapal");
+
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
 {
@@ -1592,17 +1599,29 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_LEADER_BENDER] =
         {
             .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Bender, gTrainerPalette_Bender),
-	},
+	    },
     [TRAINER_PIC_SHREK] =
         {
             .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Shrek, gTrainerPalette_Shrek),
-	},
+	    },
     [TRAINER_PIC_CHASE] =
         {
             .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Chase, gTrainerPalette_Chase),
-	},
+	    },
     [TRAINER_PIC_PETER_GRIFFIN] =
         {
             .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PeterGriffin, gTrainerPalette_PeterGriffin),
-	},
+	    },
+    [TRAINER_PIC_NATE] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Nate, gTrainerPalette_Nate),
+	    },
+    [TRAINER_PIC_ELLA] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Ella, gTrainerPalette_Ella),
+        },
+    [TRAINER_PIC_MARNIE] =
+        {
+            .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Marnie, gTrainerPalette_Marnie),
+        },
 };

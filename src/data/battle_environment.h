@@ -599,6 +599,19 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .palette = gBattleEnvironmentPalette_StadiumLance_2,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
+
+    [BATTLE_ENVIRONMENT_PETER_GRIFFIN] =
+    {
+        .name = _("Peter Griffin"),
+        .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = BUILDING_SECRET_POWER_EFFECT,
+        .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
+        .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(Blue_Building_2),
+        .background = ENVIRONMENT_BACKGROUND(PeterGriffinsHouse),
+        .palette = gBattleEnvironmentPalette_PeterGriffinsHouse,
+        .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
+    },
     
 };
 
@@ -1132,6 +1145,19 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .entry = ENVIRONMENT_ENTRY(Building),
         .background = ENVIRONMENT_BACKGROUND(Stadium_2),
         .palette = gBattleEnvironmentPalette_StadiumLance_2,
+        .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
+    },
+
+    [BATTLE_ENVIRONMENT_PETER_GRIFFIN] =
+    {
+        .name = _("Peter Griffin"),
+        .secretPowerAnimation = BUILDING_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = BUILDING_SECRET_POWER_EFFECT,
+        .camouflageType = BUILDING_CAMOUFLAGE_TYPE,
+        .camouflageBlend = BUILDING_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(Blue_Building_2),
+        .background = ENVIRONMENT_BACKGROUND(PeterGriffinsHouse),
+        .palette = gBattleEnvironmentPalette_PeterGriffinsHouse,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
     

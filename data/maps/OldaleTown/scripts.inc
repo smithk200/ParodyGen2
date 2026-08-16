@@ -27,7 +27,7 @@ OldaleTown_EventScript_Girl::
 OldaleTown_EventScript_MartEmployee::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_ExplainPotion
+	goto_if_set FLAG_GARBAGEFLAG, OldaleTown_EventScript_ExplainPotion
 	goto_if_set FLAG_TEMP_1, OldaleTown_EventScript_ExplainPotion
 	setflag FLAG_TEMP_1
 	playbgm MUS_FOLLOW_ME, FALSE
@@ -53,7 +53,7 @@ OldaleTown_EventScript_ExplainPokemonMart::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
 	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_POTION_OLDALE
+	setflag FLAG_GARBAGEFLAG
 	fadedefaultbgm
 	release
 	end

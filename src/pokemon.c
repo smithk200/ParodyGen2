@@ -463,7 +463,8 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #include "data/pokemon/experience_tables.h"
 
 #if P_LVL_UP_LEARNSETS >= GEN_9
-#include "data/pokemon/level_up_learnsets/gen_9.h" // Scarlet/Violet
+#include "data/pokemon/level_up_learnsets/movesets_new.h" //HnS Gen 7
+//#include "data/pokemon/level_up_learnsets/gen_9.h" // Scarlet/Violet
 #elif P_LVL_UP_LEARNSETS >= GEN_8
 #include "data/pokemon/level_up_learnsets/gen_8.h" // Sword/Shield
 #elif P_LVL_UP_LEARNSETS >= GEN_7
@@ -5533,7 +5534,7 @@ u16 GetBattleBGM(void)
             //if ((gBattleTypeFlags & BATTLE_TYPE_FRONTIER) || (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName)))
             {
                 if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
-                    return MUS_VS_RIVAL;
+                    return MUS_HG_VS_RIVAL;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
                     return MUS_VS_RIVAL;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
@@ -5553,8 +5554,6 @@ u16 GetBattleBGM(void)
                 }
             }
             return MUS_VS_RIVAL;
-        case TRAINER_CLASS_PKMN_TRAINER_1:
-            return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_ELITE_FOUR:
             if (gMapHeader.region == REGION_HOENN)
                 return MUS_VS_ELITE_FOUR;
@@ -5618,7 +5617,7 @@ u16 GetBattleBGM(void)
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
                 return MUS_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
-                return MUS_PL_VS_FRONTIER_BRAIN;
+                return MUS_TOADS_TURNPIKE;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3)
                 return MUS_HG_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4)
@@ -5626,7 +5625,7 @@ u16 GetBattleBGM(void)
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
             {
                 if((Random() % 3) == 1)
-                    return MUS_PL_VS_FRONTIER_BRAIN;
+                    return MUS_TOADS_TURNPIKE;
                 if((Random() % 3) == 2)
                     return MUS_HG_VS_FRONTIER_BRAIN;
                 else
@@ -5641,13 +5640,17 @@ u16 GetBattleBGM(void)
             return MUS_HG_VS_ROCKET;
 
         case TRAINER_CLASS_PHILIP:
-        case TRAINER_CLASS_PHILIP_2:
+        case TRAINER_CLASS_PHILIP_J:
             if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_POKEMON_LEAGUE) \
                 || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE) || \
             (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_EVER_GRANDE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_EVER_GRANDE) \
             || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_EVER_GRANDE))
                     return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
+        case TRAINER_CLASS_PETER:
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_PETER_GRIFFIN_2)
+                    return MUS_POGO_STICKS;
+            return MUS_DP_VS_RIVAL;
 
         default:
             if (gMapHeader.regionMapSectionId == MAPSEC_BATTLE_FRONTIER) //BGM by map

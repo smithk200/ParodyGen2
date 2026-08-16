@@ -192,3 +192,7 @@ const u32 gBattleEnvironmentAnimTilemap_Rayquaza[] = INCGFX_U32("graphics/battle
 
 const u32 gBattleEnvironmentAnimTiles_Rayquaza_2[] = INCGFX_U32("graphics/battle_environment/sky_2/anim_tiles.png", ".4bpp.smol");
 const u32 gBattleEnvironmentAnimTilemap_Rayquaza_2[] = INCGFX_U32("graphics/battle_environment/sky_2/anim_map.bin", ".smolTM");
+
+const u32 gBattleEnvironmentTiles_PeterGriffinsHouse[] = INCGFX_U32("graphics/battle_environment/peter_griffins_house/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_PeterGriffinsHouse[] = INCGFX_U16("graphics/battle_environment/peter_griffins_house/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_PeterGriffinsHouse[] = INCGFX_U32("graphics/battle_environment/peter_griffins_house/map.bin", ".smolTM");

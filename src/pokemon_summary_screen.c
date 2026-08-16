@@ -768,6 +768,7 @@ static const TaskFunc sTextPrinterTasks[] =
 };
 
 static const u8 sText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
+static const u8 sText_StartButton[] = _("{START_BUTTON}");
 
 static const u8 *const sRelearnTexts[MOVE_RELEARNER_COUNT] =
 {
@@ -1774,7 +1775,7 @@ static void Task_HandleInput(u8 taskId)
         {
             ChangePage(taskId, 1);
         }
-        else if (JOY_NEW(A_BUTTON))
+        else if (JOY_NEW(START_BUTTON))
         {
             if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
             {
@@ -4776,8 +4777,7 @@ static inline bool32 ShouldShowRename(void)
          && !sMonSummaryScreen->summary.isEgg
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_CURSOR
          && !InBattleFactory()
-         && !InSlateportBattleTent()
-         && GetPlayerIDAsU32() == sMonSummaryScreen->summary.OTID);
+         && !InSlateportBattleTent());
 }
 
 static inline bool32 ShouldShowIvEvPrompt(void)
@@ -4800,7 +4800,7 @@ static inline void ShowUtilityPrompt(s16 mode)
     const u8* gText_SkillPageIvs = COMPOUND_STRING("IVs");
     const u8* gText_SkillPageEvs = COMPOUND_STRING("EVs");
     const u8* gText_SkillPageStats = COMPOUND_STRING("STATS");
-    const u8* gText_Rename = COMPOUND_STRING("RENAME");
+    const u8* gText_Rename = COMPOUND_STRING("Rename");
 
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
     {
@@ -4857,7 +4857,14 @@ static inline void ShowUtilityPrompt(s16 mode)
     if (iconXPos < 0)
         iconXPos = 0;
 
-    PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_UTILITY, FALSE, iconXPos);
+    if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
+        {
+            PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_UTILITY, sText_StartButton, (iconXPos - 10), 1, 0, 0);
+        }
+    else
+        {
+            PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_UTILITY, FALSE, iconXPos);
+        }
     PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_UTILITY, promptText, stringXPos, 1, 0, 0);
 }
 

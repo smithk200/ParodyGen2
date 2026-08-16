@@ -57,7 +57,7 @@ GoldenrodDeptStore1_Text_BugCatcher:
 
 GoldenrodDeptStore1_Text_Directory:
     .string "<1f Service Counter>\p"
-    .string "2f Trainer'S Market\p"
+    .string "2f Trainer'sMarket\p"
     .string "3f Battle Collection\p"
     .string "4f Medicine Box\p"
     .string "5f TM Corner\p"

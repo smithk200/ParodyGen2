@@ -177,7 +177,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyMon::
 	call Common_EventScript_NameReceivedPartyMon
 	end
 	
-GoldenrodCity_GameCorner_PrizeRoom_EventScript_PcMon::
+GoldenrodCity_GameCorner_PrizeRoom_EventScript_PCMon::
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, GoldenrodCity_GameCorner_EventScript_SendMon
 	call Common_EventScript_NameReceivedBoxMon

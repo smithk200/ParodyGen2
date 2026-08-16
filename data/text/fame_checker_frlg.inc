@@ -34,7 +34,7 @@ gFameCheckerFlavorText_ProfOak5:: @ 0x81AD377
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK is going to have his own\n"
 	.string "radio show soon.\p"
 	.string "The program will be called PROF.\n"
-	.string "OAK'S Pokémon SEMINAR.$"
+	.string "OAK'sPokémon SEMINAR.$"
 
 gFameCheckerFlavorText_Daisy0:: @ 0x81AD40C
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"

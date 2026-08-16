@@ -93,6 +93,7 @@ void HandleIntroSlide(u8 environment)
 {
     u8 taskId;
 
+
     if ((gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER) && gPartnerTrainerId < TRAINER_PARTNER(PARTNER_NONE))
     {
         taskId = CreateTask(BattleIntroSlidePartner, 0);
@@ -103,9 +104,14 @@ void HandleIntroSlide(u8 environment)
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
     {
-        if (gSaveBlock2Ptr->optionsFastIntro == 1)
+        if ((gSaveBlock2Ptr->optionsFastIntro == 1))
         {
-            taskId = CreateTask(BattleIntroSlide3, 0);
+            if (BattleEnvironmentEntryGfxSkipped(environment))
+                // BattleEnvironmentEntryGfxSkipped contains the entries that will not use the opening slide animation.
+                // Right now that only applies to the custom Peter Griffin background.
+                taskId = CreateTask(BattleIntroNoSlide, 0);
+            else
+                taskId = CreateTask(BattleIntroSlide3, 0);
         }
         else
         {
@@ -202,7 +208,8 @@ static void BattleIntroNoSlide(u8 taskId)
 void BattleIntroSlide1(u8 taskId)
 {
     int i;
-    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0))
+    u8 environment = BattleSetup_GetEnvironmentId();
+    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0) || BattleEnvironmentEntryGfxSkipped(environment))
         return BattleIntroNoSlide(taskId);
 
     gBattle_BG1_X += 6;
@@ -289,7 +296,8 @@ void BattleIntroSlide1(u8 taskId)
 void BattleIntroSlide2(u8 taskId)
 {
     int i;
-    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0))
+    u8 environment = BattleSetup_GetEnvironmentId();
+    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0) || BattleEnvironmentEntryGfxSkipped(environment) )
         return BattleIntroNoSlide(taskId);
 
     switch (gTasks[taskId].tEnvironment)
@@ -404,7 +412,8 @@ void BattleIntroSlide2(u8 taskId)
 void BattleIntroSlide3(u8 taskId)
 {
     int i;
-    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0))
+    u8 environment = BattleSetup_GetEnvironmentId();
+    if (B_FAST_INTRO_NO_SLIDE || gTestRunnerHeadless || (gSaveBlock2Ptr->optionsFastIntro == 0) || BattleEnvironmentEntryGfxSkipped(environment))
         return BattleIntroNoSlide(taskId);
 
     gBattle_BG1_X += 8;

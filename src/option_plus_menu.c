@@ -613,7 +613,7 @@ static const u8 sText_Desc_BikeMusicOff[]                    = _("Disables Bike 
 static const u8 sText_Desc_SurfMusicOn[]                     = _("Enables Surf music.");
 static const u8 sText_Desc_SurfMusicOff[]                    = _("Disables Surf music.");
 static const u8 sText_Desc_WildMonMusic_Custom[]              = _("Music that Dark Gold is supposed to\nhave.");
-static const u8 sText_Desc_WildMonMusic_Hoenn[]              = _("Music from Ruby, Sapphire, and Emerald.\nSurely you've never heard it before!");
+static const u8 sText_Desc_WildMonMusic_Hoenn[]              = _("Music from R/S/E.\nSurely you've never heard it before!");
 static const u8 sText_Desc_WildMonMusic_Kanto_Old[]          = _("Music from Fire Red and Leaf Green.");
 static const u8 sText_Desc_WildMonMusic_Sinnoh[]             = _("Music from Diamond, Pearl and\nPlatinum.");
 static const u8 sText_Desc_WildMonMusic_Johto[]              = _("Music from Heart Gold and Soul Silver,\nbut from Johto.");
@@ -1588,10 +1588,10 @@ static void DrawChoices_Difficulty(int selection, int y)
     DrawOptionMenuChoice(gText_Hard, GetStringRightAlignXOffset(1, gText_ButtonTypeLEqualsA, 198), y, styles[2], active);
 }
 static const u8 sText_Sound_WildMon_Hoenn[]       = _("Default");
-static const u8 sText_Sound_WildMon_Kanto_Old[]   = _("Kanto 1");
+static const u8 sText_Sound_WildMon_Kanto_Old[]   = _("Kanto");
 static const u8 sText_Sound_WildMon_Sinnoh[]      = _("Sinnoh");
 static const u8 sText_Sound_WildMon_Johto[]       = _("Johto");
-static const u8 sText_Sound_WildMon_Kanto_New[]   = _("Kanto 2");
+static const u8 sText_Sound_WildMon_Kanto_New[]   = _("Hoenn");
 static const u8 sText_Sound_WildMon_Random[]      = _("Random");
 
 static const u8 *const sText_Sound_WildMonBattleMusic_Strings[] = {sText_Sound_WildMon_Hoenn,  sText_Sound_WildMon_Kanto_Old,  sText_Sound_WildMon_Sinnoh,  sText_Sound_WildMon_Johto,  sText_Sound_WildMon_Kanto_New,   sText_Sound_WildMon_Random};

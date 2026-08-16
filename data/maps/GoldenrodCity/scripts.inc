@@ -312,12 +312,12 @@ GoldenrodCity_Text_Woman:
 
 GoldenrodCity_Text_HikerDay:
 	.string "When I went into the Game Corner\n"
-	.string "it was night time... How long was I\l"
+	.string "it was night time… How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_Text_HikerNight:
 	.string "When I went into the Game Corner\n"
-	.string "it was day time... How long was I\l"
+	.string "it was day time… How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_Text_Snubbull:
@@ -344,18 +344,22 @@ GoldenrodCity_Text_Youngster1:
 GoldenrodCity_Text_CooltrainerF1:
 	.string "Is that man in black dressed up\n"
 	.string "like a Team Rocket member?\p"
-	.string "How silly!$"
+	.string "How fucked up!$"
 
 GoldenrodCity_Text_CooltrainerF1_Cleared:
 	.string "Was that man in black really part\n"
-	.string "of Team Rocket? I can't believe it!$"
+	.string "of Team Rocket? I can't fuckin'\l"
+	.string "believe it!$"
 
 GoldenrodCity_Text_CooltrainerF2:
 	.string "The Radio Tower in Goldenrod City\n"
 	.string "is quite the landmark.\p"
 	.string "They're running a campaign now.\p"
 	.string "They'll give you a shiny new\n"
-	.string "Radio if you can pass their quiz.$"
+	.string "Radio if you can pass their quiz.\p"
+	.string "Though I got chased out of there by\n"
+	.string "a guy wearing a green shirt, waving\l"
+	.string "a ruler.$"
 
 GoldenrodCity_Text_CooltrainerF2_GotCard:
 	.string "Oh, your PokéGear already works\n"
@@ -364,12 +368,13 @@ GoldenrodCity_Text_CooltrainerF2_GotCard:
 GoldenrodCity_Text_Youngster2:
 	.string "E-he-he-he…\p"
 	.string "I got in trouble for playing in\n"
-	.string "the Dept.Store basement.$"
+	.string "the Dept. Store basement.$"
 
 GoldenrodCity_Text_Lass:
 	.string "That man inside rates your\n"
-	.string "Pokémon nicknames.\p"
-	.string "He can even rename them.$"
+	.string "Pokémon.\p"
+	.string "He called my Pokémon “a real piece\n"
+	.string "of shit”!$"
 
 GoldenrodCity_Text_Gramps:
 	.string "Whew! This town is so big,\n"

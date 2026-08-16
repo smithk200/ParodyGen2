@@ -96,7 +96,7 @@ GoldenrodCity_RadioTower_4F4_Text_Proton_Seen:
 	.string "Be careful!\p"
 	.string "But since you seem to wish it, I'll\n"
 	.string "show you the full extent of a Team\l"
-	.string "Rocket Executive'S wrath!$"
+	.string "Rocket Executive'swrath!$"
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten:
 	.string "Phew...$"
@@ -126,7 +126,7 @@ GoldenrodCity_RadioTower_4F4_Text_DJMaryPinkBow:
 
 GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter:
 	.string "Mary: Please tune into me on Prof.\n"
-	.string "Oak'S Pokémon Talk show!$"
+	.string "Oak'sPokémon Talk show!$"
 
 GoldenrodCity_RadioTower_4F4_Text_Meowth:
 	.string "Meowth: Meowth…$"

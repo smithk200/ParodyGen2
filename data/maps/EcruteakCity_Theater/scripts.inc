@@ -19,7 +19,7 @@ EcruteakCity_Theater_OnTransition::
 
 EcruteakCity_Theater_MapScript_SetRocketSceneActive::
 	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
-	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
+	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_FACE_UP
 	return
 
 EcruteakCity_Theater_MapScript_SetKimonoMovement::
@@ -50,12 +50,10 @@ EcruteakCity_Theater_EventScript_RocketEventTrigger::
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_Rocket3, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_ECRUTEAK_ROCKET, EcruteakCity_Theater_Movement_RocketDance
-	delay 50
 	applymovement OBJ_EVENT_ID_CAMERA, EcruteakCity_Theater_Movement_CameraPanDown
 	waitmovement 0
 	special RemoveCameraObject
-	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
+	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_FACE_UP
 	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
 	setvar VAR_ECRUTEAK_CITY_THEATER, 1
 	releaseall
@@ -116,31 +114,30 @@ EcruteakCity_Theater_Movement_KimonoGirlMoveBack:
 	step_end
 
 EcruteakCity_Theater_Text_Rocket1:
-	.string "Rocket: Stop dancing such a serious\n"
-	.string "dance! Show me something like\l"
-	.string "a hula dance!$"
+	.string "Rocket: I wanna see the goods!\n"
+	.string "C'mon, show me!$"
 
 EcruteakCity_Theater_Text_KimonoRocket1:
-	.string "Kimono Girl: ...You mustn't push\n"
+	.string "Kimono Girl: …You mustn't push\n"
 	.string "such a request on me.$"
 
 EcruteakCity_Theater_Text_Rocket2:
 	.string "Rocket: Huh?\p"
 	.string "Are you telling me you don't\n"
-	.string "respect what the customer\l"
-	.string "wants?$"
+	.string "respect what the customer wants?$"
 
 EcruteakCity_Theater_Text_Rocket3:
-	.string "Well, then I'll show you how\n"
-	.string "to dance. I'll show you a\l"
-	.string "great one.\p"
-	.string "Wahahaha!$"
+	.string "Well, then I'll make you show me the\n"
+	.string "goods!\p"
+	.string "C'mon, woman, show me!$"
 
 EcruteakCity_Theater_EventScript_Rocket::
 	lock
 	faceplayer
-	msgbox EcruteakCity_Theater_Text_RocketSeen, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_33, EcruteakCity_Theater_Text_RocketBeaten
+	trainerbattle_single TRAINER_GRUNT_33, EcruteakCity_Theater_Text_RocketSeen, EcruteakCity_Theater_Text_RocketBeaten, EcruteakCity_Theater_EventScript_RocketPostBattle
+	end
+
+EcruteakCity_Theater_EventScript_RocketPostBattle::
 	msgbox EcruteakCity_Theater_Text_RocketAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ECRUTEAK_ROCKET, EcruteakCity_Theater_Movement_RocketLeave
@@ -193,8 +190,7 @@ EcruteakCity_Theater_Text_RocketSeen:
 
 EcruteakCity_Theater_Text_RocketBeaten:
 	.string "Oh, no!\n"
-	.string "You make me look like a\l"
-	.string "villain!$"
+	.string "You make me look like a villain!$"
 
 EcruteakCity_Theater_Text_RocketAfter:
 	.string "Oops! I have an important mission!\n"
@@ -205,15 +201,12 @@ EcruteakCity_Theater_Text_RocketAfter:
 
 EcruteakCity_Theater_Text_KimonoRocket3:
 	.string "You must be {PLAYER},\n"
-	.string "correct? That was indeed\l"
-	.string "excellent.\p"
-	.string "Kind and strong... Good at\n"
-	.string "raising Pokémon as well...\p"
+	.string "correct? That was indeed excellent.\p"
+	.string "Kind and strong… Good at\n"
+	.string "raising Pokémon as well…\p"
 	.string "That person does know what\n"
-	.string "to look for in people...\p"
-	.string "Ohoho! That was just me\n"
-	.string "talking to myself.\l"
-	.string "Never mind.$"
+	.string "to look for in people…\p"
+	.string "You truly are noble, don't you know?$"
 
 
 EcruteakCity_Theater_EventScript_KimonoGirl::
@@ -255,7 +248,7 @@ EcruteakCity_Theater_EventScript_ZukiDuringRocket::
 	end
 
 EcruteakCity_Theater_Text_Kimono:
-	.string "For Kimono GIRLs like me,\n"
+	.string "For Kimono Girls like me,\n"
 	.string "dancing is everything.\p"
 	.string "I have never gone a day\n"
 	.string "without a dance practice.\p"
@@ -429,7 +422,7 @@ EcruteakCity_Theater_Text_SurfGuyGaveSurf:
 	.string "swim across water with ease.$"
 
 EcruteakCity_Theater_Text_SurfGuyAfter:
-	.string "Not only are the Kimono GIRLs\n"
+	.string "Not only are the Kimono Girls\n"
 	.string "great dancers, they're also\l"
 	.string "skilled at Pokémon.\p"
 	.string "But they battle only for good\n"
@@ -449,41 +442,40 @@ EcruteakCity_Theater_Text_Boy:
 	.string "a Kimono Girl!$"
 
 EcruteakCity_Theater_Text_Granny:
-	.string "That man's always with his\n"
-	.string "Psyduck.\p"
-	.string "Says he wants a Pokémon that\n"
-	.string "can Surf and dance.\p"
-	.string "Is he trying to make a Pokémon\n"
-	.string "that stars in synchronized\l"
-	.string "swimming?$"
+	.string "I used to be a feminist back in the\n"
+	.string "day.\p"
+	.string "The way he was treating her…\n"
+	.string "How rotten!\p"
+	.string "When I see an injustice like this, it\n"
+	.string "gets my blood boiling.$"
 
 EcruteakCity_Theater_Text_GrannyBefore:
-	.string "Oh... Ouch...!\n"
+	.string "Oh… Ouch…!\n"
 	.string "This stomachache!\p"
 	.string "I wouldn't let this guy act like\n"
-	.string "that if not for this pain...!$"
+	.string "that if not for this pain…!\p"
+	.string "Why does he want her to do THAT,\n"
+	.string "anyway?$"
 
 EcruteakCity_Theater_Text_Gramps:
-	.string "The Kimono GIRLs are so\n"
-	.string "beautiful...\p"
+	.string "The Kimono Girls are beautiful…\p"
 	.string "But they have to go through\n"
 	.string "rigorous training.\p"
 	.string "And they have to learn to follow\n"
-	.string "customs before appearing in\l"
-	.string "public.\p"
+	.string "customs before appearing in public.\p"
 	.string "But if you love something,\n"
 	.string "anything is possible.$"
 
 EcruteakCity_Theater_Text_GrampsBefore:
-	.string "Oh... Ouch...!\n"
+	.string "Oh… Ouch…!\n"
 	.string "This back pain!\p"
 	.string "I wouldn't let this guy act like\n"
-	.string "that if not for this pain...!$"
+	.string "that if not for this pain…!\p"
+	.string "That man should go to jail!$"
 
 EcruteakCity_Theater_Text_Girl:
 	.string "The Kimono Girls are my big\n"
-	.string "sisters! I'll be like them one\l"
-	.string "day!$"
+	.string "sisters! I'll be like them one day!$"
 
 EcruteakCity_Theater_Text_GirlBefore:
 	.string "I like that funny dance!$"
@@ -992,7 +984,7 @@ EcruteakCity_Theater_Text_ZukiSeenAgain:
 	.string "Are you ready, {PLAYER}?$"
 
 EcruteakCity_Theater_Text_ZukiNo:
-	.string "That is fine...\n"
+	.string "That is fine…\n"
 	.string "I will wait for you to get\l"
 	.string "ready.$"
 
@@ -1043,14 +1035,14 @@ EcruteakCity_Theater_Text_KuniSeen:
 
 EcruteakCity_Theater_Text_ZukiDone:
 	.string "We were not wrong about you.\n"
-	.string "You are indeed worthy of this...\p"
+	.string "You are indeed worthy of this…\p"
 	.string "Please take it.$"
 
 EcruteakCity_Theater_Text_GirlHooh:
 	.string "Big sisters! I just saw the\n"
 	.string "big shadow of a Pokémon over\l"
 	.string "the Tin Tower!\p"
-	.string "It could be...$"
+	.string "It could be…$"
 
 EcruteakCity_Theater_Text_GirlLugia:
 	.string "Big sisters! I just saw the\n"

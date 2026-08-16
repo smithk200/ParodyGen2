@@ -317,14 +317,12 @@ DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle::
 	setflag FLAG_BATTLE_FRY_AND_CLAIR
 	special SavePlayerParty
 	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	@waitstate
 	goto_if_ne VAR_RESULT, 0, DragonsDen_Shrine_EventScript_DoFryMultiBattle
 	special LoadPlayerParty
 	goto DragonsDen_Shrine_EventScript_ReadyForBattlePrompt
 
 DragonsDen_Shrine_EventScript_DoFryMultiBattle::
-	multi_2_vs_1 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Shrine_Text_ClairLoss, PARTNER_FRY
+	multi_fixed_2_vs_1 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Shrine_Text_ClairLoss, PARTNER_FRY
 	switch VAR_RESULT
 	case 1, DragonsDen_Clair_UponDefeat
 	fadescreen FADE_TO_BLACK

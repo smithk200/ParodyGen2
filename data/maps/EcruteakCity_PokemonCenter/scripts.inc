@@ -107,11 +107,11 @@ EcruteakCity_PokemonCenter1F_Text_Bill1:
 EcruteakCity_PokemonCenter1F_Text_Bill2:
 	.string "I just finished adjustments on my\n"
 	.string "Pokémon Storage System.\p"
-	.string "You know that Pc you use to store\n"
+	.string "You know that PC you use to store\n"
 	.string "all your Pokémon?\p"
 	.string "I developed that myself!\p"
 	.string "Now that I've installed this one,\n"
-	.string "my Pc is running at all\l"
+	.string "my PC is running at all\l"
 	.string "Pokémon Centers in Johto and Kanto.\p"
 	.string "I have to hurry on back to\n"
 	.string "Goldenrod and see my folks. Feel\l"

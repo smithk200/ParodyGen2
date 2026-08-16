@@ -788,8 +788,8 @@ gSongTable::
 	song pokemon_x_gym_leader, 0, 0
 	song stat_decrease, 1, 1
 	song NonPhysical, 0, 0
-	song mus_pl_vs_frontier_brain, 0, 0
-	song mus_pl_victory_frontier_brain, 0, 0
+	song toads_turnpike, 0, 0
+	song pogo_sticks, 0, 0
 	song mus_pl_vs_regi, 0, 0
 	song mus_pl_contest_cool, 0, 0
 	song mus_pl_contest_smart, 0, 0

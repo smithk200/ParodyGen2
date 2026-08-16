@@ -350,7 +350,7 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
     u8 rand;
     u8 fixedLVL = 0;
 
-    if (gMapHeader.region == REGION_ALOLA)
+    if ((gMapHeader.region == REGION_ALOLA) || (gMapHeader.region == REGION_HOENN))
         if (gMapHeader.mapLayoutId != LAYOUT_ALOLA_CAVE_2F)
     {
         

@@ -74,23 +74,21 @@ AzaleaTown_House1_EventScript_Farfetchd::
 	end
 	
 
-
 CharcoalKiln_Text_Boss1:
 	.string "All the Slowpoke have disappeared\n"
 	.string "from the town.\p"
 	.string "The forest's protector may be\n"
 	.string "angry with us…\p"
-	.string "It may be a bad omen. We should\n"
-	.string "stay in.$"
+	.string "What the hell are we supposed to do?$"
 
 CharcoalKiln_Text_Boss2:
 	.string "The Slowpoke have returned…$"
 
 CharcoalKiln_Text_Boss3:
 	.string "The Slowpoke have returned…\p"
-	.string "But my Apprentice hasn't come back\n"
+	.string "But my apprentice hasn't come back\n"
 	.string "from Ilex Forest.\p"
-	.string "Where in the world is that lazy guy?$"
+	.string "Where in the world is that lazy bum?$"
 
 CharcoalKiln_Text_Boss4:
 	.string "You chased off Team Rocket and\n"
@@ -117,4 +115,4 @@ CharcoalKiln_Text_Apprentice4:
 	.string "You're the coolest, man!$"
 
 CharcoalKiln_Text_Farfetchd:
-	.string "Farfetch'D: Kwaa!$"
+	.string "Farfetch'd: Kwaa!$"

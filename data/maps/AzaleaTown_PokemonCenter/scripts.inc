@@ -39,12 +39,12 @@ AzaleaPokecenter_Text_Gentleman:
 
 AzaleaPokecenter_Text_UnusedPCExplanation:
 	.string "This Bill guy created the system\n"
-	.string "for storing Pokémon in a Pc.\p"
-	.string "Bill's Pc can store up to 30\n"
+	.string "for storing Pokémon in a PC.\p"
+	.string "Bill's PC can store up to 30\n"
 	.string "Pokémon per Box.$"
 
 AzaleaPokecenter_Text_FishingGuru:
-	.string "Bill's Pc can store up to 30\n"
+	.string "Bill's PC can store up to 30\n"
 	.string "Pokémon per Box.$"
 
 AzaleaPokecenter_Text_PokefanF:

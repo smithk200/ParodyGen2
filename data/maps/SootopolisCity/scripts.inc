@@ -7,9 +7,9 @@ SootopolisCity_MapScripts::
 	.byte 0
 
 SootopolisCity_OnLoad:
-	call_if_unset FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_LockGymDoor
+	call_if_unset FLAG_GARBAGEFLAG, SootopolisCity_EventScript_LockGymDoor
 	goto_if_unset FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, SootopolisCity_EventScript_LegendariesNotArrived
-	call_if_unset FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_LockHouseDoors
+	call_if_unset FLAG_GARBAGEFLAG, SootopolisCity_EventScript_LockHouseDoors
 	end
 
 SootopolisCity_EventScript_LegendariesNotArrived::
@@ -881,7 +881,7 @@ SootopolisCity_EventScript_Steven::
 	goto_if_eq VAR_GARBAGEVAR, 2, SootopolisCity_EventScript_StevenHelpWallace
 	goto_if_eq VAR_GARBAGEVAR, 3, SootopolisCity_EventScript_StevenHelpedWallace
 	goto_if_eq VAR_GARBAGEVAR, 4, SootopolisCity_EventScript_StevenHelpedWallace
-	goto_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_StevenMaxieArchieLeft
+	goto_if_set FLAG_GARBAGEFLAG, SootopolisCity_EventScript_StevenMaxieArchieLeft
 	msgbox SootopolisCity_Text_SoThatsRayquaza, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -1281,7 +1281,7 @@ SootopolisCity_EventScript_Wallace::
 	faceplayer
 	goto_if_eq VAR_GARBAGEVAR, 4, SootopolisCity_EventScript_GoToSkyPillar
 	goto_if_set FLAG_RECEIVED_HM_WATERFALL, SootopolisCity_EventScript_GoToGym
-	goto_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_GiveWaterfall
+	goto_if_set FLAG_GARBAGEFLAG, SootopolisCity_EventScript_GiveWaterfall
 	msgbox SootopolisCity_Text_AquaMagmaDidntMeanHarm, MSGBOX_DEFAULT
 	release
 	end
@@ -1365,7 +1365,7 @@ SootopolisCity_EventScript_ArchieRayquaza::
 SootopolisCity_EventScript_MaxieArchieLeave::
 	setflag FLAG_GARBAGEFLAG
 	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE
+	setflag FLAG_GARBAGEFLAG
 	clearflag FLAG_GARBAGEFLAG
 	clearflag FLAG_GARBAGEFLAG
 	setvar VAR_MT_PYRE_STATE, 2

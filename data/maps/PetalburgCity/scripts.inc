@@ -701,19 +701,21 @@ PetalburgCity_Text_WhereIsWally:
 	.string "very soon…$"
 
 PetalburgCity_Text_AreYouRookieTrainer:
-	.string "Hiya! Are you maybe…\n"
-	.string "A rookie Trainer?\p"
+	.string "Hiya! Are you a rookie Trainer?\p"
 	.string "Do you know what Pokémon Trainers\n"
 	.string "do when they reach a new town?\p"
 	.string "They first check what kind of Gym\n"
-	.string "is in the town.$"
+	.string "is in the town.\p"
+	.string "You'd have to be a real stupid piece\n"
+	.string "of shit in order to not know that.$"
 
 PetalburgCity_Text_ThisIsPetalburgGym:
 	.string "See? This is Petalburg City's Gym.$"
 
 PetalburgCity_Text_ThisIsGymSign:
 	.string "This is the Gym's sign. Look for it\n"
-	.string "whenever you're looking for a Gym.$"
+	.string "whenever you're looking for a Gym,\l"
+	.string "you moron!$"
 
 PetalburgCity_Text_WaterReflection:
 	.string "My face is reflected in the water.\p"
@@ -725,8 +727,8 @@ PetalburgCity_Text_WaterReflection:
 PetalburgCity_Text_FullPartyExplanation:
 	.string "Let's say you have six Pokémon.\n"
 	.string "If you catch another one…\p"
-	.string "It is automatically sent to a Storage\n"
-	.string "Box over a Pc connection.$"
+	.string "It gets shoved up your ass over\n"
+	.string "a wireless connection.$"
 
 PetalburgCity_Text_GymSign:
 	.string "Petalburg City Pokémon Gym\n"
@@ -739,7 +741,7 @@ PetalburgCity_Text_CitySign:
 	.string "“Where people mingle with nature.”$"
 
 PetalburgCity_Text_WallyHouseSign:
-	.string "Wally'S House$"
+	.string "Wally'sHouse$"
 
 PetalburgCity_Text_AreYouATrainer:
 	.string "Excuse me!\p"

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ALOLA2",
-      "offset": -3,
+      "offset": -5,
       "direction": "right"
     }
   ],

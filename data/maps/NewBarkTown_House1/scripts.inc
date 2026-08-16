@@ -20,13 +20,20 @@ NewBarkTown_House1_EventScript_Daughter::
 NewBarkTown_House1_EventScript_Father::
 	lock
 	faceplayer
+	goto_if_unset FLAG_NUZLOCKE, NewBarkTown_House1_EventScript_FatherTalksAboutHisPreciousMachop
 	goto_if_unset FLAG_RECEIVED_FIRST_BALLS, NewBarkTown_House1_EventScript_FatherNeedFirstMon
 	goto_if_set FLAG_RECEIVED_MACHOP, NewBarkTown_House1_EventScript_FatherTakeGoodCareOfMachop
 	msgbox NewBarkTown_House1_Text_Father, MSGBOX_DEFAULT
 	givemon SPECIES_MACHOP, 5
 	setflag FLAG_RECEIVED_MACHOP
+	bufferspeciesname STR_VAR_1, SPECIES_MACHOP
 	call Common_EventScript_GiftMon
 	closemessage
+	release
+	end
+
+NewBarkTown_House1_EventScript_FatherTalksAboutHisPreciousMachop::
+	msgbox NewBarkTown_House1_Text_FatherTalksAboutHisPreciousMachop, MSGBOX_DEFAULT
 	release
 	end
 
@@ -74,3 +81,11 @@ NewBarkTown_House1_Text_Neighbor:
 	.string "She really loves Pokémon!\p"
 	.string "But then, so do I!$"
 
+NewBarkTown_House1_Text_FatherTalksAboutHisPreciousMachop:
+	.string "I just love my Machop.\p"
+	.string "He likes to live in the boulders,\n"
+	.string "just like some gamer my daughter\l"
+	.string "watches on YouTube.\p"
+	.string "If only I had a determined Trainer I\n"
+	.string "could give him to…\p"
+	.string "You don't seem ready for a challenge.$"

@@ -268,7 +268,7 @@ Copycat_Text_Dodrio1:
 
 Copycat_Text_Dodrio2:
 	.string "Mirror, Mirror On The Wall,\n"
-	.string "Who'S The Fairest One Of All?$"
+	.string "Who'sThe Fairest One Of All?$"
 
 Copycat_Text_2FDoll:
 	.string "This is a rare Pokémon! Huh?\p"

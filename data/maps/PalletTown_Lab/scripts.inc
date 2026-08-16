@@ -126,7 +126,7 @@ PalletTown_Lab_Text_OaksAssistant3:
 	.string "Pokémon Talk isn't a live broadcast.$"
 
 PalletTown_Lab_Text_OaksLabPC:
-	.string "There's an e-mail message on the Pc.\p"
+	.string "There's an e-mail message on the PC.\p"
 	.string "…\p"
 	.string "Prof.Oak, how is your research\n"
 	.string "coming along?\p"

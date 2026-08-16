@@ -187,7 +187,7 @@ GoldenrodCity_RadioTower_2F_Text_SalesSign:
 	.string "2f Sales$"
 
 GoldenrodCity_RadioTower_2F_Text_OakTalkSign:
-	.string "Prof.Oak'S Pokémon Talk\p"
+	.string "Prof.Oak'sPokémon Talk\p"
 	.string "The Hottest Show on the Air!$"
 
 GoldenrodCity_RadioTower_2F_Text_PokemonRadioSign:

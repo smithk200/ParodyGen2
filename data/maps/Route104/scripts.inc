@@ -1030,7 +1030,7 @@ Route104_Text_FlowerShopSellingSaplings:
 	.string "shopping. Where should I put them?$"
 
 Route104_Text_MrBrineysCottage:
-	.string "Mr. Briney'S Cottage$"
+	.string "Mr. Briney'sCottage$"
 
 Route104_Text_RouteSignPetalburg:
 	.string "Route 104\n"

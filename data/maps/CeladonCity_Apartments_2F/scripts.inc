@@ -15,7 +15,7 @@ CeladonCity_Apartments_2F_EventScript_Sign::
 	end
 
 CeladonMansion2F_Text_Computer:
-	.string "{PLAYER} turned on the Pc.\p"
+	.string "{PLAYER} turned on the PC.\p"
 	.string "…\p"
 	.string "Someone was in the middle of\n"
 	.string "composing an e-mail.\p"

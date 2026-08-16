@@ -160,7 +160,7 @@ LilycoveCity_DepartmentStore_1F_Text_Azumarill:
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
 	.string "1f: Service Counter\n"
 	.string "    Lottery Corner\p"
-	.string "2f: Trainer'S Zone\p"
+	.string "2f: Trainer'sZone\p"
 	.string "3f: Battle Collection\p"
 	.string "4f: TM Corner\p"
 	.string "5f: Poké Doll Floor\p"

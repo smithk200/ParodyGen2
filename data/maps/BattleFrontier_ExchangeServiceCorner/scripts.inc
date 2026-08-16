@@ -576,7 +576,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceBand:
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmKingsRock:
-	.string "You've chosen the King'S Rock.\n"
+	.string "You've chosen the King'sRock.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmFocusBand:
@@ -593,7 +593,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmLeftovers:
 
 BattleFrontier_ExchangeServiceCorner_Text_WellSendItToPC:
 	.string "Thank you!\n"
-	.string "We'll send it to your Pc at home.$"
+	.string "We'll send it to your PC at home.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize:
 	.string "Here is your prize!$"
@@ -604,7 +604,7 @@ BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
 
 BattleFrontier_ExchangeServiceCorner_Text_PCIsFull:
 	.string "I'm so sorry…\n"
-	.string "Your Pc appears to be full…$"
+	.string "Your PC appears to be full…$"
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveSpaceToHoldIt:
 	.string "I'm so sorry…\n"

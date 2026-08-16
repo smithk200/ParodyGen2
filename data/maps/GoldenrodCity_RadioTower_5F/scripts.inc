@@ -437,7 +437,7 @@ GoldenrodCity_RadioTower_5F_Text_Ben:
 	.string "Ben: Do you listen to our music?$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorOfficeSign:
-	.string "5f Director'S   Office$"
+	.string "5f Director's  Office$"
 
 GoldenrodCity_RadioTower_5F_Text_Studio1Sign:
 	.string "5f Studio 1$"

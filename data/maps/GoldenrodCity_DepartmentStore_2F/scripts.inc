@@ -52,4 +52,4 @@ GoldenrodDeptStore_Text_2FGentleman:
 
 GoldenrodDeptStore_Text_2FDirectory:
     .string "Your Travel Companion\p"
-    .string "2f Trainer'S Market$"
+    .string "2f Trainer'sMarket$"

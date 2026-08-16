@@ -3513,9 +3513,9 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
 
     for (u8 i = 0; i < PARTY_SIZE; i++)
     {
-        if (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES) == SPECIES_NONE)
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_NONE)
         {
-            mon = &gParties[B_TRAINER_PLAYER][0];
+            mon = &gParties[B_TRAINER_PLAYER][i];
             ZeroMonData(mon);
             CreateBoxMonLegacy(&mon->box, species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, otId);
 

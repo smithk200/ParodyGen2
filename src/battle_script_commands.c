@@ -4019,7 +4019,27 @@ static void Cmd_getexp(void)
                     && !gBattleStruct->wildVictorySong)
                 {
                     BattleStopLowHpSound();
-                    PlayBGM(MUS_VICTORY_WILD);
+                    if (gSaveBlock2Ptr->optionsWildBattleMusic == 0)
+                        PlayBGM(MUS_HG_VICTORY_WILD);
+                    else if (gSaveBlock2Ptr->optionsWildBattleMusic == 1)
+                        PlayBGM(MUS_RG_VICTORY_WILD);
+                    else if (gSaveBlock2Ptr->optionsWildBattleMusic == 2)
+                        PlayBGM(MUS_DP_VICTORY_WILD); 
+                    else if(gSaveBlock2Ptr->optionsWildBattleMusic == 3)
+                        PlayBGM(MUS_HG_VICTORY_WILD); 
+                    else if (gSaveBlock2Ptr->optionsWildBattleMusic == 4)
+                        PlayBGM(MUS_VICTORY_WILD); 
+                    else if (gSaveBlock2Ptr->optionsWildBattleMusic == 5)
+                    {
+                        if((Random() % 4) == 1)
+                            PlayBGM(MUS_HG_VICTORY_WILD); 
+                        if((Random() % 4) == 2)
+                            PlayBGM(MUS_RG_VICTORY_WILD);
+                        if((Random() % 4) == 3)
+                            PlayBGM(MUS_VICTORY_WILD);
+                        else
+                            PlayBGM(MUS_DP_VICTORY_WILD); 
+                    }
                     gBattleStruct->wildVictorySong++;
                 }
 
@@ -8260,7 +8280,13 @@ static void Cmd_settailwind(void)
 
     u8 side = GetBattlerSide(gBattlerAttacker);
 
-    if (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND))
+    if (((TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_MACY_2)) && (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND)))
+    {
+        gSideStatuses[side] |= SIDE_STATUS_TAILWIND;
+        gSideTimers[side].tailwindTimer = -1;
+        gBattlescriptCurrInstr = cmd->nextInstr;
+    }
+    else if (!(gSideStatuses[side] & SIDE_STATUS_TAILWIND))
     {
         gSideStatuses[side] |= SIDE_STATUS_TAILWIND;
         gSideTimers[side].tailwindTimer = (GetConfig(B_TAILWIND_TURNS) >= GEN_5 ? 4 : 3);

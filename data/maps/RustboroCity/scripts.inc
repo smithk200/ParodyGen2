@@ -500,8 +500,6 @@ RustboroCity_EventScript_EmployeeAskToGetGoods::
 	call_if_eq VAR_TEMP_1, 1, RustboroCity_EventScript_EmployeeFacePlayerLeft1
 	call_if_eq VAR_TEMP_1, 2, RustboroCity_EventScript_EmployeeFacePlayerDown1
 	call_if_eq VAR_TEMP_1, 3, RustboroCity_EventScript_EmployeeApproachPlayerDown1
-	setflag FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN
-	setvar VAR_GARBAGEVAR, 3
 	copyobjectxytoperm LOCALID_RUSTBORO_DEVON_EMPLOYEE
 	msgbox RustboroCity_Text_HelpMeIWasRobbed, MSGBOX_DEFAULT
 	releaseall
@@ -1041,7 +1039,7 @@ RustboroCity_Text_YoureNewAroundHere:
 	.string "Oh? Who might you be?\n"
 	.string "You're a new face around these parts.\p"
 	.string "Have you just transferred into the\n"
-	.string "Pokémon Trainer'S School?$"
+	.string "Pokémon Trainer'sSchool?$"
 
 RustboroCity_Text_GymLeaderIsntEasyWithFire:
 	.string "I challenged the Gym Leader, but…\p"
@@ -1070,7 +1068,7 @@ RustboroCity_Text_WowYouHavePokemon:
 	.string "places with Pokémon, too.$"
 
 RustboroCity_Text_CatchRarePokemonIfIGoToSchool:
-	.string "Pokémon Trainer'S School!\p"
+	.string "Pokémon Trainer'sSchool!\p"
 	.string "If I go to this school, will I be able\n"
 	.string "to catch rare Pokémon easily?$"
 
@@ -1248,7 +1246,7 @@ RustboroCity_Text_CitySign:
 	.string "nature and science.”$"
 
 RustboroCity_Text_TrainersSchoolSign:
-	.string "Pokémon Trainer'S School\p"
+	.string "Pokémon Trainer'sSchool\p"
 	.string "“We'll teach you anything about\n"
 	.string "Pokémon!”$"
 

@@ -379,7 +379,7 @@ AzaleaTown_Text_RivalLoss:
 AzaleaTown_Text_Rocket1:
 	.string "It's unsafe to go in there,\n"
 	.string "so I'm standing guard.\p"
-	.string "Aren't I a good Samaritan?$"
+	.string "I'm just doing my good deed!$"
 
 AzaleaTown_Text_Rocket2:
 	.string "Do you know about Slowpoke tail?\n"
@@ -395,12 +395,13 @@ AzaleaTown_Text_GrampsBefore:
 AzaleaTown_Text_GrampsAfter:
 	.string "The Slowpoke have returned.\p"
 	.string "Knowing them, they could've just\n"
-	.string "been goofing off somewhere.$"
+	.string "been fucking around somewhere.$"
 
 AzaleaTown_Text_Teacher:
 	.string "Did you come to get Kurt to make\n"
 	.string "some Poké Balls?\p"
-	.string "A lot of people do just that.$"
+	.string "They are POKé Balls, I swear it's nothing\n"
+	.string "else!$"
 
 AzaleaTown_Text_Youngster:
 	.string "Cut through Azalea and you'll be\n"
@@ -419,7 +420,7 @@ AzaleaTown_Text_Kurt1:
 	.string "What is going on?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}, here's your Gs Ball back!$"
+	.string "{PLAYER}, here's your GS Ball back!$"
 
 AzaleaTown_Text_Kurt3:
 	.string "Could you go see why Ilex Forest\n"
@@ -443,9 +444,10 @@ AzaleaTown_Text_SlowpokeWellSign:
 	.string "Slowpoke Well\p"
 	.string "Also known as the Make It Rain Well.\p"
 	.string "Locals believe that a Slowpoke's\n"
-	.string "yawn summons rain.\p"
+	.string "yawn summons money from the sky.\p"
 	.string "Records show that a Slowpoke's\n"
-	.string "yawn ended a drought 400 years ago.$"
+	.string "yawn ended the Great Depression\l"
+	.string "back in 1939.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
 	.string "Charcoal Kiln$"

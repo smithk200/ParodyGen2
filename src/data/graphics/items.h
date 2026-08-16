@@ -2153,3 +2153,6 @@ const u16 gItemIcon_Palette_Radio[] = INCGFX_U16("graphics/items/icons/radio.pal
 
 const u32 gItemIcon_MagicMuffler[] = INCGFX_U32("graphics/items/icons/magic_muffler.png", ".4bpp.smol");
 const u16 gItemIcon_Palette_MagicMuffler[] = INCGFX_U16("graphics/items/icons/magic_muffler.pal", ".gbapal");
+
+const u32 gItemIcon_SteamedHams[] = INCGFX_U32("graphics/items/icons/steamed_hams.png", ".4bpp.smol");
+const u16 gItemIconPalette_SteamedHams[] = INCGFX_U16("graphics/items/icon_palettes/steamed_hams.pal", ".gbapal");

@@ -475,6 +475,9 @@ enum
     OBJ_EVENT_GFX_CHASE,
     OBJ_EVENT_GFX_SHREK,
     OBJ_EVENT_GFX_PETER_GRIFFIN,
+    OBJ_EVENT_GFX_NATE,
+    OBJ_EVENT_GFX_LEADER_ELLA,
+    OBJ_EVENT_GFX_MARNIE,
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -717,6 +720,9 @@ enum
 #define OBJ_EVENT_PAL_TAG_SHREK                    0x1180
 #define OBJ_EVENT_PAL_TAG_CHASE                    0x1181
 #define OBJ_EVENT_PAL_TAG_PETER_GRIFFIN            0x1182
+#define OBJ_EVENT_PAL_TAG_NATE                     0x1183
+#define OBJ_EVENT_PAL_TAG_LEADER_ELLA              0x1184
+#define OBJ_EVENT_PAL_TAG_MARNIE                   0x1185
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

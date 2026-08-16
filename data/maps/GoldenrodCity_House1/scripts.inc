@@ -27,11 +27,7 @@ GoldenrodCity_NameRatersHouse_EventScript_RateMonNickname::
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	goto_if_eq VAR_RESULT, SPECIES_EGG, GoldenrodCity_NameRatersHouse_EventScript_CantRateEgg
 	special BufferMonNickname
-	@special IsMonOTIDNotPlayers
-	@goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_NameRatersHouse_EventScript_PlayerNotMonsOT
-	@specialvar VAR_RESULT, MonOTNameNotPlayer
 	special BufferMonNickname
-	@goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_NameRatersHouse_EventScript_PlayerNotMonsOT
 	msgbox GoldenrodCity_NameRatersHouse_Text_FineNameSuggestBetterOne, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, GoldenrodCity_NameRatersHouse_EventScript_ChangeNickname
 	goto_if_eq VAR_RESULT, NO, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
@@ -48,12 +44,7 @@ GoldenrodCity_NameRatersHouse_EventScript_PlayerNotMonsOT::
 	end
 
 GoldenrodCity_NameRatersHouse_EventScript_ChangeNickname::
-	msgbox GoldenrodCity_NameRatersHouse_Text_WhatShallNewNameBe, MSGBOX_DEFAULT
-	call Common_EventScript_NameReceivedPartyMon
-	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
-	special BufferMonNickname
-	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_NameRatersHouse_EventScript_NewNameDifferent
-	msgbox GoldenrodCity_NameRatersHouse_Text_NameNoDifferentYetSuperior, MSGBOX_DEFAULT
+	msgbox GoldenrodCity_NameRatersHouse_Text_NameARealPieceOfShit, MSGBOX_DEFAULT
 	release
 	end
 
@@ -63,20 +54,22 @@ GoldenrodCity_NameRatersHouse_EventScript_NewNameDifferent::
 	end
 
 GoldenrodCity_NameRatersHouse_Text_PleasedToRateMonNickname:
-	.string "Hi, hi! I'm the Name Rater!\n"
-	.string "I'm the fortune-teller of names!\p"
-	.string "I shall be pleased to rate your\n"
-	.string "Pokémon's nickname.$"
+	.string "They call me the Pokémon Rater.\p"
+	.string "I rate your Pokémon based on how good\n"
+	.string "they are.\p"
+	.string "So far, I haven't been impressed with\n"
+	.string "a single one.\p"
+	.string "Would you like to show me your Pokémon?$"
 
 GoldenrodCity_NameRatersHouse_Text_CritiqueWhichMonNickname:
-	.string "Which Pokémon's nickname should\n"
+	.string "Which Pokémon of yours should\n"
 	.string "I critique?$"
 
 GoldenrodCity_NameRatersHouse_Text_FineNameSuggestBetterOne:
-	.string "Hmmm… {STR_VAR_1}, is it? That is\n"
-	.string "quite a fine name you bestowed.\p"
-	.string "But! What say you, if I were to\n"
-	.string "suggest a slightly better name?$"
+	.string "Hmmm… {STR_VAR_1}, huh?\n"
+	.string "Let the master critique away!\p"
+	.string "...............\p"
+	.string "Are you ready for my critique?$"
 
 GoldenrodCity_NameRatersHouse_Text_WhatShallNewNameBe:
 	.string "Ah, good. Then, what shall the new\n"
@@ -89,8 +82,9 @@ GoldenrodCity_NameRatersHouse_Text_MonShallBeKnownAsName:
 	.string "How fortunate for you!$"
 
 GoldenrodCity_NameRatersHouse_Text_DoVisitAgain:
-	.string "I see.\n"
-	.string "Do come visit again.$"
+	.string "What's the matter?\n"
+	.string "Can't take ANY form of criticism?\p"
+	.string "You snowflake!$"
 
 GoldenrodCity_NameRatersHouse_Text_NameNoDifferentYetSuperior:
 	.string "Done! From now on, this Pokémon\n"
@@ -107,7 +101,10 @@ GoldenrodCity_NameRatersHouse_Text_MagnificentName:
 	.string "{STR_VAR_1} now and beyond.$"
 
 GoldenrodCity_NameRatersHouse_Text_ThatIsMerelyAnEgg:
-	.string "Now, now.\n"
-	.string "That is merely an Egg!$"
+	.string "Oh, come the fuck on.\n"
+	.string "That's an Egg, you moron!\p"
+	.string "I'd rather DIE than give a nickname\n"
+	.string "to an Egg!$"
 
-
+GoldenrodCity_NameRatersHouse_Text_NameARealPieceOfShit:
+	.string "That Pokémon's a real piece of shit!$"

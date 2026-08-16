@@ -219,7 +219,7 @@ NationalParkBugContest_Text_Sign_RelaxationSquare:
 NationalParkBugContest_Text_Sign_BattleNotice:
 	.string "What is this notice?\p"
 	.string "Please battle only in the grass.\p"
-	.string "National Park Warden'S Office$"
+	.string "National Park Warden'sOffice$"
 
 NationalParkBugContest_Text_TrainerTips:
 	.string "The National Park has different\n"

@@ -145,6 +145,10 @@ extern const struct Tileset gTileset_LavaridgeGym;
 extern const struct Tileset gTileset_FortreeGym;
 extern const struct Tileset gTileset_SecretBase;
 extern const struct Tileset gTileset_Cave_Ice;
+extern const struct Tileset gTileset_Blackthorn;
+extern const struct Tileset gTileset_Johto_NorthEast;
+extern const struct Tileset gTileset_Johto_NorthWest;
+extern const struct Tileset gTileset_Ecruteak_City;
 
 
 #endif //GUARD_tilesets_H

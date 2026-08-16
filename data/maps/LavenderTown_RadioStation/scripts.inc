@@ -117,7 +117,7 @@ LavenderTown_RadioStation_Text_SuperNerd2_GotExpnCard:
 LavenderTown_RadioStation_Text_Directory:
 	.string "1f Reception 2f Sales\p"
 	.string "3f Personnel 4f Production\p"
-	.string "5f Director'S Office$"
+	.string "5f Director'sOffice$"
 
 LavenderTown_RadioStation_Text_PokeFluteSign:
 	.string "Perk Up Pokémon with Mellow\n"

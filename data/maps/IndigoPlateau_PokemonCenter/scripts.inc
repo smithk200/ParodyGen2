@@ -25,6 +25,51 @@ IndigoPlateau_PokemonCenter_Enter::
 	setvar VAR_LEAGUE_STATE, 1
 	end
 
+IndigoPlateau_EventScript_PeterGriffinTrigger::
+	goto_if_set FLAG_DEFEATED_PETER_GRIFFIN_POKMEON_LEAGUE, Common_EventScript_End
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	playse SE_PIN
+	clearflag FLAG_HIDE_PETER_GRIFFFIN_POKEMON_LEAGUE
+	addobject LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	delay 30
+	playbgm MUS_HG_ENCOUNTER_BOY_1, FALSE
+	applymovement LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE, IndigoPlateau_Movement_PeterGriffin_Enter
+	waitmovement 0
+	msgbox IndigoPlateau_Text_PeterGriffin_Intro, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_PETER_GRIFFIN_2, PokemonLeague_KogasRoom_Text_Beaten
+	goto IndigoPlateau_EventScript_PeterGriffin_Defeated
+	end
+
+IndigoPlateau_EventScript_PeterGriffin_Defeated::
+	msgbox IndigoPlateau_Text_PeterGriffin_PostBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE, IndigoPlateau_Movement_PeterGriffin_Leave
+	waitmovement 0
+	removeobject LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE
+	setflag FLAG_HIDE_PETER_GRIFFFIN_POKEMON_LEAGUE
+	setflag FLAG_DEFEATED_PETER_GRIFFIN_POKMEON_LEAGUE
+	end
+
+IndigoPlateau_Movement_PeterGriffin_Enter:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	face_up
+	step_end
+
+IndigoPlateau_Movement_PeterGriffin_Leave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 IndigoPlateau_EventScript_Cooltrainer::
 	msgbox IndigoPlateau_Text_CooltrainerM, MSGBOX_NPC
 	end
@@ -164,3 +209,28 @@ IndigoPlateau_Text_TeleportGuyNo:
 
 IndigoPlateau_Text_Abra:
     .string "Abra: Aabra…$"
+
+IndigoPlateau_Text_PeterGriffin_Intro:
+	.string "Hey, not so fast, bucko!\n"
+	.string "It's me, Peter Griffin!\p"
+	.string "Is it that time where you're\n"
+	.string "fighting the Elite Four already?\p"
+	.string "I'm gonna beat you because I'm Peter\n"
+	.string "Griffin.\p"
+	.string "That's usually how this works.$"
+
+IndigoPlateau_Text_PeterGriffin_Defeat:
+	.string "This reminds me of that one time…\n"
+	.string "When I…\p"
+	.string "Crap, I can't remember it now!$"
+
+IndigoPlateau_Text_PeterGriffin_PostBattle:
+	.string "I'm gonna challenge the Elite Four!\n"
+	.string "…Well, not until I train some more.\p"
+	.string "And file my taxes.\p"
+	.string "And mow the lawn.\p"
+	.string "And drink some beer.\p"
+	.string "Ya know, Lois is waiting for me\n"
+	.string "back home.\p"
+	.string "Maybe I'll go back and do that\n"
+	.string "stuff instead.$"

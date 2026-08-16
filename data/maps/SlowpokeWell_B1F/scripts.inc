@@ -43,7 +43,10 @@ SlowpokeWell_B1F_EventScript_Eto::
 SlowpokeWell_B1F_EventScript_Proton::
 	lock
 	faceplayer
-	trainerbattle_single TRAINER_PROTON_1, SlowpokeWell_B1F_Text_ProtonSeen, SlowpokeWell_B1F_Text_ProtonBeaten
+	trainerbattle_single TRAINER_PROTON_1, SlowpokeWell_B1F_Text_ProtonSeen, SlowpokeWell_B1F_Text_ProtonBeaten, SlowpokeWell_B1F_EventScript_ProtonDefeated
+	end
+
+SlowpokeWell_B1F_EventScript_ProtonDefeated::
 	msgbox SlowpokeWell_B1F_Text_ProtonAfter, MSGBOX_AUTOCLOSE
 	closemessage
 	fadescreen FADE_TO_BLACK
