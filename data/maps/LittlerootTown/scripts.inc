@@ -246,7 +246,7 @@ LittlerootTown_EventScript_FatMan::
 	end
 
 LittlerootTown_EventScript_Boy::
-	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
+	msgbox LittlerootTown_Text_RenamedToLoserTown, MSGBOX_NPC
 	end
 
 LittlerootTown_EventScript_Twin::
@@ -397,9 +397,7 @@ LittlerootTown_EventScript_BirchsLabSign::
 
 LittlerootTown_EventScript_BrendansHouseSign::
 	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_BirchsHouseSignFemale
+	msgbox LittlerootTown_Text_BrendansHouse, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -413,9 +411,7 @@ LittlerootTown_EventScript_BirchsHouseSignFemale::
 
 LittlerootTown_EventScript_MaysHouseSign::
 	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_BirchsHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
+	msgbox LittlerootTown_Text_MaysHouse, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -908,7 +904,7 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "Mom: {PLAYER}, we're here, honey!\p"
 	.string "It must be tiring riding with our things\n"
 	.string "in the moving truck.\p"
-	.string "Well, this is Littleroot Town.\p"
+	.string "Well, this is Loser Town.\p"
 	.string "How do you like it?\n"
 	.string "This is our new home!\p"
 	.string "It has a quaint feel, but it seems to be\n"
@@ -953,16 +949,18 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "Go on, go get them, honey!$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
-	.string "If you use a PC, you can store items\n"
-	.string "and Pokémon.\p"
-	.string "The power of science is staggering!$"
+	.string "The power of science is staggering!\p"
+	.string "We now have the technology to create\n"
+	.string "Pokémon Run and Bun, one of the most\l"
+	.string "difficult ROM hacks ever made.$"
 
-LittlerootTown_Text_BirchSpendsDaysInLab:
-	.string "Prof. Birch spends days in his Lab\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does Prof. Birch spend time\n"
-	.string "at home?$"
+LittlerootTown_Text_RenamedToLoserTown:
+	.string "This town used to be called Littleroot\n"
+	.string "Town.\p"
+	.string "But as it got more decrepit, it was renamed\n"
+	.string "to Loser Town.\p"
+	.string "I guess “Littleroot Town” wasn't a\n"
+	.string "pathetic enough name!$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Um, um, um!\p"
@@ -991,17 +989,18 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Good luck!$"
 
 LittlerootTown_Text_TownSign:
-	.string "Littleroot Town\n"
-	.string "“A town that can't be shaded any hue.”$"
+	.string "Loser Town\n"
+	.string "“A town that's so pathetic even\n"
+	.string "Doc McStuffins thinks it's awful!”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "Prof. Birch'sPokémon Lab$"
+	.string "Prof. Birch's Pokémon Lab$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s House$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "Prof. Birch'sHouse$"
+	.string "Prof. Birch's House$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Prof. Birch: Well, well, {PLAYER}{KUN}!\n"
@@ -1014,3 +1013,8 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my Lab.$"
 
+LittlerootTown_Text_BrendansHouse:
+	.string "Brendan's House$"
+
+LittlerootTown_Text_MaysHouse:
+	.string "May's House$"

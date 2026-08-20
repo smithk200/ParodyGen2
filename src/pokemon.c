@@ -5556,7 +5556,11 @@ u16 GetBattleBGM(void)
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
             if (gMapHeader.region == REGION_HOENN)
+            {
+                if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CHASE_E4_1)
+                        return MUS_TOADS_TURNPIKE;
                 return MUS_VS_ELITE_FOUR;
+            }   
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
                 {
                     if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_1) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SANS_2) \

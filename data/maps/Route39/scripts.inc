@@ -261,18 +261,15 @@ Route39_EventScript_Derek::
 	end
 
 Route39_Text_PokefanMDerekSeen:
-	.string "This is a good time to brag\n"
-	.string "about my Pikachu!$"
+	.string "I'm not listening to your bragging!\p"
+	.string "We Poké Fans have a Weakness Policy\n"
+	.string "of not listening to fucks like you!$"
 
 Route39_Text_PokefanMDerekBeaten:
-	.string "I had no time to show off\n"
-	.string "Pikachu…$"
+	.string "I had no time to show off my team…$"
 
 Route39_Text_PokefanMDerekAfter:
-	.string "I'm not listening to your\n"
-	.string "bragging!\p"
-	.string "We Poké Fans have a policy\n"
-	.string "of not listening to bragging!$"
+	.string "Oh, go fuck yourself, fool that you are!$"
 
 Route39_EventScript_Ruth::
 	trainerbattle_single TRAINER_RUTH, Route39_Text_PokefanFRuthSeen, Route39_Text_PokefanFRuthBeaten
@@ -280,17 +277,17 @@ Route39_EventScript_Ruth::
 	end
 
 Route39_Text_PokefanFRuthSeen:
-	.string "Such darling Pokémon.\p"
-	.string "Let's show our Pokémon\n"
-	.string "together at the same time.$"
+	.string "I just love these cutesy-wutesy\n"
+	.string "Pokémon!\p"
+	.string "I think these Pokémon are SO adorable!$"
 
 Route39_Text_PokefanFRuthBeaten:
-	.string "I don't mind losing.$"
+	.string "Waah! Waah!$"
 
 Route39_Text_PokefanFRuthAfter:
-	.string "Do you know about baby\n"
-	.string "Pokémon?\p"
-	.string "I bet they're just adorable!$"
+	.string "Do you know about baby Pokémon?\n"
+	.string "I'm a baby Pokémon!\p"
+	.string "Waah! Waah!$"
 
 Route39_EventScript_Norman::
 	trainerbattle_single TRAINER_NORMAN_FORMER, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
@@ -298,19 +295,18 @@ Route39_EventScript_Norman::
 	end
 
 Route39_Text_PsychicNormanSeen:
-	.string "Let me see what your\n"
-	.string "Pokémon are capable of.$"
+	.string "Let me see what your Pokémon are\n"
+	.string "capable of.$"
 
 Route39_Text_PsychicNormanBeaten:
-	.string "Ooh, your Pokémon have\n"
-	.string "potential.$"
+	.string "Ooh, your Pokémon have obesity problems.$"
 
 Route39_Text_PsychicNormanAfter:
-	.string "You know how Pokémon have\n"
-	.string "different abilities?\p"
-	.string "People are like that too.\n"
-	.string "Everyone has different\l"
-	.string "potential.$"
+	.string "You know how Pokémon have different\n"
+	.string "abilities?\p"
+	.string "People don't get cool abilities.\p"
+	.string "That's why most likely, your manager\n"
+	.string "or boss is a piece of shit.$"
 
 Route39_EventScript_Jamie::
 	trainerbattle_single TRAINER_JAMIE, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
@@ -318,22 +314,18 @@ Route39_EventScript_Jamie::
 	end
 
 Route39_Text_PokefanFJaimeSeen:
-	.string "You came at just the right\n"
-	.string "time.\p"
-	.string "Let's battle.$"
+	.string "You came at just the right time.\p"
+	.string "That's what she said!$"
 
 Route39_Text_PokefanFJaimeBeaten:
-	.string "Oh, how disappointing…$"
+	.string "That's what she didn't say…$"
 
 Route39_Text_PokefanFJaimeAfter:
-	.string "I met Umbreon at night right\n"
-	.string "here on Route 39.\p"
-	.string "I'm not sure why, but it\n"
-	.string "seems to like it when I\l"
-	.string "train here.\p"
-	.string "It seems to become friendlier\n"
-	.string "by training here than\l"
-	.string "anywhere else.$"
+	.string "I met a spooky scary skeleton that\n"
+	.string "was trying to evolve Eevee into\l"
+	.string "Umbreon.\p"
+	.string "That's what she said!\p"
+	.string "Wait, never mind…$"
 
 Route39_EventScript_Sign1::
 	lock

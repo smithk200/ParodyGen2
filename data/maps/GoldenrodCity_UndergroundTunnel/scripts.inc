@@ -131,9 +131,9 @@ GoldenrodUnderground_EventScript_Teru::
 	msgbox GoldenrodUnderground_Text_SupernerdTeruAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
-GoldenrodUnderground_EventScript_Issac::
-	trainerbattle_single TRAINER_ISSAC GoldenrodUnderground_Text_PokemaniacIssacSeen, GoldenrodUnderground_Text_PokemaniacIssacBeaten
-	msgbox GoldenrodUnderground_Text_PokemaniacIssacAfterBattle, MSGBOX_AUTOCLOSE
+GoldenrodUnderground_EventScript_Isaiah::
+	trainerbattle_single TRAINER_ISAIAH GoldenrodUnderground_Text_PokemaniacIsaiahSeen, GoldenrodUnderground_Text_PokemaniacIsaiahBeaten
+	msgbox GoldenrodUnderground_Text_PokemaniacIsaiahAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodUnderground_EventScript_Donald::
@@ -388,28 +388,30 @@ GoldenrodUnderground_Text_SupernerdEricAfterBattle:
     .string "square…$"
 
 GoldenrodUnderground_Text_SupernerdTeruSeen:
-    .string "Do you consider type alignments in\n"
-    .string "battle?\p"
+    .string "Do you consider type alignments in battle?\p"
     .string "If you know your type advantages,\n"
     .string "you'll do better in battle.$"
 
 GoldenrodUnderground_Text_SupernerdTeruBeaten:
-    .string "Ow, ow, ow!$"
+    .string "Shit, shit, shittake mushrooms!$"
 
 GoldenrodUnderground_Text_SupernerdTeruAfterBattle:
     .string "I know my Pokémon type alignments.\p"
     .string "But I only use one type of Pokémon.$"
 
-GoldenrodUnderground_Text_PokemaniacIssacSeen:
-    .string "My Pokémon just got a haircut!\p"
+GoldenrodUnderground_Text_PokemaniacIsaiahSeen:
+    .string "My Pokémon just got a tongue stud!\p"
     .string "I'll show you how strong it is!$"
 
-GoldenrodUnderground_Text_PokemaniacIssacBeaten:
-    .string "Aiyeeee!$"
+GoldenrodUnderground_Text_PokemaniacIsaiahBeaten:
+    .string "Fuck!$"
 
-GoldenrodUnderground_Text_PokemaniacIssacAfterBattle:
+GoldenrodUnderground_Text_PokemaniacIsaiahAfterBattle:
     .string "Your Pokémon will like you more if\n"
-    .string "you give them haircuts.$"
+    .string "you give them tongue studs.\p"
+	.string "You can find tongue studs in the\n"
+	.string "Strolex region.\p"
+	.string "Wait, that game's not out yet…$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldSeen:
     .string "I think you have some rare Pokémon\n"

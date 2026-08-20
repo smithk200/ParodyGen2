@@ -17,8 +17,6 @@ Route119_OnTransition:
 	end
 
 Route119_EventScript_MoveInstituteWorkersDownstairs::
-	setflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
 	setvar VAR_WEATHER_INSTITUTE_STATE, 2
 	return
 
@@ -105,6 +103,18 @@ Route119_EventScript_GiveFlyHM::
 	return
 
 Route119_EventScript_RivalExitScottArrive::
+	end
+
+Route119_EventScript_BattlePeterGriffin::
+	trainerbattle_single TRAINER_PETER_GRIFFIN_ROUTE_119, Route119_Text_PeterGriffinIntro, Route119_Text_PeterGriffinDefeat, Route119_EventScript_DefeatedPeterGriffin
+	end
+
+Route119_EventScript_DefeatedPeterGriffin::
+	msgbox Route119_Text_PeterGriffin_DefeatText, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PETER_GRIFFIN_ROUTE_119, Route119_PeterGriffin_Movement
+	waitmovement 0
+	removeobject LOCALID_PETER_GRIFFIN_ROUTE_119
+	setflag FLAG_HIDE_PETER_GRIFFIN_ROUTE_119
 	end
 
 Route119_Movement_PlayerWatchRivalExit1:
@@ -199,6 +209,18 @@ Route119_Movement_ScottExit2:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	step_end
+
+Route119_PeterGriffin_Movement::
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
 	walk_up
 	step_end
 
@@ -499,3 +521,22 @@ Route119_Text_TrainerTipsDecoration:
 	.string "Joining a union could make a\n"
 	.string "difference in whether you keep your job\l"
 	.string "or not.$"
+
+Route119_Text_PeterGriffinIntro:
+	.string "Hey, {PLAYER}!\p"
+	.string "I've gotten stronger since last\n"
+	.string "time!\p"
+	.string "Oh, wait, maybe that's just the\n"
+	.string "beer talking.\p"
+	.string "Ah, let's still battle, I guess.\n"
+	.string "The writers are making me do it!$"
+
+Route119_Text_PeterGriffinDefeat:
+	.string "Why did I battle you, anyway?$"
+
+Route119_Text_PeterGriffin_DefeatText:
+	.string "Aw, crap, you beat me again.\p"
+	.string "I think I'm gonna have to go back\n"
+	.string "to the Clam again.\p"
+	.string "Man, that beer sure is good!\p"
+	.string "WAHAHAHAHAHA!$"

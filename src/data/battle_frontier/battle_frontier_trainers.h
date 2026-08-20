@@ -1347,7 +1347,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .speechLose = {EC_WORD_IF, EC_WORD_ONLY, EC_MOVE(AROMATHERAPY), EC_WORD_WERE, EC_WORD_LESS, EC_WORD_EXPENSIVE},
         .monSet = (const u16[]){FRONTIER_MONS_SCHOOL_KID_2}
     },
-    [FRONTIER_TRAINER_ISSAC] = {
+    [FRONTIER_TRAINER_ISAIAH] = {
         .facilityClass = FACILITY_CLASS_RICH_BOY,
         .trainerName = _("ISSAC"),
         .speechBefore = {EC_WORD_MY, EC_WORD_HOBBY, EC_WORD_QUES, EC_EMPTY_WORD, EC_EMPTY_WORD, EC_EMPTY_WORD},

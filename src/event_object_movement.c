@@ -600,6 +600,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_LeaderElla,                  OBJ_EVENT_PAL_TAG_LEADER_ELLA},
     {gObjectEventPal_Marnie,                  OBJ_EVENT_PAL_TAG_MARNIE},
     {gObjectEventPal_NPC5,                  OBJ_EVENT_PAL_TAG_NPC_5},
+    {gObjectEventPal_Archer,                  OBJ_EVENT_PAL_TAG_ARCHER},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -1449,13 +1450,13 @@ void ResetObjectEvents(void)
 
 static void CreateReflectionEffectSprites(void)
 {
-    u8 spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_REFLECTION_DISTORTION], 0, 0, 31);
+    u8 spriteId = CreateSpriteAtEndUnchecked(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_REFLECTION_DISTORTION], 0, 0, 31);
     gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
     InitSpriteAffineAnim(&gSprites[spriteId]);
     StartSpriteAffineAnim(&gSprites[spriteId], 0);
     gSprites[spriteId].invisible = TRUE;
 
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_REFLECTION_DISTORTION], 0, 0, 31);
+    spriteId = CreateSpriteAtEndUnchecked(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_REFLECTION_DISTORTION], 0, 0, 31);
     gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
     InitSpriteAffineAnim(&gSprites[spriteId]);
     StartSpriteAffineAnim(&gSprites[spriteId], 1);
@@ -1916,7 +1917,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     if (objectEvent->graphicsId & OBJ_EVENT_MON && objectEvent->graphicsId & OBJ_EVENT_MON_SHINY)
         objectEvent->shiny = TRUE;
 
-    spriteId = CreateSprite(spriteTemplate, 0, 0, 0);
+    spriteId = CreateSpriteUnchecked(spriteTemplate, 0, 0, 0);
     if (spriteId == MAX_SPRITES)
     {
         gObjectEvents[objectEventId].active = FALSE;
@@ -2082,7 +2083,7 @@ u8 CreateObjectGraphicsSpriteWithTag(u16 graphicsId, void (*callback)(struct Spr
         LoadObjectEventPalette(spriteTemplate->paletteTag);
     }
 
-    spriteId = CreateSprite(spriteTemplate, x, y, subpriority);
+    spriteId = CreateSpriteUnchecked(spriteTemplate, x, y, subpriority);
 
     Free(spriteTemplate);
 
@@ -2133,7 +2134,7 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    spriteId = CreateSpriteAtEnd(&spriteTemplate, x, y, 0);
+    spriteId = CreateSpriteAtEndUnchecked(&spriteTemplate, x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
@@ -2868,7 +2869,7 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
     lightType = min(lightType, ARRAY_COUNT(gFieldEffectLightTemplates) - 1); // bounds checking
     template = gFieldEffectLightTemplates[lightType];
     LoadSpriteSheetByTemplate(template, 0, 0);
-    sprite = &gSprites[CreateSprite(template, 0, 0, 0)];
+    sprite = &gSprites[CreateSpriteUnchecked(template, 0, 0, 0)];
     if (lightType == 0 && (i = IndexOfSpritePaletteTag(template->paletteTag + 1)) < 16)
         sprite->oam.paletteNum = i;
     else
@@ -3076,7 +3077,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    i = CreateSprite(&spriteTemplate, 0, 0, 0);
+    i = CreateSpriteUnchecked(&spriteTemplate, 0, 0, 0);
     if (i != MAX_SPRITES)
     {
         sprite = &gSprites[i];
@@ -3602,7 +3603,7 @@ void UpdateObjectEventsForCameraUpdate(s16 x, s16 y)
 // and tracks x/y movement distances for the camera so it knows where to move.
 u8 AddCameraObject(u8 followSpriteId)
 {
-    u8 spriteId = CreateSprite(&sCameraSpriteTemplate, 0, 0, 4);
+    u8 spriteId = CreateSpriteUnchecked(&sCameraSpriteTemplate, 0, 0, 4);
 
     gSprites[spriteId].invisible = TRUE;
     gSprites[spriteId].sCamera_FollowSpriteId = followSpriteId;

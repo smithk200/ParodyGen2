@@ -723,6 +723,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_NATE                     0x1183
 #define OBJ_EVENT_PAL_TAG_LEADER_ELLA              0x1184
 #define OBJ_EVENT_PAL_TAG_MARNIE                   0x1185
+#define OBJ_EVENT_PAL_TAG_ARCHER                   0x1186
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

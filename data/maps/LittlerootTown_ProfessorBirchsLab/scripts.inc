@@ -463,11 +463,48 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedJohtoStarter::
 LittlerootTown_ProfessorBirchsLab_EventScript_Birch::
 	lock
 	faceplayer
-	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon
-	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GrassyPatchWaiting
-	goto_if_unset FLAG_HAS_MATCH_CALL, LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
-	goto_if_unset FLAG_ENABLE_PROF_BIRCH_MATCH_CALL, EventScript_RegisterProfBirch
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
+	goto_if_set FLAG_RECEIVED_UNOVA_STARTER, LittlerootTown_ProfessorBirchsLab_EventScript_Birch_ReceivedStarter
+	msgbox LittlerootTown_ProfessorBirchsLab_TextBirch, MSGBOX_AUTOCLOSE
+	dynmultichoice 0, 0, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, LittlerootTown_ProfessorBirchsLab_TextSnivy, LittlerootTown_ProfessorBirchsLab_TextTepig, LittlerootTown_ProfessorBirchsLab_TextOshawott
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_Snivy
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_Tepig
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_Oshawott
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Snivy::
+	bufferspeciesname STR_VAR_1, SPECIES_SNIVY
+	givemon SPECIES_SNIVY, 5
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNIVY
+	call Common_EventScript_GiftMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedUnovaStarter
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Tepig::
+	bufferspeciesname STR_VAR_1, SPECIES_TEPIG
+	givemon SPECIES_TEPIG, 5
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TEPIG
+	call Common_EventScript_GiftMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedUnovaStarter
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Oshawott::
+	bufferspeciesname STR_VAR_1, SPECIES_OSHAWOTT
+	givemon SPECIES_OSHAWOTT, 5
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_OSHAWOTT
+	call Common_EventScript_GiftMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedUnovaStarter
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedUnovaStarter::
+	setflag FLAG_RECEIVED_UNOVA_STARTER
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_TakeGoodCareOfStarter, MSGBOX_AUTOCLOSE
+	release
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Birch_ReceivedStarter::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_ReceivedStarter, MSGBOX_DEFAULT
+	release
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon::
@@ -657,17 +694,16 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall::
 	end
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
-	.string "Hunh? Prof. Birch?\p"
-	.string "The Prof's away on fieldwork.\n"
-	.string "Ergo, he isn't here.\p"
-	.string "Oh, let me explain what fieldwork is.\p"
-	.string "It is to study things in the natural\n"
-	.string "environment, like fields and mountains,\l"
-	.string "instead of a laboratory.\p"
-	.string "The Prof isn't one for doing desk work.\n"
-	.string "He's the type of person who would\l"
-	.string "rather go outside and experience\l"
-	.string "things than read about them here.$"
+	.string "Oh? Prof. Birch?\p"
+	.string "The Prof's usually away on fieldwork.\n"
+	.string "He used to be out all the time, dammit!\p"
+	.string "But now he just sits here and gives\n"
+	.string "random starters to people.\p"
+	.string "Fuck that lazy son of a bitch!\p"
+	.string "Dammit, I wish he could leave so that\n"
+	.string "I can play Real Racing 3!\p"
+	.string "Oh, wait, it shut down?\p"
+	.string "GOD DAMN IT!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 	.string "The Prof isn't one for doing desk work.\n"
@@ -992,3 +1028,31 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "we meet. I'll be waiting!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
+
+LittlerootTown_ProfessorBirchsLab_TextBirch:
+	.string "Hi there!\p"
+	.string "I'm Professor Birch, or Prof. Birch for\n"
+	.string "short.\p"
+	.string "Since I'm such a nice guy, I'll let\n"
+	.string "you have one of the Unova starters!\p"
+	.string "Which one will you choose?$"
+
+LittlerootTown_ProfessorBirchsLab_TextSnivy:
+	.string "Snivy$"
+
+LittlerootTown_ProfessorBirchsLab_TextTepig:
+	.string "Tepig$"
+
+LittlerootTown_ProfessorBirchsLab_TextOshawott:
+	.string "Oshawott$"
+
+LittlerootTown_ProfessorBirchsLab_Text_TakeGoodCareOfStarter:
+	.string "Alright, now you take good care\n"
+	.string "of that little guy, okay?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedStarter:
+	.string "Whoa there, little race car!\n"
+	.string "You can't have more than one Unova\l"
+	.string "starter!\p"
+	.string "My Pokémon, my rules!\p"
+	.string "Hmph!$"

@@ -24,6 +24,12 @@ Route103_EventScript_Rival::
 	goto_if_eq VAR_RESULT, FEMALE, Route103_EventScript_RivalBrendan
 	end
 
+Route103_EventScript_Trigger::
+	goto_if_set FLAG_BADGE24_GET, Common_EventScript_End
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	msgbox Route110_Text_WhatAreYouDoing, MSGBOX_AUTOCLOSE
+	end
+
 Route103_EventScript_RivalMay::
 	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
 	closemessage
@@ -244,9 +250,7 @@ Route103_EventScript_Andrew::
 	end
 
 Route103_EventScript_Miguel::
-	trainerbattle_single TRAINER_MIGUEL_1, Route103_Text_MiguelIntro, Route103_Text_MiguelDefeated, Route102_EventScript_MiguelRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route103_EventScript_MiguelRematch
+	trainerbattle_double TRAINER_MIGUEL_1, Route103_Text_MiguelIntro, Route103_Text_MiguelDefeated, Common_Text_NotEnoughMons
 	msgbox Route103_Text_MiguelPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -348,3 +352,15 @@ Route103_Text_RouteSign:
 	.string "Route 103\n"
 	.string "{DOWN_ARROW} Oldale Town$"
 
+Route103_Text_MiguelIntro:
+	.string "My Pokémon are ferocious!\n"
+	.string "Don't be shy--I'll show you!$"
+
+Route103_Text_MiguelDefeated:
+	.string "Oh, my giddy aunt!\n"
+	.string "My superb Pokémon!$"
+
+Route103_Text_MiguelPostBattle:
+	.string "My delightful Pokémon looks--\n"
+	.string "Ah, fuck this, man.\p"
+	.string "I can't put up with this shit anymore.$"

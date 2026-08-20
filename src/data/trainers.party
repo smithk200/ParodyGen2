@@ -1854,6 +1854,10 @@ Swirlix
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Vigoroth
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_HARRIS ===
 Name: Harris
 Class: Biker
@@ -3513,9 +3517,17 @@ Pic: Parasol Lady
 Gender: Male
 Music: Hg Girl 2
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Pikachu
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Torterra
+Level: 23
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Primarina
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -6890,18 +6902,22 @@ Pic: Pokefan M
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Pikachu
+Ho Oh @ Weakness Policy
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Ponyta
+Lugia @ Weakness Policy
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ISSAC ===
-Name: Issac
+Cresselia @ Weakness Policy
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ISAIAH ===
+Name: Isaiah
 Class: Pokemaniac
 Pic: Pokemaniac
 Gender: Male
@@ -6910,6 +6926,18 @@ Double Battle: No
 AI: Check Bad Move
 
 Lickitung
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lickilicky
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lucario
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Vaporeon
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10029,7 +10057,15 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Happiny
+Chansey
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Maushold
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ursaring
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10074,17 +10110,26 @@ Pic: Super Nerd
 Gender: Male
 Music: Hg Suspicious 1
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Voltorb
+Electrode
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magnemite
+Magneton
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Porygon
+Luxray
+Level: 14
+Ability: Intimidate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Kilowattrel
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Bellibolt
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10097,11 +10142,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Murkrow
+Tranquill
 Level: 59
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Pidgeot
+Swanna
 Level: 59
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10177,11 +10222,15 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Teddiursa
+Ursaring
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Furret
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Vigoroth
 Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10466,7 +10515,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Meowth
+Seymour (Persian)
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seymour (Persian Alola)
 Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -15177,6 +15230,69 @@ Steve (Rattata)
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_PCHAL ===
+Name: Jan
+Class: Pkmn Trainer 1
+Pic: Rich Boy
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Smart Trainer
+
+Plato (Ursaluna Bloodmoon) @ Normal Gem
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Dig
+- Slash
+- Aerial Ace
+- Charm
+
+Voltaire (Thundurus) @ Electric Gem
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Thunder Wave
+- Thunder Punch
+- Electroweb
+- Volt Switch
+
+MF DOOM (Urshifu) @ Focus Sash
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Surging Strikes
+- Close Combat
+- Aqua Jet
+- Rock Smash
+
+Earhart (Dragapult) @ Dragon Fang
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Dragon Dance
+- Dragon Darts
+- Sucker Punch
+- Phantom Force
+
+David Bowie (Absol) @ Muscle Band
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Detect
+- Sucker Punch
+- Knock Off
+- Rock Smash
+
+Nietzsche (Cresselia) @ Wise Glasses
+Level: 100
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Spe
+- Moonlight
+- Toxic
+- Moonblast
+- Psychic
+
 === TRAINER_ELI ===
 Name: Eli
 Class: Hiker
@@ -15290,6 +15406,7 @@ Palafin @ Leftovers
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk  / 252 Spe
+Adamant Nature
 Ability: Zero to Hero
 - Jet Punch
 - Flip Turn
@@ -15300,6 +15417,7 @@ Drednaw @ Wide Lens
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk  / 252 Spe
+Adamant Nature
 - Liquidation
 - Earthquake
 - Skitter Smack
@@ -15309,6 +15427,7 @@ Walking Wake @ Wise Glasses
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA  / 252 Spe
+Modest Nature
 - Flamethrower
 - Hydro Steam
 - Dragon Pulse
@@ -15319,6 +15438,7 @@ Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA  / 252 Spe
 Ability: Rain Dish
+Modest Nature
 - Giga Drain
 - Surf
 - Ice Beam
@@ -15329,6 +15449,7 @@ Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA  / 252 Spe
 Ability: Drought
+Modest Nature
 - Flamethrower
 - Solar Beam
 - Air Slash
@@ -15339,6 +15460,7 @@ Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 56 Atk / 200 SpA / 252 Spe
 Ability: Drizzle
+Modest Nature
 - Water Spout
 - Ice Beam
 - Thunder
@@ -16037,55 +16159,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JUAN_3 ===
-Name: Juan
-Class: Leader
-Pic: Leader Juan
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: Yes
-AI: Basic Trainer
-
-Poliwhirl
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Hypnosis
-- Rain Dance
-- Protect
-- Hydro Pump
-
-Whiscash
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Pulse
-- Double Team
-- Fissure
-
-Walrein
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Body Slam
-- Protect
-- Ice Beam
-
-Crawdaunt @ Chesto Berry
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rest
-- Guillotine
-- Taunt
-- Double Team
-
-Kingdra @ Chesto Berry
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Water Pulse
-- Double Team
-- Ice Beam
-- Rest
 
 === TRAINER_PETER_GRIFFIN_1 ===
 Name: Griffin
@@ -16170,7 +16243,7 @@ EVs: 4 HP / 252 SpA / 252 Spe
 - Nasty Plot
 - Shadow Ball
 
-Lois (Meloetta) (F) @ Passho Berry
+Lois (Meloetta) (F) @ Weakness Policy
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
@@ -16200,6 +16273,7 @@ EVs: 4 HP / 252 Atk / 252 Spe
 Meg (Bewear) (F) @ Lum Berry
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
 - Baby Doll Eyes
 - Strength
 - Brutal Swing
@@ -16208,6 +16282,77 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Chris (Cetitan) (M) @ Never Melt Ice
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Avalanche
+- Flail
+- Take Down
+- Ice Shard
+
+=== TRAINER_PETER_GRIFFIN_ROUTE_119 ===
+Name: Griffin
+Class: Peter
+Pic: Peter Griffin
+Gender: Male
+Music: HG Boy 1
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
+Is Dynamic: Yes
+
+Brian (Lucario) (M) @ Focus Sash
+Level: 50
+Modifier: -2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Nasty Plot
+- Shadow Ball
+
+Lois (Meloetta) (F) @ Leftovers
+Level: 53
+Modifier: -1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Thunderbolt
+- Shadow Ball
+- Toxic
+
+Quagmire (Quagsire) (M) @ Rindo Berry
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Waterfall
+- Bulldoze
+- Zen Headbutt
+- Toxic
+
+Stewie (Mew) (M) @ Wise Glasses
+Level: 53
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Nasty Plot
+- Psychic
+- Flamethrower
+- Dazzling Gleam
+
+Meg (Delphox) (F) @ Lum Berry
+Level: 55
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Modifier: 2
+- Mystical Fire
+- Psychic
+- Will O Wisp
+- Shadow Ball
+
+Chris (Cetitan) (M) @ Never Melt Ice
+Level: 56
+Modifier: 3
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
 - Avalanche
 - Flail
 - Take Down
@@ -17695,12 +17840,64 @@ Class: Pokefan
 Pic: Pokefan M
 Gender: Male
 Music: Twins
-Double Battle: No
-AI: Check Bad Move
+Double Battle: Yes
+AI: Smart Trainer
 
-Skitty @ Oran Berry
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sylveon @ Light Clay
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Moonblast
+- Light Screen
+- Reflect
+- Calm Mind
+
+Iron Jugulis @ Dark Gem
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Tailwind
+- Scary Face
+- Dark Pulse
+- Air Slash
+
+Sirfetchd @ Leek
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Scrappy
+- Detect
+- Leaf Blade
+- Swords Dance
+- Brick Break
+
+Overqwil @ Muscle Band
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+Ability: Intimidate
+- Mortal Spin
+- Poison Jab
+- Aqua Jet
+- Swords Dance
+
+Sneasler @ White Herb
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Dire Claw
+- Slash
+- Hone Claws
+- Close Combat
+
+Lunala @ Wise Glasses
+Level: 99
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Wide Guard
+- Moonlight
+- Psychic
+- Shadow Ball
 
 === TRAINER_MIKE_1 ===
 Name: Mike
@@ -18121,18 +18318,71 @@ Tentacool
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_PHOEBE2 ===
-Name: Phoebe
-Class: Pkmn Trainer 1
-Pic: Hiker
+=== TRAINER_EDWARD_2 ===
+Name: Edward
+Class: Psychic
+Pic: Psychic M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Steve (Rattata)
-Level: 50
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gardevoir
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Espeon
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Alakazam
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Scream Tail
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Reuniclus
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Solgaleo
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+=== TRAINER_EDWIN ===
+Name: Edwin
+Class: Triathlete
+Pic: Cycling Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Dodrio
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Inteleon
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Rillaboom
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Pyroar
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Unfezant
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Noivern
+Level: 95
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_PRESLEY ===
 Name: Presley
@@ -18530,19 +18780,6 @@ AI: Check Bad Move
 
 Oddish
 Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_SANS_3 ===
-Name: Sans
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Steve (Rattata)
-Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SANS_4 ===

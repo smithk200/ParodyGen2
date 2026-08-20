@@ -607,7 +607,7 @@ static void StartSecretBaseCaveFieldEffect(void)
 bool8 FldEff_SecretPowerCave(void)
 {
     AdjustSecretPowerSpritePixelOffsets();
-    CreateSprite(&sSpriteTemplate_SecretPowerCave,
+    CreateSpriteUnchecked(&sSpriteTemplate_SecretPowerCave,
                  gSprites[gPlayerAvatar.spriteId].oam.x + gFieldEffectArguments[5],
                  gSprites[gPlayerAvatar.spriteId].oam.y + gFieldEffectArguments[6],
                  148);
@@ -676,7 +676,7 @@ bool8 FldEff_SecretPowerTree(void)
 
     AdjustSecretPowerSpritePixelOffsets();
 
-    CreateSprite(&sSpriteTemplate_SecretPowerTree,
+    CreateSpriteUnchecked(&sSpriteTemplate_SecretPowerTree,
                  gSprites[gPlayerAvatar.spriteId].oam.x + gFieldEffectArguments[5],
                  gSprites[gPlayerAvatar.spriteId].oam.y + gFieldEffectArguments[6],
                  148);
@@ -742,7 +742,7 @@ bool8 FldEff_SecretPowerShrub(void)
 {
     AdjustSecretPowerSpritePixelOffsets();
 
-    CreateSprite(&sSpriteTemplate_SecretPowerShrub,
+    CreateSpriteUnchecked(&sSpriteTemplate_SecretPowerShrub,
                  gSprites[gPlayerAvatar.spriteId].oam.x + gFieldEffectArguments[5],
                  gSprites[gPlayerAvatar.spriteId].oam.y + gFieldEffectArguments[6],
                  148);
@@ -1018,7 +1018,7 @@ void DoSecretBaseGlitterMatSparkle(void)
 
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 4);
 
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SPARKLE], x, y, 0);
+    spriteId = CreateSpriteAtEndUnchecked(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SPARKLE], x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         gSprites[spriteId].coordOffsetEnabled = TRUE;
@@ -1042,7 +1042,7 @@ bool8 FldEff_SandPillar(void)
     switch (GetPlayerFacingDirection())
     {
     case DIR_SOUTH:
-        CreateSprite(&sSpriteTemplate_SandPillar,
+        CreateSpriteUnchecked(&sSpriteTemplate_SandPillar,
                      gSprites[gPlayerAvatar.spriteId].oam.x + 8,
                      gSprites[gPlayerAvatar.spriteId].oam.y + 32,
                      0);
@@ -1050,7 +1050,7 @@ bool8 FldEff_SandPillar(void)
         break;
 
     case DIR_NORTH:
-        CreateSprite(&sSpriteTemplate_SandPillar,
+        CreateSpriteUnchecked(&sSpriteTemplate_SandPillar,
                      gSprites[gPlayerAvatar.spriteId].oam.x + 8,
                      gSprites[gPlayerAvatar.spriteId].oam.y,
                      148);
@@ -1058,7 +1058,7 @@ bool8 FldEff_SandPillar(void)
         break;
 
     case DIR_WEST:
-        CreateSprite(&sSpriteTemplate_SandPillar,
+        CreateSpriteUnchecked(&sSpriteTemplate_SandPillar,
                      gSprites[gPlayerAvatar.spriteId].oam.x - 8,
                      gSprites[gPlayerAvatar.spriteId].oam.y + 16,
                      148);
@@ -1066,7 +1066,7 @@ bool8 FldEff_SandPillar(void)
         break;
 
     case DIR_EAST:
-        CreateSprite(&sSpriteTemplate_SandPillar,
+        CreateSpriteUnchecked(&sSpriteTemplate_SandPillar,
                      gSprites[gPlayerAvatar.spriteId].oam.x + 24,
                      gSprites[gPlayerAvatar.spriteId].oam.y + 16,
                      148);
@@ -1295,7 +1295,7 @@ u8 CreateRecordMixingLights(void)
 
     LoadSpritePalette(&sSpritePalette_RecordMixLights);
 
-    spriteId = CreateSprite(&sSpriteTemplate_RecordMixLights, 0, 0, 82);
+    spriteId = CreateSpriteUnchecked(&sSpriteTemplate_RecordMixLights, 0, 0, 82);
 
     if (spriteId == MAX_SPRITES)
     {

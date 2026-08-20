@@ -741,3 +741,4 @@ const u16 gObjectEventPal_Nate[] = INCGFX_U16("graphics/object_events/palettes/n
 const u16 gObjectEventPal_LeaderElla[] = INCGFX_U16("graphics/object_events/palettes/leader_ella.pal", ".gbapal");
 const u16 gObjectEventPal_Marnie[] = INCGFX_U16("graphics/object_events/palettes/marnie.pal", ".gbapal");
 const u16 gObjectEventPal_NPC5[] = INCGFX_U16("graphics/object_events/palettes/npc_5.pal", ".gbapal");
+const u16 gObjectEventPal_Archer[] = INCGFX_U16("graphics/object_events/palettes/archer.pal", ".gbapal");

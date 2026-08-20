@@ -27,16 +27,8 @@ OldaleTown_EventScript_Girl::
 OldaleTown_EventScript_MartEmployee::
 	lock
 	faceplayer
-	goto_if_set FLAG_GARBAGEFLAG, OldaleTown_EventScript_ExplainPotion
-	goto_if_set FLAG_TEMP_1, OldaleTown_EventScript_ExplainPotion
-	setflag FLAG_TEMP_1
-	playbgm MUS_FOLLOW_ME, FALSE
 	msgbox OldaleTown_Text_IWorkAtPokemonMart, MSGBOX_DEFAULT
-	closemessage
-	switch VAR_FACING
-	case DIR_SOUTH, OldaleTown_EventScript_GoToMartSouth
-	case DIR_NORTH, OldaleTown_EventScript_GoToMartNorth
-	case DIR_EAST, OldaleTown_EventScript_GoToMartEast
+	release
 	end
 
 OldaleTown_EventScript_GoToMartSouth::
@@ -263,8 +255,13 @@ OldaleTown_Text_SavingMyProgress:
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"
-	.string "I work at a Pokémon Mart.\p"
-	.string "Can I get you to come with me?$"
+	.string "I work at a Pokémon Mart!\p"
+	.string "Did you know…\p"
+	.string "That you can buy items at a\n"
+	.string "Pokémon Mart?\p"
+	.string "You can buy Potions, Poké Balls,\n"
+	.string "and even Antidotes here!\p"
+	.string "Isn't that just the greatest?$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a Pokémon Mart.\n"
@@ -294,10 +291,11 @@ OldaleTown_Text_DiscoveredFootprints:
 	.string "them, okay?$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
-	.string "I finished sketching the footprints of\n"
-	.string "a rare Pokémon.\p"
-	.string "But it turns out they were only my\n"
-	.string "own footprints…$"
+	.string "Sometimes, when I'm bored, I like\n"
+	.string "to block other people from going\l"
+	.string "where they want to go.\p"
+	.string "They don't really need to get there,\n"
+	.string "anyway!$"
 
 OldaleTown_Text_MayLetsGoBack:
 	.string "May: {PLAYER}{KUN}!\n"

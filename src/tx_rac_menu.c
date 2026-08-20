@@ -1253,8 +1253,8 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 choosen,
     if (active)
     {
         color_red[0] = TEXT_COLOR_TRANSPARENT;
-        color_red[1] = TEXT_COLOR_OPTIONS_RED_FG;
-        color_red[2] = TEXT_COLOR_OPTIONS_RED_SHADOW;
+        color_red[1] = TEXT_COLOR_OPTIONS_RED_SHADOW;
+        color_red[2] = TEXT_COLOR_OPTIONS_RED_FG; //this seems to be inverted on the tx_rac_menu.c for some reason
         color_gray[0] = TEXT_COLOR_TRANSPARENT;
         color_gray[1] = TEXT_COLOR_OPTIONS_GRAY_FG;
         color_gray[2] = TEXT_COLOR_OPTIONS_GRAY_SHADOW;
@@ -1262,8 +1262,8 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 choosen,
     else
     {
         color_red[0] = TEXT_COLOR_TRANSPARENT;
-        color_red[1] = TEXT_COLOR_OPTIONS_RED_DARK_FG;
-        color_red[2] = TEXT_COLOR_OPTIONS_RED_DARK_SHADOW;
+        color_red[1] = TEXT_COLOR_OPTIONS_RED_DARK_SHADOW;
+        color_red[2] = TEXT_COLOR_OPTIONS_RED_DARK_FG;
         color_gray[0] = TEXT_COLOR_TRANSPARENT;
         color_gray[1] = TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color_gray[2] = TEXT_COLOR_OPTIONS_GRAY_SHADOW;

@@ -1777,9 +1777,7 @@ static void Task_HandleInput(u8 taskId)
         }
         else if (JOY_NEW(START_BUTTON))
         {
-            if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
-            {
-                if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
                 {
                     if (ShouldShowRename())
                     {
@@ -1800,7 +1798,18 @@ static void Task_HandleInput(u8 taskId)
                     PlaySE(SE_SELECT);
                     BeginCloseSummaryScreen(taskId);
                 }
-                else if (IS_MOVE_PAGE(sMonSummaryScreen->currPageIndex))
+            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            {
+                BeginCloseSummaryScreen(taskId);
+                HandleMoveRelearnerInput(taskId);
+                PlaySE(SE_SELECT);
+            }
+        }
+        else if (JOY_NEW(A_BUTTON))
+        {
+            if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
+            {  
+                if (IS_MOVE_PAGE(sMonSummaryScreen->currPageIndex))
                 {
                     PlaySE(SE_SELECT);
                     SwitchToMoveSelection(taskId);

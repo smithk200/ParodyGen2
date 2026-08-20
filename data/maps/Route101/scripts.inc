@@ -11,61 +11,20 @@ Route101_OnFrame:
 	map_script_2 VAR_GARBAGEVAR, 0, Route101_EventScript_HideMapNamePopup
 	.2byte 0
 
+
 Route101_EventScript_HideMapNamePopup::
-	setflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
 	end
 
 Route101_EventScript_StartBirchRescue::
-	lockall
-	playbgm MUS_HELP, TRUE
-	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
-	closemessage
-	setobjectxy LOCALID_ROUTE101_BIRCH, 0, 15
-	setobjectxy LOCALID_ROUTE101_ZIGZAGOON, 0, 16
-	applymovement LOCALID_PLAYER, Route101_Movement_EnterScene
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunAway1
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunInCircles
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_BIRCH, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchFaceZigzagoon
-	waitmovement 0
-	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_GARBAGEVAR, 2
-	releaseall
 	end
 
 Route101_EventScript_PreventExitSouth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitSouth
-	waitmovement 0
-	releaseall
 	end
 
 Route101_EventScript_PreventExitWest::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitWest
-	waitmovement 0
-	releaseall
 	end
 
 Route101_EventScript_PreventExitNorth::
-	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_PLAYER, Route101_Movement_PreventExitNorth
-	waitmovement 0
-	releaseall
 	end
 
 Route101_Movement_PreventExitSouth:
@@ -81,103 +40,22 @@ Route101_Movement_PreventExitNorth:
 	step_end
 
 Route101_Movement_ZigzagoonChaseInCircles:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
 	step_end
 
 Route101_Movement_ZigzagoonChase1:
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	step_end
-
-@ Leftover data? This command is unused.
 	step_end
 
 Route101_Movement_ZigzagoonFaceBirch:
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
-	walk_in_place_fast_left
 	step_end
 
 Route101_Movement_EnterScene:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_in_place_faster_left
 	step_end
 
 Route101_Movement_BirchRunInCircles:
 	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
 	step_end
 
 Route101_Movement_BirchRunAway1:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
 	walk_fast_up
 	walk_fast_up
 	step_end
@@ -186,10 +64,7 @@ Route101_Movement_BirchRunAway1:
 	step_end
 
 Route101_Movement_BirchFaceZigzagoon:
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
-	walk_in_place_fast_right
+
 	step_end
 
 Route101_Movement_Unused1:
@@ -207,8 +82,17 @@ Route101_EventScript_Youngster::
 	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
 	end
 
+Route110_EventScript_WhatAreYouDoing::
+	goto_if_set FLAG_DEFEATED_PCHAL, Common_EventScript_End
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	msgbox Route110_Text_WhatAreYouDoing, MSGBOX_AUTOCLOSE
+	end
+
 Route101_EventScript_Boy::
-	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
+	goto_if_set FLAG_RECEIVED_UNOVA_STARTER, Route101_Text_PchalPreEliteFour
+	trainerbattle_double TRAINER_PCHAL, Route101_Text_PchalIntro, Route101_Text_PchalDefeat, Common_Text_NotEnoughMons
+	msgbox Route101_Text_PchalPostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_DEFEATED_PCHAL
 	end
 
 Route101_EventScript_RouteSign::
@@ -216,33 +100,6 @@ Route101_EventScript_RouteSign::
 	end
 
 Route101_EventScript_BirchsBag::
-	lock
-	faceplayer
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_RESCUED_BIRCH
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_ROUTE101_ZIGZAGOON
-	setobjectxy LOCALID_PLAYER, 6, 13
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	special ChooseStarter
-	@waitstate
-	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
-	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
-	special HealPlayerParty
-	setflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 2
-	setvar VAR_GARBAGEVAR, 3
-	clearflag FLAG_GARBAGEFLAG
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	@waitstate
-	release
 	end
 
 Route101_EventScript_HideMayInBedroom::
@@ -271,21 +128,15 @@ Route101_Text_DontLeaveMe:
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "Prof. Birch: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "Pokémon when I was jumped.\p"
-	.string "You saved me.\n"
-	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my Pokémon Lab later, okay?$"
+	.string "Okay?$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If Pokémon get tired, take them to\n"
+	.string "Just in case you don't know…\p"
+	.string "If your Pokémon are running low\n"
+	.string "on health, take them to\n"
 	.string "a Pokémon Center.\p"
-	.string "There's a Pokémon Center in Oldale\n"
-	.string "Town right close by.$"
+	.string "If you didn't know, there's a Pokémon\n"
+	.string "Center in Oldale Town to the north.$"
 
 Route101_Text_WildPokemonInTallGrass:
 	.string "Wild Pokémon will jump out at you in\n"
@@ -297,3 +148,26 @@ Route101_Text_RouteSign:
 	.string "Route 101\n"
 	.string "{UP_ARROW} Oldale Town$"
 
+Route101_Text_PchalIntro:
+	.string "I have made it up my mountain.\p"
+	.string "Will you make it up yours?$"
+
+Route101_Text_PchalDefeat:
+	.string "Pokémon Dark Gold? Merely a cakewalk.\p"
+	.string "The real challenge is in Pokémon\n"
+	.string "Run and Bun.$"
+
+Route101_Text_PchalPostBattle:
+	.string "Go on.\p"
+	.string "Birch is waiting.$"
+
+Common_Text_NotEnoughMons:
+	.string "You don't have enough Pokémon.$"
+
+Route110_Text_WhatAreYouDoing:
+	.string "What the hell do you think\n"
+	.string "you're doing, nimrod?$"
+
+Route101_Text_PchalPreEliteFour:
+	.string "I wish you the best of luck\n"
+	.string "at the Elite Four.$"

@@ -112,10 +112,6 @@ LittlerootTown_MaysHouse_1F_Movement_RivalMomApproach:
 RivalsHouse_1F_EventScript_RivalMom::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_RIVAL_ROUTE103, RivalsHouse_1F_EventScript_GoHomeEverySoOften
-	goto_if_set FLAG_GARBAGEFLAG, RivalsHouse_1F_EventScript_RivalIsOnRoute103
-	goto_if_eq VAR_GARBAGEVAR, 3, RivalsHouse_1F_EventScript_RivalTooBusy
-	special GetRivalSonDaughterString
 	msgbox RivalsHouse_1F_Text_LikeChildLikeFather, MSGBOX_DEFAULT
 	release
 	end
@@ -329,11 +325,13 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "Our {STR_VAR_1} is upstairs, I think.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
-	.string "Like child, like father.\p"
 	.string "My husband is as wild about Pokémon\n"
 	.string "as our child.\p"
 	.string "If he's not at his Lab, he's likely\n"
-	.string "scrabbling about in grassy places.$"
+	.string "scrabbling about in grassy places.\p"
+	.string "My child, on the other hand, made\n"
+	.string "it past the Elite Four two years ago.\p"
+	.string "Though the Elite Four's changed now.$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
 	.string "That {RIVAL}!\p"

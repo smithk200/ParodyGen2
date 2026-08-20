@@ -791,9 +791,9 @@
 #define TRAINER_RACHAEL                  784
 #define TRAINER_RALPH                  785
 #define TRAINER_NORMAN_FORMER_2                    786
-#define TRAINER_NORMAN_FORMER_3                    787
-#define TRAINER_NORMAN_FORMER_4                    788
-#define TRAINER_NORMAN_FORMER_5                    789
+#define TRAINER_EDWIN                       787
+#define TRAINER_EDWARD_2                    788
+#define TRAINER_PCHAL                       789
 #define TRAINER_WINONA_2                    790
 #define TRAINER_WINONA_3                    791
 #define TRAINER_WINONA_4                    792
@@ -803,9 +803,9 @@
 #define TRAINER_TATE_AND_LIZA_4             796
 #define TRAINER_TATE_AND_LIZA_5             797
 #define TRAINER_JUAN_2                      798
-#define TRAINER_JUAN_3                      799
-#define TRAINER_PETER_GRIFFIN_1            800
-#define TRAINER_PETER_GRIFFIN_2             801
+#define TRAINER_PETER_GRIFFIN_1            799
+#define TRAINER_PETER_GRIFFIN_2             800
+#define TRAINER_PETER_GRIFFIN_ROUTE_119     801
 #define TRAINER_CARLENE                      802
 #define TRAINER_JIN                      803
 #define TRAINER_STEVEN                      804
@@ -835,7 +835,7 @@
 #define TRAINER_HORTON                   828
 #define TRAINER_IAN                   829
 #define TRAINER_IRWIN                   830
-#define TRAINER_ISSAC                   831
+#define TRAINER_ISAIAH                   831
 #define TRAINER_OTIS                  832
 #define TRAINER_PARRY                  833
 #define TRAINER_PATON                  834

@@ -169,18 +169,6 @@ Route103_Text_AndrewPostBattle:
 	.string "Gah, I'm still boiling mad…\n"
 	.string "Grrrrr…$"
 
-Route103_Text_MiguelIntro:
-	.string "My Pokémon is delightfully adorable!\n"
-	.string "Don't be shy--I'll show you!$"
-
-Route103_Text_MiguelDefeated:
-	.string "Oh, my gosh!\n"
-	.string "My darling Pokémon!$"
-
-Route103_Text_MiguelPostBattle:
-	.string "My delightful Pokémon looks darling\n"
-	.string "even when it's fainted!$"
-
 Route103_Text_MiguelRegister:
 	.string "I'll get you to come out and look in\n"
 	.string "on my delightful Pokémon again!$"

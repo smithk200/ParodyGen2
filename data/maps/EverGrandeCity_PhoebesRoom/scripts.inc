@@ -66,7 +66,7 @@ EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 	.string "That penguin you saw before?\n"
 	.string "He's nowhere as good as me.\p"
 	.string "Are you ready?\n"
-	.string "LET'sGO!!!!!!$"
+	.string "LET'S GO!!!!!!$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
 	.string "Aw, man!\n"

@@ -1931,6 +1931,14 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             fprintf(f, ",\n");
         }
 
+        if (trainer->isDynamic)
+        {
+            fprintf(f, "#line %d\n", trainer->dynamic_line);
+            fprintf(f, "        .isDynamic = ");
+            fprint_bool(f, trainer->isDynamic);
+            fprintf(f, ",\n");
+        }
+
         if (trainer->starting_status_n > 0)
         {
             fprintf(f, "#line %d\n", trainer->starting_status_line);
@@ -2086,6 +2094,12 @@ static void fprint_trainers(const char *output_path, FILE *f, struct Parsed *par
             {
                 fprintf(f, "#line %d\n", pokemon->level_line);
                 fprintf(f, "            .lvl = %d,\n", pokemon->level);
+            }
+
+            if (pokemon->lvlmodifier_line)
+            {
+                fprintf(f, "#line %d\n", pokemon->lvlmodifier_line);
+                fprintf(f, "            .lvlmodifier = %d,\n", pokemon->lvlmodifier);
             }
 
             if (pokemon->ball_line)

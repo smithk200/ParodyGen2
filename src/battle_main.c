@@ -350,7 +350,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_DRAGON_TAMER] = { _("Dragon Tamer"), 12 },
     [TRAINER_CLASS_NINJA_BOY] = { _("Ninja Boy"), 3 },
     [TRAINER_CLASS_BATTLE_GIRL] = { _("Battle Girl"), 6 },
-    [TRAINER_CLASS_PARASOL_LADY] = { ("Parasol Lady"), 2, BALL_DIVE },
+    [TRAINER_CLASS_PARASOL_LADY] = { _("Parasol Lady"), 2, BALL_DIVE },
     [TRAINER_CLASS_TWINS] = { _("Twins"), 3 },
     [TRAINER_CLASS_SAILOR] = { _("Sailor"), 8 },
     [TRAINER_CLASS_COOLTRAINER_2] = { _("Cooltrainer"), 5, BALL_ULTRA },
@@ -5679,39 +5679,53 @@ static void HandleEndTurn_BattleWon(void)
             break;
         case TRAINER_CLASS_LEADER:
             {
-                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1))
+                if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) //Dark Gold
+                    if (gMapHeader.region == REGION_HOENN)
+                        PlayBGM(MUS_VICTORY_GYM_LEADER);
+                    else
+                        PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1) //Kanto
+                    PlayBGM(MUS_RG_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2) //Sinnoh
+                    PlayBGM(MUS_DP_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) //Johto
                     PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
-                    PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-                else if((gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
-                    PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4) //Hoenn
+                    PlayBGM(MUS_VICTORY_GYM_LEADER);
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
                     {
                         if((Random() % 3) == 1)
                             PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
                         if((Random() % 3) == 2)
-                            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                            PlayBGM(MUS_DP_VICTORY_GYM_LEADER);
                         else
-                            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                            PlayBGM(MUS_VICTORY_GYM_LEADER);
                     }
             }
             break;
         default:
             {
-                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1))
+                if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) //Dark Gold
+                    if (gMapHeader.region == REGION_HOENN)
+                        PlayBGM(MUS_VICTORY_TRAINER);
+                    else
+                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1) //Kanto
+                    PlayBGM(MUS_RG_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2) //Sinnoh
+                    PlayBGM(MUS_DP_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) //Johto
                     PlayBGM(MUS_HG_VICTORY_TRAINER);
-                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
-                    PlayBGM(MUS_HG_VICTORY_TRAINER);
-                else if((gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
-                    PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4) //Hoenn
+                    PlayBGM(MUS_VICTORY_TRAINER);
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
                 {
                     if((Random() % 3) == 1)
                         PlayBGM(MUS_HG_VICTORY_TRAINER);
                     if((Random() % 3) == 2)
-                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                        PlayBGM(MUS_RG_VICTORY_TRAINER);
                     else
-                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                        PlayBGM(MUS_DP_VICTORY_TRAINER);
                 }  
             }
             break;

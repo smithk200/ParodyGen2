@@ -321,7 +321,7 @@ CianwoodCity_EventScript_GymSign::
 	end
 
 CianwoodCity_Text_GymSign:
-	.string "Cianwood City Pokémon Gym\p"
+	.string "Cianwood City Pokémon Gym\n"
 	.string "Leader: Bea\p"
 	.string "The kickboxing battle girl!$"
 
@@ -335,7 +335,7 @@ CianwoodCity_EventScript_Pharmacy::
 CianwoodCity_Text_PharmacySign:
 	.string "500 Years of Tradition\p"
 	.string "Cianwood City Pharmacy\p"
-	.string "We Await Your Medicinal Queries$"
+	.string "We Await Your Medicinal Queries!$"
 
 CianwoodCity_EventScript_CaveSign::
 	lock

@@ -30,7 +30,7 @@
       "x": 16,
       "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,8 +41,8 @@
     {
       "local_id": "LOCALID_ROUTE101_BIRCH",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 9,
-      "y": 13,
+      "x": -7,
+      "y": -4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
-      "x": 7,
-      "y": 14,
+      "x": -7,
+      "y": -4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     {
       "local_id": "LOCALID_ROUTE101_ZIGZAGOON",
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
-      "x": 10,
-      "y": 13,
+      "x": -6,
+      "y": -4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_LEFT",
       "movement_range_x": 0,
@@ -81,8 +81,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 5,
-      "y": 11,
+      "x": -6,
+      "y": -4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -94,24 +94,24 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 2,
-      "y": 13,
+      "x": 7,
+      "y": 12,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "Route101_EventScript_Boy",
-      "flag": "FLAG_GARBAGEFLAG"
+      "flag": "0"
     }
   ],
   "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
-      "y": 19,
+      "x": -6,
+      "y": -3,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "1",
@@ -119,8 +119,8 @@
     },
     {
       "type": "trigger",
-      "x": 11,
-      "y": 19,
+      "x": -5,
+      "y": -3,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "1",
@@ -128,8 +128,8 @@
     },
     {
       "type": "trigger",
-      "x": 10,
-      "y": 18,
+      "x": -6,
+      "y": -4,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -137,8 +137,8 @@
     },
     {
       "type": "trigger",
-      "x": 11,
-      "y": 18,
+      "x": -5,
+      "y": -4,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -146,8 +146,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 16,
+      "x": -7,
+      "y": -4,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -155,8 +155,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 15,
+      "x": -7,
+      "y": -5,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -164,8 +164,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 17,
+      "x": -7,
+      "y": -3,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -173,8 +173,8 @@
     },
     {
       "type": "trigger",
-      "x": 6,
-      "y": 18,
+      "x": -7,
+      "y": -2,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
@@ -182,12 +182,39 @@
     },
     {
       "type": "trigger",
-      "x": 7,
-      "y": 13,
+      "x": -6,
+      "y": -5,
       "elevation": 3,
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
       "script": "Route101_EventScript_PreventExitNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route110_EventScript_WhatAreYouDoing"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route110_EventScript_WhatAreYouDoing"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route110_EventScript_WhatAreYouDoing"
     }
   ],
   "bg_events": [
