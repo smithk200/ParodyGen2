@@ -9,27 +9,27 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 11},
-        {FLAG_BADGE02_GET, 16},
-        {FLAG_BADGE03_GET, 21},
-        {FLAG_BADGE04_GET, 25},
-        {FLAG_BADGE05_GET, 38},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_5
-        {FLAG_BADGE06_GET, 38},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_6
-        {FLAG_BADGE07_GET, 38},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_7
-        {FLAG_BADGE08_GET, 45},
-        {FLAG_IS_CHAMPION, 56},
+        {FLAG_BADGE01_GET, 13},
+        {FLAG_BADGE02_GET, 22},
+        {FLAG_BADGE03_GET, 27},
+        {FLAG_BADGE04_GET, 38},
+        {FLAG_RECEIVED_BADGE_5, 44},
+        {FLAG_RECEIVED_BADGE_6, 48},
+        {FLAG_RECEIVED_BADGE_7, 52},
+        {FLAG_BADGE08_GET, 54},
+        {FLAG_IS_CHAMPION, 70},
     };
     static const u32 sLevelCapFlagMapHard[][2] =
     {
-        {FLAG_BADGE01_GET, 8},
-        {FLAG_BADGE02_GET, 15},
-        {FLAG_BADGE03_GET, 20},
-        {FLAG_BADGE04_GET, 23},
-        {FLAG_BADGE05_GET, 29},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_5
-        {FLAG_BADGE06_GET, 33},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_6
-        {FLAG_BADGE07_GET, 37},  //if you want different level caps replace with FLAG_RECEIVED_BADGE_7
-        {FLAG_BADGE08_GET, 42},
-        {FLAG_IS_CHAMPION, 54},
+        {FLAG_BADGE01_GET, 13},
+        {FLAG_BADGE02_GET, 22},
+        {FLAG_BADGE03_GET, 27},
+        {FLAG_BADGE04_GET, 38},
+        {FLAG_RECEIVED_BADGE_5, 44},
+        {FLAG_RECEIVED_BADGE_6, 48},
+        {FLAG_RECEIVED_BADGE_7, 52},
+        {FLAG_BADGE08_GET, 54},
+        {FLAG_IS_CHAMPION, 70},
     };
     u32 i;
     if (gSaveBlock1Ptr->tx_Challenges_LevelCap == 1)

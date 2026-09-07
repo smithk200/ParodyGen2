@@ -39,4 +39,4 @@ GoldenrodDeptStore_Text_3FRocker:
 
 GoldenrodDeptStore_Text_3FDirectory:
     .string "For Victory Seekers\p"
-    .string "3f Battle Collection$"
+    .string "3F Battle Collection$"

@@ -27,7 +27,6 @@ Route110_TrickHousePuzzle1_EventScript_Sally::
 	end
 
 Route110_TrickHousePuzzle1_EventScript_Eddie::
-	trainerbattle_single TRAINER_EDDIE, Route110_TrickHousePuzzle1_Text_EddieIntro, Route110_TrickHousePuzzle1_Text_EddieDefeat
 	msgbox Route110_TrickHousePuzzle1_Text_EddiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -63,7 +62,8 @@ Route110_TrickHousePuzzle1_Text_EddieDefeat:
 
 Route110_TrickHousePuzzle1_Text_EddiePostBattle:
 	.string "I lost my way, I lost a battle, and I'm\n"
-	.string "now even more lost… I can't get out…$"
+	.string "now even more lost… I can't get out…\p"
+	.string "This is so hopeless…$"
 
 Route110_TrickHousePuzzle1_Text_RobinIntro:
 	.string "Just who is the Trick Master?$"

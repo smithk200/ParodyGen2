@@ -1,4 +1,3 @@
-.set LOCALID_ICEPATH1_KIMONO, 9
 IcePath_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
@@ -20,7 +19,7 @@ IcePath_1F_EventScript_Item_HM_Waterfall::
 
 IcePath_1F_EventScript_KimonoGirl::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	goto_if_eq VAR_FACING, DIR_SOUTH, IcePath_1F_EventScript_KimonoGirlPushPrompt
 	msgbox IcePath_1F_Text_Stuck1, MSGBOX_DEFAULT
 	closemessage
@@ -89,7 +88,7 @@ IcePath_Movement_KimonoLeave:
 	step_end
 
 IcePath_1F_Text_Leave:
-	.string "Kimono Girl: .....................$"
+	.string "KIMONO GIRL: .....................$"
 
 IcePath_1F_Text_Stuck1:
     .string "Me oh my... Is that you, {PLAYER}?\n"
@@ -115,7 +114,7 @@ IcePath_1F_Text_Stuck2:
     .string "Would you push my back?$"
 
 IcePath_1F_Text_Shove:
-    .string "....Shove!....$"
+    .string "....SHOVE!....$"
 
 IcePath_1F_Text_Cruel:
     .string "Don't be so cruel.\n"

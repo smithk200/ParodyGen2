@@ -75,12 +75,8 @@ Route111_EventScript_EndCheckSetSandstorm::
 	return
 
 Route111_EventScript_SetWinstratesNotDefeated::
-	clearflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
 	cleartrainerflag TRAINER_VICTOR
-	cleartrainerflag TRAINER_VICTORIA
+	cleartrainerflag TRAINER_VICTORIA_2
 	cleartrainerflag TRAINER_VIVI
 	end
 
@@ -286,7 +282,7 @@ Route111_EventScript_BattleWinstrates::
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VictoriaIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VICTORIA, Route111_Text_VictoriaDefeat
+	trainerbattle_no_intro TRAINER_VICTORIA_2, Route111_Text_VictoriaDefeat
 	applymovement LOCALID_ROUTE111_VICTORIA, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -457,7 +453,7 @@ Route111_EventScript_Becky::
 	end
 
 Route111_EventScript_Dusty::
-	trainerbattle_single TRAINER_DUSTY, Route111_Text_DustyIntro, Route111_Text_DustyDefeat
+	trainerbattle_single TRAINER_NONE, Route111_Text_DustyIntro, Route111_Text_DustyDefeat
 	msgbox Route111_Text_DustyPostBattle, MSGBOX_DEFAULT
 	end
 
@@ -551,7 +547,6 @@ Route111_EventScript_Celia::
 	end
 
 Route111_EventScript_Bryan::
-	trainerbattle_single TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat
 	msgbox Route111_Text_BryanPostBattle, MSGBOX_AUTOCLOSE
 	end
 

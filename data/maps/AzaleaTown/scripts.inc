@@ -348,10 +348,9 @@ AzaleaTown_Movement_KurtLeave:
 
 AzaleaTown_Text_RivalBefore:
 	.string "…Tell me something.\p"
-	.string "Is it true that Team Rocket\n"
-	.string "has returned?\p"
-	.string "What? You beat them? Hah! Quit\n"
-	.string "lying.\p"
+	.string "Is it true that Team Rocket has\n"
+	.string "returned?\p"
+	.string "What? You beat them? Hah! Quit lying.\p"
 	.string "You're not joking?\n"
 	.string "Then let's see how good you are.$"
 
@@ -382,20 +381,24 @@ AzaleaTown_Text_Rocket1:
 	.string "I'm just doing my good deed!$"
 
 AzaleaTown_Text_Rocket2:
-	.string "Do you know about Slowpoke tail?\n"
-	.string "I heard it's tasty!\p"
-	.string "Aren't you glad I told you that?$"
+	.string "We're trying to see if Slowpoke can\n"
+	.string "Mega Evolve into Mega Slowpoke!\p"
+	.string "It's never been done on a Pokémon as\n"
+	.string "weak as Slowpoke, but we'll be the\l"
+	.string "first$"
 
 AzaleaTown_Text_GrampsBefore:
 	.string "The Slowpoke have disappeared\n"
 	.string "from town…\p"
-	.string "I heard their Tails are being\n"
-	.string "sold somewhere.$"
+	.string "I heard they're being quartered?\p"
+	.string "But somehow, they're still alive!\p"
+	.string "The Pokémon world is ever so\n"
+	.string "fascinating!$"
 
 AzaleaTown_Text_GrampsAfter:
 	.string "The Slowpoke have returned.\p"
 	.string "Knowing them, they could've just\n"
-	.string "been fucking around somewhere.$"
+	.string "been dillydallying in the brush.$"
 
 AzaleaTown_Text_Teacher:
 	.string "Did you come to get Kurt to make\n"

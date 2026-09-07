@@ -410,6 +410,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Pewter_Pewter,                                &gTileset_PewterCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Pewter, sDoorAnimPalettes_Pewter},
     {METATILE_CeruleanCity_Cerulean,                        &gTileset_CeruleanCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Cerulean, sDoorAnimPalettes_Cerulean},
     {METATILE_Olivine_6_Vermilion,                         &gTileset_OlivineCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Vermilion, sDoorAnimPalettes_Vermilion},
+    {METATILE_Vermilion_Vermilion,                         &gTileset_Johto_General, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Vermilion, sDoorAnimPalettes_Vermilion},
     {METATILE_LavenderTown_Lavender,                        &gTileset_LavenderTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Lavender, sDoorAnimPalettes_Lavender},
     {METATILE_route34_11_Saffron,                           &gTileset_SaffronCity, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Saffron, sDoorAnimPalettes_Saffron},
     {METATILE_Fuchsia_Fuchsia,                              &gTileset_Fuchsia, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Fuchsia, sDoorAnimPalettes_Fuchsia},
@@ -450,14 +451,14 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 
 //Door anims have a conflict with Hoenn water animations, as they use the same VRAM space (around 432 - 434)
 //When in the BF, the door anims use a different allocation. Anywhere else, default.
-#define DOOR_TILE_START_FRONTIER 1100
+#define DOOR_TILE_START_FRONTIER 72
 #define DOOR_TILE_START 434
 
 static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)
 {
-    if (gMapHeader.mapLayoutId == LAYOUT_GOLDENROD_CITY)
-        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_FRONTIER)), 8 * TILE_SIZE_4BPP);
-    else if (gfx->size == 2 && !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
+    if (!(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
+        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START)), 8 * TILE_SIZE_4BPP);
+    else if (gfx->size == 2 && (IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
     else
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 8 * TILE_SIZE_4BPP);
@@ -486,44 +487,18 @@ static void BuildDoorTiles(u16 *tiles, u16 tileNum, const u8 *paletteNums)
 static void DrawCurrentDoorAnimFrameFrlg(const struct DoorGraphics *gfx, int x, int y, const u8 *paletteNums)
 {
     u16 tiles[8];
-    if (gMapHeader.mapLayoutId != LAYOUT_GOLDENROD_CITY)
-        sDoorAnimTilesInUse = TRUE;
+    u16 tileStart = (!(IsHoennTileset(gMapHeader.mapLayout->primaryTileset))) ? DOOR_TILE_START : DOOR_TILE_START_SIZE1;
 
-    if (gMapHeader.mapLayoutId == LAYOUT_GOLDENROD_CITY)
-    {
-        if (gfx->size == 1)
-        {
-            BuildDoorTiles(tiles, DOOR_TILE_START_FRONTIER, paletteNums);
-            //DrawDoorMetatileAt(x, y, tiles);
-            //x and y refer to where the tiles are drawn on the map, not anything to do with tile addresses.
-            //DebugPrintf("x = %d. y = %d", x, y);
-            //DebugPrintf("tiles = %d.", tiles);
-        }
-            
-
-        else
-        {
-            BuildDoorTiles(tiles, DOOR_TILE_START_FRONTIER, paletteNums);
-            //DrawDoorMetatileAt(x, y - 1, tiles);
-            BuildDoorTiles(tiles, DOOR_TILE_START_FRONTIER + 4, &paletteNums[4]);
-        }
-    }
+    if (gfx->size == 1)
+        BuildDoorTiles(tiles, tileStart, paletteNums);
     else
     {
-        if (gfx->size == 1)
-            BuildDoorTiles(tiles, DOOR_TILE_START_SIZE1, paletteNums);
-
-        else
-        {
-            BuildDoorTiles(tiles, DOOR_TILE_START_SIZE1, paletteNums);
-            DrawDoorMetatileAt(x, y - 1, tiles);
-            BuildDoorTiles(tiles, DOOR_TILE_START_SIZE1 + 4, &paletteNums[4]);
-        }
-        DrawDoorMetatileAt(x, y, tiles);
+        BuildDoorTiles(tiles, tileStart, paletteNums);
+        DrawDoorMetatileAt(x, y - 1, tiles);
+        BuildDoorTiles(tiles, tileStart + 4, &paletteNums[4]);
     }
-    
 
-    
+    DrawDoorMetatileAt(x, y, tiles);
 }
 
 static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, u32 x, u32 y, const u8 *paletteNums)
@@ -575,8 +550,8 @@ static void DrawClosedDoorTilesFrlg(const struct DoorGraphics *gfx, int x, int y
         CurrentMapDrawMetatileAt(x, y);
         CurrentMapDrawMetatileAt(x, y - 1);
     }
-    if (gMapHeader.mapLayoutId != LAYOUT_GOLDENROD_CITY)
-        sDoorAnimTilesInUse = FALSE;
+    //if (gMapHeader.mapLayoutId != LAYOUT_GOLDENROD_CITY)
+        //sDoorAnimTilesInUse = FALSE;
 }
 
 static void DrawClosedDoorTiles(const struct DoorGraphics *gfx, u32 x, u32 y)
@@ -595,8 +570,6 @@ static void DrawClosedDoorTiles(const struct DoorGraphics *gfx, u32 x, u32 y)
         CurrentMapDrawMetatileAt(x + 1, y - 1);
         CurrentMapDrawMetatileAt(x + 1, y);
     }
-    if (gMapHeader.mapLayoutId != LAYOUT_GOLDENROD_CITY)
-        sDoorAnimTilesInUse = FALSE;
 }
 
 static void DrawDoor(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame, u32 x, u32 y)

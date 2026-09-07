@@ -182,7 +182,6 @@ PetalburgWoods_EventScript_Sign2::
 	end
 
 PetalburgWoods_EventScript_Lyle::
-	trainerbattle_single TRAINER_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
 	msgbox PetalburgWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
 	end
 
@@ -304,8 +303,8 @@ PetalburgWoods_Text_ICouldntWin:
 	.string "but I couldn't win…$"
 
 PetalburgWoods_Text_ImOutOfPokeBalls:
-	.string "I caught a bunch of Pokémon.\n"
-	.string "Now I'm out of Poké Balls.$"
+	.string "I love catching bugs!\n"
+	.string "They're the best Pokémon ever!$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
 	.string "If you take Bug Pokémon to school,\n"

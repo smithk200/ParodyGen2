@@ -10,8 +10,11 @@ CherrygroveCity_House2_EventScript_GuideGent::
 	end
 
 CherrygroveCity_GuideHouse_Text_GuideGent:
-	.string "When I was a wee lad, I was a\n"
-	.string "hotshot trainer!\p"
+	.string "When I was a youg man, I was a\n"
+	.string "hot trainer!\p"
 	.string "Here's a word of advice:\n"
 	.string "Catch lots of Pokémon!\p"
-	.string "Treat them all with kindness!$"
+	.string "Battle them to the death!!!\p"
+	.string "Actually only until they “faint”.\p"
+	.string "They really just die and come back\n"
+	.string "to life!$"

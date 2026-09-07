@@ -14,5 +14,14 @@ u32 FakeRtc_GetSecondsRatio(void);
 void Script_PauseFakeRtc(void);
 void Script_ResumeFakeRtc(void);
 void Script_ToggleFakeRtc(void);
+static inline bool32 UseFakeRtc(void)
+{
+    if (OW_USE_FAKE_RTC)
+        return TRUE;
+    extern struct SaveBlock3 *gSaveBlock3Ptr;
+    if (gSaveBlock3Ptr != NULL)
+        return gSaveBlock1Ptr->tx_Features_RTCType;
+    return FALSE;
+}
 
 #endif // GUARD_FAKE_RTC_UTIL_H

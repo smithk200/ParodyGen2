@@ -188,17 +188,46 @@ MahoganyTown_Shop_EventScript_Granny::
 	release
 	end
 
+MahoganyTown_Shop_EventScript_Gramps::
+	lock
+	faceplayer
+	goto_if_eq VAR_MAHOGANY_TOWN_STATE, 5, MahoganyTown_Shop_EventScript_GrampsDuring
+	goto_if_ge VAR_MAHOGANY_TOWN_STATE, 14, MahoganyTown_Shop_EventScript_GrampsRocketsAreOut
+	msgbox MahoganyTown_Shop_Text_Granny, MSGBOX_NPC
+	release
+	end
+
 MahoganyTown_Shop_EventScript_GrannyDuring::
 	msgbox MahoganyMart1F_Text_Pharmacist_Lance, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-
 MahoganyTown_Shop_EventScript_GrannyShop::
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemart MahoganyTown_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+MahoganyTown_Shop_EventScript_GrampsDuring::
+	msgbox MahoganyMart1F_Text_Pharmacist_Lance, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MahoganyTown_Shop_EventScript_GrampsRocketsAreOut::
+	goto_if_set FLAG_RECEIVED_BADGE_7, MahoganyTown_Shop_EventScript_GrampsShop
+	msgbox MahoganyMart1F_Text_GrampsRocketsAreOut, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MahoganyTown_Shop_EventScript_GrampsShop::
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart MahoganyTown_PokemartGramps
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -215,16 +244,77 @@ MahoganyTown_Pokemart:
 	release
 	end
 
+	.align 2
+MahoganyTown_PokemartGramps:
+	.2byte ITEM_VENUSAURITE
+	.2byte ITEM_CHARIZARDITE_X
+	.2byte ITEM_CHARIZARDITE_Y
+	.2byte ITEM_BLASTOISINITE
+	.2byte ITEM_BEEDRILLITE
+	.2byte ITEM_PIDGEOTITE
+	.2byte ITEM_ALAKAZITE
+	.2byte ITEM_SLOWBRONITE
+	.2byte ITEM_GENGARITE
+	.2byte ITEM_KANGASKHANITE
+	.2byte ITEM_PINSIRITE
+	.2byte ITEM_GYARADOSITE
+	.2byte ITEM_AERODACTYLITE
+	.2byte ITEM_MEWTWONITE_X
+	.2byte ITEM_MEWTWONITE_Y
+	.2byte ITEM_AMPHAROSITE
+	.2byte ITEM_STEELIXITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_HERACRONITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_TYRANITARITE
+	.2byte ITEM_SCEPTILITE
+	.2byte ITEM_BLAZIKENITE
+	.2byte ITEM_SWAMPERTITE
+	.2byte ITEM_GARDEVOIRITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_MEDICHAMITE
+	.2byte ITEM_MANECTITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_ALTARIANITE
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_ABSOLITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_SALAMENCITE
+	.2byte ITEM_METAGROSSITE
+	.2byte ITEM_LATIASITE
+	.2byte ITEM_LATIOSITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_GARCHOMPITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_ABOMASITE
+	.2byte ITEM_GALLADITE
+	.2byte ITEM_AUDINITE
+	.2byte ITEM_DIANCITE
+	.2byte ITEM_NONE
+	release
+	end
+
 MahoganyTown_Shop_Text_Granny:
 	.string "Please come back another time.\n"
 	.string "The store is... closed\l"
 	.string "right now.$"
 
 MahoganyMart1F_Text_Pharmacist_Lance:
-    .string "Rockets have hijacked my basement!$"
+    .string "Rockets have hijacked our basement!$"
+
+MahoganyMart1F_Text_Pharmacist_Gramps:
+	.string "How could we not see it coming?\n"
+	.string "First they bought out the land beneath\l"
+	.string "us, then they constructed something\l"
+	.string "under our house that took five years!\p"
+	.string "We just thought they were furnishing\n"
+	.string "our basement!$"
 
 MahoganyMart1F_Text_BlackBelt:
-    .string "Heheh! The experi- ment worked like\n"
+    .string "Heheh! The experiment worked like\n"
     .string "a charm.\p"
     .string "Magikarp are just worthless, but\n"
     .string "Gyarados are big moneymakers.$"
@@ -249,3 +339,12 @@ MahoganyMart1F_Text_Lance_SplitUp:
     .string "Lance: {PLAYER}, we should split up\n"
     .string "to check this place.\p"
     .string "I'll go first.$"
+
+MahoganyMart1F_Text_GrampsRocketsAreOut:
+	.string "Thank goodness!\p"
+	.string "Those Team Rocket Grunts are finally\n"
+	.string "out of our wonderful home!\p"
+	.string "Hey!\p"
+	.string "If you can show me you have seven\n"
+	.string "Badges,  might be able to reward you\l"
+	.string "for your bravery.$"

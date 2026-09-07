@@ -1172,7 +1172,7 @@ const u16 ALIGNED(4) gTilesetPalettes_MossdeepGym[][16] =
     INCGFX_U16("data/tilesets/secondary/mossdeep_gym/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_SootopolisGym[] = INCGFX_U32("data/tilesets/secondary/sootopolis_gym/tiles.png", ".4bpp.fastSmol", "-num_tiles 484 -Wnum_tiles");
+const u32 gTilesetTiles_SootopolisGym[] = INCGFX_U32("data/tilesets/secondary/sootopolis_gym/tiles.png", ".4bpp.fastSmol");
 
 const u16 ALIGNED(4) gTilesetPalettes_SootopolisGym[][16] =
 {

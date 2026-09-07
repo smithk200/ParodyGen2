@@ -293,8 +293,7 @@ GoldenrodCity_GameCorner_Text_PrizeVendorNoCoinCase:
 
 GoldenrodCity_GameCorner_Text_Pharmacist:
     .string "I always play this slot machine.\n"
-    .string "It pays out more than others,\l"
-    .string "I think.$"
+    .string "SPIN! SPIN! SPIN! SPIN! SPIN!$"
 
 GoldenrodCity_GameCorner_Text_Woman:
     .string "I can't stop winning!$"
@@ -306,16 +305,17 @@ GoldenrodCity_GameCorner_Text_PokefanM1:
 
 GoldenrodCity_GameCorner_Text_CooltrainerM:
     .string "Life is a gamble. I'm going to pull\n"
-    .string "till I drop!$"
+    .string "till I drop dead!$"
 
 GoldenrodCity_GameCorner_Text_PokefanF:
-    .string "Roulette…\p"
+    .string "Russian Roulette…\p"
     .string "I prefer it over the slots because\n"
-    .string "it's easier to figure the odds.\p"
-    .string "But the payout is much lower.$"
+    .string "it's a LOT more fun!\p"
+    .string "The stakes are much higher!$"
 
 GoldenrodCity_GameCorner_Text_CooltrainerF:
-    .string "I won't quit until I win!$"
+    .string "I gambled my life savings away,\n"
+	.string "but I KNOW I can win just ¥10…$"
 
 GoldenrodCity_GameCorner_Text_Gentleman:
     .string "I taught Blizzard to my Pokémon.\p"
@@ -333,4 +333,4 @@ GoldenrodCity_GameCorner_Text_MoveTutorInside:
 
 GoldenrodCity_GameCorner_Text_LeftTheirDrink:
     .string "Someone left their drink.\p"
-    .string "It smells sweet.$"
+    .string "It's a glass of beer.$"

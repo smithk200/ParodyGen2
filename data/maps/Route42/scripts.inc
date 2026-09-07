@@ -172,8 +172,8 @@ Route42_EventScript_Ben::
 	end
 
 Route42_EventScript_Shane::
-	trainerbattle_single TRAINER_SHANE Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
-	msgbox Route42_Text_PokemaniacShaneAfter, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_C Route42_Text_CSeen, Route42_Text_CBeaten
+	msgbox Route42_Text_CAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route42_EventScript_Sign::
@@ -206,15 +206,16 @@ Route42_EventScript_Item_UltraBall::
 	end
 
 Route42_Text_SawyerIntro:
-	.string "If this crashes the game,\n"
-	.string "I will be very disappointed.$"
+	.string "Hi!\n"
+	.string "I'm a Game Dev!\p"
+	.string "I helped work on the music for this mod!$"
 
 Route42_Text_SawyerDefeat:
 	.string "Wow!\n"
 	.string "You're almost as good as Elite Four Joy!$"
 
 Route42_Text_SawyerPostBattle:
-	.string "Wait a minute...\n"
+	.string "Wait a minute…\n"
 	.string "You're cheating! You can't be!!!$"
 
 Route42_Text_FisherTullySeen:
@@ -243,17 +244,17 @@ Route42_Text_HikerBenjaminAfter:
 	.string "Losing feels insignificant\n"
 	.string "if you look up at the big sky!$"
 
-Route42_Text_PokemaniacShaneSeen:
+Route42_Text_CSeen:
 	.string "Hey!\p"
 	.string "This is my secret place!\n"
 	.string "Get lost, you outsider!$"
 
-Route42_Text_PokemaniacShaneBeaten:
+Route42_Text_CBeaten:
 	.string "I should have used my\n"
 	.string "Moon Stone…$"
 
-Route42_Text_PokemaniacShaneAfter:
-	.string "You're working on a PokéDex?\p"
+Route42_Text_CAfter:
+	.string "You're working on a Pokédex?\p"
 	.string "Wow, you must know some\n"
 	.string "pretty rare Pokémon!\p"
 	.string "May I please see it?\n"

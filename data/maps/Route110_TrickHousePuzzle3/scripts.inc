@@ -287,17 +287,14 @@ Route110_TrickHousePuzzle3_EventScript_FoundScroll::
 	end
 
 Route110_TrickHousePuzzle3_EventScript_Justin::
-	trainerbattle_single TRAINER_JUSTIN, Route110_TrickHousePuzzle3_Text_JustinIntro, Route110_TrickHousePuzzle3_Text_JustinDefeat
 	msgbox Route110_TrickHousePuzzle3_Text_JustinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle3_EventScript_Martha::
-	trainerbattle_single TRAINER_MARTHA, Route110_TrickHousePuzzle3_Text_MarthaIntro, Route110_TrickHousePuzzle3_Text_MarthaDefeat
 	msgbox Route110_TrickHousePuzzle3_Text_MarthaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle3_EventScript_Alan::
-	trainerbattle_single TRAINER_ALAN, Route110_TrickHousePuzzle3_Text_AlanIntro, Route110_TrickHousePuzzle3_Text_AlanDefeat
 	msgbox Route110_TrickHousePuzzle3_Text_AlanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -316,8 +313,8 @@ Route110_TrickHousePuzzle3_Text_JustinDefeat:
 	.string "you have to beat me? It's not fair!$"
 
 Route110_TrickHousePuzzle3_Text_JustinPostBattle:
-	.string "It's full of doors here!\n"
-	.string "It's too small and dark in here! Help!$"
+	.string "I carry the mail each and every day.\n"
+	.string "I like what I do. It's kind of fun.$"
 
 Route110_TrickHousePuzzle3_Text_MarthaIntro:
 	.string "I don't know what's going on here.\n"
@@ -328,7 +325,9 @@ Route110_TrickHousePuzzle3_Text_MarthaDefeat:
 
 Route110_TrickHousePuzzle3_Text_MarthaPostBattle:
 	.string "I know I'm weak!\n"
-	.string "And, I have no sense of direction!$"
+	.string "And, I have no sense of direction!\p"
+	.string "That's what got me to this hellhole\n"
+	.string "in the first place!$"
 
 Route110_TrickHousePuzzle3_Text_AlanIntro:
 	.string "I don't get it. What would anyone want\n"

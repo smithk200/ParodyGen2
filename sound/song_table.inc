@@ -791,10 +791,10 @@ gSongTable::
 	song toads_turnpike, 0, 0
 	song pogo_sticks, 0, 0
 	song mus_pl_vs_regi, 0, 0
-	song mus_pl_contest_cool, 0, 0
-	song mus_pl_contest_smart, 0, 0
-	song mus_pl_contest_cute, 0, 0
-	song mus_pl_contest_tough, 0, 0
+	song number_7, 0, 0
+	song bowsercastle3, 0, 0
+	song family_guy_theme, 0, 0
+	song seymour_theme, 0, 0
 	song mus_pl_contest_beauty, 0, 0
 	song mus_pl_spin_trade, 0, 0
 	song mus_pl_wifi_minigames, 0, 0

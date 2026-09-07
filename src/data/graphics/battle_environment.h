@@ -196,3 +196,9 @@ const u32 gBattleEnvironmentAnimTilemap_Rayquaza_2[] = INCGFX_U32("graphics/batt
 const u32 gBattleEnvironmentTiles_PeterGriffinsHouse[] = INCGFX_U32("graphics/battle_environment/peter_griffins_house/tiles.png", ".4bpp.smol");
 const u16 gBattleEnvironmentPalette_PeterGriffinsHouse[] = INCGFX_U16("graphics/battle_environment/peter_griffins_house/palette.pal", ".gbapal");
 const u32 gBattleEnvironmentTilemap_PeterGriffinsHouse[] = INCGFX_U32("graphics/battle_environment/peter_griffins_house/map.bin", ".smolTM");
+
+const u32 gBattleEnvironmentTiles_IceCave[] = INCBIN_U32("graphics/battle_environment/snow_cave/tiles.4bpp.smol");
+const u16 gBattleEnvironmentPalette_IceCave[] = INCBIN_U16("graphics/battle_environment/snow_cave/palette.gbapal");
+const u32 gBattleEnvironmentTilemap_IceCave[] = INCBIN_U32("graphics/battle_environment/snow_cave/map.bin.smolTM");
+const u32 gBattleEnvironmentAnimTiles_IceCave[] = INCBIN_U32("graphics/battle_environment/snow_cave/anim_tiles.4bpp.smol");
+const u32 gBattleEnvironmentAnimTilemap_IceCave[] = INCBIN_U32("graphics/battle_environment/snow_cave/anim_map.bin.smolTM");

@@ -24,11 +24,11 @@ AzaleaMart_Text_CooltrainerM:
 	.string "available to buy when you earn\l"
 	.string "Gym Badges!\p"
 	.string "I wish Kurt would make me some\n"
-	.string "of his custom Balls.$"
+	.string "of his custom Balls.\p"
+	.string "“Make my balls”, she said.$"
 
 AzaleaMart_Text_BugCatcher:
-	.string "A Great Ball is better for catch-\n"
-	.string "ing Pokémon than a Poké Ball.\p"
-	.string "But Kurt's might be better some-\n"
-	.string "times.$"
+	.string "A Great Ball is better for catching\n"
+	.string "Pokémon than a Poké Ball.\p"
+	.string "Great balls, great balls of fire!$"
 

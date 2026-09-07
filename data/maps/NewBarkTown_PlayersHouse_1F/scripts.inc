@@ -157,7 +157,7 @@ NewBarkTown_PlayersHouse_1F_MovementFaceLeft:
 
 NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou:
 	.string "Oh, {PLAYER}…! Our neighbor,\n"
-	.string "Prof.Elm, was looking for you.\p"
+	.string "Prof. Elm, was looking for you.\p"
 	.string "He said he wanted you to do\n"
 	.string "something for him.\p"
 	.string "Oh! I almost forgot! Your PokéGear\n"
@@ -168,9 +168,7 @@ NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear:
 	.string "{PLAYER} obtained the PokéGear.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear:
-	.string "Mom: Phone numbers are stored\n"
-	.string "in memory.\p"
-	.string "Just choose a name you want to call.\p"
+	.string "Mom: There's so many apps on the Pokégear!\p"
 	.string "Gee, isn't that convenient?$"
 
 NewBarkTown_PlayersHouse_1F_Text_WearTheseRunningShoes:
@@ -182,11 +180,13 @@ NewBarkTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes:
 	.string "Running Shoes.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ExplainRunningShoes:
-	.string "Mom: {PLAYER}, press the B Button\n"
-	.string "while wearing these to run fast!$"
+	.string "Mom: {PLAYER}, just use the shoes to run,\n"
+	.string "run, run as fast as you can!\p"
+	.string "If you disable the auto-run feature, just\n"
+	.string "press the B Button to run!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting:
-	.string "Mom: Prof.Elm is waiting for you.\p"
+	.string "Mom: Prof. Elm is waiting for you.\p"
 	.string "Hurry up, baby!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
@@ -194,7 +194,7 @@ NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
 	.string "I'm visiting!\p"
 	.string "Have you heard?\p"
 	.string "My daughter is adamant about\n"
-	.string "becoming Prof.Elm's assistant.\p"
+	.string "becoming Prof. Elm's assistant.\p"
 	.string "She really loves Pokémon!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MomLeaving:

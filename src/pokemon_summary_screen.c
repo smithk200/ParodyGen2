@@ -1804,6 +1804,12 @@ static void Task_HandleInput(u8 taskId)
                 HandleMoveRelearnerInput(taskId);
                 PlaySE(SE_SELECT);
             }
+            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+            {
+                ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_STATS);
+                sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
+                PlaySE(SE_SELECT);
+            }
         }
         else if (JOY_NEW(A_BUTTON))
         {
@@ -1815,20 +1821,30 @@ static void Task_HandleInput(u8 taskId)
                     SwitchToMoveSelection(taskId);
                 }
             }
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-            {
-                if (ShouldShowIvEvPrompt())
-                {
-                    ShowMonSkillsInfo(taskId, IncrementSkillsStatsMode(sMonSummaryScreen->skillsPageMode));
-                    PlaySE(SE_SELECT);
-                }
-            }
         }
         else if (JOY_NEW(B_BUTTON))
         {
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
+        }
+        else if (JOY_NEW(R_BUTTON))
+        {
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+            {
+                ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_IVS);
+                sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_IVS;
+                PlaySE(SE_SELECT);
+            }
+        }
+        else if (JOY_NEW(L_BUTTON))
+        {
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+            {
+                ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_EVS);
+                sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_EVS;
+                PlaySE(SE_SELECT);
+            }
         }
         else if (DEBUG_POKEMON_SPRITE_VISUALIZER && JOY_NEW(SELECT_BUTTON) && !gMain.inBattle)
         {
@@ -1890,7 +1906,7 @@ static void ShowMonSkillsInfo(u8 taskId, s16 mode)
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
     {
         ChangeStatLabel(mode);
-        ShowUtilityPrompt(mode);
+        //ShowUtilityPrompt(mode);
     }
 
     if (mode == SUMMARY_SKILLS_MODE_STATS)
@@ -2201,10 +2217,13 @@ static void ChangePage(u8 taskId, s8 delta)
         if (sMonSummaryScreen->skillsPageMode != SUMMARY_SKILLS_MODE_STATS)
             sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
 
-        ShowUtilityPrompt(sMonSummaryScreen->skillsPageMode);
         ExtractMonSkillStatsData(mon, summary);
         BufferLeftColumnStats();
         BufferRightColumnStats();
+        // Hide the utility prompt while on the skills page.
+        FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
+        ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
+        CopyWindowToVram(PSS_LABEL_WINDOW_PROMPT_UTILITY, COPYWIN_FULL);
     }
     else
     {
@@ -3289,8 +3308,8 @@ static void PrintAOrBButtonIcon(u8 windowId, bool8 bButton, u32 x)
         button = sButtons_Gfx[0];
     else
         button = sButtons_Gfx[1];
-
-    BlitBitmapToWindow(windowId, button, x, 0, 16, 16);
+    if (sMonSummaryScreen->currPageIndex != PSS_PAGE_SKILLS)
+        BlitBitmapToWindow(windowId, button, x, 0, 16, 16);
 }
 
 static void PrintPageNamesAndStats(void)
@@ -3406,8 +3425,7 @@ static void ClearPageWindowTilemaps(u8 page)
         ClearWindowTilemap(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT);
         ClearWindowTilemap(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT);
         ClearWindowTilemap(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP);
-        if (ShouldShowIvEvPrompt())
-            ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
+        ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
         ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_RELEARN);
         break;
     case PSS_PAGE_BATTLE_MOVES:
@@ -3765,8 +3783,6 @@ static void PrintSkillsPageText(void)
 {
     PrintHeldItemName();
     PrintRibbonCount();
-    if (ShouldShowIvEvPrompt())
-        ShowUtilityPrompt(SUMMARY_SKILLS_MODE_STATS);
     BufferLeftColumnStats();
     PrintLeftColumnStats();
     BufferRightColumnStats();
@@ -4806,57 +4822,39 @@ static inline bool32 ShouldShowIvEvPrompt(void)
 static inline void ShowUtilityPrompt(s16 mode)
 {
     const u8* promptText = NULL;
-    const u8* gText_SkillPageIvs = COMPOUND_STRING("IVs");
-    const u8* gText_SkillPageEvs = COMPOUND_STRING("EVs");
-    const u8* gText_SkillPageStats = COMPOUND_STRING("STATS");
     const u8* gText_Rename = COMPOUND_STRING("Rename");
-
-    if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
+    DebugPrintf("ShowUtilityPrompt page=%d\n",
+        sMonSummaryScreen->currPageIndex);
+    switch (sMonSummaryScreen->currPageIndex)
     {
+    case PSS_PAGE_INFO:
         if (ShouldShowRename())
             promptText = gText_Rename;
         else
             promptText = gText_Cancel2;
-    }
-    else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-    {
-        if (ShouldShowIvEvPrompt())
-        {
-            if (mode == SUMMARY_SKILLS_MODE_STATS)
-            {
-                if (P_SUMMARY_SCREEN_EV_ONLY)
-                    promptText = gText_SkillPageEvs;
-                else
-                    promptText = gText_SkillPageIvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_IVS)
-            {
-                if (P_SUMMARY_SCREEN_IV_ONLY)
-                    promptText = gText_SkillPageStats;
-                else
-                    promptText = gText_SkillPageEvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_EVS)
-            {
-                promptText = gText_SkillPageStats;
-            }
-        }
-    }
-    else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES
-             || sMonSummaryScreen->currPageIndex == PSS_PAGE_CONTEST_MOVES)
-    {
+        break;
+
+    case PSS_PAGE_BATTLE_MOVES:
+    case PSS_PAGE_CONTEST_MOVES:
         if (mode == SUMMARY_MODE_SELECT_MOVE && !sMonSummaryScreen->lockMovesFlag)
             promptText = gText_Switch;
         else
             promptText = gText_Info;
+        break;
+
+    case PSS_PAGE_SKILLS:
+        // Intentionally no prompt.
+        break;
     }
 
     if (promptText == NULL)
-    {
-        ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
-        FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
-        return;
-    }
+        {
+            FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
+            CopyWindowToVram(PSS_LABEL_WINDOW_PROMPT_UTILITY, COPYWIN_FULL);
+            ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
+            return;
+        }
+
 
     FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
     PutWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
@@ -4865,6 +4863,8 @@ static inline void ShowUtilityPrompt(s16 mode)
     int iconXPos = stringXPos - 16;
     if (iconXPos < 0)
         iconXPos = 0;
+    DebugPrintf("PRINTING UTILITY PROMPT page=%d\n",
+        sMonSummaryScreen->currPageIndex);
 
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
         {

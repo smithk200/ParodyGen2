@@ -4042,8 +4042,13 @@ static void Cmd_getexp(void)
                     }
                     gBattleStruct->wildVictorySong++;
                 }
-
-                if (IsValidForBattle(&gParties[B_TRAINER_PLAYER][*expMonId]))
+                if (IsValidForBattle(&gParties[B_TRAINER_PARTNER][*expMonId]))
+                {
+                    gBattleStruct->battlerExpReward = 0;
+                }
+                else
+                {
+                    if (IsValidForBattle(&gParties[B_TRAINER_PLAYER][*expMonId]))
                 {
                     if (wasSentOut)
                         gBattleStruct->battlerExpReward = GetSoftLevelCapExpValue(gParties[B_TRAINER_PLAYER][*expMonId].level, gBattleStruct->expValue);
@@ -4080,6 +4085,7 @@ static void Cmd_getexp(void)
                             //DebugPrintf("Exp Reward (Not Squirtle): %d", &gBattleStruct->battlerExpReward);
                         }
                     }
+                }
 
                     if (B_EXP_CAP_TYPE == EXP_CAP_HARD && gBattleStruct->battlerExpReward != 0)
                     {
@@ -4131,7 +4137,10 @@ static void Cmd_getexp(void)
                     }
                     else if (wasSentOut || holdEffect == HOLD_EFFECT_EXP_SHARE)
                     {
-                        PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
+                        if (GetMonData(&gParties[B_TRAINER_PLAYER][*expMonId], MON_DATA_HP) != 0) 
+                        {
+                            PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
+                        }
                     }
                     else if (IsGen6ExpShareEnabled() && !gBattleStruct->teamGotExpMsgPrinted) // Print 'the rest of your team got exp' message once, when all of the sent-in mons were given experience
                     {

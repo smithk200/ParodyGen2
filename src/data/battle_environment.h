@@ -612,6 +612,19 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .palette = gBattleEnvironmentPalette_PeterGriffinsHouse,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
+    [BATTLE_ENVIRONMENT_ICE_CAVE] =
+    {
+        .name = _("Ice Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(Cave),
+        .background = ENVIRONMENT_BACKGROUND(Cave),
+        .palette = gBattleEnvironmentPalette_Cave,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
+    },
     
 };
 
@@ -1159,6 +1172,19 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .background = ENVIRONMENT_BACKGROUND(PeterGriffinsHouse),
         .palette = gBattleEnvironmentPalette_PeterGriffinsHouse,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
+    },
+    [BATTLE_ENVIRONMENT_ICE_CAVE] =
+    {
+        .name = _("Ice Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(IceCave),
+        .background = ENVIRONMENT_BACKGROUND(IceCave),
+        .palette = gBattleEnvironmentPalette_IceCave,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
     },
     
 };

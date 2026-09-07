@@ -5,6 +5,7 @@ IndigoPlateau_PokemonCenter_MapScripts::
 	@map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, IndigoPlateau_PokemonCenter_OnFrame 
 	map_script MAP_SCRIPT_ON_LOAD, IndigoPlateau_PokemonCenter_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, Grindhaus_Ranch_OnFrame_ClearCatchingFlag
 	.byte 0
 
 IndigoPlateau_PokemonCenter_OnLoad::
@@ -34,11 +35,11 @@ IndigoPlateau_EventScript_PeterGriffinTrigger::
 	addobject LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 30
-	playbgm MUS_HG_ENCOUNTER_BOY_1, FALSE
+	playbgm MUS_FAMILY_GUY_THEME, FALSE
 	applymovement LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE, IndigoPlateau_Movement_PeterGriffin_Enter
 	waitmovement 0
 	msgbox IndigoPlateau_Text_PeterGriffin_Intro, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_PETER_GRIFFIN_2, PokemonLeague_KogasRoom_Text_Beaten
+	trainerbattle_no_intro TRAINER_PETER_GRIFFIN_2, IndigoPlateau_Text_PeterBeaten
 	goto IndigoPlateau_EventScript_PeterGriffin_Defeated
 	end
 
@@ -49,6 +50,13 @@ IndigoPlateau_EventScript_PeterGriffin_Defeated::
 	removeobject LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE
 	setflag FLAG_HIDE_PETER_GRIFFFIN_POKEMON_LEAGUE
 	setflag FLAG_DEFEATED_PETER_GRIFFIN_POKMEON_LEAGUE
+	end
+
+IndigoPlateau_EventScript_GrindhausRanchTrainer::
+	lock
+	faceplayer
+	msgbox IndigoPlateau_Text_GrindhausRanchTrainer, MSGBOX_AUTOCLOSE
+	release
 	end
 
 IndigoPlateau_Movement_PeterGriffin_Enter:
@@ -224,6 +232,9 @@ IndigoPlateau_Text_PeterGriffin_Defeat:
 	.string "When I…\p"
 	.string "Crap, I can't remember it now!$"
 
+IndigoPlateau_Text_PeterBeaten:
+	.string "Hey, you cheated!$"
+
 IndigoPlateau_Text_PeterGriffin_PostBattle:
 	.string "I'm gonna challenge the Elite Four!\n"
 	.string "…Well, not until I train some more.\p"
@@ -234,3 +245,9 @@ IndigoPlateau_Text_PeterGriffin_PostBattle:
 	.string "back home.\p"
 	.string "Maybe I'll go back and do that\n"
 	.string "stuff instead.$"
+
+IndigoPlateau_Text_GrindhausRanchTrainer:
+	.string "The room ahead of me is the Grindhaus\n"
+	.string "Ranch.\p"
+	.string "You can train your Pokémon there to the \n"
+	.string "elite level, and it's absolutely free!$"

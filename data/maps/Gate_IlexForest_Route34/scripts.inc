@@ -24,8 +24,8 @@ Route34IlexForestGate_Text_Lass:
 	.string "the protector?\p"
 	.string "It watches over the Forest from\n"
 	.string "across time.\p"
-	.string "I think that it must be a\n"
-	.string "Grass-type Pokémon.$"
+	.string "I think that it must be fuckin'\n"
+	.string "Dialga, type shit!$"
 
 Route34IlexForestGate_Text_Butterfree:
 	.string "Butterfree: Freeh!$"

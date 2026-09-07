@@ -284,13 +284,14 @@ CherryGroveCity_Silver_AfterBattle::
 CherrygroveCity_Text_GuideGentIntro:
 	.string "You're a rookie trainer,\n"
 	.string "aren't you? I can tell!\p"
-	.string "That's Ok! Everyone is a\n"
-	.string "rookie at some point!\p"
+	.string "This is your very first region,\n"
+	.string "right, lil' feller?\p"
+	.string "That's OK!\p"
 	.string "If you'd like, I can teach\n"
 	.string "you a few things.$"
 
 CherrygroveCity_Text_GuideGentTourStart:
-	.string "Ok, then!\n"
+	.string "OK, then!\n"
 	.string "Follow me!$"
 
 CherrygroveCity_Text_GuideGentPokecenter:
@@ -303,7 +304,10 @@ CherrygroveCity_Text_GuideGentPokecenter:
 CherrygroveCity_Text_GuideGentMart:
 	.string "This is a Pokémon Mart.\p"
 	.string "They sell Balls for catching wild\n"
-	.string "Pokémon and other useful items.$"
+	.string "Pokémon and other useful items.\p"
+	.string "If you get real good, you can\n"
+	.string "buy items such as Elixirs and\n"
+	.string "Max Elixirs.$"
 
 CherrygroveCity_Text_GuideGentRoute30:
 	.string "Route 30 is out this way.\p"
@@ -312,8 +316,12 @@ CherrygroveCity_Text_GuideGentRoute30:
 
 CherrygroveCity_Text_GuideGentSea:
 	.string "This is the sea, as you can see.\p"
-	.string "Some Pokémon are found only in\n"
-	.string "in water.$"
+	.string "As you can see, Pokémon can see\n"
+	.string "the sea, as well as you and I\l"
+	.string "and C.\p"
+	.string "Who's C?\n"
+	.string "C's my brother!\p"
+	.string "Yes, that's actually his name.$"
 
 CherrygroveCity_Text_GuideGentMap:
 	.string "Here…\p"
@@ -327,7 +335,10 @@ CherrygroveCity_Text_GuideGentDecline:
 	.string "Oh… It's something I enjoy\n"
 	.string "doing…\p"
 	.string "Fine. Come see me whenever\n"
-	.string "you like.$"
+	.string "you like.\p"
+	.string "If you see my brother C on your\n"
+	.string "journey, do tell him I say hi!\p"
+	.string "Yes, that's actually his name!$"
 
 CherrygroveCity_Text_RivalSeen:
 	.string "… … … … … … … …\p"
@@ -386,16 +397,17 @@ CherrygroveCity_Text_CitySign:
 	.string "in the ground.$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "Guide Gent'sHouse$"
+	.string "Guide Gent's House$"
 
 CherryGroveCity_Text_Staryu:
-	.string "Staryu: Yuuuuuuuu.$"
+	.string "Staryu: … … …\p"
+	.string "(It's a starfish.)$"
 
 CherryGroveCity_Text_Corsola:
-	.string "Corsola: Corsola! La!$"
+	.string "Corsola: Deedle-uh!$"
 
 CherryGroveCity_Text_Krabby:
-	.string "Krabby: Kooookeee!$"
+	.string "Krabby: Eh-eh-eh-eh!$"
 
 CherryGroveCity_Movement_Trigger_Gent:
 	walk_down

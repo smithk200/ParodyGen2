@@ -50,6 +50,7 @@
 #include "safari_zone.h"
 #include "scanline_effect.h"
 #include "script.h"
+#include "script_pokemon_util.h"
 #include "sound.h"
 #include "sprite.h"
 #include "string_util.h"
@@ -631,13 +632,13 @@ static void CB2_InitBattleInternal(void)
         if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
             CalculatePartnerPartyCount();
     }
-    if (gSaveBlock1Ptr->tx_Challenges_Mirror && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+    if (gSaveBlock1Ptr->tx_Challenges_Mirror && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !BATTLE_TWO_VS_ONE_OPPONENT)
     {
         if (!gSaveBlock1Ptr->tx_Challenges_Mirror_Thief)
         {
             for (j = 0; j < PARTY_SIZE; j++)
                 //gParties[B_TRAINER_PLAYER]Backup[j] = gParties[B_TRAINER_PLAYER][j];
-                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_PLAYER][j];
+                gParties[B_TRAINER_OPPONENT_B][j] = gParties[B_TRAINER_PLAYER][j]; //using OpponentB as a placeholder
         }
         for (j = 0; j < PARTY_SIZE; j++)
             gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_OPPONENT_A][j];
@@ -1959,8 +1960,17 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
 						fixedLVL = GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL);
 	}
     {
-        min = fixedLVL-2;
-        max = fixedLVL;
+        if (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat == 1)
+        {
+            min = fixedLVL;
+            max = fixedLVL+1;
+        }
+            
+        else
+        {
+            min = fixedLVL-2;
+            max = fixedLVL;
+        }
             range = max - min + 1;
             rand = Random() % range;
     }
@@ -5842,10 +5852,17 @@ static void HandleEndTurn_FinishBattle(void)
     u8 j;
     if (gCurrentActionFuncId == B_ACTION_TRY_FINISH || gCurrentActionFuncId == B_ACTION_FINISHED)
     {
-        if (gSaveBlock1Ptr->tx_Challenges_Mirror && !gSaveBlock1Ptr->tx_Challenges_Mirror_Thief && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+        if (gSaveBlock1Ptr->tx_Challenges_Mirror && !gSaveBlock1Ptr->tx_Challenges_Mirror_Thief && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !BATTLE_TWO_VS_ONE_OPPONENT)
         {
             for (j = 0; j < PARTY_SIZE; j++)
-                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_PLAYER][j];
+                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_OPPONENT_B][j]; //using OpponentB as a placeholder
+        }
+        if (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+        {
+            for (j = 0; j < PARTY_SIZE; j++)
+            {
+                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_OPPONENT_A][j]; //credit to Rylockes for coming up with this challenge
+            }
         }
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_RECORDED_LINK
@@ -5926,7 +5943,7 @@ static void HandleEndTurn_FinishBattle(void)
                 CalculateMonStats(&gParties[B_TRAINER_PLAYER][i]);
             if (IsMonDead(&gParties[B_TRAINER_PLAYER][i]) && (gSaveBlock1Ptr->tx_Nuzlocke_Deletion == 1) && !GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
             {
-                DebugPrintf("Deleting slot %d", i);
+                //DebugPrintf("Deleting slot %d", i);
                 ZeroMonData(&gParties[B_TRAINER_PLAYER][i]);
 
                 // Shift the rest of the party forward
@@ -5956,6 +5973,10 @@ static void HandleEndTurn_FinishBattle(void)
         for (enum BattlerId i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
             gBattlerBattleController[i] = BATTLE_CONTROLLER_NONE;
+        }
+        if (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat == 1)
+        {
+            HealPlayerParty(); 
         }
 
         gBattleMainFunc = FreeResetData_ReturnToOvOrDoEvolutions;

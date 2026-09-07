@@ -23,7 +23,6 @@ Route110_TrickHousePuzzle4_EventScript_Yuji::
 	end
 
 Route110_TrickHousePuzzle4_EventScript_Paula::
-	trainerbattle_single TRAINER_PAULA, Route110_TrickHousePuzzle4_Text_PaulaIntro, Route110_TrickHousePuzzle4_Text_PaulaDefeat
 	msgbox Route110_TrickHousePuzzle4_Text_PaulaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

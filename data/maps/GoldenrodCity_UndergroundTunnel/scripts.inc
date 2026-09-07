@@ -427,7 +427,7 @@ GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle:
 	.string "being watched from the rooftops...$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
-    .string "Are you making a PokéDex? Here's a\n"
+    .string "Are you making a Pokédex? Here's a\n"
     .string "hot tip.\p"
     .string "The Hiker on Route 33, Anthony, is a\n"
     .string "good guy.\p"

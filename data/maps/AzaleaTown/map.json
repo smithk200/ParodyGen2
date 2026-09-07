@@ -217,7 +217,7 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SLOWPOKE_NO_TAIL",
+      "graphics_id": "OBJ_EVENT_GFX_SLOWPOKE_CORRUPT",
       "x": 45,
       "y": 14,
       "elevation": 0,

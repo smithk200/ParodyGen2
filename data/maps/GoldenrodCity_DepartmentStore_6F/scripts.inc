@@ -18,11 +18,12 @@ GoldenrodDeptStore6_EventScript_Whitney::
 	end
 
 GoldenrodDeptStore6_Text_Whitney:
-	.string "{PLAYER}! Fancy seeing you here!\p"
+	.string "{PLAYER}.\n"
+	.string "Nice to see you.\p"
 	.string "I'm picking up something for\n"
-	.string "my Miltank.\p"
-	.string "If you want another battle, come to\n"
-	.string "the Fighting Dojo!$"
+	.string "my Slaking.\p"
+	.string "If you want to battle again, come\n"
+	.string "to the Fighting Dojo.$"
 
 GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	lock

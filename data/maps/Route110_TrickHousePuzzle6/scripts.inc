@@ -33,13 +33,22 @@ Route110_TrickHousePuzzle6_EventScript_Sophia::
 	end
 
 Route110_TrickHousePuzzle6_EventScript_Benny::
-	trainerbattle_single TRAINER_BENNY, Route110_TrickHousePuzzle6_Text_BennyIntro, Route110_TrickHousePuzzle6_Text_BennyDefeat
 	msgbox Route110_TrickHousePuzzle6_Text_BennyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle6_EventScript_Sebastian::
 	trainerbattle_single TRAINER_SEBASTIAN, Route110_TrickHousePuzzle6_Text_SebastianIntro, Route110_TrickHousePuzzle6_Text_SebastianDefeat
 	msgbox Route110_TrickHousePuzzle6_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route110_TrickHousePuzzle6_EventScript_Cresselia::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CRESSELIA, CRY_MODE_NORMAL
+	msgbox Route110_TrickHousePuzzle6_Text_Cresselia, MSGBOX_DEFAULT
+	waitmoncry
+	release
 	end
 
 Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
@@ -70,8 +79,9 @@ Route110_TrickHousePuzzle6_Text_BennyDefeat:
 	.string "Gwaaah! I blew it!$"
 
 Route110_TrickHousePuzzle6_Text_BennyPostBattle:
-	.string "Ehehehe… I guess I lost because\n"
-	.string "I was trying to cheat.$"
+	.string "I lost because I was trying to cheat.\n"
+	.string "I hacked in a shiny Cresselia but\l"
+	.string "the game devs found out…$"
 
 Route110_TrickHousePuzzle6_Text_SebastianIntro:
 	.string "I'm getting dizzy from these rotating\n"
@@ -85,3 +95,6 @@ Route110_TrickHousePuzzle6_Text_SebastianPostBattle:
 	.string "You don't seem to be affected at all.\n"
 	.string "Or do you have your poker face on?$"
 
+Route110_TrickHousePuzzle6_Text_Cresselia:
+	.string "Cresselia:\n"
+	.string "Awroo-twinkle-twinkle…$"

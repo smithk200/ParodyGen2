@@ -196,7 +196,7 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType, u8, s16);
 static void Task_HandleMainMenuInput(u8);
 static void Task_HandleMainMenuAPressed(u8);
 static void Task_HandleMainMenuBPressed(u8);
-static void Task_NewGameBirchSpeech_Init(u8);
+//static void Task_NewGameBirchSpeech_Init(u8);
 static void Task_DisplayMainMenuInvalidActionError(u8);
 static void AddBirchSpeechObjects(u8);
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8);
@@ -744,10 +744,6 @@ static void Task_MainMenuCheckBattery(u8 taskId)
         {
             gTasks[taskId].func = Task_DisplayMainMenu;
         }
-        if (gSaveBlock1Ptr->tx_Features_RTCType == 1)
-        {
-            gTasks[taskId].func = Task_DisplayMainMenu;
-        }
         else
         {
             //CreateMainMenuErrorWindow(gText_BatteryRunDry);
@@ -1104,7 +1100,10 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
 
             gPlttBufferUnfaded[0] = RGB_BLACK;
             gPlttBufferFaded[0] = RGB_BLACK;
-            gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+            //gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+            DestroyTask(taskId);
+            FreeAllWindowBuffers();
+            StartNewGameSceneFrlg();
             break;
         case ACTION_CONTINUE:
             gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -1346,11 +1345,10 @@ static void CB2_NewGameBirchSpeech_ReturnFromTxRandomizerChallengesOptions(void)
     SetMainCallback2(CB2_MainMenu);
 }
 
-static void Task_NewGameBirchSpeech_Init(u8 taskId)
+void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
-    InitBgFromTemplate(&sBirchBgTemplate);
     SetGpuReg(REG_OFFSET_WIN0H, 0);
     SetGpuReg(REG_OFFSET_WIN0V, 0);
     SetGpuReg(REG_OFFSET_WININ, 0);
@@ -1358,6 +1356,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
+    SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(7) | BGCNT_PRIORITY(3));
 
     DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (void *)VRAM);
     DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
@@ -1374,9 +1373,9 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
     gTasks[taskId].data[3] = 0xFF;
     gTasks[taskId].tTimer = 0xD8;
-    PlayBGM(MUS_HG_NEW_GAME);
+    //PlayBGM(MUS_HG_NEW_GAME);
     ShowBg(0);
-    ShowBg(1);
+    //ShowBg(1);
     ClearSav1();
 }
 

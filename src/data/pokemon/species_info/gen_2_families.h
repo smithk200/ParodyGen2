@@ -1257,16 +1257,18 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_LEDIAN] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 45, //+10
+        .baseHP        = 75,
+        .baseHP_old        = 55,
+        .baseAttack    = 90,
         .baseAttack_old    = 35,
-        .baseDefense   = 60, //+10
+        .baseDefense   = 70,
         .baseDefense_old   = 50,
-        .baseSpeed     = 95, //+10
+        .baseSpeed     = 105, 
         .baseSpeed_old     = 85,
-        .baseSpAttack  = 55, //+10
+        .baseSpAttack  = 55,
         .baseSpAttack_old  = 45,
-        .baseSpDefense = 110,
+        .baseSpDefense = 130,
+        .baseSpDefense_old = 110,
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 137 : 134,
@@ -3584,7 +3586,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sWooperTeachableLearnset,
         .eggMoveLearnset = sWooperEggMoveLearnset,
         .formSpeciesIdTable = sWooperFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_QUAGSIRE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_QUAGSIRE},
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_WOOPER_PALDEA}),
     },
 
     [SPECIES_QUAGSIRE] =
@@ -5299,6 +5302,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sQwilfishTeachableLearnset,
         .eggMoveLearnset = sQwilfishEggMoveLearnset,
         .formSpeciesIdTable = sQwilfishFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_OVERQWIL, CONDITIONS({IF_KNOWS_MOVE, MOVE_BARB_BARRAGE})}),
     },
 
 #if P_HISUIAN_FORMS
@@ -5771,7 +5775,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .formSpeciesIdTable = sSneaselFormSpeciesIdTable,
     #if P_GEN_4_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT}, {IF_HOLD_ITEM, ITEM_RAZOR_CLAW})},
-                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT})}),
+                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT})},
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_SNEASEL_HISUI, CONDITIONS({IF_TIME, TIME_NIGHT})}),
     #endif
     },
 
@@ -6171,7 +6176,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sUrsaringTeachableLearnset,
     #if P_GEN_8_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_PEAT_BLOCK, SPECIES_URSALUNA, CONDITIONS({IF_REGION, REGION_HISUI}, {IF_TIME, TIME_NIGHT})},
-                                {EVO_NONE, 0, SPECIES_URSALUNA_BLOODMOON}),
+                                {EVO_NONE, 0, SPECIES_URSALUNA_BLOODMOON},
+                                {EVO_LEVEL, 42, SPECIES_URSALUNA}),
     #endif
     },
 
@@ -6801,6 +6807,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sCorsolaTeachableLearnset,
         .eggMoveLearnset = sCorsolaEggMoveLearnset,
         .formSpeciesIdTable = sCorsolaFormSpeciesIdTable,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LINKING_CORD, SPECIES_CORSOLA_GALAR}),
     },
 
 #if P_GALARIAN_FORMS

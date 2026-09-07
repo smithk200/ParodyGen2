@@ -1636,11 +1636,11 @@
 #define FLAG_GOT_BASEMENT_KEY_FROM_WATTSON   0
 #define FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON 0
 #define FLAG_FAN_CLUB_STRENGTH_SHARED        0 // Set when you rate the strength of another trainer in Lilycove's Trainer Fan Club.
-#define FLAG_DEFEATED_RIVAL_RUSTBORO         0
+#define FLAG_GARBAGEFLAG         0
 #define FLAG_RECEIVED_RED_OR_BLUE_ORB        0
 #define FLAG_RECEIVED_PREMIER_BALL_RUSTBORO  0
 #define FLAG_ENABLE_WALLY_MATCH_CALL         0
-#define FLAG_ENABLE_SCOTT_MATCH_CALL         0
+#define FLAG_GARBAGEFLAG         0
 #define FLAG_ENABLE_MOM_MATCH_CALL           0
 #define FLAG_MET_DIVING_TREASURE_HUNTER      0
 #define FLAG_MET_WAILMER_TRAINER             0
@@ -1671,8 +1671,8 @@
 #define FLAG_USED_ROOM_2_KEY                 0
 #define FLAG_USED_ROOM_4_KEY                 0
 #define FLAG_USED_ROOM_6_KEY                 0
-#define FLAG_MET_PROF_COZMO                  0
-#define FLAG_RECEIVED_WAILMER_DOLL           0
+#define FLAG_GARBAGEFLAG                  0
+#define FLAG_GARBAGEFLAG           0
 #define FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104 0
 #define FLAG_DEFEATED_SS_TIDAL_TRAINERS      0
 #define FLAG_RECEIVED_SPELON_BERRY           0

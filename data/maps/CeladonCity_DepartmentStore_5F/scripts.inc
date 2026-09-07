@@ -31,12 +31,14 @@ CeladonDeptStore5_EventScript_Falkner::
 	end
 
 CeladonDeptStore5_Text_Falkner:
-	.string "{PLAYER}. I didn't expect to see\n"
-	.string "you here.\p"
-	.string "I'm picking up gear for my\n"
-	.string "bird Pokémon.\p"
+	.string "Wassup, {PLAYER}! I didn't expect to\n"
+	.string "see yo' ass here!\p"
+	.string "I was looking for the vapes, but\n"
+	.string "I guess they don't sell any at this\l"
+	.string "joint.\p"
 	.string "If you want to face me again, I'll\n"
-	.string "be at the Dojo in Saffron City.$"
+	.string "be at the Dojo in Saffron City\p"
+	.string "FUCK yeah!$"
 
 CeladonDeptStore5F_Text_Gentleman:
 	.string "I want to buy some items that\n"
@@ -44,8 +46,9 @@ CeladonDeptStore5F_Text_Gentleman:
 	.string "have enough money…$"
 
 CeladonDeptStore5F_Text_Sailor:
-	.string "I want Pp Up, so I can raise the\n"
-	.string "Pp of moves. But you can't buy it…$"
+	.string "I want PP Up, so I can get my\n"
+	.string "PP up.\p"
+	.string "Wait? That's not what it's for?$"
 
 CeladonDeptStore5F_Text_Teacher:
 	.string "Using items on them makes Pokémon\n"
@@ -53,4 +56,4 @@ CeladonDeptStore5F_Text_Teacher:
 	.string "They hate certain items, though…$"
 
 CeladonDeptStore5F_Text_Directory:
-	.string "5f: Drug Store$"
+	.string "5F: Drug Store$"

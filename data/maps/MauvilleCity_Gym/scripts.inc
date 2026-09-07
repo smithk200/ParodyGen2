@@ -76,8 +76,6 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 MauvilleCity_Gym_EventScript_Ella::
 	goto_if_set FLAG_BADGE18_GET, MauvilleCity_Gym_EventScript_EllaRematch
 	trainerbattle_single TRAINER_ELLA_1, MauvilleCity_Gym_Text_EllaIntro, MauvilleCity_Gym_Text_EllaDefeat, MauvilleCity_Gym_EventScript_EllaDefeated
-	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, MauvilleCity_Gym_EventScript_GiveShockWave2
-	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
 	msgbox MauvilleCity_Gym_Text_EllaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -94,13 +92,7 @@ MauvilleCity_Gym_EventScript_EllaDefeated::
 	waitmessage
 	setflag FLAG_BADGE18_GET
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
-	setvar VAR_0x8008, 3
-	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
-	special DrawWholeMapView
-	playse SE_UNLOCK
-	call MauvilleCity_Gym_EventScript_GiveShockWave
+	msgbox MauvilleCity_Gym_Text_EllaPostBattle, MSGBOX_AUTOCLOSE
 	closemessage
 	release
 	end
@@ -191,7 +183,6 @@ MauvilleCity_Gym_EventScript_ClearBarriersAltState::
 	end
 
 MauvilleCity_Gym_EventScript_Kirk::
-	trainerbattle_single TRAINER_KIRK, MauvilleCity_Gym_Text_KirkIntro, MauvilleCity_Gym_Text_KirkDefeat
 	msgbox MauvilleCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -201,7 +192,6 @@ MauvilleCity_Gym_EventScript_Shawn::
 	end
 
 MauvilleCity_Gym_EventScript_Ben::
-	trainerbattle_single TRAINER_BEN, MauvilleCity_Gym_Text_BenIntro, MauvilleCity_Gym_Text_BenDefeat
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 

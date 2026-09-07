@@ -466,10 +466,10 @@ VioletCity_Text_Pichu:
 	.string "Pichu: Chuuuu!$"
 
 VioletCity_Text_Bellsprout:
-	.string "Bellsprout: Sprouuuut.$"
+	.string "Bellsprout: Uh-yeet!$"
 
 VioletCity_Text_Rattata:
-	.string "Rattata: Rattataratta!$"
+	.string "Rattata: Juh-weep.$"
 
 VioletCity_Text_Elm_Call:
 	.string "Elm: Hello, {PLAYER}? We\n"

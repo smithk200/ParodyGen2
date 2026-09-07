@@ -738,18 +738,18 @@ AzaleaTown_Gym_Text_BugsyRematchDefeat:
 	.string "Wow, you beat me again!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennySeen:
-	.string "Bug Pokémon evolve young. So they\n"
-	.string "get stronger that much faster.$"
+	.string "My Pokémon are the greatest!\p"
+	.string "Am I great or what?$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyBeaten:
-	.string "Just evolving isn't enough!$"
+	.string "Man, my Pokémon aren't all that great…!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyAfter:
 	.string "Pokémon become stronger\n"
 	.string "if they evolve. Really!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlSeen:
-	.string "Bug Pokémon are cool and tough!\n"
+	.string "My Pokémon are cool and tough!\n"
 	.string "I'll prove it to you!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlBeaten:
@@ -785,7 +785,7 @@ AzaleaTown_Gym_Text_TwinsAmyMay1After:
 	.string "Amy: You're really strong!\p"
 	.string "But Brie's even stronger!\n"
 	.string "Her Floette's Substitute almost\l"
-	.string "seems to screw up over!$"
+	.string "seems to screw us over!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen:
 	.string "May: You want to see the\n"

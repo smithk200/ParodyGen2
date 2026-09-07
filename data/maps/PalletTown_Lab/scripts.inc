@@ -64,7 +64,7 @@ PalletTown_Lab_EventScript_PC::
 	end
 
 PalletTown_Lab_Text_OakLabDexCheck:
-	.string "How is your PokéDex coming?$"
+	.string "How is your Pokédex coming?$"
 
 PalletTown_Lab_Text_OakWelcomeKanto:
 	.string "Oak: Ah, {PLAYER}!\n"
@@ -117,7 +117,7 @@ PalletTown_Lab_Text_OaksAssistant1:
 	.string "It's a shame--I'd like to hear it.$"
 
 PalletTown_Lab_Text_OaksAssistant2:
-	.string "Thanks to your work on the PokéDex,\n"
+	.string "Thanks to your work on the Pokédex,\n"
 	.string "the Prof's research is coming along\l"
 	.string "great.$"
 

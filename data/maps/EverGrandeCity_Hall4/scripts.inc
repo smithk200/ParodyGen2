@@ -43,14 +43,15 @@ EverGrandeCity_Hall4_Text_Silver_Intro:
 	.string "Hmph, {PLAYER}.\n"
 	.string "It's you.\p"
 	.string "I've tried to beat the Champion.\p"
-	.string "He's tough, for sure. But I know that I'll be\n"
-	.string "better than him next time.\p"
-	.string "I suppose you haven't improved much, huh?\p"
+	.string "He's tough, for sure. But I know that\n"
+	.string "I'll be better than him next time.\p"
+	.string "I suppose you haven't improved much,\n"
+	.string "huh?\p"
 	.string "I'll be the judge of that.\p"
 	.string "{PLAYER}, show me what you're made of.$"
 	
 EverGrandeCity_Hall4_Text_Silver_Defeat:
-	.string "Hmph! Even better than me!"
+	.string "Hmph! Even better than me!$"
 
 EverGrandeCity_Hall4_Text_Silver_Post_Battle:
 	.string "I'm telling you, the Champion…\n"

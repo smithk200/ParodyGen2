@@ -13,8 +13,9 @@ Gate_EcruteakCity_Route38_EventScript_EnterRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	addobject LOCALID_FRY
-	applymovement LOCALID_FRY, Gate_EcruteakCity_Route38_Movement_PhilipJFry
+	clearflag FLAG_HIDE_FRY_ECRUTEAK
+	addobject LOCALID_FRY_ECRUTEAK_GATE
+	applymovement LOCALID_FRY_ECRUTEAK_GATE, Gate_EcruteakCity_Route38_Movement_PhilipJFry
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
 	goto Gate_EcruteakCity_Route38_EventScript_PhilipJFryIntro
@@ -38,20 +39,20 @@ EcruteakCity_Fry_AfterBattle::
 	waitmovement 0
 	msgbox Gate_EcruteakCity_Route38_TextFryLeaves, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_FRY, Gate_EcruteakCity_Route38_FryLeavesForOlivine
+	applymovement LOCALID_FRY_ECRUTEAK_GATE, Gate_EcruteakCity_Route38_FryLeavesForOlivine
 	waitmovement 0
 	setflag FLAG_HIDE_FRY_ECRUTEAK
-	removeobject LOCALID_FRY
+	removeobject LOCALID_FRY_ECRUTEAK_GATE
 	releaseall
 	end
 
 Gate_EcruteakCity_Route38_PhilipJFryExit::
 	goto_if_set FLAG_HIDE_FRY_ECRUTEAK, Gate_EcruteakCity_Route38_PhilipJFryIsNotThere
 	msgbox Gate_EcruteakCity_Route38_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
-	applymovement LOCALID_FRY, Gate_EcruteakCity_Route38_FryLeavesForOlivine
+	applymovement LOCALID_FRY_ECRUTEAK_GATE, Gate_EcruteakCity_Route38_FryLeavesForOlivine
 	waitmovement 0
 	setflag FLAG_HIDE_FRY_ECRUTEAK
-	removeobject LOCALID_FRY
+	removeobject LOCALID_FRY_ECRUTEAK_GATE
 	releaseall
 	end
 
@@ -122,7 +123,7 @@ Gate_EcruteakCity_Route38_TextPhilipJFryIntro:
 	.string "I was not expecting that Skeledirge!\p"
 	.string "But I'm still ready to battle!\p"
 	.string "Ready?\p"
-	.string "Here we Gooo!$"
+	.string "Here we GOOO!$"
 
 Gate_EcruteakCity_Route38_TextExplainTeraOrb:
 	.string "This here is the Tera Orb.\p"

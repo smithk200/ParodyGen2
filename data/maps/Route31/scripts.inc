@@ -165,9 +165,8 @@ Route31_Text_Youngster:
 	.string "I found a good Pokémon in Dark\n"
 	.string "Cave.\p"
 	.string "I'm going to raise it to take\n"
-	.string "on Falkner.\p"
-	.string "He's the leader of Violet\n"
-	.string "City's Gym.$"
+	.string "on Damian.\p"
+	.string "He's the leader of Violet City's Gym.$"
 
 Route31_Text_Sign:
 	.string "Route 31\p"

@@ -49,7 +49,6 @@ AbandonedShip_Corridors_B1F_EventScript_DoorIsUnlocked::
 	end
 
 AbandonedShip_Corridors_B1F_EventScript_Duncan::
-	trainerbattle_single TRAINER_DUNCAN, AbandonedShip_Corridors_B1F_Text_DuncanIntro, AbandonedShip_Corridors_B1F_Text_DuncanDefeat
 	msgbox AbandonedShip_Corridors_B1F_Text_DuncanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -64,8 +63,7 @@ AbandonedShip_Corridors_B1F_Text_DuncanDefeat:
 AbandonedShip_Corridors_B1F_Text_DuncanPostBattle:
 	.string "The ship's bottom has sunk into the\n"
 	.string "depths.\p"
-	.string "If a Pokémon knew how to go underwater,\n"
-	.string "we might make some progress…$"
+	.string "Like the fucking Titanic!$"
 
 AbandonedShip_Corridors_B1F_Text_YayItsAShip:
 	.string "Yay!\n"

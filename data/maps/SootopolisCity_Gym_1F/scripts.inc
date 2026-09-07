@@ -80,21 +80,16 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Damian::
-	trainerbattle_single TRAINER_DAMIAN_3, SootopolisCity_Gym_1F_Text_DamianIntro, SootopolisCity_Gym_1F_Text_DamianDefeat, SootopolisCity_Gym_1F_EventScript_DamianDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_DamianRematch
-	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
+	trainerbattle_single TRAINER_DAMIAN_3, SootopolisCity_Gym_1F_Text_DamianIntro, SootopolisCity_Gym_1F_Text_DamianDefeat, SootopolisCity_Gym_1F_EventScript_DamianDefeated
 	msgbox SootopolisCity_Gym_1F_Text_DamianPostBattle, MSGBOX_DEFAULT
-	release
 	end
 
 SootopolisCity_Gym_1F_EventScript_DamianDefeated::
-	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
+	message SootopolisCity_Gym_1F_Text_ReceivedPotRoastBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SootopolisCity_Gym_1F_Text_ExplainPotRoastBadge, MSGBOX_DEFAULT
-	setvar VAR_0x8008, 8
-	call Common_EventScript_SetGymTrainers
+	setflag FLAG_BADGE21_GET
 	closemessage
 	delay 30
 	release
@@ -195,7 +190,7 @@ SootopolisCity_Gym_1F_Text_DamianDefeat:
 	.string "Whoa, fuck, man!\p"
 	.string "You're even better than in Violet City!$"
 
-SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
+SootopolisCity_Gym_1F_Text_ReceivedPotRoastBadge:
 	.string "{PLAYER} received the Pot Roast Badge\n"
 	.string "from Damian.$"
 

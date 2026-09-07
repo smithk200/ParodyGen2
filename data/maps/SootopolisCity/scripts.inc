@@ -1691,7 +1691,7 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "That Hidden Machine contains\n"
 	.string "Waterfall.\p"
 	.string "If you have the Rain Badge, a Pokémon\n"
-	.string "that has learned that Hm move can\l"
+	.string "that has learned that HM move can\l"
 	.string "force its way up waterfalls.\p"
 	.string "And where does one get the Rain Badge?\n"
 	.string "You know, don't you?\p"

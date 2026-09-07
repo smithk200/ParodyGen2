@@ -50,10 +50,7 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
-	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
-	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
+	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -62,31 +59,8 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	message MossdeepCity_Gym_Text_ReceivedMindBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis, MSGBOX_DEFAULT
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	setvar VAR_0x8008, 7
-	call Common_EventScript_SetGymTrainers
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
-	setflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
-	call MossdeepCity_Gym_EventScript_GiveCalmMind
-	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MossdeepCity_Gym_Text_RegisteredTateAndLiza, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL
+	setflag FLAG_BADGE20_GET
+	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -203,7 +177,6 @@ MossdeepCity_Gym_EventScript_Virgil::
 	end
 
 MossdeepCity_Gym_EventScript_Blake::
-	trainerbattle_single TRAINER_BLAKE, MossdeepCity_Gym_Text_BlakeIntro, MossdeepCity_Gym_Text_BlakeDefeat
 	msgbox MossdeepCity_Gym_Text_BlakePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -213,7 +186,7 @@ MossdeepCity_Gym_EventScript_Hannah::
 	end
 
 MossdeepCity_Gym_EventScript_Samantha::
-	trainerbattle_single TRAINER_SAMANTHA, MossdeepCity_Gym_Text_SamanthaIntro, MossdeepCity_Gym_Text_SamanthaDefeat
+	trainerbattle_single TRAINER_SAMANTHA_2, MossdeepCity_Gym_Text_SamanthaIntro, MossdeepCity_Gym_Text_SamanthaDefeat
 	msgbox MossdeepCity_Gym_Text_SamanthaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -227,9 +200,9 @@ MossdeepCity_Gym_EventScript_Sylvia::
 	msgbox MossdeepCity_Gym_Text_SylviaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MossdeepCity_Gym_EventScript_Nate::
-	trainerbattle_single TRAINER_NATE, MossdeepCity_Gym_Text_NateIntro, MossdeepCity_Gym_Text_NateDefeat
-	msgbox MossdeepCity_Gym_Text_NatePostBattle, MSGBOX_AUTOCLOSE
+MossdeepCity_Gym_EventScript_Charles::
+	trainerbattle_single TRAINER_CHARLES_HOENN, MossdeepCity_Gym_Text_CharlesIntro, MossdeepCity_Gym_Text_CharlesDefeat
+	msgbox MossdeepCity_Gym_Text_CharlesPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Macey::
@@ -473,16 +446,16 @@ MossdeepCity_Gym_Text_SylviaPostBattle:
 	.string "It won't be my fault if something\n"
 	.string "horrible befalls you…$"
 
-MossdeepCity_Gym_Text_NateIntro:
+MossdeepCity_Gym_Text_CharlesIntro:
 	.string "Hohoho.\p"
 	.string "You need me to show you how tenacious\n"
 	.string "the Psychic type can be.$"
 
-MossdeepCity_Gym_Text_NateDefeat:
+MossdeepCity_Gym_Text_CharlesDefeat:
 	.string "Oh! My, my!\n"
 	.string "Your battle style is fantastic!$"
 
-MossdeepCity_Gym_Text_NatePostBattle:
+MossdeepCity_Gym_Text_CharlesPostBattle:
 	.string "I… I don't let defeat rattle m-me,\n"
 	.string "however b-badly.$"
 
@@ -561,7 +534,7 @@ MossdeepCity_Gym_Text_ReceivedMindBadge:
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "Tate: The Mind Badge enhances the\n"
 	.string "Sp. Atk and Sp. Def of Pokémon.\p"
-	.string "Liza: It also lets you use the Hm move\n"
+	.string "Liza: It also lets you use the HM move\n"
 	.string "Dive outside of battle.\p"
 	.string "Tate: You should also take this, too.$"
 

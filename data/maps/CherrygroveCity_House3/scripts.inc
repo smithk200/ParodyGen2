@@ -19,9 +19,12 @@ CherrygroveCity_House3_EventScript_Girl::
 
 CherrygroveCity_EvolutionHouse_Text_Youngster:
 	.string "Pokémon gain experience in\n"
-	.string "battle and change their form.$"
+	.string "battle and change their form.\p"
+	.string "Some can even Mega Evolve!$"
 
 CherrygroveCity_EvolutionHouse_Text_Lass:
-	.string "Pokémon change?\p"
-	.string "I would be shocked if one did\n"
-	.string "that!$"
+	.string "Pokémon evolve?\p"
+	.string "I would be shocked if one did that!\p"
+	.string "For as we know, the earth is 6,000\n"
+	.string "years old, created by God himself!\p"
+	.string "EVOLUTION'S A LIE!!!$"

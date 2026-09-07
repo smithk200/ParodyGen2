@@ -345,7 +345,7 @@ static const struct MatchCallStructNPC sScottMatchCallHeader =
 {
     .type = 0,
     .mapSec = MAPSEC_NONE,
-    .flag = FLAG_ENABLE_SCOTT_MATCH_CALL,
+    .flag = FLAG_GARBAGEFLAG,
     .desc = COMPOUND_STRING("ELUSIVE EYES"),
     .name = COMPOUND_STRING("SCOTT"),
     .textData = (const match_call_text_data_t[]) {

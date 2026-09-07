@@ -3,9 +3,8 @@ RustboroCity_Gym_MapScripts::
 
 RustboroCity_Gym_EventScript_Nate::
 	goto_if_set FLAG_BADGE23_GET, RustboroCity_Gym_EventScript_NateRematch
-	trainerbattle_single TRAINER_NATE_1, RustboroCity_Gym_Text_NateIntro, RustboroCity_Gym_Text_NateDefeat, RustboroCity_Gym_EventScript_NateDefeated, NO_MUSIC
-	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
-	msgbox RustboroCity_Gym_Text_NatePostBattle, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_NATE_1, RustboroCity_Gym_Text_NateIntro, RustboroCity_Gym_Text_NateDefeat, RustboroCity_Gym_EventScript_NateDefeated
+	msgbox RustboroCity_Gym_Text_NatePostBattle, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -13,18 +12,8 @@ RustboroCity_Gym_EventScript_NateDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox RustboroCity_Gym_Text_StoneBadgeInfoTakeThis, MSGBOX_DEFAULT
-	setvar VAR_0x8008, 1
-	call Common_EventScript_SetGymTrainers
-	goto RustboroCity_Gym_EventScript_GiveRockTomb
-	end
-
-RustboroCity_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM_ROCK_TOMB
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_ROCK_TOMB
-	msgbox RustboroCity_Gym_Text_ExplainRockTomb, MSGBOX_DEFAULT
-	release
+	msgbox RustboroCity_Gym_Text_NatePostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_BADGE23_GET
 	end
 
 RustboroCity_Gym_EventScript_NateRematch::
@@ -33,17 +22,17 @@ RustboroCity_Gym_EventScript_NateRematch::
 	end
 
 RustboroCity_Gym_EventScript_Josh::
-	trainerbattle_single TRAINER_JOSH, RustboroCity_Gym_Text_JoshIntro, RustboroCity_Gym_Text_JoshDefeat
+	trainerbattle_single TRAINER_JOSH_2, RustboroCity_Gym_Text_JoshIntro, RustboroCity_Gym_Text_JoshDefeat
 	msgbox RustboroCity_Gym_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RustboroCity_Gym_EventScript_Tommy::
-	trainerbattle_single TRAINER_TOMMY, RustboroCity_Gym_Text_TommyIntro, RustboroCity_Gym_Text_TommyDefeat
+	trainerbattle_single TRAINER_TOMMY_2, RustboroCity_Gym_Text_TommyIntro, RustboroCity_Gym_Text_TommyDefeat
 	msgbox RustboroCity_Gym_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RustboroCity_Gym_EventScript_Marc::
-	trainerbattle_single TRAINER_MARC, RustboroCity_Gym_Text_MarcIntro, RustboroCity_Gym_Text_MarcDefeat
+	trainerbattle_single TRAINER_MARC_2, RustboroCity_Gym_Text_MarcIntro, RustboroCity_Gym_Text_MarcDefeat
 	msgbox RustboroCity_Gym_Text_MarcPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -94,22 +83,22 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "Well, go for it!$"
 
 RustboroCity_Gym_Text_GymGuidePostVictory:
-	.string "Whoa! What a breathtaking victory!\n"
-	.string "My cheering must've worked!\p"
-	.string "Great!\n"
-	.string "You're going places!\n"
-	.string "That's got to feel awesome!$"
+	.string "Whoa! Wow-ee!\n"
+	.string "That sure was an unforgettable luncheon!\p"
+	.string "I'm sure Nate feels the same way.$"
 
 RustboroCity_Gym_Text_JoshIntro:
-	.string "Don't take us Gym Trainers lightly!\n"
-	.string "I'll show you why we're better!$"
+	.string "Aurora borealis!\p"
+	.string "Aurora borealis…$"
 
 RustboroCity_Gym_Text_JoshDefeat:
-	.string "You were too good for me…$"
+	 .string "Aurora borealis…$"
 
 RustboroCity_Gym_Text_JoshPostBattle:
-	.string "You haven't seen anything of the Rock\n"
-	.string "type's terrifying power!$"
+	.string "At this time of year, at this time\n"
+	.string "of day in this part of the country,\l"
+	.string "localized entirely within Nate's gym?\p"
+	.string "Yes.$"
 
 RustboroCity_Gym_Text_TommyIntro:
 	.string "If you can't beat me, you won't stand\n"

@@ -51,6 +51,7 @@ static void MCB2_FieldUpdateRegionMap(void);
 static void FieldUpdateRegionMap(void);
 static void PrintRegionMapSecName();
 static void PrintTitleWindowText();
+void FieldInitRegionMapWithOptions(MainCallback callback, bool8 allowFly);
 
 static const struct BgTemplate sFieldRegionMapBgTemplates[] = {
     {
@@ -96,6 +97,11 @@ static const struct WindowTemplate sFieldRegionMapWindowTemplates[] =
 };
 
 void FieldInitRegionMap(MainCallback callback)
+{
+    FieldInitRegionMapWithOptions(callback, TRUE);
+}
+
+void FieldInitRegionMapWithOptions(MainCallback callback, bool8 allowFly)
 {
     SetVBlankCallback(NULL);
     sFieldRegionMapHandler = Alloc(sizeof(*sFieldRegionMapHandler));

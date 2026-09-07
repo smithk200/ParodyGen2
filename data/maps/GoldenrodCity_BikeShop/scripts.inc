@@ -5,9 +5,7 @@ GoldenrodCity_BikeShop_EventScript_Clerk::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_BIKE, GoldenrodCity_BikeShop_EventScript_Clerk_BikeReceived
-	msgbox GoldenrodCity_BikeShop_Text_ClerkIntro, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed
-	msgbox GoldenrodCity_BikeShop_Text_Refused, MSGBOX_DEFAULT
+	msgbox GoldenrodCity_BikeShop_Text_ClerkIntro, MSGBOX_AUTOCLOSE
 	closemessage
 	release
 	end
@@ -48,10 +46,8 @@ GoldenrodCity_BikeShop_Text_Clerk2:
 	.string "register it from the bag.$"
 
 GoldenrodCity_BikeShop_Text_ClerkIntro:
-    .string "…sigh… I moved here, but I can't\n"
-    .string "sell my bicycles. Why is that?\p"
-    .string "Could you ride a bicycle and\n"
-    .string "advertise for me?$"
+    .string "Bikes are so fuckin' cheap,\n"
+    .string "I'll give you one for free.$"
 
 GoldenrodCity_BikeShop_Text_ClerkAgreed:
     .string "Really? Great!\p"
@@ -70,8 +66,7 @@ GoldenrodCity_BikeShop_Text_Mainshop:
 	.string "runs a bike shop as well.$"
 
 GoldenrodCity_BikeShop_Text_Refused:
-    .string "…sigh… Oh, for the kindness of\n"
-    .string "people…$"
+    .string "Well, fuck you!$"
 
 GoldenrodCity_BikeShop_Text_JustReleasedCompact:
     .string "Just released!\p"

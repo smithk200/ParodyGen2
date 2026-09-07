@@ -158,6 +158,11 @@ Debug_CheatStart_ExtraCode::
 	giveitem ITEM_RAZOR_FANG
 	giveitem ITEM_EVIOLITE
 	giveitem ITEM_FLOAT_STONE
+
+	setvar VAR_LUGIA_OR_HOOH, 2
+	setvar VAR_ECRUTEAK_CITY_THEATER, 5
+	setvar VAR_NEWBARKTOWN_LABSTATE, 7
+	setflag FLAG_HIDE_ECRUTEAK_ROCKET
 	end
 
 

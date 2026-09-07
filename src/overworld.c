@@ -1286,6 +1286,22 @@ void Overworld_ResetMapMusic(void)
 void Overworld_PlaySpecialMapMusic(void)
 {
     u16 music = GetCurrLocationDefaultMusic();
+    // Inject Rocket Takeover override logic
+    if (VarGet(VAR_MAHOGANY_TOWN_STATE) == 16)
+    {
+        if (
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY ||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_RADIO_TOWER_4F||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_RADIO_TOWER_1F||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_RADIO_TOWER_2F||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_RADIO_TOWER_3F||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_RADIO_TOWER_5F||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_UNDERGROUND_ENTRANCE ||
+            gMapHeader.mapLayoutId ==  MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL
+        )
+            if (music != GetCurrentMapMusic())
+                music = MUS_HG_ROCKET_TAKEOVER;
+    }
 
     if (gDisableMapMusicChangeOnMapLoad == MUSIC_DISABLE_STOP)
     {
@@ -1934,11 +1950,8 @@ void CB2_NewGame(void)
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);
-//#if OW_USE_FAKE_RTC
-    // Wall clock now track local time so we set it to 10AM to match initial wall clock time
-    if (gSaveBlock1Ptr->tx_Features_RTCType == 1) // fake rtc
+    if (UseFakeRtc())
         RtcCalcLocalTimeOffset(0, 10, 0, 0);
-//#endif
 }
 
 void CB2_WhiteOut(void)
@@ -4356,5 +4369,6 @@ static const u8 sMapsecToRegion[MAPSEC_COUNT] = {
     [MAPSEC_NAVEL_ROCK]                 = REGION_HOENN,
     [MAPSEC_TRAINER_HILL]               = REGION_HOENN,
     [MAPSEC_ALOLA]                   = REGION_ALOLA,
+    [MAPSEC_GRINDHAUS_RANCH]           = REGION_HOENN,
 };
 

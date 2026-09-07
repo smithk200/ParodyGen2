@@ -40,6 +40,9 @@ static bool32 TryBellyDrum(enum BattlerId battler);
 static bool32 TryHalfHp(enum BattlerId battler);
 static bool32 CutThirdOfHp(enum BattlerId battler);
 
+//Multi-hit move checker
+static bool8 UsedMoveMoreThanOnce = FALSE;
+
 // ==============
 // Attackcanceler
 // ==============
@@ -3236,10 +3239,21 @@ static enum MoveEndResult MoveEndMultihitMove(struct BattleCalcValues *cv)
         gBattleScripting.multihitString[4]++;
         if (gMultiHitCounter == 0)
         {
+            DebugPrintf("1st: Multi Hit Counter, %d", gMultiHitCounter);
             if (target != TARGET_SMART) // Dragon Darts doesn't print hit x times message
             {
-                BattleScriptCall(BattleScript_MultiHitPrintStrings);
-                result = MOVEEND_RESULT_RUN_SCRIPT;
+                if (UsedMoveMoreThanOnce == TRUE)
+                {
+                    BattleScriptCall(BattleScript_MultiHitPrintStrings);
+                    UsedMoveMoreThanOnce = FALSE;
+                    result = MOVEEND_RESULT_RUN_SCRIPT;
+                }
+                else 
+                {
+                    BattleScriptCall(BattleScript_MultiHitPrintStrings_Singular);
+                    result = MOVEEND_RESULT_RUN_SCRIPT;
+                }
+                
             }
         }
         else
@@ -3250,6 +3264,7 @@ static enum MoveEndResult MoveEndMultihitMove(struct BattleCalcValues *cv)
              && CanTargetPartner(cv->battlerAtk, cv->battlerDef)
              && !IsBattlerUnaffectedByMove(BATTLE_PARTNER(cv->battlerDef)))
                 gBattlerTarget = cv->battlerDef = BATTLE_PARTNER(cv->battlerDef); // Target the partner in doubles for second hit.
+            UsedMoveMoreThanOnce = TRUE;
 
             enum BattleMoveEffects chosenEffect = GetMoveEffect(gChosenMove);
 
@@ -3274,7 +3289,7 @@ static enum MoveEndResult MoveEndMultihitMove(struct BattleCalcValues *cv)
             else if (target != TARGET_SMART) // Dragon Darts doesn't print hit x times message
             {
                 BattleScriptCall(BattleScript_MultiHitPrintStrings);
-                result = MOVEEND_RESULT_RUN_SCRIPT;
+                result = MOVEEND_RESULT_RUN_SCRIPT;    
             }
         }
     }

@@ -7,7 +7,6 @@ Route134_OnResume:
 	end
 
 Route134_EventScript_Jack::
-	trainerbattle_single TRAINER_JACK, Route134_Text_JackIntro, Route134_Text_JackDefeat
 	msgbox Route134_Text_JackPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -17,22 +16,18 @@ Route134_EventScript_Laurel::
 	end
 
 Route134_EventScript_Alex::
-	trainerbattle_single TRAINER_ALEX, Route134_Text_AlexIntro, Route134_Text_AlexDefeat
 	msgbox Route134_Text_AlexPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route134_EventScript_Aaron::
-	trainerbattle_single TRAINER_AARON, Route134_Text_AaronIntro, Route134_Text_AaronDefeat
-	msgbox Route134_Text_AaronPostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route134_Text_AaronIntro, MSGBOX_AUTOCLOSE
 	end
 
 Route134_EventScript_Hitoshi::
-	trainerbattle_single TRAINER_NONE, Route134_Text_HitoshiIntro, Route134_Text_HitoshiDefeat
 	msgbox Route134_Text_HitoshiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route134_EventScript_Hudson::
-	trainerbattle_single TRAINER_NONE, Route134_Text_HudsonIntro, Route134_Text_HudsonDefeat
 	msgbox Route134_Text_HudsonPostBattle, MSGBOX_AUTOCLOSE
 	end
 

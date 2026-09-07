@@ -85,12 +85,10 @@ Route110_TrickHousePuzzle2_EventScript_PressButton4::
 	return
 
 Route110_TrickHousePuzzle2_EventScript_Ted::
-	trainerbattle_single TRAINER_TED, Route110_TrickHousePuzzle2_Text_TedIntro, Route110_TrickHousePuzzle2_Text_TedDefeat
 	msgbox Route110_TrickHousePuzzle2_Text_TedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_TrickHousePuzzle2_EventScript_Paul::
-	trainerbattle_single TRAINER_PAUL, Route110_TrickHousePuzzle2_Text_PaulIntro, Route110_TrickHousePuzzle2_Text_PaulDefeat
 	msgbox Route110_TrickHousePuzzle2_Text_PaulPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -125,8 +123,9 @@ Route110_TrickHousePuzzle2_Text_PaulDefeat:
 	.string "You're good at battling too?$"
 
 Route110_TrickHousePuzzle2_Text_PaulPostBattle:
-	.string "The Trick Master rigged all the tricks\n"
-	.string "in this house all by himself.$"
+	.string "Which thing goes in which hole?\p"
+	.string "Wait, that's a question I better\n"
+	.string "not answer.$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaIntro:
 	.string "I want to make my own Gym one day.\n"

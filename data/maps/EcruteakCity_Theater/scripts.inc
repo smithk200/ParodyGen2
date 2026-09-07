@@ -741,14 +741,13 @@ EcruteakCity_Theater_EventScript_KuniBattle::
 	trainerbattle_no_intro TRAINER_KUNI, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	applymovement LOCALID_ECRUTEAK_KUNI, EcruteakCity_Theater_Movement_KuniWalkBack
 	waitmovement 0
-EcruteakCity_Theater_EventScript_BeatGauntlet::
 	applymovement LOCALID_ECRUTEAK_ZUKI, Common_Movement_WalkDown1
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_ZukiDone, MSGBOX_DEFAULT
 	goto_if_eq VAR_LUGIA_OR_HOOH, 1, EcruteakCity_Theater_EventScript_Lugia
 	goto_if_eq VAR_LUGIA_OR_HOOH, 2, EcruteakCity_Theater_EventScript_Hooh
 
-	EcruteakCity_Theater_Movement_SouthCorrection::
+EcruteakCity_Theater_Movement_SouthCorrection::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
@@ -761,7 +760,7 @@ EcruteakCity_Theater_EventScript_BeatGauntlet::
 	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
-	EcruteakCity_Theater_Movement_WestCorrection::
+EcruteakCity_Theater_Movement_WestCorrection::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
@@ -770,7 +769,7 @@ EcruteakCity_Theater_EventScript_BeatGauntlet::
 	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
-	EcruteakCity_Theater_Movement_EastCorrection::
+EcruteakCity_Theater_Movement_EastCorrection::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
@@ -788,7 +787,7 @@ EcruteakCity_Theater_EventScript_Lugia::
 	setvar VAR_0x8006, 20  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	@waitstate
+	waitstate
 	addobject LOCALID_ECRUTEAK_SISTER
 	applymovement LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0
@@ -797,7 +796,8 @@ EcruteakCity_Theater_EventScript_Lugia::
 	closemessage
 	playse SE_PIN
 	applymovement LOCALID_ECRUTEAK_ZUKI, Common_Movement_ExclamationMark
-	delay 60
+	delay 55
+	waitmovement LOCALID_ECRUTEAK_ZUKI
 	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	msgbox EcruteakCity_Theater_Text_ZukiLugia, MSGBOX_DEFAULT
 	closemessage
@@ -808,7 +808,6 @@ EcruteakCity_Theater_EventScript_Lugia::
 	removeobject LOCALID_ECRUTEAK_NAOKO
 	removeobject LOCALID_ECRUTEAK_KUNI
 	removeobject LOCALID_ECRUTEAK_SAYO
-	removeobject LOCALID_ECRUTEAK_MIKI
 
 	removeobject LOCALID_ECRUTEAK_SISTER
 	playse SE_EXIT
@@ -834,7 +833,7 @@ EcruteakCity_Theater_EventScript_Hooh::
 	setvar VAR_0x8006, 20  @ num shakes
 	setvar VAR_0x8007, 6  @ shake delay
 	special ShakeCamera
-	@waitstate
+	waitstate
 	addobject LOCALID_ECRUTEAK_SISTER
 	applymovement LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0
@@ -842,7 +841,8 @@ EcruteakCity_Theater_EventScript_Hooh::
 	closemessage
 	playse SE_PIN
 	applymovement LOCALID_ECRUTEAK_ZUKI, Common_Movement_ExclamationMark
-	delay 60
+	delay 55
+	waitmovement LOCALID_ECRUTEAK_ZUKI
 	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	msgbox EcruteakCity_Theater_Text_ZukiHooh, MSGBOX_DEFAULT
 	closemessage
@@ -853,7 +853,6 @@ EcruteakCity_Theater_EventScript_Hooh::
 	removeobject LOCALID_ECRUTEAK_NAOKO
 	removeobject LOCALID_ECRUTEAK_KUNI
 	removeobject LOCALID_ECRUTEAK_SAYO
-	removeobject LOCALID_ECRUTEAK_MIKI
 
 	removeobject LOCALID_ECRUTEAK_SISTER
 	playse SE_EXIT

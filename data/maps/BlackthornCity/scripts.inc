@@ -305,7 +305,9 @@ BlackBeltText_VoicesInMyHead:
 
 BlackthornCooltrainerF1Text:
 	.string "Are you going to make your Pokémon\n"
-	.string "remember some moves?$"
+	.string "remember some moves, dumbass?\p"
+	.string "There's a Move Relearner here.\n"
+	.string "Isn't that great?$"
 
 BlackthornYoungsterText:
 	.string "Dragon masters all come from the city\n"

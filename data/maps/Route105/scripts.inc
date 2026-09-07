@@ -26,7 +26,6 @@ Route105_OnFrame:
 	.2byte 0
 
 Route105_EventScript_Foster::
-	trainerbattle_single TRAINER_NONE, Route105_Text_FosterIntro, Route105_Text_FosterDefeated
 	msgbox Route105_Text_FosterPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -41,8 +40,7 @@ Route105_EventScript_Dominik::
 	end
 
 Route105_EventScript_Beverly::
-	trainerbattle_single TRAINER_BEVERLY, Route105_Text_BeverlyIntro, Route105_Text_BeverlyDefeated
-	msgbox Route105_Text_PostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route105_Text_Beverly_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route105_EventScript_Imani::

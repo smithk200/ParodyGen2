@@ -44,7 +44,7 @@ GoldenrodDeptStore_Text_4FBugCatcher:
     .string "Defense.$"
 
 GoldenrodDeptStore_Text_4FGameboyKid:
-    .string "There were rumours that some\n"
+    .string "There were rumors that some\n"
     .string "Pokémon evolve only by\l"
     .string "being traded via a Game Link\l"
     .string "cable.\p"
@@ -59,4 +59,4 @@ GoldenrodDeptStore_Text_4FGameboyKid:
 
 GoldenrodDeptStore_Text_4FDirectory:
     .string "Let Us Pump Up Your Pokémon!\p"
-    .string "4f Medicine Box$"
+    .string "4F Medicine Box$"

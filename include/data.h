@@ -259,11 +259,6 @@ static inline bool32 IsSpecialTrainer(u16 trainerId)
 
 static inline u16 SanitizeTrainerId(u16 trainerId)
 {
-    assertf(trainerId < TRAINERS_COUNT, "invalid trainer: %d", trainerId)
-    {
-        return TRAINER_NONE;
-    }
-
     return trainerId;
 }
 

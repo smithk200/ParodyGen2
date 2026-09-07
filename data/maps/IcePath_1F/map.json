@@ -119,6 +119,7 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
+      "local_id": "LOCALID_ICEPATH1_KIMONO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_GIRL",
       "x": 49,
       "y": 25,
@@ -199,5 +200,14 @@
       "script": "IcePath_1F_Trigger_KimonoGirl"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 12,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_ICE_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ICEPATH_1F_ICE_HEAL"
+    }
+  ]
 }

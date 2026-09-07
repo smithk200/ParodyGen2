@@ -202,7 +202,7 @@ Route29_Text_OldManDeclined:
 	.string "Oh. Fine, then.\p"
 	.string "Check every route to find\n"
 	.string "different types of Pokémon.\p"
-	.string "Your PokéDex shows where you can\n"
+	.string "Your Pokédex shows where you can\n"
 	.string "find them too!\p"
 	.string "If you want to learn more,\n"
 	.string "go to the Academy in Violet City!\p"
@@ -283,7 +283,7 @@ Route29_Text_FryAfter:
 	.string "and from what I've heard, almost all\l"
 	.string "the Gym Leaders and Elite Four\l"
 	.string "got replaced, except for one.\p"
-	.string "But I don't remember who it was...\p"
+	.string "But I don't remember who it was…\p"
 	.string "Hey, before you go, take this!$"
 
 Route30_Text_FryExplainTrailblaze:

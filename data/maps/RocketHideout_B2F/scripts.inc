@@ -301,16 +301,12 @@ RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
 
 RocketHideout_B2F_EventScript_ChoosePartyForMultiBattle::
 	setflag FLAG_ROCKETHIDEOUT2_BATTLE
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	@waitstate
 	goto_if_ne VAR_RESULT, 0, RocketHideout_B2F_EventScript_DoLanceMultiBattle
 	special LoadPlayerParty
 	goto RocketHideout_B2F_EventScript_ReadyForBattlePrompt
 
 RocketHideout_B2F_EventScript_DoLanceMultiBattle::
-	multi_2_vs_2 TRAINER_ARIANA_1, RocketHideout_B2F_Text_ArianaLoss, TRAINER_GRUNT_23, RocketHideout_B2F_Text_GruntLoss, PARTNER_STEVEN
+	multi_fixed_2_vs_2 TRAINER_ARIANA_1, RocketHideout_B2F_Text_ArianaLoss, TRAINER_GRUNT_23, RocketHideout_B2F_Text_GruntLoss, PARTNER_STEVEN
 	switch VAR_RESULT
 	case 1, RocketHideout_B2F_EventScript_DefeatedAriana
 	fadescreen FADE_TO_BLACK
@@ -529,6 +525,8 @@ RocketHideout_B2F_EventScript_ElectrodeDone::
 	giveitem ITEM_HM_WHIRLPOOL
 	msgbox RocketHideout_B2F_Text_LanceWhirlpool, MSGBOX_DEFAULT
 	closemessage
+	msgbox RocketHideout_B2F_Text_LanceMegaRing, MSGBOX_AUTOCLOSE
+	giveitem ITEM_MEGA_RING
 	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_SOUTH
 	delay 20
 	msgbox RocketHideout_B2F_Text_LanceMonMaster, MSGBOX_DEFAULT
@@ -617,7 +615,7 @@ RocketHideout_B2F_Text_ArianaLoss:
     .string "you could become an Executive.$"
 
 RocketHideout_Text_ArianaRetreat:
-    .string "ARIANA: But that's fine.\n"
+    .string "Ariana: But that's fine.\n"
     .string "The broadcast experiment was a\l"
     .string "total success.\p"
     .string "It doesn't matter what happens to\n"
@@ -649,12 +647,12 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "{PLAYER}, let's split the job.$"
 
 RocketHideout_B2F_Text_LanceSide:
-    .string "LANCE: Leave this side to me.$"
+    .string "Lance: Leave this side to me.$"
 
 RocketHideout_B2F_Text_LanceElectrodeDone:
-    .string "LANCE: That odd signal has\n"
+    .string "Lance: That odd signal has\n"
     .string "finally stopped.\p"
-    .string "The LAKE should be back to\n"
+    .string "The lake should be back to\n"
     .string "normal.\p"
     .string "You're the hero! Let me thank\n"
     .string "you on behalf of all the\l"
@@ -663,18 +661,22 @@ RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "I found it here, but I don't\l"
     .string "have any need for it.$"
 
+RocketHideout_B2F_Text_LanceMegaRing:
+	.string "Also, take this as my token of\n"
+	.string "appreciation.$"
+
 RocketHideout_B2F_Text_LanceWhirlpool:
-    .string "That's WHIRLPOOL. Teach it to a\n"
+    .string "That's Whirlpool. Teach it to a\n"
     .string "Pokémon to get across wild water.\p"
     .string "But keep this in mind.\p"
     .string "You can use that out of battle\n"
-    .string "only with the BADGE from\l"
-    .string "MAHOGANY GYM.$"
+    .string "only with the Badge from\l"
+    .string "Mahogany Gym.$"
 
 RocketHideout_B2F_Text_LanceMonMaster:
     .string "{PLAYER}…\p"
     .string "The journey to becoming the\n"
-    .string "Pokémon MASTER is long and\l"
+    .string "Pokémon master is long and\l"
     .string "difficult.\p"
     .string "Knowing that, will you keep\n"
     .string "going?\p"

@@ -69,5 +69,6 @@ bool8 IsHoennTileset(struct Tileset const *tileset);
 
 // field_region_map.c
 void FieldInitRegionMap(MainCallback callback);
+void FieldInitRegionMapWithOptions(MainCallback callback, bool8 allowFly);
 
 #endif //GUARD_FIELDMAP_H

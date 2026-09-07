@@ -188,33 +188,6 @@
       "var": "VAR_GARBAGEVAR",
       "var_value": "2",
       "script": "Route101_EventScript_PreventExitNorth"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 13,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route110_EventScript_WhatAreYouDoing"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 13,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route110_EventScript_WhatAreYouDoing"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 13,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Route110_EventScript_WhatAreYouDoing"
     }
   ],
   "bg_events": [

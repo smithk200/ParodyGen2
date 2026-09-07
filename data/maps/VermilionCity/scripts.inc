@@ -204,6 +204,21 @@ VermilionCity_EventScript_BadgeGuyAfter::
 	release
 	end
 
+VermilionCity_EventScript_Mew::
+	lock
+	faceplayer
+	goto_if_set FLAG_VERMILION_FOUGHT_MEW, CommonEventScript_End
+	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	waitmoncry
+	seteventmon SPECIES_MEW, 70
+	special BattleSetup_StartLegendaryBattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, EmbeddedTower_EventScript_RayquazaRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag FLAG_VERMILION_FOUGHT_MEW
+	fadescreenswapbuffers FADE_FROM_BLACK
+	release
+	end
 
 VermilionCity_Movement_Suicune1:
 	jump_in_place_left
@@ -279,15 +294,15 @@ VermilionCity_Text_Eusine2:
 
 VermilionCity_Text_Teacher:
 	.string "Vermilion Port is Kanto's seaside\n"
-	.string "gateway.\p"
-	.string "Luxury liners from around the\n"
-	.string "world dock here.$"
+	.string "getaway.\p"
+	.string "Lots of people have their honeymoons here.\p"
+	.string "I heard that The Titanic from Wii Sports\n"
+	.string "Resort: Meme Squad docks here sometimes!$"
 
 VermilionCity_Text_MachopOwner:
 	.string "My Pokémon is preparing the land\n"
 	.string "for construction.\p"
-	.string "But I have no money to start the\n"
-	.string "project…$"
+	.string "But I'm fucking broke…$"
 
 VermilionCity_Text_Machop1:
 	.string "Machop: Guooh gogogoh!$"
@@ -318,8 +333,9 @@ VermilionCity_Text_BadgeGuy_Trainer:
 VermilionCity_Text_BadgeGuy_SomeBadges:
 	.string "You've started to collect Kanto\n"
 	.string "Gym Badges?\p"
-	.string "Don't you agree that the trainers\n"
-	.string "here are tough?$"
+	.string "If you thought the Johto Gym Leaders\n"
+	.string "are tough, just wait until you meet the\l"
+	.string "Kanto ones!$"
 
 VermilionCity_Text_BadgeGuy_MostBadges:
 	.string "I guess you'll be finished with\n"

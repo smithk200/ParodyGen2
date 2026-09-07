@@ -532,7 +532,7 @@ const struct Tileset gTileset_SootopolisGym =
     .palettes = gTilesetPalettes_SootopolisGym,
     .metatiles = gMetatiles_SootopolisGym,
     .metatileAttributes = gMetatileAttributes_SootopolisGym,
-    .callback = InitTilesetAnim_SootopolisGym,
+    .callback = NULL,
 };
 
 const struct Tileset gTileset_GenericBuilding =

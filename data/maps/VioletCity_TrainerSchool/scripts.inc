@@ -61,21 +61,21 @@ VioletCity_TrainerSchool_EventScript_BlackBoard::
 	end
 
 VioletCity_TrainerSchool_Text_Twin:
-	.string "I'm not a Gba kid, but I love\n"
+	.string "I'm not a GBA kid, but I love\n"
 	.string "playing Pokémon games!\p"
 	.string "In the old games, you had to battle\n"
 	.string "a lot of wild Pokémon to get enough\l"
-	.string "Exp.\p"
-	.string "But in newer games, the Exp share\n"
-	.string "makes your Pokémon level up too fast.\p"
-	.string "In this game, the Exp share is\n"
-	.string "balanced to put your Pokémon at just\l"
-	.string "the right level. Or slightly higher,\l"
-	.string "depending on how many battles you do.\p"
-	.string "If you want a traditional Gen 1-4\n"
+	.string "EXP.\p"
+	.string "But in newer games, the EXP Share\n"
+	.string "makes all Pokémon level up at the\l"
+	.string "same time!\p"
+	.string "It's recommended you turn your EXP\n"
+	.string "share on, the game was designed around\l"
+	.string "that.\p"
+	.string "If you want a traditional Gen 1-5\n"
 	.string "experience, turn Exp Share off.\l"
 	.string "If you want a modern experience,\l"
-	.string "turn Exp Share On.\p"
+	.string "turn EXP Share ON.\p"
 	.string "You choose how you want to play!$"
 
 VioletCity_TrainerSchool_Text_EarlIntro:
@@ -132,8 +132,9 @@ VioletCity_TrainerSchool_Text_Youngster1:
 	.string "at Lvl 38, while Kadabra and\n"
 	.string "Haunter evolve at Lvl 42.\p"
 	.string "Some items, like the Metal\n"
-	.string "Coat, have also been found to\p"
-	.string "evolve certain Pokémon\n"
+	.string "Coat, and Linking Cord,\l"
+	.string "have also been found to\l"
+	.string "evolve certain Pokémon\l"
 	.string "while holding and leveling up.$"
 
 VioletCity_TrainerSchool_Text_GameboyKid1:
@@ -158,9 +159,9 @@ VioletCity_TrainerSchool_Text_Youngster2:
 
 VioletCity_TrainerSchool_Text_Blackboard:
 	.string "The blackboard describes\n"
-	.string "Pokémon Hm moves.\p"
-	.string "HMs, once unlocked, don't need to\n"
-	.string "be taught to be used.$"
+	.string "Pokémon HM moves.\p"
+	.string "HMs need to be taught to Pokémon\n"
+	.string "in order to use them.$"
 
 VioletCity_TrainerSchool_Text_Notebook:
 	.string "It's this kid's notebook…\p"
@@ -186,13 +187,13 @@ VioletCity_TrainerSchool_Text_Notebook2:
 VioletCity_TrainerSchool_Text_Notebook3:
 	.string "People who catch and use\n"
 	.string "Pokémon in battle are Pokémon\n"
-	.string "trainers.\p"
+	.string "Trainers.\p"
 	.string "They are expected to visit\n"
 	.string "Pokémon Gyms and defeat other\n"
 	.string "trainers.\p"
-	.string "The next page is… Blank!\p"
-	.string "Boy: E-he-he…\p"
-	.string "I haven't written anymore…$"
+	.string "People who don't catch and use\n"
+	.string "Pokémon in battle are what we call\p"
+	.string "“fucking idiots.”$"
 
 VioletCity_TrainerSchool_Text_StickerMachine:
 	.string "This super machine prints data\n"

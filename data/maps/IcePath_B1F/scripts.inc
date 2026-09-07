@@ -1,22 +1,8 @@
-.set LOCALID_ICEPATH2_BOULDER1, 3
-.set LOCALID_ICEPATH2_BOULDER2, 4
-.set LOCALID_ICEPATH2_BOULDER3, 2
-.set LOCALID_ICEPATH2_BOULDER4, 1
-
 IcePath_B1F_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveHole_CheckFallDownHole
 	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_B1F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, IcePath_B1F_SetHoleWarp
 	.byte 0
 
-IcePath_B1F_OnTransition: 
-	copyvar VAR_ICE_STEP_COUNT, 1
-	callnative SetTimeBasedEncounters
-	end
-
-IcePath_B1F_SetHoleWarp:
-	setstepcallback STEP_CB_CRACKED_FLOOR
-	setholewarp MAP_ICE_PATH_B2F
+IcePath_B1F_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
@@ -48,9 +34,9 @@ IcePath_B1F_EventScript_Sign::
 	end
 
 IcePath_B1F_Text_Sign:
-	.string "Danger Cracked Ice\n"
-	.string "Go Fast On Bicycle\l"
-	.string "Switch Gears By\l"
-	.string "Pressing ...\l"
+	.string "DANGER CRACKED ICE\n"
+	.string "GO FAST ON BICYCLE\l"
+	.string "SWITCH GEARS BY\l"
+	.string "PRESSING ...\l"
 	.string "The sign is faded...$"
 

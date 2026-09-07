@@ -20,23 +20,15 @@ Route127_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
-Route127_EventScript_Camden::
-	trainerbattle_single TRAINER_NONE, Route127_Text_CamdenIntro, Route127_Text_CamdenDefeat
-	msgbox Route127_Text_CamdenPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route127_EventScript_Donny::
-	trainerbattle_single TRAINER_NONE, Route127_Text_DonnyIntro, Route127_Text_DonnyDefeat
 	msgbox Route127_Text_DonnyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route127_EventScript_Jonah::
-	trainerbattle_single TRAINER_JONAH, Route127_Text_JonahIntro, Route127_Text_JonahDefeat
 	msgbox Route127_Text_JonahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route127_EventScript_Henry::
-	trainerbattle_single TRAINER_HENRY, Route127_Text_HenryIntro, Route127_Text_HenryDefeat
 	msgbox Route127_Text_HenryPostBattle, MSGBOX_AUTOCLOSE
 	end
 

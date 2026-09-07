@@ -65,6 +65,16 @@ Gate_Route43_Rocket_EventScript_PolicemanAfter::
 	release
 	end
 
+Gate_Route43_Rocket_EventScript_Rocket1::
+	trainerbattle_single TRAINER_ROCKET_GRUNT_ROUTE43_GATE_1, Gate_Route43_Rocket_Grunt1_Text_Intro, Gate_Route43_Rocket_Grunt1Text_Defeat
+	msgbox Gate_Route43_Rocket_Text_MakingABundle, MSGBOX_AUTOCLOSE
+	end
+
+Gate_Route43_Rocket_EventScript_Rocket2::
+	trainerbattle_single TRAINER_ROCKET_GRUNT_ROUTE43_GATE_2, Gate_Route43_Rocket_Grunt2_Text_Intro, Gate_Route43_Rocket_Grunt2Text_Defeat
+	msgbox Gate_Route43_Rocket_Text_MakingABundle, MSGBOX_AUTOCLOSE
+	end
+
 Gate_Route43_Rocket_EventScript_Rockets::
 	msgbox Gate_Route43_Rocket_Text_MakingABundle, MSGBOX_NPC
 	end
@@ -106,3 +116,20 @@ Gate_Route43_Text_ReceivedTM30:
 Gate_Route43_Text_OfficerAvoidGrass:
     .string "Use this gate to avoid walking in\n"
     .string "the grass.$"
+
+Gate_Route43_Rocket_Grunt1_Text_Intro:
+	.string "You wanna go to the Lake of Rage?\n"
+	.string "Well, too bad!$"
+
+Gate_Route43_Rocket_Grunt1Text_Defeat:
+	.string "Yikes!\p"
+	.string "This is that tough kid Proton was\n"
+	.string "talking about!$"
+
+Gate_Route43_Rocket_Grunt2_Text_Intro:
+	.string "Hmph. You beat Jim?\n"
+	.string "Well, you're still no match for me!$"
+
+Gate_Route43_Rocket_Grunt2Text_Defeat:
+	.string "Oh, great!\p"
+	.string "Archer will deduct my pay for sure!$"

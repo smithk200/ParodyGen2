@@ -9,7 +9,6 @@ NewBarkTown_Lab_OnTransition::
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 6, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 2, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 3, NewBarkTown_Lab_EventScript_ElmAtComputer
-	goto_if_set FLAG_FRY_GIVE_TM_ROUTE_29, NewBarkTown_Lab_EventScript_FryTakesTheLastPokeBall
 	end
 	
 NewBarkTown_Lab_OnFrame::
@@ -74,8 +73,10 @@ NewBarkTown_Lab_EventScript_Elm::
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 9, NewBarkTown_Lab_EventScript_ElmLeague
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 10, NewBarkTown_Lab_EventScript_ElmSSTicket
 
+	goto_if_unset FLAG_RECEIVED_TOGEPI_EGG, NewBarkTown_Lab_EventScript_Elm_AfterEggCheck
 	goto_if_set FLAG_SHOWN_ELM_TOGEPI, NewBarkTown_Lab_EventScript_Elm_CallMe
 	call_if_unset FLAG_SHOWN_ELM_TOGEPI, NewBarkTown_Lab_EventScript_Elm_Check_Togepi
+NewBarkTown_Lab_EventScript_Elm_AfterEggCheck:
 	goto_if_ge VAR_GOLDENROD_CITY_STATE, 1, NewBarkTown_Lab_EventScript_Elm_Check_WhereIsEgg
 	goto_if_eq VAR_NEWBARKTOWN_LABSTATE, 5, NewBarkTown_Lab_EventScript_ElmState5
 
@@ -96,7 +97,7 @@ NewBarkTown_Lab_Text_ElmAideIsWaiting:
 	.string "{PLAYER}!\p"
 	.string "What are you doing here?\p"
 	.string "My aide is still waiting for you\n"
-	.string "In Violet City!$"
+	.string "In VIOLET CITY!$"
 
 NewBarkTown_Lab_EventScript_ElmIntro::
 	msgbox NewBarkTown_Lab_Text_ElmIntro, MSGBOX_YESNO
@@ -118,7 +119,8 @@ NewBarkTown_Lab_EventScript_ElmAccepted::
 	waitse
 	playse SE_PIN
 	applymovement LOCALID_ELM, Common_Movement_QuestionMark
-	delay 60
+	delay 55
+	waitmovement LOCALID_ELM
 	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_CheckEmail
 	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_Look_Left
 	waitmovement 0
@@ -153,6 +155,7 @@ NewBarkTown_Lab_EventScript_TriggerReturnPlayer::
 NewBarkTown_Lab_EventScript_ShouldntTouch::
 	msgbox NewBarkTown_Lab_Text_ShouldntTouch, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 
@@ -208,7 +211,6 @@ NewBarkTown_Lab_EventScript_TotodileBall_Choice::
 	showmonpic PLAYER_STARTER_SPECIES, 10, 3
 	playmoncry PLAYER_STARTER_SPECIES, CRY_MODE_NORMAL
 	msgbox NewBarkTown_Lab_Text_ChooseTotodile, MSGBOX_YESNO
-	setvar VAR_STARTER_MON, 2
 	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_ChoseStarter
 	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_DeclinedStarter
 	end
@@ -217,27 +219,40 @@ NewBarkTown_Lab_EventScript_DeclinedStarter::
 	hidemonpic
 	msgbox NewBarkTown_Lab_Text_DidntChooseStarter, MSGBOX_DEFAULT
 	closemessage
+	@callnative EnableStaticRandomizer
 	release
 	end
 
 NewBarkTown_Lab_EventScript_ChoseStarter::
+	@callnative EnableStaticRandomizer
 	hidemonpic
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_SYS_POKEMON_GET
 	msgbox NewBarkTown_Lab_Text_ChoseStarter, MSGBOX_DEFAULT
 	givemon PLAYER_STARTER_SPECIES, 5
+	setflag FLAG_SYS_POKEMON_GET
 	playfanfare MUS_OBTAIN_ITEM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
 	message NewBarkTown_Lab_Text_ReceivedStarter
 	waitfanfare
+	goto_if_set FLAG_NUZLOCKE, NewBarkTown_Lab_EventScript_NicknameStarter
 	msgbox NewBarkTown_Lab_Text_Nickname, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_NicknameStarter
+	callnative UpdateFollowingPokemon
 	release
 	end
 
 NewBarkTown_Lab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
+	release
+	end
+
+NewBarkTown_Lab_EventScript_ChoseStarter_NicknameStarter_Nuzlocke::
+	message NewBarkTown_Lab_Text_Nickname
+	waitmessage
+	setvar VAR_0x8004, 0
+	call Common_EventScript_NameReceivedPartyMon
+	release
 	end
 
 NewBarkTown_Lab_EventScript_MrPokemon::
@@ -327,8 +342,8 @@ NewBarkTown_Lab_EventScript_PoliceEpisode::
 	setflag FLAG_HIDE_LAB_POLICEMAN
 	turnobject LOCALID_COP DIR_WEST
 	msgbox NewBarkTown_Lab_Text_Officer1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_PoliceNameRival
-	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_PoliceYes
+	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_PoliceYes
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_PoliceNo
 	end
 
 NewBarkTown_Lab_EventScript_PoliceNo::
@@ -337,24 +352,14 @@ NewBarkTown_Lab_EventScript_PoliceNo::
 	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_PoliceNo
 	end
 
-NewBarkTown_Lab_EventScript_PoliceNameRival::
-	special NameRival
-	setflag FLAG_NAMED_SILVER
-	goto NewBarkTown_Lab_EventScript_PoliceYes3
-
-
-NewBarkTown_Lab_EventScript_PoliceNameRival2::
-	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT
-	closemessage
-	goto NewBarkTown_Lab_EventScript_PoliceYes3
-
 NewBarkTown_Lab_EventScript_PoliceYes::
-	msgbox NewBarkTown_Lab_Text_Officer2, MSGBOX_DEFAULT
+	clearflag FLAG_NAMED_SILVER
 	closemessage
-	goto NewBarkTown_Lab_EventScript_PoliceYes2
-
-NewBarkTown_Lab_EventScript_PoliceYes3::
-	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT @okay, for some reason this script doesn't take effect at all... Added a duplicate after this because it was a workaround.
+	special NameRival
+	waitstate
+	setflag FLAG_NAMED_SILVER
+	msgbox NewBarkTown_Lab_Text_Officer2_1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, NewBarkTown_Lab_EventScript_PoliceYes
 	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_COP, NewBarkTown_Lab_Movement_CopLeaves
@@ -365,7 +370,9 @@ NewBarkTown_Lab_EventScript_PoliceYes3::
 	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_PlayerStepsToElm
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft1, MSGBOX_DEFAULT
+	playfanfare MUS_LEVEL_UP
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft2, MSGBOX_DEFAULT
+	waitfanfare
 	closemessage
 	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepBack
 	waitmovement 0
@@ -381,37 +388,8 @@ NewBarkTown_Lab_EventScript_PoliceYes3::
 	setflag FLAG_HIDE_MOMS_FRIEND
 	clearflag FLAG_HIDE_MOMS_FRIEND2
 	setflag FLAG_ADVENTURE_STARTED
-	setflag FLAG_EXP_SHARE
 	removeitem ITEM_MYSTERY_EGG
-	end
-
-NewBarkTown_Lab_EventScript_PoliceYes2::
-	applymovement LOCALID_COP, NewBarkTown_Lab_Movement_CopLeaves
-	waitmovement 0
-	removeobject LOCALID_COP
-
-	@ setobjectxyperm LOCALID_COP, 25, 4
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_PlayerStepsToElm
-	waitmovement 0
-	msgbox NewBarkTown_Lab_Text_ElmAfterTheft1, MSGBOX_DEFAULT
-	msgbox NewBarkTown_Lab_Text_ElmAfterTheft2, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepBack
-	waitmovement 0
-	msgbox NewBarkTown_Lab_Text_ElmAfterTheft3, MSGBOX_DEFAULT
-	delay 20
-	closemessage
-	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepForward
-	waitmovement 0
-	msgbox NewBarkTown_Lab_Text_ElmAfterTheft4, MSGBOX_DEFAULT
-	closemessage
-	setvar VAR_NEWBARKTOWN_LABSTATE, 5
-	setvar VAR_NEWBARK_TOWN_STATE, 4
-	setflag FLAG_HIDE_MOMS_FRIEND
-	clearflag FLAG_HIDE_MOMS_FRIEND2
-	setflag FLAG_ADVENTURE_STARTED
-	setflag FLAG_EXP_SHARE
-	removeitem ITEM_MYSTERY_EGG
+	release
 	end
 
 NewBarkTown_Lab_EventScript_ElmState5::
@@ -433,7 +411,8 @@ NewBarkTown_Lab_EventScript_ElmMasterBall::
 	delay 20
 	playse SE_PIN
 	applymovement LOCALID_ELM, Common_Movement_ExclamationMark
-	delay 60
+	delay 55
+	waitmovement LOCALID_ELM
 	msgbox NewBarkTown_Lab_Text_KimonoGirls, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_NEWBARKTOWN_LABSTATE, 8
@@ -495,7 +474,11 @@ NewBarkTown_Lab_EventScript_Elm_Check_WhereIsEgg::
 	end
 
 NewBarkTown_Lab_EventScript_Elm_Check_Togepi::
-	specialvar VAR_RESULT, CheckTogepi
+	checkspecies SPECIES_TOGEPI
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
+	checkspecies SPECIES_TOGETIC
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
+	checkspecies SPECIES_TOGEKISS
 	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
 	return
 
@@ -521,11 +504,6 @@ NewBarkTown_Lab_EventScript_Elm_CallMe::
 	closemessage
 	release
 	end
-
-NewBarkTown_Lab_EventScript_FryTakesTheLastPokeBall::
-	call_if_eq VAR_STARTER_MON, 0 NewBarkTown_Lab_EventScript_HideTotodile
-	call_if_eq VAR_STARTER_MON, 1 NewBarkTown_Lab_EventScript_HideChikorita
-	call_if_eq VAR_STARTER_MON, 2 NewBarkTown_Lab_EventScript_HideCyndaquil
 
 NewBarkTown_Lab_Movement_WalkRight:
 	walk_right
@@ -764,7 +742,7 @@ NewBarkTown_Lab_Text_ElmDescribesMrPokemon:
 
 NewBarkTown_Lab_Text_ElmPokeBall:
 	.string "It contains a Pokémon caught\n"
-	.string "by Prof.Elm.$"
+	.string "by Prof. Elm.$"
 
 @THEFT================================================================================
 
@@ -775,7 +753,7 @@ NewBarkTown_Lab_Text_ElmAfterTheft1:
 
 NewBarkTown_Lab_Text_ElmAfterTheft2:
 	.string "{PLAYER} handed the Mystery Egg\n"
-	.string "to Prof.Elm.$"
+	.string "to Prof. Elm.$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft3:
 	.string "Elm: This?$"
@@ -785,7 +763,7 @@ NewBarkTown_Lab_Text_ElmAfterTheft4:
 	.string "If it is, it is a great\n"
 	.string "discovery!\p"
 	.string "Elm: What?!?\p"
-	.string "Prof.Oak gave you a PokéDex?\p"
+	.string "Prof.Oak gave you a Pokédex?\p"
 	.string "{PLAYER}, is that true?\n"
 	.string "Th-that's incredible!\p"
 	.string "He is superb at seeing the\n"
@@ -937,7 +915,7 @@ NewBarkTown_Lab_Text_ElmGiveTicket2:
 
 NewBarkTown_Lab_Text_LabMonEgg:
 	.string "It's the Pokémon Egg being\n"
-	.string "studied by Prof.Elm.$"
+	.string "studied by Prof. Elm.$"
 
 NewBarkTown_Lab_Text_AideGivePotion:
 	.string "{PLAYER}, I want you to have\n"
@@ -967,11 +945,11 @@ NewBarkTown_Lab_Text_AideTheftTestimony:
 
 NewBarkTown_Lab_Text_AideGiveBalls:
 	.string "{PLAYER}!\p"
-	.string "Use these on your PokéDex\n"
+	.string "Use these on your Pokédex\n"
 	.string "quest!$"
 
 NewBarkTown_Lab_Text_AideExplainBalls:
-	.string "To add to your PokéDex, you\n"
+	.string "To add to your Pokédex, you\n"
 	.string "have to catch Pokémon.\p"
 	.string "Throw Poké Balls at wild\n"
 	.string "Pokémon to get them.$"
@@ -980,7 +958,7 @@ NewBarkTown_Lab_Text_Officer1:
 	.string "I heard a Pokémon was stolen\n"
 	.string "here…\p"
 	.string "I was just getting some\n"
-	.string "information from Prof.Elm.\p"
+	.string "information from Prof. Elm.\p"
 	.string "Apparently, it was a young\n"
 	.string "male with long, red hair…\p"
 	.string "What?\p"
@@ -988,6 +966,9 @@ NewBarkTown_Lab_Text_Officer1:
 	.string "that?\p"
 	.string "Did you happen to get his\n"
 	.string "name?$"
+
+NewBarkTown_Lab_Text_Officer2_1:
+	.string "OK! So {RIVAL} was his name?$"
 
 NewBarkTown_Lab_Text_Officer2:
 	.string "Ok! So Silver was his name.\p"
@@ -1004,6 +985,6 @@ NewBarkTown_Lab_Text_OfficerNo:
 
 NewBarkTown_Lab_Text_Elm_CallMe:
 	.string "Ah, {PLAYER}!\p"
-	.string "How's your PokéDex coming along?\n"
+	.string "How's your Pokédex coming along?\n"
 	.string "I'm busy now, but call me sometime\l"
 	.string "and I can check your progress!$"

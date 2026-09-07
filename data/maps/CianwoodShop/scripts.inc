@@ -30,15 +30,13 @@ CianwoodCity_Text_PharmacistGivePotion:
 	.string "Your Pokémon appear to be fine.\p"
 	.string "Is something worrying you?\p"
 	.string "…\p"
-	.string "The Lighthouse Pokémon is in\n"
-	.string "trouble?\p"
+	.string "The Lighthouse Pokémon is in trouble?\p"
 	.string "I got it!\p"
 	.string "This ought to do the trick.$"
 
 CianwoodCity_Text_ReceivedSecretpotion:
-	.string "{PLAYER} received Secretpotion.$"
+	.string "{PLAYER} received Secret Potion.$"
 
 CianwoodCity_Text_PharmacistDescribePotion:
-	.string "My Secretpotion is a tad too\n"
-	.string "strong, so I only offer it in an\l"
-	.string "emergency.$"
+	.string "My Secret Potion is actually cocaine…\p"
+	.string "Don't tell anyone I said that…$"

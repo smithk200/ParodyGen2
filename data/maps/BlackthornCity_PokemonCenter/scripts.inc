@@ -27,4 +27,4 @@ BlackthornCity_PokemonCenter1FTwinText:
 	.string "There was this move I just had\n"
 	.string "to teach my Pokémon.\p"
 	.string "So I got the Move Deleter to make\n"
-	.string "it forget an Hm move.$"
+	.string "it forget an HM move.$"

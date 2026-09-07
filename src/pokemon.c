@@ -3311,32 +3311,50 @@ enum Ability GetSpeciesAbility(enum Species species, u8 slot)
 
 u32 GetSpeciesBaseHP(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
 }
 
 u32 GetSpeciesBaseAttack(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
 }
 
 u32 GetSpeciesBaseDefense(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
 }
 
 u32 GetSpeciesBaseSpAttack(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
 }
 
 u32 GetSpeciesBaseSpDefense(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
 }
 
 u32 GetSpeciesBaseSpeed(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
 }
 
 u32 GetSpeciesBaseStat(enum Species species, u32 statIndex)
@@ -5559,6 +5577,10 @@ u16 GetBattleBGM(void)
             {
                 if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CHASE_E4_1)
                         return MUS_TOADS_TURNPIKE;
+                if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SHREK)
+                        return MUS_NUMBER_7;
+                if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CAPTAIN_FLOYD)
+                        return MUS_BOWSER_CASTLE_3;
                 return MUS_VS_ELITE_FOUR;
             }   
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
@@ -5645,10 +5667,12 @@ u16 GetBattleBGM(void)
 
         case TRAINER_CLASS_PHILIP:
         case TRAINER_CLASS_PHILIP_J:
+            if (gMapHeader.mapLayoutId == LAYOUT_EVER_GRANDE_CITY_CHAMPIONS_ROOM)
+                return MUS_SEYMOURS_THEME;
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SAWYER_1)
+                return MUS_HG_VS_TRAINER;
             if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_POKEMON_LEAGUE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_POKEMON_LEAGUE) \
-                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE) || \
-            (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_EVER_GRANDE) || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_TOTODILE_EVER_GRANDE) \
-            || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CYNDAQUIL_EVER_GRANDE))
+                || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRY_CHIKORITA_POKEMON_LEAGUE))
                     return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
         case TRAINER_CLASS_PETER:

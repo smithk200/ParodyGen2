@@ -51,7 +51,11 @@ LakeOfRage_EventScript_Pryce::
 
 LakeOfRage_Text_Pryce:
     .string "{PLAYER}.\p"
-	.string "Even here, the cold keeps me sharp.\p"
+	.string "I come out on this lake to reflect\n"
+	.string "on my marriage to Bloberta and my\l"
+	.string "relationship with my son Orel.\p"
+	.string "Though to be honest, I don't care\n"
+	.string "about them in the slightest.\p"
 	.string "If you wish to battle again, come\n"
 	.string "to the Fighting Dojo.$"
 

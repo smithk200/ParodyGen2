@@ -83,16 +83,14 @@ Route101_EventScript_Youngster::
 	end
 
 Route110_EventScript_WhatAreYouDoing::
-	goto_if_set FLAG_DEFEATED_PCHAL, Common_EventScript_End
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	msgbox Route110_Text_WhatAreYouDoing, MSGBOX_AUTOCLOSE
 	end
 
 Route101_EventScript_Boy::
 	goto_if_set FLAG_RECEIVED_UNOVA_STARTER, Route101_Text_PchalPreEliteFour
-	trainerbattle_double TRAINER_PCHAL, Route101_Text_PchalIntro, Route101_Text_PchalDefeat, Common_Text_NotEnoughMons
+	trainerbattle_single TRAINER_PCHAL, Route101_Text_PchalIntro, Route101_Text_PchalDefeat
 	msgbox Route101_Text_PchalPostBattle, MSGBOX_AUTOCLOSE
-	setflag FLAG_DEFEATED_PCHAL
 	end
 
 Route101_EventScript_RouteSign::
@@ -107,7 +105,6 @@ Route101_EventScript_HideMayInBedroom::
 	return
 
 Route101_EventScript_HideBrendanInBedroom::
-	setflag FLAG_GARBAGEFLAG
 	return
 
 Route101_Movement_BirchApproachPlayer:

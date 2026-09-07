@@ -80,8 +80,7 @@ Route39_FarmHouse_EventScript_FarmerM_NotEnough::
 	end
 
 Route39_Text_FarmerMSickCow:
-	.string "My Miltank ain't givin' me\n"
-	.string "milk no more.\p"
+	.string "My Miltank ain't givin' me milk no more.\p"
 	.string "This here Farm's got famous milk.\p"
 	.string "Most everyone wants a drink.\p"
 	.string "It'll give me lots o' milk if'n\n"
@@ -89,9 +88,9 @@ Route39_Text_FarmerMSickCow:
 	.string "I reckon.$"
 
 Route39_Text_FarmerMBuyMilk:
-	.string "How'd you like my Moomoo Milk?\p"
+	.string "How'd you like the milk?\p"
 	.string "It's my pride and joy, there.\p"
-	.string "Give it to Pokémon to restore Hp!\p"
+	.string "Give it to Pokémon to restore HP!\p"
 	.string "I'll give it to ya fer just\n"
 	.string "¥500.$"
 
@@ -114,24 +113,23 @@ Route39FarmHouse_Text_WouldYouLikeAnother:
 	.string "How bout another?$"
 
 Route39_Text_GotMilk:
-	.string "{PLAYER} got Moomoo Milk.$"
+	.string "{PLAYER} got Milk.$"
 
 Route39_Text_FarmerMMilking:
 	.string "I best go do my milkin'.$"
 
 Route39_Text_FarmerFInTrouble:
-	.string "Our milk even goes out to\n"
-	.string "Kanto.\p"
+	.string "Our milk even goes out to Kanto.\p"
 	.string "So if our own Miltank won't\n"
 	.string "give us any milk, we're in trouble.$"
 
 Route39_Text_FarmerFHealedMiltank:
 	.string "You fixed our Miltank, hon.\n"
-	.string "Now it gives Moomoo Milk again.\p"
+	.string "Now it gives milk again.\p"
 	.string "Here's somethin' fer your trouble.$"
 
 Route39_Text_FarmerFSnatchSpeech:
-	.string "That there's Snatch.\p"
+	.string "Then there's Snatch.\p"
 	.string "It's a tricky move that lets\n"
 	.string "a Pokémon steal a foe's move\l"
 	.string "right before it's used.\p"

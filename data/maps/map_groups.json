@@ -32,7 +32,8 @@
     "gMapGroup_Emerald3",
     "gMapGroup_Emerald4",
     "gMapGroup_Emerald5",
-    "gMapGroup_Alola"
+    "gMapGroup_Alola",
+    "gMapGroup_Grindhaus_Ranch"
   ],
   "gMapGroup_TownsAndRoutes": [
     "NewBarkTown",
@@ -415,11 +416,6 @@
     "MtMortar_B1F",
     "LakeOfRage",
     "LakeOfRageLowTide",
-    "IcePath_1F",
-    "IcePath_B1F",
-    "IcePath_B2F",
-    "IcePath_B3F",
-    "IcePath_B4F",
     "DragonsDen_Entrance",
     "DragonsDen_Cavern",
     "DragonsDen_Shrine",
@@ -482,7 +478,13 @@
     "RuinsOfAlph_WordsRoom4",
     "Route19_Cave"
   ],
-  "gMapGroup_IndoorDynamic": [],
+  "gMapGroup_IndoorDynamic": [
+    "IcePath_1F",
+    "IcePath_B1F",
+    "IcePath_B2F",
+    "IcePath_B3F",
+    "IcePath_B4F"
+  ],
   "gMapGroup_SpecialArea": [
     "SSAqua_1F",
     "SSAqua_B1F",
@@ -1064,5 +1066,17 @@
     "Alola2",
     "AlolaCave_1F",
     "AlolaCave_2F"
+  ],
+  "gMapGroup_Grindhaus_Ranch": [
+    "Grindhaus_Ranch",
+    "GrindhausRanch_EvTrainingRooms",
+    "GrindhausRanch_HPRoom",
+    "GrindhausRanch_AttackRoom",
+    "GrindhausRanch_DefenseRoom",
+    "GrindhausRanch_SpAtkRoom",
+    "GrindhausRanch_SpDefRoom",
+    "GrindhausRanch_SpeedRoom",
+    "GrindhausRanch_EXPRoom",
+    "GrindhausRanch_MoneyRoom"
   ]
 }

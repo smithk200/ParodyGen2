@@ -240,7 +240,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .speechLose = {EC_WORD_I, EC_WORD_CAN_T_WIN, EC_WORD_LIKE, EC_WORD_THIS, EC_WORD_ELLIPSIS, EC_EMPTY_WORD},
         .monSet = (const u16[]){FRONTIER_MONS_TUBER_1}
     },
-    [FRONTIER_TRAINER_GORDON] = {
+    [FRONTIER_TRAINER_SMALLANT_1] = {
         .facilityClass = FACILITY_CLASS_SWIMMER_M,
         .trainerName = _("GORDON"),
         .speechBefore = {EC_WORD_VICTORY, EC_WORD_WILL, EC_WORD_COME, EC_WORD_TO_ME, EC_WORD_EXCL, EC_EMPTY_WORD},

@@ -77,7 +77,7 @@ NewBarkTown_House1_Text_FatherFatherNeedFirstMon:
 
 NewBarkTown_House1_Text_Neighbor:
 	.string "My daughter is adamant about\n"
-	.string "becoming Prof.Elm's assistant.\p"
+	.string "becoming Prof. Elm's assistant.\p"
 	.string "She really loves Pokémon!\p"
 	.string "But then, so do I!$"
 

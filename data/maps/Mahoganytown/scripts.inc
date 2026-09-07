@@ -304,7 +304,7 @@ MahoganyTown_Text_GymSign:
     .string "The Tough Rootin' Tootin' Man!$"
 
 ElmPhoneRadioTowerRocketTakeoverText:
-	.string "Prof.Elm: {PLAYER}, how are\n"
+	.string "Prof. Elm: {PLAYER}, how are\n"
 	.string "things going?\p"
 	.string "I called because something weird\n"
 	.string "is happening with the radio\l"

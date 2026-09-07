@@ -47,7 +47,7 @@ MahoganyTown_Gym_Text_GymStatue:
 
 MahoganyTown_Gym_Text_GymStatueCertified:
 	.string "Mahogany Town Pokémon Gym\p"
-	.string "Clay'sCertified Trainers:\n"
+	.string "Clay's Certified Trainers:\n"
 	.string "{RIVAL}, Fry, {PLAYER}$"
 
 
@@ -147,20 +147,20 @@ MahoganyTown_Gym_EventScript_Clay_Defeated::
 	end
 
 MahoganyTown_Gym_Text_ClayIntro:
-    .string "You think you’re ready\n"
-    .string "for this, punk?\p"
-    .string "You think you can handle the cold?\p"
-    .string "Hah.\p"
-    .string "You’re about as prepared for this\n"
-    .string "as my son Orel is for… well, anything.\p"
-    .string "Life’s not about comfort,\n"
-    .string "it’s about enduring things…\l"
-    .string "…like my stinkin' dead-end job!\p"
-    .string "Life is harsh.\p"
-    .string "It doesn’t care about your feelings,\n"
-    .string "your ambitions, or your little dreams.\p"
-    .string "You either survive it, or you don’t.\p"
-    .string "Now, let's get this over with.$"
+    .string "Clay: You know, kid, you remind me\n"
+    .string "of my son, Orel.\p"
+    .string "He's about the same age as you.\n"
+    .string "Ten, I think.\p"
+    .string "He needed to know how great God\n"
+    .string "is, but he learned all his lessons wrong.\p"
+    .string "I hope you don't fall into the same trap.\p"
+    .string "So, {PLAYER}, are you ready?\p"
+    .string "Because if there's one thing that's\n"
+    .string "worse than having a stinkin' dead-end\l"
+    .string "job, it's losing to novice trainers at\l"
+    .string "your stinkin' dead-end job.\p"
+    .string "Let's get this going. I don't have all\n"
+    .string "day.$"
 
 MahoganyTown_Gym_Text_ClayImpressed:
     .string "Well then…\n"
@@ -181,7 +181,7 @@ MahoganyTown_Gym_Text_HailSpeech:
     .string "It inflicts damage every\n"
     .string "turn for 5 turns.\p"
     .string "It demonstrates the harshness\n"
-    .string "of winter.$"
+    .string "of life.$"
 
 MahoganyTown_Gym_Text_CherishPokemon:
     .string "Ugh, just get out of here already!\p"

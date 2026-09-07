@@ -7,7 +7,7 @@ VictoryRoad_B2F_EventScript_Vito::
 	end
 
 VictoryRoad_B2F_EventScript_Owen::
-	trainerbattle_single TRAINER_OWEN, VictoryRoad_B2F_Text_OwenIntro, VictoryRoad_B2F_Text_OwenDefeat
+	trainerbattle_single TRAINER_OWEN_2, VictoryRoad_B2F_Text_OwenIntro, VictoryRoad_B2F_Text_OwenDefeat
 	msgbox VictoryRoad_B2F_Text_OwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -22,12 +22,10 @@ VictoryRoad_B2F_EventScript_Julie::
 	end
 
 VictoryRoad_B2F_EventScript_Felix::
-	trainerbattle_single TRAINER_NONE, VictoryRoad_B2F_Text_FelixIntro, VictoryRoad_B2F_Text_FelixDefeat
 	msgbox VictoryRoad_B2F_Text_FelixPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 VictoryRoad_B2F_EventScript_Dianne::
-	trainerbattle_single TRAINER_NONE, VictoryRoad_B2F_Text_DianneIntro, VictoryRoad_B2F_Text_DianneDefeat
 	msgbox VictoryRoad_B2F_Text_DiannePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -92,7 +90,7 @@ VictoryRoad_B2F_Text_FelixDefeat:
 VictoryRoad_B2F_Text_FelixPostBattle:
 	.string "I can't help getting all tense knowing\n"
 	.string "that I'm nearing the Pokémon League.\p"
-	.string "It's all I can do to feign calm.$"
+	.string "I've heard there's an ogre there!$"
 
 VictoryRoad_B2F_Text_DianneIntro:
 	.string "The elite among the elite gather in\n"
@@ -104,5 +102,6 @@ VictoryRoad_B2F_Text_DianneDefeat:
 
 VictoryRoad_B2F_Text_DiannePostBattle:
 	.string "You do have guts! I like that!\n"
-	.string "Keep it going!$"
+	.string "Keep it going!\p"
+	.string "We want to harvest ALL your organs!$"
 

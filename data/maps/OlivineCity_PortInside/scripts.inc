@@ -68,18 +68,18 @@ OlivineCity_PortInside_Text_Nationaldex1:
 	.string "Prof.Oak: Hello!\n"
 	.string "You are starting to have the\l"
 	.string "attitude of a Champion, {PLAYER}!\p"
-	.string "It's time for your PokéDex to\n"
+	.string "It's time for your Pokédex to\n"
 	.string "match who you are.\p"
-	.string "Let me see your PokéDex for a\n"
+	.string "Let me see your Pokédex for a\n"
 	.string "second.\p"
-	.string "I'll upgrade your PokéDex with the\n"
+	.string "I'll upgrade your Pokédex with the\n"
 	.string "National Mode.$"
 OlivineCity_PortInside_Text_Nationaldex2:
-	.string "{PLAYER}'s PokéDex was upgraded\n"
+	.string "{PLAYER}'s Pokédex was upgraded\n"
 	.string "with the National Mode!$"
 OlivineCity_PortInside_Text_Nationaldex3:
 	.string "Prof.Oak: It won't be easy to\n"
-	.string "complete the National PokéDex...\p"
+	.string "complete the National Pokédex...\p"
 	.string "However, I'm sure you will make\n"
 	.string "honest attempt on our behalf!$"
 OlivineCity_PortInside_Text_Nationaldex4:

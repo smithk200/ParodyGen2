@@ -13,7 +13,6 @@ Route110_TrickHousePuzzle8_EventScript_FoundScroll::
 	end
 
 Route110_TrickHousePuzzle8_EventScript_Vincent::
-	trainerbattle_single TRAINER_VINCENT, Route110_TrickHousePuzzle8_Text_VincentIntro, Route110_TrickHousePuzzle8_Text_VincentDefeat
 	msgbox Route110_TrickHousePuzzle8_Text_VincentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -42,7 +41,7 @@ Route110_TrickHousePuzzle8_Text_VincentDefeat:
 	.string "That must mean you're tough, too…$"
 
 Route110_TrickHousePuzzle8_Text_VincentPostBattle:
-	.string "You've beaten the Pokémon League\n"
+	.string "You've beaten the Johto League\n"
 	.string "Champion? That's too much!$"
 
 Route110_TrickHousePuzzle8_Text_KeiraIntro:

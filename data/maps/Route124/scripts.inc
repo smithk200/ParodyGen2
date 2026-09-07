@@ -16,7 +16,6 @@ Route124_EventScript_Spencer::
 	end
 
 Route124_EventScript_Roland::
-	trainerbattle_single TRAINER_ROLAND, Route124_Text_RolandIntro, Route124_Text_RolandDefeat
 	msgbox Route124_Text_RolandPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -25,50 +24,23 @@ Route124_EventScript_Jenny::
 	msgbox Route124_Text_JennyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route124_EventScript_RegisterJenny::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox Route124_Text_JennyRegister, MSGBOX_DEFAULT
-	release
-	end
-
-Route124_EventScript_RematchJenny::
-	trainerbattle_rematch TRAINER_NONE, Route124_Text_JennyRematchIntro, Route124_Text_JennyRematchDefeat
-	msgbox Route124_Text_JennyPostRematch, MSGBOX_AUTOCLOSE
-	end
 
 Route124_EventScript_Grace::
 	trainerbattle_single TRAINER_GRACE_2, Route124_Text_GraceIntro, Route124_Text_GraceDefeat
 	msgbox Route124_Text_GracePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route124_EventScript_Chad::
-	trainerbattle_single TRAINER_CHAD, Route124_Text_ChadIntro, Route124_Text_ChadDefeat
-	msgbox Route124_Text_ChadPostBattle, MSGBOX_AUTOCLOSE
+Route124_EventScript_Kienan::
+	msgbox Route124_Text_KienanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route124_EventScript_Lila::
-	trainerbattle_double TRAINER_LILA_AND_ROY_1, Route124_Text_LilaIntro, Route124_Text_LilaDefeat, Route124_Text_LilaNotEnoughMons, Route124_EventScript_RegisterLila
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route124_EventScript_RematchLila
-	msgbox Route124_Text_LilaPostBattle, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_LILA_AND_ROY_1, Route124_Text_LilaIntro, Route124_Text_LilaDefeat, Route124_Text_LilaNotEnoughMons
 	release
-	end
-
-Route124_EventScript_RegisterLila::
-	msgbox Route124_Text_LilaRoyRegister, MSGBOX_DEFAULT
-	release
-	end
-
-Route124_EventScript_RematchLila::
-	trainerbattle_rematch_double TRAINER_LILA_AND_ROY_1, Route124_Text_LilaRematchIntro, Route124_Text_LilaRematchDefeat, Route124_Text_LilaRematchNotEnoughMons
-	msgbox Route124_Text_LilaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route124_EventScript_Roy::
-	trainerbattle_double TRAINER_LILA_AND_ROY_1, Route124_Text_RoyIntro, Route124_Text_RoyDefeat, Route124_Text_RoyNotEnoughMons, Route124_EventScript_RegisterRoy
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route124_EventScript_RematchRoy
+	trainerbattle_double TRAINER_LILA_AND_ROY_1, Route124_Text_RoyIntro, Route124_Text_RoyDefeat, Route124_Text_RoyNotEnoughMons
 	msgbox Route124_Text_RoyPostBattle, MSGBOX_DEFAULT
 	release
 	end

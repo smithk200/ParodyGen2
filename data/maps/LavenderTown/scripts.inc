@@ -44,36 +44,43 @@ LavenderTown_EventScript_SoulHouseSign::
 	end
 
 LavenderTown_Text_PokefanM:
-	.string "That's quite some building, eh?\p"
-	.string "It's Kanto's Radio Tower.$"
+	.string "Did you know you can file your taxes\n"
+	.string "with TurboTax?\p"
+	.string "They can con you out of your money\n"
+	.string "though!$"
 
 LavenderTown_Text_Teacher:
-	.string "Kanto has many good radio shows.$"
+	.string "Oh, go fuck yourself, will you?\p"
+	.string "I'm trying to play Super Mario 3D World\n"
+	.string "on my Nintendo Switch!$"
 
 LavenderTown_Text_Gramps:
 	.string "People come from all over to pay\n"
 	.string "their respects to the departed\l"
-	.string "souls of Pokémon.$"
+	.string "souls of Pokémon.\p"
+	.string "Though it mostly seems to be hardcore\n"
+	.string "Nuzlockers who make their journeys here…$"
 
 LavenderTown_Text_Youngster:
-	.string "You need a Poké Flute to wake\n"
+	.string "You need an air horn to wake\n"
 	.string "sleeping Pokémon.\p"
-	.string "Every trainer has to know that!$"
+	.string "Every trainer has to know that,\n"
+	.string "otherwise you are a dumbass who\l"
+	.string "shouldn't even pass kindergarten.$"
 
 LavenderTown_Text_Sign:
 	.string "Lavender Town\p"
-	.string "The Noble Purple Town$"
+	.string "The town of pathetic sickly flowers.$"
 
 LavenderTown_Text_KantoRadioStationSign:
 	.string "Kanto Radio Station\p"
-	.string "Your Favorite Programs On-Air\n"
-	.string "Around the Clock!$"
+	.string "I don't know why we even make radio shows,\n"
+	.string "thanks to YouTube Shorts and TikTok!$"
 
 LavenderTown_Text_VolunteerPokemonHouseSign:
 	.string "Lavender Volunteer Pokémon\n"
 	.string "House$"
 
 LavenderTown_Text_SoulHouseSign:
-	.string "Soul House\p"
-	.string "May the Souls of Pokémon Rest\n"
-	.string "Easy$"
+	.string "Heart and Soul House\p"
+	.string "Where the original game still lives on.$"

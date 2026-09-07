@@ -6,7 +6,6 @@ AbandonedShip_Corridors_1F_EventScript_Youngster::
 	end
 
 AbandonedShip_Corridors_1F_EventScript_Charlie::
-	trainerbattle_single TRAINER_CHARLIE, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat
 	msgbox AbandonedShip_Corridors_1F_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -18,8 +17,8 @@ AbandonedShip_Corridors_1F_Text_CharlieDefeat:
 	.string "Whoa, you overwhelmed me!$"
 
 AbandonedShip_Corridors_1F_Text_CharliePostBattle:
-	.string "It's not easy throwing Poké Balls\n"
-	.string "while hanging on to an inner tube!$"
+	.string "I love my inner tube so much,\n"
+	.string "I'm known as Innertube Charlie.$"
 
 AbandonedShip_Corridors_1F_Text_IsntItFunHere:
 	.string "Isn't it fun here?\n"

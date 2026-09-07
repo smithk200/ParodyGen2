@@ -33,7 +33,7 @@ AzaleaPokeCenter_EventScript_PokefanF::
 	end
 
 AzaleaPokecenter_Text_Gentleman:
-	.string "Do your Pokémon know Hm moves?\p"
+	.string "Do your Pokémon know HM moves?\p"
 	.string "Those moves can be used even if\n"
 	.string "your Pokémon has fainted.$"
 

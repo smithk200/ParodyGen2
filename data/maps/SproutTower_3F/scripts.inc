@@ -240,7 +240,7 @@ SproutTower_Text_SageTroy_AfterBattle:
 	.string "It is not far to the Elder.$"
 
 SproutTower_Text_SageNeal_Seen:
-	.string "The Elder's Hm lights even\n"
+	.string "The Elder's HM lights even\n"
 	.string "pitch-black darkness.$"
 
 SproutTower_Text_SageNeal_Beaten:

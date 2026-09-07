@@ -2,7 +2,6 @@ MtPyre_3F_MapScripts::
 	.byte 0
 
 MtPyre_3F_EventScript_William::
-	trainerbattle_single TRAINER_WILLIAM, MtPyre_3F_Text_WilliamIntro, MtPyre_3F_Text_WilliamDefeat
 	msgbox MtPyre_3F_Text_WilliamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -13,8 +12,6 @@ MtPyre_3F_EventScript_Kayla::
 
 MtPyre_3F_EventScript_Gabrielle::
 	trainerbattle_single TRAINER_NONE, MtPyre_3F_Text_GabrielleIntro, MtPyre_3F_Text_GabrielleDefeat, MtPyre_3F_EventScript_RegisterGabrielle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MtPyre_3F_EventScript_RematchGabrielle
 	msgbox MtPyre_3F_Text_GabriellePostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -41,8 +38,13 @@ MtPyre_3F_Text_WilliamDefeat:
 	.string "I drown in self-pity…$"
 
 MtPyre_3F_Text_WilliamPostBattle:
-	.string "My psychic powers have surely\n"
-	.string "grown several times, but…$"
+	.string "The spirits of the departed Pokémon\n"
+	.string "linger here.\p"
+	.string "Strangely, their original trainers\n"
+	.string "all seem to be people named pChal,\l"
+	.string "SmallAnt, Rylockes, Jaiden, Alpharad,\l"
+	.string "or James.\p"
+	.string "Do you know those people?$"
 
 MtPyre_3F_Text_KaylaIntro:
 	.string "Ahahahaha!\p"

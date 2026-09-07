@@ -112,8 +112,7 @@ Route38_Text_BeautyValerieAfter:
 
 Route38_Text_SailorHarrySeen:
 	.string "I've been overseas, so I\n"
-	.string "know about all sorts of\l"
-	.string "Pokémon!$"
+	.string "know about all sorts of Pokémon!$"
 
 Route38_Text_SailorHarryBeaten:
 	.string "Your skill is world class!$"
@@ -128,14 +127,11 @@ Route38_Text_BeautyOliviaSeen:
 	.string "and I are beautiful?$"
 
 Route38_Text_BeautyOliviaBeaten:
-	.string "We drink Moomoo Milk every\n"
-	.string "day.$"
+	.string "We drink sulfuric acid every day.$"
 
 Route38_Text_BeautyOliviaAfter:
-	.string "Moomoo Milk is good for\n"
-	.string "beauty and health,\p"
-	.string "but inconveniently, they\n"
-	.string "only sell one bottle at a time.$"
+	.string "I'm just kidding.\n"
+	.string "If we did, we'd be burned to death!$"
 
 Route38_Text_Sign:
 	.string "Route 38\p"

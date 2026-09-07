@@ -10,9 +10,9 @@ BlackthornMart_EventScript_BlackBelt::
 	end
 
 BlackthornMart_Text_CooltrainerM:
-	.string "You can't buy Max Revive, but it\n"
-	.string "fully restores a fainted Pokémon.\p"
-	.string "Beware--it won't restore Pp, the\n"
+	.string "Max Revive fully restores a fainted\n"
+	.string "Pokémon.\p"
+	.string "Beware--it won't restore PP, the\n"
 	.string "Power Points needed for moves.$"
 
 BlackthornMart_Text_BlackBelt:

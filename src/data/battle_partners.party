@@ -36,12 +36,29 @@ EVs: 252 HP / 6 SpD / 252 Spe
 Charizard
 Adamant Nature
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Level: 44
+Level: 42
 EVs: 252 Atk / 252 SpD / 6 Spe
 - Flamethrower
 - Wing Attack
 - Double Team
 - Steel Wing
+
+Salamence
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Claw
+- Air Slash
+- Double Edge
+- Thunderbolt
+
+Dragapult @ Leftovers
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+- Assurance
+- Hex
+- Giga Impact
+- Dragon Claw
 
 === PARTNER_FRY ===
 Name: Fry
@@ -81,6 +98,16 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Thunder Wave
 - Ice Punch
 - Cotton Guard
+
+Floatzel
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Level: 53
+EVs: 4 HP / 252 Atk /  252 Spe
+- Surf
+- Whirlpool
+- Crunch
+- Ice Fang
 
 Zamazenta
 Adamant Nature

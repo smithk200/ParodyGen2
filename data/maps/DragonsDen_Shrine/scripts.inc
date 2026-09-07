@@ -310,7 +310,11 @@ DragonsDen_Shrine_EventScript_FryEnter::
 
 DragonsDen_Shrine_EventScript_ReadyForBattlePrompt::
 	msgbox DragonsDen_Shrine_Text_FryChooseMons, MSGBOX_DEFAULT
-	goto DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle
+	goto DragonsDen_Shrine_EventScript_DoFryMultiBattle
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special LoadPlayerParty
+	goto DragonsDen_Shrine_EventScript_DoFryMultiBattle
 	end
 
 DragonsDen_Shrine_EventScript_ChoosePartyForMultiBattle::
@@ -600,7 +604,7 @@ DragonsDen_Shrine_Text_HaveNoFearFryIsHere:
 	.string "You don't have to face her alone!$"
 
 DragonsDen_Shrine_Text_FryChooseMons:
-	.string "C'mon, choose your 'mons!$"
+	.string "C'mon, let's battle!$"
 
 DragonsDen_Shrine_Text_ClairLoss:
 	.string "Well, then…\n"

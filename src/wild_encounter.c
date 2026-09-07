@@ -10,6 +10,7 @@
 #include "random.h"
 #include "field_player_avatar.h"
 #include "link.h"
+#include "move.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "ow_abilities.h"
@@ -62,6 +63,7 @@ static void FeebasSeedRng(u16 seed);
 static void ApplyFluteEncounterRateMod(u32 *encRate);
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate);
 static u8 GetMaxLevelOfSpeciesInWildTable(const struct WildPokemon *wildMon, enum Species species, enum WildPokemonArea area);
+
 #ifdef BUGFIX
 static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildMon, enum Type type, enum Ability ability, u8 *monIndex, u32 size);
 #else
@@ -349,6 +351,17 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
     u8 range;
     u8 rand;
     u8 fixedLVL = 0;
+    if (gMapHeader.regionMapSectionId == MAPSEC_GRINDHAUS_RANCH)
+    {
+        {
+            // Looks for the max level of all slots that share the same species as the selected slot.
+            max = GetMaxLevelOfSpeciesInWildTable(wildPokemon, wildPokemon[wildMonIndex].species, area);
+            if (max > 0)
+                return max;
+            else // Failsafe
+                return wildPokemon[wildMonIndex].maxLevel + 1;
+        }
+    }
 
     if ((gMapHeader.region == REGION_ALOLA) || (gMapHeader.region == REGION_HOENN))
         if (gMapHeader.mapLayoutId != LAYOUT_ALOLA_CAVE_2F)
@@ -518,33 +531,55 @@ u8 PickWildMonNature(enum Species species)
 void CreateWildMon(enum Species species, u8 level)
 {
     ZeroEnemyPartyMons();
+    u8 i;
 
     // Reset Nuzlocke indicator state - will be set after Pokemon is created
     gWildPokemonIsCatchableInNuzlocke = FALSE;
     
     u32 personality = GetMonPersonality(species, GetSynchronizedGender(WILDMON_ORIGIN, species), PickWildMonNature(species), RANDOM_UNOWN_LETTER);
-    if (gSaveBlock1Ptr->tx_Random_WildPokemon == 1) //tx_randomizer_and_challenges
+    if (gMapHeader.regionMapSectionId == MAPSEC_GRINDHAUS_RANCH)
     {
-        //DebugPrintf("Reached");
-        #ifndef NDEBUG
-        MgbaPrintf(MGBA_LOG_DEBUG, "******** CreateWildMon ********");
-        #endif
-        species = GetSpeciesRandomSeeded(species, TX_RANDOM_T_WILD_POKEMON, 0);
         CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
-        GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
+        if (species == SPECIES_BLISSEY)
+        {
+            for (i = 0; i < MAX_MON_MOVES; i++)
+            {
+                SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], MOVE_MEMENTO, i);
+            }
+        }
+        else
+        {
+            for (i = 0; i < MAX_MON_MOVES; i++)
+            {
+                SetMonMoveSlot(&gParties[B_TRAINER_OPPONENT_A][0], MOVE_TACKLE, i);
+            }
+        }
     }
-    if (FlagGet(FLAG_RANDOMIZER))
+    else
     {
-        species = GetSpeciesRandomSeeded(species, 0, 0);
-        CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
-        GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
-    }
-    if (gSaveBlock1Ptr->tx_Random_WildPokemon == 0)
-    {
-        //DebugPrintf("It's Not Working");
-        //PrintTXSaveData();
-        CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
-        GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
+        if (gSaveBlock1Ptr->tx_Random_WildPokemon == 1) //tx_randomizer_and_challenges
+        {
+            //DebugPrintf("Reached");
+            #ifndef NDEBUG
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** CreateWildMon ********");
+            #endif
+            species = GetSpeciesRandomSeeded(species, TX_RANDOM_T_WILD_POKEMON, 0);
+            CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+            GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
+        }
+        if (FlagGet(FLAG_RANDOMIZER))
+        {
+            species = GetSpeciesRandomSeeded(species, 0, 0);
+            CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+            GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
+        }
+        if (gSaveBlock1Ptr->tx_Random_WildPokemon == 0)
+        {
+            //DebugPrintf("It's Not Working");
+            //PrintTXSaveData();
+            CreateMonWithIVs(&gParties[B_TRAINER_OPPONENT_A][0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+            GiveMonInitialMoveset(&gParties[B_TRAINER_OPPONENT_A][0]);
+        }
     }
     
 
@@ -583,6 +618,8 @@ bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum WildPok
     u8 wildMonIndex = 0;
     u8 level;
     u16 species;
+    if (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat == 1)
+        return FALSE;
 
     switch (area)
     {

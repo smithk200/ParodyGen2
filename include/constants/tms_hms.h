@@ -58,7 +58,8 @@
     F(DAZZLING_GLEAM) \
     F(CRUNCH) \
     F(BULLDOZE) \
-    F(GRASS_KNOT)
+    F(GRASS_KNOT) \
+    F(AVALANCHE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

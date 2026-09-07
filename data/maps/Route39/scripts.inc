@@ -145,7 +145,7 @@ Route39_Text_BaobaIntro::
 	.string "How strange...\p"
 	.string "...Ohh!\n"
 	.string "What you are holding is...\l"
-	.string "what they call... a PokéDex!\p"
+	.string "what they call... a Pokédex!\p"
 	.string "Haven't seen one of those in ages.\p"
 	.string "My name is Baoba!\n"
 	.string "I used to run a Safari Zone in\l"

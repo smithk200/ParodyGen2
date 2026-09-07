@@ -72,15 +72,15 @@ Route41_EventScript_Kirk::
 	end
 
 Route41_Text_SwimmermKirkSeen:
-	.string "The waves are wild here.\p"
-	.string "They tire you out while\n"
-	.string "you swim.$"
+	.string "My girlfriend is wild here.\p"
+	.string "She tires me out on the waves, if you\n"
+	.string "know what I mean.$"
 
 Route41_Text_SwimmermKirkBeaten:
 	.string "I'm beat!$"
 
 Route41_Text_SwimmermKirkAfter:
-	.string "The currents keep me from\n"
+	.string "My girlfriend keeps me from\n"
 	.string "reaching that island.$"
 
 Route41_EventScript_Mathew::
@@ -89,15 +89,19 @@ Route41_EventScript_Mathew::
 	end
 
 Route41_Text_SwimmermMathewSeen:
-	.string "Are you seeking the secrets\n"
+	.string "Are you breaking the rules\n"
 	.string "of Whirl Islands?$"
 
 Route41_Text_SwimmermMathewBeaten:
-	.string "Ooh, you've got great endurance!$"
+	.string "Hey, we got a rulebreaker here!$"
 
 Route41_Text_SwimmermMathewAfter:
-	.string "A secret about Whirl Islands…\p"
-	.string "It's pitch-black inside!$"
+	.string "One rule of Whirl Islands:\n"
+	.string "You can't bring Pokémon!\p"
+	.string "I deposit all my Pokémon in\n"
+	.string "my PC before going there.\p"
+	.string "How do I get there, you ask?\n"
+	.string "I swim!$"
 
 Route41_EventScript_Kaylee::
 	trainerbattle_single TRAINER_KAYLEE, Route41_Text_SwimmerfKayleeSeen, Route41_Text_SwimmerfKayleeBeaten
@@ -122,15 +126,15 @@ Route41_EventScript_Susie::
 	end
 
 Route41_Text_SwimmerfSusieSeen:
-	.string "You look so elegant,\n"
-	.string "riding your Pokémon.$"
+	.string "Wasn't there a hit song about\n"
+	.string "a guy riding it all night long?$"
 
 Route41_Text_SwimmerfSusieBeaten:
-	.string "I'm crushed…$"
+	.string "Damn…$"
 
 Route41_Text_SwimmerfSusieAfter:
-	.string "Wasn't there a hit song about\n"
-	.string "a boy riding a Lapras?$"
+	.string "Oh yeah!\n"
+	.string "It was a highway, not the other thing!$"
 
 Route41_EventScript_Denise::
 	trainerbattle_single TRAINER_DENISE, Route41_Text_SwimmerfDeniseSeen, Route41_Text_SwimmerfDeniseBeaten
@@ -142,12 +146,13 @@ Route41_Text_SwimmerfDeniseSeen:
 	.string "I'm in a daze!$"
 
 Route41_Text_SwimmerfDeniseBeaten:
-	.string "Ohhh!$"
+	.string "Wah!$"
 
 Route41_Text_SwimmerfDeniseAfter:
 	.string "A sunburn is the worst for skin.\p"
-	.string "But I don't use a sunblock.\p"
-	.string "I won't pollute the water.$"
+	.string "That's why I always wear sunblock\n"
+	.string "that's nature-friendly, so it doesn't\l"
+	.string "pollute the water.$"
 
 Route41_EventScript_Kara::
 	trainerbattle_single TRAINER_KARA, Route41_Text_SwimmerfKaraSeen, Route41_Text_SwimmerfKaraBeaten
@@ -155,17 +160,17 @@ Route41_EventScript_Kara::
 	end
 
 Route41_Text_SwimmerfKaraSeen:
-	.string "If you need to rest,\n"
-	.string "just tread water.\p"
-	.string "You'll get your wind back,\n"
-	.string "so you can keep on going strong.$"
+	.string "If you need to rest, just go to sleep.\p"
+	.string "On the water?\n"
+	.string "No big deal!$"
 
 Route41_Text_SwimmerfKaraBeaten:
 	.string "Oh! You have more energy than I do.$"
 
 Route41_Text_SwimmerfKaraAfter:
-	.string "I heard roars from deep inside\n"
-	.string "the Islands.$"
+	.string "Do you know?\p"
+	.string "I have the legendary Pokémon Reshiram,\n"
+	.string "but it's in my PC.$"
 
 Route41_EventScript_Wendy::
 	trainerbattle_single TRAINER_WENDY, Route41_Text_SwimmerfWendySeen, Route41_Text_SwimmerfWendyBeaten
@@ -173,16 +178,14 @@ Route41_EventScript_Wendy::
 	end
 
 Route41_Text_SwimmerfWendySeen:
-	.string "At night, Staryu gather near\n"
-	.string "the water's surface.$"
+	.string "Hey! Watch it, Staryuface!$"
 
 Route41_Text_SwimmerfWendyBeaten:
-	.string "Oh, dear…$"
+	.string "Whoa there!$"
 
 Route41_Text_SwimmerfWendyAfter:
-	.string "The clusters of Staryu light up\n"
-	.string "at the same time.\p"
-	.string "It's so beautiful, it's scary.$"
+	.string "Watch where you're going, nimrod!\n"
+	.string "I need to see the Staryu in action!$"
 
 Route41_EventScript_Tentacruel1::
 	lock

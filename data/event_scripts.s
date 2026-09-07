@@ -2270,3 +2270,23 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route130_Cave/scripts.inc"
 
 	.include "data/maps/Route130_Cave2/scripts.inc"
+
+	.include "data/maps/Grindhaus_Ranch/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_EvTrainingRooms/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_HPRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_AttackRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_DefenseRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_SpAtkRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_SpeedRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_SpDefRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_EXPRoom/scripts.inc"
+
+	.include "data/maps/GrindhausRanch_MoneyRoom/scripts.inc"

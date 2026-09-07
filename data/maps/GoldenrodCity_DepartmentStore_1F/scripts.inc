@@ -39,11 +39,11 @@ GoldenrodDeptStore1_EventScript_Directory::
 	end
 
 GoldenrodDeptStor1_Text_Receptionist:
-    .string "Welcome to Goldenrod Dept.Store.$"
+    .string "Welcome to Goldenrod Dept. Store.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
-    .string "The Dept.Store has a decent\n"
-    .string "selection.\p"
+    .string "The Deptartment Store has a\n"
+	.string "decent selection.\p"
     .string "But some items are only available\n"
     .string "as Game Corner prizes.$"
 
@@ -56,10 +56,10 @@ GoldenrodDeptStore1_Text_BugCatcher:
     .string "prices.$"
 
 GoldenrodDeptStore1_Text_Directory:
-    .string "<1f Service Counter>\p"
-    .string "2f Trainer'sMarket\p"
-    .string "3f Battle Collection\p"
-    .string "4f Medicine Box\p"
-    .string "5f TM Corner\p"
-    .string "6f Tranquil Square\p"
+    .string "<1F Service Counter>\p"
+    .string "2F Trainer's Market\p"
+    .string "3F Battle Collection\p"
+    .string "4F Medicine Box\p"
+    .string "5F TM Corner\p"
+    .string "6F Tranquil Square\p"
     .string "Rooftop Lookout$"

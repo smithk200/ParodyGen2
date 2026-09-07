@@ -147,12 +147,13 @@ SlowpokeWell_B1F_Text_GruntM29Beaten:
 	.string "Arrgh! This is Not my day!$"
 
 SlowpokeWell_B1F_Text_GruntM29After:
-	.string "Sure, we've been hacking the\n"
-	.string "tails off Slowpoke and selling\l"
-	.string "them.\p"
-	.string "Everything we do is for profit.\p"
-	.string "That's right! We're Team Rocket,\n"
-	.string "and we'll do anything for money!$"
+	.string "Sure, we've been corrupting the\n"
+	.string "Slowpoke to try to turn them into\l"
+	.string "the ultimate battle machine…\p"
+	.string "But the Slowpoke only seem to be\n"
+	.string "divided in quarters.\p"
+	.string "Still, people will pay to see it!\p"
+	.string "Anything for the profit!$"
 
 SlowpokeWell_B1F_Text_ProtonSeen:
 	.string "What do you want?\p"
@@ -160,7 +161,7 @@ SlowpokeWell_B1F_Text_ProtonSeen:
 	.string "don't expect any mercy!$"
 
 SlowpokeWell_B1F_Text_ProtonBeaten:
-	.string "You did Ok today,\n"
+	.string "You did OK today,\n"
 	.string "but wait till next time!$"
 
 SlowpokeWell_B1F_Text_ProtonAfter:
@@ -176,34 +177,40 @@ SlowpokeWell_B1F_Text_ProtonAfter:
 
 SlowpokeWell_B1F_Text_GruntM2Seen:
 	.string "Hyuck-hyuck-hyuck!\n"
-	.string "Quit taking Slowpoketails?\p"
+	.string "Stop corrupting the Slowpoke?\p"
 	.string "You're nuts!\n"
 	.string "If we obeyed you, Team Rocket's\l"
-	.string "rep would be ruined!$"
+	.string "reputation would be ruined!$"
 
 SlowpokeWell_B1F_Text_GruntM2Beaten:
 	.string "Hyuck…\n"
 	.string "Too strong…$"
 
 SlowpokeWell_B1F_Text_GruntM2After:
-	.string "We need the money,\n"
-	.string "but selling Slowpoketails?\p"
+	.string "We want to corrupt Slowpoke into\n"
+	.string "their ultimate battle form.\p"
+	.string "But it seems like we can just\n"
+	.string "as easily assert our power by\l"
+	.string "dividing these Slowpoke into quarters.\p"
+	.string "Why?\p"
+	.string "You wouldn't understand!\p"
 	.string "It's tough being a Rocket Grunt!$"
 
 SlowpokeWell_B1F_Text_GruntF1Seen:
-	.string "Stop taking Tails?\p"
-	.string "Yeah, just try to defeat all\n"
-	.string "of us!$"
+	.string "Stop corrupting Slowpoke?\p"
+	.string "Yeah, just try to defeat all of us!$"
 
 SlowpokeWell_B1F_Text_GruntF1Beaten:
 	.string "You rotten brat!$"
 
 SlowpokeWell_B1F_Text_GruntF1After:
-	.string "Slowpoketails grow back fast!\p"
-	.string "What's wrong with selling them?$"
+	.string "The Slowpoke are at peace in their\n"
+	.string "corrupt form!\p"
+	.string "What's wrong with that?$"
 
 SlowpokeWell_B1F_Text_SlowpokeWithMail:
-	.string "A Slowpoke with its Tail cut off…\p"
+	.string "A Slowpoke with its body split\n"
+	.string "in quarters…\p"
 	.string "Huh? It has Mail.\n"
 	.string "Read it?$"
 
@@ -214,4 +221,5 @@ SlowpokeWell_B1F_Text_SlowpokeMail:
 	.string "Love, Dad$"
 
 SlowpokeWell_B1F_Text_TaillessSlowpoke:
-	.string "A Slowpoke with its Tail cut off…$"
+	.string "A Slowpoke with its body split\n"
+	.string "in quarters…$"

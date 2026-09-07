@@ -1365,7 +1365,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHINX
     [SPECIES_SHINX] =
     {
-        .baseHP        = 45,
+        .baseHP        = 60,
+        .baseHP_old     = 45,
         .baseAttack    = 65,
         .baseDefense   = 34,
         .baseSpeed     = 45,
@@ -1448,7 +1449,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXIO] =
     {
-        .baseHP        = 60,
+        .baseHP        = 100,
+        .baseHP_old     = 60,
         .baseAttack    = 85,
         .baseDefense   = 49,
         .baseSpeed     = 60,
@@ -1529,7 +1531,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXRAY] =
     {
-        .baseHP        = 80,
+        .baseHP        = 150,
+        .baseHP_old     = 80,
         .baseAttack    = 120,
         .baseDefense   = 79,
         .baseSpeed     = 70,

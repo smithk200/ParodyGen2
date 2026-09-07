@@ -64,7 +64,7 @@ Route20_Text_Headlocker:
 	.string "And sometimes it carries a rare\n"
 	.string "evolution item.\p"
 	.string "That's double rare!\p"
-	.string "I need to finish my PokéDex, so\n"
+	.string "I need to finish my Pokédex, so\n"
 	.string "I've been fishing here for hours!$"
 
 Route20_Text_Seel:
@@ -94,7 +94,7 @@ Route20_Text_SwimmerfLoriBeaten:
 	.string "No!$"
 
 Route20_Text_SwimmerfLoriAfterBattle:
-	.string "Surf is no longer the only Hm move\n"
+	.string "Surf is no longer the only HM move\n"
 	.string "you use in water.$"
 
 Route20_Text_SwimmermCameronSeen:

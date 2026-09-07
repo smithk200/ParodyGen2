@@ -1,5 +1,6 @@
 EverGrandeCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, EverGrandeCity_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, Grindhaus_Ranch_OnFrame_ClearCatchingFlag
 	.byte 0
 
 EverGrandeCity_OnTransition:

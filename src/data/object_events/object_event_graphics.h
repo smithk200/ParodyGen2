@@ -652,7 +652,7 @@ const u32 gObjectEventPic_SlowpokeNoTail[] = INCGFX_U32("graphics/object_events/
 const u32 gObjectEventPic_Juggler[] = INCGFX_U32("graphics/object_events/pics/people/juggler.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_ScientistF[] = INCGFX_U32("graphics/object_events/pics/people/scientist_f.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_CooltrainerM[] = INCGFX_U32("graphics/object_events/pics/people/cooltrainer_m.png", ".4bpp", "-mwidth 2 -mheight 4");
-const u32 gObjectEventPic_Biker[] = INCGFX_U32("graphics/object_events/pics/people/biker.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_Biker[] = INCGFX_U32("graphics/object_events/pics/people/biker.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_Captain[] = INCGFX_U32("graphics/object_events/pics/people/captain.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_VigorothMover[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/vigoroth_mover.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_SudowoodoTree[] = INCGFX_U32("graphics/object_events/pics/pokemon_old/sudowoodo_tree.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -697,7 +697,7 @@ const u16 gObjectEventPal_Blue[] = INCGFX_U16("graphics/object_events/palettes/n
 const u16 gObjectEventPal_Pink[] = INCGFX_U16("graphics/object_events/palettes/npc_pink.pal", ".gbapal");
 
 const u32 gObjectEventPic_Damian[] = INCGFX_U32("graphics/object_events/pics/people/leader_damian.png", ".4bpp", "-mwidth 2 -mheight 4");
-const u32 gObjectEventPic_Bea[] = INCGFX_U32("graphics/object_events/pics/people/gym_leaders/bea.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_Bea[] = INCGFX_U32("graphics/object_events/pics/people/gym_leaders/bea.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_Brie[] = INCGFX_U32("graphics/object_events/pics/people/leader_brie.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Joy[] = INCGFX_U32("graphics/object_events/pics/people/joy.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Ned[] = INCGFX_U32("graphics/object_events/pics/people/ned.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -718,6 +718,7 @@ const u32 gObjectEventPic_PeterGriffin[] = INCGFX_U32("graphics/object_events/pi
 const u32 gObjectEventPic_Nate[] = INCGFX_U32("graphics/object_events/pics/people/nate.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_LeaderElla[] = INCGFX_U32("graphics/object_events/pics/people/leader_ella.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_Marnie[] = INCGFX_U32("graphics/object_events/pics/people/marnie.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u32 gObjectEventPic_SlowpokeCorrupt[] = INCGFX_U32("graphics/object_events/pics/pokemon/slowpoke_no_tail.png", ".4bpp", "-mwidth 2 -mheight 4");
 
 const u16 gObjectEventPal_Ned[] = INCGFX_U16("graphics/object_events/palettes/ned.pal", ".gbapal");
 const u16 gObjectEventPal_Macy[] = INCGFX_U16("graphics/object_events/palettes/macy.pal", ".gbapal");

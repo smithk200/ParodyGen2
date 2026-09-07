@@ -37,7 +37,6 @@ Gate_RuinsOfAlph_Route36_Text_PokefanM:
 	.string "I see a scientist in the making.$"
 
 Gate_RuinsOfAlph_Route36_Text_Youngster:
-	.string "There are drawings on stone\n"
-	.string "panels.\p"
-	.string "I tried moving them.\n"
-	.string "I wonder what they are.$"
+	.string "Who's Alf Landon?\n"
+	.string "I don't know who he is.\l"
+	.string "Maybe a photographer?$"

@@ -65,11 +65,10 @@ NationalPark_Normal_EventScript_Persian::
 	end
 
 
-
 NationalPark_Normal_Text_Lass:
 	.string "Look! Check out my bag!\p"
-	.string "I printed out my favorites from my\n"
-	.string "PokéDex and stuck them on my bag.$"
+	.string "It's got Gym Leader Damian on it!\p"
+	.string "Wonder what he's cooking…$"
 
 NationalPark_Normal_Text_PokefanF:
 	.string "This is Mail I got from my daughter.\n"
@@ -90,10 +89,10 @@ NationalPark_Normal_Text_Teacher1_QuickClaw:
 
 NationalPark_Normal_Text_Youngster1:
 	.string "I'm playing with stickers I printed\n"
-	.string "from my PokéDex.$"
+	.string "from my Pokédex.$"
 
 NationalPark_Normal_Text_Youngster2:
-	.string "I get the other guy's PokéDex sticker\n"
+	.string "I get the other guy's Pokédex sticker\n"
 	.string "if I win.$"
 
 NationalPark_Normal_Text_Teacher2:

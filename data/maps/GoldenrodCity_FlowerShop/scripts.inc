@@ -49,7 +49,7 @@ GoldenrodCity_FlowerShop_EventScript_Floria1::
 	end
 	
 GoldenrodCity_FlowerShop_EventScript_Floria2::
-	msgbox GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney, MSGBOX_DEFAULT
+	msgbox GoldenrodCity_FlowerShop_Text_FloriaYouBeatNorman, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -150,9 +150,9 @@ Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries::
 
 GoldenrodCity_FlowerShop_Text_Floria:
 	.string "When I told my sis about the jiggly\n"
-	.string "tree, she said it's dangerous.\p"
-	.string "If I beat Whitney, I wonder if\n"
-	.string "she'll lend me her water bottle…$"
+	.string "puff, she said it's dangerous.\p"
+	.string "If I beat Norman, I wonder if\n"
+	.string "he'll lend me his water bottle…$"
 
 GoldenrodCity_FlowerShop_Text_Owner1:
 .string "Apparently, there is an odd tree\n"
@@ -164,9 +164,7 @@ GoldenrodCity_FlowerShop_Text_Owner1:
 .string "have watering cans...\p"
 .string "But I cannot let you have one!\n"
 .string "It's too dangerous!\p"
-.string "Well, maybe if you manage to\n"
-.string "defeat gym leader Whitney, it\l"
-.string "might be okay.$"
+.string "You might hit yourself on the head!$"
 
 GoldenrodCity_FlowerShop_Text_Owner2:
 .string "Apparently, there is an odd tree\n"
@@ -175,7 +173,7 @@ GoldenrodCity_FlowerShop_Text_Owner2:
 .string "it...\p"
 .string "Oh, that's a Plainbadge from\n"
 .string "The Goldenrod Gym!\p"
-.string "Did you defeat Whitney?!\p"
+.string "Did you defeat Norman?!\p"
 .string "Well, then there's nothing to worry\n"
 .string "about, is there?\p"
 .string "I'll let you use this Squirtbottle\n"
@@ -191,8 +189,8 @@ GoldenrodCity_FlowerShop_Text_Owner4:
     .string "Lalala lalalala. Have plenty of\n"
     .string "water, my lovely!$"
 
-GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
-    .string "Wow, you beat Whitney? Cool!$"
+GoldenrodCity_FlowerShop_Text_FloriaYouBeatNorman:
+    .string "Wow, you beat Norman? Cool!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
     .string "So it really was a Pokémon!$"

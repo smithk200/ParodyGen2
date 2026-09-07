@@ -121,3 +121,34 @@ gText_Birch_Challenge::
 	.string "Do you expect any challenge\l"
 	.string "in your journey?\p"
 	.string "And what's your name?$"
+
+gPikachuIntro_Text_Page1::
+	.string "WARNING:\n"
+	.string "This hack contains mature content and\n"
+	.string "themes, so if you get easily offended,\n"
+	.string "feel free to NOT play the game.\n"
+	.string "\n"
+	.string "This game is a labor of love and is\n"
+	.string "based on Pokémon Heart and Soul.$"
+
+gPikachuIntro_Text_Page2::
+	.string "This hack contains many memes and\n"
+	.string "references to pop culture, which is\n"
+	.string "FUNNY. Nuff said.\n"
+	.string "\n"
+	.string "With that in mind, there's a fine line\n"
+	.string "between edgy memes and full on NSFW.\n"
+	.string "Rule 34 is prohibited regarding this game.$"
+
+gPikachuIntro_Text_Page3::
+	.string "This game is more difficult than your\n"
+	.string "standard Pokémon game, it's recommended\n"
+	.string "you catch as many Pokémon as you can and\n"
+	.string "you swap out party members frequently.\n"
+	.string "\n"
+	.string "There are Pokémon from all regions in this\n"
+	.string "game! Oh, and good luck!$"
+
+gControlsGuide_Text_Intro::
+	.string "The various buttons will be explained in\n"
+	.string "the order of their importance.$"

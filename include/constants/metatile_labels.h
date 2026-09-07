@@ -344,7 +344,7 @@
 #define METATILE_Lavaridge_RockWall             0x274
 
 // gTileset_LavenderTown
-#define METATILE_LavenderTown_Lavender  0x2EC
+#define METATILE_LavenderTown_Lavender  0x2A2
 
 // gTileset_Lilycove
 #define METATILE_Lilycove_Door             0x246
@@ -450,7 +450,7 @@
 // gTileset_NewBarkTown
 #define METATILE_NewBarkTown_Door_Blue    0x2CB
 #define METATILE_NewBarkTown_Door_Red     0x2BD
-#define METATILE_NewBarkTown_Door_Yellow  0x309
+#define METATILE_NewBarkTown_Door_Yellow  0x29B
 
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
@@ -920,6 +920,9 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_Vermilion
+#define METATILE_Vermilion_Vermilion  0x29E
 
 // gTileset_VioletCity
 #define METATILE_VioletCity_Dojo_Door  0x32B

@@ -406,6 +406,13 @@ extern const u16 gBattleEnvironmentPalette_PeterGriffinsHouse[];
 extern const u32 gBattleEnvironmentTiles_PeterGriffinsHouse[];
 extern const u32 gBattleEnvironmentTilemap_PeterGriffinsHouse[];
 
+extern const u16 gBattleEnvironmentPalette_IceCave[];
+extern const u32 gBattleEnvironmentTiles_IceCave[];
+extern const u32 gBattleEnvironmentTilemap_IceCave[];
+extern const u32 gBattleEnvironmentAnimTiles_IceCave[];
+extern const u32 gBattleEnvironmentAnimTilemap_IceCave[];
+
+
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];

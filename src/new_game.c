@@ -272,6 +272,10 @@ void NewGameInitData(void)
         FlagSet(FLAG_NUZLOCKE);
         ClearNuzlockeModeSelection(); // Reset the selection variable
     }
+    if (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat == 1)
+    {
+        FlagSet(FLAG_SYS_NO_BAG_USE);
+    }
     PrintTXSaveData();
     RandomizeTypeEffectivenessListEWRAM(Random32());
     if ((gSaveBlock1Ptr->tx_Features_PkmnDeath) && (gSaveBlock1Ptr->tx_Challenges_Nuzlocke))
@@ -291,6 +295,7 @@ void CheckIfChallengesAreActive(void)
     || (gSaveBlock1Ptr->tx_Challenges_Mirror == 1)
     || (gSaveBlock1Ptr->tx_Challenges_Mirror_Thief == 1)
     || (gSaveBlock1Ptr->tx_Challenges_PkmnCenter == 1)
+    || (gSaveBlock1Ptr->tx_Challenges_YouAreWhatYouBeat == 1)
     || (IsOneTypeChallengeActive()))
         FlagSet(FLAG_NO_WT_BECAUSE_CHALLENGE);       
 }

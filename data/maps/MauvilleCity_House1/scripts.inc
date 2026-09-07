@@ -31,10 +31,10 @@ MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
 	.string "Here, take this Hidden Machine!$"
 
 MauvilleCity_House1_Text_ExplainRockSmash:
-	.string "That Hm contains Rock Smash.\p"
+	.string "That HM contains Rock Smash.\p"
 	.string "If you come across large boulders\n"
 	.string "that block your path…\p"
-	.string "Well, use that Hm move and smash\n"
+	.string "Well, use that HM move and smash\n"
 	.string "them right out of your way!\p"
 	.string "Yes, sir! Smash rocks aside, I say!\n"
 	.string "Woohoo!$"

@@ -145,30 +145,26 @@ MortyText_ShadowBallSpeech:
 	.string "Use it if it suits you.$"
 
 MortyFightDoneText:
-	.string "I see…\p"
 	.string "Your journey has taken you to\n"
-	.string "far-off places.\p"
-	.string "You've witnessed more than I\n"
-	.string "ever have.\p"
-	.string "I envy you for that…$"
+	.string "far-off places, though not\l"
+	.string "as far as we have.\p"
+	.string "We've been through space and time.$"
 
 MortyRematchText:
-	.string "Ah, the Johto Champion!\n"
-	.string "Good of you to come.\p"
-	.string "You've shown strength and skill,\n"
-	.string "but have you grown since we\l"
-	.string "last battled?\p"
-	.string "We've trained with our Ghost-type\n"
-	.string "Pokémon ever since.\p"
-	.string "Let's see if you can overcome\n"
-	.string "the rifts again.\p"
-	.string "Let us have a rematch?$"
+	.string "Rick: Heyy, it's the Johto\n"
+	.string "Champion!\p"
+	.string "How the fuck are ya doin'?\p"
+	.string "Morty: Uh… I'm not sure if you're\n"
+	.string "ready, {PLAYER}.\p"
+	.string "We've gotten tougher since we last\n"
+	.string "met!\p"
+	.string "Rick: Are ya ready kid?\n"
+	.string "Let's get this show on the road!$"
 
 Morty_RematchDefeatText:
-	.string "I'm not good enough yet…\p"
-	.string "You've witnessed more than I\n"
-	.string "ever have.\p"
-	.string "I envy you for that…$"
+	.string "We still travel in space and time,\n"
+	.string "but you've seen a lot of Johto, kid!\p"
+	.string "Keep up the good work!$"
 
 SageJeffreySeenText:
 	.string "I work for the Big Guy Upstairs.\p"

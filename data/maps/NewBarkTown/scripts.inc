@@ -345,7 +345,7 @@ NewBarkTown_Text_FatManState2:
 
 NewBarkTown_Text_FatManState3:
 	.string "Yo, {PLAYER}!\p"
-	.string "I hear Prof.Elm discovered\n"
+	.string "I hear Prof. Elm discovered\n"
 	.string "some new Pokémon.$"
 
 NewBarkTown_Text_LassState2:

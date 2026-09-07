@@ -2,7 +2,6 @@ Route108_MapScripts::
 	.byte 0
 
 Route108_EventScript_Jerome::
-	trainerbattle_single TRAINER_JEROME, Route108_Text_JeromeIntro, Route108_Text_JeromeDefeated
 	msgbox Route108_Text_JeromePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -22,14 +21,10 @@ Route108_EventScript_Missy::
 	end
 
 Route108_EventScript_Carolina::
-	trainerbattle_single TRAINER_NONE, Route108_Text_CarolinaIntro, Route108_Text_CarolinaDefeated
 	msgbox Route108_Text_CarolinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route108_EventScript_Cory::
-	trainerbattle_single TRAINER_NONE, Route108_Text_CoryIntro, Route108_Text_CoryDefeated, Route108_EventScript_CoryRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route108_EventScript_CoryRematch
 	msgbox Route108_Text_CoryPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -42,7 +37,6 @@ Route108_EventScript_CoryRegisterMatchCallAfterBattle::
 	end
 
 Route108_EventScript_CoryRematch::
-	trainerbattle_rematch TRAINER_NONE, Route108_Text_CoryRematchIntro, Route108_Text_CoryRematchDefeated
 	msgbox Route108_Text_CoryRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -32,8 +32,8 @@ Route32_EventScript_YoungsterAlbert::
 	end
 
 Route32_EventScript_YoungsterGordon::
-	trainerbattle_single TRAINER_GORDON Route32_Text_YoungsterGordon_Seen, Route32_Text_YoungsterGordon_Beaten
-	msgbox Route32_Text_YoungsterGordon_After, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_SMALLANT_1 Route32_Text_GamerSmallAnt_Seen, Route32_Text_GamerSmallAnt_Beaten
+	msgbox Route32_Text_GamerSmallAnt_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_CamperRoland::
@@ -425,27 +425,33 @@ Route32_Text_YoungsterAlbert_After:
 	.string "I'm not using the same tough\n"
 	.string "Pokémon as everyone else.$"
 
-Route32_Text_YoungsterGordon_Seen:
-	.string "I found some good Pokémon\n"
-	.string "in the grass!\p"
-	.string "I think they'll do it for me!$"
+Route32_Text_GamerSmallAnt_Seen:
+	.string "Wooper is best boy!!$"
 
-Route32_Text_YoungsterGordon_Beaten:
-	.string "Darn. I thought I could win.$"
+Route32_Text_GamerSmallAnt_Beaten:
+	.string "Aw, dammit!\n"
+	.string "You're good, {PLAYER}$"
 
-Route32_Text_YoungsterGordon_After:
-	.string "The grass is full of\n"
-	.string "clingy things.$"
+Route32_Text_GamerSmallAnt_After:
+	.string "Wooper is the best Pokémon!\n"
+	.string "Not that awful abombination Quagsire.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "That glance… It's intriguing.$"
+	.string "I've been a bad kid, but they\n"
+	.string "better not strip me of all\l"
+	.string "my organs.$"
 
 Route32_Text_CamperRoland_Beaten:
-	.string "Hmmm. This is disappointing.$"
+	.string "HEY!\n"
+	.string "I'm gonna KICK your ass!$"
 
 Route32_Text_CamperRoland_After:
-	.string "If you don't want to battle,\n"
-	.string "just avoid eye contact.$"
+	.string "IOh no…\n"
+	.string "They're going to unwind me…\p"
+	.string "That's when they strip you of your\n"
+	.string "internal organs.\p"
+	.string "That's terrifying…\p"
+	.string "And it's going to happen to me!$"
 
 Route32_Text_PicnickerLiz1_Seen:
 	.string "Uh-huh. Yeah, and you know…\p"
@@ -453,15 +459,16 @@ Route32_Text_PicnickerLiz1_Seen:
 	.string "Oh, all right. But make it fast.$"
 
 Route32_Text_PicnickerLiz1_Beaten:
-	.string "Oh! I've got to relieve\n"
-	.string "my anger!$"
+	.string "Oh, fuck you!\p"
+	.string "No, not you, Libby. It was this\n"
+	.string "idiotic trainer on Route 32.$"
 
 Route32_Text_PicnickerLiz1_After:
-	.string "I was having a nice chat too.$"
+	.string "I was having a nice chat, too!$"
 
 Route32_Text_BirdKeeperPeter_Seen:
 	.string "That Badge! It's from Violet City!\n"
-	.string "You beat Falkner?$"
+	.string "You beat Damian?$"
 
 Route32_Text_BirdKeeperPeter_Beaten:
 	.string "I know what my weaknesses are.$"
@@ -476,7 +483,7 @@ Route32_Text_RoarIntro:
 	.string "That Pleases Me! Now Take This!$"
 
 Route32_Text_RoarOutro:
-	.string "Wrooooar! It'sRoar!\p"
+	.string "Wrooooar! It's Roar!\p"
 	.string "Even Pokémon Run From A Good\n"
 	.string "Roar!$"
 

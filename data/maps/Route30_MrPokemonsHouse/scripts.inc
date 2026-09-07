@@ -148,11 +148,11 @@ MrPokemonHouse_Movement_MrPokemon_Leave:
 MrPokemonHouse_Text_Intro1:
 	.string "Hello, hello! You must be\n"
 	.string "{PLAYER}.\p"
-	.string "Prof.Elm said that you would\n"
+	.string "Prof. Elm said that you would\n"
 	.string "visit.$"
 
 MrPokemonHouse_Text_Intro2:
-	.string "This is what I want Prof.Elm\n"
+	.string "This is what I want Prof. Elm\n"
 	.string "to examine.$"
 
 MrPokemonHouse_Text_GotEgg:
@@ -163,9 +163,9 @@ MrPokemonHouse_Text_Intro3:
 	.string "Pokémon Day-Care service.\p"
 	.string "They gave me that Egg.\p"
 	.string "I was intrigued, so I sent\n"
-	.string "mail to Prof.Elm.\p"
+	.string "mail to Prof. Elm.\p"
 	.string "For Pokémon evolution,\n"
-	.string "Prof.Elm is the authority.$"
+	.string "Prof. Elm is the authority.$"
 
 
 MrPokemonHouse_Text_Intro4:
@@ -174,10 +174,10 @@ MrPokemonHouse_Text_Intro4:
 
 MrPokemonHouse_Text_Intro5:
 	.string "If my assumption is correct,\n"
-	.string "Prof.Elm will know it.$"
+	.string "Prof. Elm will know it.$"
 
 MrPokemonHouse_Text_Heal:
-	.string "You are returning to Prof.Elm?\p"
+	.string "You are returning to Prof. Elm?\p"
 	.string "Here. Your Pokémon should have\n"
 	.string "some rest.$"
 
@@ -194,13 +194,13 @@ MrPokemonHouse_Text_OakIntro:
 	.string "I was just visiting my old friend\n"
 	.string "Mr. Pokémon.\p"
 	.string "I heard you were running an errand\n"
-	.string "for Prof.Elm, so I waited here.\p"
+	.string "for Prof. Elm, so I waited here.\p"
 	.string "Oh! What's this? A rare Pokémon!\p"
 	.string "Let's see…\n"
 	.string "Hm, I see!\p"
-	.string "I understand why Prof.Elm gave\n"
+	.string "I understand why Prof. Elm gave\n"
 	.string "you a Pokémon for this errand.\p"
-	.string "To researchers like Prof.Elm and\n"
+	.string "To researchers like Prof. Elm and\n"
 	.string "I, Pokémon are our friends.\p"
 	.string "He saw that you would treat your\n"
 	.string "Pokémon with love and care.\p"
@@ -208,7 +208,7 @@ MrPokemonHouse_Text_OakIntro:
 	.string "You seem to be dependable. How\n"
 	.string "would you like to help me out?\p"
 	.string "See? This is the latest version of\n"
-	.string "the PokéDex.\p"
+	.string "the Pokédex.\p"
 	.string "It automatically records data on\n"
 	.string "Pokémon you've seen or caught.\p"
 	.string "It's a hi-tech encyclopedia!\p"
@@ -216,11 +216,11 @@ MrPokemonHouse_Text_OakIntro:
 	.string "they evolve, and their moves.$"
 
 MrPokemonHouse_Text_GetDex:
-	.string "{PLAYER} received PokéDex!$"
+	.string "{PLAYER} received Pokédex!$"
 
 MrPokemonHouse_Text_OakParting:
 	.string "Go meet many kinds of Pokémon and\n"
-	.string "complete that PokéDex!\p"
+	.string "complete that Pokédex!\p"
 	.string "But I've stayed too long.\p"
 	.string "I have to get to Goldenrod\n"
 	.string "for my usual radio show.\p"

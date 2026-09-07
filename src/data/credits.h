@@ -166,6 +166,8 @@ static const u8 sCreditsText_Dragon121[]       = _("Dragon121");
 static const u8 sCreditsText_goldy[]            = _("Goldy");
 static const u8 sCreditsText_JonTheMoron[]     = _("JonTheMoron");
 static const u8 sCreditsText_l1ghtt[]             = _("l1ghtt");
+static const u8 sCreditsText_FallenSeraphim[]     = _("FallenSeraphim");
+static const u8 sCreditsText_AstolfoSMG[]             = _("AstolfoSMG");
 
 static const struct CreditsEntry sCreditsEntry_andyshrew = {11, FALSE, sCreditsText_andyshrew};
 static const struct CreditsEntry sCreditsEntry_nettletOn = {11, FALSE, sCreditsText_nettletOn};
@@ -180,6 +182,8 @@ static const struct CreditsEntry sCreditsEntry_Dragon121 = {11, FALSE, sCreditsT
 static const struct CreditsEntry sCreditsEntry_goldy = {11, FALSE, sCreditsText_goldy};
 static const struct CreditsEntry sCreditsEntry_JonTheMoron = {11, FALSE, sCreditsText_JonTheMoron};
 static const struct CreditsEntry sCreditsEntry_l1ghtt = {11, FALSE, sCreditsText_l1ghtt};
+static const struct CreditsEntry sCreditsEntry_FallenSeraphim = {11, FALSE, sCreditsText_FallenSeraphim};
+static const struct CreditsEntry sCreditsEntry_AstolfoSMG = {11, FALSE, sCreditsText_AstolfoSMG};
 
 
 
@@ -758,8 +762,8 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Playtesters,
         &sCreditsEntry_JonTheMoron,
         &sCreditsEntry_l1ghtt,
-        _,
-        _,
+        &sCreditsEntry_FallenSeraphim,
+        &sCreditsEntry_AstolfoSMG,
     },
     [PAGE_PARAMETRIC_DESIGNERS] = {
        _,
