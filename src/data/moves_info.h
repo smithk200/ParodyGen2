@@ -21982,6 +21982,31 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    [MOVE_CUTAWAY_GAG] =
+    {
+        .name = COMPOUND_STRING("Cutaway Gag"),
+        .description = COMPOUND_STRING(
+            "Boosts power of Normal\n"
+            "moves for 4 turns."),
+        .effect = EFFECT_CUTAWAY_GAG,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_FIELD,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_SPD_UP_1 },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
+        .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_BEAUTY : CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = COMBO_STARTER_RAIN_DANCE,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_CutawayGag,
+        .validApprenticeMove = TRUE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

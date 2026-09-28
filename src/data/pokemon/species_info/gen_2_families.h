@@ -5776,7 +5776,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     #if P_GEN_4_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT}, {IF_HOLD_ITEM, ITEM_RAZOR_CLAW})},
                                 {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT})},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_SNEASEL_HISUI, CONDITIONS({IF_TIME, TIME_NIGHT})}),
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_SNEASEL_HISUI}),
     #endif
     },
 
@@ -5946,7 +5946,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggMoveLearnset = sSneaselHisuiEggMoveLearnset,
         .formSpeciesIdTable = sSneaselFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNEASLER, CONDITIONS({IF_NOT_TIME, TIME_NIGHT}, {IF_HOLD_ITEM, ITEM_RAZOR_CLAW})},
-                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_SNEASLER, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}),
+                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_SNEASLER, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})},
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_SNEASEL}),
     },
 
     [SPECIES_SNEASLER] =

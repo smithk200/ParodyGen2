@@ -4828,7 +4828,7 @@
       "width": 120,
       "height": 20,
       "primary_tileset": "gTileset_Johto_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_Lavaridge2",
       "border_filepath": "data/layouts/Route20/border.bin",
       "blockdata_filepath": "data/layouts/Route20/map.bin"
     },
@@ -4985,7 +4985,7 @@
     {
       "id": "LAYOUT_ROUTE37",
       "name": "Route37_Layout",
-      "width": 44,
+      "width": 46,
       "height": 41,
       "primary_tileset": "gTileset_Johto_General",
       "secondary_tileset": "gTileset_Ecruteak_City",
@@ -9031,6 +9031,46 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/GrindhausRanch_MoneyRoom/border.bin",
       "blockdata_filepath": "data/layouts/GrindhausRanch_MoneyRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRAGONS_DEN_UPPER_LEVEL",
+      "name": "DragonsDen_UpperLevel_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_NorthEast",
+      "secondary_tileset": "gTileset_Cave_DragonsDen",
+      "border_filepath": "data/layouts/DragonsDen_UpperLevel/border.bin",
+      "blockdata_filepath": "data/layouts/DragonsDen_UpperLevel/map.bin"
+    },
+    {
+      "id": "LAYOUT_DRAGONS_DEN_UPPER_LEVEL2",
+      "name": "DragonsDen_UpperLevel2_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_NorthEast",
+      "secondary_tileset": "gTileset_Cave_DragonsDen",
+      "border_filepath": "data/layouts/DragonsDen_UpperLevel2/border.bin",
+      "blockdata_filepath": "data/layouts/DragonsDen_UpperLevel2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GATE_ROUTE37_EEVEE_FARM",
+      "name": "Gate_Route37_EeveeFarm_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Johto_Building",
+      "secondary_tileset": "gTileset_Gate_Standard",
+      "border_filepath": "data/layouts/Gate_Route37_EeveeFarm/border.bin",
+      "blockdata_filepath": "data/layouts/Gate_Route37_EeveeFarm/map.bin"
+    },
+    {
+      "id": "LAYOUT_EEVEE_FARM",
+      "name": "EeveeFarm_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Johto_General",
+      "secondary_tileset": "gTileset_Route38_Farmland",
+      "border_filepath": "data/layouts/EeveeFarm/border.bin",
+      "blockdata_filepath": "data/layouts/EeveeFarm/map.bin"
     }
   ]
 }

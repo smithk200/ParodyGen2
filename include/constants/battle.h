@@ -446,8 +446,9 @@ enum TypeSideHazard
 #define STATUS_FIELD_PSYCHIC_TERRAIN                (1 << 9)
 #define STATUS_FIELD_ION_DELUGE                     (1 << 10)
 #define STATUS_FIELD_FAIRY_LOCK                     (1 << 11)
+#define STATUS_FIELD_CUTAWAY_GAG                  (1 << 12)
 
-#define STATUS_FIELD_TERRAIN_ANY        (STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN)
+#define STATUS_FIELD_TERRAIN_ANY        (STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN |STATUS_FIELD_CUTAWAY_GAG)
 
 // Flags describing move's result
 #define MOVE_RESULT_MISSED                 (1 << 0)
@@ -830,6 +831,8 @@ enum FaintedActions
     F(STARTING_STATUS_STEALTH_ROCK_OPPONENT,          stealthRockOpponent,        (u32, 1)) /* Stealth Rock Opponent */                    \
     F(STARTING_STATUS_SHARP_STEEL_PLAYER,             sharpSteelPlayer,           (u32, 1)) /* Sharp Steel Player */                       \
     F(STARTING_STATUS_SHARP_STEEL_OPPONENT,           sharpSteelOpponent,         (u32, 1)) /* Sharp Steel Opponent */                     \
+    F(STARTING_STATUS_CUTAWAY_GAG,                    cutawayGag,            (u32, 1)) /* Cutaway Gag (Permanent) */             \
+    F(STARTING_STATUS_CUTAWAY_GAG_TEMPORARY,          cutawayGagTemporary,   (u32, 1)) /* Cutaway Gag Temporary (5 turns) */     \
 
 #define UNPACK_STARTING_STATUS_ENUMS(_enum, ...) _enum,
 

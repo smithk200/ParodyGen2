@@ -351,52 +351,99 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
     u8 range;
     u8 rand;
     u8 fixedLVL = 0;
+
+    // Grindhaus Ranch: use the highest level of this species in the wild table.
     if (gMapHeader.regionMapSectionId == MAPSEC_GRINDHAUS_RANCH)
     {
-        {
-            // Looks for the max level of all slots that share the same species as the selected slot.
-            max = GetMaxLevelOfSpeciesInWildTable(wildPokemon, wildPokemon[wildMonIndex].species, area);
-            if (max > 0)
-                return max;
-            else // Failsafe
-                return wildPokemon[wildMonIndex].maxLevel + 1;
-        }
+        max = GetMaxLevelOfSpeciesInWildTable(
+            wildPokemon,
+            wildPokemon[wildMonIndex].species,
+            area
+        );
+
+        if (max > 0)
+            return max;
+        else
+            return wildPokemon[wildMonIndex].maxLevel + 1;
     }
 
+    // Alola and Hoenn: level is based on the average level of the player's party.
     if ((gMapHeader.region == REGION_ALOLA) || (gMapHeader.region == REGION_HOENN))
-        if (gMapHeader.mapLayoutId != LAYOUT_ALOLA_CAVE_2F)
     {
-        
+        if (gMapHeader.mapLayoutId != LAYOUT_ALOLA_CAVE_2F)
         {
-        if (GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_SPECIES) != SPECIES_NONE)
-            fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL) + GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_LEVEL)) / 6;
-        else if ((GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_SPECIES) != SPECIES_NONE))
-                fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL)) / 5;
-            else if ((GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_SPECIES) != SPECIES_NONE))
-                fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL)) / 4;
-                else if ((GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES) != SPECIES_NONE))
-                    fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)) / 3;
-                    else if ((GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_SPECIES) != SPECIES_NONE))
-                        fixedLVL = (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL)+GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)) / 2;
-                        else if ((GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_SPECIES) == SPECIES_NONE) && (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES) != SPECIES_NONE))
-                            fixedLVL = GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL);
-        }
-
-            // Make sure minimum level is less than maximum level
+            if (GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_SPECIES) != SPECIES_NONE)
             {
-                min = fixedLVL-3;
-                max = fixedLVL+3;
+                fixedLVL = (
+                    GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][5], MON_DATA_LEVEL)
+                ) / 6;
             }
+            else if (GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_SPECIES) != SPECIES_NONE)
+            {
+                fixedLVL = (
+                    GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][4], MON_DATA_LEVEL)
+                ) / 5;
+            }
+            else if (GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_SPECIES) != SPECIES_NONE)
+            {
+                fixedLVL = (
+                    GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][3], MON_DATA_LEVEL)
+                ) / 4;
+            }
+            else if (GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES) != SPECIES_NONE)
+            {
+                fixedLVL = (
+                    GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_LEVEL)
+                ) / 3;
+            }
+            else if (GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_SPECIES) != SPECIES_NONE)
+            {
+                fixedLVL = (
+                    GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_LEVEL) +
+                    GetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_LEVEL)
+                ) / 2;
+            }
+            else if (GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES) != SPECIES_NONE)
+            {
+                fixedLVL = GetMonData(
+                    &gParties[B_TRAINER_PLAYER][0],
+                    MON_DATA_LEVEL
+                );
+            }
+
+            // Wild Pokémon are between 3 levels below and 3 levels above
+            // the player's average party level.
+            min = fixedLVL - 3;
+            max = fixedLVL + 3;
+
             if (min <= 0)
                 min = 1;
+
             range = max - min + 1;
             rand = Random() % range;
+
             return min + rand;
+        }
     }
 
+    // Normal wild encounters.
     if (LURE_STEP_COUNT == 0)
     {
-        // Make sure minimum level is less than maximum level
+        // Make sure minimum level is less than maximum level.
         if (wildPokemon[wildMonIndex].maxLevel >= wildPokemon[wildMonIndex].minLevel)
         {
             min = wildPokemon[wildMonIndex].minLevel;
@@ -407,14 +454,18 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
             min = wildPokemon[wildMonIndex].maxLevel;
             max = wildPokemon[wildMonIndex].minLevel;
         }
+
         range = max - min + 1;
         rand = Random() % range;
 
-        // check ability for max level mon
+        // Check ability for max-level Pokémon.
         if (!GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SANITY_IS_EGG))
         {
             enum Ability ability = GetMonAbility(&gParties[B_TRAINER_PLAYER][0]);
-            if (ability == ABILITY_HUSTLE || ability == ABILITY_VITAL_SPIRIT || ability == ABILITY_PRESSURE)
+
+            if (ability == ABILITY_HUSTLE
+                || ability == ABILITY_VITAL_SPIRIT
+                || ability == ABILITY_PRESSURE)
             {
                 if (Random() % 2 == 0)
                     return max;
@@ -423,18 +474,25 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
                     rand--;
             }
         }
+
         return min + rand;
     }
     else
     {
-        // Looks for the max level of all slots that share the same species as the selected slot.
-        max = GetMaxLevelOfSpeciesInWildTable(wildPokemon, wildPokemon[wildMonIndex].species, area);
+        // Looks for the max level of all slots that share the same species.
+        max = GetMaxLevelOfSpeciesInWildTable(
+            wildPokemon,
+            wildPokemon[wildMonIndex].species,
+            area
+        );
+
         if (max > 0)
             return max + 1;
-        else // Failsafe
+        else
             return wildPokemon[wildMonIndex].maxLevel + 1;
     }
 }
+
 
 u16 GetCurrentMapWildMonHeaderId(void)
 {

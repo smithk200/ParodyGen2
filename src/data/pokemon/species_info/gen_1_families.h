@@ -18290,7 +18290,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 45,
         .baseSpDefense = 65,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .catchRate = 45,
+        .catchRate = 105,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 92,
         .evYield_SpDefense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -18365,7 +18365,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 ,{EVO_LEVEL, 0, SPECIES_SYLVEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_KNOWS_MOVE_TYPE, TYPE_FAIRY})}
                             #endif
                             #if P_GEN_2_CROSS_EVOS
-                                ,{EVO_LEVEL, 0, SPECIES_ESPEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_NOT_TIME, TIME_NIGHT})},
+                                ,
+                                {EVO_ITEM, ITEM_DAWN_STONE, SPECIES_ESPEON},
+                                {EVO_LEVEL, 0, SPECIES_ESPEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_NOT_TIME, TIME_NIGHT})},
+                                {EVO_ITEM, ITEM_DUSK_STONE, SPECIES_UMBREON},
                                 {EVO_LEVEL, 0, SPECIES_UMBREON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD}, {IF_TIME, TIME_NIGHT})}
                             #endif
                             #if P_GEN_4_CROSS_EVOS

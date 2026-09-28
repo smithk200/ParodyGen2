@@ -41,7 +41,7 @@ EcruteakCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_JEFFREY
 	settrainerflag TRAINER_PING
 	settrainerflag TRAINER_MARTHA
-	settrainerflag TRAINER_GRACE
+	settrainerflag TRAINER_ADVANCE
 	return
 
 CianwoodCity_Gym_SetGymTrainers::

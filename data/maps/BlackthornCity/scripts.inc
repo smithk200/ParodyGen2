@@ -300,8 +300,8 @@ BlackthornGrampsGrantsEntryText:
 	.string "You may enter.$"
 
 BlackBeltText_VoicesInMyHead:
-	.string "Arooo! Voices in my head!\p"
-	.string "Huh? I'm listening to my radio!$"
+	.string "Arooo! Voices in my head!\n"
+	.string "I'M POSSESED BY A FUCKING GHOST!$"
 
 BlackthornCooltrainerF1Text:
 	.string "Are you going to make your Pokémon\n"
@@ -315,7 +315,7 @@ BlackthornYoungsterText:
 
 BlackthornCity_MeetSantosText:
 	.string "Santos: …\p"
-	.string "I'm Santos of the weekday family.\p"
+	.string "I'm Santos of the Weekday family.\p"
 	.string "Take a guess.$"
 
 BlackthornCity_SantosGivesGiftText:

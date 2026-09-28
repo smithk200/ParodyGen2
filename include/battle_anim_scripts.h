@@ -243,6 +243,7 @@ extern const u8 gBattleAnimMove_HiddenPower[];
 extern const u8 gBattleAnimMove_CrossChop[];
 extern const u8 gBattleAnimMove_Twister[];
 extern const u8 gBattleAnimMove_RainDance[];
+extern const u8 gBattleAnimMove_CutawayGag[];
 extern const u8 gBattleAnimMove_SunnyDay[];
 extern const u8 gBattleAnimMove_Crunch[];
 extern const u8 gBattleAnimMove_MirrorCoat[];

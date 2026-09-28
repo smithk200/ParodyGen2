@@ -24106,6 +24106,11 @@ gBattleAnimMove_RainDance::
 	waitforvisualfinish
 	end
 
+gBattleAnimMove_CutawayGag::
+	createvisualtask AnimTask_Splash, 2, ANIM_ATTACKER, 4
+	delay 120
+	end
+
 gBattleAnimMove_Bite::
 	monbg ANIM_TARGET
 	setalpha 12, 8

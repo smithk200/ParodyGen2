@@ -6820,6 +6820,9 @@ static void RemoveAllTerrains(void)
     case STATUS_FIELD_PSYCHIC_TERRAIN:
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_PSYCHIC;
         break;
+    case STATUS_FIELD_CUTAWAY_GAG:
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_END_CUTAWAY_GAG;
+        break;
     default:
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_COUNT;  // failsafe
         break;
@@ -9748,6 +9751,9 @@ static void Cmd_settypetoenvironment(void)
     case STATUS_FIELD_PSYCHIC_TERRAIN:
         environmentType = TYPE_PSYCHIC;
         break;
+    case STATUS_FIELD_CUTAWAY_GAG:
+        environmentType = TYPE_NORMAL;
+        break;
     default:
         environmentType = gBattleEnvironmentInfo[gBattleEnvironment].camouflageType;
         break;
@@ -9870,17 +9876,17 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
     switch (ballId)
     {
     case BALL_GREAT:
-        ball->multiplier = 150;
+        ball->multiplier = 200;
         break;
     case BALL_ULTRA:
-        ball->multiplier = 200;
+        ball->multiplier = 300;
         break;
     case BALL_MASTER:
         ball->guaranteedCapture = TRUE;
         break;
     case BALL_NET:
         if (IS_BATTLER_ANY_TYPE(wildMonBattler, TYPE_WATER, TYPE_BUG))
-            ball->multiplier = B_NET_BALL_MODIFIER >= GEN_7 ? 350 : 300;
+            ball->multiplier = B_NET_BALL_MODIFIER >= GEN_7 ? 450 : 400;
         break;
     case BALL_NEST:
         ball->multiplier = 100;
@@ -9905,7 +9911,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
     case BALL_DUSK:
         i = GetTimeOfDay();
         if (i == TIME_EVENING || i == TIME_NIGHT || gMapHeader.cave || gMapHeader.mapType == MAP_TYPE_UNDERGROUND)
-            ball->multiplier = (B_DUSK_BALL_MODIFIER >= GEN_7 ? 300 : 350);
+            ball->multiplier = (B_DUSK_BALL_MODIFIER >= GEN_7 ? 450 : 350);
         break;
     case BALL_TIMER:
         if (B_TIMER_BALL_MODIFIER >= GEN_5)
@@ -9922,11 +9928,11 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         break;
     case BALL_QUICK:
         if (gBattleResults.battleTurnCounter == 0)
-            ball->multiplier = (B_QUICK_BALL_MODIFIER >= GEN_5 ? 500 : 400);
+            ball->multiplier = (B_QUICK_BALL_MODIFIER >= GEN_5 ? 700 : 400);
         break;
     case BALL_REPEAT:
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(battleMon->species), FLAG_GET_CAUGHT))
-            ball->multiplier = (B_REPEAT_BALL_MODIFIER >= GEN_7 ? 350 : 300);
+            ball->multiplier = (B_REPEAT_BALL_MODIFIER >= GEN_7 ? 400 : 300);
         break;
     case BALL_LEVEL:
         if (gBattleMons[playerBattler].level >= 4 * battleMon->level)
@@ -9940,7 +9946,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         if (gIsFishingEncounter)
         {
             if (B_LURE_BALL_MODIFIER >= GEN_8)
-                ball->multiplier = 400;
+                ball->multiplier = 600;
             else if (B_LURE_BALL_MODIFIER >= GEN_7)
                 ball->multiplier = 500;
             else
@@ -9956,7 +9962,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         {
             if (evolutions[i].method == EVO_ITEM
                 && evolutions[i].param == ITEM_MOON_STONE)
-                ball->multiplier = 400;
+                ball->multiplier = 500;
         }
         break;
     }
@@ -9972,7 +9978,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
         break;
     case BALL_FAST:
         if (GetSpeciesBaseSpeed(battleMon->species) >= 100)
-            ball->multiplier = 400;
+            ball->multiplier = 600;
         break;
     case BALL_HEAVY:
         i = GetSpeciesWeight(battleMon->species);
@@ -10021,13 +10027,14 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
             ball->multiplier = 200;
         else if (B_SAFARI_BALL_MODIFIER <= GEN_7)
             ball->multiplier = 150;
+        ball->multiplier = 300;
         break;
     case BALL_SPORT:
         if (B_SPORT_BALL_MODIFIER <= GEN_7)
             ball->multiplier = 150;
         break;
     case BALL_BEAST:
-        ball->multiplier = 410;
+        ball->multiplier = 610;
         ball->divider = 4096;
         break;
     default:
@@ -11627,6 +11634,13 @@ void BS_SetTerrain(void)
         {
             statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_PSYCHIC;
+        }
+        break;
+    case EFFECT_CUTAWAY_GAG:
+        if (!(gFieldStatuses & STATUS_FIELD_CUTAWAY_GAG))
+        {
+            statusFlag = STATUS_FIELD_CUTAWAY_GAG;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TERRAIN_SET_CUTAWAY_GAG;
         }
         break;
     default:

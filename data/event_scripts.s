@@ -2290,3 +2290,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/GrindhausRanch_EXPRoom/scripts.inc"
 
 	.include "data/maps/GrindhausRanch_MoneyRoom/scripts.inc"
+
+	.include "data/maps/DragonsDen_UpperLevel/scripts.inc"
+
+	.include "data/maps/DragonsDen_UpperLevel2/scripts.inc"
+
+	.include "data/maps/Gate_Route37_EeveeFarm/scripts.inc"
+
+	.include "data/maps/EeveeFarm/scripts.inc"

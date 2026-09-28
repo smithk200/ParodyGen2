@@ -665,6 +665,7 @@ extern const u8 BattleScript_EffectMistyTerrain[];
 extern const u8 BattleScript_EffectGrassyTerrain[];
 extern const u8 BattleScript_EffectElectricTerrain[];
 extern const u8 BattleScript_EffectPsychicTerrain[];
+extern const u8 BattleScript_EffectCutawayGag[];
 extern const u8 BattleScript_EffectElectrify[];
 extern const u8 BattleScript_EffectReflectType[];
 extern const u8 BattleScript_EffectSoak[];

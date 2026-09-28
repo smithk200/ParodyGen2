@@ -1264,6 +1264,8 @@ static bool32 HandleEndTurnTerrain(enum BattlerId battler)
         effect = EndTurnTerrain(STATUS_FIELD_GRASSY_TERRAIN, B_MSG_TERRAIN_END_GRASSY);
     else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
         effect = EndTurnTerrain(STATUS_FIELD_PSYCHIC_TERRAIN, B_MSG_TERRAIN_END_PSYCHIC);
+    else if (gFieldStatuses & STATUS_FIELD_CUTAWAY_GAG)
+        effect = EndTurnTerrain(STATUS_FIELD_CUTAWAY_GAG, B_MSG_TERRAIN_END_CUTAWAY_GAG);
 
     return effect;
 }

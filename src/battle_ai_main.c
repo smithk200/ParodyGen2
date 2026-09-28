@@ -2615,6 +2615,11 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
          || (HasPartner(battlerAtk) && AreMovesEquivalent(battlerAtk, BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)))
             ADJUST_SCORE(-10);
         break;
+    case EFFECT_CUTAWAY_GAG:
+        if (gFieldStatuses & STATUS_FIELD_CUTAWAY_GAG
+         || (HasPartner(battlerAtk) && AreMovesEquivalent(battlerAtk, BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)))
+            ADJUST_SCORE(-10);
+        break;
     case EFFECT_PSYCHIC_TERRAIN:
         if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN
          || (HasPartner(battlerAtk) && AreMovesEquivalent(battlerAtk, BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove)))
@@ -5229,6 +5234,14 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
                 ADJUST_SCORE(WEAK_EFFECT);
         }
         break;
+    case EFFECT_CUTAWAY_GAG:
+        if (ShouldSetFieldStatus(battlerAtk, STATUS_FIELD_CUTAWAY_GAG))
+        {
+            ADJUST_SCORE(GOOD_EFFECT);
+            if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_TERRAIN_EXTENDER || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
+                ADJUST_SCORE(WEAK_EFFECT);
+        }
+        break;
     case EFFECT_STEEL_ROLLER:
         {
             u32 terrain = gFieldStatuses & STATUS_FIELD_TERRAIN_ANY;
@@ -5950,6 +5963,7 @@ static s32 AI_ForceSetupFirstTurn(enum BattlerId battlerAtk, enum BattlerId batt
     case EFFECT_PSYCHIC_TERRAIN:
     case EFFECT_GRASSY_TERRAIN:
     case EFFECT_ELECTRIC_TERRAIN:
+    case EFFECT_CUTAWAY_GAG:
     case EFFECT_MISTY_TERRAIN:
     case EFFECT_STEALTH_ROCK:
     case EFFECT_TOXIC_SPIKES:
@@ -6373,6 +6387,10 @@ static s32 AI_PowerfulStatus(enum BattlerId battlerAtk, enum BattlerId battlerDe
         if (!(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
             ADJUST_SCORE(POWERFUL_STATUS_MOVE);
         break;
+    case EFFECT_CUTAWAY_GAG:
+        if (!(gFieldStatuses & STATUS_FIELD_CUTAWAY_GAG))
+            ADJUST_SCORE(POWERFUL_STATUS_MOVE);
+        break;
     case EFFECT_WEATHER:
         switch (GetMoveWeatherType(move))
         {
@@ -6483,6 +6501,7 @@ static s32 AI_PredictSwitch(enum BattlerId battlerAtk, enum BattlerId battlerDef
     case EFFECT_PSYCHIC_TERRAIN:
     case EFFECT_GRASSY_TERRAIN:
     case EFFECT_MISTY_TERRAIN:
+    case EFFECT_CUTAWAY_GAG:
         ADJUST_SCORE(GOOD_EFFECT);
         break;
     case EFFECT_HIT_SWITCH_TARGET:

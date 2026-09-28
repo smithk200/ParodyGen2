@@ -453,7 +453,7 @@
 #define TRAINER_MISSY                       447
 #define TRAINER_ALICE                       448
 #define TRAINER_GRUNT_30                     449
-#define TRAINER_GRACE                       450
+#define TRAINER_ADVANCE                       450
 #define TRAINER_TANYA                       451
 #define TRAINER_SHARON                      452
 #define TRAINER_NIKKI                       453
@@ -491,8 +491,8 @@
 #define TRAINER_MARNIE_1               485
 #define TRAINER_RYAN              486
 #define TRAINER_IRENE_2               487
-#define TRAINER_AMY_AND_LIV_5               488
-#define TRAINER_AMY_AND_LIV_6               489
+#define TRAINER_PETER_GRIFFIN_FUCHSIA               488
+#define TRAINER_PETER_GRIFFIN_EVER_GRANDE    489
 #define TRAINER_HUEY                        490
 #define TRAINER_EDMOND                      491
 #define TRAINER_MIKE                    492
@@ -803,7 +803,7 @@
 #define TRAINER_OLIVIA_2                    797
 #define TRAINER_CHARLES_HOENN                  798
 #define TRAINER_PETER_GRIFFIN_1            799
-#define TRAINER_PETER_GRIFFIN_2             800
+#define TRAINER_PETER_GRIFFIN_INDIGO_PLATEAU             800
 #define TRAINER_PETER_GRIFFIN_ROUTE_119     801
 #define TRAINER_CARLENE                      802
 #define TRAINER_JIN                      803

@@ -25,8 +25,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EverGrandeCity_PokemonLeague_1F_EventScript_Nurse",
-      "flag": "0"
+      "script": "0x0",
+      "flag": "FLAG_HIDE_PETER_GRIFFIN_EVER_GRANDE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
@@ -52,7 +52,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard",
+      "script": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard1",
       "flag": "0"
     },
     {
@@ -66,8 +66,22 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard",
+      "script": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard2",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PETER_GRIFFIN_EVER_GRANDE",
+      "graphics_id": "OBJ_EVENT_GFX_PETER_GRIFFIN",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_PETER_GRIFFIN_EVER_GRANDE"
     }
   ],
   "warp_events": [

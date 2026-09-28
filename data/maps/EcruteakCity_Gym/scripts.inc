@@ -51,7 +51,7 @@ EcruteakCity_Gym_EventScript_Martha::
 	end
 
 EcruteakCity_Gym_EventScript_Grace::
-	trainerbattle_single TRAINER_GRACE MediumGraceSeenText, MediumGraceBeatenText
+	trainerbattle_single TRAINER_ADVANCE MediumGraceSeenText, MediumGraceBeatenText
 	msgbox MediumGraceAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
@@ -199,17 +199,23 @@ MediumMarthaAfterBattleText:
 	.string "most is the one who will!$"
 
 MediumGraceSeenText:
-	.string "Stumped by our dark corridors?\n"
-	.string "Defeat me if you want a hint!$"
+	.string "I'm a tool!\p"
+	.string "No, not THAT kind of tool!\p"
+	.string "I'm a development tool!\p"
+	.string "For binary hacking!\p"
+	.string "I'm the best there is in binary\n"
+	.string "hacking!$"
 
 MediumGraceBeatenText:
 	.string "Wha-what?$"
 
 MediumGraceAfterBattleText:
-	.string "Fine. I'll tell you the secret\n"
-	.string "of the shadows.\p"
-	.string "The path is right in front of\n"
-	.string "your eyes!$"
+	.string "Well, I know that decomps are the\n"
+	.string "premier way to hack.\p"
+	.string "But they require such a large\n"
+	.string "learning curve…\p"
+	.string "I hope one day binary tools will\n"
+	.string "get as good as the decomps…$"
 
 EcruteakCity_GymGuideText:
 	.string "Hey Champ! You're almost\n"

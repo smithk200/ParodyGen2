@@ -4134,6 +4134,7 @@ static u32 GetAIEffectGroup(enum BattleMoveEffects effect)
     case EFFECT_PSYCHIC_TERRAIN:
     case EFFECT_STEEL_ROLLER:
     case EFFECT_ICE_SPINNER:
+    case EFFECT_CUTAWAY_GAG:
         aiEffect |= AI_EFFECT_TERRAIN;
         break;
     case EFFECT_COURT_CHANGE:

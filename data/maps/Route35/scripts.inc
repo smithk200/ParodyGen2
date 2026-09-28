@@ -223,8 +223,9 @@ Route35_Text_PeterGriffinBeaten:
 	.string "Hey, that wasn't fair!$"
 
 Route35_Text_PeterGriffinAfter:
+	.string "(sucks air) ahh (sucks air) ahh\n"
+	.string "(sucks air) ahh…\p"
 	.string "Ya know, I'm planning on going\n"
 	.string "to some tropical island, far away.\p"
 	.string "They call it “Alola”.\p"
-	.string "Don't know what it is, but sounds fun!\p"
-	.string "See ya!$"
+	.string "Don't know what it is, but sounds fun!$"

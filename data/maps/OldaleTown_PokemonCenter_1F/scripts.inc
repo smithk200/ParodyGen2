@@ -38,10 +38,10 @@ OldaleTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 	end
 
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
-	.string "That PC in the corner there is\n"
-	.string "for any Pokémon Trainer to use.\p"
-	.string "Naturally, that means you're welcome\n"
-	.string "to use it, too.$"
+	.string "That PC can only be used to store\n"
+	.string "Pokémon, items, and mail.\p"
+	.string "It can't be used to play games.\n"
+	.string "How dumb is that?$"
 
 OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
 	.string "Pokémon Centers are great!\p"

@@ -79,7 +79,7 @@ CeladonMansion2F_Text_TixoRebel:
 	.string "Have you heard of The Eggening?\n"
 	.string "It was a bug from the playtest\l"
 	.string "that randomly changed Pokémon into\l"
-	.string "EGGs!\p"
+	.string "eggs!\p"
 	.string "I developed the fix for it!$"
 
 CeladonMansion2F_Text_Phant:
@@ -101,11 +101,10 @@ CeladonMansion2F_Text_DaniRaibow:
 	.string "I am pretty good at finding problems,\n"
 	.string "and can fix little ones.\p"
     .string "Wanna hear a joke?\p"
-    .string "Lance tried to teach Dragonite the\n"
-    .string "move Dragon Breath.\p"
-    .string "However, Dragonite was moving too\n"
-    .string "fast from Extremespeed; it couldn't\l"
-    .string "catch it!$"
+    .string "A man walks into a bar and falls\n"
+	.string "unconscious.\p"
+	.string "Why?\p"
+	.string "It was an iron bar!$"
 
 CeladonMansion2F_Text_IAmAwesome2:
 	.string "I was the one who remade this\n"

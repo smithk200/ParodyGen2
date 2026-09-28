@@ -33,14 +33,12 @@ LavenderTown_PokemonCenter1F_Text_Gentleman:
 LavenderTown_PokemonCenter1F_Text_Teacher:
 	.string "There's a radio program that plays\n"
 	.string "Poké Flute music.\p"
-	.string "Oh? Ah, your radio needs an Expn\n"
-	.string "Card to tune into it.$"
+	.string "But that program's super crappy,n"
+	.string "and it can't run on your radio anyway.$"
 
 LavenderTown_PokemonCenter1F_Text_Youngster:
 	.string "If the Power Plant isn't running,\n"
-	.string "the Magnet Train won't run either…\p"
-	.string "It also means the Radio Station\n"
-	.string "can't broadcast…$"
+	.string "the Magnet Train won't run either…$"
 
 LavenderTown_PokemonCenter1F_Text_Youngster_ReturnedMachinePart:
 	.string "The Director of the Radio Station\n"

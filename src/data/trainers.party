@@ -3518,31 +3518,31 @@ Pic: Swimmer M
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Wingull
+Pelipper @ Wacan Berry
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wingull
+Glaceon
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wingull
+Quaxwell
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wingull
+Pelipper @ Wacan Berry
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wingull
+Prinplup
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wingull
+Simipour
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BEVERLY ===
 Name: Beverly
@@ -8751,7 +8751,7 @@ Koffing
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Aipom
+Ambipom
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8881,6 +8881,14 @@ Horsea
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Wimpod
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Panpour
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_TONY ===
 Name: Tony
 Class: Swimmer M
@@ -8902,6 +8910,18 @@ Horsea
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Wimpod
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tatsugiri
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Tynamo
+Level: 16
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_TANYA ===
 Name: Tanya
 Class: Picnicker
@@ -8911,7 +8931,7 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Bellossom
+Tsareena
 Level: 57
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8936,6 +8956,10 @@ Seaking
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Drizzile
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_ARNOLD ===
 Name: Arnold
 Class: Fisherman
@@ -8950,6 +8974,10 @@ Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Quagsire
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Greninja
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -8991,7 +9019,7 @@ Tangela
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Tauros
+Exploud
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9008,7 +9036,7 @@ Xatu
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Exeggutor
+Espathra
 Level: 44
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9029,6 +9057,18 @@ Farfetchd
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Staraptor
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Braviary Hisui
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sirfetchd
+Level: 61
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_BRANDON ===
 Name: Brandon
 Class: Pokefan
@@ -9042,6 +9082,14 @@ Snubbull
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Snom
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Snorunt
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_STAN ===
 Name: Stan
 Class: Super Nerd
@@ -9052,6 +9100,14 @@ Double Battle: No
 AI: Check Bad Move
 
 Grimer
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Kricketot
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Swinub
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9110,7 +9166,7 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Parasect
+Carnivine
 Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9118,7 +9174,7 @@ Tangela
 Level: 55
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Parasect
+Quilladin
 Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9222,7 +9278,7 @@ Weezing
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magmar
+Carkol
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9239,6 +9295,10 @@ Onix
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Roggenrola
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_DEBRA ===
 Name: Debra
 Class: Picnicker
@@ -9248,7 +9308,11 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Seaking
+Golisopod
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Inteleon
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9286,6 +9350,10 @@ Vileplume
 Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Glaceon
+Level: 56
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_QUINN ===
 Name: Quinn
 Class: Cooltrainer
@@ -9295,11 +9363,27 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Ivysaur
+Bisharp
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
+Bombirdier
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Rotom
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sawsbuck
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Whirlipede
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Swampert
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9325,15 +9409,19 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
+Dewpider
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Araquanid
+Level: 59
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 Quagsire
 Level: 59
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Octillery
-Level: 59
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Gyarados
+Vaporeon
 Level: 59
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9367,11 +9455,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Yanma
+Goodra
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Murkrow
+Oricorio
+Level: 58
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Honchkrow
 Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9379,8 +9471,8 @@ Dodrio
 Level: 60
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRACE ===
-Name: Grace
+=== TRAINER_ADVANCE ===
+Name: Advance
 Class: Hex Maniac
 Pic: Hex Maniac
 Gender: Female
@@ -9388,11 +9480,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Haunter
+Crocalor
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Murkrow
+Chandelure
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9552,6 +9644,78 @@ Slowpoke
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+=== TRAINER_CLAY_1 ===
+Name: Clay
+Class: Leader
+Pic: Leader Clay
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion / Super Potion / Super Potion
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Green
+
+Mamoswine (M) @ Icicle Plate
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk  / 252 Spe
+Ability: Snow Cloak
+Nature: Adamant
+- Bulldoze
+- Avalanche
+- Ice Shard
+- Scary Face
+
+Weavile (M) @ Chople Berry
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk  / 252 Spe
+- Knock Off
+- Aerial Ace
+- Metal Claw
+- Ice Spinner
+
+Delphox (F) @ Wise Glasses
+Level: 42
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 SpA  / 252 Spe
+Ability: Magician
+Nature: Modest
+- Will O Wisp
+- Psychic
+- Solar Beam
+- Flamethrower
+
+Glalie (M) @ Glalitite
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk  / 252 Spe
+Ability: Refrigerate
+- Body Slam
+- Bite
+- Protect
+- Light Screen
+
+Cetitan (M) @ Icicle Plate
+Level: 43
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk  / 252 Spe
+Ability: Thick Fat
+- Ice Spinner
+- Play Rough
+- Bulldoze
+- Protect
+
+Arctovish (M) @ Leftovers
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk  / 252 Spe
+Ability: Water Absorb
+- Freeze Dry
+- Bite
+- Dive
+- Rock Slide
+
 === TRAINER_CLAY_1_3 ===
 Name: Clay
 Class: Leader
@@ -9563,7 +9727,7 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Green
 
-Lapras @ Light Clay
+Lapras (M) @ Light Clay
 Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9573,7 +9737,7 @@ Ability: Water Absorb
 - Perish Song
 - Reflect
 
-Mamoswine @ Icicle Plate
+Mamoswine (M) @ Icicle Plate
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9584,7 +9748,7 @@ Nature: Adamant
 - Ice Shard
 - Scary Face
 
-Abomasnow @ Occa Berry
+Abomasnow (M) @ Occa Berry
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9593,7 +9757,7 @@ EVs: 6 HP / 252 Atk  / 252 Spe
 - Earthquake
 - Curse
 
-Delphox @ Wise Glasses
+Delphox (F) @ Wise Glasses
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA  / 252 Spe
@@ -9604,7 +9768,7 @@ Nature: Modest
 - Solar Beam
 - Flamethrower
 
-Cetitan @ Icicle Plate
+Cetitan (M) @ Icicle Plate
 Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9614,7 +9778,7 @@ Ability: Thick Fat
 - Bulldoze
 - Giga Impact
 
-Arctovish @ Leftovers
+Arctovish (M) @ Leftovers
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9636,7 +9800,7 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Green
 
-Lapras @ Light Clay
+Lapras (M) @ Light Clay
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9646,7 +9810,7 @@ Ability: Water Absorb
 - Perish Song
 - Reflect
 
-Mamoswine @ Icicle Plate
+Mamoswine (M) @ Icicle Plate
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9657,7 +9821,7 @@ Nature: Adamant
 - Ice Shard
 - Scary Face
 
-Weavile @ Chople Berry
+Weavile (M) @ Chople Berry
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9666,7 +9830,7 @@ EVs: 6 HP / 252 Atk  / 252 Spe
 - Metal Claw
 - Ice Spinner
 
-Delphox @ Wise Glasses
+Delphox (F) @ Wise Glasses
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA  / 252 Spe
@@ -9677,7 +9841,7 @@ Nature: Modest
 - Solar Beam
 - Flamethrower
 
-Cetitan @ Icicle Plate
+Cetitan (M) @ Icicle Plate
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9687,7 +9851,7 @@ Ability: Thick Fat
 - Bulldoze
 - Giga Impact
 
-Arctovish @ Leftovers
+Arctovish (M) @ Leftovers
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk  / 252 Spe
@@ -9891,15 +10055,19 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Seadra
+Palpitoad
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seadra
+Jangmo O
 Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Gyarados
+Lumineon
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Cradily
 Level: 42
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9914,7 +10082,7 @@ AI: Check Bad Move
 
 Wooper
 Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_EDMOND ===
 Name: Edmond
@@ -13520,78 +13688,6 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Dark Pulse
 - Blizzard
 
-=== TRAINER_CLAY_1 ===
-Name: Clay
-Class: Leader
-Pic: Leader Clay
-Gender: Male
-Music: Male
-Items: Super Potion / Super Potion / Super Potion / Super Potion
-Double Battle: No
-AI: Smart Trainer
-Mugshot: Green
-
-Mamoswine @ Icicle Plate
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk  / 252 Spe
-Ability: Snow Cloak
-Nature: Adamant
-- Bulldoze
-- Avalanche
-- Ice Shard
-- Scary Face
-
-Weavile @ Chople Berry
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk  / 252 Spe
-- Knock Off
-- Aerial Ace
-- Metal Claw
-- Ice Spinner
-
-Delphox @ Wise Glasses
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 SpA  / 252 Spe
-Ability: Magician
-Nature: Modest
-- Will O Wisp
-- Psychic
-- Solar Beam
-- Flamethrower
-
-Glalie @ Glalitite
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk  / 252 Spe
-Ability: Refrigerate
-- Body Slam
-- Bite
-- Protect
-- Light Screen
-
-Cetitan @ Icicle Plate
-Level: 43
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk  / 252 Spe
-Ability: Thick Fat
-- Ice Spinner
-- Play Rough
-- Bulldoze
-- Protect
-
-Arctovish @ Leftovers
-Level: 44
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 6 HP / 252 Atk  / 252 Spe
-Ability: Water Absorb
-- Freeze Dry
-- Bite
-- Dive
-- Rock Slide
-
 === TRAINER_HILLARY ===
 Name: Hillary
 Class: Expert
@@ -14345,7 +14441,7 @@ AI: Smart Trainer
 Mugshot: Pink
 
 Seymour (Obstagoon) (M) @ Chople Berry
-Level: 66
+Level: 61
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14355,7 +14451,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Night Slash
 
 Ampharos (M) @ Ampharosite
-Level: 67
+Level: 62
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14365,7 +14461,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Cotton Guard
 
 Basculegion (M) @ Rindo Berry
-Level: 67
+Level: 62
 Ability: Adaptability
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14375,7 +14471,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Crunch
 
 Mew @ Wise Glasses
-Level: 67
+Level: 63
 Ability: Synchronize
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14385,7 +14481,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Nasty Plot
 
 Meganium (M) @ Salac Berry
-Level: 68
+Level: 63
 Ability: Overgrow
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 128 Atk / 128 SpA / 252 Spe
@@ -14395,7 +14491,7 @@ EVs: 128 Atk / 128 SpA / 252 Spe
 - Hyper Beam
 
 Zamazenta @ Rusted Shield
-Level: 70
+Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
 Tera Type: Steel
@@ -14416,7 +14512,7 @@ AI: Smart Trainer
 Mugshot: Pink
 
 Seymour (Obstagoon) (M) @ Chople Berry
-Level: 66
+Level: 61
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14426,7 +14522,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Night Slash
 
 Ampharos (M) @ Ampharosite
-Level: 67
+Level: 62
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14436,7 +14532,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Cotton Guard
 
 Magmortar (M) @ Passho Berry
-Level: 67
+Level: 63
 Ability: Vital Spirit
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 128 Atk / 128 SpA / 252 Spe
@@ -14446,7 +14542,7 @@ EVs: 128 Atk / 128 SpA / 252 Spe
 - Scary Face
 
 Mew @ Wise Glasses
-Level: 67
+Level: 63
 Ability: Synchronize
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14456,7 +14552,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Nasty Plot
 
 Feraligatr (M) @ Sitrus Berry
-Level: 68
+Level: 63
 Ability: Torrent
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14466,7 +14562,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Rock Tomb
 
 Zamazenta @ Rusted Shield
-Level: 70
+Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
 Tera Type: Steel
@@ -14487,7 +14583,7 @@ AI: Smart Trainer
 Mugshot: Pink
 
 Seymour (Obstagoon) (M) @ Chople Berry
-Level: 66
+Level: 61
 Ability: Defiant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14497,7 +14593,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Night Slash
 
 Ampharos (M) @ Ampharosite
-Level: 67
+Level: 62
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14507,7 +14603,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Cotton Guard
 
 Gogoat (M) @ Muscle Band
-Level: 67
+Level: 62
 Ability: Sap Sipper
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Atk / 252 Spe
@@ -14517,7 +14613,7 @@ EVs: 6 HP / 252 Atk / 252 Spe
 - Bulk Up
 
 Mew @ Wise Glasses
-Level: 67
+Level: 63
 Ability: Synchronize
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14527,7 +14623,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Nasty Plot
 
 Typhlosion (M) @ Sitrus Berry
-Level: 68
+Level: 63
 Ability: Blaze
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 SpA / 252 Spe
@@ -14537,7 +14633,7 @@ EVs: 6 HP / 252 SpA / 252 Spe
 - Protect
 
 Zamazenta @ Rusted Shield
-Level: 70
+Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 6 HP / 252 Def / 252 Spe
 Tera Type: Steel
@@ -15109,56 +15205,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Morpeko
 Level: 100
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-=== TRAINER_AMY_AND_LIV_5 ===
-Name: Amy
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Charm
-- Helping Hand
-
-=== TRAINER_AMY_AND_LIV_6 ===
-Name: Amy
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Charm
-- Helping Hand
 
 === TRAINER_CRISSY ===
 Name: Crissy
@@ -16721,6 +16767,10 @@ EVs: 4 HP / 252 SpA / 252 Spe
 - Nasty Plot
 - Shadow Ball
 
+Meg (Sunkern) (F) @ Focus Sash
+Level: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
 Lois (Whiscash) (F) @ Rindo Berry
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -16747,14 +16797,6 @@ EVs: 4 HP / 252 SpA / 252 Spe
 - Slack Off
 - Thunder Wave
 
-Meg (Bewear) (F) @ Lum Berry
-Level: 33
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Baby Doll Eyes
-- Strength
-- Brutal Swing
-- Rock Tomb
-
 Peter 2 (Snorlax) (M) @ Muscle Band
 Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -16764,7 +16806,7 @@ EVs: 4 HP / 252 Atk / 252 Spe
 - Yawn
 - Dig
 
-=== TRAINER_PETER_GRIFFIN_2 ===
+=== TRAINER_PETER_GRIFFIN_INDIGO_PLATEAU ===
 Name: Griffin
 Class: Peter
 Pic:  Peter Griffin
@@ -16802,26 +16844,88 @@ EVs: 4 HP / 252 Atk / 252 Spe
 - Zen Headbutt
 - Icy Wind
 
-Stewie (Incineroar) (M) @ Passho Berry
-Level: 53
+Stewie (Bellibolt) (M) @ Magnet
+Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-- Darkest Lariat
-- Thrash
-- Flamethrower
-- Bulk Up
+EVs: 4 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Water Pulse
+- Slack Off
+- Thunder Wave
 
-Meg (Bewear) (F) @ Lum Berry
+Meg (Muk) (F) @ Flame Orb
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
-- Baby Doll Eyes
-- Strength
-- Brutal Swing
-- Rock Tomb
+- Toxic
+- Poison Jab
+- Facade
+- Rock Slide
 
 Chris (Cetitan) (M) @ Never Melt Ice
 Level: 56
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Avalanche
+- Flail
+- Take Down
+- Ice Shard
+
+=== TRAINER_PETER_GRIFFIN_FUCHSIA ===
+Name: Griffin
+Class: Peter
+Pic: Peter Griffin
+Gender: Male
+Music: HG Boy 1
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
+
+Brian (Lucario) (M) @ Wise Glasses
+Level: 75
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Nasty Plot
+- Shadow Ball
+
+Lois (Stunfisk) (F) @ Air Balloon
+Level: 76
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Protect
+- Sludge Wave
+- Mud Shot
+
+Quagmire (Quagsire) (M) @ Rindo Berry
+Level: 76
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Aqua Tail
+- Bulldoze
+- Zen Headbutt
+- Icy Wind
+
+Stewie (Breloom) (M) @ Muscle Band
+Level: 77
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Headbutt
+- Seed Bomb
+- Force Palm
+- Stun Spore
+
+Meg (Rattata) (F) @ Focus Sash
+Level: 1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Quick Attack
+- Endeavor
+
+Chris (Cetitan) (M) @ Never Melt Ice
+Level: 78
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
 - Avalanche
@@ -16851,15 +16955,85 @@ EVs: 4 HP / 252 SpA / 252 Spe
 - Nasty Plot
 - Shadow Ball
 
-Lois (Meloetta) (F) @ Leftovers
+Lois (Thievul) (F) @ Leftovers
 Level: 53
 Modifier: -1
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
-- Psychic
-- Thunderbolt
-- Shadow Ball
+- Snarl
+- Round
+- Mud Shot
+- Fake Tears
+
+The Clam (Clamperl) (M) @ Focus Sash
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Waterfall
+- Facade
+- Substitute
+- Rest
+
+Meg (Garbodor) (F) @ Flame Orb
+Level: 55
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 126 Atk / 126 SpA / 252 Spe
 - Toxic
+- Sludge Bomb
+- Facade
+- Smack Down
+
+Stewie (Bellibolt) (M) @ Magnet
+Level: 54
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+Modifier: 1
+- Thunderbolt
+- Water Pulse
+- Slack Off
+- Thunder Wave
+
+Chris (Cetitan) (M) @ Never Melt Ice
+Level: 56
+Modifier: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Avalanche
+- Flail
+- Take Down
+- Ice Shard
+
+=== TRAINER_PETER_GRIFFIN_EVER_GRANDE ===
+Name: Griffin
+Class: Peter
+Pic: Peter Griffin
+Gender: Male
+Music: HG Boy 1
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Yellow
+Is Dynamic: Yes
+
+Brian (Lucario) (M) @ Focus Sash
+Level: 50
+Modifier: -2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Aura Sphere
+- Flash Cannon
+- Nasty Plot
+- Shadow Ball
+
+Lois (Darkrai) @ Dread Plate
+Level: 53
+Modifier: -1
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Dark Pulse
+- Thunderbolt
+- Psychic
+- Nasty Plot
 
 Quagmire (Quagsire) (M) @ Rindo Berry
 Level: 54
@@ -16870,28 +17044,27 @@ EVs: 4 HP / 252 Atk / 252 Spe
 - Zen Headbutt
 - Toxic
 
-Stewie (Mew) (M) @ Wise Glasses
-Level: 53
+Meg (Bewear) (F) @ Lum Berry
+Level: 33
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Baby Doll Eyes
+- Strength
+- Brutal Swing
+- Rock Tomb
+
+Stewie (Bellibolt) (M) @ Magnet
+Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
-- Nasty Plot
-- Psychic
-- Flamethrower
-- Dazzling Gleam
-
-Meg (Delphox) (F) @ Lum Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-Modifier: 2
-- Mystical Fire
-- Psychic
-- Will O Wisp
-- Shadow Ball
+Modifier: 1
+- Thunderbolt
+- Water Pulse
+- Slack Off
+- Thunder Wave
 
 Chris (Cetitan) (M) @ Never Melt Ice
 Level: 56
-Modifier: 3
+Modifier: 2
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
 - Avalanche
@@ -19594,15 +19767,31 @@ Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+
+Wailord
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 
 Tentacruel
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 
-Wailmer
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wiglett
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Wugtrio
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Wimpod
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+
+Golisopod
+Level: 67
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 
 === TRAINER_SARAH ===
 Name: Sarah
@@ -19614,14 +19803,29 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Lotad
-Level: 8
+Cetoddle
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zigzagoon @ Nugget
-Level: 8
+Bouffalant
+Level: 67
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Pumpkaboo
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gourgeist
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ludicolo
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Nincada
+Level: 67
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SEBASTIAN ===
 Name: Sebastian

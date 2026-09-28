@@ -71,33 +71,34 @@ ViridianCity_EventScript_GymSign::
 
 ViridianCity_Text_CoffeeGramps_Question:
 	.string "Hey, kid! I just had a double shot\n"
-	.string "of espresso, and I am wired!\p"
-	.string "I need to talk to someone, so you'll\n"
-	.string "have to do!\p"
-	.string "I might not look like much now, but\n"
-	.string "I was an expert at catching Pokémon.\p"
-	.string "Do you believe me?$"
+	.string "of cocaine, and BOY am I wired!\p"
+	.string "You know me-- I'm known as the Cocaine\n"
+	.string "Guy!\p"
+	.string "I sell the high and mighty cocaine!\p"
+	.string "Do you want some?$"
 
 ViridianCity_Text_CoffeeGramps_Believed:
-	.string "Good, good. Yes, I was something\n"
-	.string "out of the ordinary, let me tell\l"
-	.string "you!$"
+	.string "What? You little fucker!\p"
+	.string "Too bad you can't have it though--\n"
+	.string "that stuff's for the adults!$"
 
 ViridianCity_Text_CoffeeGramps_Doubted:
-	.string "What? You little whelp!\p"
-	.string "If I were just a bit younger, I'd\n"
-	.string "show you a thing or two. Humph!$"
+	.string "WOO-WEE!\n"
+	.string "I used to deal to Damian!\p"
+	.string "Too bad he doesn't do cocaine anymore…$"
 
 ViridianCity_Text_GrampsNearGym:
 	.string "This Gym didn't have a Leader\n"
 	.string "until recently.\p"
-	.string "A young man from Pallet became\n"
+	.string "A stupid boy from Pallet became\n"
 	.string "the Leader, but he's often away.$"
 
 ViridianCity_Text_GrampsNearGym_BlueReturned:
 	.string "Are you going to battle the\n"
 	.string "Leader?\p"
-	.string "Good luck to you. You'll need it.$"
+	.string "Good luck to you. You'll need it.\n"
+	.string "He's a difficult one, that's for\l"
+	.string "sure!$"
 
 ViridianCity_Text_DreamEaterFisherNew:
 	.string "…Zzzzz…\p" 
@@ -140,7 +141,7 @@ ViridianCity_Text_GymSign:
 
 ViridianCity_Text_WelcomeSign:
 	.string "Welcome to Viridian City,\p"
-	.string "The Gateway to Indigo Plateau$"
+	.string "The Town With Only Five Buildings.$"
 
 ViridianCity_Text_TrainerHouseSign:
 	.string "Trainer House\p"

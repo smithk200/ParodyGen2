@@ -1016,6 +1016,7 @@ BattleScript_EffectMistyTerrain::
 BattleScript_EffectGrassyTerrain::
 BattleScript_EffectElectricTerrain::
 BattleScript_EffectPsychicTerrain::
+BattleScript_EffectCutawayGag::
 	attackcanceler
 	setterrain BattleScript_ButItFailed
 	attackanimation

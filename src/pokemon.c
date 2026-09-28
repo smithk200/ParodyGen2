@@ -5475,7 +5475,7 @@ u16 GetBattleBGM(void)
                 if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
                     return MUS_POKEMON_X_GYM_LEADER;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
-                    return  MUS_RG_VS_GYM_LEADER;
+                    return MUS_RG_VS_GYM_LEADER;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
                     return MUS_DP_VS_GYM_LEADER;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3)
@@ -5676,9 +5676,9 @@ u16 GetBattleBGM(void)
                     return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
         case TRAINER_CLASS_PETER:
-            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_PETER_GRIFFIN_2)
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_PETER_GRIFFIN_INDIGO_PLATEAU)
                     return MUS_POGO_STICKS;
-            return MUS_DP_VS_RIVAL;
+            return MUS_SURFIN_BIRD;
 
         default:
             if (gMapHeader.regionMapSectionId == MAPSEC_BATTLE_FRONTIER) //BGM by map
@@ -5712,6 +5712,8 @@ u16 GetBattleBGM(void)
             {
                 if (gMapHeader.region == REGION_HOENN)
                     return MUS_VS_TRAINER;
+                else if (gMapHeader.region == REGION_KANTO)
+                    return MUS_HG_VS_TRAINER_KANTO;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
                     return MUS_HG_VS_TRAINER;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
@@ -5742,8 +5744,10 @@ u16 GetBattleBGM(void)
     else
         if (gMapHeader.region == REGION_HOENN)
             return MUS_VS_WILD;
-        if (gMapHeader.region == REGION_ALOLA)
+        else if (gMapHeader.region == REGION_ALOLA)
             return MUS_HG_VS_WILD;
+        else if (gMapHeader.region == REGION_KANTO)
+            return MUS_HG_VS_WILD_KANTO;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 0)
             return MUS_HG_VS_WILD;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 1)

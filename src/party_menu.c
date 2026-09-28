@@ -2189,6 +2189,7 @@ static void BufferBagFullCantTakeItemMessage(u16 itemUnused)
 #define tPartyId      data[4]
 #define tStartHP      data[5]
 
+/*
 static void Task_PartyMenuModifyHP(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -2199,6 +2200,46 @@ static void Task_PartyMenuModifyHP(u8 taskId)
     s8 partySlot = 0;
     GetPartyAndSlotFromPartyMenuId(tPartyId, &party, &partySlot);
 
+    SetMonData(&party[partySlot], MON_DATA_HP, &tHP);
+    DisplayPartyPokemonHPCheck(&party[partySlot], &sPartyMenuBoxes[partySlot], 1);
+    DisplayPartyPokemonHPBarCheck(&party[partySlot], &sPartyMenuBoxes[partySlot]);
+    if (tHPToAdd == 0 || tHP == 0 || tHP == tMaxHP)
+    {
+        // If HP was recovered, buffer the amount recovered
+        if (tHP > tStartHP)
+            ConvertIntToDecimalStringN(gStringVar2, tHP - tStartHP, STR_CONV_MODE_LEFT_ALIGN, 3);
+
+        SwitchTaskToFollowupFunc(taskId);
+    }
+}
+*/
+
+static void Task_PartyMenuModifyHP(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    struct Pokemon *party = NULL;
+    s8 partySlot = 0;
+    GetPartyAndSlotFromPartyMenuId(tPartyId, &party, &partySlot);
+
+    tHP += tHPIncrement;
+    if (tHPIncrement > 0)
+    {
+        tHPToAdd -= tHPIncrement;
+        if (tHPToAdd / tHPIncrement <= 1)
+        {
+            tHP += tHPToAdd;
+            tHPToAdd -= tHPToAdd;
+        }
+    }
+    else
+    {
+        tHPToAdd += tHPIncrement;
+        if (tHPToAdd / tHPIncrement >= -1)
+        {
+            tHP += -tHPToAdd;
+            tHPToAdd -= tHPToAdd;
+        }
+    }
     SetMonData(&party[partySlot], MON_DATA_HP, &tHP);
     DisplayPartyPokemonHPCheck(&party[partySlot], &sPartyMenuBoxes[partySlot], 1);
     DisplayPartyPokemonHPBarCheck(&party[partySlot], &sPartyMenuBoxes[partySlot]);

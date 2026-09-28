@@ -39,7 +39,7 @@ IndigoPlateau_EventScript_PeterGriffinTrigger::
 	applymovement LOCAL_ID_PETER_GRIFFIN_POKEMON_LEAGUE, IndigoPlateau_Movement_PeterGriffin_Enter
 	waitmovement 0
 	msgbox IndigoPlateau_Text_PeterGriffin_Intro, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_PETER_GRIFFIN_2, IndigoPlateau_Text_PeterBeaten
+	trainerbattle_no_intro TRAINER_PETER_GRIFFIN_INDIGO_PLATEAU, IndigoPlateau_Text_PeterBeaten
 	goto IndigoPlateau_EventScript_PeterGriffin_Defeated
 	end
 

@@ -103,6 +103,7 @@ Route104_PrettyPetalFlowerShop_Text_Mints2:
 
 	.align 2
 Route104_PrettyPetalFlowerShop_MintShop:
+	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_SERIOUS_MINT
 	.2byte ITEM_ADAMANT_MINT
 	.2byte ITEM_BOLD_MINT

@@ -271,7 +271,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GREAT_BALL] =
     {
         .name = ITEM_NAME("Great Ball"),
-        .price = 600,
+        .price = 500,
         .description = COMPOUND_STRING(
             "A good Ball with a\n"
             "higher catch rate\n"
@@ -287,7 +287,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ULTRA_BALL] =
     {
         .name = ITEM_NAME("Ultra Ball"),
-        .price = (I_PRICE >= GEN_7) ? 800 : 1200,
+        .price = 800,
         .description = COMPOUND_STRING(
             "A better Ball with\n"
             "a higher catch rate\n"
@@ -303,7 +303,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MASTER_BALL] =
     {
         .name = ITEM_NAME("Master Ball"),
-        .price = 0,
+        .price = 200000,
         .description = COMPOUND_STRING(
             "The best Ball that\n"
             "catches a Pokémon\n"
@@ -3065,7 +3065,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEART_SCALE] =
     {
         .name = ITEM_NAME("Heart Scale"),
-        .price = 100,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "A lovely scale.\n"
             "It is coveted by\n"

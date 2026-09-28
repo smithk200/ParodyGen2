@@ -1275,6 +1275,12 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleTvScore = 0, // TODO: Assign points
     },
 
+    [EFFECT_CUTAWAY_GAG] =
+    {
+        .battleScript = BattleScript_EffectCutawayGag,
+        .battleTvScore = 0, // TODO: Assign points
+    },
+
     [EFFECT_TWO_TYPED_MOVE] =
     {
         .battleScript = BattleScript_EffectHit,

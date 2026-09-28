@@ -433,6 +433,7 @@ const u8 gMoveBackgroundNames[BG_COUNT][MOVE_BACKGROUND_NAME_LENGTH] =
     [BG_RAINBOW_PLAYER]            = _("Rainbow - Player"),
     [BG_RAINBOW_OPPONENT]          = _("Rainbow - Opponent"),
     [BG_SWAMP]                     = _("Swamp"),
+    [BG_PETER_GRIFFIN]              = _("Peter Griffin"),
 };
 
 const u8 sShadowSizeLabels[][4] =

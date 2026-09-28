@@ -27,11 +27,10 @@ CliffEdgeGate_Text_IntroOpen:
 	.string "Just around the corner.$"
 
 CliffEdgeGate_Text_Expectations:
-	.string "I appreciate that everybody is looking\n"
-	.string "forward to it.\p"
-	.string "But the lady at the reception seems\n"
-	.string "a bit too dramatic...\p"
-	.string "Don't get your expectations too high!$"
+	.string "I don't know why I decided to come\n"
+	.string "to that lame Safari Zone ayway.\p"
+	.string "The Safari Zone's just plain awful,\n"
+	.string "am I right or am I right?$"
 
 CliffEdgeGate_EventScript_CaveSign::
 	lock

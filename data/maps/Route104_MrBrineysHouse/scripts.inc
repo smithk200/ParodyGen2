@@ -78,7 +78,7 @@ Route104_MrBrineysHouse_EventScript_SailToDewford::
 	setvar VAR_GARBAGEVAR, 8
 	setvar VAR_GARBAGEVAR, 2
 	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_HIDE_ROUTE_104_RIVAL
+	setflag FLAG_GARBAGEFLAG
 	warp MAP_ROUTE104, 13, 51
 	@waitstate
 	releaseall

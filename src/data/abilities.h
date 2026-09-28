@@ -2443,10 +2443,10 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Unimplemented."),
     },
 
-    [ABILITY_314] =
+    [ABILITY_AN_ABILITY] =
     {
-        .name = _("-------"),
-        .description = COMPOUND_STRING("No special ability."),
+        .name = _("An Ability"),
+        .description = COMPOUND_STRING("This is an ability."),
     },
 
     [ABILITY_MEGA_SOL] =

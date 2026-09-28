@@ -358,7 +358,9 @@
     "SafariZoneGate_PokemonCenter",
     "SafariZoneGate_SafariZoneEntrance",
     "Route27_House",
-    "MtSilver_PokemonCenter"
+    "MtSilver_PokemonCenter",
+    "Gate_Route37_EeveeFarm",
+    "EeveeFarm"
   ],
   "gMapGroup_IndoorKantoRoutes": [
     "Route26_House1",
@@ -476,7 +478,9 @@
     "RuinsOfAlph_WordsRoom2",
     "RuinsOfAlph_WordsRoom3",
     "RuinsOfAlph_WordsRoom4",
-    "Route19_Cave"
+    "Route19_Cave",
+    "DragonsDen_UpperLevel",
+    "DragonsDen_UpperLevel2"
   ],
   "gMapGroup_IndoorDynamic": [
     "IcePath_1F",

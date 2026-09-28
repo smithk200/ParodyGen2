@@ -187,6 +187,8 @@ static const u8 sDoorAnimTiles_SSAqua[] = INCGFX_U8("graphics/door_anims/ssaqua.
 static const u16 sDoorNullPalette73[16] = {};
 static const u8 sDoorAnimTiles_General_Hoenn[] = INCGFX_U8("graphics/door_anims/general.png", ".4bpp");
 
+static const u8 sDoorAnimTiles_OaksLab[] = INCGFX_U8("graphics/door_anims/oaks_lab.png", ".4bpp");
+
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -428,7 +430,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     // idk what the tilesets are for the above two metatiles...
     {METATILE_BattleTowerInner_Door,                              &gTileset_BattleTowerInner, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_RocketElevator, sDoorAnimPalettes_Rocket_Door},
     {METATILE_ssaqua_Door,                              &gTileset_ssaqua, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SSAqua, sDoorAnimPalettes_SSAqua},
-    {METATILE_PalletTown_Door_Green,                    &gTileset_PalletTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_BirchsLab, sDoorAnimPalettes_OaksLabDoor},
+    {METATILE_PalletTown_Door_Green,                    &gTileset_PalletTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_OaksLab, sDoorAnimPalettes_OaksLabDoor},
     {METATILE_BattleFrontierOutsideEast_Door,               &gTileset_BattleFrontierOutsideEast, DOOR_SOUND_NORMAL,  2, sDoorAnimTiles_BattleFrontier, sDoorAnimPalettes_BattleFrontier},
     {METATILE_BattleFrontierOutsideEast_Door_Sliding,       &gTileset_BattleFrontierOutsideEast, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_BattleFrontierSliding, sDoorAnimPalettes_BattleFrontier_Sliding},
     {METATILE_TrainerHill_Door_Elevator_Roof,              &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},

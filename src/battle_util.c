@@ -2511,6 +2511,21 @@ bool32 TryFieldEffects(enum FieldEffectCases caseId)
             gStartingStatuses.psychicTerrainTemporary = gStartingStatuses.psychicTerrain = FALSE;
             isTerrain = TRUE;
         }
+        else if (gStartingStatuses.cutawayGag || gStartingStatuses.cutawayGagTemporary)
+        {
+            effect = SetStartingFieldStatus(
+                        STATUS_FIELD_CUTAWAY_GAG,
+                        B_MSG_TERRAIN_SET_CUTAWAY_GAG,
+                        0,
+                        &gFieldTimers.terrainTimer, gStartingStatuses.cutawayGag ? 0 : 4);
+            gStartingStatuses.cutawayGagTemporary = gStartingStatuses.cutawayGag = FALSE;
+            isTerrain = TRUE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldTerrain);
+                return TRUE;
+            }
+        }
         else if (gStartingStatuses.trickRoom || gStartingStatuses.trickRoomTemporary)
         {
             effect = SetStartingFieldStatus(
@@ -5041,6 +5056,11 @@ bool32 IsElectricTerrainAffected(enum BattlerId battler, enum Ability ability, e
     return IsBattlerTerrainAffected(battler, ability, holdEffect, fieldStatuses, STATUS_FIELD_ELECTRIC_TERRAIN);
 }
 
+bool32 IsCutawayGagAffected(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect, u32 fieldStatuses)
+{
+    return IsBattlerTerrainAffected(battler, ability, holdEffect, fieldStatuses, STATUS_FIELD_CUTAWAY_GAG);
+}
+
 bool32 IsAnyTerrainAffected(enum BattlerId battler, enum Ability ability, enum HoldEffect holdEffect, u32 fieldStatuses)
 {
     return IsBattlerTerrainAffected(battler, ability, holdEffect, fieldStatuses, STATUS_FIELD_TERRAIN_ANY);
@@ -6515,6 +6535,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
     if (IsPsychicTerrainAffected(battlerAtk, ctx->abilities[battlerAtk], ctx->holdEffects[battlerAtk], ctx->fieldStatuses) && moveType == TYPE_PSYCHIC)
         modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.3) : UQ_4_12(1.5)));
+    if (IsCutawayGagAffected(battlerAtk, ctx->abilities[battlerAtk], ctx->holdEffects[battlerAtk], ctx->fieldStatuses) && moveType == TYPE_NORMAL)
+        modifier = uq4_12_multiply(modifier, (B_TERRAIN_TYPE_BOOST >= GEN_8 ? UQ_4_12(1.4) : UQ_4_12(1.4)));
     if (IsFieldMudSportAffected(ctx->moveType))
         modifier = uq4_12_multiply(modifier, UQ_4_12(GetConfig(B_SPORT_DMG_REDUCTION) >= GEN_5 ? 0.33 : 0.5));
     if (IsFieldWaterSportAffected(ctx->moveType))
@@ -10455,12 +10477,6 @@ bool32 DoesOHKOMoveMissTarget(struct BattleCalcValues *cv)
 
     // Dynamaxed Pokemon cannot be hit by OHKO moves.
     if (GetActiveGimmick(cv->battlerDef) == GIMMICK_DYNAMAX)
-    {
-        gBattleStruct->moveResultFlags[cv->battlerDef] |= MOVE_RESULT_ONE_HIT_KO_NO_AFFECT;
-        return TRUE;
-    }
-
-    if (gBattleMons[cv->battlerDef].level > gBattleMons[cv->battlerAtk].level)
     {
         gBattleStruct->moveResultFlags[cv->battlerDef] |= MOVE_RESULT_ONE_HIT_KO_NO_AFFECT;
         return TRUE;
